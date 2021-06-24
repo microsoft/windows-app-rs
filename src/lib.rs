@@ -1,6 +1,6 @@
 pub mod bootstrap;
 
-use windows::{HRESULT, IInspectable, Interface};
+use windows::{IInspectable, Interface, HRESULT};
 
 #[repr(transparent)]
 struct IWindowNative(windows::IUnknown);
