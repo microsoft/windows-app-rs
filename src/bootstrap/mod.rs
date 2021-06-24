@@ -60,19 +60,19 @@ pub fn initialize() -> windows::Result<()> {
 
 pub fn initialize_without_dialog() -> windows::Result<()> {
     let version_tag: Vec<u16> = "preview".encode_utf16().collect();
+    let mdd_version = PackageVersion {
+        major: 0,
+        minor: 8,
+        revision: 0,
+        build: 0,
+    };
+    let min_framework_version = PackageVersion {
+        major: 0,
+        minor: 1,
+        revision: 0,
+        build: 0,
+    };
     unsafe {
-        let mdd_version = PackageVersion {
-            major: 0,
-            minor: 8,
-            revision: 0,
-            build: 0,
-        };
-        let min_framework_version = PackageVersion {
-            major: 0,
-            minor: 1,
-            revision: 0,
-            build: 0,
-        };
         MddBootstrapInitialize(
             mdd_version.to_major_minor(),
             version_tag.as_ptr(),
