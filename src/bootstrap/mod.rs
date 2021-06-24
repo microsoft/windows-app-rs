@@ -4,7 +4,6 @@ use bindings::Windows::Win32::{
 };
 
 mod tests;
-pub mod workarounds;
 
 #[repr(C)]
 #[derive(Clone, Copy)]
