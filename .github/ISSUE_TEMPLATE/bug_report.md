@@ -22,4 +22,4 @@ assignees: ''
 * Output from `cargo version`: 
 * Output from `rustup show`:
 * Output from `rustup --version`:
-* Output from: `cmd /c ver`:
+* Output from `cmd /c ver`:
