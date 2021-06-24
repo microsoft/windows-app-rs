@@ -1,14 +1,10 @@
-# Project
+[![crates.io](https://img.shields.io/crates/v/windows.svg)](https://crates.io/crates/windows-app)
+[![docs.rs](https://docs.rs/windows/badge.svg)](https://docs.rs/windows-app)
+[![Build and Test](https://github.com/microsoft/windows-app-rs/workflows/Build%20and%20Test/badge.svg?event=push)](https://github.com/microsoft/windows-app-rs/actions)
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+## Rust for Windows App SDK
 
-As the maintainer of this project, please make a few updates:
-
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+The `windows-app` crate lets you call any Windows App SDK API past, present, and future using code generated on the fly directly from the metadata describing the API and right into your Rust package where you can call them as if they were just another Rust module.
 
 ## Contributing
 
