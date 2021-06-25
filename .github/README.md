@@ -2,28 +2,12 @@
 [![docs.rs](https://docs.rs/windows-app/badge.svg)](https://docs.rs/windows-app)
 [![Build and Test](https://github.com/microsoft/windows-app-rs/workflows/Build%20and%20Test/badge.svg?event=push)](https://github.com/microsoft/windows-app-rs/actions)
 
-## Rust for Windows App SDK
+## Rust for the Windows App SDK
 
-The `windows-app` crate lets you call any Windows App SDK API past, present, and future using code generated on the fly directly from the metadata describing the API and right into your Rust package where you can call them as if they were just another Rust module.
+The `windows-app` crate makes the [Windows App SDK](https://github.com/microsoft/WindowsAppSDK) available to Rust developers. It is powered by the the [windows](https://github.com/microsoft/windows-rs) crate.
 
-## Contributing
+It's early days, but the `windows-app` crate is meant to make it much easier to use the Windows App SDK from Rust. As this new set of APIs requires bootstrapping and various other hooks to get it up and running, using only the `windows` crate - while possible - is a little more cumbersome for these new APIs. 
 
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
+So while the `windows` crate is still essential as it provides all of the language support, the `windows-app` crate will provide the necessary bootstrapping unique to the Windows App SDK. 
 
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## Trademarks
-
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft 
-trademarks or logos is subject to and must follow 
-[Microsoft's Trademark & Brand Guidelines](https://www.microsoft.com/en-us/legal/intellectualproperty/trademarks/usage/general).
-Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship.
-Any use of third-party trademarks or logos are subject to those third-party's policies.
+As WinUI is a large part of the Windows App SDK, the goal is to support the latest WinUI app development through the `windows-app` crate.
