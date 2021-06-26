@@ -1,3 +1,27 @@
+/*!
+The `windows-app` crate makes the [Windows App SDK](https://github.com/microsoft/WindowsAppSDK) available to Rust developers making it possible
+to create modern Windows app in pure Rust.
+
+It is powered by the the [windows](https://github.com/microsoft/windows-rs) crate.
+
+Bootstrapping a Windows app with `windows-app` is easy:
+
+```rust,no_run
+#![windows_subsystem = "console"]
+
+fn main() -> windows::Result<()> {
+    windows_app::bootstrap::initialize()
+}
+```
+
+
+For examples of how to create a window and fill that window with UI elements, take a look at the examples [here][examples].
+
+[examples]: https://github.com/microsoft/windows-samples-rs/tree/be806aad53ebc563d8957908f94881338658a8a0/windows_app_sdk
+!*/
+
+#![deny(missing_docs)]
+
 pub mod bootstrap;
 
 use windows::{IInspectable, Interface, HRESULT};
@@ -50,6 +74,13 @@ unsafe impl ::windows::Interface for IWindowNative {
     );
 }
 
+/// Get a window handle (`HWND`) from a window object.
+///
+/// Returns `None` if the supplied window cannot be cast to an [`IWindowNative`][IWindowNative]
+/// or if [`IWindowNative::get_WindowHandle`][WindowHandle] errors
+///
+/// [IWindowNative]: https://docs.microsoft.com/windows/windows-app-sdk/api/win32/microsoft.ui.xaml.window/nn-microsoft-ui-xaml-window-iwindownative
+/// [WindowHandle]: https://docs.microsoft.com/windows/windows-app-sdk/api/win32/microsoft.ui.xaml.window/nf-microsoft-ui-xaml-window-iwindownative-get_windowhandle
 pub fn window_handle(window: &IInspectable) -> Option<isize> {
     window.cast::<IWindowNative>().unwrap().handle()
 }
