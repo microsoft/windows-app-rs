@@ -1,10 +1,10 @@
 /*!
 The `windows-app` crate makes the [Windows App SDK](https://github.com/microsoft/WindowsAppSDK) available to Rust developers making it possible
-to create modern Windows app in pure Rust.
+to create Windows apps in pure Rust.
 
 It is powered by the the [windows](https://github.com/microsoft/windows-rs) crate.
 
-Bootstrapping a Windows app with `windows-app` is easy:
+Bootstrapping a Windows app with `windows-app` is simple:
 
 ```rust,no_run
 #![windows_subsystem = "console"]
