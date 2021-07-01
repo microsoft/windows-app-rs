@@ -1,27 +1,26 @@
+/*!
+Utilities for bootstrapping an app that uses the Windows App SDK.
+!*/
 use bindings::Windows::Win32::{
     Foundation::HWND,
     UI::WindowsAndMessaging::{MessageBoxW, MB_ICONERROR, MB_OK},
 };
 
+/// The minimum framework package compatible with the app.
 #[repr(C)]
 #[derive(Clone, Copy)]
-pub struct PackageVersion {
+struct PackageVersion {
+    /// The build revision
     pub revision: u8,
+    /// The build version
     pub build: u8,
+    /// The minor version
     pub minor: u8,
+    /// The major version
     pub major: u8,
 }
 
 impl PackageVersion {
-    pub fn new(major: u8, minor: u8, build: u8, revision: u8) -> Self {
-        Self {
-            revision,
-            build,
-            minor,
-            major,
-        }
-    }
-
     fn to_major_minor(self) -> u32 {
         ((self.major as u32) << 8) | self.minor as u32
     }
@@ -86,16 +85,20 @@ extern "system" {
     fn MddBootstrapShutdown() -> windows::HRESULT;
 }
 
-/// Locates the Windows App framework package compatible with the (currently internal)
-/// versioning criteria and loads it into the current process. If multiple packages meet
-/// the criteria, the best candidate is selected.
+/// Locates the Windows App SDK framework package compatible with the (currently internal)
+/// versioning criteria and loads it into the current process.
+///
+/// On error a dialog box will be displayed. To not have the dialog box displayed,
+/// use [`initialize_without_dialog`] instead.
+///
+/// If multiple packages meet the criteria, the best candidate is selected.
 pub fn initialize() -> windows::Result<()> {
     initialize_without_dialog()
     .map_err(|outer_error| {
         unsafe {
             MessageBoxW(
                 HWND::default(),
-                "To run this application, the Windows App preview runtime must be installed.\n\nhttps://aka.ms/projectreunion/0.8preview",
+                "To run this application, the Windows App SDK preview runtime must be installed.\n\nhttps://aka.ms/projectreunion/0.8preview",
                 "This application could not be started",
                 MB_OK | MB_ICONERROR,
             );
@@ -104,6 +107,8 @@ pub fn initialize() -> windows::Result<()> {
     })
 }
 
+/// Locates the Windows App SDK framework package compatible with the (currently internal)
+/// versioning criteria and loads it into the current process.
 pub fn initialize_without_dialog() -> windows::Result<()> {
     let version_tag: Vec<u16> = "preview".encode_utf16().collect();
     let mdd_version = PackageVersion {
@@ -128,7 +133,7 @@ pub fn initialize_without_dialog() -> windows::Result<()> {
     }
 }
 
-/// Undo the changes made by `initialize()`
+/// Undo the changes made by `initialize()`.
 pub fn uninitialize() -> windows::Result<()> {
     unsafe { MddBootstrapShutdown().ok() }
 }
