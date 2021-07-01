@@ -11,7 +11,7 @@ readme = "README.md"
 exclude = [".github", "docs"]
 
 [dependencies]
-windows = { path = "/git/windows-rs" }
+windows = { git = "https://github.com/microsoft/windows-rs" }
 
 [build-dependencies]
-windows = { path = "/git/windows-rs" }
+windows = { git = "https://github.com/microsoft/windows-rs" }
