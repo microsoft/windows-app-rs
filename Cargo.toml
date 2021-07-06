@@ -1,6 +1,6 @@
 [package]
 name = "windows-app"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Microsoft"]
 edition = "2018"
 license = "MIT OR Apache-2.0"
@@ -11,7 +11,7 @@ readme = "README.md"
 exclude = [".github", "docs"]
 
 [dependencies]
-windows = { git = "https://github.com/microsoft/windows-rs" }
+windows = "0.14.0"
 
 [build-dependencies]
-windows = { git = "https://github.com/microsoft/windows-rs" }
+windows = "0.14.0"
