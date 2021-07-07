@@ -11,7 +11,7 @@ readme = ".github/readme.md"
 exclude = [".github", "docs"]
 
 [dependencies]
-windows = "0.15.1"
+windows = "0.15.2"
 
 [build-dependencies]
-windows = "0.15.1"
+windows = "0.15.2"
