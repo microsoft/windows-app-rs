@@ -1,0 +1,6 @@
+[template]
+exclude = [
+    ".github",
+    ".metadata",
+    ".windows",
+]

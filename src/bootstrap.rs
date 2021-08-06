@@ -2,10 +2,6 @@
 Utilities for bootstrapping an app that uses the Windows App SDK.
 !*/
 
-mod bindings {
-    windows::include_bindings!();
-}
-
 use bindings::Windows::Win32::{
     Foundation::HWND,
     UI::WindowsAndMessaging::{MessageBoxW, MB_ICONERROR, MB_OK},

@@ -1,4 +1,5 @@
 /target
 /.vscode
 /.vs
-Cargo.lock
+.metadata/obj
+.metadata/bin
