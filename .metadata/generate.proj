@@ -2,24 +2,18 @@
 <Project Sdk="Microsoft.Windows.WinmdGenerator/0.2.118-preview">
 
     <PropertyGroup Label="Globals">
-        <OutputWinmd>../.windows/winmd/Microsoft.WindowsAppSdk.Interop.winmd</OutputWinmd>
-        <WinmdVersion>0.1.0.0</WinmdVersion>
+        <OutputWinmd>../bindings/.windows/winmd/Microsoft.WindowsAppSdk.Interop.winmd</OutputWinmd>
+        <WinmdVersion>0.8.0-preview</WinmdVersion>
     </PropertyGroup>
 
     <ItemGroup>
         <MuxHeaders Include="$(PkgMicrosoft_ProjectReunion_WinUI)\include\microsoft.ui.xaml.*.h" />
         <MuxHostingHeaders Include="$(PkgMicrosoft_ProjectReunion_WinUI)\include\microsoft.ui.xaml.hosting.*.h" />
         <MuxMediaHeaders Include="$(PkgMicrosoft_ProjectReunion_WinUI)\include\microsoft.ui.xaml.media.*.h" />
-
-        <!--
-            HACK
-            Feed in a dummy (but valid) import library with a fake directory
-            structure to keep the ScanLibs/ScrapeHeaders tasks happy until
-            this PR is merged in.
-            
-            https://github.com/microsoft/win32metadata/pull/597
-        -->
-        <ImportLibs Include="x64\\..\\dummy.lib" />
+        <FoundationHeaders Include="$(PkgMicrosoft_ProjectReunion_Foundation)\include\*.h" />
+        <FoundationLibs Include="$(PkgMicrosoft_ProjectReunion_Foundation)\lib\win10-x64\x64\..\*.lib" />
+        
+        <ImportLibs Include="@(FoundationLibs)" />
 
         <Partition Include="microsoft.ui.xaml.cpp">
             <TraverseFiles>@(MuxHeaders)</TraverseFiles>
@@ -36,7 +30,17 @@
             <Namespace>Microsoft.UI.Xaml.Media</Namespace>
         </Partition>
 
-        <PackageReference Include="Microsoft.ProjectReunion.WinUI" Version="0.8.1" GeneratePathProperty="true" />
+        <Partition Include="microsoft.p.foundation.cpp">
+            <TraverseFiles>@(FoundationHeaders)</TraverseFiles>
+            <Namespace>Microsoft.ProjectReunion.Foundation</Namespace>
+        </Partition>
+
+        <PackageReference Include="Microsoft.ProjectReunion.Foundation" Version="0.8.0-preview" GeneratePathProperty="true">
+            <IncludeAssets>none</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.ProjectReunion.WinUI" Version="0.8.0-preview" GeneratePathProperty="true">
+            <IncludeAssets>none</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
 </Project>
