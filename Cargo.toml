@@ -14,3 +14,8 @@ publish = false
 [dependencies]
 windows = "0.18.0"
 bindings = { path = "bindings" }
+
+[workspace]
+members = [
+    "bindings"
+]
