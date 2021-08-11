@@ -2,7 +2,7 @@ fn main() {
     windows::build! {
         Microsoft::UI::Xaml::Controls::Button,
         Microsoft::UI::Xaml::{Application, Window, IWindowNative},
-        Microsoft::ProjectReunion::Foundation::*,
+        Microsoft::WindowsAppSDK::Foundation::*,
         Windows::Win32::Storage::Packaging::Appx::PACKAGE_VERSION,
         Windows::Win32::Foundation::{BOOL, HWND},
         Windows::Win32::UI::HiDpi::GetDpiForWindow,
