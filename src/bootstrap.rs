@@ -38,8 +38,8 @@ pub fn initialize() -> windows::Result<()> {
 /// Locates the Windows App SDK framework package compatible with the (currently internal)
 /// versioning criteria and loads it into the current process.
 pub fn initialize_without_dialog() -> windows::Result<()> {
-    let version_tag = "experimental";
-    let mdd_version = (1 << 16) | 8_u32;
+    let version_tag = "experimental1";
+    let mdd_version = (1 << 16) | 0_u32;
     let min_framework_version = PACKAGE_VERSION {
         Anonymous: PACKAGE_VERSION_0 {
             Anonymous: PACKAGE_VERSION_0_0 {
