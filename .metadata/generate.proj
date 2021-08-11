@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <Project Sdk="Microsoft.Windows.WinmdGenerator/0.2.118-preview">
 
     <PropertyGroup Label="Globals">
@@ -11,6 +12,12 @@
         <MuxHostingHeaders Include="$(PkgMicrosoft_WindowsAppSDK_WinUI)\include\microsoft.ui.xaml.hosting.*.h" />
         <MuxMediaHeaders Include="$(PkgMicrosoft_WindowsAppSDK_WinUI)\include\microsoft.ui.xaml.media.*.h" />
         <FoundationHeaders Include="$(PkgMicrosoft_WindowsAppSDK_Foundation)\include\*.h" />
+
+        <!--
+            HACK:
+            We use some relative path trickery here (\x64\..\) to satisfy stringent import lib checks
+            https://github.com/microsoft/win32metadata/issues/605
+        -->
         <FoundationLibs Include="$(PkgMicrosoft_WindowsAppSDK_Foundation)\lib\win10-x64\x64\..\*.lib" />
 
         <ImportLibs Include="@(FoundationLibs)" />
