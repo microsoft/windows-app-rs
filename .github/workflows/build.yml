@@ -5,13 +5,70 @@ on:
   push:
     branches:
       - master
+      - stable
+      - preview
+      - experimental
 
 env:
   RUSTFLAGS: -Dwarnings
 
 jobs:
+  setup:
+    name: Configure cargo-generate if needed
+    runs-on: windows-latest
+    outputs:
+      tag: ${{ steps.get-cargo-generate-tag.outputs.tag }}
+    steps:
+    - id: get-cargo-generate-tag
+      name: Get latest cargo-generate tag
+      shell: pwsh
+      run: |
+        $tag = (Invoke-RestMethod https://api.github.com/repos/cargo-generate/cargo-generate/releases/latest).tag_name
+        "::set-output name=tag::$tag"
+    - name: Check for cached cargo-generate
+      uses: actions/cache@v2
+      id: cache-cargo-generate
+      env:
+        cache-name: cache-cargo-generate
+      with:
+        path: |
+          ~/.cargo/bin/cargo-generate.exe
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ steps.get-cargo-generate-tag.outputs.tag }}
+
+    - name: Install cargo-generate
+      if: steps.cache-cargo-generate.outputs.cache-hit != 'true'
+      run: cargo install cargo-generate
+
+  checkfmt:
+    needs: setup
+    runs-on: windows-latest
+    name: Check cargo formatting
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        path: template
+    - name: Restore cached cargo-generate
+      uses: actions/cache@v2
+      id: cache-cargo-generate
+      env:
+        cache-name: cache-cargo-generate
+      with:
+        path: |
+          ~/.cargo/bin/cargo-generate.exe
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ needs.setup.outputs.tag }}
+
+    - name: Generate
+      run: cargo generate --name project --git $env:GITHUB_WORKSPACE/template
+      working-directory: ${{ github.workspace }}
+
+    - name: Run cargo fmt
+      run: cargo fmt --all -- --check
+      working-directory: ${{ github.workspace }}/project
+
   test:
+    needs: [setup, checkfmt]
     runs-on: ${{ matrix.os }}
+    name: Build
     strategy:
       matrix:
         include:
@@ -19,37 +76,36 @@ jobs:
           rust: stable
           other: x86_64-pc-windows-msvc
         - os: windows-latest
-          rust: 1.51.0
-          other: x86_64-pc-windows-msvc
-        - os: windows-latest
-          rust: nightly
-          other: x86_64-pc-windows-msvc
-        - os: windows-latest
           rust: stable
           other: i686-pc-windows-msvc
         - os: windows-latest
           rust: nightly
+          other: x86_64-pc-windows-msvc
+        - os: windows-latest
+          rust: nightly
           other: i686-pc-windows-msvc
     steps:
     - uses: actions/checkout@v2
+      with:
+        path: template
+
     - run: rustup update --no-self-update ${{ matrix.rust }} && rustup default ${{ matrix.rust }}
     - run: rustup target add ${{ matrix.other }}
 
-    - name: windows build
+    - name: Restore cached cargo-generate
+      uses: actions/cache@v2
+      id: cache-cargo-generate
+      env:
+        cache-name: cache-cargo-generate
+      with:
+        path: |
+          ~/.cargo/bin/cargo-generate.exe
+        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ needs.setup.outputs.tag }}
+
+    - name: Generate project
+      run: cargo generate --name project --git $env:GITHUB_WORKSPACE/template
+      working-directory: ${{ github.workspace }}
+
+    - name: Build and Test
       run: cargo test --all --target ${{ matrix.other }}
-
-  cargo_fmt:
-    runs-on: windows-latest
-    name: Check cargo formatting
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run cargo fmt
-      run: cargo fmt --all -- --check
-
-  cargo_doc:
-    runs-on: windows-latest
-    name: Check cargo docs
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run cargo doc
-      run: cargo doc --no-deps --workspace
+      working-directory: ${{ github.workspace }}/project
