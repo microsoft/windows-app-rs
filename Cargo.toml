@@ -1,17 +1,21 @@
 [package]
-name = "windows-app"
-version = "0.17.2"
-authors = ["Microsoft"]
+name = "app"
+version = "0.0.0"
 edition = "2018"
-license = "MIT OR Apache-2.0"
-description = "Windows App SDK"
-repository = "https://github.com/microsoft/windows-app-rs"
-documentation = "https://docs.rs/windows-app"
-readme = ".github/readme.md"
-exclude = [".github", "docs"]
+authors = []
+license = ""
+description = ""
+repository = ""
+documentation = ""
+readme = ""
+exclude = []
+publish = false
 
 [dependencies]
-windows = "0.17.2"
+windows = "0.18.0"
+bindings = { path = "bindings" }
 
-[build-dependencies]
-windows = "0.17.2"
+[workspace]
+members = [
+    "bindings"
+]

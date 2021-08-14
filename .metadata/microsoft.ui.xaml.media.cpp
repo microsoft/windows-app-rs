@@ -1,0 +1,1 @@
+#include <microsoft.ui.xaml.media.dxinterop.h>
