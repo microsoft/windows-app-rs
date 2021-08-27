@@ -6,5 +6,7 @@ for various Windows App SDK platform interoperability APIs, such as
 
 ## Usage
 
+
 1. Install [the latest .NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0).
-2. `dotnet build`
+2. `Set-ExecutionPolicy -Scope CurrentUser Unrestricted`
+3. `dotnet build`
