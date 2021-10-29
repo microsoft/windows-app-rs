@@ -12,5 +12,5 @@ exclude = []
 publish = false
 
 [dependencies]
-windows = "0.20"
+windows = "0.23.0"
 bindings = { path = "bindings" }

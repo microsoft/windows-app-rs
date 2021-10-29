@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<Project Sdk="Microsoft.Windows.WinmdGenerator/0.2.118-preview">
+<Project Sdk="Microsoft.Windows.WinmdGenerator/0.3.16-preview">
 
     <PropertyGroup Label="Globals">
-        <OutputWinmd>../bindings/.windows/winmd/Microsoft.WindowsAppSdk.Interop.winmd</OutputWinmd>
-        <WinmdVersion>1.0.0-experimental1</WinmdVersion>
+        <OutputWinmd>../.windows/winmd/Microsoft.WindowsAppSdk.Interop.winmd</OutputWinmd>
+        <WinmdVersion>1.0.0-preview3</WinmdVersion>
     </PropertyGroup>
 
     <ItemGroup>
-        <MuxHeaders Include="$(PkgMicrosoft_WindowsAppSDK_WinUI)\include\microsoft.ui.xaml.*.h" />
-        <MuxHostingHeaders Include="$(PkgMicrosoft_WindowsAppSDK_WinUI)\include\microsoft.ui.xaml.hosting.*.h" />
-        <MuxMediaHeaders Include="$(PkgMicrosoft_WindowsAppSDK_WinUI)\include\microsoft.ui.xaml.media.*.h" />
-        <FoundationHeaders Include="$(PkgMicrosoft_WindowsAppSDK_Foundation)\include\*.h" />
+        <MuxHeaders Include="$(PkgMicrosoft_WindowsAppSDK)\include\microsoft.ui.xaml.*.h" />
+        <MuxHostingHeaders Include="$(PkgMicrosoft_WindowsAppSDK)\include\microsoft.ui.xaml.hosting.*.h" />
+        <MuxMediaHeaders Include="$(PkgMicrosoft_WindowsAppSDK)\include\microsoft.ui.xaml.media.*.h" />
+        <FoundationHeaders Include="$(PkgMicrosoft_WindowsAppSDK)\include\MddBootstrap.h" />
 
-        <!--
-            HACK:
-            We use some relative path trickery here (\x64\..\) to satisfy stringent import lib checks
-            https://github.com/microsoft/win32metadata/issues/605
-        -->
-        <FoundationLibs Include="$(PkgMicrosoft_WindowsAppSDK_Foundation)\lib\win10-x64\x64\..\*.lib" />
-
-        <ImportLibs Include="@(FoundationLibs)" />
+        <ImportLibs Include="$(PkgMicrosoft_WindowsAppSDK)\lib\win10-*\*.lib" />
 
         <Partition Include="microsoft.ui.xaml.cpp">
             <TraverseFiles>@(MuxHeaders)</TraverseFiles>
@@ -42,10 +35,7 @@
             <Namespace>Microsoft.WindowsAppSDK.Foundation</Namespace>
         </Partition>
 
-        <PackageReference Include="Microsoft.WindowsAppSDK.Foundation" Version="1.0.0-experimental1" GeneratePathProperty="true">
-            <IncludeAssets>none</IncludeAssets>
-        </PackageReference>
-        <PackageReference Include="Microsoft.WindowsAppSDK.WinUI" Version="1.0.0-experimental1" GeneratePathProperty="true">
+        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0-preview3" GeneratePathProperty="true">
             <IncludeAssets>none</IncludeAssets>
         </PackageReference>
     </ItemGroup>

@@ -22,18 +22,23 @@ use bindings::{
     },
 };
 
-use windows::{implement, IInspectable, Interface};
+use windows::runtime::{implement, IInspectable, Interface};
 
 #[implement(extend Microsoft::UI::Xaml::Application, override OnLaunched)]
 struct App {
-    _window: Option<Window>,
+    window: Option<Window>,
 }
 
 #[allow(non_snake_case)]
 impl App {
-    fn OnLaunched(&mut self, _: &Option<LaunchActivatedEventArgs>) -> windows::Result<()> {
+    fn create() -> windows::runtime::Result<Application> {
+        let app = App { window: None }.new()?;
+        Ok(app)
+    }
+
+    fn OnLaunched(&mut self, _: &Option<LaunchActivatedEventArgs>) -> windows::runtime::Result<()> {
         let window = Window::new()?;
-        window.SetTitle("WinUI Desktop, Unpackaged (Rust)")?;
+        window.SetTitle("WinUI Desktop, Unpackaged (Rust, WinAppSdk-preview3)")?;
 
         let button = Button::new()?;
         button.SetContent(IInspectable::try_from("Click Me")?)?;
@@ -53,7 +58,7 @@ impl App {
         let mut hwnd = HWND(0);
         unsafe {
             native_window
-                .get_WindowHandle(&mut hwnd as *mut _)
+                .WindowHandle(&mut hwnd as *mut _)
                 .expect("Failed to get native window handle");
         }
 
@@ -62,7 +67,7 @@ impl App {
         });
 
         let result = window.Activate();
-        self._window = Some(window);
+        self.window = Some(window);
         result
     }
 }
@@ -107,11 +112,11 @@ pub fn center_window(handle: HWND) -> bool {
     }
 }
 
-fn main() -> windows::Result<()> {
+fn main() -> windows::runtime::Result<()> {
     bootstrap::initialize()
         .and_then(|_| {
             Application::Start(ApplicationInitializationCallback::new(|_| {
-                App { _window: None }.new()?;
+                let _ = App::create();
                 Ok(())
             }))
         })

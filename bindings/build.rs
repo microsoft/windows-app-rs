@@ -1,6 +1,6 @@
 fn main() {
-    windows::build! {
-        Microsoft::UI::Xaml::Controls::Button,
+    windows::runtime::build! {
+        Microsoft::UI::Xaml::Controls::{Button, XamlControlsResources},
         Microsoft::UI::Xaml::{Application, Window, IWindowNative},
         Microsoft::WindowsAppSDK::Foundation::*,
         Windows::Win32::Storage::Packaging::Appx::PACKAGE_VERSION,
