@@ -1,0 +1,11 @@
+[package]
+name = "windows_app_api"
+version = "0.0.0"
+edition = "2018"
+publish = false
+
+[dependencies]
+reader = { package = "windows_reader", path = "../../deps/reader", version = "0.26.0" }
+gen = { package = "windows_gen", path = "../../deps/gen", version = "0.26" }
+quote = "1.0"
+rayon = "1.5.1"

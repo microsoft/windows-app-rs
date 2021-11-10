@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<Project Sdk="Microsoft.Windows.WinmdGenerator/0.3.16-preview">
+<Project Sdk="Microsoft.Windows.WinmdGenerator/0.14.3-preview">
 
     <PropertyGroup Label="Globals">
-        <OutputWinmd>../.windows/winmd/Microsoft.WindowsAppSdk.Interop.winmd</OutputWinmd>
+        <OutputWinmd>../.windows/winmd/Microsoft.WindowsAppSdk.Generated.winmd</OutputWinmd>
         <WinmdVersion>1.0.0-preview3</WinmdVersion>
     </PropertyGroup>
 
@@ -32,7 +32,7 @@
 
         <Partition Include="microsoft.was.foundation.cpp">
             <TraverseFiles>@(FoundationHeaders)</TraverseFiles>
-            <Namespace>Microsoft.WindowsAppSDK.Foundation</Namespace>
+            <Namespace>Microsoft.WindowsAppSdk.Foundation</Namespace>
         </Partition>
 
         <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0-preview3" GeneratePathProperty="true">

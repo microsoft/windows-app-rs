@@ -1,11 +1,53 @@
 [![Build and Test](https://github.com/microsoft/windows-app-rs/workflows/Build%20and%20Test/badge.svg?event=push)](https://github.com/microsoft/windows-app-rs/actions)
 
-## Rust template for the Windows App SDK
+# Rust for the Windows App SDK
+The `windows-app` crate lets you call any [Windows App SDK](https://github.com/microsoft/WindowsAppSDK) (formerly known as Project Reunion) API using code generated from the metadata describing the API. It is powered by the [windows](https://github.com/microsoft/windows-rs) crate.
 
-This template makes the [Windows App SDK](https://github.com/microsoft/WindowsAppSDK) (formerly known as Project Reunion) available to Rust developers. It is powered by the [windows](https://github.com/microsoft/windows-rs) crate.
+Note: This is an experimental 🧪 crate and is not ready for production use.
 
-It's early days, but the template is meant to make it much easier to use the Windows App SDK from Rust. As this new set of APIs requires bootstrapping and various other hooks to get it up and running, using only the `windows` crate—while possible—is a little more cumbersome for these new APIs.
+## Release channel coverage
+The Windows App SDK is delivered via [three release channels](https://docs.microsoft.com/windows/apps/windows-app-sdk/release-channels)—experimental, preview, and stable. The `windows-app` crate currently targets APIs available in the preview and stable channels.
 
-So while the `windows` crate is still essential as it provides all of the language support, this template will provide the necessary bootstrapping unique to the Windows App SDK.
+## Getting started
+It's very early days for the `windows-app` crate. To try it out, add the following to your Cargo.toml file:
 
-As [WinUI](https://microsoft.github.io/microsoft-ui-xaml/) is a large part of the Windows App SDK, one goal is to also support the latest WinUI app development.
+```toml
+[build-dependencies.windows-app]
+git = "https://github.com/microsoft/windows-app-rs"
+features = [
+    "WindowsAppSdk_Foundation"
+]
+
+[dependencies.windows-app]
+git = "https://github.com/microsoft/windows-app-rs"
+features = [
+    "Windows_System_Power",
+]
+```
+
+Add a build script (`build.rs`) to your crate to deploy the [Windows App SDK Bootstrapper](https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/deploy-unpackaged-apps?WT.mc_id=WD-MVP-5002756#using-features-at-run-time) with your app.
+
+```rust
+fn main() {
+    ::windows_app::bootstrap::deploy::to_output_dir();
+}
+```
+
+Now make use of any Windows App SDK APIs as needed:
+
+```rust
+use ::windows_app::Microsoft::Windows::System::Power::*;
+use ::windows_app::*;
+
+fn main() -> ::windows::core::Result<()> {
+    bootstrap::initialize()
+        .and_then(|_| {
+            println!(
+                "Remaining charge: {}%",
+                PowerManager::RemainingChargePercent()?
+            );
+            Ok(())
+        })
+        .and_then(|_| bootstrap::uninitialize())
+}
+```
