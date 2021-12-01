@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Report an issue with the `windows-app-rs` template
+about: Report an issue with the `windows-app` crate
 title: ''
 assignees: ''
 ---

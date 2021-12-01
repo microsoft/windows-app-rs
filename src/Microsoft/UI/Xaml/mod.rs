@@ -26920,66 +26920,6 @@ pub struct IXamlRootChangedEventArgs_abi(
     :: core :: clone :: Clone,
     :: core :: fmt :: Debug,
 )]
-pub struct IXamlRootNative(pub ::windows::core::IUnknown);
-impl IXamlRootNative {
-    pub unsafe fn HostWindow(
-        &self,
-        hwnd: *mut ::windows::Win32::Foundation::HWND,
-    ) -> ::windows::core::Result<()> {
-        (::windows::core::Interface::vtable(self).3)(
-            ::core::mem::transmute_copy(self),
-            ::core::mem::transmute(hwnd),
-        )
-        .ok()
-    }
-}
-unsafe impl ::windows::core::Interface for IXamlRootNative {
-    type Vtable = IXamlRootNative_abi;
-    const IID: ::windows::core::GUID =
-        ::windows::core::GUID::from_u128(0x4ccd7521_9c08_41ad_a5bd_b263ef64c9e7);
-}
-impl ::core::convert::From<IXamlRootNative> for ::windows::core::IUnknown {
-    fn from(value: IXamlRootNative) -> Self {
-        value.0
-    }
-}
-impl ::core::convert::From<&IXamlRootNative> for ::windows::core::IUnknown {
-    fn from(value: &IXamlRootNative) -> Self {
-        value.0.clone()
-    }
-}
-impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for IXamlRootNative {
-    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Owned(self.0)
-    }
-}
-impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a IXamlRootNative {
-    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Borrowed(&self.0)
-    }
-}
-#[repr(C)]
-#[doc(hidden)]
-pub struct IXamlRootNative_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        hwnd: *mut ::windows::Win32::Foundation::HWND,
-    ) -> ::windows::core::HRESULT,
-);
-#[repr(transparent)]
-#[derive(
-    :: core :: cmp :: PartialEq,
-    :: core :: cmp :: Eq,
-    :: core :: clone :: Clone,
-    :: core :: fmt :: Debug,
-)]
 pub struct IXamlServiceProvider(pub ::windows::core::IInspectable);
 unsafe impl ::windows::core::Interface for IXamlServiceProvider {
     type Vtable = IXamlServiceProvider_abi;

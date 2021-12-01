@@ -6,6 +6,8 @@ fn main() {
     let start = std::time::Instant::now();
 
     let mut output = std::path::PathBuf::from(reader::workspace_dir());
+    generate_bootstrap(&mut output);
+
     output.push("src/Microsoft");
     let _ = std::fs::remove_dir_all(&output);
     output.pop();
@@ -24,8 +26,6 @@ fn main() {
     output.pop();
     output.push("Cargo.toml");
     write_toml(&output, root);
-
-    generate_bootstrap(&mut output);
 
     println!("Elapsed: {} ms", start.elapsed().as_millis());
 }
@@ -190,7 +190,7 @@ fn generate_bootstrap(output: &mut std::path::PathBuf) {
         pub static BOOTSTRAP_DLL_BYTES:[u8;#arm64_length] = [ #(#arm64,)* ];
     };
 
-    output.push("src/bootstrap/generated.rs");
+    output.push("src/bootstrap/deploy/generated.rs");
     OpenOptions::new()
         .create(true)
         .truncate(true)
@@ -199,5 +199,8 @@ fn generate_bootstrap(output: &mut std::path::PathBuf) {
         .unwrap()
         .write_all(tokens.to_string().as_bytes())
         .unwrap();
+    output.pop();
+    output.pop();
+    output.pop();
     output.pop();
 }
