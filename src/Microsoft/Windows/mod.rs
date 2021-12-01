@@ -11,7 +11,5 @@
 pub mod AppLifecycle;
 #[cfg(feature = "Windows_ApplicationModel")]
 pub mod ApplicationModel;
-#[cfg(feature = "Windows_PushNotifications")]
-pub mod PushNotifications;
 #[cfg(feature = "Windows_System")]
 pub mod System;

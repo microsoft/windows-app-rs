@@ -4,14 +4,13 @@
 
     <PropertyGroup Label="Globals">
         <OutputWinmd>../.windows/winmd/Microsoft.WindowsAppSdk.Generated.winmd</OutputWinmd>
-        <WinmdVersion>1.0.0-preview3</WinmdVersion>
+        <WinmdVersion>1.0.0</WinmdVersion>
     </PropertyGroup>
 
     <ItemGroup>
         <MuxHeaders Include="$(PkgMicrosoft_WindowsAppSDK)\include\microsoft.ui.xaml.*.h" />
         <MuxHostingHeaders Include="$(PkgMicrosoft_WindowsAppSDK)\include\microsoft.ui.xaml.hosting.*.h" />
         <MuxMediaHeaders Include="$(PkgMicrosoft_WindowsAppSDK)\include\microsoft.ui.xaml.media.*.h" />
-        <FoundationHeaders Include="$(PkgMicrosoft_WindowsAppSDK)\include\MddBootstrap.h" />
 
         <ImportLibs Include="$(PkgMicrosoft_WindowsAppSDK)\lib\win10-*\*.lib" />
 
@@ -30,12 +29,17 @@
             <Namespace>Microsoft.UI.Xaml.Media</Namespace>
         </Partition>
 
+        <Partition Include="microsoft.mrm.cpp">
+            <TraverseFiles>$(PkgMicrosoft_WindowsAppSDK)\include\mrm.h</TraverseFiles>
+            <Namespace>Microsoft.MRM</Namespace>
+        </Partition>
+
         <Partition Include="microsoft.was.foundation.cpp">
-            <TraverseFiles>@(FoundationHeaders)</TraverseFiles>
+            <TraverseFiles>$(PkgMicrosoft_WindowsAppSDK)\include\MddBootstrap.h</TraverseFiles>
             <Namespace>Microsoft.WindowsAppSdk.Foundation</Namespace>
         </Partition>
 
-        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0-preview3" GeneratePathProperty="true">
+        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" GeneratePathProperty="true">
             <IncludeAssets>none</IncludeAssets>
         </PackageReference>
     </ItemGroup>

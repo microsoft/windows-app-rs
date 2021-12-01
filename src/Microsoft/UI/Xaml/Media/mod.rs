@@ -13,36 +13,6 @@ pub mod Animation;
 pub mod Imaging;
 #[cfg(feature = "UI_Xaml_Media_Media3D")]
 pub mod Media3D;
-#[derive(
-    :: core :: cmp :: PartialEq,
-    :: core :: cmp :: Eq,
-    :: core :: marker :: Copy,
-    :: core :: clone :: Clone,
-    :: core :: default :: Default,
-    :: core :: fmt :: Debug,
-)]
-#[repr(transparent)]
-pub struct AcrylicBackgroundSource(pub i32);
-impl AcrylicBackgroundSource {
-    pub const HostBackdrop: AcrylicBackgroundSource = AcrylicBackgroundSource(0i32);
-    pub const Backdrop: AcrylicBackgroundSource = AcrylicBackgroundSource(1i32);
-}
-impl ::core::convert::From<i32> for AcrylicBackgroundSource {
-    fn from(value: i32) -> Self {
-        Self(value)
-    }
-}
-unsafe impl ::windows::core::Abi for AcrylicBackgroundSource {
-    type Abi = Self;
-}
-unsafe impl ::windows::core::RuntimeType for AcrylicBackgroundSource {
-    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
-        b"enum(Microsoft.UI.Xaml.Media.AcrylicBackgroundSource;i4)",
-    );
-}
-impl ::windows::core::DefaultType for AcrylicBackgroundSource {
-    type DefaultType = Self;
-}
 #[repr(transparent)]
 #[derive(
     :: core :: cmp :: PartialEq,

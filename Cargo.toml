@@ -48,6 +48,8 @@ Graphics = [
 Graphics_DirectX = [
   "Graphics",
 ]
+MRM = [
+]
 UI = [
   "windows/UI",
 ]
@@ -542,16 +544,8 @@ Windows_ApplicationModel_Resources = [
 Windows_ApplicationModel_WindowsAppRuntime = [
   "Windows_ApplicationModel",
 ]
-Windows_PushNotifications = [
-  "Windows",
-  "windows/ApplicationModel_Background",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Networking_PushNotifications",
-]
 Windows_System = [
   "Windows",
-  "windows/Foundation_Collections",
 ]
 Windows_System_Power = [
   "Windows_System",

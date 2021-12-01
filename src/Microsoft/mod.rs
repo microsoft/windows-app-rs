@@ -11,6 +11,8 @@
 pub mod Foundation;
 #[cfg(feature = "Graphics")]
 pub mod Graphics;
+#[cfg(feature = "MRM")]
+pub mod MRM;
 #[cfg(feature = "UI")]
 pub mod UI;
 #[cfg(feature = "Web")]
