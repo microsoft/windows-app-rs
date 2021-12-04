@@ -18,10 +18,17 @@ features = [
     "WindowsAppSdk_Foundation"
 ]
 
+[dependencies.windows]
+version = "0.28"
+features = [
+    "std"
+]
+
 [dependencies.windows-app]
 git = "https://github.com/microsoft/windows-app-rs"
 features = [
-    "Windows_System_Power",
+    "WindowsAppSdk_Foundation",
+    "Windows_System_Power"
 ]
 ```
 
