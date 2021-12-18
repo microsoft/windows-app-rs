@@ -32,7 +32,7 @@ features = [
 ]
 ```
 
-Add a build script (`build.rs`) to your crate to deploy the [Windows App SDK Bootstrapper](https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/deploy-unpackaged-apps?WT.mc_id=WD-MVP-5002756#using-features-at-run-time) with your app.
+Add a build script (`build.rs`) to your crate to deploy the [Windows App SDK Bootstrapper](https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/deploy-unpackaged-apps?WT.mc_id=WD-MVP-5002756#using-features-at-run-time) with your app:
 
 ```rust
 fn main() {
@@ -58,3 +58,10 @@ fn main() -> ::windows::core::Result<()> {
         .and_then(|_| bootstrap::uninitialize())
 }
 ```
+
+Finally, install the [Windows App Runtime](https://docs.microsoft.com/windows/apps/windows-app-sdk/deploy-unpackaged-apps?WT.mc_id=WD-MVP-5002756) on all target machines:
+
+1. Download the [Windows App Runtime Redistributable](https://aka.ms/windowsappsdk/1.0-stable/msix-installer) package.
+2. Execute `WindowsAppSDK-Installer-{arch}\WindowsAppRuntimeInstall.exe`.
+
+After you install the Windows App Runtime, it will be kept up-to-date by Microsoft via Windows Update.
