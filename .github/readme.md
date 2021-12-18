@@ -59,7 +59,7 @@ fn main() -> ::windows::core::Result<()> {
 }
 ```
 
-Finally, install the [Windows App Runtime](https://docs.microsoft.com/windows/apps/windows-app-sdk/deploy-unpackaged-apps?WT.mc_id=WD-MVP-5002756) on any machine that will use this app:
+Finally, install the [Windows App Runtime](https://docs.microsoft.com/windows/apps/windows-app-sdk/deploy-unpackaged-apps?WT.mc_id=WD-MVP-5002756) on all target machines:
 
 1. Download the [Windows App Runtime Redistributable](https://aka.ms/windowsappsdk/1.0-stable/msix-installer) package.
 2. Execute `WindowsAppSDK-Installer-{arch}\WindowsAppRuntimeInstall.exe`.
