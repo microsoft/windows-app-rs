@@ -30,7 +30,7 @@ default-target = "x86_64-pc-windows-msvc"
 targets = []
 
 [dependencies.windows]
-version = "0.28"
+version = "0.29"
 features = [
     "std",
     "Foundation_Collections",
