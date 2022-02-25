@@ -1,0 +1,25 @@
+[package]
+name = "colors_sample"
+version = "0.0.0"
+publish = false
+edition = "2018"
+
+[dependencies.windows]
+version = "0.33.0"
+features = [
+    "alloc",
+    "UI",
+]
+
+[build-dependencies.windows-app]
+path = "../../../"
+features = [
+    "WindowsAppSdk_Foundation"
+]
+
+[dependencies.windows-app]
+path = "../../../"
+features = [
+    "WindowsAppSdk_Foundation",
+    "UI",
+]

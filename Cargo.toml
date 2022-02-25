@@ -13,7 +13,8 @@ exclude = [".github", ".windows", "docs", "tests"]
 [workspace]
 members = [
     "crates/tools/*",
-    "crates/targets/*"
+    "crates/targets/*",
+    "crates/samples/*",
 ]
 
 [target.i686-pc-windows-msvc.dependencies]
