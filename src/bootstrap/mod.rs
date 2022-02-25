@@ -3,7 +3,6 @@
 pub mod deploy;
 
 use crate::Microsoft::WindowsAppSdk::Foundation::*;
-use windows::Win32::Foundation::PWSTR;
 use windows::Win32::Storage::Packaging::Appx::{
     PACKAGE_VERSION, PACKAGE_VERSION_0, PACKAGE_VERSION_0_0,
 };
@@ -26,7 +25,7 @@ pub fn initialize() -> windows::core::Result<()> {
         },
     };
 
-    unsafe { MddBootstrapInitialize(mdd_version, PWSTR::default(), min_framework_version) }
+    unsafe { MddBootstrapInitialize(mdd_version, windows::core::PCWSTR::default(), min_framework_version) }
 }
 
 /// Undo the changes made by `initialize()`.

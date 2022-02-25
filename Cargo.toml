@@ -1,6 +1,6 @@
 [package]
 name = "windows-app"
-version = "0.2.0"
+version = "0.3.0"
 authors = [""]
 edition = "2018"
 license = "MIT OR Apache-2.0"
@@ -17,22 +17,22 @@ members = [
 ]
 
 [target.i686-pc-windows-msvc.dependencies]
-windows_app_i686_msvc = { path = "crates/targets/i686_msvc", version = "0.2.0" }
+windows_app_i686_msvc = { path = "crates/targets/i686_msvc", version = "0.3.0" }
 
 [target.x86_64-pc-windows-msvc.dependencies]
-windows_app_x86_64_msvc = { path = "crates/targets/x86_64_msvc", version = "0.2.0" }
+windows_app_x86_64_msvc = { path = "crates/targets/x86_64_msvc", version = "0.3.0" }
 
 [target.aarch64-pc-windows-msvc.dependencies]
-windows_app_aarch64_msvc = { path = "crates/targets/aarch64_msvc", version = "0.2.0" }
+windows_app_aarch64_msvc = { path = "crates/targets/aarch64_msvc", version = "0.3.0" }
 
 [package.metadata.docs.rs]
 default-target = "x86_64-pc-windows-msvc"
 targets = []
 
 [dependencies.windows]
-version = "0.29"
+version = "0.33.0"
 features = [
-    "std",
+    "alloc",
     "Foundation_Collections",
     "Win32_Foundation",
     "Win32_Storage_Packaging_Appx"
@@ -51,233 +51,74 @@ Graphics_DirectX = [
 MRM = [
 ]
 UI = [
-  "windows/UI",
 ]
 UI_Composition = [
   "UI",
-  "windows/Foundation",
   "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_Effects",
-  "windows/UI",
 ]
 UI_Composition_Core = [
   "UI_Composition",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_Effects",
-  "windows/UI",
 ]
 UI_Composition_Diagnostics = [
   "UI_Composition",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_Effects",
-  "windows/UI",
 ]
 UI_Composition_Effects = [
   "UI_Composition",
-  "windows/Graphics_Effects",
 ]
 UI_Composition_Interactions = [
   "UI_Composition",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_Effects",
-  "windows/UI",
 ]
 UI_Composition_Scenes = [
   "UI_Composition",
-  "windows/Foundation",
   "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_Effects",
-  "windows/UI",
 ]
 UI_Composition_SystemBackdrops = [
   "UI_Composition",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Composition",
-  "windows/UI_Core",
 ]
 UI_Dispatching = [
   "UI",
-  "windows/Foundation",
 ]
 UI_Input = [
   "UI",
   "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/System",
-  "windows/UI_Core",
 ]
 UI_Input_Interop = [
   "UI_Input",
-  "windows/Devices_Haptics",
-  "windows/Devices_Input",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
 ]
 UI_Text = [
   "UI",
-  "windows/Foundation",
-  "windows/Storage_Streams",
-  "windows/UI",
-  "windows/UI_Text",
 ]
 UI_Windowing = [
   "UI",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Graphics",
-  "windows/UI",
 ]
 UI_Xaml = [
   "UI",
-  "windows/ApplicationModel",
-  "windows/ApplicationModel_Activation",
-  "windows/ApplicationModel_Core",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
   "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_ViewManagement",
-  "windows/UI_Xaml_Interop",
-  "windows/Win32_Foundation",
+  "windows/Foundation",
+  "windows/ApplicationModel",
 ]
 UI_Xaml_Automation = [
   "UI_Xaml",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Automation_Peers = [
   "UI_Xaml_Automation",
-  "windows/ApplicationModel_Contacts",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Globalization",
-  "windows/Globalization_NumberFormatting",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Media_Casting",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Automation_Provider = [
   "UI_Xaml_Automation",
-  "windows/Foundation",
-  "windows/UI",
 ]
 UI_Xaml_Automation_Text = [
   "UI_Xaml_Automation",
 ]
 UI_Xaml_Controls = [
   "UI_Xaml",
-  "windows/ApplicationModel_Contacts",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
   "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Globalization",
-  "windows/Globalization_NumberFormatting",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Media_Casting",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
+  "windows/Foundation",
 ]
 UI_Xaml_Controls_AnimatedVisuals = [
   "UI_Xaml_Controls",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_Effects",
-  "windows/UI",
 ]
 UI_Xaml_Controls_Primitives = [
   "UI_Xaml_Controls",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Core = [
   "UI_Xaml",
@@ -287,225 +128,52 @@ UI_Xaml_Core_Direct = [
 ]
 UI_Xaml_Data = [
   "UI_Xaml",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/System",
-  "windows/UI_Core",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Documents = [
   "UI_Xaml",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
   "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Hosting = [
   "UI_Xaml",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
-  "windows/Win32_Foundation",
-  "windows/Win32_UI_WindowsAndMessaging",
 ]
 UI_Xaml_Input = [
   "UI_Xaml",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Interop = [
   "UI_Xaml",
-  "windows/Foundation",
 ]
 UI_Xaml_Markup = [
   "UI_Xaml",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Media = [
   "UI_Xaml",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
   "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
-  "windows/Win32_Foundation",
-  "windows/Win32_Graphics_Dxgi",
-  "windows/Win32_Graphics_Dxgi_Common",
-  "windows/Win32_Graphics_Gdi",
 ]
 UI_Xaml_Media_Animation = [
   "UI_Xaml_Media",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
   "windows/Foundation",
   "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Media_Imaging = [
   "UI_Xaml_Media",
-  "windows/ApplicationModel_Background",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Media_Media3D = [
   "UI_Xaml_Media",
-  "windows/Foundation",
-  "windows/System",
-  "windows/UI_Core",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Navigation = [
   "UI_Xaml",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/System",
-  "windows/UI_Core",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Printing = [
   "UI_Xaml",
-  "windows/ApplicationModel_DataTransfer",
-  "windows/ApplicationModel_DataTransfer_DragDrop",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_DirectX",
-  "windows/Graphics_DirectX_Direct3D11",
-  "windows/Graphics_Effects",
-  "windows/Graphics_Imaging",
-  "windows/Graphics_Printing",
-  "windows/Security_EnterpriseData",
-  "windows/Storage",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Text",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_Resources = [
   "UI_Xaml",
 ]
 UI_Xaml_Shapes = [
   "UI_Xaml",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Foundation_Numerics",
-  "windows/Graphics",
-  "windows/Graphics_Effects",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
-  "windows/UI_Xaml_Interop",
 ]
 UI_Xaml_XamlTypeInfo = [
   "UI_Xaml",
-  "windows/UI_Xaml_Interop",
 ]
 Web = [
 ]
@@ -514,32 +182,20 @@ Web_WebView2 = [
 ]
 Web_WebView2_Core = [
   "Web_WebView2",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
-  "windows/Security_Cryptography_Certificates",
-  "windows/Storage_Streams",
-  "windows/System",
-  "windows/UI",
-  "windows/UI_Core",
 ]
 Windows = [
 ]
 Windows_AppLifecycle = [
   "Windows",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
 ]
 Windows_ApplicationModel = [
   "Windows",
 ]
 Windows_ApplicationModel_DynamicDependency = [
   "Windows_ApplicationModel",
-  "windows/ApplicationModel",
 ]
 Windows_ApplicationModel_Resources = [
   "Windows_ApplicationModel",
-  "windows/Foundation",
-  "windows/Foundation_Collections",
 ]
 Windows_ApplicationModel_WindowsAppRuntime = [
   "Windows_ApplicationModel",
@@ -549,10 +205,10 @@ Windows_System = [
 ]
 Windows_System_Power = [
   "Windows_System",
-  "windows/Foundation",
 ]
 WindowsAppSdk = [
 ]
 WindowsAppSdk_Foundation = [
   "WindowsAppSdk",
+  "windows/Win32_Storage_Packaging_Appx",
 ]

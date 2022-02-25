@@ -1,640 +1,440 @@
 #![allow(
-    unused_variables,
-    non_upper_case_globals,
     non_snake_case,
-    unused_unsafe,
     non_camel_case_types,
-    dead_code,
+    non_upper_case_globals,
+    clashing_extern_declarations,
     clippy::all
 )]
-#[repr(transparent)]
 #[doc(hidden)]
-pub struct IKnownResourceQualifierNameStatics(pub ::windows::core::IInspectable);
+#[repr(transparent)]
+pub struct IKnownResourceQualifierNameStatics(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IKnownResourceQualifierNameStatics {
-    type Vtable = IKnownResourceQualifierNameStatics_abi;
+    type Vtable = IKnownResourceQualifierNameStatics_Vtbl;
     const IID: ::windows::core::GUID =
         ::windows::core::GUID::from_u128(0xdd6cdedc_559b_50c8_ac53_82fe21f915f3);
 }
 #[repr(C)]
 #[doc(hidden)]
-pub struct IKnownResourceQualifierNameStatics_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        count: *mut u32,
-        values: *mut *mut ::windows::core::GUID,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut i32,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+pub struct IKnownResourceQualifierNameStatics_Vtbl {
+    pub base: ::windows::core::IInspectableVtbl,
+    pub Contrast: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub Custom: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub DeviceFamily: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub HomeRegion: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub Language: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub LayoutDirection: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub Scale: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub TargetSize: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub Theme: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-);
-#[repr(transparent)]
+}
 #[doc(hidden)]
-pub struct IResourceCandidate(pub ::windows::core::IInspectable);
+#[repr(transparent)]
+pub struct IResourceCandidate(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IResourceCandidate {
-    type Vtable = IResourceCandidate_abi;
+    type Vtable = IResourceCandidate_Vtbl;
     const IID: ::windows::core::GUID =
         ::windows::core::GUID::from_u128(0x6c54bc0c_ef1e_57b8_b478_34fece737356);
 }
 #[repr(C)]
 #[doc(hidden)]
-pub struct IResourceCandidate_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        count: *mut u32,
-        values: *mut *mut ::windows::core::GUID,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut i32,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+pub struct IResourceCandidate_Vtbl {
+    pub base: ::windows::core::IInspectableVtbl,
+    pub ValueAsString: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub ValueAsBytes: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result_size__: *mut u32,
         result__: *mut *mut u8,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub Kind: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ResourceCandidateKind,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub QualifierValues: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-);
-#[repr(transparent)]
+}
 #[doc(hidden)]
-pub struct IResourceCandidateFactory(pub ::windows::core::IInspectable);
+#[repr(transparent)]
+pub struct IResourceCandidateFactory(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IResourceCandidateFactory {
-    type Vtable = IResourceCandidateFactory_abi;
+    type Vtable = IResourceCandidateFactory_Vtbl;
     const IID: ::windows::core::GUID =
         ::windows::core::GUID::from_u128(0xbb2b30f8_c19b_5f43_88d9_69ad728a32f4);
 }
 #[repr(C)]
 #[doc(hidden)]
-pub struct IResourceCandidateFactory_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        count: *mut u32,
-        values: *mut *mut ::windows::core::GUID,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut i32,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+pub struct IResourceCandidateFactory_Vtbl {
+    pub base: ::windows::core::IInspectableVtbl,
+    pub CreateInstance: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         kind: ResourceCandidateKind,
         data: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub CreateInstance2: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         data_array_size: u32,
         data: *const u8,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-);
-#[repr(transparent)]
+}
 #[doc(hidden)]
-pub struct IResourceContext(pub ::windows::core::IInspectable);
+#[repr(transparent)]
+pub struct IResourceContext(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IResourceContext {
-    type Vtable = IResourceContext_abi;
+    type Vtable = IResourceContext_Vtbl;
     const IID: ::windows::core::GUID =
         ::windows::core::GUID::from_u128(0x96fb48dc_f77d_55ff_af12_34861e3d4939);
 }
 #[repr(C)]
 #[doc(hidden)]
-pub struct IResourceContext_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        count: *mut u32,
-        values: *mut *mut ::windows::core::GUID,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut i32,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+pub struct IResourceContext_Vtbl {
+    pub base: ::windows::core::IInspectableVtbl,
+    pub QualifierValues: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-);
-#[repr(transparent)]
+}
 #[doc(hidden)]
-pub struct IResourceLoader(pub ::windows::core::IInspectable);
+#[repr(transparent)]
+pub struct IResourceLoader(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IResourceLoader {
-    type Vtable = IResourceLoader_abi;
+    type Vtable = IResourceLoader_Vtbl;
     const IID: ::windows::core::GUID =
         ::windows::core::GUID::from_u128(0xbc3f76bf_da46_54cd_8715_8b8aaf16eaac);
 }
 #[repr(C)]
 #[doc(hidden)]
-pub struct IResourceLoader_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        count: *mut u32,
-        values: *mut *mut ::windows::core::GUID,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut i32,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+pub struct IResourceLoader_Vtbl {
+    pub base: ::windows::core::IInspectableVtbl,
+    pub GetString: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         resourceid: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub GetStringForUri: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         resourceuri: ::windows::core::RawPtr,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-);
-#[repr(transparent)]
+}
 #[doc(hidden)]
-pub struct IResourceLoaderFactory(pub ::windows::core::IInspectable);
+#[repr(transparent)]
+pub struct IResourceLoaderFactory(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IResourceLoaderFactory {
-    type Vtable = IResourceLoaderFactory_abi;
+    type Vtable = IResourceLoaderFactory_Vtbl;
     const IID: ::windows::core::GUID =
         ::windows::core::GUID::from_u128(0x871f83aa_fb34_50d6_b9b9_2c35f3ffc004);
 }
 #[repr(C)]
 #[doc(hidden)]
-pub struct IResourceLoaderFactory_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        count: *mut u32,
-        values: *mut *mut ::windows::core::GUID,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut i32,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+pub struct IResourceLoaderFactory_Vtbl {
+    pub base: ::windows::core::IInspectableVtbl,
+    pub CreateInstance: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         filename: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub CreateInstance2: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         filename: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         resourcemap: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-);
-#[repr(transparent)]
+}
 #[doc(hidden)]
-pub struct IResourceLoaderStatics(pub ::windows::core::IInspectable);
+#[repr(transparent)]
+pub struct IResourceLoaderStatics(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IResourceLoaderStatics {
-    type Vtable = IResourceLoaderStatics_abi;
+    type Vtable = IResourceLoaderStatics_Vtbl;
     const IID: ::windows::core::GUID =
         ::windows::core::GUID::from_u128(0xec9c894a_1466_5f2f_8eee_a70cbd2b51bb);
 }
 #[repr(C)]
 #[doc(hidden)]
-pub struct IResourceLoaderStatics_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        count: *mut u32,
-        values: *mut *mut ::windows::core::GUID,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut i32,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+pub struct IResourceLoaderStatics_Vtbl {
+    pub base: ::windows::core::IInspectableVtbl,
+    pub GetDefaultResourceFilePath: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-);
-#[repr(transparent)]
+}
 #[doc(hidden)]
-pub struct IResourceManager(pub ::windows::core::IInspectable);
+#[repr(transparent)]
+pub struct IResourceManager(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IResourceManager {
-    type Vtable = IResourceManager_abi;
+    type Vtable = IResourceManager_Vtbl;
     const IID: ::windows::core::GUID =
         ::windows::core::GUID::from_u128(0xac2291ef_81be_5c99_a0ae_bcee0180b8a8);
 }
 #[repr(C)]
 #[doc(hidden)]
-pub struct IResourceManager_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        count: *mut u32,
-        values: *mut *mut ::windows::core::GUID,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut i32,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+pub struct IResourceManager_Vtbl {
+    pub base: ::windows::core::IInspectableVtbl,
+    pub MainResourceMap: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub CreateResourceContext: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub ResourceNotFound: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
         result__: *mut ::windows::Foundation::EventRegistrationToken,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub RemoveResourceNotFound: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         token: ::windows::Foundation::EventRegistrationToken,
     ) -> ::windows::core::HRESULT,
-);
-#[repr(transparent)]
+}
 #[doc(hidden)]
-pub struct IResourceManagerFactory(pub ::windows::core::IInspectable);
+#[repr(transparent)]
+pub struct IResourceManagerFactory(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IResourceManagerFactory {
-    type Vtable = IResourceManagerFactory_abi;
+    type Vtable = IResourceManagerFactory_Vtbl;
     const IID: ::windows::core::GUID =
         ::windows::core::GUID::from_u128(0xd6acf18f_458a_535b_a5c4_ac2dc4e49099);
 }
 #[repr(C)]
 #[doc(hidden)]
-pub struct IResourceManagerFactory_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        count: *mut u32,
-        values: *mut *mut ::windows::core::GUID,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut i32,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+pub struct IResourceManagerFactory_Vtbl {
+    pub base: ::windows::core::IInspectableVtbl,
+    pub CreateInstance: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         filename: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-);
-#[repr(transparent)]
+}
 #[doc(hidden)]
-pub struct IResourceMap(pub ::windows::core::IInspectable);
+#[repr(transparent)]
+pub struct IResourceMap(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IResourceMap {
-    type Vtable = IResourceMap_abi;
+    type Vtable = IResourceMap_Vtbl;
     const IID: ::windows::core::GUID =
         ::windows::core::GUID::from_u128(0x4abbd9bc_df4e_5c7b_812c_7e7bb0c22377);
 }
 #[repr(C)]
 #[doc(hidden)]
-pub struct IResourceMap_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        count: *mut u32,
-        values: *mut *mut ::windows::core::GUID,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut i32,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+pub struct IResourceMap_Vtbl {
+    pub base: ::windows::core::IInspectableVtbl,
+    pub ResourceCount: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut u32,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub GetSubtree: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         reference: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub TryGetSubtree: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         reference: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub GetValue: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         resource: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub GetValueWithContext: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         resource: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         context: ::windows::core::RawPtr,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub GetValueByIndex: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         index: u32,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub GetValueByIndexWithContext: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         index: u32,
         context: ::windows::core::RawPtr,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub TryGetValue: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         resource: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub TryGetValueWithContext: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         resource: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         context: ::windows::core::RawPtr,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-);
-#[repr(transparent)]
+}
 #[doc(hidden)]
-pub struct IResourceNotFoundEventArgs(pub ::windows::core::IInspectable);
+#[repr(transparent)]
+pub struct IResourceNotFoundEventArgs(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IResourceNotFoundEventArgs {
-    type Vtable = IResourceNotFoundEventArgs_abi;
+    type Vtable = IResourceNotFoundEventArgs_Vtbl;
     const IID: ::windows::core::GUID =
         ::windows::core::GUID::from_u128(0x64abb08b_e77d_5b26_830f_15941e0e8200);
 }
 #[repr(C)]
 #[doc(hidden)]
-pub struct IResourceNotFoundEventArgs_abi(
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub unsafe extern "system" fn(this: ::windows::core::RawPtr) -> u32,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        count: *mut u32,
-        values: *mut *mut ::windows::core::GUID,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut ::windows::core::RawPtr,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
-        value: *mut i32,
-    ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+pub struct IResourceNotFoundEventArgs_Vtbl {
+    pub base: ::windows::core::IInspectableVtbl,
+    pub Context: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub Name: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
-    pub  unsafe extern "system" fn(
-        this: ::windows::core::RawPtr,
+    pub SetResolvedCandidate: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
         candidate: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
-);
+}
+#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
 pub struct KnownResourceQualifierName {}
 impl KnownResourceQualifierName {
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn Contrast() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).6)(
+            (::windows::core::Interface::vtable(this).Contrast)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn Custom() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).7)(
+            (::windows::core::Interface::vtable(this).Custom)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn DeviceFamily() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).8)(
+            (::windows::core::Interface::vtable(this).DeviceFamily)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn HomeRegion() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).9)(
+            (::windows::core::Interface::vtable(this).HomeRegion)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn Language() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).10)(
+            (::windows::core::Interface::vtable(this).Language)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn LayoutDirection() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).11)(
+            (::windows::core::Interface::vtable(this).LayoutDirection)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn Scale() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).12)(
+            (::windows::core::Interface::vtable(this).Scale)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn TargetSize() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).13)(
+            (::windows::core::Interface::vtable(this).TargetSize)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn Theme() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).14)(
+            (::windows::core::Interface::vtable(this).Theme)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
+    #[doc(hidden)]
     pub fn IKnownResourceQualifierNameStatics<
         R,
         F: FnOnce(&IKnownResourceQualifierNameStatics) -> ::windows::core::Result<R>,
@@ -652,32 +452,29 @@ impl ::windows::core::RuntimeName for KnownResourceQualifierName {
     const NAME: &'static str =
         "Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName";
 }
+#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
 #[repr(transparent)]
-#[derive(
-    :: core :: cmp :: PartialEq,
-    :: core :: cmp :: Eq,
-    :: core :: clone :: Clone,
-    :: core :: fmt :: Debug,
-)]
-pub struct ResourceCandidate(pub ::windows::core::IInspectable);
+pub struct ResourceCandidate(::windows::core::IUnknown);
 impl ResourceCandidate {
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn ValueAsString(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).6)(
+            (::windows::core::Interface::vtable(this).ValueAsString)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn ValueAsBytes(&self) -> ::windows::core::Result<::windows::core::Array<u8>> {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::Array<u8> = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).7)(
+            (::windows::core::Interface::vtable(this).ValueAsBytes)(
                 ::core::mem::transmute_copy(this),
                 ::windows::core::Array::<u8>::set_abi_len(&mut result__),
                 &mut result__ as *mut _ as _,
@@ -685,17 +482,19 @@ impl ResourceCandidate {
             .and_then(|| result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn Kind(&self) -> ::windows::core::Result<ResourceCandidateKind> {
         let this = self;
         unsafe {
             let mut result__: ResourceCandidateKind = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).8)(
+            (::windows::core::Interface::vtable(this).Kind)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ResourceCandidateKind>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn QualifierValues(
         &self,
     ) -> ::windows::core::Result<
@@ -707,7 +506,7 @@ impl ResourceCandidate {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).9)(
+            (::windows::core::Interface::vtable(this).QualifierValues)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
@@ -717,13 +516,14 @@ impl ResourceCandidate {
             >>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn CreateInstance<'a, Param1: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         kind: ResourceCandidateKind,
         data: Param1,
     ) -> ::windows::core::Result<ResourceCandidate> {
         Self::IResourceCandidateFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).6)(
+            (::windows::core::Interface::vtable(this).CreateInstance)(
                 ::core::mem::transmute_copy(this),
                 kind,
                 data.into_param().abi(),
@@ -732,12 +532,11 @@ impl ResourceCandidate {
             .from_abi::<ResourceCandidate>(result__)
         })
     }
-    pub fn CreateInstance2(
-        data: &[<u8 as ::windows::core::DefaultType>::DefaultType],
-    ) -> ::windows::core::Result<ResourceCandidate> {
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    pub fn CreateInstance2(data: &[u8]) -> ::windows::core::Result<ResourceCandidate> {
         Self::IResourceCandidateFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).7)(
+            (::windows::core::Interface::vtable(this).CreateInstance2)(
                 ::core::mem::transmute_copy(this),
                 data.len() as u32,
                 ::core::mem::transmute(data.as_ptr()),
@@ -746,6 +545,7 @@ impl ResourceCandidate {
             .from_abi::<ResourceCandidate>(result__)
         })
     }
+    #[doc(hidden)]
     pub fn IResourceCandidateFactory<
         R,
         F: FnOnce(&IResourceCandidateFactory) -> ::windows::core::Result<R>,
@@ -759,100 +559,123 @@ impl ResourceCandidate {
         unsafe { SHARED.call(callback) }
     }
 }
+impl ::core::clone::Clone for ResourceCandidate {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for ResourceCandidate {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for ResourceCandidate {}
+impl ::core::fmt::Debug for ResourceCandidate {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("ResourceCandidate").field(&self.0).finish()
+    }
+}
 unsafe impl ::windows::core::RuntimeType for ResourceCandidate {
     const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate;{6c54bc0c-ef1e-57b8-b478-34fece737356})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
 }
 unsafe impl ::windows::core::Interface for ResourceCandidate {
-    type Vtable = IResourceCandidate_abi;
-    const IID: ::windows::core::GUID =
-        ::windows::core::GUID::from_u128(0x6c54bc0c_ef1e_57b8_b478_34fece737356);
+    type Vtable = IResourceCandidate_Vtbl;
+    const IID: ::windows::core::GUID = <IResourceCandidate as ::windows::core::Interface>::IID;
 }
 impl ::windows::core::RuntimeName for ResourceCandidate {
     const NAME: &'static str = "Microsoft.Windows.ApplicationModel.Resources.ResourceCandidate";
 }
 impl ::core::convert::From<ResourceCandidate> for ::windows::core::IUnknown {
     fn from(value: ResourceCandidate) -> Self {
-        value.0 .0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceCandidate> for ::windows::core::IUnknown {
     fn from(value: &ResourceCandidate) -> Self {
-        value.0 .0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for ResourceCandidate {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Owned(self.0 .0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a ResourceCandidate {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Borrowed(&self.0 .0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl ::core::convert::From<ResourceCandidate> for ::windows::core::IInspectable {
     fn from(value: ResourceCandidate) -> Self {
-        value.0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceCandidate> for ::windows::core::IInspectable {
     fn from(value: &ResourceCandidate) -> Self {
-        value.0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for ResourceCandidate {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Owned(self.0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a ResourceCandidate {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Borrowed(&self.0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 unsafe impl ::core::marker::Send for ResourceCandidate {}
 unsafe impl ::core::marker::Sync for ResourceCandidate {}
-#[derive(
-    :: core :: cmp :: PartialEq,
-    :: core :: cmp :: Eq,
-    :: core :: marker :: Copy,
-    :: core :: clone :: Clone,
-    :: core :: default :: Default,
-    :: core :: fmt :: Debug,
-)]
+#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
 #[repr(transparent)]
+#[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ResourceCandidateKind(pub i32);
 impl ResourceCandidateKind {
-    pub const Unknown: ResourceCandidateKind = ResourceCandidateKind(0i32);
-    pub const String: ResourceCandidateKind = ResourceCandidateKind(1i32);
-    pub const FilePath: ResourceCandidateKind = ResourceCandidateKind(2i32);
-    pub const EmbeddedData: ResourceCandidateKind = ResourceCandidateKind(3i32);
+    pub const Unknown: Self = Self(0i32);
+    pub const String: Self = Self(1i32);
+    pub const FilePath: Self = Self(2i32);
+    pub const EmbeddedData: Self = Self(3i32);
 }
-impl ::core::convert::From<i32> for ResourceCandidateKind {
-    fn from(value: i32) -> Self {
-        Self(value)
+impl ::core::marker::Copy for ResourceCandidateKind {}
+impl ::core::clone::Clone for ResourceCandidateKind {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::default::Default for ResourceCandidateKind {
+    fn default() -> Self {
+        Self(0)
     }
 }
 unsafe impl ::windows::core::Abi for ResourceCandidateKind {
     type Abi = Self;
 }
+impl ::core::fmt::Debug for ResourceCandidateKind {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("ResourceCandidateKind")
+            .field(&self.0)
+            .finish()
+    }
+}
 unsafe impl ::windows::core::RuntimeType for ResourceCandidateKind {
     const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
         b"enum(Microsoft.Windows.ApplicationModel.Resources.ResourceCandidateKind;i4)",
     );
-}
-impl ::windows::core::DefaultType for ResourceCandidateKind {
     type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
 }
+#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
 #[repr(transparent)]
-#[derive(
-    :: core :: cmp :: PartialEq,
-    :: core :: cmp :: Eq,
-    :: core :: clone :: Clone,
-    :: core :: fmt :: Debug,
-)]
-pub struct ResourceContext(pub ::windows::core::IInspectable);
+pub struct ResourceContext(::windows::core::IUnknown);
 impl ResourceContext {
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn QualifierValues(
         &self,
     ) -> ::windows::core::Result<
@@ -864,7 +687,7 @@ impl ResourceContext {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).6)(
+            (::windows::core::Interface::vtable(this).QualifierValues)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
@@ -875,67 +698,81 @@ impl ResourceContext {
         }
     }
 }
+impl ::core::clone::Clone for ResourceContext {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for ResourceContext {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for ResourceContext {}
+impl ::core::fmt::Debug for ResourceContext {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("ResourceContext").field(&self.0).finish()
+    }
+}
 unsafe impl ::windows::core::RuntimeType for ResourceContext {
     const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Windows.ApplicationModel.Resources.ResourceContext;{96fb48dc-f77d-55ff-af12-34861e3d4939})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
 }
 unsafe impl ::windows::core::Interface for ResourceContext {
-    type Vtable = IResourceContext_abi;
-    const IID: ::windows::core::GUID =
-        ::windows::core::GUID::from_u128(0x96fb48dc_f77d_55ff_af12_34861e3d4939);
+    type Vtable = IResourceContext_Vtbl;
+    const IID: ::windows::core::GUID = <IResourceContext as ::windows::core::Interface>::IID;
 }
 impl ::windows::core::RuntimeName for ResourceContext {
     const NAME: &'static str = "Microsoft.Windows.ApplicationModel.Resources.ResourceContext";
 }
 impl ::core::convert::From<ResourceContext> for ::windows::core::IUnknown {
     fn from(value: ResourceContext) -> Self {
-        value.0 .0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceContext> for ::windows::core::IUnknown {
     fn from(value: &ResourceContext) -> Self {
-        value.0 .0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for ResourceContext {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Owned(self.0 .0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a ResourceContext {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Borrowed(&self.0 .0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl ::core::convert::From<ResourceContext> for ::windows::core::IInspectable {
     fn from(value: ResourceContext) -> Self {
-        value.0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceContext> for ::windows::core::IInspectable {
     fn from(value: &ResourceContext) -> Self {
-        value.0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for ResourceContext {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Owned(self.0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a ResourceContext {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Borrowed(&self.0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 unsafe impl ::core::marker::Send for ResourceContext {}
 unsafe impl ::core::marker::Sync for ResourceContext {}
+#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
 #[repr(transparent)]
-#[derive(
-    :: core :: cmp :: PartialEq,
-    :: core :: cmp :: Eq,
-    :: core :: clone :: Clone,
-    :: core :: fmt :: Debug,
-)]
-pub struct ResourceLoader(pub ::windows::core::IInspectable);
+pub struct ResourceLoader(::windows::core::IUnknown);
 impl ResourceLoader {
     pub fn new() -> ::windows::core::Result<Self> {
         Self::IActivationFactory(|f| f.activate_instance::<Self>())
@@ -952,6 +789,7 @@ impl ResourceLoader {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn GetString<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         resourceid: Param0,
@@ -960,7 +798,7 @@ impl ResourceLoader {
         unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).6)(
+            (::windows::core::Interface::vtable(this).GetString)(
                 ::core::mem::transmute_copy(this),
                 resourceid.into_param().abi(),
                 &mut result__,
@@ -968,6 +806,7 @@ impl ResourceLoader {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn GetStringForUri<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Uri>,
@@ -979,7 +818,7 @@ impl ResourceLoader {
         unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).7)(
+            (::windows::core::Interface::vtable(this).GetStringForUri)(
                 ::core::mem::transmute_copy(this),
                 resourceuri.into_param().abi(),
                 &mut result__,
@@ -987,12 +826,13 @@ impl ResourceLoader {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn CreateInstance<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         filename: Param0,
     ) -> ::windows::core::Result<ResourceLoader> {
         Self::IResourceLoaderFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).6)(
+            (::windows::core::Interface::vtable(this).CreateInstance)(
                 ::core::mem::transmute_copy(this),
                 filename.into_param().abi(),
                 &mut result__,
@@ -1000,6 +840,7 @@ impl ResourceLoader {
             .from_abi::<ResourceLoader>(result__)
         })
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn CreateInstance2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1010,7 +851,7 @@ impl ResourceLoader {
     ) -> ::windows::core::Result<ResourceLoader> {
         Self::IResourceLoaderFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).7)(
+            (::windows::core::Interface::vtable(this).CreateInstance2)(
                 ::core::mem::transmute_copy(this),
                 filename.into_param().abi(),
                 resourcemap.into_param().abi(),
@@ -1019,17 +860,19 @@ impl ResourceLoader {
             .from_abi::<ResourceLoader>(result__)
         })
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn GetDefaultResourceFilePath() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IResourceLoaderStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).6)(
+            (::windows::core::Interface::vtable(this).GetDefaultResourceFilePath)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
+    #[doc(hidden)]
     pub fn IResourceLoaderFactory<
         R,
         F: FnOnce(&IResourceLoaderFactory) -> ::windows::core::Result<R>,
@@ -1040,6 +883,7 @@ impl ResourceLoader {
             ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
+    #[doc(hidden)]
     pub fn IResourceLoaderStatics<
         R,
         F: FnOnce(&IResourceLoaderStatics) -> ::windows::core::Result<R>,
@@ -1051,67 +895,81 @@ impl ResourceLoader {
         unsafe { SHARED.call(callback) }
     }
 }
+impl ::core::clone::Clone for ResourceLoader {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for ResourceLoader {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for ResourceLoader {}
+impl ::core::fmt::Debug for ResourceLoader {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("ResourceLoader").field(&self.0).finish()
+    }
+}
 unsafe impl ::windows::core::RuntimeType for ResourceLoader {
     const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Windows.ApplicationModel.Resources.ResourceLoader;{bc3f76bf-da46-54cd-8715-8b8aaf16eaac})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
 }
 unsafe impl ::windows::core::Interface for ResourceLoader {
-    type Vtable = IResourceLoader_abi;
-    const IID: ::windows::core::GUID =
-        ::windows::core::GUID::from_u128(0xbc3f76bf_da46_54cd_8715_8b8aaf16eaac);
+    type Vtable = IResourceLoader_Vtbl;
+    const IID: ::windows::core::GUID = <IResourceLoader as ::windows::core::Interface>::IID;
 }
 impl ::windows::core::RuntimeName for ResourceLoader {
     const NAME: &'static str = "Microsoft.Windows.ApplicationModel.Resources.ResourceLoader";
 }
 impl ::core::convert::From<ResourceLoader> for ::windows::core::IUnknown {
     fn from(value: ResourceLoader) -> Self {
-        value.0 .0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceLoader> for ::windows::core::IUnknown {
     fn from(value: &ResourceLoader) -> Self {
-        value.0 .0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for ResourceLoader {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Owned(self.0 .0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a ResourceLoader {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Borrowed(&self.0 .0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl ::core::convert::From<ResourceLoader> for ::windows::core::IInspectable {
     fn from(value: ResourceLoader) -> Self {
-        value.0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceLoader> for ::windows::core::IInspectable {
     fn from(value: &ResourceLoader) -> Self {
-        value.0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for ResourceLoader {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Owned(self.0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a ResourceLoader {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Borrowed(&self.0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 unsafe impl ::core::marker::Send for ResourceLoader {}
 unsafe impl ::core::marker::Sync for ResourceLoader {}
+#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
 #[repr(transparent)]
-#[derive(
-    :: core :: cmp :: PartialEq,
-    :: core :: cmp :: Eq,
-    :: core :: clone :: Clone,
-    :: core :: fmt :: Debug,
-)]
-pub struct ResourceManager(pub ::windows::core::IInspectable);
+pub struct ResourceManager(::windows::core::IUnknown);
 impl ResourceManager {
     pub fn new() -> ::windows::core::Result<Self> {
         Self::IActivationFactory(|f| f.activate_instance::<Self>())
@@ -1128,28 +986,31 @@ impl ResourceManager {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn MainResourceMap(&self) -> ::windows::core::Result<ResourceMap> {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).6)(
+            (::windows::core::Interface::vtable(this).MainResourceMap)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ResourceMap>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn CreateResourceContext(&self) -> ::windows::core::Result<ResourceContext> {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).7)(
+            (::windows::core::Interface::vtable(this).CreateResourceContext)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ResourceContext>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn ResourceNotFound<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1163,7 +1024,7 @@ impl ResourceManager {
         let this = self;
         unsafe {
             let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).8)(
+            (::windows::core::Interface::vtable(this).ResourceNotFound)(
                 ::core::mem::transmute_copy(this),
                 handler.into_param().abi(),
                 &mut result__,
@@ -1171,6 +1032,7 @@ impl ResourceManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn RemoveResourceNotFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1180,19 +1042,20 @@ impl ResourceManager {
     ) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).9)(
+            (::windows::core::Interface::vtable(this).RemoveResourceNotFound)(
                 ::core::mem::transmute_copy(this),
                 token.into_param().abi(),
             )
             .ok()
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn CreateInstance<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         filename: Param0,
     ) -> ::windows::core::Result<ResourceManager> {
         Self::IResourceManagerFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).6)(
+            (::windows::core::Interface::vtable(this).CreateInstance)(
                 ::core::mem::transmute_copy(this),
                 filename.into_param().abi(),
                 &mut result__,
@@ -1200,6 +1063,7 @@ impl ResourceManager {
             .from_abi::<ResourceManager>(result__)
         })
     }
+    #[doc(hidden)]
     pub fn IResourceManagerFactory<
         R,
         F: FnOnce(&IResourceManagerFactory) -> ::windows::core::Result<R>,
@@ -1211,79 +1075,95 @@ impl ResourceManager {
         unsafe { SHARED.call(callback) }
     }
 }
+impl ::core::clone::Clone for ResourceManager {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for ResourceManager {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for ResourceManager {}
+impl ::core::fmt::Debug for ResourceManager {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("ResourceManager").field(&self.0).finish()
+    }
+}
 unsafe impl ::windows::core::RuntimeType for ResourceManager {
     const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Windows.ApplicationModel.Resources.ResourceManager;{ac2291ef-81be-5c99-a0ae-bcee0180b8a8})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
 }
 unsafe impl ::windows::core::Interface for ResourceManager {
-    type Vtable = IResourceManager_abi;
-    const IID: ::windows::core::GUID =
-        ::windows::core::GUID::from_u128(0xac2291ef_81be_5c99_a0ae_bcee0180b8a8);
+    type Vtable = IResourceManager_Vtbl;
+    const IID: ::windows::core::GUID = <IResourceManager as ::windows::core::Interface>::IID;
 }
 impl ::windows::core::RuntimeName for ResourceManager {
     const NAME: &'static str = "Microsoft.Windows.ApplicationModel.Resources.ResourceManager";
 }
 impl ::core::convert::From<ResourceManager> for ::windows::core::IUnknown {
     fn from(value: ResourceManager) -> Self {
-        value.0 .0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceManager> for ::windows::core::IUnknown {
     fn from(value: &ResourceManager) -> Self {
-        value.0 .0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for ResourceManager {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Owned(self.0 .0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a ResourceManager {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Borrowed(&self.0 .0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl ::core::convert::From<ResourceManager> for ::windows::core::IInspectable {
     fn from(value: ResourceManager) -> Self {
-        value.0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceManager> for ::windows::core::IInspectable {
     fn from(value: &ResourceManager) -> Self {
-        value.0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for ResourceManager {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Owned(self.0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a ResourceManager {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Borrowed(&self.0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 unsafe impl ::core::marker::Send for ResourceManager {}
 unsafe impl ::core::marker::Sync for ResourceManager {}
+#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
 #[repr(transparent)]
-#[derive(
-    :: core :: cmp :: PartialEq,
-    :: core :: cmp :: Eq,
-    :: core :: clone :: Clone,
-    :: core :: fmt :: Debug,
-)]
-pub struct ResourceMap(pub ::windows::core::IInspectable);
+pub struct ResourceMap(::windows::core::IUnknown);
 impl ResourceMap {
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn ResourceCount(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
             let mut result__: u32 = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).6)(
+            (::windows::core::Interface::vtable(this).ResourceCount)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<u32>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn GetSubtree<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         reference: Param0,
@@ -1291,7 +1171,7 @@ impl ResourceMap {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).7)(
+            (::windows::core::Interface::vtable(this).GetSubtree)(
                 ::core::mem::transmute_copy(this),
                 reference.into_param().abi(),
                 &mut result__,
@@ -1299,6 +1179,7 @@ impl ResourceMap {
             .from_abi::<ResourceMap>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn TryGetSubtree<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         reference: Param0,
@@ -1306,7 +1187,7 @@ impl ResourceMap {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).8)(
+            (::windows::core::Interface::vtable(this).TryGetSubtree)(
                 ::core::mem::transmute_copy(this),
                 reference.into_param().abi(),
                 &mut result__,
@@ -1314,6 +1195,7 @@ impl ResourceMap {
             .from_abi::<ResourceMap>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         resource: Param0,
@@ -1321,7 +1203,7 @@ impl ResourceMap {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).9)(
+            (::windows::core::Interface::vtable(this).GetValue)(
                 ::core::mem::transmute_copy(this),
                 resource.into_param().abi(),
                 &mut result__,
@@ -1329,6 +1211,7 @@ impl ResourceMap {
             .from_abi::<ResourceCandidate>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn GetValueWithContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1341,7 +1224,7 @@ impl ResourceMap {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).10)(
+            (::windows::core::Interface::vtable(this).GetValueWithContext)(
                 ::core::mem::transmute_copy(this),
                 resource.into_param().abi(),
                 context.into_param().abi(),
@@ -1350,6 +1233,7 @@ impl ResourceMap {
             .from_abi::<ResourceCandidate>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn GetValueByIndex(
         &self,
         index: u32,
@@ -1362,7 +1246,7 @@ impl ResourceMap {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).11)(
+            (::windows::core::Interface::vtable(this).GetValueByIndex)(
                 ::core::mem::transmute_copy(this),
                 index,
                 &mut result__,
@@ -1373,6 +1257,7 @@ impl ResourceMap {
             >>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn GetValueByIndexWithContext<
         'a,
         Param1: ::windows::core::IntoParam<'a, ResourceContext>,
@@ -1389,7 +1274,7 @@ impl ResourceMap {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).12)(
+            (::windows::core::Interface::vtable(this).GetValueByIndexWithContext)(
                 ::core::mem::transmute_copy(this),
                 index,
                 context.into_param().abi(),
@@ -1401,6 +1286,7 @@ impl ResourceMap {
             >>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn TryGetValue<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         resource: Param0,
@@ -1408,7 +1294,7 @@ impl ResourceMap {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).13)(
+            (::windows::core::Interface::vtable(this).TryGetValue)(
                 ::core::mem::transmute_copy(this),
                 resource.into_param().abi(),
                 &mut result__,
@@ -1416,6 +1302,7 @@ impl ResourceMap {
             .from_abi::<ResourceCandidate>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn TryGetValueWithContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1428,7 +1315,7 @@ impl ResourceMap {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).14)(
+            (::windows::core::Interface::vtable(this).TryGetValueWithContext)(
                 ::core::mem::transmute_copy(this),
                 resource.into_param().abi(),
                 context.into_param().abi(),
@@ -1438,98 +1325,115 @@ impl ResourceMap {
         }
     }
 }
+impl ::core::clone::Clone for ResourceMap {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for ResourceMap {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for ResourceMap {}
+impl ::core::fmt::Debug for ResourceMap {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("ResourceMap").field(&self.0).finish()
+    }
+}
 unsafe impl ::windows::core::RuntimeType for ResourceMap {
     const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Windows.ApplicationModel.Resources.ResourceMap;{4abbd9bc-df4e-5c7b-812c-7e7bb0c22377})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
 }
 unsafe impl ::windows::core::Interface for ResourceMap {
-    type Vtable = IResourceMap_abi;
-    const IID: ::windows::core::GUID =
-        ::windows::core::GUID::from_u128(0x4abbd9bc_df4e_5c7b_812c_7e7bb0c22377);
+    type Vtable = IResourceMap_Vtbl;
+    const IID: ::windows::core::GUID = <IResourceMap as ::windows::core::Interface>::IID;
 }
 impl ::windows::core::RuntimeName for ResourceMap {
     const NAME: &'static str = "Microsoft.Windows.ApplicationModel.Resources.ResourceMap";
 }
 impl ::core::convert::From<ResourceMap> for ::windows::core::IUnknown {
     fn from(value: ResourceMap) -> Self {
-        value.0 .0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceMap> for ::windows::core::IUnknown {
     fn from(value: &ResourceMap) -> Self {
-        value.0 .0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for ResourceMap {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Owned(self.0 .0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a ResourceMap {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Borrowed(&self.0 .0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl ::core::convert::From<ResourceMap> for ::windows::core::IInspectable {
     fn from(value: ResourceMap) -> Self {
-        value.0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceMap> for ::windows::core::IInspectable {
     fn from(value: &ResourceMap) -> Self {
-        value.0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for ResourceMap {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Owned(self.0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a ResourceMap {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Borrowed(&self.0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 unsafe impl ::core::marker::Send for ResourceMap {}
 unsafe impl ::core::marker::Sync for ResourceMap {}
+#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
 #[repr(transparent)]
-#[derive(
-    :: core :: cmp :: PartialEq,
-    :: core :: cmp :: Eq,
-    :: core :: clone :: Clone,
-    :: core :: fmt :: Debug,
-)]
-pub struct ResourceNotFoundEventArgs(pub ::windows::core::IInspectable);
+pub struct ResourceNotFoundEventArgs(::windows::core::IUnknown);
 impl ResourceNotFoundEventArgs {
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn Context(&self) -> ::windows::core::Result<ResourceContext> {
         let this = self;
         unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).6)(
+            (::windows::core::Interface::vtable(this).Context)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<ResourceContext>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
                 ::core::mem::zeroed();
-            (::windows::core::Interface::vtable(this).7)(
+            (::windows::core::Interface::vtable(this).Name)(
                 ::core::mem::transmute_copy(this),
                 &mut result__,
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
+    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
     pub fn SetResolvedCandidate<'a, Param0: ::windows::core::IntoParam<'a, ResourceCandidate>>(
         &self,
         candidate: Param0,
     ) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).8)(
+            (::windows::core::Interface::vtable(this).SetResolvedCandidate)(
                 ::core::mem::transmute_copy(this),
                 candidate.into_param().abi(),
             )
@@ -1537,13 +1441,35 @@ impl ResourceNotFoundEventArgs {
         }
     }
 }
+impl ::core::clone::Clone for ResourceNotFoundEventArgs {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for ResourceNotFoundEventArgs {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for ResourceNotFoundEventArgs {}
+impl ::core::fmt::Debug for ResourceNotFoundEventArgs {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("ResourceNotFoundEventArgs")
+            .field(&self.0)
+            .finish()
+    }
+}
 unsafe impl ::windows::core::RuntimeType for ResourceNotFoundEventArgs {
     const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Windows.ApplicationModel.Resources.ResourceNotFoundEventArgs;{64abb08b-e77d-5b26-830f-15941e0e8200})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
 }
 unsafe impl ::windows::core::Interface for ResourceNotFoundEventArgs {
-    type Vtable = IResourceNotFoundEventArgs_abi;
+    type Vtable = IResourceNotFoundEventArgs_Vtbl;
     const IID: ::windows::core::GUID =
-        ::windows::core::GUID::from_u128(0x64abb08b_e77d_5b26_830f_15941e0e8200);
+        <IResourceNotFoundEventArgs as ::windows::core::Interface>::IID;
 }
 impl ::windows::core::RuntimeName for ResourceNotFoundEventArgs {
     const NAME: &'static str =
@@ -1551,49 +1477,51 @@ impl ::windows::core::RuntimeName for ResourceNotFoundEventArgs {
 }
 impl ::core::convert::From<ResourceNotFoundEventArgs> for ::windows::core::IUnknown {
     fn from(value: ResourceNotFoundEventArgs) -> Self {
-        value.0 .0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceNotFoundEventArgs> for ::windows::core::IUnknown {
     fn from(value: &ResourceNotFoundEventArgs) -> Self {
-        value.0 .0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for ResourceNotFoundEventArgs {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Owned(self.0 .0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
     for &'a ResourceNotFoundEventArgs
 {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
-        ::windows::core::Param::Borrowed(&self.0 .0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl ::core::convert::From<ResourceNotFoundEventArgs> for ::windows::core::IInspectable {
     fn from(value: ResourceNotFoundEventArgs) -> Self {
-        value.0
+        unsafe { ::core::mem::transmute(value) }
     }
 }
 impl ::core::convert::From<&ResourceNotFoundEventArgs> for ::windows::core::IInspectable {
     fn from(value: &ResourceNotFoundEventArgs) -> Self {
-        value.0.clone()
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
     for ResourceNotFoundEventArgs
 {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Owned(self.0)
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
     }
 }
 impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
     for &'a ResourceNotFoundEventArgs
 {
     fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
-        ::windows::core::Param::Borrowed(&self.0)
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
     }
 }
 unsafe impl ::core::marker::Send for ResourceNotFoundEventArgs {}
 unsafe impl ::core::marker::Sync for ResourceNotFoundEventArgs {}
+#[cfg(feature = "implement")]
+::core::include!("impl.rs");
