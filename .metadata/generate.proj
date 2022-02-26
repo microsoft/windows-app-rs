@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<Project Sdk="Microsoft.Windows.WinmdGenerator/0.14.3-preview">
+<Project Sdk="Microsoft.Windows.WinmdGenerator/0.15.49-preview">
 
     <PropertyGroup Label="Globals">
         <OutputWinmd>../.windows/winmd/Microsoft.WindowsAppSdk.Generated.winmd</OutputWinmd>
-        <WinmdVersion>1.0.0</WinmdVersion>
+        <WinmdVersion>2.0.0</WinmdVersion>
+        <ExcludeFromCrossarch>Microsoft.MRM;Microsoft.UI.Xaml;Microsoft.UI.Xaml.Hosting;Microsoft.UI.Xaml.Media;Microsoft.WindowsAppSdk.Foundation</ExcludeFromCrossarch>
     </PropertyGroup>
 
     <ItemGroup>
@@ -42,6 +43,7 @@
         <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" GeneratePathProperty="true">
             <IncludeAssets>none</IncludeAssets>
         </PackageReference>
+
     </ItemGroup>
 
 </Project>
