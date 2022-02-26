@@ -36,7 +36,8 @@ features = [
     "alloc",
     "Foundation_Collections",
     "Win32_Foundation",
-    "Win32_Storage_Packaging_Appx"
+    "Win32_Graphics_Gdi",
+    "Win32_Storage_Packaging_Appx",
 ]
 
 [features]
@@ -94,9 +95,9 @@ UI_Windowing = [
 ]
 UI_Xaml = [
   "UI",
+  "windows/ApplicationModel",
   "windows/Foundation_Collections",
   "windows/Foundation",
-  "windows/ApplicationModel",
 ]
 UI_Xaml_Automation = [
   "UI_Xaml",
@@ -152,8 +153,8 @@ UI_Xaml_Media = [
 ]
 UI_Xaml_Media_Animation = [
   "UI_Xaml_Media",
-  "windows/Foundation",
   "windows/Foundation_Collections",
+  "windows/Foundation",
 ]
 UI_Xaml_Media_Imaging = [
   "UI_Xaml_Media",

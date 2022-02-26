@@ -13,6 +13,7 @@ features = [
     "UI_Core",
     "Graphics_Effects",
     "Win32_Foundation",
+    "Win32_UI_HiDpi",
     "Win32_UI_WindowsAndMessaging",
 ]
 
