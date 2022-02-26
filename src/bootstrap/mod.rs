@@ -25,7 +25,13 @@ pub fn initialize() -> windows::core::Result<()> {
         },
     };
 
-    unsafe { MddBootstrapInitialize(mdd_version, windows::core::PCWSTR::default(), min_framework_version) }
+    unsafe {
+        MddBootstrapInitialize(
+            mdd_version,
+            windows::core::PCWSTR::default(),
+            min_framework_version,
+        )
+    }
 }
 
 /// Undo the changes made by `initialize()`.
