@@ -4,3 +4,6 @@ target
 packages
 obj
 bin
+*.lock
+*.user
+*.filters
