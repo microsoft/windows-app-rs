@@ -108,12 +108,12 @@ fn write_feature(file: &mut std::fs::File, root: &'static str, tree: &windows_me
         })
         .collect::<HashSet<&str>>();
 
-    file.write_all(format!("{} = [\n", feature).as_bytes())
+    file.write_all(format!("{} = [", feature).as_bytes())
         .unwrap();
 
     if let Some(pos) = feature.rfind('_') {
         let dependency = &feature[..pos];
-        file.write_all(format!("  \"{}\",\n", dependency).as_bytes())
+        file.write_all(format!("\"{}\"", dependency).as_bytes())
             .unwrap();
     }
 
@@ -122,7 +122,7 @@ fn write_feature(file: &mut std::fs::File, root: &'static str, tree: &windows_me
         .filter(|f| f.starts_with("Windows."))
         .map(|f| f[8..].replace('.', "_"))
         .for_each(|f| {
-            file.write_all(format!("  \"windows/{}\",\n", f).as_bytes())
+            file.write_all(format!(", \"windows/{}\"", f).as_bytes())
                 .unwrap()
         });
 
