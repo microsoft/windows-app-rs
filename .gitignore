@@ -1,5 +1,9 @@
-/target
-/.vscode
-/.vs
-.metadata/obj
-.metadata/bin
+.vscode
+.vs
+target
+packages
+obj
+bin
+*.lock
+*.user
+*.filters

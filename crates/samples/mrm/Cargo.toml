@@ -1,0 +1,21 @@
+[package]
+name = "samples_mrm"
+version = "0.0.0"
+publish = false
+edition = "2018"
+
+[build-dependencies.windows-app]
+path = "../../../"
+features = [
+    "WindowsAppSdk_Foundation",
+]
+
+[dependencies.windows]
+version = "0.34.0"
+
+[dependencies.windows-app]
+path = "../../../"
+features = [
+    "WindowsAppSdk_Foundation",
+    "Windows_ApplicationModel_Resources",
+]

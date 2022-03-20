@@ -19,10 +19,7 @@ features = [
 ]
 
 [dependencies.windows]
-version = "0.29"
-features = [
-    "std"
-]
+version = "0.34.0"
 
 [dependencies.windows-app]
 git = "https://github.com/microsoft/windows-app-rs"
@@ -47,15 +44,10 @@ use ::windows_app::Microsoft::Windows::System::Power::*;
 use ::windows_app::*;
 
 fn main() -> ::windows::core::Result<()> {
-    bootstrap::initialize()
-        .and_then(|_| {
-            println!(
-                "Remaining charge: {}%",
-                PowerManager::RemainingChargePercent()?
-            );
-            Ok(())
-        })
-        .and_then(|_| bootstrap::uninitialize())
+    bootstrap::initialize()?;
+    let charge = PowerManager::RemainingChargePercent()?;
+    println!("Remaining charge: {charge}%");
+    bootstrap::uninitialize()
 }
 ```
 

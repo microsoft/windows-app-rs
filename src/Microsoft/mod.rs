@@ -1,10 +1,8 @@
 #![allow(
-    unused_variables,
-    non_upper_case_globals,
     non_snake_case,
-    unused_unsafe,
     non_camel_case_types,
-    dead_code,
+    non_upper_case_globals,
+    clashing_extern_declarations,
     clippy::all
 )]
 #[cfg(feature = "Foundation")]
@@ -21,3 +19,5 @@ pub mod Web;
 pub mod Windows;
 #[cfg(feature = "WindowsAppSdk")]
 pub mod WindowsAppSdk;
+#[cfg(feature = "implement")]
+::core::include!("impl.rs");

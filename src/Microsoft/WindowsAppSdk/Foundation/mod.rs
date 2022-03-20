@@ -1,16 +1,15 @@
 #![allow(
-    unused_variables,
-    non_upper_case_globals,
     non_snake_case,
-    unused_unsafe,
     non_camel_case_types,
-    dead_code,
+    non_upper_case_globals,
+    clashing_extern_declarations,
     clippy::all
 )]
+#[doc = "*Required features: `\"WindowsAppSdk_Foundation\"`*"]
 #[inline]
 pub unsafe fn MddBootstrapInitialize<
     'a,
-    Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::PWSTR>,
+    Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
     Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Storage::Packaging::Appx::PACKAGE_VERSION>,
 >(
     majorminorversion: u32,
@@ -23,7 +22,7 @@ pub unsafe fn MddBootstrapInitialize<
         extern "system" {
             fn MddBootstrapInitialize(
                 majorminorversion: u32,
-                versiontag: ::windows::Win32::Foundation::PWSTR,
+                versiontag: ::windows::core::PCWSTR,
                 minversion: ::windows::Win32::Storage::Packaging::Appx::PACKAGE_VERSION,
             ) -> ::windows::core::HRESULT;
         }
@@ -37,6 +36,7 @@ pub unsafe fn MddBootstrapInitialize<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
+#[doc = "*Required features: `\"WindowsAppSdk_Foundation\"`*"]
 #[inline]
 pub unsafe fn MddBootstrapShutdown() {
     #[cfg(windows)]
@@ -45,8 +45,10 @@ pub unsafe fn MddBootstrapShutdown() {
         extern "system" {
             fn MddBootstrapShutdown();
         }
-        ::core::mem::transmute(MddBootstrapShutdown())
+        MddBootstrapShutdown()
     }
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
+#[cfg(feature = "implement")]
+::core::include!("impl.rs");
