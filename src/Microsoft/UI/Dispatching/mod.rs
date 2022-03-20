@@ -5,11 +5,11 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Dispatching'*"]
+#[doc = "*Required features: `\"UI_Dispatching\"`*"]
 #[repr(transparent)]
 pub struct DispatcherQueue(::windows::core::IUnknown);
 impl DispatcherQueue {
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn CreateTimer(&self) -> ::windows::core::Result<DispatcherQueueTimer> {
         let this = self;
         unsafe {
@@ -21,7 +21,7 @@ impl DispatcherQueue {
             .from_abi::<DispatcherQueueTimer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn TryEnqueue<'a, Param0: ::windows::core::IntoParam<'a, DispatcherQueueHandler>>(
         &self,
         callback: Param0,
@@ -37,7 +37,7 @@ impl DispatcherQueue {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn TryEnqueueWithPriority<
         'a,
         Param1: ::windows::core::IntoParam<'a, DispatcherQueueHandler>,
@@ -58,7 +58,7 @@ impl DispatcherQueue {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn ShutdownStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -83,7 +83,7 @@ impl DispatcherQueue {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn RemoveShutdownStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -100,7 +100,7 @@ impl DispatcherQueue {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn ShutdownCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -125,7 +125,7 @@ impl DispatcherQueue {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn RemoveShutdownCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -142,7 +142,7 @@ impl DispatcherQueue {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn HasThreadAccess(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IDispatcherQueue2>(self)?;
         unsafe {
@@ -154,7 +154,7 @@ impl DispatcherQueue {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn GetForCurrentThread() -> ::windows::core::Result<DispatcherQueue> {
         Self::IDispatcherQueueStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -251,11 +251,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DispatcherQueue {}
 unsafe impl ::core::marker::Sync for DispatcherQueue {}
-#[doc = "*Required features: 'UI_Dispatching'*"]
+#[doc = "*Required features: `\"UI_Dispatching\"`*"]
 #[repr(transparent)]
 pub struct DispatcherQueueController(::windows::core::IUnknown);
 impl DispatcherQueueController {
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<DispatcherQueue> {
         let this = self;
         unsafe {
@@ -267,7 +267,7 @@ impl DispatcherQueueController {
             .from_abi::<DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn ShutdownQueueAsync(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncAction> {
@@ -281,7 +281,7 @@ impl DispatcherQueueController {
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn CreateOnDedicatedThread() -> ::windows::core::Result<DispatcherQueueController> {
         Self::IDispatcherQueueControllerStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -292,7 +292,7 @@ impl DispatcherQueueController {
             .from_abi::<DispatcherQueueController>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn CreateOnCurrentThread() -> ::windows::core::Result<DispatcherQueueController> {
         Self::IDispatcherQueueControllerStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -398,7 +398,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for DispatcherQueueController {}
 unsafe impl ::core::marker::Sync for DispatcherQueueController {}
-#[doc = "*Required features: 'UI_Dispatching'*"]
+#[doc = "*Required features: `\"UI_Dispatching\"`*"]
 #[repr(transparent)]
 pub struct DispatcherQueueHandler(pub ::windows::core::IUnknown);
 impl DispatcherQueueHandler {
@@ -412,7 +412,7 @@ impl DispatcherQueueHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn Invoke(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -516,7 +516,7 @@ pub struct DispatcherQueueHandler_Vtbl {
     pub Invoke:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Dispatching'*"]
+#[doc = "*Required features: `\"UI_Dispatching\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DispatcherQueuePriority(pub i32);
@@ -555,11 +555,11 @@ unsafe impl ::windows::core::RuntimeType for DispatcherQueuePriority {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Dispatching'*"]
+#[doc = "*Required features: `\"UI_Dispatching\"`*"]
 #[repr(transparent)]
 pub struct DispatcherQueueShutdownStartingEventArgs(::windows::core::IUnknown);
 impl DispatcherQueueShutdownStartingEventArgs {
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
@@ -661,11 +661,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for DispatcherQueueShutdownStartingEventArgs {}
 unsafe impl ::core::marker::Sync for DispatcherQueueShutdownStartingEventArgs {}
-#[doc = "*Required features: 'UI_Dispatching'*"]
+#[doc = "*Required features: `\"UI_Dispatching\"`*"]
 #[repr(transparent)]
 pub struct DispatcherQueueTimer(::windows::core::IUnknown);
 impl DispatcherQueueTimer {
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn Interval(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
@@ -677,7 +677,7 @@ impl DispatcherQueueTimer {
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn SetInterval<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::TimeSpan>,
@@ -694,7 +694,7 @@ impl DispatcherQueueTimer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn IsRunning(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -706,7 +706,7 @@ impl DispatcherQueueTimer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn IsRepeating(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -718,7 +718,7 @@ impl DispatcherQueueTimer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn SetIsRepeating(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -729,21 +729,21 @@ impl DispatcherQueueTimer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn Start(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Start)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn Stop(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Stop)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn Tick<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -768,7 +768,7 @@ impl DispatcherQueueTimer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Dispatching\"`*"]
     pub fn RemoveTick<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,

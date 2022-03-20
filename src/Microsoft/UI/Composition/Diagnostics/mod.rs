@@ -5,11 +5,11 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Composition_Diagnostics'*"]
+#[doc = "*Required features: `\"UI_Composition_Diagnostics\"`*"]
 #[repr(transparent)]
 pub struct CompositionDebugHeatMaps(::windows::core::IUnknown);
 impl CompositionDebugHeatMaps {
-    #[doc = "*Required features: 'UI_Composition_Diagnostics'*"]
+    #[doc = "*Required features: `\"UI_Composition_Diagnostics\"`*"]
     pub fn Hide<'a, Param0: ::windows::core::IntoParam<'a, super::Visual>>(
         &self,
         subtree: Param0,
@@ -23,7 +23,7 @@ impl CompositionDebugHeatMaps {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Diagnostics'*"]
+    #[doc = "*Required features: `\"UI_Composition_Diagnostics\"`*"]
     pub fn ShowMemoryUsage<'a, Param0: ::windows::core::IntoParam<'a, super::Visual>>(
         &self,
         subtree: Param0,
@@ -37,7 +37,7 @@ impl CompositionDebugHeatMaps {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Diagnostics'*"]
+    #[doc = "*Required features: `\"UI_Composition_Diagnostics\"`*"]
     pub fn ShowOverdraw<'a, Param0: ::windows::core::IntoParam<'a, super::Visual>>(
         &self,
         subtree: Param0,
@@ -53,7 +53,7 @@ impl CompositionDebugHeatMaps {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Diagnostics'*"]
+    #[doc = "*Required features: `\"UI_Composition_Diagnostics\"`*"]
     pub fn ShowRedraw<'a, Param0: ::windows::core::IntoParam<'a, super::Visual>>(
         &self,
         subtree: Param0,
@@ -149,7 +149,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CompositionDebugHeatMaps {}
 unsafe impl ::core::marker::Sync for CompositionDebugHeatMaps {}
-#[doc = "*Required features: 'UI_Composition_Diagnostics'*"]
+#[doc = "*Required features: `\"UI_Composition_Diagnostics\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CompositionDebugOverdrawContentKinds(pub u32);
@@ -222,11 +222,11 @@ unsafe impl ::windows::core::RuntimeType for CompositionDebugOverdrawContentKind
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Composition_Diagnostics'*"]
+#[doc = "*Required features: `\"UI_Composition_Diagnostics\"`*"]
 #[repr(transparent)]
 pub struct CompositionDebugSettings(::windows::core::IUnknown);
 impl CompositionDebugSettings {
-    #[doc = "*Required features: 'UI_Composition_Diagnostics'*"]
+    #[doc = "*Required features: `\"UI_Composition_Diagnostics\"`*"]
     pub fn HeatMaps(&self) -> ::windows::core::Result<CompositionDebugHeatMaps> {
         let this = self;
         unsafe {
@@ -238,7 +238,7 @@ impl CompositionDebugSettings {
             .from_abi::<CompositionDebugHeatMaps>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Diagnostics'*"]
+    #[doc = "*Required features: `\"UI_Composition_Diagnostics\"`*"]
     pub fn TryGetSettings<'a, Param0: ::windows::core::IntoParam<'a, super::Compositor>>(
         compositor: Param0,
     ) -> ::windows::core::Result<CompositionDebugSettings> {

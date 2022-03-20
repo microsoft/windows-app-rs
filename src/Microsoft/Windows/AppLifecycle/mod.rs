@@ -5,10 +5,10 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'Windows_AppLifecycle'*"]
+#[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
 pub struct ActivationRegistrationManager {}
 impl ActivationRegistrationManager {
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn RegisterForFileTypeActivation<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -35,7 +35,7 @@ impl ActivationRegistrationManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn RegisterForProtocolActivation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -59,7 +59,7 @@ impl ActivationRegistrationManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn RegisterForStartupActivation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -77,7 +77,7 @@ impl ActivationRegistrationManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn UnregisterForFileTypeActivation<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -95,7 +95,7 @@ impl ActivationRegistrationManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn UnregisterForProtocolActivation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -113,7 +113,7 @@ impl ActivationRegistrationManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn UnregisterForStartupActivation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -145,11 +145,11 @@ impl ActivationRegistrationManager {
 impl ::windows::core::RuntimeName for ActivationRegistrationManager {
     const NAME: &'static str = "Microsoft.Windows.AppLifecycle.ActivationRegistrationManager";
 }
-#[doc = "*Required features: 'Windows_AppLifecycle'*"]
+#[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
 #[repr(transparent)]
 pub struct AppActivationArguments(::windows::core::IUnknown);
 impl AppActivationArguments {
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn Kind(&self) -> ::windows::core::Result<ExtendedActivationKind> {
         let this = self;
         unsafe {
@@ -161,7 +161,7 @@ impl AppActivationArguments {
             .from_abi::<ExtendedActivationKind>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn Data(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -250,11 +250,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for AppActivationArguments {}
 unsafe impl ::core::marker::Sync for AppActivationArguments {}
-#[doc = "*Required features: 'Windows_AppLifecycle'*"]
+#[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
 #[repr(transparent)]
 pub struct AppInstance(::windows::core::IUnknown);
 impl AppInstance {
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn UnregisterKey(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -264,7 +264,7 @@ impl AppInstance {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn RedirectActivationToAsync<
         'a,
         Param0: ::windows::core::IntoParam<'a, AppActivationArguments>,
@@ -283,7 +283,7 @@ impl AppInstance {
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn GetActivatedEventArgs(&self) -> ::windows::core::Result<AppActivationArguments> {
         let this = self;
         unsafe {
@@ -295,7 +295,7 @@ impl AppInstance {
             .from_abi::<AppActivationArguments>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn Activated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventHandler<AppActivationArguments>>,
@@ -314,7 +314,7 @@ impl AppInstance {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn RemoveActivated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -331,7 +331,7 @@ impl AppInstance {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn Key(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -344,7 +344,7 @@ impl AppInstance {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn IsCurrent(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -356,7 +356,7 @@ impl AppInstance {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn ProcessId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -368,7 +368,7 @@ impl AppInstance {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn GetCurrent() -> ::windows::core::Result<AppInstance> {
         Self::IAppInstanceStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -379,7 +379,7 @@ impl AppInstance {
             .from_abi::<AppInstance>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn GetInstances(
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<AppInstance>> {
         Self::IAppInstanceStatics(|this| unsafe {
@@ -391,7 +391,7 @@ impl AppInstance {
             .from_abi::<::windows::Foundation::Collections::IVector<AppInstance>>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_AppLifecycle'*"]
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
     pub fn FindOrRegisterForKey<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -491,7 +491,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a A
 }
 unsafe impl ::core::marker::Send for AppInstance {}
 unsafe impl ::core::marker::Sync for AppInstance {}
-#[doc = "*Required features: 'Windows_AppLifecycle'*"]
+#[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ExtendedActivationKind(pub i32);

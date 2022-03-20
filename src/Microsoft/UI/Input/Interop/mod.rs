@@ -23,10 +23,10 @@ pub struct IPenDeviceInteropStatics_Vtbl {
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Input_Interop'*"]
+#[doc = "*Required features: `\"UI_Input_Interop\"`*"]
 pub struct PenDeviceInterop {}
 impl PenDeviceInterop {
-    #[doc = "*Required features: 'UI_Input_Interop'*"]
+    #[doc = "*Required features: `\"UI_Input_Interop\"`*"]
     pub fn FromPointerPoint<'a, Param0: ::windows::core::IntoParam<'a, super::PointerPoint>>(
         pointerpoint: Param0,
     ) -> ::windows::core::Result<::windows::Devices::Input::PenDevice> {

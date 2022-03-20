@@ -8,7 +8,7 @@
 #[cfg(feature = "UI_Input_Interop")]
 pub mod Interop;
 #[repr(C)]
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 pub struct CrossSlideThresholds {
     pub SelectionStart: f32,
     pub SpeedBumpStart: f32,
@@ -60,11 +60,11 @@ impl ::core::default::Default for CrossSlideThresholds {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct CrossSlidingEventArgs(::windows::core::IUnknown);
 impl CrossSlidingEventArgs {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CrossSlidingState(&self) -> ::windows::core::Result<CrossSlidingState> {
         let this = self;
         unsafe {
@@ -76,7 +76,7 @@ impl CrossSlidingEventArgs {
             .from_abi::<CrossSlidingState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerDeviceType(&self) -> ::windows::core::Result<PointerDeviceType> {
         let this = self;
         unsafe {
@@ -88,7 +88,7 @@ impl CrossSlidingEventArgs {
             .from_abi::<PointerDeviceType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -179,7 +179,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CrossSlidingEventArgs {}
 unsafe impl ::core::marker::Sync for CrossSlidingEventArgs {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CrossSlidingState(pub i32);
@@ -219,11 +219,11 @@ unsafe impl ::windows::core::RuntimeType for CrossSlidingState {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct DraggingEventArgs(::windows::core::IUnknown);
 impl DraggingEventArgs {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn DraggingState(&self) -> ::windows::core::Result<DraggingState> {
         let this = self;
         unsafe {
@@ -235,7 +235,7 @@ impl DraggingEventArgs {
             .from_abi::<DraggingState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerDeviceType(&self) -> ::windows::core::Result<PointerDeviceType> {
         let this = self;
         unsafe {
@@ -247,7 +247,7 @@ impl DraggingEventArgs {
             .from_abi::<PointerDeviceType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -334,7 +334,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DraggingEventArgs {}
 unsafe impl ::core::marker::Sync for DraggingEventArgs {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DraggingState(pub i32);
@@ -370,12 +370,12 @@ unsafe impl ::windows::core::RuntimeType for DraggingState {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct GestureRecognizer(::windows::core::IUnknown);
 impl GestureRecognizer {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -389,7 +389,7 @@ impl GestureRecognizer {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn AutoProcessInertia(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -401,7 +401,7 @@ impl GestureRecognizer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetAutoProcessInertia(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -412,7 +412,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CrossSlideExact(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -424,7 +424,7 @@ impl GestureRecognizer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetCrossSlideExact(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -435,7 +435,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CrossSlideHorizontally(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -447,7 +447,7 @@ impl GestureRecognizer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetCrossSlideHorizontally(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -458,7 +458,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CrossSlideThresholds(&self) -> ::windows::core::Result<CrossSlideThresholds> {
         let this = self;
         unsafe {
@@ -470,7 +470,7 @@ impl GestureRecognizer {
             .from_abi::<CrossSlideThresholds>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetCrossSlideThresholds<
         'a,
         Param0: ::windows::core::IntoParam<'a, CrossSlideThresholds>,
@@ -487,7 +487,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn GestureSettings(&self) -> ::windows::core::Result<GestureSettings> {
         let this = self;
         unsafe {
@@ -499,7 +499,7 @@ impl GestureRecognizer {
             .from_abi::<GestureSettings>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetGestureSettings(&self, value: GestureSettings) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -510,7 +510,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsActive(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -522,7 +522,7 @@ impl GestureRecognizer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsInertial(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -534,7 +534,7 @@ impl GestureRecognizer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PivotCenter(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -546,7 +546,7 @@ impl GestureRecognizer {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetPivotCenter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -563,7 +563,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PivotRadius(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -575,7 +575,7 @@ impl GestureRecognizer {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetPivotRadius(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -586,7 +586,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn InertiaExpansionDeceleration(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -598,7 +598,7 @@ impl GestureRecognizer {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetInertiaExpansionDeceleration(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -609,7 +609,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn InertiaExpansion(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -621,7 +621,7 @@ impl GestureRecognizer {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetInertiaExpansion(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -632,7 +632,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn InertiaRotationAngle(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -644,7 +644,7 @@ impl GestureRecognizer {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetInertiaRotationAngle(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -655,7 +655,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn InertiaRotationDeceleration(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -667,7 +667,7 @@ impl GestureRecognizer {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetInertiaRotationDeceleration(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -678,7 +678,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn InertiaTranslationDeceleration(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -690,7 +690,7 @@ impl GestureRecognizer {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetInertiaTranslationDeceleration(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -701,7 +701,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn InertiaTranslationDisplacement(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -713,7 +713,7 @@ impl GestureRecognizer {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetInertiaTranslationDisplacement(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -724,7 +724,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ManipulationExact(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -736,7 +736,7 @@ impl GestureRecognizer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetManipulationExact(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -747,7 +747,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn MouseWheelParameters(&self) -> ::windows::core::Result<MouseWheelParameters> {
         let this = self;
         unsafe {
@@ -759,7 +759,7 @@ impl GestureRecognizer {
             .from_abi::<MouseWheelParameters>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ShowGestureFeedback(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -771,7 +771,7 @@ impl GestureRecognizer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetShowGestureFeedback(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -782,7 +782,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CanBeDoubleTap<'a, Param0: ::windows::core::IntoParam<'a, PointerPoint>>(
         &self,
         value: Param0,
@@ -798,7 +798,7 @@ impl GestureRecognizer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CompleteGesture(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -808,7 +808,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ProcessDownEvent<'a, Param0: ::windows::core::IntoParam<'a, PointerPoint>>(
         &self,
         value: Param0,
@@ -822,7 +822,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ProcessMoveEvents<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVector<PointerPoint>>,
@@ -839,7 +839,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ProcessMouseWheelEvent<'a, Param0: ::windows::core::IntoParam<'a, PointerPoint>>(
         &self,
         value: Param0,
@@ -857,7 +857,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ProcessInertia(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -867,7 +867,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ProcessUpEvent<'a, Param0: ::windows::core::IntoParam<'a, PointerPoint>>(
         &self,
         value: Param0,
@@ -881,7 +881,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Tapped<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -903,7 +903,7 @@ impl GestureRecognizer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemoveTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -920,7 +920,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RightTapped<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -942,7 +942,7 @@ impl GestureRecognizer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemoveRightTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -959,7 +959,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Holding<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -981,7 +981,7 @@ impl GestureRecognizer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemoveHolding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -998,7 +998,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Dragging<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1020,7 +1020,7 @@ impl GestureRecognizer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemoveDragging<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1037,7 +1037,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1062,7 +1062,7 @@ impl GestureRecognizer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemoveManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1079,7 +1079,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ManipulationUpdated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1104,7 +1104,7 @@ impl GestureRecognizer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemoveManipulationUpdated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1121,7 +1121,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1146,7 +1146,7 @@ impl GestureRecognizer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemoveManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1163,7 +1163,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1188,7 +1188,7 @@ impl GestureRecognizer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemoveManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1205,7 +1205,7 @@ impl GestureRecognizer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CrossSliding<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1227,7 +1227,7 @@ impl GestureRecognizer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemoveCrossSliding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1319,7 +1319,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a G
 }
 unsafe impl ::core::marker::Send for GestureRecognizer {}
 unsafe impl ::core::marker::Sync for GestureRecognizer {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct GestureSettings(pub u32);
@@ -1398,11 +1398,11 @@ unsafe impl ::windows::core::RuntimeType for GestureSettings {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct HoldingEventArgs(::windows::core::IUnknown);
 impl HoldingEventArgs {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn HoldingState(&self) -> ::windows::core::Result<HoldingState> {
         let this = self;
         unsafe {
@@ -1414,7 +1414,7 @@ impl HoldingEventArgs {
             .from_abi::<HoldingState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerDeviceType(&self) -> ::windows::core::Result<PointerDeviceType> {
         let this = self;
         unsafe {
@@ -1426,7 +1426,7 @@ impl HoldingEventArgs {
             .from_abi::<PointerDeviceType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -1513,7 +1513,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a H
 }
 unsafe impl ::core::marker::Send for HoldingEventArgs {}
 unsafe impl ::core::marker::Sync for HoldingEventArgs {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct HoldingState(pub i32);
@@ -2552,11 +2552,11 @@ pub struct IPointerPointProperties_Vtbl {
         result__: *mut f32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct IPointerPointTransform(::windows::core::IUnknown);
 impl IPointerPointTransform {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Inverse(&self) -> ::windows::core::Result<IPointerPointTransform> {
         let this = self;
         unsafe {
@@ -2568,7 +2568,7 @@ impl IPointerPointTransform {
             .from_abi::<IPointerPointTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn TryTransform<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -2589,7 +2589,7 @@ impl IPointerPointTransform {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn TryTransformBounds<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -2796,11 +2796,11 @@ pub struct ITappedEventArgs_Vtbl {
         result__: *mut u32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct InputCursor(::windows::core::IUnknown);
 impl InputCursor {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
@@ -2906,18 +2906,18 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::IClosable> for &I
 }
 unsafe impl ::core::marker::Send for InputCursor {}
 unsafe impl ::core::marker::Sync for InputCursor {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct InputDesktopResourceCursor(::windows::core::IUnknown);
 impl InputDesktopResourceCursor {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ModuleName(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -2930,7 +2930,7 @@ impl InputDesktopResourceCursor {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ResourceId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -2942,7 +2942,7 @@ impl InputDesktopResourceCursor {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Create(resourceid: u32) -> ::windows::core::Result<InputDesktopResourceCursor> {
         Self::IInputDesktopResourceCursorStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2954,7 +2954,7 @@ impl InputDesktopResourceCursor {
             .from_abi::<InputDesktopResourceCursor>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CreateFromModule<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -3118,10 +3118,10 @@ impl<'a> ::windows::core::IntoParam<'a, InputCursor> for &InputDesktopResourceCu
 }
 unsafe impl ::core::marker::Send for InputDesktopResourceCursor {}
 unsafe impl ::core::marker::Sync for InputDesktopResourceCursor {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 pub struct InputKeyboardSource {}
 impl InputKeyboardSource {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn GetKeyStateForCurrentThread(
         virtualkey: ::windows::System::VirtualKey,
     ) -> ::windows::core::Result<::windows::UI::Core::CoreVirtualKeyStates> {
@@ -3152,11 +3152,11 @@ impl InputKeyboardSource {
 impl ::windows::core::RuntimeName for InputKeyboardSource {
     const NAME: &'static str = "Microsoft.UI.Input.InputKeyboardSource";
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct InputLightDismissAction(::windows::core::IUnknown);
 impl InputLightDismissAction {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Dismissed<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3181,7 +3181,7 @@ impl InputLightDismissAction {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemoveDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3198,7 +3198,7 @@ impl InputLightDismissAction {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn GetForWindowId<'a, Param0: ::windows::core::IntoParam<'a, super::WindowId>>(
         windowid: Param0,
     ) -> ::windows::core::Result<InputLightDismissAction> {
@@ -3212,7 +3212,7 @@ impl InputLightDismissAction {
             .from_abi::<InputLightDismissAction>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Input', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Input\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IInputObject>(self)?;
@@ -3338,7 +3338,7 @@ impl<'a> ::windows::core::IntoParam<'a, InputObject> for &InputLightDismissActio
 }
 unsafe impl ::core::marker::Send for InputLightDismissAction {}
 unsafe impl ::core::marker::Sync for InputLightDismissAction {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct InputLightDismissEventArgs(::windows::core::IUnknown);
 impl InputLightDismissEventArgs {}
@@ -3425,11 +3425,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for InputLightDismissEventArgs {}
 unsafe impl ::core::marker::Sync for InputLightDismissEventArgs {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct InputObject(::windows::core::IUnknown);
 impl InputObject {
-    #[doc = "*Required features: 'UI_Input', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Input\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = self;
@@ -3517,11 +3517,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a I
 }
 unsafe impl ::core::marker::Send for InputObject {}
 unsafe impl ::core::marker::Sync for InputObject {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct InputPointerSource(::windows::core::IUnknown);
 impl InputPointerSource {
-    #[doc = "*Required features: 'UI_Input', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Input\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IInputObject>(self)?;
@@ -3534,7 +3534,7 @@ impl InputPointerSource {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Cursor(&self) -> ::windows::core::Result<InputCursor> {
         let this = self;
         unsafe {
@@ -3546,7 +3546,7 @@ impl InputPointerSource {
             .from_abi::<InputCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetCursor<'a, Param0: ::windows::core::IntoParam<'a, InputCursor>>(
         &self,
         value: Param0,
@@ -3560,7 +3560,7 @@ impl InputPointerSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn DeviceKinds(&self) -> ::windows::core::Result<InputPointerSourceDeviceKinds> {
         let this = self;
         unsafe {
@@ -3572,7 +3572,7 @@ impl InputPointerSource {
             .from_abi::<InputPointerSourceDeviceKinds>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3594,7 +3594,7 @@ impl InputPointerSource {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemovePointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3611,7 +3611,7 @@ impl InputPointerSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3633,7 +3633,7 @@ impl InputPointerSource {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemovePointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3650,7 +3650,7 @@ impl InputPointerSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerExited<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3672,7 +3672,7 @@ impl InputPointerSource {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemovePointerExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3689,7 +3689,7 @@ impl InputPointerSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3711,7 +3711,7 @@ impl InputPointerSource {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemovePointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3728,7 +3728,7 @@ impl InputPointerSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3750,7 +3750,7 @@ impl InputPointerSource {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemovePointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3767,7 +3767,7 @@ impl InputPointerSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3789,7 +3789,7 @@ impl InputPointerSource {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemovePointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3806,7 +3806,7 @@ impl InputPointerSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerRoutedAway<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3828,7 +3828,7 @@ impl InputPointerSource {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemovePointerRoutedAway<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3845,7 +3845,7 @@ impl InputPointerSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerRoutedReleased<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3867,7 +3867,7 @@ impl InputPointerSource {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemovePointerRoutedReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3884,7 +3884,7 @@ impl InputPointerSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerRoutedTo<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3906,7 +3906,7 @@ impl InputPointerSource {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemovePointerRoutedTo<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3923,7 +3923,7 @@ impl InputPointerSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3945,7 +3945,7 @@ impl InputPointerSource {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn RemovePointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4057,7 +4057,7 @@ impl<'a> ::windows::core::IntoParam<'a, InputObject> for &InputPointerSource {
 }
 unsafe impl ::core::marker::Send for InputPointerSource {}
 unsafe impl ::core::marker::Sync for InputPointerSource {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct InputPointerSourceDeviceKinds(pub u32);
@@ -4125,18 +4125,18 @@ unsafe impl ::windows::core::RuntimeType for InputPointerSourceDeviceKinds {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct InputSystemCursor(::windows::core::IUnknown);
 impl InputSystemCursor {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CursorShape(&self) -> ::windows::core::Result<InputSystemCursorShape> {
         let this = self;
         unsafe {
@@ -4148,7 +4148,7 @@ impl InputSystemCursor {
             .from_abi::<InputSystemCursorShape>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Create(r#type: InputSystemCursorShape) -> ::windows::core::Result<InputSystemCursor> {
         Self::IInputSystemCursorStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4292,7 +4292,7 @@ impl<'a> ::windows::core::IntoParam<'a, InputCursor> for &InputSystemCursor {
 }
 unsafe impl ::core::marker::Send for InputSystemCursor {}
 unsafe impl ::core::marker::Sync for InputSystemCursor {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct InputSystemCursorShape(pub i32);
@@ -4344,11 +4344,11 @@ unsafe impl ::windows::core::RuntimeType for InputSystemCursorShape {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct ManipulationCompletedEventArgs(::windows::core::IUnknown);
 impl ManipulationCompletedEventArgs {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Cumulative(&self) -> ::windows::core::Result<ManipulationDelta> {
         let this = self;
         unsafe {
@@ -4360,7 +4360,7 @@ impl ManipulationCompletedEventArgs {
             .from_abi::<ManipulationDelta>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerDeviceType(&self) -> ::windows::core::Result<PointerDeviceType> {
         let this = self;
         unsafe {
@@ -4372,7 +4372,7 @@ impl ManipulationCompletedEventArgs {
             .from_abi::<PointerDeviceType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -4384,7 +4384,7 @@ impl ManipulationCompletedEventArgs {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Velocities(&self) -> ::windows::core::Result<ManipulationVelocities> {
         let this = self;
         unsafe {
@@ -4481,7 +4481,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 unsafe impl ::core::marker::Send for ManipulationCompletedEventArgs {}
 unsafe impl ::core::marker::Sync for ManipulationCompletedEventArgs {}
 #[repr(C)]
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 pub struct ManipulationDelta {
     pub Translation: ::windows::Foundation::Point,
     pub Scale: f32,
@@ -4531,11 +4531,11 @@ impl ::core::default::Default for ManipulationDelta {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct ManipulationInertiaStartingEventArgs(::windows::core::IUnknown);
 impl ManipulationInertiaStartingEventArgs {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Cumulative(&self) -> ::windows::core::Result<ManipulationDelta> {
         let this = self;
         unsafe {
@@ -4547,7 +4547,7 @@ impl ManipulationInertiaStartingEventArgs {
             .from_abi::<ManipulationDelta>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Delta(&self) -> ::windows::core::Result<ManipulationDelta> {
         let this = self;
         unsafe {
@@ -4559,7 +4559,7 @@ impl ManipulationInertiaStartingEventArgs {
             .from_abi::<ManipulationDelta>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerDeviceType(&self) -> ::windows::core::Result<PointerDeviceType> {
         let this = self;
         unsafe {
@@ -4571,7 +4571,7 @@ impl ManipulationInertiaStartingEventArgs {
             .from_abi::<PointerDeviceType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -4583,7 +4583,7 @@ impl ManipulationInertiaStartingEventArgs {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Velocities(&self) -> ::windows::core::Result<ManipulationVelocities> {
         let this = self;
         unsafe {
@@ -4681,11 +4681,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for ManipulationInertiaStartingEventArgs {}
 unsafe impl ::core::marker::Sync for ManipulationInertiaStartingEventArgs {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct ManipulationStartedEventArgs(::windows::core::IUnknown);
 impl ManipulationStartedEventArgs {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Cumulative(&self) -> ::windows::core::Result<ManipulationDelta> {
         let this = self;
         unsafe {
@@ -4697,7 +4697,7 @@ impl ManipulationStartedEventArgs {
             .from_abi::<ManipulationDelta>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerDeviceType(&self) -> ::windows::core::Result<PointerDeviceType> {
         let this = self;
         unsafe {
@@ -4709,7 +4709,7 @@ impl ManipulationStartedEventArgs {
             .from_abi::<PointerDeviceType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -4805,11 +4805,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for ManipulationStartedEventArgs {}
 unsafe impl ::core::marker::Sync for ManipulationStartedEventArgs {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct ManipulationUpdatedEventArgs(::windows::core::IUnknown);
 impl ManipulationUpdatedEventArgs {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Cumulative(&self) -> ::windows::core::Result<ManipulationDelta> {
         let this = self;
         unsafe {
@@ -4821,7 +4821,7 @@ impl ManipulationUpdatedEventArgs {
             .from_abi::<ManipulationDelta>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Delta(&self) -> ::windows::core::Result<ManipulationDelta> {
         let this = self;
         unsafe {
@@ -4833,7 +4833,7 @@ impl ManipulationUpdatedEventArgs {
             .from_abi::<ManipulationDelta>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerDeviceType(&self) -> ::windows::core::Result<PointerDeviceType> {
         let this = self;
         unsafe {
@@ -4845,7 +4845,7 @@ impl ManipulationUpdatedEventArgs {
             .from_abi::<PointerDeviceType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -4857,7 +4857,7 @@ impl ManipulationUpdatedEventArgs {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Velocities(&self) -> ::windows::core::Result<ManipulationVelocities> {
         let this = self;
         unsafe {
@@ -4954,7 +4954,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 unsafe impl ::core::marker::Send for ManipulationUpdatedEventArgs {}
 unsafe impl ::core::marker::Sync for ManipulationUpdatedEventArgs {}
 #[repr(C)]
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 pub struct ManipulationVelocities {
     pub Linear: ::windows::Foundation::Point,
     pub Angular: f32,
@@ -5002,11 +5002,11 @@ impl ::core::default::Default for ManipulationVelocities {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct MouseWheelParameters(::windows::core::IUnknown);
 impl MouseWheelParameters {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CharTranslation(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -5018,7 +5018,7 @@ impl MouseWheelParameters {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetCharTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -5035,7 +5035,7 @@ impl MouseWheelParameters {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn DeltaScale(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -5047,7 +5047,7 @@ impl MouseWheelParameters {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetDeltaScale(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5058,7 +5058,7 @@ impl MouseWheelParameters {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn DeltaRotationAngle(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -5070,7 +5070,7 @@ impl MouseWheelParameters {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetDeltaRotationAngle(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5081,7 +5081,7 @@ impl MouseWheelParameters {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PageTranslation(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -5093,7 +5093,7 @@ impl MouseWheelParameters {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetPageTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -5189,7 +5189,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for MouseWheelParameters {}
 unsafe impl ::core::marker::Sync for MouseWheelParameters {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct PointerDeviceType(pub i32);
@@ -5226,11 +5226,11 @@ unsafe impl ::windows::core::RuntimeType for PointerDeviceType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct PointerEventArgs(::windows::core::IUnknown);
 impl PointerEventArgs {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CurrentPoint(&self) -> ::windows::core::Result<PointerPoint> {
         let this = self;
         unsafe {
@@ -5242,7 +5242,7 @@ impl PointerEventArgs {
             .from_abi::<PointerPoint>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5254,7 +5254,7 @@ impl PointerEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5265,7 +5265,7 @@ impl PointerEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn KeyModifiers(&self) -> ::windows::core::Result<::windows::System::VirtualKeyModifiers> {
         let this = self;
         unsafe {
@@ -5277,7 +5277,7 @@ impl PointerEventArgs {
             .from_abi::<::windows::System::VirtualKeyModifiers>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn GetIntermediatePoints(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<PointerPoint>> {
@@ -5291,7 +5291,7 @@ impl PointerEventArgs {
             .from_abi::<::windows::Foundation::Collections::IVector<PointerPoint>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn GetIntermediateTransformedPoints<
         'a,
         Param0: ::windows::core::IntoParam<'a, IPointerPointTransform>,
@@ -5385,11 +5385,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a P
 }
 unsafe impl ::core::marker::Send for PointerEventArgs {}
 unsafe impl ::core::marker::Sync for PointerEventArgs {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct PointerPoint(::windows::core::IUnknown);
 impl PointerPoint {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn FrameId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -5401,7 +5401,7 @@ impl PointerPoint {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsInContact(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5413,7 +5413,7 @@ impl PointerPoint {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerDeviceType(&self) -> ::windows::core::Result<PointerDeviceType> {
         let this = self;
         unsafe {
@@ -5425,7 +5425,7 @@ impl PointerPoint {
             .from_abi::<PointerDeviceType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -5437,7 +5437,7 @@ impl PointerPoint {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -5449,7 +5449,7 @@ impl PointerPoint {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Properties(&self) -> ::windows::core::Result<PointerPointProperties> {
         let this = self;
         unsafe {
@@ -5461,7 +5461,7 @@ impl PointerPoint {
             .from_abi::<PointerPointProperties>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Timestamp(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
@@ -5473,7 +5473,7 @@ impl PointerPoint {
             .from_abi::<u64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn GetTransformedPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, IPointerPointTransform>,
@@ -5567,11 +5567,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a P
 }
 unsafe impl ::core::marker::Send for PointerPoint {}
 unsafe impl ::core::marker::Sync for PointerPoint {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct PointerPointProperties(::windows::core::IUnknown);
 impl PointerPointProperties {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn ContactRect(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -5583,7 +5583,7 @@ impl PointerPointProperties {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsBarrelButtonPressed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5595,7 +5595,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsCanceled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5607,7 +5607,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsEraser(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5619,7 +5619,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsHorizontalMouseWheel(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5631,7 +5631,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsInRange(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5643,7 +5643,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsInverted(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5655,7 +5655,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsLeftButtonPressed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5667,7 +5667,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsMiddleButtonPressed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5679,7 +5679,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsPrimary(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5691,7 +5691,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsRightButtonPressed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5703,7 +5703,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsXButton1Pressed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5715,7 +5715,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn IsXButton2Pressed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5727,7 +5727,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn MouseWheelDelta(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5739,7 +5739,7 @@ impl PointerPointProperties {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Orientation(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -5751,7 +5751,7 @@ impl PointerPointProperties {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerUpdateKind(&self) -> ::windows::core::Result<PointerUpdateKind> {
         let this = self;
         unsafe {
@@ -5763,7 +5763,7 @@ impl PointerPointProperties {
             .from_abi::<PointerUpdateKind>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Pressure(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -5775,7 +5775,7 @@ impl PointerPointProperties {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn TouchConfidence(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5787,7 +5787,7 @@ impl PointerPointProperties {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Twist(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -5799,7 +5799,7 @@ impl PointerPointProperties {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn XTilt(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -5811,7 +5811,7 @@ impl PointerPointProperties {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn YTilt(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -5902,18 +5902,18 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for PointerPointProperties {}
 unsafe impl ::core::marker::Sync for PointerPointProperties {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct PointerPredictor(::windows::core::IUnknown);
 impl PointerPredictor {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PredictionTime(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
@@ -5925,7 +5925,7 @@ impl PointerPredictor {
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn SetPredictionTime<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::TimeSpan>,
@@ -5942,7 +5942,7 @@ impl PointerPredictor {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn GetPredictedPoints<'a, Param0: ::windows::core::IntoParam<'a, PointerPoint>>(
         &self,
         point: Param0,
@@ -5959,7 +5959,7 @@ impl PointerPredictor {
             .and_then(|| result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn CreateForInputPointerSource<
         'a,
         Param0: ::windows::core::IntoParam<'a, InputPointerSource>,
@@ -6088,7 +6088,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::IClosable> for &P
 }
 unsafe impl ::core::marker::Send for PointerPredictor {}
 unsafe impl ::core::marker::Sync for PointerPredictor {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct PointerUpdateKind(pub i32);
@@ -6132,11 +6132,11 @@ unsafe impl ::windows::core::RuntimeType for PointerUpdateKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct RightTappedEventArgs(::windows::core::IUnknown);
 impl RightTappedEventArgs {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerDeviceType(&self) -> ::windows::core::Result<PointerDeviceType> {
         let this = self;
         unsafe {
@@ -6148,7 +6148,7 @@ impl RightTappedEventArgs {
             .from_abi::<PointerDeviceType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -6239,11 +6239,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for RightTappedEventArgs {}
 unsafe impl ::core::marker::Sync for RightTappedEventArgs {}
-#[doc = "*Required features: 'UI_Input'*"]
+#[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct TappedEventArgs(::windows::core::IUnknown);
 impl TappedEventArgs {
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn PointerDeviceType(&self) -> ::windows::core::Result<PointerDeviceType> {
         let this = self;
         unsafe {
@@ -6255,7 +6255,7 @@ impl TappedEventArgs {
             .from_abi::<PointerDeviceType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -6267,7 +6267,7 @@ impl TappedEventArgs {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn TapCount(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {

@@ -79,12 +79,12 @@ pub struct ISceneLightingEffect2_Vtbl {
         value: SceneLightingEffectReflectanceModel,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Composition_Effects'*"]
+#[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
 #[repr(transparent)]
 pub struct SceneLightingEffect(::windows::core::IUnknown);
 impl SceneLightingEffect {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -98,7 +98,7 @@ impl SceneLightingEffect {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Graphics::Effects::IGraphicsEffect,
@@ -113,7 +113,7 @@ impl SceneLightingEffect {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn SetName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -129,7 +129,7 @@ impl SceneLightingEffect {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn AmbientAmount(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -141,7 +141,7 @@ impl SceneLightingEffect {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn SetAmbientAmount(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -152,7 +152,7 @@ impl SceneLightingEffect {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn DiffuseAmount(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -164,7 +164,7 @@ impl SceneLightingEffect {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn SetDiffuseAmount(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -175,7 +175,7 @@ impl SceneLightingEffect {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn NormalMapSource(
         &self,
     ) -> ::windows::core::Result<::windows::Graphics::Effects::IGraphicsEffectSource> {
@@ -189,7 +189,7 @@ impl SceneLightingEffect {
             .from_abi::<::windows::Graphics::Effects::IGraphicsEffectSource>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn SetNormalMapSource<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::Effects::IGraphicsEffectSource>,
@@ -206,7 +206,7 @@ impl SceneLightingEffect {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn SpecularAmount(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -218,7 +218,7 @@ impl SceneLightingEffect {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn SetSpecularAmount(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -229,7 +229,7 @@ impl SceneLightingEffect {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn SpecularShine(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -241,7 +241,7 @@ impl SceneLightingEffect {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn SetSpecularShine(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -252,7 +252,7 @@ impl SceneLightingEffect {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn ReflectanceModel(&self) -> ::windows::core::Result<SceneLightingEffectReflectanceModel> {
         let this = &::windows::core::Interface::cast::<ISceneLightingEffect2>(self)?;
         unsafe {
@@ -264,7 +264,7 @@ impl SceneLightingEffect {
             .from_abi::<SceneLightingEffectReflectanceModel>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Effects'*"]
+    #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
     pub fn SetReflectanceModel(
         &self,
         value: SceneLightingEffectReflectanceModel,
@@ -425,7 +425,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Graphics::Effects::IGraphicsE
 }
 unsafe impl ::core::marker::Send for SceneLightingEffect {}
 unsafe impl ::core::marker::Sync for SceneLightingEffect {}
-#[doc = "*Required features: 'UI_Composition_Effects'*"]
+#[doc = "*Required features: `\"UI_Composition_Effects\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct SceneLightingEffectReflectanceModel(pub i32);

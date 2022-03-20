@@ -5,11 +5,11 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct Block(::windows::core::IUnknown);
 impl Block {
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextAlignment(&self) -> ::windows::core::Result<super::TextAlignment> {
         let this = self;
         unsafe {
@@ -21,7 +21,7 @@ impl Block {
             .from_abi::<super::TextAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextAlignment(&self, value: super::TextAlignment) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -32,7 +32,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn HorizontalTextAlignment(&self) -> ::windows::core::Result<super::TextAlignment> {
         let this = self;
         unsafe {
@@ -44,7 +44,7 @@ impl Block {
             .from_abi::<super::TextAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetHorizontalTextAlignment(
         &self,
         value: super::TextAlignment,
@@ -58,7 +58,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn LineHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -70,7 +70,7 @@ impl Block {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLineHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -81,7 +81,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn LineStackingStrategy(&self) -> ::windows::core::Result<super::LineStackingStrategy> {
         let this = self;
         unsafe {
@@ -93,7 +93,7 @@ impl Block {
             .from_abi::<super::LineStackingStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLineStackingStrategy(
         &self,
         value: super::LineStackingStrategy,
@@ -107,7 +107,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Margin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = self;
         unsafe {
@@ -119,7 +119,7 @@ impl Block {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -133,7 +133,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextAlignmentProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IBlockStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -144,7 +144,7 @@ impl Block {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn HorizontalTextAlignmentProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IBlockStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -155,7 +155,7 @@ impl Block {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn LineHeightProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IBlockStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -166,7 +166,7 @@ impl Block {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn LineStackingStrategyProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IBlockStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -177,7 +177,7 @@ impl Block {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn MarginProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IBlockStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -188,7 +188,7 @@ impl Block {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -204,7 +204,7 @@ impl Block {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -224,7 +224,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -238,7 +238,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -254,7 +254,7 @@ impl Block {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -273,7 +273,7 @@ impl Block {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -295,7 +295,7 @@ impl Block {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -314,7 +314,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -326,7 +326,7 @@ impl Block {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -341,7 +341,7 @@ impl Block {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -354,7 +354,7 @@ impl Block {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -366,7 +366,7 @@ impl Block {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -377,7 +377,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -390,7 +390,7 @@ impl Block {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -405,7 +405,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -417,7 +417,7 @@ impl Block {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -434,7 +434,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -446,7 +446,7 @@ impl Block {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -460,7 +460,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -472,7 +472,7 @@ impl Block {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -486,7 +486,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -498,7 +498,7 @@ impl Block {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -509,7 +509,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -522,7 +522,7 @@ impl Block {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -537,7 +537,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -550,7 +550,7 @@ impl Block {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -564,7 +564,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -576,7 +576,7 @@ impl Block {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -587,7 +587,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -599,7 +599,7 @@ impl Block {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -613,7 +613,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -625,7 +625,7 @@ impl Block {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -637,7 +637,7 @@ impl Block {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -649,7 +649,7 @@ impl Block {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -661,7 +661,7 @@ impl Block {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -673,7 +673,7 @@ impl Block {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -684,7 +684,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -697,7 +697,7 @@ impl Block {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -711,7 +711,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -723,7 +723,7 @@ impl Block {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -734,7 +734,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -746,7 +746,7 @@ impl Block {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -757,7 +757,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -769,7 +769,7 @@ impl Block {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -786,7 +786,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -801,7 +801,7 @@ impl Block {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -816,7 +816,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -828,7 +828,7 @@ impl Block {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -839,7 +839,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -851,7 +851,7 @@ impl Block {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -862,7 +862,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -874,7 +874,7 @@ impl Block {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -888,7 +888,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -914,7 +914,7 @@ impl Block {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -931,7 +931,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -957,7 +957,7 @@ impl Block {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -974,7 +974,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -1000,7 +1000,7 @@ impl Block {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1017,7 +1017,7 @@ impl Block {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -1156,11 +1156,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Block {
 }
 unsafe impl ::core::marker::Send for Block {}
 unsafe impl ::core::marker::Sync for Block {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct BlockCollection(::windows::core::IUnknown);
 impl BlockCollection {
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<Block>> {
@@ -1176,7 +1176,7 @@ impl BlockCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<Block>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<Block> {
         let this = self;
         unsafe {
@@ -1189,7 +1189,7 @@ impl BlockCollection {
             .from_abi::<Block>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -1201,7 +1201,7 @@ impl BlockCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<Block>> {
@@ -1215,7 +1215,7 @@ impl BlockCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<Block>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, Block>>(
         &self,
         value: Param0,
@@ -1233,7 +1233,7 @@ impl BlockCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, Block>>(
         &self,
         index: u32,
@@ -1249,7 +1249,7 @@ impl BlockCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, Block>>(
         &self,
         index: u32,
@@ -1265,7 +1265,7 @@ impl BlockCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1276,7 +1276,7 @@ impl BlockCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, Block>>(
         &self,
         value: Param0,
@@ -1290,7 +1290,7 @@ impl BlockCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1300,14 +1300,14 @@ impl BlockCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -1326,7 +1326,7 @@ impl BlockCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<Block>],
@@ -1507,12 +1507,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for BlockCollection {}
 unsafe impl ::core::marker::Sync for BlockCollection {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct Bold(::windows::core::IUnknown);
 impl Bold {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -1526,7 +1526,7 @@ impl Bold {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1542,7 +1542,7 @@ impl Bold {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1562,7 +1562,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1576,7 +1576,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1592,7 +1592,7 @@ impl Bold {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1611,7 +1611,7 @@ impl Bold {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1633,7 +1633,7 @@ impl Bold {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1652,7 +1652,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -1664,7 +1664,7 @@ impl Bold {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -1679,7 +1679,7 @@ impl Bold {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Inlines(&self) -> ::windows::core::Result<InlineCollection> {
         let this = &::windows::core::Interface::cast::<ISpan>(self)?;
         unsafe {
@@ -1691,7 +1691,7 @@ impl Bold {
             .from_abi::<InlineCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetInlines<'a, Param0: ::windows::core::IntoParam<'a, InlineCollection>>(
         &self,
         value: Param0,
@@ -1705,7 +1705,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1718,7 +1718,7 @@ impl Bold {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1730,7 +1730,7 @@ impl Bold {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1741,7 +1741,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -1754,7 +1754,7 @@ impl Bold {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -1769,7 +1769,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1781,7 +1781,7 @@ impl Bold {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -1798,7 +1798,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1810,7 +1810,7 @@ impl Bold {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -1824,7 +1824,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1836,7 +1836,7 @@ impl Bold {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -1850,7 +1850,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1862,7 +1862,7 @@ impl Bold {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1873,7 +1873,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -1886,7 +1886,7 @@ impl Bold {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -1901,7 +1901,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1914,7 +1914,7 @@ impl Bold {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -1928,7 +1928,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1940,7 +1940,7 @@ impl Bold {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1951,7 +1951,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1963,7 +1963,7 @@ impl Bold {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -1977,7 +1977,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -1989,7 +1989,7 @@ impl Bold {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2001,7 +2001,7 @@ impl Bold {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2013,7 +2013,7 @@ impl Bold {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2025,7 +2025,7 @@ impl Bold {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2037,7 +2037,7 @@ impl Bold {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2048,7 +2048,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2061,7 +2061,7 @@ impl Bold {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -2075,7 +2075,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2087,7 +2087,7 @@ impl Bold {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2098,7 +2098,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2110,7 +2110,7 @@ impl Bold {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2121,7 +2121,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2133,7 +2133,7 @@ impl Bold {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -2150,7 +2150,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -2165,7 +2165,7 @@ impl Bold {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -2180,7 +2180,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2192,7 +2192,7 @@ impl Bold {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2203,7 +2203,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2215,7 +2215,7 @@ impl Bold {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2226,7 +2226,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -2238,7 +2238,7 @@ impl Bold {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -2252,7 +2252,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -2278,7 +2278,7 @@ impl Bold {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2295,7 +2295,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -2321,7 +2321,7 @@ impl Bold {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2338,7 +2338,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -2364,7 +2364,7 @@ impl Bold {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2381,7 +2381,7 @@ impl Bold {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -2552,12 +2552,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Bold {
 }
 unsafe impl ::core::marker::Send for Bold {}
 unsafe impl ::core::marker::Sync for Bold {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct Glyphs(::windows::core::IUnknown);
 impl Glyphs {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -2571,7 +2571,7 @@ impl Glyphs {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -2593,7 +2593,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -2609,7 +2609,7 @@ impl Glyphs {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2629,7 +2629,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -2643,7 +2643,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -2659,7 +2659,7 @@ impl Glyphs {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2678,7 +2678,7 @@ impl Glyphs {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2700,7 +2700,7 @@ impl Glyphs {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2719,7 +2719,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -2731,7 +2731,7 @@ impl Glyphs {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -2746,7 +2746,7 @@ impl Glyphs {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Triggers(&self) -> ::windows::core::Result<super::TriggerCollection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2758,7 +2758,7 @@ impl Glyphs {
             .from_abi::<super::TriggerCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Resources(&self) -> ::windows::core::Result<super::ResourceDictionary> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2770,7 +2770,7 @@ impl Glyphs {
             .from_abi::<super::ResourceDictionary>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetResources<'a, Param0: ::windows::core::IntoParam<'a, super::ResourceDictionary>>(
         &self,
         value: Param0,
@@ -2784,7 +2784,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Tag(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2796,7 +2796,7 @@ impl Glyphs {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTag<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -2810,7 +2810,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2823,7 +2823,7 @@ impl Glyphs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -2837,7 +2837,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ActualWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2849,7 +2849,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ActualHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2861,7 +2861,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Width(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2873,7 +2873,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2884,7 +2884,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Height(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2896,7 +2896,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2907,7 +2907,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn MinWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2919,7 +2919,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetMinWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2930,7 +2930,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn MaxWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2942,7 +2942,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetMaxWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2953,7 +2953,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn MinHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2965,7 +2965,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetMinHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2976,7 +2976,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn MaxHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2988,7 +2988,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetMaxHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -2999,7 +2999,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn HorizontalAlignment(&self) -> ::windows::core::Result<super::HorizontalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3011,7 +3011,7 @@ impl Glyphs {
             .from_abi::<super::HorizontalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetHorizontalAlignment(
         &self,
         value: super::HorizontalAlignment,
@@ -3025,7 +3025,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn VerticalAlignment(&self) -> ::windows::core::Result<super::VerticalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3037,7 +3037,7 @@ impl Glyphs {
             .from_abi::<super::VerticalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetVerticalAlignment(
         &self,
         value: super::VerticalAlignment,
@@ -3051,7 +3051,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Margin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3063,7 +3063,7 @@ impl Glyphs {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -3077,7 +3077,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3090,7 +3090,7 @@ impl Glyphs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -3104,7 +3104,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn BaseUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3116,7 +3116,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn DataContext(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3128,7 +3128,7 @@ impl Glyphs {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetDataContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -3145,7 +3145,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3157,7 +3157,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3168,7 +3168,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FocusVisualMargin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3180,7 +3180,7 @@ impl Glyphs {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFocusVisualMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -3194,7 +3194,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FocusVisualSecondaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3206,7 +3206,7 @@ impl Glyphs {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFocusVisualSecondaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -3223,7 +3223,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FocusVisualPrimaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3235,7 +3235,7 @@ impl Glyphs {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFocusVisualPrimaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -3252,7 +3252,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualSecondaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -3265,7 +3265,7 @@ impl Glyphs {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualSecondaryBrush<
         'a,
@@ -3283,7 +3283,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualPrimaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -3296,7 +3296,7 @@ impl Glyphs {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualPrimaryBrush<
         'a,
@@ -3314,7 +3314,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusWhenDisabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3326,7 +3326,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusWhenDisabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3337,7 +3337,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Style(&self) -> ::windows::core::Result<super::Style> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3349,7 +3349,7 @@ impl Glyphs {
             .from_abi::<super::Style>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStyle<'a, Param0: ::windows::core::IntoParam<'a, super::Style>>(
         &self,
         value: Param0,
@@ -3363,7 +3363,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3375,7 +3375,7 @@ impl Glyphs {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FlowDirection(&self) -> ::windows::core::Result<super::FlowDirection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3387,7 +3387,7 @@ impl Glyphs {
             .from_abi::<super::FlowDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFlowDirection(&self, value: super::FlowDirection) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3398,7 +3398,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RequestedTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3410,7 +3410,7 @@ impl Glyphs {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetRequestedTheme(&self, value: super::ElementTheme) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3421,7 +3421,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsLoaded(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3433,7 +3433,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ActualTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -3445,7 +3445,7 @@ impl Glyphs {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Loaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -3461,7 +3461,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveLoaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3478,7 +3478,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Unloaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -3494,7 +3494,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveUnloaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3511,7 +3511,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn DataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3536,7 +3536,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveDataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3553,7 +3553,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::SizeChangedEventHandler>,
@@ -3572,7 +3572,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveSizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3589,7 +3589,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn LayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3611,7 +3611,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveLayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3628,7 +3628,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Loading<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3653,7 +3653,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveLoading<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3670,7 +3670,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3695,7 +3695,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3712,7 +3712,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn EffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3737,7 +3737,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveEffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3754,7 +3754,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -3770,7 +3770,7 @@ impl Glyphs {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn SetBinding<
         'a,
@@ -3791,7 +3791,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn GetBindingExpression<
         'a,
@@ -3811,7 +3811,7 @@ impl Glyphs {
             .from_abi::<super::Data::BindingExpression>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn InvalidateViewport(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElementProtected>(self)?;
         unsafe {
@@ -3821,7 +3821,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnicodeString(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -3834,7 +3834,7 @@ impl Glyphs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetUnicodeString<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -3851,7 +3851,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Indices(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -3864,7 +3864,7 @@ impl Glyphs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIndices<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -3878,7 +3878,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
@@ -3890,7 +3890,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontUri<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Uri>>(
         &self,
         value: Param0,
@@ -3904,7 +3904,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StyleSimulations(&self) -> ::windows::core::Result<super::Media::StyleSimulations> {
         let this = self;
@@ -3917,7 +3917,7 @@ impl Glyphs {
             .from_abi::<super::Media::StyleSimulations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStyleSimulations(
         &self,
@@ -3932,7 +3932,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontRenderingEmSize(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3944,7 +3944,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontRenderingEmSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3955,7 +3955,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn OriginX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3967,7 +3967,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetOriginX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3978,7 +3978,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn OriginY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3990,7 +3990,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetOriginY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4001,7 +4001,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Fill(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = self;
@@ -4014,7 +4014,7 @@ impl Glyphs {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFill<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -4029,7 +4029,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsColorFontEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -4041,7 +4041,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsColorFontEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4052,7 +4052,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ColorFontPaletteIndex(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -4064,7 +4064,7 @@ impl Glyphs {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetColorFontPaletteIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4075,7 +4075,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnicodeStringProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4086,7 +4086,7 @@ impl Glyphs {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IndicesProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4097,7 +4097,7 @@ impl Glyphs {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontUriProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4108,7 +4108,7 @@ impl Glyphs {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StyleSimulationsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4119,7 +4119,7 @@ impl Glyphs {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontRenderingEmSizeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4130,7 +4130,7 @@ impl Glyphs {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn OriginXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4141,7 +4141,7 @@ impl Glyphs {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn OriginYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4152,7 +4152,7 @@ impl Glyphs {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FillProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4163,7 +4163,7 @@ impl Glyphs {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsColorFontEnabledProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4174,7 +4174,7 @@ impl Glyphs {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ColorFontPaletteIndexProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGlyphsStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4185,7 +4185,7 @@ impl Glyphs {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4197,7 +4197,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4209,7 +4209,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowDrop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4220,7 +4220,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4232,7 +4232,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4243,7 +4243,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Clip(&self) -> ::windows::core::Result<super::Media::RectangleGeometry> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -4256,7 +4256,7 @@ impl Glyphs {
             .from_abi::<super::Media::RectangleGeometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetClip<'a, Param0: ::windows::core::IntoParam<'a, super::Media::RectangleGeometry>>(
         &self,
@@ -4271,7 +4271,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn RenderTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -4284,7 +4284,7 @@ impl Glyphs {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetRenderTransform<
         'a,
@@ -4302,7 +4302,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Projection(&self) -> ::windows::core::Result<super::Media::Projection> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -4315,7 +4315,7 @@ impl Glyphs {
             .from_abi::<super::Media::Projection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetProjection<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Projection>>(
         &self,
@@ -4330,7 +4330,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn Transform3D(&self) -> ::windows::core::Result<super::Media::Media3D::Transform3D> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -4343,7 +4343,7 @@ impl Glyphs {
             .from_abi::<super::Media::Media3D::Transform3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn SetTransform3D<
         'a,
@@ -4361,7 +4361,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4373,7 +4373,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetRenderTransformOrigin<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -4390,7 +4390,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4402,7 +4402,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsHitTestVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4413,7 +4413,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Visibility(&self) -> ::windows::core::Result<super::Visibility> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4425,7 +4425,7 @@ impl Glyphs {
             .from_abi::<super::Visibility>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetVisibility(&self, value: super::Visibility) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4436,7 +4436,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4448,7 +4448,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4460,7 +4460,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetUseLayoutRounding(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4471,7 +4471,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Transitions(
         &self,
@@ -4486,7 +4486,7 @@ impl Glyphs {
             .from_abi::<super::Media::Animation::TransitionCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetTransitions<
         'a,
@@ -4504,7 +4504,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CacheMode(&self) -> ::windows::core::Result<super::Media::CacheMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -4517,7 +4517,7 @@ impl Glyphs {
             .from_abi::<super::Media::CacheMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCacheMode<'a, Param0: ::windows::core::IntoParam<'a, super::Media::CacheMode>>(
         &self,
@@ -4532,7 +4532,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4544,7 +4544,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4555,7 +4555,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4567,7 +4567,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsDoubleTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4578,7 +4578,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4590,7 +4590,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCanDrag(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4601,7 +4601,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4613,7 +4613,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsRightTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4624,7 +4624,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4636,7 +4636,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsHoldingEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4647,7 +4647,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationMode(&self) -> ::windows::core::Result<super::Input::ManipulationModes> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -4660,7 +4660,7 @@ impl Glyphs {
             .from_abi::<super::Input::ManipulationModes>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetManipulationMode(
         &self,
@@ -4675,7 +4675,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptures(
         &self,
@@ -4694,7 +4694,7 @@ impl Glyphs {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn ContextFlyout(
         &self,
@@ -4709,7 +4709,7 @@ impl Glyphs {
             .from_abi::<super::Controls::Primitives::FlyoutBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn SetContextFlyout<
         'a,
@@ -4727,7 +4727,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CompositeMode(&self) -> ::windows::core::Result<super::Media::ElementCompositeMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -4740,7 +4740,7 @@ impl Glyphs {
             .from_abi::<super::Media::ElementCompositeMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCompositeMode(
         &self,
@@ -4755,7 +4755,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Lights(
         &self,
@@ -4773,7 +4773,7 @@ impl Glyphs {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4785,7 +4785,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCanBeScrollAnchor(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4796,7 +4796,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4808,7 +4808,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4819,7 +4819,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4831,7 +4831,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4842,7 +4842,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4854,7 +4854,7 @@ impl Glyphs {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -4871,7 +4871,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4884,7 +4884,7 @@ impl Glyphs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -4898,7 +4898,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -4913,7 +4913,7 @@ impl Glyphs {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -4928,7 +4928,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4940,7 +4940,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4951,7 +4951,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4963,7 +4963,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4974,7 +4974,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4986,7 +4986,7 @@ impl Glyphs {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipTarget<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -5000,7 +5000,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusKeyboardNavigation(
         &self,
@@ -5015,7 +5015,7 @@ impl Glyphs {
             .from_abi::<super::Input::XYFocusKeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusKeyboardNavigation(
         &self,
@@ -5030,7 +5030,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusUpNavigationStrategy(
         &self,
@@ -5045,7 +5045,7 @@ impl Glyphs {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusUpNavigationStrategy(
         &self,
@@ -5060,7 +5060,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusDownNavigationStrategy(
         &self,
@@ -5075,7 +5075,7 @@ impl Glyphs {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusDownNavigationStrategy(
         &self,
@@ -5090,7 +5090,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusLeftNavigationStrategy(
         &self,
@@ -5105,7 +5105,7 @@ impl Glyphs {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusLeftNavigationStrategy(
         &self,
@@ -5120,7 +5120,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusRightNavigationStrategy(
         &self,
@@ -5135,7 +5135,7 @@ impl Glyphs {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusRightNavigationStrategy(
         &self,
@@ -5150,7 +5150,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAccelerators(
         &self,
@@ -5169,7 +5169,7 @@ impl Glyphs {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyboardAcceleratorPlacementTarget(
         &self,
     ) -> ::windows::core::Result<super::DependencyObject> {
@@ -5183,7 +5183,7 @@ impl Glyphs {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyboardAcceleratorPlacementTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -5200,7 +5200,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAcceleratorPlacementMode(
         &self,
@@ -5216,7 +5216,7 @@ impl Glyphs {
             .from_abi::<super::Input::KeyboardAcceleratorPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyboardAcceleratorPlacementMode(
         &self,
@@ -5231,7 +5231,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn HighContrastAdjustment(
         &self,
     ) -> ::windows::core::Result<super::ElementHighContrastAdjustment> {
@@ -5245,7 +5245,7 @@ impl Glyphs {
             .from_abi::<super::ElementHighContrastAdjustment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetHighContrastAdjustment(
         &self,
         value: super::ElementHighContrastAdjustment,
@@ -5259,7 +5259,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TabFocusNavigation(
         &self,
@@ -5274,7 +5274,7 @@ impl Glyphs {
             .from_abi::<super::Input::KeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetTabFocusNavigation(
         &self,
@@ -5289,7 +5289,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn OpacityTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5301,7 +5301,7 @@ impl Glyphs {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetOpacityTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -5318,7 +5318,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5330,7 +5330,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -5347,7 +5347,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TranslationTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5359,7 +5359,7 @@ impl Glyphs {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTranslationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -5376,7 +5376,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5388,7 +5388,7 @@ impl Glyphs {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetRotation(&self, value: f32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5399,7 +5399,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RotationTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5411,7 +5411,7 @@ impl Glyphs {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetRotationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -5428,7 +5428,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5440,7 +5440,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetScale<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -5457,7 +5457,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ScaleTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5469,7 +5469,7 @@ impl Glyphs {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetScaleTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -5486,7 +5486,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TransformMatrix(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
@@ -5500,7 +5500,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTransformMatrix<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Matrix4x4>,
@@ -5517,7 +5517,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5529,7 +5529,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCenterPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -5546,7 +5546,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RotationAxis(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -5560,7 +5560,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetRotationAxis<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -5577,7 +5577,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ActualOffset(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -5591,7 +5591,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5603,7 +5603,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5615,7 +5615,7 @@ impl Glyphs {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -5629,7 +5629,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Shadow(&self) -> ::windows::core::Result<super::Media::Shadow> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -5642,7 +5642,7 @@ impl Glyphs {
             .from_abi::<super::Media::Shadow>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetShadow<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Shadow>>(
         &self,
@@ -5657,7 +5657,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5669,7 +5669,7 @@ impl Glyphs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5680,7 +5680,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FocusState(&self) -> ::windows::core::Result<super::FocusState> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5692,7 +5692,7 @@ impl Glyphs {
             .from_abi::<super::FocusState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5704,7 +5704,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetUseSystemFocusVisuals(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5715,7 +5715,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5727,7 +5727,7 @@ impl Glyphs {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXYFocusLeft<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -5741,7 +5741,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusRight(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5753,7 +5753,7 @@ impl Glyphs {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXYFocusRight<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -5767,7 +5767,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusUp(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5779,7 +5779,7 @@ impl Glyphs {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXYFocusUp<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -5793,7 +5793,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusDown(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5805,7 +5805,7 @@ impl Glyphs {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXYFocusDown<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -5819,7 +5819,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5831,7 +5831,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTabStop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5842,7 +5842,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5854,7 +5854,7 @@ impl Glyphs {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTabIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5865,7 +5865,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyUp<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -5882,7 +5882,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -5899,7 +5899,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyDown<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -5916,7 +5916,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -5933,7 +5933,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GotFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -5949,7 +5949,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -5966,7 +5966,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn LostFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -5982,7 +5982,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -5999,7 +5999,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn DragStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -6024,7 +6024,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveDragStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6041,7 +6041,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn DropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -6066,7 +6066,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveDropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6083,7 +6083,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CharacterReceived<
         'a,
@@ -6109,7 +6109,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveCharacterReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6126,7 +6126,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn DragEnter<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -6142,7 +6142,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveDragEnter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6159,7 +6159,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn DragLeave<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -6175,7 +6175,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveDragLeave<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6192,7 +6192,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn DragOver<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -6208,7 +6208,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveDragOver<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6225,7 +6225,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Drop<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -6241,7 +6241,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveDrop<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6258,7 +6258,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerPressed<
         'a,
@@ -6278,7 +6278,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemovePointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6295,7 +6295,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerMoved<
         'a,
@@ -6315,7 +6315,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemovePointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6332,7 +6332,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerReleased<
         'a,
@@ -6352,7 +6352,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemovePointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6369,7 +6369,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerEntered<
         'a,
@@ -6389,7 +6389,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemovePointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6406,7 +6406,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerExited<
         'a,
@@ -6426,7 +6426,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemovePointerExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6443,7 +6443,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptureLost<
         'a,
@@ -6463,7 +6463,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemovePointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6480,7 +6480,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCanceled<
         'a,
@@ -6500,7 +6500,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemovePointerCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6517,7 +6517,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerWheelChanged<
         'a,
@@ -6537,7 +6537,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemovePointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6554,7 +6554,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Tapped<'a, Param0: ::windows::core::IntoParam<'a, super::Input::TappedEventHandler>>(
         &self,
@@ -6571,7 +6571,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6588,7 +6588,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn DoubleTapped<
         'a,
@@ -6608,7 +6608,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveDoubleTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6625,7 +6625,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Holding<
         'a,
@@ -6645,7 +6645,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveHolding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6662,7 +6662,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ContextRequested<
         'a,
@@ -6688,7 +6688,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveContextRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6705,7 +6705,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -6727,7 +6727,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6744,7 +6744,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn RightTapped<
         'a,
@@ -6764,7 +6764,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveRightTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6781,7 +6781,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarting<
         'a,
@@ -6801,7 +6801,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveManipulationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6818,7 +6818,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationInertiaStarting<
         'a,
@@ -6838,7 +6838,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6855,7 +6855,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarted<
         'a,
@@ -6875,7 +6875,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6892,7 +6892,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationDelta<
         'a,
@@ -6912,7 +6912,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveManipulationDelta<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6929,7 +6929,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationCompleted<
         'a,
@@ -6949,7 +6949,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6966,7 +6966,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -6992,7 +6992,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7009,7 +7009,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -7035,7 +7035,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7052,7 +7052,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -7078,7 +7078,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7095,7 +7095,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ProcessKeyboardAccelerators<
         'a,
@@ -7121,7 +7121,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveProcessKeyboardAccelerators<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7138,7 +7138,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn GettingFocus<
         'a,
@@ -7164,7 +7164,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveGettingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7181,7 +7181,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn LosingFocus<
         'a,
@@ -7207,7 +7207,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveLosingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7224,7 +7224,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn NoFocusCandidateFound<
         'a,
@@ -7250,7 +7250,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveNoFocusCandidateFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7267,7 +7267,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyDown<
         'a,
@@ -7287,7 +7287,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemovePreviewKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7304,7 +7304,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyUp<
         'a,
@@ -7324,7 +7324,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemovePreviewKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7341,7 +7341,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn BringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -7366,7 +7366,7 @@ impl Glyphs {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveBringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7383,7 +7383,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Measure<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         &self,
         availablesize: Param0,
@@ -7397,7 +7397,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Arrange<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         finalrect: Param0,
@@ -7411,7 +7411,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CapturePointer<'a, Param0: ::windows::core::IntoParam<'a, super::Input::Pointer>>(
         &self,
@@ -7428,7 +7428,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ReleasePointerCapture<
         'a,
@@ -7446,7 +7446,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReleasePointerCaptures(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7456,7 +7456,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AddHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -7478,7 +7478,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -7498,7 +7498,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn TransformToVisual<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
@@ -7515,7 +7515,7 @@ impl Glyphs {
             .from_abi::<super::Media::GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn InvalidateMeasure(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7525,7 +7525,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn InvalidateArrange(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7535,7 +7535,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7545,7 +7545,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7557,7 +7557,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn StartDragAsync<
         'a,
@@ -7583,7 +7583,7 @@ impl Glyphs {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StartBringIntoView(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7593,7 +7593,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StartBringIntoViewWithOptions<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::BringIntoViewOptions>,
@@ -7610,7 +7610,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TryInvokeKeyboardAccelerator<
         'a,
@@ -7628,7 +7628,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Focus(&self, value: super::FocusState) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7641,7 +7641,7 @@ impl Glyphs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StartAnimation<
         'a,
@@ -7659,7 +7659,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StopAnimation<
         'a,
@@ -7677,7 +7677,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<super::IUIElementProtected>(self)?;
@@ -7690,7 +7690,7 @@ impl Glyphs {
             .from_abi::<super::super::Input::InputCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn SetProtectedCursor<
         'a,
@@ -7708,7 +7708,7 @@ impl Glyphs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::super::Composition::Visual> {
         let this =
@@ -7949,12 +7949,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Glyphs {
 }
 unsafe impl ::core::marker::Send for Glyphs {}
 unsafe impl ::core::marker::Sync for Glyphs {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct Hyperlink(::windows::core::IUnknown);
 impl Hyperlink {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -7968,7 +7968,7 @@ impl Hyperlink {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -7984,7 +7984,7 @@ impl Hyperlink {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -8004,7 +8004,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -8018,7 +8018,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -8034,7 +8034,7 @@ impl Hyperlink {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -8053,7 +8053,7 @@ impl Hyperlink {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -8075,7 +8075,7 @@ impl Hyperlink {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -8094,7 +8094,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -8106,7 +8106,7 @@ impl Hyperlink {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -8121,7 +8121,7 @@ impl Hyperlink {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn NavigateUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
@@ -8133,7 +8133,7 @@ impl Hyperlink {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetNavigateUri<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Uri>,
@@ -8150,7 +8150,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnderlineStyle(&self) -> ::windows::core::Result<UnderlineStyle> {
         let this = self;
         unsafe {
@@ -8162,7 +8162,7 @@ impl Hyperlink {
             .from_abi::<UnderlineStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetUnderlineStyle(&self, value: UnderlineStyle) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -8173,7 +8173,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = self;
         unsafe {
@@ -8185,7 +8185,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXYFocusLeft<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -8199,7 +8199,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusRight(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = self;
         unsafe {
@@ -8211,7 +8211,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXYFocusRight<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -8225,7 +8225,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusUp(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = self;
         unsafe {
@@ -8237,7 +8237,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXYFocusUp<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -8251,7 +8251,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusDown(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = self;
         unsafe {
@@ -8263,7 +8263,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXYFocusDown<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -8277,7 +8277,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementSoundMode(&self) -> ::windows::core::Result<super::ElementSoundMode> {
         let this = self;
         unsafe {
@@ -8289,7 +8289,7 @@ impl Hyperlink {
             .from_abi::<super::ElementSoundMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetElementSoundMode(
         &self,
         value: super::ElementSoundMode,
@@ -8303,7 +8303,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FocusState(&self) -> ::windows::core::Result<super::FocusState> {
         let this = self;
         unsafe {
@@ -8315,7 +8315,7 @@ impl Hyperlink {
             .from_abi::<super::FocusState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusUpNavigationStrategy(
         &self,
@@ -8330,7 +8330,7 @@ impl Hyperlink {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusUpNavigationStrategy(
         &self,
@@ -8345,7 +8345,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusDownNavigationStrategy(
         &self,
@@ -8360,7 +8360,7 @@ impl Hyperlink {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusDownNavigationStrategy(
         &self,
@@ -8375,7 +8375,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusLeftNavigationStrategy(
         &self,
@@ -8390,7 +8390,7 @@ impl Hyperlink {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusLeftNavigationStrategy(
         &self,
@@ -8405,7 +8405,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusRightNavigationStrategy(
         &self,
@@ -8420,7 +8420,7 @@ impl Hyperlink {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusRightNavigationStrategy(
         &self,
@@ -8435,7 +8435,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -8447,7 +8447,7 @@ impl Hyperlink {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTabStop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -8458,7 +8458,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -8470,7 +8470,7 @@ impl Hyperlink {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTabIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -8481,7 +8481,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Click<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -8503,7 +8503,7 @@ impl Hyperlink {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveClick<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -8520,7 +8520,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GotFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -8536,7 +8536,7 @@ impl Hyperlink {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -8553,7 +8553,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn LostFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -8569,7 +8569,7 @@ impl Hyperlink {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -8586,7 +8586,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Focus(&self, value: super::FocusState) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -8599,7 +8599,7 @@ impl Hyperlink {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn NavigateUriProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8610,7 +8610,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnderlineStyleProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8621,7 +8621,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusLeftProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8632,7 +8632,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusRightProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8643,7 +8643,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusUpProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8654,7 +8654,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusDownProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8665,7 +8665,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementSoundModeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8676,7 +8676,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FocusStateProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8687,7 +8687,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusUpNavigationStrategyProperty(
     ) -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
@@ -8699,7 +8699,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusDownNavigationStrategyProperty(
     ) -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
@@ -8711,7 +8711,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusLeftNavigationStrategyProperty(
     ) -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
@@ -8723,7 +8723,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XYFocusRightNavigationStrategyProperty(
     ) -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
@@ -8735,7 +8735,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTabStopProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8746,7 +8746,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TabIndexProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IHyperlinkStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8757,7 +8757,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Inlines(&self) -> ::windows::core::Result<InlineCollection> {
         let this = &::windows::core::Interface::cast::<ISpan>(self)?;
         unsafe {
@@ -8769,7 +8769,7 @@ impl Hyperlink {
             .from_abi::<InlineCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetInlines<'a, Param0: ::windows::core::IntoParam<'a, InlineCollection>>(
         &self,
         value: Param0,
@@ -8783,7 +8783,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -8796,7 +8796,7 @@ impl Hyperlink {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -8808,7 +8808,7 @@ impl Hyperlink {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -8819,7 +8819,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -8832,7 +8832,7 @@ impl Hyperlink {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -8847,7 +8847,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -8859,7 +8859,7 @@ impl Hyperlink {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -8876,7 +8876,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -8888,7 +8888,7 @@ impl Hyperlink {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -8902,7 +8902,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -8914,7 +8914,7 @@ impl Hyperlink {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -8928,7 +8928,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -8940,7 +8940,7 @@ impl Hyperlink {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -8951,7 +8951,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -8964,7 +8964,7 @@ impl Hyperlink {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -8979,7 +8979,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -8992,7 +8992,7 @@ impl Hyperlink {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -9006,7 +9006,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9018,7 +9018,7 @@ impl Hyperlink {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9029,7 +9029,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9041,7 +9041,7 @@ impl Hyperlink {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -9055,7 +9055,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9067,7 +9067,7 @@ impl Hyperlink {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9079,7 +9079,7 @@ impl Hyperlink {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9091,7 +9091,7 @@ impl Hyperlink {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9103,7 +9103,7 @@ impl Hyperlink {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9115,7 +9115,7 @@ impl Hyperlink {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9126,7 +9126,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9139,7 +9139,7 @@ impl Hyperlink {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -9153,7 +9153,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9165,7 +9165,7 @@ impl Hyperlink {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9176,7 +9176,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9188,7 +9188,7 @@ impl Hyperlink {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9199,7 +9199,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9211,7 +9211,7 @@ impl Hyperlink {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -9228,7 +9228,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -9243,7 +9243,7 @@ impl Hyperlink {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -9258,7 +9258,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9270,7 +9270,7 @@ impl Hyperlink {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9281,7 +9281,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9293,7 +9293,7 @@ impl Hyperlink {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9304,7 +9304,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -9316,7 +9316,7 @@ impl Hyperlink {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -9330,7 +9330,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -9356,7 +9356,7 @@ impl Hyperlink {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9373,7 +9373,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -9399,7 +9399,7 @@ impl Hyperlink {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9416,7 +9416,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -9442,7 +9442,7 @@ impl Hyperlink {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9459,7 +9459,7 @@ impl Hyperlink {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -9638,11 +9638,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Hyperlink 
 }
 unsafe impl ::core::marker::Send for Hyperlink {}
 unsafe impl ::core::marker::Sync for Hyperlink {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct HyperlinkClickEventArgs(::windows::core::IUnknown);
 impl HyperlinkClickEventArgs {
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IRoutedEventArgs>(self)?;
         unsafe {
@@ -11654,11 +11654,11 @@ unsafe impl ::windows::core::Interface for IUnderline {
 pub struct IUnderline_Vtbl {
     pub base: ::windows::core::IInspectableVtbl,
 }
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct Inline(::windows::core::IUnknown);
 impl Inline {
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -11674,7 +11674,7 @@ impl Inline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11694,7 +11694,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -11708,7 +11708,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -11724,7 +11724,7 @@ impl Inline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11743,7 +11743,7 @@ impl Inline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11765,7 +11765,7 @@ impl Inline {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11784,7 +11784,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -11796,7 +11796,7 @@ impl Inline {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -11811,7 +11811,7 @@ impl Inline {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -11824,7 +11824,7 @@ impl Inline {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -11836,7 +11836,7 @@ impl Inline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -11847,7 +11847,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -11860,7 +11860,7 @@ impl Inline {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -11875,7 +11875,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -11887,7 +11887,7 @@ impl Inline {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -11904,7 +11904,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -11916,7 +11916,7 @@ impl Inline {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -11930,7 +11930,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -11942,7 +11942,7 @@ impl Inline {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -11956,7 +11956,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -11968,7 +11968,7 @@ impl Inline {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -11979,7 +11979,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -11992,7 +11992,7 @@ impl Inline {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -12007,7 +12007,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12020,7 +12020,7 @@ impl Inline {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -12034,7 +12034,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12046,7 +12046,7 @@ impl Inline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12057,7 +12057,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12069,7 +12069,7 @@ impl Inline {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -12083,7 +12083,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12095,7 +12095,7 @@ impl Inline {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12107,7 +12107,7 @@ impl Inline {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12119,7 +12119,7 @@ impl Inline {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12131,7 +12131,7 @@ impl Inline {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12143,7 +12143,7 @@ impl Inline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12154,7 +12154,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12167,7 +12167,7 @@ impl Inline {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -12181,7 +12181,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12193,7 +12193,7 @@ impl Inline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12204,7 +12204,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12216,7 +12216,7 @@ impl Inline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12227,7 +12227,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12239,7 +12239,7 @@ impl Inline {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -12256,7 +12256,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -12271,7 +12271,7 @@ impl Inline {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -12286,7 +12286,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12298,7 +12298,7 @@ impl Inline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12309,7 +12309,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12321,7 +12321,7 @@ impl Inline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12332,7 +12332,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -12344,7 +12344,7 @@ impl Inline {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -12358,7 +12358,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -12384,7 +12384,7 @@ impl Inline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12401,7 +12401,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -12427,7 +12427,7 @@ impl Inline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12444,7 +12444,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -12470,7 +12470,7 @@ impl Inline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12487,7 +12487,7 @@ impl Inline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -12618,11 +12618,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Inline {
 }
 unsafe impl ::core::marker::Send for Inline {}
 unsafe impl ::core::marker::Sync for Inline {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct InlineCollection(::windows::core::IUnknown);
 impl InlineCollection {
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<Inline>> {
@@ -12638,7 +12638,7 @@ impl InlineCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<Inline>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<Inline> {
         let this = self;
         unsafe {
@@ -12651,7 +12651,7 @@ impl InlineCollection {
             .from_abi::<Inline>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -12663,7 +12663,7 @@ impl InlineCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<Inline>> {
@@ -12677,7 +12677,7 @@ impl InlineCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<Inline>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, Inline>>(
         &self,
         value: Param0,
@@ -12695,7 +12695,7 @@ impl InlineCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, Inline>>(
         &self,
         index: u32,
@@ -12711,7 +12711,7 @@ impl InlineCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, Inline>>(
         &self,
         index: u32,
@@ -12727,7 +12727,7 @@ impl InlineCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -12738,7 +12738,7 @@ impl InlineCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, Inline>>(
         &self,
         value: Param0,
@@ -12752,7 +12752,7 @@ impl InlineCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -12762,14 +12762,14 @@ impl InlineCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -12788,7 +12788,7 @@ impl InlineCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<Inline>],
@@ -12969,12 +12969,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for InlineCollection {}
 unsafe impl ::core::marker::Sync for InlineCollection {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct InlineUIContainer(::windows::core::IUnknown);
 impl InlineUIContainer {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -12988,7 +12988,7 @@ impl InlineUIContainer {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -13004,7 +13004,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13024,7 +13024,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -13038,7 +13038,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -13054,7 +13054,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13073,7 +13073,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13095,7 +13095,7 @@ impl InlineUIContainer {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13114,7 +13114,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -13126,7 +13126,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -13141,7 +13141,7 @@ impl InlineUIContainer {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Child(&self) -> ::windows::core::Result<super::UIElement> {
         let this = self;
         unsafe {
@@ -13153,7 +13153,7 @@ impl InlineUIContainer {
             .from_abi::<super::UIElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetChild<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
         value: Param0,
@@ -13167,7 +13167,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13180,7 +13180,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13192,7 +13192,7 @@ impl InlineUIContainer {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13203,7 +13203,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -13216,7 +13216,7 @@ impl InlineUIContainer {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -13231,7 +13231,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13243,7 +13243,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -13260,7 +13260,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13272,7 +13272,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -13286,7 +13286,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13298,7 +13298,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -13312,7 +13312,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13324,7 +13324,7 @@ impl InlineUIContainer {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13335,7 +13335,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -13348,7 +13348,7 @@ impl InlineUIContainer {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -13363,7 +13363,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13376,7 +13376,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -13390,7 +13390,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13402,7 +13402,7 @@ impl InlineUIContainer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13413,7 +13413,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13425,7 +13425,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -13439,7 +13439,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13451,7 +13451,7 @@ impl InlineUIContainer {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13463,7 +13463,7 @@ impl InlineUIContainer {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13475,7 +13475,7 @@ impl InlineUIContainer {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13487,7 +13487,7 @@ impl InlineUIContainer {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13499,7 +13499,7 @@ impl InlineUIContainer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13510,7 +13510,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13523,7 +13523,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -13537,7 +13537,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13549,7 +13549,7 @@ impl InlineUIContainer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13560,7 +13560,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13572,7 +13572,7 @@ impl InlineUIContainer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13583,7 +13583,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13595,7 +13595,7 @@ impl InlineUIContainer {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -13612,7 +13612,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -13627,7 +13627,7 @@ impl InlineUIContainer {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -13642,7 +13642,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13654,7 +13654,7 @@ impl InlineUIContainer {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13665,7 +13665,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13677,7 +13677,7 @@ impl InlineUIContainer {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13688,7 +13688,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -13700,7 +13700,7 @@ impl InlineUIContainer {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -13714,7 +13714,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -13740,7 +13740,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13757,7 +13757,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -13783,7 +13783,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13800,7 +13800,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -13826,7 +13826,7 @@ impl InlineUIContainer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13843,7 +13843,7 @@ impl InlineUIContainer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -13994,12 +13994,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &InlineUICo
 }
 unsafe impl ::core::marker::Send for InlineUIContainer {}
 unsafe impl ::core::marker::Sync for InlineUIContainer {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct Italic(::windows::core::IUnknown);
 impl Italic {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -14013,7 +14013,7 @@ impl Italic {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -14029,7 +14029,7 @@ impl Italic {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -14049,7 +14049,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -14063,7 +14063,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -14079,7 +14079,7 @@ impl Italic {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -14098,7 +14098,7 @@ impl Italic {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -14120,7 +14120,7 @@ impl Italic {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -14139,7 +14139,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -14151,7 +14151,7 @@ impl Italic {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -14166,7 +14166,7 @@ impl Italic {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Inlines(&self) -> ::windows::core::Result<InlineCollection> {
         let this = &::windows::core::Interface::cast::<ISpan>(self)?;
         unsafe {
@@ -14178,7 +14178,7 @@ impl Italic {
             .from_abi::<InlineCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetInlines<'a, Param0: ::windows::core::IntoParam<'a, InlineCollection>>(
         &self,
         value: Param0,
@@ -14192,7 +14192,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14205,7 +14205,7 @@ impl Italic {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14217,7 +14217,7 @@ impl Italic {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14228,7 +14228,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -14241,7 +14241,7 @@ impl Italic {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -14256,7 +14256,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14268,7 +14268,7 @@ impl Italic {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -14285,7 +14285,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14297,7 +14297,7 @@ impl Italic {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -14311,7 +14311,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14323,7 +14323,7 @@ impl Italic {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -14337,7 +14337,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14349,7 +14349,7 @@ impl Italic {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14360,7 +14360,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -14373,7 +14373,7 @@ impl Italic {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -14388,7 +14388,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14401,7 +14401,7 @@ impl Italic {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -14415,7 +14415,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14427,7 +14427,7 @@ impl Italic {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14438,7 +14438,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14450,7 +14450,7 @@ impl Italic {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -14464,7 +14464,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14476,7 +14476,7 @@ impl Italic {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14488,7 +14488,7 @@ impl Italic {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14500,7 +14500,7 @@ impl Italic {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14512,7 +14512,7 @@ impl Italic {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14524,7 +14524,7 @@ impl Italic {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14535,7 +14535,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14548,7 +14548,7 @@ impl Italic {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -14562,7 +14562,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14574,7 +14574,7 @@ impl Italic {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14585,7 +14585,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14597,7 +14597,7 @@ impl Italic {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14608,7 +14608,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14620,7 +14620,7 @@ impl Italic {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -14637,7 +14637,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -14652,7 +14652,7 @@ impl Italic {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -14667,7 +14667,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14679,7 +14679,7 @@ impl Italic {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14690,7 +14690,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14702,7 +14702,7 @@ impl Italic {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14713,7 +14713,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -14725,7 +14725,7 @@ impl Italic {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -14739,7 +14739,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -14765,7 +14765,7 @@ impl Italic {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14782,7 +14782,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -14808,7 +14808,7 @@ impl Italic {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14825,7 +14825,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -14851,7 +14851,7 @@ impl Italic {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14868,7 +14868,7 @@ impl Italic {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -15039,12 +15039,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Italic {
 }
 unsafe impl ::core::marker::Send for Italic {}
 unsafe impl ::core::marker::Sync for Italic {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct LineBreak(::windows::core::IUnknown);
 impl LineBreak {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -15058,7 +15058,7 @@ impl LineBreak {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15074,7 +15074,7 @@ impl LineBreak {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15094,7 +15094,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15108,7 +15108,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15124,7 +15124,7 @@ impl LineBreak {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15143,7 +15143,7 @@ impl LineBreak {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15165,7 +15165,7 @@ impl LineBreak {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15184,7 +15184,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -15196,7 +15196,7 @@ impl LineBreak {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -15211,7 +15211,7 @@ impl LineBreak {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15224,7 +15224,7 @@ impl LineBreak {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15236,7 +15236,7 @@ impl LineBreak {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15247,7 +15247,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -15260,7 +15260,7 @@ impl LineBreak {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -15275,7 +15275,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15287,7 +15287,7 @@ impl LineBreak {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -15304,7 +15304,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15316,7 +15316,7 @@ impl LineBreak {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -15330,7 +15330,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15342,7 +15342,7 @@ impl LineBreak {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -15356,7 +15356,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15368,7 +15368,7 @@ impl LineBreak {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15379,7 +15379,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -15392,7 +15392,7 @@ impl LineBreak {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -15407,7 +15407,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15420,7 +15420,7 @@ impl LineBreak {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -15434,7 +15434,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15446,7 +15446,7 @@ impl LineBreak {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15457,7 +15457,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15469,7 +15469,7 @@ impl LineBreak {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -15483,7 +15483,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15495,7 +15495,7 @@ impl LineBreak {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15507,7 +15507,7 @@ impl LineBreak {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15519,7 +15519,7 @@ impl LineBreak {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15531,7 +15531,7 @@ impl LineBreak {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15543,7 +15543,7 @@ impl LineBreak {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15554,7 +15554,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15567,7 +15567,7 @@ impl LineBreak {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -15581,7 +15581,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15593,7 +15593,7 @@ impl LineBreak {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15604,7 +15604,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15616,7 +15616,7 @@ impl LineBreak {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15627,7 +15627,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15639,7 +15639,7 @@ impl LineBreak {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -15656,7 +15656,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -15671,7 +15671,7 @@ impl LineBreak {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -15686,7 +15686,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15698,7 +15698,7 @@ impl LineBreak {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15709,7 +15709,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15721,7 +15721,7 @@ impl LineBreak {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15732,7 +15732,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -15744,7 +15744,7 @@ impl LineBreak {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -15758,7 +15758,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -15784,7 +15784,7 @@ impl LineBreak {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15801,7 +15801,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -15827,7 +15827,7 @@ impl LineBreak {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15844,7 +15844,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -15870,7 +15870,7 @@ impl LineBreak {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15887,7 +15887,7 @@ impl LineBreak {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -16038,7 +16038,7 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &LineBreak 
 }
 unsafe impl ::core::marker::Send for LineBreak {}
 unsafe impl ::core::marker::Sync for LineBreak {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct LogicalDirection(pub i32);
@@ -16074,12 +16074,12 @@ unsafe impl ::windows::core::RuntimeType for LogicalDirection {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct Paragraph(::windows::core::IUnknown);
 impl Paragraph {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -16093,7 +16093,7 @@ impl Paragraph {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextAlignment(&self) -> ::windows::core::Result<super::TextAlignment> {
         let this = &::windows::core::Interface::cast::<IBlock>(self)?;
         unsafe {
@@ -16105,7 +16105,7 @@ impl Paragraph {
             .from_abi::<super::TextAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextAlignment(&self, value: super::TextAlignment) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBlock>(self)?;
         unsafe {
@@ -16116,7 +16116,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn HorizontalTextAlignment(&self) -> ::windows::core::Result<super::TextAlignment> {
         let this = &::windows::core::Interface::cast::<IBlock>(self)?;
         unsafe {
@@ -16128,7 +16128,7 @@ impl Paragraph {
             .from_abi::<super::TextAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetHorizontalTextAlignment(
         &self,
         value: super::TextAlignment,
@@ -16142,7 +16142,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn LineHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IBlock>(self)?;
         unsafe {
@@ -16154,7 +16154,7 @@ impl Paragraph {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLineHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBlock>(self)?;
         unsafe {
@@ -16165,7 +16165,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn LineStackingStrategy(&self) -> ::windows::core::Result<super::LineStackingStrategy> {
         let this = &::windows::core::Interface::cast::<IBlock>(self)?;
         unsafe {
@@ -16177,7 +16177,7 @@ impl Paragraph {
             .from_abi::<super::LineStackingStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLineStackingStrategy(
         &self,
         value: super::LineStackingStrategy,
@@ -16191,7 +16191,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Margin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<IBlock>(self)?;
         unsafe {
@@ -16203,7 +16203,7 @@ impl Paragraph {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -16217,7 +16217,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16233,7 +16233,7 @@ impl Paragraph {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16253,7 +16253,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16267,7 +16267,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16283,7 +16283,7 @@ impl Paragraph {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16302,7 +16302,7 @@ impl Paragraph {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16324,7 +16324,7 @@ impl Paragraph {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16343,7 +16343,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -16355,7 +16355,7 @@ impl Paragraph {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -16370,7 +16370,7 @@ impl Paragraph {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Inlines(&self) -> ::windows::core::Result<InlineCollection> {
         let this = self;
         unsafe {
@@ -16382,7 +16382,7 @@ impl Paragraph {
             .from_abi::<InlineCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextIndent(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -16394,7 +16394,7 @@ impl Paragraph {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextIndent(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -16405,7 +16405,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextIndentProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IParagraphStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -16416,7 +16416,7 @@ impl Paragraph {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16429,7 +16429,7 @@ impl Paragraph {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16441,7 +16441,7 @@ impl Paragraph {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16452,7 +16452,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -16465,7 +16465,7 @@ impl Paragraph {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -16480,7 +16480,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16492,7 +16492,7 @@ impl Paragraph {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -16509,7 +16509,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16521,7 +16521,7 @@ impl Paragraph {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -16535,7 +16535,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16547,7 +16547,7 @@ impl Paragraph {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -16561,7 +16561,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16573,7 +16573,7 @@ impl Paragraph {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16584,7 +16584,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -16597,7 +16597,7 @@ impl Paragraph {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -16612,7 +16612,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16625,7 +16625,7 @@ impl Paragraph {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -16639,7 +16639,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16651,7 +16651,7 @@ impl Paragraph {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16662,7 +16662,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16674,7 +16674,7 @@ impl Paragraph {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -16688,7 +16688,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16700,7 +16700,7 @@ impl Paragraph {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16712,7 +16712,7 @@ impl Paragraph {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16724,7 +16724,7 @@ impl Paragraph {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16736,7 +16736,7 @@ impl Paragraph {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16748,7 +16748,7 @@ impl Paragraph {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16759,7 +16759,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16772,7 +16772,7 @@ impl Paragraph {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -16786,7 +16786,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16798,7 +16798,7 @@ impl Paragraph {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16809,7 +16809,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16821,7 +16821,7 @@ impl Paragraph {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16832,7 +16832,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16844,7 +16844,7 @@ impl Paragraph {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -16861,7 +16861,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -16876,7 +16876,7 @@ impl Paragraph {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -16891,7 +16891,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16903,7 +16903,7 @@ impl Paragraph {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16914,7 +16914,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16926,7 +16926,7 @@ impl Paragraph {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16937,7 +16937,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -16949,7 +16949,7 @@ impl Paragraph {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -16963,7 +16963,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -16989,7 +16989,7 @@ impl Paragraph {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -17006,7 +17006,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -17032,7 +17032,7 @@ impl Paragraph {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -17049,7 +17049,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -17075,7 +17075,7 @@ impl Paragraph {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -17092,7 +17092,7 @@ impl Paragraph {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -17251,12 +17251,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Paragraph 
 }
 unsafe impl ::core::marker::Send for Paragraph {}
 unsafe impl ::core::marker::Sync for Paragraph {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct Run(::windows::core::IUnknown);
 impl Run {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -17268,7 +17268,7 @@ impl Run {
             ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -17284,7 +17284,7 @@ impl Run {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -17304,7 +17304,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -17318,7 +17318,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -17334,7 +17334,7 @@ impl Run {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -17353,7 +17353,7 @@ impl Run {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -17375,7 +17375,7 @@ impl Run {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -17394,7 +17394,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -17406,7 +17406,7 @@ impl Run {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -17421,7 +17421,7 @@ impl Run {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Text(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -17434,7 +17434,7 @@ impl Run {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetText<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -17448,7 +17448,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FlowDirection(&self) -> ::windows::core::Result<super::FlowDirection> {
         let this = self;
         unsafe {
@@ -17460,7 +17460,7 @@ impl Run {
             .from_abi::<super::FlowDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFlowDirection(&self, value: super::FlowDirection) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17471,7 +17471,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FlowDirectionProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRunStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17482,7 +17482,7 @@ impl Run {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17495,7 +17495,7 @@ impl Run {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17507,7 +17507,7 @@ impl Run {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17518,7 +17518,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -17531,7 +17531,7 @@ impl Run {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -17546,7 +17546,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17558,7 +17558,7 @@ impl Run {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -17575,7 +17575,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17587,7 +17587,7 @@ impl Run {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -17601,7 +17601,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17613,7 +17613,7 @@ impl Run {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -17627,7 +17627,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17639,7 +17639,7 @@ impl Run {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17650,7 +17650,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -17663,7 +17663,7 @@ impl Run {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -17678,7 +17678,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17691,7 +17691,7 @@ impl Run {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -17705,7 +17705,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17717,7 +17717,7 @@ impl Run {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17728,7 +17728,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17740,7 +17740,7 @@ impl Run {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -17754,7 +17754,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17766,7 +17766,7 @@ impl Run {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17778,7 +17778,7 @@ impl Run {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17790,7 +17790,7 @@ impl Run {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17802,7 +17802,7 @@ impl Run {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17814,7 +17814,7 @@ impl Run {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17825,7 +17825,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17838,7 +17838,7 @@ impl Run {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -17852,7 +17852,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17864,7 +17864,7 @@ impl Run {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17875,7 +17875,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17887,7 +17887,7 @@ impl Run {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17898,7 +17898,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17910,7 +17910,7 @@ impl Run {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -17927,7 +17927,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -17942,7 +17942,7 @@ impl Run {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -17957,7 +17957,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17969,7 +17969,7 @@ impl Run {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17980,7 +17980,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -17992,7 +17992,7 @@ impl Run {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18003,7 +18003,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18015,7 +18015,7 @@ impl Run {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -18029,7 +18029,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -18055,7 +18055,7 @@ impl Run {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -18072,7 +18072,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -18098,7 +18098,7 @@ impl Run {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -18115,7 +18115,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -18141,7 +18141,7 @@ impl Run {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -18158,7 +18158,7 @@ impl Run {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -18317,11 +18317,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Run {
 }
 unsafe impl ::core::marker::Send for Run {}
 unsafe impl ::core::marker::Sync for Run {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct Span(::windows::core::IUnknown);
 impl Span {
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -18337,7 +18337,7 @@ impl Span {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18357,7 +18357,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -18371,7 +18371,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -18387,7 +18387,7 @@ impl Span {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18406,7 +18406,7 @@ impl Span {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18428,7 +18428,7 @@ impl Span {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18447,7 +18447,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -18459,7 +18459,7 @@ impl Span {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -18474,7 +18474,7 @@ impl Span {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Inlines(&self) -> ::windows::core::Result<InlineCollection> {
         let this = self;
         unsafe {
@@ -18486,7 +18486,7 @@ impl Span {
             .from_abi::<InlineCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetInlines<'a, Param0: ::windows::core::IntoParam<'a, InlineCollection>>(
         &self,
         value: Param0,
@@ -18500,7 +18500,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn new() -> ::windows::core::Result<Span> {
         Self::ISpanFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -18513,7 +18513,7 @@ impl Span {
             .from_abi::<Span>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn compose<T: ::windows::core::Compose>(compose: T) -> ::windows::core::Result<Span> {
         Self::ISpanFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
@@ -18527,7 +18527,7 @@ impl Span {
             .from_abi::<Span>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18540,7 +18540,7 @@ impl Span {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18552,7 +18552,7 @@ impl Span {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18563,7 +18563,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -18576,7 +18576,7 @@ impl Span {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -18591,7 +18591,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18603,7 +18603,7 @@ impl Span {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -18620,7 +18620,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18632,7 +18632,7 @@ impl Span {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -18646,7 +18646,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18658,7 +18658,7 @@ impl Span {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -18672,7 +18672,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18684,7 +18684,7 @@ impl Span {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18695,7 +18695,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -18708,7 +18708,7 @@ impl Span {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -18723,7 +18723,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18736,7 +18736,7 @@ impl Span {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -18750,7 +18750,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18762,7 +18762,7 @@ impl Span {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18773,7 +18773,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18785,7 +18785,7 @@ impl Span {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -18799,7 +18799,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18811,7 +18811,7 @@ impl Span {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18823,7 +18823,7 @@ impl Span {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18835,7 +18835,7 @@ impl Span {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18847,7 +18847,7 @@ impl Span {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18859,7 +18859,7 @@ impl Span {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18870,7 +18870,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18883,7 +18883,7 @@ impl Span {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -18897,7 +18897,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18909,7 +18909,7 @@ impl Span {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18920,7 +18920,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18932,7 +18932,7 @@ impl Span {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18943,7 +18943,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -18955,7 +18955,7 @@ impl Span {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -18972,7 +18972,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -18987,7 +18987,7 @@ impl Span {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -19002,7 +19002,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -19014,7 +19014,7 @@ impl Span {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -19025,7 +19025,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -19037,7 +19037,7 @@ impl Span {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -19048,7 +19048,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -19060,7 +19060,7 @@ impl Span {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -19074,7 +19074,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -19100,7 +19100,7 @@ impl Span {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -19117,7 +19117,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -19143,7 +19143,7 @@ impl Span {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -19160,7 +19160,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -19186,7 +19186,7 @@ impl Span {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -19203,7 +19203,7 @@ impl Span {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -19362,11 +19362,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Span {
 }
 unsafe impl ::core::marker::Send for Span {}
 unsafe impl ::core::marker::Sync for Span {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct TextElement(::windows::core::IUnknown);
 impl TextElement {
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19382,7 +19382,7 @@ impl TextElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19402,7 +19402,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19416,7 +19416,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19432,7 +19432,7 @@ impl TextElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19451,7 +19451,7 @@ impl TextElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19473,7 +19473,7 @@ impl TextElement {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19492,7 +19492,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -19504,7 +19504,7 @@ impl TextElement {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -19519,7 +19519,7 @@ impl TextElement {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -19532,7 +19532,7 @@ impl TextElement {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -19544,7 +19544,7 @@ impl TextElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -19555,7 +19555,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = self;
@@ -19568,7 +19568,7 @@ impl TextElement {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -19583,7 +19583,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = self;
         unsafe {
@@ -19595,7 +19595,7 @@ impl TextElement {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -19612,7 +19612,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = self;
         unsafe {
@@ -19624,7 +19624,7 @@ impl TextElement {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -19638,7 +19638,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = self;
         unsafe {
@@ -19650,7 +19650,7 @@ impl TextElement {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -19664,7 +19664,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -19676,7 +19676,7 @@ impl TextElement {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -19687,7 +19687,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = self;
@@ -19700,7 +19700,7 @@ impl TextElement {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -19715,7 +19715,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -19728,7 +19728,7 @@ impl TextElement {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -19742,7 +19742,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -19754,7 +19754,7 @@ impl TextElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -19765,7 +19765,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = self;
         unsafe {
@@ -19777,7 +19777,7 @@ impl TextElement {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -19791,7 +19791,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = self;
         unsafe {
@@ -19803,7 +19803,7 @@ impl TextElement {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = self;
         unsafe {
@@ -19815,7 +19815,7 @@ impl TextElement {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = self;
         unsafe {
@@ -19827,7 +19827,7 @@ impl TextElement {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = self;
         unsafe {
@@ -19839,7 +19839,7 @@ impl TextElement {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -19851,7 +19851,7 @@ impl TextElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -19862,7 +19862,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -19875,7 +19875,7 @@ impl TextElement {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -19889,7 +19889,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -19901,7 +19901,7 @@ impl TextElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -19912,7 +19912,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -19924,7 +19924,7 @@ impl TextElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -19935,7 +19935,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = self;
         unsafe {
@@ -19947,7 +19947,7 @@ impl TextElement {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -19964,7 +19964,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -19979,7 +19979,7 @@ impl TextElement {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -19994,7 +19994,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -20006,7 +20006,7 @@ impl TextElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -20017,7 +20017,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -20029,7 +20029,7 @@ impl TextElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -20040,7 +20040,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = self;
         unsafe {
@@ -20052,7 +20052,7 @@ impl TextElement {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -20066,7 +20066,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -20092,7 +20092,7 @@ impl TextElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20109,7 +20109,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -20135,7 +20135,7 @@ impl TextElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20152,7 +20152,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -20178,7 +20178,7 @@ impl TextElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20195,7 +20195,7 @@ impl TextElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -20211,7 +20211,7 @@ impl TextElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSizeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20222,7 +20222,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontFamilyProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20233,7 +20233,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeightProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20244,7 +20244,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyleProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20255,7 +20255,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretchProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20266,7 +20266,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacingProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20277,7 +20277,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ForegroundProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20288,7 +20288,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn LanguageProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20299,7 +20299,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabledProperty() -> ::windows::core::Result<super::DependencyProperty>
     {
         Self::ITextElementStatics(|this| unsafe {
@@ -20311,7 +20311,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorationsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20322,7 +20322,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteractionProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20333,7 +20333,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20344,7 +20344,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvokedProperty(
     ) -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
@@ -20356,7 +20356,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScopeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20367,7 +20367,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwnerProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20378,7 +20378,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipPlacementModeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20389,7 +20389,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffsetProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20400,7 +20400,7 @@ impl TextElement {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffsetProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20514,11 +20514,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &TextElemen
 }
 unsafe impl ::core::marker::Send for TextElement {}
 unsafe impl ::core::marker::Sync for TextElement {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct TextHighlighter(::windows::core::IUnknown);
 impl TextHighlighter {
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Ranges(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<TextRange>> {
@@ -20532,7 +20532,7 @@ impl TextHighlighter {
             .from_abi::<::windows::Foundation::Collections::IVector<TextRange>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = self;
@@ -20545,7 +20545,7 @@ impl TextHighlighter {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -20560,7 +20560,7 @@ impl TextHighlighter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Background(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = self;
@@ -20573,7 +20573,7 @@ impl TextHighlighter {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetBackground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -20588,7 +20588,7 @@ impl TextHighlighter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn new() -> ::windows::core::Result<TextHighlighter> {
         Self::ITextHighlighterFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20601,7 +20601,7 @@ impl TextHighlighter {
             .from_abi::<TextHighlighter>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<TextHighlighter> {
@@ -20617,7 +20617,7 @@ impl TextHighlighter {
             .from_abi::<TextHighlighter>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ForegroundProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextHighlighterStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20628,7 +20628,7 @@ impl TextHighlighter {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn BackgroundProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITextHighlighterStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20736,11 +20736,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a T
 }
 unsafe impl ::core::marker::Send for TextHighlighter {}
 unsafe impl ::core::marker::Sync for TextHighlighter {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct TextHighlighterBase(::windows::core::IUnknown);
 impl TextHighlighterBase {
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -20756,7 +20756,7 @@ impl TextHighlighterBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20776,7 +20776,7 @@ impl TextHighlighterBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -20790,7 +20790,7 @@ impl TextHighlighterBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -20806,7 +20806,7 @@ impl TextHighlighterBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20825,7 +20825,7 @@ impl TextHighlighterBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20847,7 +20847,7 @@ impl TextHighlighterBase {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20866,7 +20866,7 @@ impl TextHighlighterBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -20878,7 +20878,7 @@ impl TextHighlighterBase {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -20986,11 +20986,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &TextHighli
 }
 unsafe impl ::core::marker::Send for TextHighlighterBase {}
 unsafe impl ::core::marker::Sync for TextHighlighterBase {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct TextPointer(::windows::core::IUnknown);
 impl TextPointer {
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = self;
         unsafe {
@@ -21002,7 +21002,7 @@ impl TextPointer {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn VisualParent(&self) -> ::windows::core::Result<super::FrameworkElement> {
         let this = self;
         unsafe {
@@ -21014,7 +21014,7 @@ impl TextPointer {
             .from_abi::<super::FrameworkElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn LogicalDirection(&self) -> ::windows::core::Result<LogicalDirection> {
         let this = self;
         unsafe {
@@ -21026,7 +21026,7 @@ impl TextPointer {
             .from_abi::<LogicalDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Offset(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -21038,7 +21038,7 @@ impl TextPointer {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetCharacterRect(
         &self,
         direction: LogicalDirection,
@@ -21054,7 +21054,7 @@ impl TextPointer {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetPositionAtOffset(
         &self,
         offset: i32,
@@ -21148,7 +21148,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a T
 unsafe impl ::core::marker::Send for TextPointer {}
 unsafe impl ::core::marker::Sync for TextPointer {}
 #[repr(C)]
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 pub struct TextRange {
     pub StartIndex: i32,
     pub Length: i32,
@@ -21196,11 +21196,11 @@ impl ::core::default::Default for TextRange {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct Typography(::windows::core::IUnknown);
 impl Typography {
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AnnotationAlternatesProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21211,7 +21211,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnnotationAlternates<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21228,7 +21228,7 @@ impl Typography {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAnnotationAlternates<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21245,7 +21245,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn EastAsianExpertFormsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21256,7 +21256,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetEastAsianExpertForms<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21273,7 +21273,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetEastAsianExpertForms<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21290,7 +21290,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn EastAsianLanguageProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21301,7 +21301,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetEastAsianLanguage<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21318,7 +21318,7 @@ impl Typography {
             .from_abi::<super::FontEastAsianLanguage>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetEastAsianLanguage<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21335,7 +21335,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn EastAsianWidthsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21346,7 +21346,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetEastAsianWidths<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21363,7 +21363,7 @@ impl Typography {
             .from_abi::<super::FontEastAsianWidths>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetEastAsianWidths<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21380,7 +21380,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StandardLigaturesProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21391,7 +21391,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStandardLigatures<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21408,7 +21408,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStandardLigatures<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21425,7 +21425,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContextualLigaturesProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21436,7 +21436,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetContextualLigatures<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21453,7 +21453,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetContextualLigatures<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21470,7 +21470,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn DiscretionaryLigaturesProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21481,7 +21481,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetDiscretionaryLigatures<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21498,7 +21498,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetDiscretionaryLigatures<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21515,7 +21515,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn HistoricalLigaturesProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21526,7 +21526,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetHistoricalLigatures<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21543,7 +21543,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetHistoricalLigatures<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21560,7 +21560,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StandardSwashesProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21571,7 +21571,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStandardSwashes<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21588,7 +21588,7 @@ impl Typography {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStandardSwashes<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21605,7 +21605,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContextualSwashesProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21616,7 +21616,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetContextualSwashes<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21633,7 +21633,7 @@ impl Typography {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetContextualSwashes<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21650,7 +21650,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContextualAlternatesProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21661,7 +21661,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetContextualAlternates<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21678,7 +21678,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetContextualAlternates<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21695,7 +21695,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticAlternatesProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21706,7 +21706,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticAlternates<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21723,7 +21723,7 @@ impl Typography {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticAlternates<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -21740,7 +21740,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet1Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21751,7 +21751,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet1<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -21765,7 +21765,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet1<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -21779,7 +21779,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet2Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21790,7 +21790,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet2<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -21804,7 +21804,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet2<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -21818,7 +21818,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet3Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21829,7 +21829,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet3<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -21843,7 +21843,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet3<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -21857,7 +21857,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet4Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21868,7 +21868,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet4<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -21882,7 +21882,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet4<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -21896,7 +21896,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet5Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21907,7 +21907,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet5<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -21921,7 +21921,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet5<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -21935,7 +21935,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet6Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21946,7 +21946,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet6<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -21960,7 +21960,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet6<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -21974,7 +21974,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet7Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21985,7 +21985,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet7<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -21999,7 +21999,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet7<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -22013,7 +22013,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet8Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22024,7 +22024,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet8<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -22038,7 +22038,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet8<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -22052,7 +22052,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet9Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22063,7 +22063,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet9<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -22077,7 +22077,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet9<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -22091,7 +22091,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet10Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22102,7 +22102,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet10<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22119,7 +22119,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet10<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22136,7 +22136,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet11Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22147,7 +22147,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet11<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22164,7 +22164,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet11<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22181,7 +22181,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet12Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22192,7 +22192,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet12<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22209,7 +22209,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet12<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22226,7 +22226,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet13Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22237,7 +22237,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet13<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22254,7 +22254,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet13<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22271,7 +22271,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet14Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22282,7 +22282,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet14<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22299,7 +22299,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet14<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22316,7 +22316,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet15Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22327,7 +22327,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet15<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22344,7 +22344,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet15<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22361,7 +22361,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet16Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22372,7 +22372,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet16<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22389,7 +22389,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet16<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22406,7 +22406,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet17Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22417,7 +22417,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet17<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22434,7 +22434,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet17<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22451,7 +22451,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet18Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22462,7 +22462,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet18<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22479,7 +22479,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet18<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22496,7 +22496,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet19Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22507,7 +22507,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet19<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22524,7 +22524,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet19<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22541,7 +22541,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn StylisticSet20Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22552,7 +22552,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetStylisticSet20<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22569,7 +22569,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetStylisticSet20<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22586,7 +22586,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CapitalsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22597,7 +22597,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetCapitals<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<super::FontCapitals> {
@@ -22611,7 +22611,7 @@ impl Typography {
             .from_abi::<super::FontCapitals>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCapitals<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: super::FontCapitals,
@@ -22625,7 +22625,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CapitalSpacingProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22636,7 +22636,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetCapitalSpacing<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22653,7 +22653,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCapitalSpacing<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22670,7 +22670,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KerningProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22681,7 +22681,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetKerning<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -22695,7 +22695,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKerning<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -22709,7 +22709,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CaseSensitiveFormsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22720,7 +22720,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetCaseSensitiveForms<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22737,7 +22737,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCaseSensitiveForms<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22754,7 +22754,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn HistoricalFormsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22765,7 +22765,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetHistoricalForms<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22782,7 +22782,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetHistoricalForms<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22799,7 +22799,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FractionProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22810,7 +22810,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetFraction<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<super::FontFraction> {
@@ -22824,7 +22824,7 @@ impl Typography {
             .from_abi::<super::FontFraction>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFraction<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: super::FontFraction,
@@ -22838,7 +22838,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn NumeralStyleProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22849,7 +22849,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetNumeralStyle<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<super::FontNumeralStyle> {
@@ -22863,7 +22863,7 @@ impl Typography {
             .from_abi::<super::FontNumeralStyle>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetNumeralStyle<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: super::FontNumeralStyle,
@@ -22877,7 +22877,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn NumeralAlignmentProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22888,7 +22888,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetNumeralAlignment<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22905,7 +22905,7 @@ impl Typography {
             .from_abi::<super::FontNumeralAlignment>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetNumeralAlignment<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22922,7 +22922,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SlashedZeroProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22933,7 +22933,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetSlashedZero<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -22947,7 +22947,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetSlashedZero<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -22961,7 +22961,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn MathematicalGreekProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22972,7 +22972,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetMathematicalGreek<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -22989,7 +22989,7 @@ impl Typography {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetMathematicalGreek<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -23006,7 +23006,7 @@ impl Typography {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn VariantsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITypographyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -23017,7 +23017,7 @@ impl Typography {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetVariants<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<super::FontVariants> {
@@ -23031,7 +23031,7 @@ impl Typography {
             .from_abi::<super::FontVariants>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetVariants<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: super::FontVariants,
@@ -23128,12 +23128,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a T
 }
 unsafe impl ::core::marker::Send for Typography {}
 unsafe impl ::core::marker::Sync for Typography {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 pub struct Underline(::windows::core::IUnknown);
 impl Underline {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -23147,7 +23147,7 @@ impl Underline {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23163,7 +23163,7 @@ impl Underline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23183,7 +23183,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23197,7 +23197,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23213,7 +23213,7 @@ impl Underline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23232,7 +23232,7 @@ impl Underline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23254,7 +23254,7 @@ impl Underline {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23273,7 +23273,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -23285,7 +23285,7 @@ impl Underline {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -23300,7 +23300,7 @@ impl Underline {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Inlines(&self) -> ::windows::core::Result<InlineCollection> {
         let this = &::windows::core::Interface::cast::<ISpan>(self)?;
         unsafe {
@@ -23312,7 +23312,7 @@ impl Underline {
             .from_abi::<InlineCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetInlines<'a, Param0: ::windows::core::IntoParam<'a, InlineCollection>>(
         &self,
         value: Param0,
@@ -23326,7 +23326,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23339,7 +23339,7 @@ impl Underline {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontSize(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23351,7 +23351,7 @@ impl Underline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontSize(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23362,7 +23362,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FontFamily(&self) -> ::windows::core::Result<super::Media::FontFamily> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -23375,7 +23375,7 @@ impl Underline {
             .from_abi::<super::Media::FontFamily>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFontFamily<'a, Param0: ::windows::core::IntoParam<'a, super::Media::FontFamily>>(
         &self,
@@ -23390,7 +23390,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontWeight(&self) -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23402,7 +23402,7 @@ impl Underline {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontWeight<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Text::FontWeight>,
@@ -23419,7 +23419,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23431,7 +23431,7 @@ impl Underline {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -23445,7 +23445,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23457,7 +23457,7 @@ impl Underline {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -23471,7 +23471,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn CharacterSpacing(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23483,7 +23483,7 @@ impl Underline {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetCharacterSpacing(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23494,7 +23494,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Foreground(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
@@ -23507,7 +23507,7 @@ impl Underline {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetForeground<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -23522,7 +23522,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23535,7 +23535,7 @@ impl Underline {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -23549,7 +23549,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsTextScaleFactorEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23561,7 +23561,7 @@ impl Underline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsTextScaleFactorEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23572,7 +23572,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn TextDecorations(&self) -> ::windows::core::Result<::windows::UI::Text::TextDecorations> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23584,7 +23584,7 @@ impl Underline {
             .from_abi::<::windows::UI::Text::TextDecorations>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetTextDecorations(
         &self,
         value: ::windows::UI::Text::TextDecorations,
@@ -23598,7 +23598,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23610,7 +23610,7 @@ impl Underline {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ContentEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23622,7 +23622,7 @@ impl Underline {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementStart(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23634,7 +23634,7 @@ impl Underline {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ElementEnd(&self) -> ::windows::core::Result<TextPointer> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23646,7 +23646,7 @@ impl Underline {
             .from_abi::<TextPointer>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23658,7 +23658,7 @@ impl Underline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23669,7 +23669,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23682,7 +23682,7 @@ impl Underline {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -23696,7 +23696,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23708,7 +23708,7 @@ impl Underline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23719,7 +23719,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23731,7 +23731,7 @@ impl Underline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23742,7 +23742,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23754,7 +23754,7 @@ impl Underline {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -23771,7 +23771,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -23786,7 +23786,7 @@ impl Underline {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -23801,7 +23801,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23813,7 +23813,7 @@ impl Underline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23824,7 +23824,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23836,7 +23836,7 @@ impl Underline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23847,7 +23847,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<ITextElement>(self)?;
         unsafe {
@@ -23859,7 +23859,7 @@ impl Underline {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -23873,7 +23873,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -23899,7 +23899,7 @@ impl Underline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -23916,7 +23916,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -23942,7 +23942,7 @@ impl Underline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -23959,7 +23959,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -23985,7 +23985,7 @@ impl Underline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -24002,7 +24002,7 @@ impl Underline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Documents'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -24173,7 +24173,7 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Underline 
 }
 unsafe impl ::core::marker::Send for Underline {}
 unsafe impl ::core::marker::Sync for Underline {}
-#[doc = "*Required features: 'UI_Xaml_Documents'*"]
+#[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct UnderlineStyle(pub i32);

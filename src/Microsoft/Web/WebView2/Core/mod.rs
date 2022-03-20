@@ -5,11 +5,11 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2(::windows::core::IUnknown);
 impl CoreWebView2 {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Settings(&self) -> ::windows::core::Result<CoreWebView2Settings> {
         let this = self;
         unsafe {
@@ -21,7 +21,7 @@ impl CoreWebView2 {
             .from_abi::<CoreWebView2Settings>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Source(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -34,7 +34,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn BrowserProcessId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -46,7 +46,7 @@ impl CoreWebView2 {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CanGoBack(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -58,7 +58,7 @@ impl CoreWebView2 {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CanGoForward(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -70,7 +70,7 @@ impl CoreWebView2 {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DocumentTitle(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -83,7 +83,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ContainsFullScreenElement(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -95,7 +95,7 @@ impl CoreWebView2 {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NavigationStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -120,7 +120,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveNavigationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -137,7 +137,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ContentLoading<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -162,7 +162,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveContentLoading<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -179,7 +179,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SourceChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -204,7 +204,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveSourceChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -221,7 +221,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn HistoryChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -243,7 +243,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveHistoryChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -260,7 +260,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NavigationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -285,7 +285,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveNavigationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -302,7 +302,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn FrameNavigationStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -327,7 +327,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveFrameNavigationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -344,7 +344,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn FrameNavigationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -369,7 +369,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveFrameNavigationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -386,7 +386,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ScriptDialogOpening<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -411,7 +411,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveScriptDialogOpening<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -428,7 +428,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PermissionRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -453,7 +453,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemovePermissionRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -470,7 +470,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ProcessFailed<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -495,7 +495,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveProcessFailed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -512,7 +512,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn WebMessageReceived<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -537,7 +537,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveWebMessageReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -554,7 +554,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NewWindowRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -579,7 +579,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveNewWindowRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -596,7 +596,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DocumentTitleChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -618,7 +618,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveDocumentTitleChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -635,7 +635,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ContainsFullScreenElementChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -657,7 +657,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveContainsFullScreenElementChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -674,7 +674,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn WebResourceRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -699,7 +699,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveWebResourceRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -716,7 +716,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn WindowCloseRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -738,7 +738,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveWindowCloseRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -755,7 +755,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Navigate<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         uri: Param0,
@@ -769,7 +769,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NavigateToString<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -786,7 +786,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AddScriptToExecuteOnDocumentCreatedAsync<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -806,7 +806,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::IAsyncOperation<::windows::core::HSTRING>>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveScriptToExecuteOnDocumentCreated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -823,7 +823,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ExecuteScriptAsync<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -843,7 +843,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::IAsyncOperation<::windows::core::HSTRING>>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CapturePreviewAsync<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -864,7 +864,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Reload(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -872,7 +872,7 @@ impl CoreWebView2 {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PostWebMessageAsJson<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -889,7 +889,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PostWebMessageAsString<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -906,7 +906,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CallDevToolsProtocolMethodAsync<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -929,7 +929,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::IAsyncOperation<::windows::core::HSTRING>>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GoBack(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -937,7 +937,7 @@ impl CoreWebView2 {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GoForward(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -945,7 +945,7 @@ impl CoreWebView2 {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetDevToolsProtocolEventReceiver<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -964,14 +964,14 @@ impl CoreWebView2 {
             .from_abi::<CoreWebView2DevToolsProtocolEventReceiver>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Stop(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Stop)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AddHostObjectToScript<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -991,7 +991,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveHostObjectFromScript<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1008,7 +1008,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn OpenDevToolsWindow(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1018,7 +1018,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AddWebResourceRequestedFilter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1037,7 +1037,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveWebResourceRequestedFilter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1056,7 +1056,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CookieManager(&self) -> ::windows::core::Result<CoreWebView2CookieManager> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_2>(self)?;
         unsafe {
@@ -1068,7 +1068,7 @@ impl CoreWebView2 {
             .from_abi::<CoreWebView2CookieManager>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Environment(&self) -> ::windows::core::Result<CoreWebView2Environment> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_2>(self)?;
         unsafe {
@@ -1080,7 +1080,7 @@ impl CoreWebView2 {
             .from_abi::<CoreWebView2Environment>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn WebResourceResponseReceived<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1105,7 +1105,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveWebResourceResponseReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1122,7 +1122,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DOMContentLoaded<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1147,7 +1147,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveDOMContentLoaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1164,7 +1164,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NavigateWithWebResourceRequest<
         'a,
         Param0: ::windows::core::IntoParam<'a, CoreWebView2WebResourceRequest>,
@@ -1181,7 +1181,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsSuspended(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_3>(self)?;
         unsafe {
@@ -1193,7 +1193,7 @@ impl CoreWebView2 {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn TrySuspendAsync(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncOperation<bool>> {
@@ -1207,7 +1207,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::IAsyncOperation<bool>>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Resume(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_3>(self)?;
         unsafe {
@@ -1215,7 +1215,7 @@ impl CoreWebView2 {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetVirtualHostNameToFolderMapping<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1237,7 +1237,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ClearVirtualHostNameToFolderMapping<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1254,7 +1254,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn FrameCreated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1279,7 +1279,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveFrameCreated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1296,7 +1296,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DownloadStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1321,7 +1321,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveDownloadStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1338,7 +1338,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ClientCertificateRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1363,7 +1363,7 @@ impl CoreWebView2 {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveClientCertificateRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1380,7 +1380,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn OpenTaskManagerWindow(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_6>(self)?;
         unsafe {
@@ -1390,7 +1390,7 @@ impl CoreWebView2 {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PrintToPdfAsync<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1487,11 +1487,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a C
 }
 unsafe impl ::core::marker::Send for CoreWebView2 {}
 unsafe impl ::core::marker::Sync for CoreWebView2 {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2AcceleratorKeyPressedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2AcceleratorKeyPressedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn KeyEventKind(&self) -> ::windows::core::Result<CoreWebView2KeyEventKind> {
         let this = self;
         unsafe {
@@ -1503,7 +1503,7 @@ impl CoreWebView2AcceleratorKeyPressedEventArgs {
             .from_abi::<CoreWebView2KeyEventKind>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn VirtualKey(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -1515,7 +1515,7 @@ impl CoreWebView2AcceleratorKeyPressedEventArgs {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn KeyEventLParam(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -1527,7 +1527,7 @@ impl CoreWebView2AcceleratorKeyPressedEventArgs {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PhysicalKeyStatus(&self) -> ::windows::core::Result<CoreWebView2PhysicalKeyStatus> {
         let this = self;
         unsafe {
@@ -1539,7 +1539,7 @@ impl CoreWebView2AcceleratorKeyPressedEventArgs {
             .from_abi::<CoreWebView2PhysicalKeyStatus>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -1551,7 +1551,7 @@ impl CoreWebView2AcceleratorKeyPressedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1655,7 +1655,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2AcceleratorKeyPressedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2AcceleratorKeyPressedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2BoundsMode(pub i32);
@@ -1693,7 +1693,7 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2BoundsMode {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2BrowserProcessExitKind(pub i32);
@@ -1731,11 +1731,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2BrowserProcessExitKind 
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2BrowserProcessExitedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2BrowserProcessExitedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn BrowserProcessExitKind(
         &self,
     ) -> ::windows::core::Result<CoreWebView2BrowserProcessExitKind> {
@@ -1749,7 +1749,7 @@ impl CoreWebView2BrowserProcessExitedEventArgs {
             .from_abi::<CoreWebView2BrowserProcessExitKind>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn BrowserProcessId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -1854,7 +1854,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2BrowserProcessExitedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2BrowserProcessExitedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2CapturePreviewImageFormat(pub i32);
@@ -1892,11 +1892,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2CapturePreviewImageForm
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2ClientCertificate(::windows::core::IUnknown);
 impl CoreWebView2ClientCertificate {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ToCertificate(
         &self,
     ) -> ::windows::core::Result<::windows::Security::Cryptography::Certificates::Certificate> {
@@ -1910,7 +1910,7 @@ impl CoreWebView2ClientCertificate {
             .from_abi::<::windows::Security::Cryptography::Certificates::Certificate>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Subject(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -1923,7 +1923,7 @@ impl CoreWebView2ClientCertificate {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Issuer(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -1936,7 +1936,7 @@ impl CoreWebView2ClientCertificate {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ValidFrom(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1948,7 +1948,7 @@ impl CoreWebView2ClientCertificate {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ValidTo(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1960,7 +1960,7 @@ impl CoreWebView2ClientCertificate {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DerEncodedSerialNumber(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -1973,7 +1973,7 @@ impl CoreWebView2ClientCertificate {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DisplayName(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -1986,7 +1986,7 @@ impl CoreWebView2ClientCertificate {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PemEncodedIssuerCertificateChain(
         &self,
     ) -> ::windows::core::Result<
@@ -2004,7 +2004,7 @@ impl CoreWebView2ClientCertificate {
             )
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Kind(&self) -> ::windows::core::Result<CoreWebView2ClientCertificateKind> {
         let this = self;
         unsafe {
@@ -2016,7 +2016,7 @@ impl CoreWebView2ClientCertificate {
             .from_abi::<CoreWebView2ClientCertificateKind>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ToPemEncoding(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -2113,7 +2113,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2ClientCertificate {}
 unsafe impl ::core::marker::Sync for CoreWebView2ClientCertificate {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2ClientCertificateKind(pub i32);
@@ -2152,11 +2152,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2ClientCertificateKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2ClientCertificateRequestedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2ClientCertificateRequestedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Host(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -2169,7 +2169,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Port(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2181,7 +2181,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsProxy(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -2193,7 +2193,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AllowedCertificateAuthorities(
         &self,
     ) -> ::windows::core::Result<
@@ -2211,7 +2211,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
             )
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn MutuallyTrustedCertificates(
         &self,
     ) -> ::windows::core::Result<
@@ -2229,7 +2229,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SelectedCertificate(&self) -> ::windows::core::Result<CoreWebView2ClientCertificate> {
         let this = self;
         unsafe {
@@ -2241,7 +2241,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
             .from_abi::<CoreWebView2ClientCertificate>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetSelectedCertificate<
         'a,
         Param0: ::windows::core::IntoParam<'a, CoreWebView2ClientCertificate>,
@@ -2258,7 +2258,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Cancel(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -2270,7 +2270,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetCancel(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2281,7 +2281,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -2293,7 +2293,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2304,7 +2304,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
@@ -2426,11 +2426,11 @@ pub struct CoreWebView2ClientCertificate_Manual_Vtbl {
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2CompositionController(::windows::core::IUnknown);
 impl CoreWebView2CompositionController {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RootVisualTarget(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -2442,7 +2442,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetRootVisualTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -2459,7 +2459,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CursorChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -2484,7 +2484,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveCursorChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2501,7 +2501,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SendMouseInput<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -2524,7 +2524,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SendPointerInput<'a, Param1: ::windows::core::IntoParam<'a, CoreWebView2PointerInfo>>(
         &self,
         eventkind: CoreWebView2PointerEventKind,
@@ -2540,7 +2540,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Cursor(&self) -> ::windows::core::Result<::windows::UI::Core::CoreCursor> {
         let this = self;
         unsafe {
@@ -2552,7 +2552,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<::windows::UI::Core::CoreCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
@@ -2564,7 +2564,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
@@ -2575,7 +2575,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
@@ -2587,7 +2587,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetBounds<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         value: Param0,
@@ -2601,7 +2601,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ZoomFactor(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
@@ -2613,7 +2613,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetZoomFactor(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
@@ -2624,7 +2624,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ParentWindow(&self) -> ::windows::core::Result<CoreWebView2ControllerWindowReference> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
@@ -2636,7 +2636,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<CoreWebView2ControllerWindowReference>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetParentWindow<
         'a,
         Param0: ::windows::core::IntoParam<'a, CoreWebView2ControllerWindowReference>,
@@ -2653,7 +2653,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CoreWebView2(&self) -> ::windows::core::Result<CoreWebView2> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
@@ -2665,7 +2665,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<CoreWebView2>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ZoomFactorChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -2690,7 +2690,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveZoomFactorChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2707,7 +2707,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn MoveFocusRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -2732,7 +2732,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveMoveFocusRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2749,7 +2749,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GotFocus<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -2774,7 +2774,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2791,7 +2791,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn LostFocus<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -2816,7 +2816,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2833,7 +2833,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AcceleratorKeyPressed<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -2858,7 +2858,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveAcceleratorKeyPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2875,7 +2875,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetBoundsAndZoomFactor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -2894,7 +2894,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn MoveFocus(&self, reason: CoreWebView2MoveFocusReason) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
@@ -2905,7 +2905,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NotifyParentWindowPositionChanged(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
@@ -2915,14 +2915,14 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DefaultBackgroundColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller2>(self)?;
         unsafe {
@@ -2934,7 +2934,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetDefaultBackgroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>,
@@ -2951,7 +2951,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -2963,7 +2963,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -2974,7 +2974,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ShouldDetectMonitorScaleChanges(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -2986,7 +2986,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetShouldDetectMonitorScaleChanges(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -2997,7 +2997,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn BoundsMode(&self) -> ::windows::core::Result<CoreWebView2BoundsMode> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -3009,7 +3009,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<CoreWebView2BoundsMode>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetBoundsMode(&self, value: CoreWebView2BoundsMode) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -3020,7 +3020,7 @@ impl CoreWebView2CompositionController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RasterizationScaleChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3045,7 +3045,7 @@ impl CoreWebView2CompositionController {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveRasterizationScaleChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3170,11 +3170,11 @@ impl<'a> ::windows::core::IntoParam<'a, CoreWebView2Controller>
 }
 unsafe impl ::core::marker::Send for CoreWebView2CompositionController {}
 unsafe impl ::core::marker::Sync for CoreWebView2CompositionController {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2ContentLoadingEventArgs(::windows::core::IUnknown);
 impl CoreWebView2ContentLoadingEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsErrorPage(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -3186,7 +3186,7 @@ impl CoreWebView2ContentLoadingEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NavigationId(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
@@ -3282,11 +3282,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2ContentLoadingEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2ContentLoadingEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2Controller(::windows::core::IUnknown);
 impl CoreWebView2Controller {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -3298,7 +3298,7 @@ impl CoreWebView2Controller {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3309,7 +3309,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -3321,7 +3321,7 @@ impl CoreWebView2Controller {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetBounds<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         value: Param0,
@@ -3335,7 +3335,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ZoomFactor(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3347,7 +3347,7 @@ impl CoreWebView2Controller {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetZoomFactor(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3358,7 +3358,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ParentWindow(&self) -> ::windows::core::Result<CoreWebView2ControllerWindowReference> {
         let this = self;
         unsafe {
@@ -3370,7 +3370,7 @@ impl CoreWebView2Controller {
             .from_abi::<CoreWebView2ControllerWindowReference>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetParentWindow<
         'a,
         Param0: ::windows::core::IntoParam<'a, CoreWebView2ControllerWindowReference>,
@@ -3387,7 +3387,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CoreWebView2(&self) -> ::windows::core::Result<CoreWebView2> {
         let this = self;
         unsafe {
@@ -3399,7 +3399,7 @@ impl CoreWebView2Controller {
             .from_abi::<CoreWebView2>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ZoomFactorChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3424,7 +3424,7 @@ impl CoreWebView2Controller {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveZoomFactorChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3441,7 +3441,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn MoveFocusRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3466,7 +3466,7 @@ impl CoreWebView2Controller {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveMoveFocusRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3483,7 +3483,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GotFocus<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3508,7 +3508,7 @@ impl CoreWebView2Controller {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3525,7 +3525,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn LostFocus<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3550,7 +3550,7 @@ impl CoreWebView2Controller {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3567,7 +3567,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AcceleratorKeyPressed<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3592,7 +3592,7 @@ impl CoreWebView2Controller {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveAcceleratorKeyPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3609,7 +3609,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetBoundsAndZoomFactor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -3628,7 +3628,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn MoveFocus(&self, reason: CoreWebView2MoveFocusReason) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3639,7 +3639,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NotifyParentWindowPositionChanged(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3649,14 +3649,14 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DefaultBackgroundColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller2>(self)?;
         unsafe {
@@ -3668,7 +3668,7 @@ impl CoreWebView2Controller {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetDefaultBackgroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>,
@@ -3685,7 +3685,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -3697,7 +3697,7 @@ impl CoreWebView2Controller {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -3708,7 +3708,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ShouldDetectMonitorScaleChanges(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -3720,7 +3720,7 @@ impl CoreWebView2Controller {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetShouldDetectMonitorScaleChanges(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -3731,7 +3731,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn BoundsMode(&self) -> ::windows::core::Result<CoreWebView2BoundsMode> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -3743,7 +3743,7 @@ impl CoreWebView2Controller {
             .from_abi::<CoreWebView2BoundsMode>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetBoundsMode(&self, value: CoreWebView2BoundsMode) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
@@ -3754,7 +3754,7 @@ impl CoreWebView2Controller {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RasterizationScaleChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3779,7 +3779,7 @@ impl CoreWebView2Controller {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveRasterizationScaleChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3873,11 +3873,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2Controller {}
 unsafe impl ::core::marker::Sync for CoreWebView2Controller {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2ControllerWindowReference(::windows::core::IUnknown);
 impl CoreWebView2ControllerWindowReference {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn WindowHandle(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
@@ -3889,7 +3889,7 @@ impl CoreWebView2ControllerWindowReference {
             .from_abi::<u64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CoreWindow(&self) -> ::windows::core::Result<::windows::UI::Core::CoreWindow> {
         let this = self;
         unsafe {
@@ -3901,7 +3901,7 @@ impl CoreWebView2ControllerWindowReference {
             .from_abi::<::windows::UI::Core::CoreWindow>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CreateFromWindowHandle(
         windowhandle: u64,
     ) -> ::windows::core::Result<CoreWebView2ControllerWindowReference> {
@@ -3915,7 +3915,7 @@ impl CoreWebView2ControllerWindowReference {
             .from_abi::<CoreWebView2ControllerWindowReference>(result__)
         })
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CreateFromCoreWindow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Core::CoreWindow>,
@@ -4033,11 +4033,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2ControllerWindowReference {}
 unsafe impl ::core::marker::Sync for CoreWebView2ControllerWindowReference {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2Cookie(::windows::core::IUnknown);
 impl CoreWebView2Cookie {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -4050,7 +4050,7 @@ impl CoreWebView2Cookie {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Value(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -4063,7 +4063,7 @@ impl CoreWebView2Cookie {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetValue<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -4077,7 +4077,7 @@ impl CoreWebView2Cookie {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Domain(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -4090,7 +4090,7 @@ impl CoreWebView2Cookie {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Path(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -4103,7 +4103,7 @@ impl CoreWebView2Cookie {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Expires(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -4115,7 +4115,7 @@ impl CoreWebView2Cookie {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetExpires(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4126,7 +4126,7 @@ impl CoreWebView2Cookie {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsHttpOnly(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -4138,7 +4138,7 @@ impl CoreWebView2Cookie {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsHttpOnly(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4149,7 +4149,7 @@ impl CoreWebView2Cookie {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SameSite(&self) -> ::windows::core::Result<CoreWebView2CookieSameSiteKind> {
         let this = self;
         unsafe {
@@ -4161,7 +4161,7 @@ impl CoreWebView2Cookie {
             .from_abi::<CoreWebView2CookieSameSiteKind>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetSameSite(
         &self,
         value: CoreWebView2CookieSameSiteKind,
@@ -4175,7 +4175,7 @@ impl CoreWebView2Cookie {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsSecure(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -4187,7 +4187,7 @@ impl CoreWebView2Cookie {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsSecure(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4198,7 +4198,7 @@ impl CoreWebView2Cookie {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsSession(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -4283,11 +4283,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a C
 }
 unsafe impl ::core::marker::Send for CoreWebView2Cookie {}
 unsafe impl ::core::marker::Sync for CoreWebView2Cookie {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2CookieManager(::windows::core::IUnknown);
 impl CoreWebView2CookieManager {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CreateCookie<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -4315,7 +4315,7 @@ impl CoreWebView2CookieManager {
             .from_abi::<CoreWebView2Cookie>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CopyCookie<'a, Param0: ::windows::core::IntoParam<'a, CoreWebView2Cookie>>(
         &self,
         cookieparam: Param0,
@@ -4331,7 +4331,7 @@ impl CoreWebView2CookieManager {
             .from_abi::<CoreWebView2Cookie>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AddOrUpdateCookie<'a, Param0: ::windows::core::IntoParam<'a, CoreWebView2Cookie>>(
         &self,
         cookie: Param0,
@@ -4345,7 +4345,7 @@ impl CoreWebView2CookieManager {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DeleteCookie<'a, Param0: ::windows::core::IntoParam<'a, CoreWebView2Cookie>>(
         &self,
         cookie: Param0,
@@ -4359,7 +4359,7 @@ impl CoreWebView2CookieManager {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DeleteCookies<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -4379,7 +4379,7 @@ impl CoreWebView2CookieManager {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DeleteCookiesWithDomainAndPath<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -4402,7 +4402,7 @@ impl CoreWebView2CookieManager {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DeleteAllCookies(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4494,7 +4494,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2CookieManager {}
 unsafe impl ::core::marker::Sync for CoreWebView2CookieManager {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2CookieSameSiteKind(pub i32);
@@ -4533,11 +4533,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2CookieSameSiteKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2DOMContentLoadedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2DOMContentLoadedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NavigationId(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
@@ -4637,11 +4637,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2DOMContentLoadedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2DOMContentLoadedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2DevToolsProtocolEventReceivedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2DevToolsProtocolEventReceivedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ParameterObjectAsJson(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -4747,11 +4747,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2DevToolsProtocolEventReceivedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2DevToolsProtocolEventReceivedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2DevToolsProtocolEventReceiver(::windows::core::IUnknown);
 impl CoreWebView2DevToolsProtocolEventReceiver {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DevToolsProtocolEventReceived<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -4776,7 +4776,7 @@ impl CoreWebView2DevToolsProtocolEventReceiver {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveDevToolsProtocolEventReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4886,7 +4886,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2DevToolsProtocolEventReceiver {}
 unsafe impl ::core::marker::Sync for CoreWebView2DevToolsProtocolEventReceiver {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2DownloadInterruptReason(pub i32);
@@ -4952,11 +4952,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2DownloadInterruptReason
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2DownloadOperation(::windows::core::IUnknown);
 impl CoreWebView2DownloadOperation {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -4969,7 +4969,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ContentDisposition(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -4982,7 +4982,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn MimeType(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -4995,7 +4995,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn TotalBytesToReceive(&self) -> ::windows::core::Result<i64> {
         let this = self;
         unsafe {
@@ -5007,7 +5007,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn BytesReceived(&self) -> ::windows::core::Result<i64> {
         let this = self;
         unsafe {
@@ -5019,7 +5019,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn EstimatedEndTime(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -5032,7 +5032,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ResultFilePath(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -5045,7 +5045,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn State(&self) -> ::windows::core::Result<CoreWebView2DownloadState> {
         let this = self;
         unsafe {
@@ -5057,7 +5057,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<CoreWebView2DownloadState>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn InterruptReason(&self) -> ::windows::core::Result<CoreWebView2DownloadInterruptReason> {
         let this = self;
         unsafe {
@@ -5069,7 +5069,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<CoreWebView2DownloadInterruptReason>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CanResume(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5081,7 +5081,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn BytesReceivedChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -5106,7 +5106,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveBytesReceivedChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -5123,7 +5123,7 @@ impl CoreWebView2DownloadOperation {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn EstimatedEndTimeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -5148,7 +5148,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveEstimatedEndTimeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -5165,7 +5165,7 @@ impl CoreWebView2DownloadOperation {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn StateChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -5190,7 +5190,7 @@ impl CoreWebView2DownloadOperation {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveStateChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -5207,7 +5207,7 @@ impl CoreWebView2DownloadOperation {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Cancel(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5215,14 +5215,14 @@ impl CoreWebView2DownloadOperation {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Pause(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Pause)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Resume(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5314,11 +5314,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2DownloadOperation {}
 unsafe impl ::core::marker::Sync for CoreWebView2DownloadOperation {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2DownloadStartingEventArgs(::windows::core::IUnknown);
 impl CoreWebView2DownloadStartingEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DownloadOperation(&self) -> ::windows::core::Result<CoreWebView2DownloadOperation> {
         let this = self;
         unsafe {
@@ -5330,7 +5330,7 @@ impl CoreWebView2DownloadStartingEventArgs {
             .from_abi::<CoreWebView2DownloadOperation>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Cancel(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5342,7 +5342,7 @@ impl CoreWebView2DownloadStartingEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetCancel(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5353,7 +5353,7 @@ impl CoreWebView2DownloadStartingEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ResultFilePath(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -5366,7 +5366,7 @@ impl CoreWebView2DownloadStartingEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetResultFilePath<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -5383,7 +5383,7 @@ impl CoreWebView2DownloadStartingEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5395,7 +5395,7 @@ impl CoreWebView2DownloadStartingEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5406,7 +5406,7 @@ impl CoreWebView2DownloadStartingEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
@@ -5506,7 +5506,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2DownloadStartingEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2DownloadStartingEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2DownloadState(pub i32);
@@ -5545,11 +5545,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2DownloadState {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2Environment(::windows::core::IUnknown);
 impl CoreWebView2Environment {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn BrowserVersionString(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -5562,7 +5562,7 @@ impl CoreWebView2Environment {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NewBrowserVersionAvailable<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -5587,7 +5587,7 @@ impl CoreWebView2Environment {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveNewBrowserVersionAvailable<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -5604,7 +5604,7 @@ impl CoreWebView2Environment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CreateCoreWebView2ControllerAsync<
         'a,
         Param0: ::windows::core::IntoParam<'a, CoreWebView2ControllerWindowReference>,
@@ -5624,7 +5624,7 @@ impl CoreWebView2Environment {
             .from_abi::<::windows::Foundation::IAsyncOperation<CoreWebView2Controller>>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CreateWebResourceResponse<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -5651,7 +5651,7 @@ impl CoreWebView2Environment {
             .from_abi::<CoreWebView2WebResourceResponse>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CreateWebResourceRequest<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -5679,7 +5679,7 @@ impl CoreWebView2Environment {
             .from_abi::<CoreWebView2WebResourceRequest>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CreateCoreWebView2CompositionControllerAsync<
         'a,
         Param0: ::windows::core::IntoParam<'a, CoreWebView2ControllerWindowReference>,
@@ -5702,7 +5702,7 @@ impl CoreWebView2Environment {
             )
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CreateCoreWebView2PointerInfo(
         &self,
     ) -> ::windows::core::Result<CoreWebView2PointerInfo> {
@@ -5716,7 +5716,7 @@ impl CoreWebView2Environment {
             .from_abi::<CoreWebView2PointerInfo>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn BrowserProcessExited<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -5741,7 +5741,7 @@ impl CoreWebView2Environment {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveBrowserProcessExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -5758,7 +5758,7 @@ impl CoreWebView2Environment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CreatePrintSettings(&self) -> ::windows::core::Result<CoreWebView2PrintSettings> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Environment6>(self)?;
         unsafe {
@@ -5770,7 +5770,7 @@ impl CoreWebView2Environment {
             .from_abi::<CoreWebView2PrintSettings>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CreateAsync(
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncOperation<CoreWebView2Environment>>
     {
@@ -5783,7 +5783,7 @@ impl CoreWebView2Environment {
             .from_abi::<::windows::Foundation::IAsyncOperation<CoreWebView2Environment>>(result__)
         })
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CreateWithOptionsAsync<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -5807,7 +5807,7 @@ impl CoreWebView2Environment {
             .from_abi::<::windows::Foundation::IAsyncOperation<CoreWebView2Environment>>(result__)
         })
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetAvailableBrowserVersionString() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::ICoreWebView2EnvironmentStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
@@ -5819,7 +5819,7 @@ impl CoreWebView2Environment {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetAvailableBrowserVersionString2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -5837,7 +5837,7 @@ impl CoreWebView2Environment {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn CompareBrowserVersionString<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -5948,12 +5948,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2Environment {}
 unsafe impl ::core::marker::Sync for CoreWebView2Environment {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2EnvironmentOptions(::windows::core::IUnknown);
 impl CoreWebView2EnvironmentOptions {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -5967,7 +5967,7 @@ impl CoreWebView2EnvironmentOptions {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AdditionalBrowserArguments(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -5980,7 +5980,7 @@ impl CoreWebView2EnvironmentOptions {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetAdditionalBrowserArguments<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -5997,7 +5997,7 @@ impl CoreWebView2EnvironmentOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -6010,7 +6010,7 @@ impl CoreWebView2EnvironmentOptions {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -6024,7 +6024,7 @@ impl CoreWebView2EnvironmentOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn TargetCompatibleBrowserVersion(
         &self,
     ) -> ::windows::core::Result<::windows::core::HSTRING> {
@@ -6039,7 +6039,7 @@ impl CoreWebView2EnvironmentOptions {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetTargetCompatibleBrowserVersion<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -6056,7 +6056,7 @@ impl CoreWebView2EnvironmentOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AllowSingleSignOnUsingOSPrimaryAccount(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -6068,7 +6068,7 @@ impl CoreWebView2EnvironmentOptions {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetAllowSingleSignOnUsingOSPrimaryAccount(
         &self,
         value: bool,
@@ -6166,11 +6166,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2EnvironmentOptions {}
 unsafe impl ::core::marker::Sync for CoreWebView2EnvironmentOptions {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2Frame(::windows::core::IUnknown);
 impl CoreWebView2Frame {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -6183,7 +6183,7 @@ impl CoreWebView2Frame {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NameChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -6208,7 +6208,7 @@ impl CoreWebView2Frame {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveNameChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6225,7 +6225,7 @@ impl CoreWebView2Frame {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Destroyed<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -6250,7 +6250,7 @@ impl CoreWebView2Frame {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveDestroyed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6267,7 +6267,7 @@ impl CoreWebView2Frame {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveHostObjectFromScript<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -6284,7 +6284,7 @@ impl CoreWebView2Frame {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsDestroyed(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -6371,11 +6371,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a C
 }
 unsafe impl ::core::marker::Send for CoreWebView2Frame {}
 unsafe impl ::core::marker::Sync for CoreWebView2Frame {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2FrameCreatedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2FrameCreatedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Frame(&self) -> ::windows::core::Result<CoreWebView2Frame> {
         let this = self;
         unsafe {
@@ -6471,11 +6471,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2FrameCreatedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2FrameCreatedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2FrameInfo(::windows::core::IUnknown);
 impl CoreWebView2FrameInfo {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -6488,7 +6488,7 @@ impl CoreWebView2FrameInfo {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Source(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -6578,7 +6578,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2FrameInfo {}
 unsafe impl ::core::marker::Sync for CoreWebView2FrameInfo {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2HostResourceAccessKind(pub i32);
@@ -6617,11 +6617,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2HostResourceAccessKind 
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2HttpHeadersCollectionIterator(::windows::core::IUnknown);
 impl CoreWebView2HttpHeadersCollectionIterator {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Current(
         &self,
     ) -> ::windows::core::Result<
@@ -6650,7 +6650,7 @@ impl CoreWebView2HttpHeadersCollectionIterator {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn HasCurrent(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IIterator<
@@ -6669,7 +6669,7 @@ impl CoreWebView2HttpHeadersCollectionIterator {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn MoveNext(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IIterator<
@@ -6688,7 +6688,7 @@ impl CoreWebView2HttpHeadersCollectionIterator {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetMany(
         &self,
         items: &mut [::core::option::Option<
@@ -6897,11 +6897,11 @@ impl<'a>
 }
 unsafe impl ::core::marker::Send for CoreWebView2HttpHeadersCollectionIterator {}
 unsafe impl ::core::marker::Sync for CoreWebView2HttpHeadersCollectionIterator {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2HttpRequestHeaders(::windows::core::IUnknown);
 impl CoreWebView2HttpRequestHeaders {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetHeader<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -6918,7 +6918,7 @@ impl CoreWebView2HttpRequestHeaders {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetHeaders<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -6934,7 +6934,7 @@ impl CoreWebView2HttpRequestHeaders {
             .from_abi::<CoreWebView2HttpHeadersCollectionIterator>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Contains<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -6950,7 +6950,7 @@ impl CoreWebView2HttpRequestHeaders {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetHeader<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -6970,7 +6970,7 @@ impl CoreWebView2HttpRequestHeaders {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RemoveHeader<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -6984,7 +6984,7 @@ impl CoreWebView2HttpRequestHeaders {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<
@@ -7206,11 +7206,11 @@ impl<'a>
 }
 unsafe impl ::core::marker::Send for CoreWebView2HttpRequestHeaders {}
 unsafe impl ::core::marker::Sync for CoreWebView2HttpRequestHeaders {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2HttpResponseHeaders(::windows::core::IUnknown);
 impl CoreWebView2HttpResponseHeaders {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AppendHeader<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -7230,7 +7230,7 @@ impl CoreWebView2HttpResponseHeaders {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Contains<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -7246,7 +7246,7 @@ impl CoreWebView2HttpResponseHeaders {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetHeader<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -7263,7 +7263,7 @@ impl CoreWebView2HttpResponseHeaders {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetHeaders<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -7279,7 +7279,7 @@ impl CoreWebView2HttpResponseHeaders {
             .from_abi::<CoreWebView2HttpHeadersCollectionIterator>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<
@@ -7501,7 +7501,7 @@ impl<'a>
 }
 unsafe impl ::core::marker::Send for CoreWebView2HttpResponseHeaders {}
 unsafe impl ::core::marker::Sync for CoreWebView2HttpResponseHeaders {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2KeyEventKind(pub i32);
@@ -7541,7 +7541,7 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2KeyEventKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2MouseEventKind(pub i32);
@@ -7593,7 +7593,7 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2MouseEventKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2MouseEventVirtualKeys(pub u32);
@@ -7665,7 +7665,7 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2MouseEventVirtualKeys {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2MoveFocusReason(pub i32);
@@ -7704,11 +7704,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2MoveFocusReason {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2MoveFocusRequestedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2MoveFocusRequestedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Reason(&self) -> ::windows::core::Result<CoreWebView2MoveFocusReason> {
         let this = self;
         unsafe {
@@ -7720,7 +7720,7 @@ impl CoreWebView2MoveFocusRequestedEventArgs {
             .from_abi::<CoreWebView2MoveFocusReason>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -7732,7 +7732,7 @@ impl CoreWebView2MoveFocusRequestedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7832,11 +7832,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2MoveFocusRequestedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2MoveFocusRequestedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2NavigationCompletedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2NavigationCompletedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsSuccess(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -7848,7 +7848,7 @@ impl CoreWebView2NavigationCompletedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn WebErrorStatus(&self) -> ::windows::core::Result<CoreWebView2WebErrorStatus> {
         let this = self;
         unsafe {
@@ -7860,7 +7860,7 @@ impl CoreWebView2NavigationCompletedEventArgs {
             .from_abi::<CoreWebView2WebErrorStatus>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NavigationId(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
@@ -7963,11 +7963,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2NavigationCompletedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2NavigationCompletedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2NavigationStartingEventArgs(::windows::core::IUnknown);
 impl CoreWebView2NavigationStartingEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -7980,7 +7980,7 @@ impl CoreWebView2NavigationStartingEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsUserInitiated(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -7992,7 +7992,7 @@ impl CoreWebView2NavigationStartingEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsRedirected(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -8004,7 +8004,7 @@ impl CoreWebView2NavigationStartingEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn RequestHeaders(&self) -> ::windows::core::Result<CoreWebView2HttpRequestHeaders> {
         let this = self;
         unsafe {
@@ -8016,7 +8016,7 @@ impl CoreWebView2NavigationStartingEventArgs {
             .from_abi::<CoreWebView2HttpRequestHeaders>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Cancel(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -8028,7 +8028,7 @@ impl CoreWebView2NavigationStartingEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetCancel(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -8039,7 +8039,7 @@ impl CoreWebView2NavigationStartingEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NavigationId(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
@@ -8140,11 +8140,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2NavigationStartingEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2NavigationStartingEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2NewWindowRequestedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2NewWindowRequestedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -8157,7 +8157,7 @@ impl CoreWebView2NewWindowRequestedEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn NewWindow(&self) -> ::windows::core::Result<CoreWebView2> {
         let this = self;
         unsafe {
@@ -8169,7 +8169,7 @@ impl CoreWebView2NewWindowRequestedEventArgs {
             .from_abi::<CoreWebView2>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetNewWindow<'a, Param0: ::windows::core::IntoParam<'a, CoreWebView2>>(
         &self,
         value: Param0,
@@ -8183,7 +8183,7 @@ impl CoreWebView2NewWindowRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -8195,7 +8195,7 @@ impl CoreWebView2NewWindowRequestedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -8206,7 +8206,7 @@ impl CoreWebView2NewWindowRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsUserInitiated(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -8218,7 +8218,7 @@ impl CoreWebView2NewWindowRequestedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn WindowFeatures(&self) -> ::windows::core::Result<CoreWebView2WindowFeatures> {
         let this = self;
         unsafe {
@@ -8230,7 +8230,7 @@ impl CoreWebView2NewWindowRequestedEventArgs {
             .from_abi::<CoreWebView2WindowFeatures>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
@@ -8242,7 +8242,7 @@ impl CoreWebView2NewWindowRequestedEventArgs {
             .from_abi::<::windows::Foundation::Deferral>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this =
             &::windows::core::Interface::cast::<ICoreWebView2NewWindowRequestedEventArgs2>(self)?;
@@ -8345,7 +8345,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2NewWindowRequestedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2NewWindowRequestedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2PermissionKind(pub i32);
@@ -8388,11 +8388,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2PermissionKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2PermissionRequestedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2PermissionRequestedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -8405,7 +8405,7 @@ impl CoreWebView2PermissionRequestedEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PermissionKind(&self) -> ::windows::core::Result<CoreWebView2PermissionKind> {
         let this = self;
         unsafe {
@@ -8417,7 +8417,7 @@ impl CoreWebView2PermissionRequestedEventArgs {
             .from_abi::<CoreWebView2PermissionKind>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsUserInitiated(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -8429,7 +8429,7 @@ impl CoreWebView2PermissionRequestedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn State(&self) -> ::windows::core::Result<CoreWebView2PermissionState> {
         let this = self;
         unsafe {
@@ -8441,7 +8441,7 @@ impl CoreWebView2PermissionRequestedEventArgs {
             .from_abi::<CoreWebView2PermissionState>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetState(&self, value: CoreWebView2PermissionState) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -8452,7 +8452,7 @@ impl CoreWebView2PermissionRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
@@ -8555,7 +8555,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2PermissionRequestedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2PermissionRequestedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2PermissionState(pub i32);
@@ -8595,7 +8595,7 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2PermissionState {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 pub struct CoreWebView2PhysicalKeyStatus {
     pub RepeatCount: u32,
     pub ScanCode: u32,
@@ -8651,7 +8651,7 @@ impl ::core::default::Default for CoreWebView2PhysicalKeyStatus {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2PointerEventKind(pub i32);
@@ -8693,11 +8693,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2PointerEventKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2PointerInfo(::windows::core::IUnknown);
 impl CoreWebView2PointerInfo {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PointerKind(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -8709,7 +8709,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPointerKind(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -8720,7 +8720,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PointerId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -8732,7 +8732,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPointerId(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -8743,7 +8743,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn FrameId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -8755,7 +8755,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetFrameId(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -8766,7 +8766,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PointerFlags(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -8778,7 +8778,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPointerFlags(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -8789,7 +8789,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PointerDeviceRect(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -8801,7 +8801,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPointerDeviceRect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -8818,7 +8818,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DisplayRect(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -8830,7 +8830,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetDisplayRect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -8847,7 +8847,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PixelLocation(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -8859,7 +8859,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPixelLocation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -8876,7 +8876,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn HimetricLocation(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -8888,7 +8888,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetHimetricLocation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -8905,7 +8905,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PixelLocationRaw(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -8917,7 +8917,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPixelLocationRaw<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -8934,7 +8934,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn HimetricLocationRaw(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -8946,7 +8946,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetHimetricLocationRaw<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -8963,7 +8963,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Time(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -8975,7 +8975,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetTime(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -8986,7 +8986,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn HistoryCount(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -8998,7 +8998,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetHistoryCount(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9009,7 +9009,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn InputData(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -9021,7 +9021,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetInputData(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9032,7 +9032,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn KeyStates(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -9044,7 +9044,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetKeyStates(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9055,7 +9055,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PerformanceCount(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
@@ -9067,7 +9067,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPerformanceCount(&self, value: u64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9078,7 +9078,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ButtonChangeKind(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -9090,7 +9090,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetButtonChangeKind(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9101,7 +9101,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PenFlags(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -9113,7 +9113,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPenFlags(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9124,7 +9124,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PenMask(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -9136,7 +9136,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPenMask(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9147,7 +9147,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PenPressure(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -9159,7 +9159,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPenPressure(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9170,7 +9170,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PenRotation(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -9182,7 +9182,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPenRotation(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9193,7 +9193,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PenTiltX(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -9205,7 +9205,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPenTiltX(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9216,7 +9216,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PenTiltY(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -9228,7 +9228,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPenTiltY(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9239,7 +9239,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn TouchFlags(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -9251,7 +9251,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetTouchFlags(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9262,7 +9262,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn TouchMask(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -9274,7 +9274,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetTouchMask(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9285,7 +9285,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn TouchContact(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -9297,7 +9297,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetTouchContact<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -9314,7 +9314,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn TouchContactRaw(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -9326,7 +9326,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetTouchContactRaw<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -9343,7 +9343,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn TouchOrientation(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -9355,7 +9355,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetTouchOrientation(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9366,7 +9366,7 @@ impl CoreWebView2PointerInfo {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn TouchPressure(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -9378,7 +9378,7 @@ impl CoreWebView2PointerInfo {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetTouchPressure(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9467,7 +9467,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2PointerInfo {}
 unsafe impl ::core::marker::Sync for CoreWebView2PointerInfo {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2PrintOrientation(pub i32);
@@ -9505,11 +9505,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2PrintOrientation {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2PrintSettings(::windows::core::IUnknown);
 impl CoreWebView2PrintSettings {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Orientation(&self) -> ::windows::core::Result<CoreWebView2PrintOrientation> {
         let this = self;
         unsafe {
@@ -9521,7 +9521,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<CoreWebView2PrintOrientation>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetOrientation(
         &self,
         value: CoreWebView2PrintOrientation,
@@ -9535,7 +9535,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ScaleFactor(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -9547,7 +9547,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetScaleFactor(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9558,7 +9558,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PageWidth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -9570,7 +9570,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPageWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9581,7 +9581,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn PageHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -9593,7 +9593,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetPageHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9604,7 +9604,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn MarginTop(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -9616,7 +9616,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetMarginTop(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9627,7 +9627,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn MarginBottom(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -9639,7 +9639,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetMarginBottom(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9650,7 +9650,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn MarginLeft(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -9662,7 +9662,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetMarginLeft(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9673,7 +9673,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn MarginRight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -9685,7 +9685,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetMarginRight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9696,7 +9696,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ShouldPrintBackgrounds(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -9708,7 +9708,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetShouldPrintBackgrounds(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9719,7 +9719,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ShouldPrintSelectionOnly(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -9731,7 +9731,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetShouldPrintSelectionOnly(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9742,7 +9742,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ShouldPrintHeaderAndFooter(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -9754,7 +9754,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetShouldPrintHeaderAndFooter(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -9765,7 +9765,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn HeaderTitle(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -9778,7 +9778,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetHeaderTitle<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -9792,7 +9792,7 @@ impl CoreWebView2PrintSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn FooterUri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -9805,7 +9805,7 @@ impl CoreWebView2PrintSettings {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetFooterUri<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -9901,11 +9901,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2PrintSettings {}
 unsafe impl ::core::marker::Sync for CoreWebView2PrintSettings {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2ProcessFailedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2ProcessFailedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ProcessFailedKind(&self) -> ::windows::core::Result<CoreWebView2ProcessFailedKind> {
         let this = self;
         unsafe {
@@ -9917,7 +9917,7 @@ impl CoreWebView2ProcessFailedEventArgs {
             .from_abi::<CoreWebView2ProcessFailedKind>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Reason(&self) -> ::windows::core::Result<CoreWebView2ProcessFailedReason> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2ProcessFailedEventArgs2>(self)?;
         unsafe {
@@ -9929,7 +9929,7 @@ impl CoreWebView2ProcessFailedEventArgs {
             .from_abi::<CoreWebView2ProcessFailedReason>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ExitCode(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2ProcessFailedEventArgs2>(self)?;
         unsafe {
@@ -9941,7 +9941,7 @@ impl CoreWebView2ProcessFailedEventArgs {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ProcessDescription(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2ProcessFailedEventArgs2>(self)?;
         unsafe {
@@ -9954,7 +9954,7 @@ impl CoreWebView2ProcessFailedEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn FrameInfosForFailedProcess(
         &self,
     ) -> ::windows::core::Result<
@@ -10056,7 +10056,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2ProcessFailedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2ProcessFailedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2ProcessFailedKind(pub i32);
@@ -10102,7 +10102,7 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2ProcessFailedKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2ProcessFailedReason(pub i32);
@@ -10144,7 +10144,7 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2ProcessFailedReason {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2ScriptDialogKind(pub i32);
@@ -10184,11 +10184,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2ScriptDialogKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2ScriptDialogOpeningEventArgs(::windows::core::IUnknown);
 impl CoreWebView2ScriptDialogOpeningEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -10201,7 +10201,7 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Kind(&self) -> ::windows::core::Result<CoreWebView2ScriptDialogKind> {
         let this = self;
         unsafe {
@@ -10213,7 +10213,7 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
             .from_abi::<CoreWebView2ScriptDialogKind>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Message(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -10226,7 +10226,7 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DefaultText(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -10239,7 +10239,7 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ResultText(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -10252,7 +10252,7 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetResultText<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -10266,7 +10266,7 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Accept(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10274,7 +10274,7 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
@@ -10377,11 +10377,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2ScriptDialogOpeningEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2ScriptDialogOpeningEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2Settings(::windows::core::IUnknown);
 impl CoreWebView2Settings {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsScriptEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -10393,7 +10393,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsScriptEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10404,7 +10404,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsWebMessageEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -10416,7 +10416,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsWebMessageEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10427,7 +10427,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AreDefaultScriptDialogsEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -10439,7 +10439,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetAreDefaultScriptDialogsEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10450,7 +10450,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsStatusBarEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -10462,7 +10462,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsStatusBarEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10473,7 +10473,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AreDevToolsEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -10485,7 +10485,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetAreDevToolsEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10496,7 +10496,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AreDefaultContextMenusEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -10508,7 +10508,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetAreDefaultContextMenusEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10519,7 +10519,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AreHostObjectsAllowed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -10531,7 +10531,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetAreHostObjectsAllowed(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10542,7 +10542,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsZoomControlEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -10554,7 +10554,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsZoomControlEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10565,7 +10565,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsBuiltInErrorPageEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -10577,7 +10577,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsBuiltInErrorPageEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10588,7 +10588,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn UserAgent(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings2>(self)?;
         unsafe {
@@ -10601,7 +10601,7 @@ impl CoreWebView2Settings {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetUserAgent<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -10615,7 +10615,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn AreBrowserAcceleratorKeysEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings3>(self)?;
         unsafe {
@@ -10627,7 +10627,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetAreBrowserAcceleratorKeysEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings3>(self)?;
         unsafe {
@@ -10638,7 +10638,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsPasswordAutosaveEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings4>(self)?;
         unsafe {
@@ -10650,7 +10650,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsPasswordAutosaveEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings4>(self)?;
         unsafe {
@@ -10661,7 +10661,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsGeneralAutofillEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings4>(self)?;
         unsafe {
@@ -10673,7 +10673,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsGeneralAutofillEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings4>(self)?;
         unsafe {
@@ -10684,7 +10684,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsPinchZoomEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings5>(self)?;
         unsafe {
@@ -10696,7 +10696,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsPinchZoomEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings5>(self)?;
         unsafe {
@@ -10707,7 +10707,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsSwipeNavigationEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings6>(self)?;
         unsafe {
@@ -10719,7 +10719,7 @@ impl CoreWebView2Settings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetIsSwipeNavigationEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings6>(self)?;
         unsafe {
@@ -10730,7 +10730,7 @@ impl CoreWebView2Settings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn HostObjectDispatchAdapter(
         &self,
     ) -> ::windows::core::Result<ICoreWebView2DispatchAdapter> {
@@ -10744,7 +10744,7 @@ impl CoreWebView2Settings {
             .from_abi::<ICoreWebView2DispatchAdapter>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetHostObjectDispatchAdapter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ICoreWebView2DispatchAdapter>,
@@ -10838,11 +10838,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2Settings {}
 unsafe impl ::core::marker::Sync for CoreWebView2Settings {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2SourceChangedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2SourceChangedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsNewDocument(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -10938,7 +10938,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2SourceChangedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2SourceChangedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2WebErrorStatus(pub i32);
@@ -10991,11 +10991,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2WebErrorStatus {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2WebMessageReceivedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2WebMessageReceivedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Source(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -11008,7 +11008,7 @@ impl CoreWebView2WebMessageReceivedEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn WebMessageAsJson(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -11021,7 +11021,7 @@ impl CoreWebView2WebMessageReceivedEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn TryGetWebMessageAsString(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -11123,7 +11123,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2WebMessageReceivedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2WebMessageReceivedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2WebResourceContext(pub i32);
@@ -11176,11 +11176,11 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2WebResourceContext {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2WebResourceRequest(::windows::core::IUnknown);
 impl CoreWebView2WebResourceRequest {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -11193,7 +11193,7 @@ impl CoreWebView2WebResourceRequest {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetUri<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -11207,7 +11207,7 @@ impl CoreWebView2WebResourceRequest {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Method(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -11220,7 +11220,7 @@ impl CoreWebView2WebResourceRequest {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetMethod<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -11234,7 +11234,7 @@ impl CoreWebView2WebResourceRequest {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Content(
         &self,
     ) -> ::windows::core::Result<::windows::Storage::Streams::IRandomAccessStream> {
@@ -11248,7 +11248,7 @@ impl CoreWebView2WebResourceRequest {
             .from_abi::<::windows::Storage::Streams::IRandomAccessStream>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetContent<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -11265,7 +11265,7 @@ impl CoreWebView2WebResourceRequest {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Headers(&self) -> ::windows::core::Result<CoreWebView2HttpRequestHeaders> {
         let this = self;
         unsafe {
@@ -11361,11 +11361,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2WebResourceRequest {}
 unsafe impl ::core::marker::Sync for CoreWebView2WebResourceRequest {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2WebResourceRequestedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2WebResourceRequestedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Request(&self) -> ::windows::core::Result<CoreWebView2WebResourceRequest> {
         let this = self;
         unsafe {
@@ -11377,7 +11377,7 @@ impl CoreWebView2WebResourceRequestedEventArgs {
             .from_abi::<CoreWebView2WebResourceRequest>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Response(&self) -> ::windows::core::Result<CoreWebView2WebResourceResponse> {
         let this = self;
         unsafe {
@@ -11389,7 +11389,7 @@ impl CoreWebView2WebResourceRequestedEventArgs {
             .from_abi::<CoreWebView2WebResourceResponse>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetResponse<
         'a,
         Param0: ::windows::core::IntoParam<'a, CoreWebView2WebResourceResponse>,
@@ -11406,7 +11406,7 @@ impl CoreWebView2WebResourceRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ResourceContext(&self) -> ::windows::core::Result<CoreWebView2WebResourceContext> {
         let this = self;
         unsafe {
@@ -11418,7 +11418,7 @@ impl CoreWebView2WebResourceRequestedEventArgs {
             .from_abi::<CoreWebView2WebResourceContext>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
@@ -11523,11 +11523,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2WebResourceRequestedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2WebResourceRequestedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2WebResourceResponse(::windows::core::IUnknown);
 impl CoreWebView2WebResourceResponse {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Content(
         &self,
     ) -> ::windows::core::Result<::windows::Storage::Streams::IRandomAccessStream> {
@@ -11541,7 +11541,7 @@ impl CoreWebView2WebResourceResponse {
             .from_abi::<::windows::Storage::Streams::IRandomAccessStream>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetContent<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -11558,7 +11558,7 @@ impl CoreWebView2WebResourceResponse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Headers(&self) -> ::windows::core::Result<CoreWebView2HttpResponseHeaders> {
         let this = self;
         unsafe {
@@ -11570,7 +11570,7 @@ impl CoreWebView2WebResourceResponse {
             .from_abi::<CoreWebView2HttpResponseHeaders>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn StatusCode(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -11582,7 +11582,7 @@ impl CoreWebView2WebResourceResponse {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetStatusCode(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -11593,7 +11593,7 @@ impl CoreWebView2WebResourceResponse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ReasonPhrase(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -11606,7 +11606,7 @@ impl CoreWebView2WebResourceResponse {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn SetReasonPhrase<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -11704,11 +11704,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2WebResourceResponse {}
 unsafe impl ::core::marker::Sync for CoreWebView2WebResourceResponse {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2WebResourceResponseReceivedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2WebResourceResponseReceivedEventArgs {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Request(&self) -> ::windows::core::Result<CoreWebView2WebResourceRequest> {
         let this = self;
         unsafe {
@@ -11720,7 +11720,7 @@ impl CoreWebView2WebResourceResponseReceivedEventArgs {
             .from_abi::<CoreWebView2WebResourceRequest>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Response(&self) -> ::windows::core::Result<CoreWebView2WebResourceResponseView> {
         let this = self;
         unsafe {
@@ -11825,11 +11825,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2WebResourceResponseReceivedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2WebResourceResponseReceivedEventArgs {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2WebResourceResponseView(::windows::core::IUnknown);
 impl CoreWebView2WebResourceResponseView {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Headers(&self) -> ::windows::core::Result<CoreWebView2HttpResponseHeaders> {
         let this = self;
         unsafe {
@@ -11841,7 +11841,7 @@ impl CoreWebView2WebResourceResponseView {
             .from_abi::<CoreWebView2HttpResponseHeaders>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn StatusCode(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -11853,7 +11853,7 @@ impl CoreWebView2WebResourceResponseView {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ReasonPhrase(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -11866,7 +11866,7 @@ impl CoreWebView2WebResourceResponseView {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetContentAsync(
         &self,
     ) -> ::windows::core::Result<
@@ -11968,11 +11968,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for CoreWebView2WebResourceResponseView {}
 unsafe impl ::core::marker::Sync for CoreWebView2WebResourceResponseView {}
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2WindowFeatures(::windows::core::IUnknown);
 impl CoreWebView2WindowFeatures {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn HasPosition(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -11984,7 +11984,7 @@ impl CoreWebView2WindowFeatures {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn HasSize(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -11996,7 +11996,7 @@ impl CoreWebView2WindowFeatures {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Left(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -12008,7 +12008,7 @@ impl CoreWebView2WindowFeatures {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Top(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -12020,7 +12020,7 @@ impl CoreWebView2WindowFeatures {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Height(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -12032,7 +12032,7 @@ impl CoreWebView2WindowFeatures {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Width(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -12044,7 +12044,7 @@ impl CoreWebView2WindowFeatures {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ShouldDisplayMenuBar(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -12056,7 +12056,7 @@ impl CoreWebView2WindowFeatures {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ShouldDisplayStatus(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -12068,7 +12068,7 @@ impl CoreWebView2WindowFeatures {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ShouldDisplayToolbar(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -12080,7 +12080,7 @@ impl CoreWebView2WindowFeatures {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ShouldDisplayScrollBars(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -13107,11 +13107,11 @@ pub struct ICoreWebView2DevToolsProtocolEventReceiver_Vtbl {
     )
         -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'Web_WebView2_Core'*"]
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct ICoreWebView2DispatchAdapter(::windows::core::IUnknown);
 impl ICoreWebView2DispatchAdapter {
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn WrapNamedObject<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -13133,7 +13133,7 @@ impl ICoreWebView2DispatchAdapter {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn WrapObject<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -13155,7 +13155,7 @@ impl ICoreWebView2DispatchAdapter {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn UnwrapObject<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -13174,7 +13174,7 @@ impl ICoreWebView2DispatchAdapter {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'Web_WebView2_Core'*"]
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Clean(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {

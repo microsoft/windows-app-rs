@@ -5,11 +5,11 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
 pub struct ElementCompositionPreview(::windows::core::IUnknown);
 impl ElementCompositionPreview {
-    #[doc = "*Required features: 'UI_Xaml_Hosting', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetElementVisual<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         element: Param0,
@@ -24,7 +24,7 @@ impl ElementCompositionPreview {
             .from_abi::<super::super::Composition::Visual>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetElementChildVisual<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         element: Param0,
@@ -39,7 +39,7 @@ impl ElementCompositionPreview {
             .from_abi::<super::super::Composition::Visual>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn SetElementChildVisual<
         'a,
@@ -58,7 +58,7 @@ impl ElementCompositionPreview {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting', 'UI_Composition', 'UI_Xaml_Controls'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`, `\"UI_Composition\"`, `\"UI_Xaml_Controls\"`*"]
     #[cfg(all(feature = "UI_Composition", feature = "UI_Xaml_Controls"))]
     pub fn GetScrollViewerManipulationPropertySet<
         'a,
@@ -76,7 +76,7 @@ impl ElementCompositionPreview {
             .from_abi::<super::super::Composition::CompositionPropertySet>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn SetImplicitShowAnimation<
         'a,
@@ -95,7 +95,7 @@ impl ElementCompositionPreview {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn SetImplicitHideAnimation<
         'a,
@@ -114,7 +114,7 @@ impl ElementCompositionPreview {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub fn SetIsTranslationEnabled<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         element: Param0,
         value: bool,
@@ -128,7 +128,7 @@ impl ElementCompositionPreview {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetPointerPositionPropertySet<
         'a,
@@ -241,11 +241,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for ElementCompositionPreview {}
 unsafe impl ::core::marker::Sync for ElementCompositionPreview {}
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
 pub struct IDesktopWindowXamlSourceNative(::windows::core::IUnknown);
 impl IDesktopWindowXamlSourceNative {
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn AttachToWindow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::HWND>,
@@ -259,7 +259,7 @@ impl IDesktopWindowXamlSourceNative {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn WindowHandle(
         &self,
         hwnd: *mut ::windows::Win32::Foundation::HWND,
@@ -270,7 +270,7 @@ impl IDesktopWindowXamlSourceNative {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn PreTranslateMessage(
         &self,
         message: *const ::windows::Win32::UI::WindowsAndMessaging::MSG,
@@ -437,11 +437,11 @@ pub struct IElementCompositionPreviewStatics_Vtbl {
     #[cfg(not(feature = "UI_Composition"))]
     GetPointerPositionPropertySet: usize,
 }
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
 pub struct IFindReferenceTargetsCallback(::windows::core::IUnknown);
 impl IFindReferenceTargetsCallback {
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn FoundTrackerTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, IReferenceTrackerTarget>,
@@ -512,25 +512,25 @@ pub struct IFindReferenceTargetsCallback_Vtbl {
         target: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
 pub struct IReferenceTracker(::windows::core::IUnknown);
 impl IReferenceTracker {
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ConnectFromTrackerSource(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).ConnectFromTrackerSource)(
             ::core::mem::transmute_copy(self),
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn DisconnectFromTrackerSource(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).DisconnectFromTrackerSource)(
             ::core::mem::transmute_copy(self),
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn FindTrackerTargets<
         'a,
         Param0: ::windows::core::IntoParam<'a, IFindReferenceTargetsCallback>,
@@ -544,7 +544,7 @@ impl IReferenceTracker {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn GetReferenceTrackerManager(
         &self,
     ) -> ::windows::core::Result<IReferenceTrackerManager> {
@@ -555,21 +555,21 @@ impl IReferenceTracker {
         )
         .from_abi::<IReferenceTrackerManager>(result__)
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn AddRefFromTrackerSource(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).AddRefFromTrackerSource)(
             ::core::mem::transmute_copy(self),
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ReleaseFromTrackerSource(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).ReleaseFromTrackerSource)(
             ::core::mem::transmute_copy(self),
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn PegFromTrackerSource(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).PegFromTrackerSource)(
             ::core::mem::transmute_copy(self),
@@ -641,7 +641,7 @@ pub struct IReferenceTracker_Vtbl {
     pub PegFromTrackerSource:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
 pub struct IReferenceTrackerExtension(::windows::core::IUnknown);
 impl IReferenceTrackerExtension {}
@@ -695,11 +695,11 @@ unsafe impl ::windows::core::Interface for IReferenceTrackerExtension {
 pub struct IReferenceTrackerExtension_Vtbl {
     pub base: ::windows::core::IUnknownVtbl,
 }
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
 pub struct IReferenceTrackerHost(::windows::core::IUnknown);
 impl IReferenceTrackerHost {
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn DisconnectUnusedReferenceSources(
         &self,
         options: __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001,
@@ -710,21 +710,21 @@ impl IReferenceTrackerHost {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ReleaseDisconnectedReferenceSources(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).ReleaseDisconnectedReferenceSources)(
             ::core::mem::transmute_copy(self),
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn NotifyEndOfReferenceTrackingOnThread(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).NotifyEndOfReferenceTrackingOnThread)(
             ::core::mem::transmute_copy(self),
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn GetTrackerTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -740,7 +740,7 @@ impl IReferenceTrackerHost {
         )
         .from_abi::<IReferenceTrackerTarget>(result__)
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn AddMemoryPressure(&self, bytesallocated: u64) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).AddMemoryPressure)(
             ::core::mem::transmute_copy(self),
@@ -748,7 +748,7 @@ impl IReferenceTrackerHost {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn RemoveMemoryPressure(&self, bytesallocated: u64) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).RemoveMemoryPressure)(
             ::core::mem::transmute_copy(self),
@@ -827,18 +827,18 @@ pub struct IReferenceTrackerHost_Vtbl {
         bytesallocated: u64,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
 pub struct IReferenceTrackerManager(::windows::core::IUnknown);
 impl IReferenceTrackerManager {
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ReferenceTrackingStarted(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).ReferenceTrackingStarted)(
             ::core::mem::transmute_copy(self),
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn FindTrackerTargetsCompleted(
         &self,
         findfailed: u8,
@@ -849,14 +849,14 @@ impl IReferenceTrackerManager {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ReferenceTrackingCompleted(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).ReferenceTrackingCompleted)(
             ::core::mem::transmute_copy(self),
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn SetReferenceTrackerHost<
         'a,
         Param0: ::windows::core::IntoParam<'a, IReferenceTrackerHost>,
@@ -933,29 +933,29 @@ pub struct IReferenceTrackerManager_Vtbl {
         value: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
 pub struct IReferenceTrackerTarget(::windows::core::IUnknown);
 impl IReferenceTrackerTarget {
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn AddRefFromReferenceTracker(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .AddRefFromReferenceTracker)(
             ::core::mem::transmute_copy(self)
         ))
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ReleaseFromReferenceTracker(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .ReleaseFromReferenceTracker)(
             ::core::mem::transmute_copy(self)
         ))
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn Peg(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).Peg)(::core::mem::transmute_copy(self)).ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn Unpeg(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).Unpeg)(::core::mem::transmute_copy(self)).ok()
     }
@@ -1015,11 +1015,11 @@ pub struct IReferenceTrackerTarget_Vtbl {
     pub Unpeg:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
 pub struct ITrackerOwner(::windows::core::IUnknown);
 impl ITrackerOwner {
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn CreateTrackerHandle(
         &self,
         returnvalue: *mut *mut TrackerHandle__,
@@ -1030,7 +1030,7 @@ impl ITrackerOwner {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn DeleteTrackerHandle(
         &self,
         handle: *mut TrackerHandle__,
@@ -1041,7 +1041,7 @@ impl ITrackerOwner {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn SetTrackerValue<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -1057,7 +1057,7 @@ impl ITrackerOwner {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn TryGetSafeTrackerValue(
         &self,
         handle: *mut TrackerHandle__,
@@ -1136,7 +1136,7 @@ pub struct ITrackerOwner_Vtbl {
     ) -> u8,
 }
 #[repr(C)]
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 pub struct TrackerHandle__ {
     pub unused: i32,
 }
@@ -1173,15 +1173,15 @@ impl ::core::default::Default for TrackerHandle__ {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001(pub i32);
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 pub const XAML_REFERENCETRACKER_DISCONNECT_DEFAULT:
     __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001 =
     __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001(0i32);
-#[doc = "*Required features: 'UI_Xaml_Hosting'*"]
+#[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 pub const XAML_REFERENCETRACKER_DISCONNECT_SUSPEND:
     __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001 =
     __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001(1i32);

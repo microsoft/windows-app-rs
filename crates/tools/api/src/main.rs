@@ -1,6 +1,7 @@
 use quote::*;
 use rayon::prelude::*;
 use std::{collections::HashSet, fs::OpenOptions, io::prelude::*};
+use windows_metadata::Type;
 
 fn main() {
     let start = std::time::Instant::now();
@@ -16,7 +17,7 @@ fn main() {
     let root = reader.types.get_namespace("Microsoft").unwrap();
 
     let mut trees = Vec::new();
-    collect_subtrees(&output_path, root.namespace, root, &mut trees);
+    collect_subtrees(&output_path, root, &mut trees);
 
     trees
         .par_iter()
@@ -66,12 +67,14 @@ default-target = "x86_64-pc-windows-msvc"
 targets = []
 
 [dependencies.windows]
-version = "0.33.0"
+version = "0.34.0"
 features = [
     "alloc",
     "Foundation_Collections",
     "Win32_Foundation",
-    "Win32_Storage_Packaging_Appx"
+    "Win32_Storage_Packaging_Appx",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_Graphics_Gdi",
 ]
 
 [features]
@@ -94,44 +97,54 @@ fn write_features(file: &mut std::fs::File, root: &'static str, tree: &windows_m
 
 fn write_feature(file: &mut std::fs::File, root: &'static str, tree: &windows_metadata::TypeTree) {
     let reader = windows_metadata::TypeReader::get();
-    let feature = tree.namespace[root.len() + 1..].replace('.', "_");
-
-    let features = tree
+    let dependencies = tree
         .types
         .keys()
-        .flat_map(|t| {
-            reader
-                .get_type((tree.namespace, *t))
-                .unwrap()
-                .cfg()
-                .features(tree.namespace)
+        .filter_map(|t| {
+            let def = reader.get_type((tree.namespace, *t)).unwrap();
+            match def {
+                Type::TypeDef(def) => Some(
+                    def.methods()
+                        .flat_map(|m| m.cfg().features("Microsoft"))
+                        .collect(),
+                ),
+                Type::MethodDef(def) => Some(def.cfg().features("Microsoft")),
+                _ => None,
+            }
         })
+        .flatten()
         .collect::<HashSet<&str>>();
 
-    file.write_all(format!("{} = [", feature).as_bytes())
-        .unwrap();
+    let feature = tree.namespace[root.len() + 1..].replace('.', "_");
+    file.write_all(format!("{feature} = [").as_bytes()).unwrap();
+
+    let mut sub_features = Vec::<String>::new();
 
     if let Some(pos) = feature.rfind('_') {
         let dependency = &feature[..pos];
-        file.write_all(format!("\"{}\"", dependency).as_bytes())
-            .unwrap();
+        sub_features.push(dependency.to_string());
     }
 
-    features
+    dependencies
         .iter()
         .filter(|f| f.starts_with("Windows."))
         .map(|f| f[8..].replace('.', "_"))
-        .for_each(|f| {
-            file.write_all(format!(", \"windows/{}\"", f).as_bytes())
-                .unwrap()
-        });
+        .for_each(|f| sub_features.push(format!("windows/{}", f)));
 
+    file.write_all(
+        sub_features
+            .iter()
+            .map(|f| format!("\"{f}\""))
+            .collect::<Vec<_>>()
+            .join(",")
+            .as_bytes(),
+    )
+    .unwrap();
     file.write_all("]\n".as_bytes()).unwrap();
 }
 
 fn collect_subtrees<'a>(
     output: &std::path::Path,
-    root: &'static str,
     tree: &'a windows_metadata::TypeTree,
     trees: &mut Vec<&'a windows_metadata::TypeTree>,
 ) {
@@ -139,7 +152,7 @@ fn collect_subtrees<'a>(
 
     tree.namespaces
         .values()
-        .for_each(|tree| collect_subtrees(output, root, tree, trees));
+        .for_each(|tree| collect_subtrees(output, tree, trees));
 
     let mut path = std::path::PathBuf::from(output);
     path.push(tree.namespace.replace('.', "/"));

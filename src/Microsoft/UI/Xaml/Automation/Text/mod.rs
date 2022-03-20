@@ -5,7 +5,7 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Xaml_Automation_Text'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TextPatternRangeEndpoint(pub i32);
@@ -43,7 +43,7 @@ unsafe impl ::windows::core::RuntimeType for TextPatternRangeEndpoint {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation_Text'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TextUnit(pub i32);

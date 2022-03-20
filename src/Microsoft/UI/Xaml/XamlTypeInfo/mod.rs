@@ -33,14 +33,14 @@ pub struct IXamlControlsXamlMetaDataProviderStatics_Vtbl {
     pub Initialize:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_XamlTypeInfo', 'UI_Xaml_Markup'*"]
+#[doc = "*Required features: `\"UI_Xaml_XamlTypeInfo\"`, `\"UI_Xaml_Markup\"`*"]
 #[cfg(feature = "UI_Xaml_Markup")]
 #[repr(transparent)]
 pub struct XamlControlsXamlMetaDataProvider(::windows::core::IUnknown);
 #[cfg(feature = "UI_Xaml_Markup")]
 impl XamlControlsXamlMetaDataProvider {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -54,14 +54,14 @@ impl XamlControlsXamlMetaDataProvider {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_XamlTypeInfo'*"]
+    #[doc = "*Required features: `\"UI_Xaml_XamlTypeInfo\"`*"]
     pub fn Initialize() -> ::windows::core::Result<()> {
         Self::IXamlControlsXamlMetaDataProviderStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).Initialize)(::core::mem::transmute_copy(this))
                 .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_XamlTypeInfo', 'UI_Xaml_Markup'*"]
+    #[doc = "*Required features: `\"UI_Xaml_XamlTypeInfo\"`, `\"UI_Xaml_Markup\"`*"]
     #[cfg(feature = "UI_Xaml_Markup")]
     pub fn GetXamlType<
         'a,
@@ -81,7 +81,7 @@ impl XamlControlsXamlMetaDataProvider {
             .from_abi::<super::Markup::IXamlType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_XamlTypeInfo', 'UI_Xaml_Markup'*"]
+    #[doc = "*Required features: `\"UI_Xaml_XamlTypeInfo\"`, `\"UI_Xaml_Markup\"`*"]
     #[cfg(feature = "UI_Xaml_Markup")]
     pub fn GetXamlTypeByFullName<
         'a,
@@ -101,7 +101,7 @@ impl XamlControlsXamlMetaDataProvider {
             .from_abi::<super::Markup::IXamlType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_XamlTypeInfo', 'UI_Xaml_Markup'*"]
+    #[doc = "*Required features: `\"UI_Xaml_XamlTypeInfo\"`, `\"UI_Xaml_Markup\"`*"]
     #[cfg(feature = "UI_Xaml_Markup")]
     pub fn GetXmlnsDefinitions(
         &self,

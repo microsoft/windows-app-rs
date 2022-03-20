@@ -5,10 +5,10 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'Windows_ApplicationModel_WindowsAppRuntime'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
 pub struct DeploymentManager {}
 impl DeploymentManager {
-    #[doc = "*Required features: 'Windows_ApplicationModel_WindowsAppRuntime'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
     pub fn GetStatus() -> ::windows::core::Result<DeploymentResult> {
         Self::IDeploymentManagerStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -19,7 +19,7 @@ impl DeploymentManager {
             .from_abi::<DeploymentResult>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_WindowsAppRuntime'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
     pub fn Initialize() -> ::windows::core::Result<DeploymentResult> {
         Self::IDeploymentManagerStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -48,11 +48,11 @@ impl ::windows::core::RuntimeName for DeploymentManager {
     const NAME: &'static str =
         "Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentManager";
 }
-#[doc = "*Required features: 'Windows_ApplicationModel_WindowsAppRuntime'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
 #[repr(transparent)]
 pub struct DeploymentResult(::windows::core::IUnknown);
 impl DeploymentResult {
-    #[doc = "*Required features: 'Windows_ApplicationModel_WindowsAppRuntime'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
     pub fn Status(&self) -> ::windows::core::Result<DeploymentStatus> {
         let this = self;
         unsafe {
@@ -64,7 +64,7 @@ impl DeploymentResult {
             .from_abi::<DeploymentStatus>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_WindowsAppRuntime'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
     pub fn ExtendedError(&self) -> ::windows::core::Result<::windows::core::HRESULT> {
         let this = self;
         unsafe {
@@ -76,7 +76,7 @@ impl DeploymentResult {
             .from_abi::<::windows::core::HRESULT>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_WindowsAppRuntime'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
     pub fn CreateInstance(
         status: DeploymentStatus,
         extendederror: ::windows::core::HRESULT,
@@ -179,7 +179,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DeploymentResult {}
 unsafe impl ::core::marker::Sync for DeploymentResult {}
-#[doc = "*Required features: 'Windows_ApplicationModel_WindowsAppRuntime'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DeploymentStatus(pub i32);

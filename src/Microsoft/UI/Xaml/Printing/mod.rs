@@ -5,12 +5,12 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Xaml_Printing'*"]
+#[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
 #[repr(transparent)]
 pub struct AddPagesEventArgs(::windows::core::IUnknown);
 impl AddPagesEventArgs {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -24,7 +24,7 @@ impl AddPagesEventArgs {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn PrintTaskOptions(
         &self,
     ) -> ::windows::core::Result<::windows::Graphics::Printing::PrintTaskOptions> {
@@ -113,7 +113,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a A
 }
 unsafe impl ::core::marker::Send for AddPagesEventArgs {}
 unsafe impl ::core::marker::Sync for AddPagesEventArgs {}
-#[doc = "*Required features: 'UI_Xaml_Printing'*"]
+#[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
 #[repr(transparent)]
 pub struct AddPagesEventHandler(pub ::windows::core::IUnknown);
 impl AddPagesEventHandler {
@@ -134,7 +134,7 @@ impl AddPagesEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -268,12 +268,12 @@ pub struct AddPagesEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Printing'*"]
+#[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
 #[repr(transparent)]
 pub struct GetPreviewPageEventArgs(::windows::core::IUnknown);
 impl GetPreviewPageEventArgs {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -287,7 +287,7 @@ impl GetPreviewPageEventArgs {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn PageNumber(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -377,7 +377,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for GetPreviewPageEventArgs {}
 unsafe impl ::core::marker::Sync for GetPreviewPageEventArgs {}
-#[doc = "*Required features: 'UI_Xaml_Printing'*"]
+#[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
 #[repr(transparent)]
 pub struct GetPreviewPageEventHandler(pub ::windows::core::IUnknown);
 impl GetPreviewPageEventHandler {
@@ -398,7 +398,7 @@ impl GetPreviewPageEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -685,12 +685,12 @@ pub struct IPrintDocumentStatics_Vtbl {
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Printing'*"]
+#[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
 #[repr(transparent)]
 pub struct PaginateEventArgs(::windows::core::IUnknown);
 impl PaginateEventArgs {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -704,7 +704,7 @@ impl PaginateEventArgs {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn PrintTaskOptions(
         &self,
     ) -> ::windows::core::Result<::windows::Graphics::Printing::PrintTaskOptions> {
@@ -718,7 +718,7 @@ impl PaginateEventArgs {
             .from_abi::<::windows::Graphics::Printing::PrintTaskOptions>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn CurrentPreviewPageNumber(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -805,7 +805,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a P
 }
 unsafe impl ::core::marker::Send for PaginateEventArgs {}
 unsafe impl ::core::marker::Sync for PaginateEventArgs {}
-#[doc = "*Required features: 'UI_Xaml_Printing'*"]
+#[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
 #[repr(transparent)]
 pub struct PaginateEventHandler(pub ::windows::core::IUnknown);
 impl PaginateEventHandler {
@@ -826,7 +826,7 @@ impl PaginateEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -960,7 +960,7 @@ pub struct PaginateEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Printing'*"]
+#[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct PreviewPageCountType(pub i32);
@@ -998,11 +998,11 @@ unsafe impl ::windows::core::RuntimeType for PreviewPageCountType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Printing'*"]
+#[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
 #[repr(transparent)]
 pub struct PrintDocument(::windows::core::IUnknown);
 impl PrintDocument {
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1018,7 +1018,7 @@ impl PrintDocument {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1038,7 +1038,7 @@ impl PrintDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1052,7 +1052,7 @@ impl PrintDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1068,7 +1068,7 @@ impl PrintDocument {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1087,7 +1087,7 @@ impl PrintDocument {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1109,7 +1109,7 @@ impl PrintDocument {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1128,7 +1128,7 @@ impl PrintDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -1140,7 +1140,7 @@ impl PrintDocument {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -1155,7 +1155,7 @@ impl PrintDocument {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn DocumentSource(
         &self,
     ) -> ::windows::core::Result<::windows::Graphics::Printing::IPrintDocumentSource> {
@@ -1169,7 +1169,7 @@ impl PrintDocument {
             .from_abi::<::windows::Graphics::Printing::IPrintDocumentSource>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn Paginate<'a, Param0: ::windows::core::IntoParam<'a, PaginateEventHandler>>(
         &self,
         handler: Param0,
@@ -1185,7 +1185,7 @@ impl PrintDocument {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn RemovePaginate<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1202,7 +1202,7 @@ impl PrintDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn GetPreviewPage<
         'a,
         Param0: ::windows::core::IntoParam<'a, GetPreviewPageEventHandler>,
@@ -1221,7 +1221,7 @@ impl PrintDocument {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn RemoveGetPreviewPage<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1238,7 +1238,7 @@ impl PrintDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn AddPages<'a, Param0: ::windows::core::IntoParam<'a, AddPagesEventHandler>>(
         &self,
         handler: Param0,
@@ -1254,7 +1254,7 @@ impl PrintDocument {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn RemoveAddPages<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1271,7 +1271,7 @@ impl PrintDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn AddPage<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
         pagevisual: Param0,
@@ -1285,7 +1285,7 @@ impl PrintDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn AddPagesComplete(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1295,7 +1295,7 @@ impl PrintDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn SetPreviewPageCount(
         &self,
         count: i32,
@@ -1311,7 +1311,7 @@ impl PrintDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn SetPreviewPage<'a, Param1: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
         pagenumber: i32,
@@ -1327,7 +1327,7 @@ impl PrintDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn InvalidatePreview(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1337,7 +1337,7 @@ impl PrintDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn new() -> ::windows::core::Result<PrintDocument> {
         Self::IPrintDocumentFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1350,7 +1350,7 @@ impl PrintDocument {
             .from_abi::<PrintDocument>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<PrintDocument> {
@@ -1366,7 +1366,7 @@ impl PrintDocument {
             .from_abi::<PrintDocument>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Printing'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn DocumentSourceProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPrintDocumentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();

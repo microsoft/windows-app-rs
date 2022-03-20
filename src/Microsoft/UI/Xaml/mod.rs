@@ -35,11 +35,11 @@ pub mod Resources;
 pub mod Shapes;
 #[cfg(feature = "UI_Xaml_XamlTypeInfo")]
 pub mod XamlTypeInfo;
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct AdaptiveTrigger(::windows::core::IUnknown);
 impl AdaptiveTrigger {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinWindowWidth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -51,7 +51,7 @@ impl AdaptiveTrigger {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetMinWindowWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -62,7 +62,7 @@ impl AdaptiveTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinWindowHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -74,7 +74,7 @@ impl AdaptiveTrigger {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetMinWindowHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -85,7 +85,7 @@ impl AdaptiveTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<AdaptiveTrigger> {
         Self::IAdaptiveTriggerFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -98,7 +98,7 @@ impl AdaptiveTrigger {
             .from_abi::<AdaptiveTrigger>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<AdaptiveTrigger> {
@@ -114,7 +114,7 @@ impl AdaptiveTrigger {
             .from_abi::<AdaptiveTrigger>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinWindowWidthProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IAdaptiveTriggerStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -125,7 +125,7 @@ impl AdaptiveTrigger {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinWindowHeightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IAdaptiveTriggerStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -136,7 +136,7 @@ impl AdaptiveTrigger {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -152,7 +152,7 @@ impl AdaptiveTrigger {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -172,7 +172,7 @@ impl AdaptiveTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -186,7 +186,7 @@ impl AdaptiveTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -202,7 +202,7 @@ impl AdaptiveTrigger {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -218,7 +218,7 @@ impl AdaptiveTrigger {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -240,7 +240,7 @@ impl AdaptiveTrigger {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -259,7 +259,7 @@ impl AdaptiveTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -271,7 +271,7 @@ impl AdaptiveTrigger {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -284,7 +284,7 @@ impl AdaptiveTrigger {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetActive(&self, isactive: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IStateTriggerBaseProtected>(self)?;
         unsafe {
@@ -432,11 +432,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &AdaptiveTrigger {
 }
 unsafe impl ::core::marker::Send for AdaptiveTrigger {}
 unsafe impl ::core::marker::Sync for AdaptiveTrigger {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct Application(::windows::core::IUnknown);
 impl Application {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Resources(&self) -> ::windows::core::Result<ResourceDictionary> {
         let this = self;
         unsafe {
@@ -448,7 +448,7 @@ impl Application {
             .from_abi::<ResourceDictionary>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetResources<'a, Param0: ::windows::core::IntoParam<'a, ResourceDictionary>>(
         &self,
         value: Param0,
@@ -462,7 +462,7 @@ impl Application {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DebugSettings(&self) -> ::windows::core::Result<DebugSettings> {
         let this = self;
         unsafe {
@@ -474,7 +474,7 @@ impl Application {
             .from_abi::<DebugSettings>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RequestedTheme(&self) -> ::windows::core::Result<ApplicationTheme> {
         let this = self;
         unsafe {
@@ -486,7 +486,7 @@ impl Application {
             .from_abi::<ApplicationTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRequestedTheme(&self, value: ApplicationTheme) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -497,7 +497,7 @@ impl Application {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualKind(&self) -> ::windows::core::Result<FocusVisualKind> {
         let this = self;
         unsafe {
@@ -509,7 +509,7 @@ impl Application {
             .from_abi::<FocusVisualKind>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetFocusVisualKind(&self, value: FocusVisualKind) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -520,7 +520,7 @@ impl Application {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HighContrastAdjustment(
         &self,
     ) -> ::windows::core::Result<ApplicationHighContrastAdjustment> {
@@ -534,7 +534,7 @@ impl Application {
             .from_abi::<ApplicationHighContrastAdjustment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHighContrastAdjustment(
         &self,
         value: ApplicationHighContrastAdjustment,
@@ -548,7 +548,7 @@ impl Application {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnhandledException<
         'a,
         Param0: ::windows::core::IntoParam<'a, UnhandledExceptionEventHandler>,
@@ -567,7 +567,7 @@ impl Application {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveUnhandledException<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -584,14 +584,14 @@ impl Application {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Exit(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Exit)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<Application> {
         Self::IApplicationFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -604,7 +604,7 @@ impl Application {
             .from_abi::<Application>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<Application> {
@@ -620,7 +620,7 @@ impl Application {
             .from_abi::<Application>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Current() -> ::windows::core::Result<Application> {
         Self::IApplicationStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -631,7 +631,7 @@ impl Application {
             .from_abi::<Application>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Start<'a, Param0: ::windows::core::IntoParam<'a, ApplicationInitializationCallback>>(
         callback: Param0,
     ) -> ::windows::core::Result<()> {
@@ -643,7 +643,7 @@ impl Application {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn LoadComponent<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -661,7 +661,7 @@ impl Application {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn LoadComponentWithResourceLocation<
         'a,
@@ -773,7 +773,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a A
 }
 unsafe impl ::core::marker::Send for Application {}
 unsafe impl ::core::marker::Sync for Application {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ApplicationHighContrastAdjustment(pub u32);
@@ -839,7 +839,7 @@ unsafe impl ::windows::core::RuntimeType for ApplicationHighContrastAdjustment {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct ApplicationInitializationCallback(pub ::windows::core::IUnknown);
 impl ApplicationInitializationCallback {
@@ -859,7 +859,7 @@ impl ApplicationInitializationCallback {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ApplicationInitializationCallbackParams>,
@@ -987,7 +987,7 @@ pub struct ApplicationInitializationCallback_Vtbl {
         p: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct ApplicationInitializationCallbackParams(::windows::core::IUnknown);
 impl ApplicationInitializationCallbackParams {}
@@ -1078,7 +1078,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for ApplicationInitializationCallbackParams {}
 unsafe impl ::core::marker::Sync for ApplicationInitializationCallbackParams {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ApplicationRequiresPointerMode(pub i32);
@@ -1116,7 +1116,7 @@ unsafe impl ::windows::core::RuntimeType for ApplicationRequiresPointerMode {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ApplicationTheme(pub i32);
@@ -1151,7 +1151,7 @@ unsafe impl ::windows::core::RuntimeType for ApplicationTheme {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AutomationTextAttributesEnum(pub i32);
@@ -1227,11 +1227,11 @@ unsafe impl ::windows::core::RuntimeType for AutomationTextAttributesEnum {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct BindingFailedEventArgs(::windows::core::IUnknown);
 impl BindingFailedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Message(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -1323,7 +1323,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for BindingFailedEventArgs {}
 unsafe impl ::core::marker::Sync for BindingFailedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct BindingFailedEventHandler(pub ::windows::core::IUnknown);
 impl BindingFailedEventHandler {
@@ -1344,7 +1344,7 @@ impl BindingFailedEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -1478,12 +1478,12 @@ pub struct BindingFailedEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct BringIntoViewOptions(::windows::core::IUnknown);
 impl BringIntoViewOptions {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -1497,7 +1497,7 @@ impl BringIntoViewOptions {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AnimationDesired(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -1509,7 +1509,7 @@ impl BringIntoViewOptions {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAnimationDesired(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1520,7 +1520,7 @@ impl BringIntoViewOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TargetRect(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::Foundation::Rect>>
@@ -1535,7 +1535,7 @@ impl BringIntoViewOptions {
             .from_abi::<::windows::Foundation::IReference<::windows::Foundation::Rect>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTargetRect<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1555,7 +1555,7 @@ impl BringIntoViewOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HorizontalAlignmentRatio(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1567,7 +1567,7 @@ impl BringIntoViewOptions {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHorizontalAlignmentRatio(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1578,7 +1578,7 @@ impl BringIntoViewOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn VerticalAlignmentRatio(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1590,7 +1590,7 @@ impl BringIntoViewOptions {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetVerticalAlignmentRatio(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1601,7 +1601,7 @@ impl BringIntoViewOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1613,7 +1613,7 @@ impl BringIntoViewOptions {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1624,7 +1624,7 @@ impl BringIntoViewOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn VerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1636,7 +1636,7 @@ impl BringIntoViewOptions {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1726,11 +1726,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for BringIntoViewOptions {}
 unsafe impl ::core::marker::Sync for BringIntoViewOptions {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct BringIntoViewRequestedEventArgs(::windows::core::IUnknown);
 impl BringIntoViewRequestedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TargetElement(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
@@ -1742,7 +1742,7 @@ impl BringIntoViewRequestedEventArgs {
             .from_abi::<UIElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTargetElement<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         value: Param0,
@@ -1756,7 +1756,7 @@ impl BringIntoViewRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AnimationDesired(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -1768,7 +1768,7 @@ impl BringIntoViewRequestedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAnimationDesired(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1779,7 +1779,7 @@ impl BringIntoViewRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TargetRect(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -1791,7 +1791,7 @@ impl BringIntoViewRequestedEventArgs {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTargetRect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -1808,7 +1808,7 @@ impl BringIntoViewRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HorizontalAlignmentRatio(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1820,7 +1820,7 @@ impl BringIntoViewRequestedEventArgs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn VerticalAlignmentRatio(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1832,7 +1832,7 @@ impl BringIntoViewRequestedEventArgs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1844,7 +1844,7 @@ impl BringIntoViewRequestedEventArgs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1855,7 +1855,7 @@ impl BringIntoViewRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn VerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1867,7 +1867,7 @@ impl BringIntoViewRequestedEventArgs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1878,7 +1878,7 @@ impl BringIntoViewRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -1890,7 +1890,7 @@ impl BringIntoViewRequestedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1901,7 +1901,7 @@ impl BringIntoViewRequestedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
@@ -2017,11 +2017,11 @@ impl<'a> ::windows::core::IntoParam<'a, RoutedEventArgs> for &BringIntoViewReque
 }
 unsafe impl ::core::marker::Send for BringIntoViewRequestedEventArgs {}
 unsafe impl ::core::marker::Sync for BringIntoViewRequestedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct BrushTransition(::windows::core::IUnknown);
 impl BrushTransition {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Duration(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
@@ -2033,7 +2033,7 @@ impl BrushTransition {
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetDuration<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::TimeSpan>,
@@ -2050,7 +2050,7 @@ impl BrushTransition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<BrushTransition> {
         Self::IBrushTransitionFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2063,7 +2063,7 @@ impl BrushTransition {
             .from_abi::<BrushTransition>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<BrushTransition> {
@@ -2165,11 +2165,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a B
 }
 unsafe impl ::core::marker::Send for BrushTransition {}
 unsafe impl ::core::marker::Sync for BrushTransition {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct ColorPaletteResources(::windows::core::IUnknown);
 impl ColorPaletteResources {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AltHigh(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2183,7 +2183,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAltHigh<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2200,7 +2200,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AltLow(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2214,7 +2214,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAltLow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2231,7 +2231,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AltMedium(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2245,7 +2245,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAltMedium<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2262,7 +2262,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AltMediumHigh(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2276,7 +2276,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAltMediumHigh<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2293,7 +2293,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AltMediumLow(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2307,7 +2307,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAltMediumLow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2324,7 +2324,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BaseHigh(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2338,7 +2338,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetBaseHigh<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2355,7 +2355,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BaseLow(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2369,7 +2369,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetBaseLow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2386,7 +2386,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BaseMedium(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2400,7 +2400,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetBaseMedium<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2417,7 +2417,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BaseMediumHigh(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2431,7 +2431,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetBaseMediumHigh<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2448,7 +2448,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BaseMediumLow(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2462,7 +2462,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetBaseMediumLow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2479,7 +2479,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeAltLow(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2493,7 +2493,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeAltLow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2510,7 +2510,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeBlackHigh(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2524,7 +2524,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeBlackHigh<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2541,7 +2541,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeBlackLow(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2555,7 +2555,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeBlackLow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2572,7 +2572,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeBlackMediumLow(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2586,7 +2586,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeBlackMediumLow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2603,7 +2603,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeBlackMedium(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2617,7 +2617,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeBlackMedium<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2634,7 +2634,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeDisabledHigh(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2648,7 +2648,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeDisabledHigh<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2665,7 +2665,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeDisabledLow(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2679,7 +2679,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeDisabledLow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2696,7 +2696,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeHigh(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2710,7 +2710,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeHigh<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2727,7 +2727,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeLow(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2741,7 +2741,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeLow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2758,7 +2758,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeMedium(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2772,7 +2772,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeMedium<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2789,7 +2789,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeMediumLow(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2803,7 +2803,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeMediumLow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2820,7 +2820,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeWhite(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2834,7 +2834,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeWhite<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2851,7 +2851,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ChromeGray(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2865,7 +2865,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetChromeGray<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2882,7 +2882,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ListLow(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2896,7 +2896,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetListLow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2913,7 +2913,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ListMedium(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2927,7 +2927,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetListMedium<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2944,7 +2944,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ErrorText(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2958,7 +2958,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetErrorText<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -2975,7 +2975,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Accent(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -2989,7 +2989,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAccent<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -3006,7 +3006,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<ColorPaletteResources> {
         Self::IColorPaletteResourcesFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3019,7 +3019,7 @@ impl ColorPaletteResources {
             .from_abi::<ColorPaletteResources>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<ColorPaletteResources> {
@@ -3035,7 +3035,7 @@ impl ColorPaletteResources {
             .from_abi::<ColorPaletteResources>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -3051,7 +3051,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -3071,7 +3071,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -3085,7 +3085,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -3101,7 +3101,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -3117,7 +3117,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -3139,7 +3139,7 @@ impl ColorPaletteResources {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -3158,7 +3158,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -3170,7 +3170,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -3183,7 +3183,7 @@ impl ColorPaletteResources {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<
@@ -3216,7 +3216,7 @@ impl ColorPaletteResources {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Lookup<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         key: Param0,
@@ -3237,7 +3237,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IMap<
@@ -3254,7 +3254,7 @@ impl ColorPaletteResources {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HasKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         key: Param0,
@@ -3275,7 +3275,7 @@ impl ColorPaletteResources {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<
@@ -3302,7 +3302,7 @@ impl ColorPaletteResources {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Insert<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -3329,7 +3329,7 @@ impl ColorPaletteResources {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Remove<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         key: Param0,
@@ -3348,7 +3348,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IMap<
@@ -3360,7 +3360,7 @@ impl ColorPaletteResources {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Source(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = &::windows::core::Interface::cast::<IResourceDictionary>(self)?;
         unsafe {
@@ -3372,7 +3372,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetSource<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Uri>>(
         &self,
         value: Param0,
@@ -3386,7 +3386,7 @@ impl ColorPaletteResources {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MergedDictionaries(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<ResourceDictionary>>
@@ -3401,7 +3401,7 @@ impl ColorPaletteResources {
             .from_abi::<::windows::Foundation::Collections::IVector<ResourceDictionary>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ThemeDictionaries(
         &self,
     ) -> ::windows::core::Result<
@@ -3732,7 +3732,7 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &ColorPaletteResou
 unsafe impl ::core::marker::Send for ColorPaletteResources {}
 unsafe impl ::core::marker::Sync for ColorPaletteResources {}
 #[repr(C)]
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 pub struct CornerRadius {
     pub TopLeft: f64,
     pub TopRight: f64,
@@ -3784,11 +3784,11 @@ impl ::core::default::Default for CornerRadius {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct CornerRadiusHelper(::windows::core::IUnknown);
 impl CornerRadiusHelper {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromRadii(
         topleft: f64,
         topright: f64,
@@ -3808,7 +3808,7 @@ impl CornerRadiusHelper {
             .from_abi::<CornerRadius>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromUniformRadius(uniformradius: f64) -> ::windows::core::Result<CornerRadius> {
         Self::ICornerRadiusHelperStatics(|this| unsafe {
             let mut result__: CornerRadius = ::core::mem::zeroed();
@@ -3908,7 +3908,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a C
 }
 unsafe impl ::core::marker::Send for CornerRadiusHelper {}
 unsafe impl ::core::marker::Sync for CornerRadiusHelper {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct CreateDefaultValueCallback(pub ::windows::core::IUnknown);
 impl CreateDefaultValueCallback {
@@ -3926,7 +3926,7 @@ impl CreateDefaultValueCallback {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -4051,11 +4051,11 @@ pub struct CreateDefaultValueCallback_Vtbl {
         result__: *mut *mut ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DataContextChangedEventArgs(::windows::core::IUnknown);
 impl DataContextChangedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn NewValue(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -4067,7 +4067,7 @@ impl DataContextChangedEventArgs {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -4079,7 +4079,7 @@ impl DataContextChangedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4174,11 +4174,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for DataContextChangedEventArgs {}
 unsafe impl ::core::marker::Sync for DataContextChangedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DataTemplate(::windows::core::IUnknown);
 impl DataTemplate {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn LoadContent(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
@@ -4190,7 +4190,7 @@ impl DataTemplate {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<DataTemplate> {
         Self::IDataTemplateFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4203,7 +4203,7 @@ impl DataTemplate {
             .from_abi::<DataTemplate>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<DataTemplate> {
@@ -4219,7 +4219,7 @@ impl DataTemplate {
             .from_abi::<DataTemplate>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ExtensionInstanceProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IDataTemplateStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4230,7 +4230,7 @@ impl DataTemplate {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetExtensionInstance<'a, Param0: ::windows::core::IntoParam<'a, FrameworkElement>>(
         element: Param0,
     ) -> ::windows::core::Result<IDataTemplateExtension> {
@@ -4244,7 +4244,7 @@ impl DataTemplate {
             .from_abi::<IDataTemplateExtension>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetExtensionInstance<
         'a,
         Param0: ::windows::core::IntoParam<'a, FrameworkElement>,
@@ -4262,7 +4262,7 @@ impl DataTemplate {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -4278,7 +4278,7 @@ impl DataTemplate {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -4298,7 +4298,7 @@ impl DataTemplate {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -4312,7 +4312,7 @@ impl DataTemplate {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -4328,7 +4328,7 @@ impl DataTemplate {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -4344,7 +4344,7 @@ impl DataTemplate {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -4366,7 +4366,7 @@ impl DataTemplate {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -4385,7 +4385,7 @@ impl DataTemplate {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -4397,7 +4397,7 @@ impl DataTemplate {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -4410,7 +4410,7 @@ impl DataTemplate {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetElement<'a, Param0: ::windows::core::IntoParam<'a, ElementFactoryGetArgs>>(
         &self,
         args: Param0,
@@ -4426,7 +4426,7 @@ impl DataTemplate {
             .from_abi::<UIElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RecycleElement<'a, Param0: ::windows::core::IntoParam<'a, ElementFactoryRecycleArgs>>(
         &self,
         args: Param0,
@@ -4601,11 +4601,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &DataTemplate {
 }
 unsafe impl ::core::marker::Send for DataTemplate {}
 unsafe impl ::core::marker::Sync for DataTemplate {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DataTemplateKey(::windows::core::IUnknown);
 impl DataTemplateKey {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DataType(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -4617,7 +4617,7 @@ impl DataTemplateKey {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetDataType<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -4634,7 +4634,7 @@ impl DataTemplateKey {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<DataTemplateKey> {
         Self::IDataTemplateKeyFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4647,7 +4647,7 @@ impl DataTemplateKey {
             .from_abi::<DataTemplateKey>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<DataTemplateKey> {
@@ -4663,7 +4663,7 @@ impl DataTemplateKey {
             .from_abi::<DataTemplateKey>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateInstanceWithType<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -4682,7 +4682,7 @@ impl DataTemplateKey {
             .from_abi::<DataTemplateKey>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateInstanceWithType_compose<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -4790,11 +4790,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DataTemplateKey {}
 unsafe impl ::core::marker::Sync for DataTemplateKey {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DebugSettings(::windows::core::IUnknown);
 impl DebugSettings {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn EnableFrameRateCounter(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -4806,7 +4806,7 @@ impl DebugSettings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetEnableFrameRateCounter(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4817,7 +4817,7 @@ impl DebugSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsBindingTracingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -4829,7 +4829,7 @@ impl DebugSettings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsBindingTracingEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4840,7 +4840,7 @@ impl DebugSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsTextPerformanceVisualizationEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -4852,7 +4852,7 @@ impl DebugSettings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsTextPerformanceVisualizationEnabled(
         &self,
         value: bool,
@@ -4866,7 +4866,7 @@ impl DebugSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FailFastOnErrors(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -4878,7 +4878,7 @@ impl DebugSettings {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetFailFastOnErrors(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4889,7 +4889,7 @@ impl DebugSettings {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BindingFailed<'a, Param0: ::windows::core::IntoParam<'a, BindingFailedEventHandler>>(
         &self,
         handler: Param0,
@@ -4905,7 +4905,7 @@ impl DebugSettings {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveBindingFailed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4997,11 +4997,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DebugSettings {}
 unsafe impl ::core::marker::Sync for DebugSettings {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DependencyObject(::windows::core::IUnknown);
 impl DependencyObject {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5017,7 +5017,7 @@ impl DependencyObject {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -5037,7 +5037,7 @@ impl DependencyObject {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5051,7 +5051,7 @@ impl DependencyObject {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5067,7 +5067,7 @@ impl DependencyObject {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5083,7 +5083,7 @@ impl DependencyObject {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -5105,7 +5105,7 @@ impl DependencyObject {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -5124,7 +5124,7 @@ impl DependencyObject {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = self;
         unsafe {
@@ -5136,7 +5136,7 @@ impl DependencyObject {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = self;
@@ -5224,11 +5224,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DependencyObject {}
 unsafe impl ::core::marker::Sync for DependencyObject {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DependencyObjectCollection(::windows::core::IUnknown);
 impl DependencyObjectCollection {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5244,7 +5244,7 @@ impl DependencyObjectCollection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -5264,7 +5264,7 @@ impl DependencyObjectCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5278,7 +5278,7 @@ impl DependencyObjectCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5294,7 +5294,7 @@ impl DependencyObjectCollection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5310,7 +5310,7 @@ impl DependencyObjectCollection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -5332,7 +5332,7 @@ impl DependencyObjectCollection {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -5351,7 +5351,7 @@ impl DependencyObjectCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -5363,7 +5363,7 @@ impl DependencyObjectCollection {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -5376,7 +5376,7 @@ impl DependencyObjectCollection {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<DependencyObjectCollection> {
         Self::IDependencyObjectCollectionFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5389,7 +5389,7 @@ impl DependencyObjectCollection {
             .from_abi::<DependencyObjectCollection>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<DependencyObjectCollection> {
@@ -5405,7 +5405,7 @@ impl DependencyObjectCollection {
             .from_abi::<DependencyObjectCollection>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<DependencyObject>>
@@ -5422,7 +5422,7 @@ impl DependencyObjectCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<DependencyObject>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn VectorChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -5444,7 +5444,7 @@ impl DependencyObjectCollection {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveVectorChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -5461,7 +5461,7 @@ impl DependencyObjectCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IVector<DependencyObject>,
@@ -5476,7 +5476,7 @@ impl DependencyObjectCollection {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IVector<DependencyObject>,
@@ -5490,7 +5490,7 @@ impl DependencyObjectCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<DependencyObject>>
@@ -5507,7 +5507,7 @@ impl DependencyObjectCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<DependencyObject>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -5527,7 +5527,7 @@ impl DependencyObjectCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         index: u32,
@@ -5545,7 +5545,7 @@ impl DependencyObjectCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         index: u32,
@@ -5563,7 +5563,7 @@ impl DependencyObjectCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IVector<DependencyObject>,
@@ -5576,7 +5576,7 @@ impl DependencyObjectCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -5592,7 +5592,7 @@ impl DependencyObjectCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IVector<DependencyObject>,
@@ -5604,7 +5604,7 @@ impl DependencyObjectCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IVector<DependencyObject>,
@@ -5613,7 +5613,7 @@ impl DependencyObjectCollection {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -5634,7 +5634,7 @@ impl DependencyObjectCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<DependencyObject>],
@@ -5909,11 +5909,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &DependencyObjectC
 }
 unsafe impl ::core::marker::Send for DependencyObjectCollection {}
 unsafe impl ::core::marker::Sync for DependencyObjectCollection {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DependencyProperty(::windows::core::IUnknown);
 impl DependencyProperty {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetMetadata<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Xaml::Interop::TypeName>,
@@ -5932,7 +5932,7 @@ impl DependencyProperty {
             .from_abi::<PropertyMetadata>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnsetValue() -> ::windows::core::Result<::windows::core::IInspectable> {
         Self::IDependencyPropertyStatics(|this| unsafe {
             let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
@@ -5943,7 +5943,7 @@ impl DependencyProperty {
             .from_abi::<::windows::core::IInspectable>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Register<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -5969,7 +5969,7 @@ impl DependencyProperty {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterAttached<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -6083,7 +6083,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DependencyProperty {}
 unsafe impl ::core::marker::Sync for DependencyProperty {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DependencyPropertyChangedCallback(pub ::windows::core::IUnknown);
 impl DependencyPropertyChangedCallback {
@@ -6104,7 +6104,7 @@ impl DependencyPropertyChangedCallback {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyObject>,
@@ -6239,11 +6239,11 @@ pub struct DependencyPropertyChangedCallback_Vtbl {
         dp: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DependencyPropertyChangedEventArgs(::windows::core::IUnknown);
 impl DependencyPropertyChangedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Property(&self) -> ::windows::core::Result<DependencyProperty> {
         let this = self;
         unsafe {
@@ -6255,7 +6255,7 @@ impl DependencyPropertyChangedEventArgs {
             .from_abi::<DependencyProperty>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OldValue(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -6267,7 +6267,7 @@ impl DependencyPropertyChangedEventArgs {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn NewValue(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -6363,7 +6363,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for DependencyPropertyChangedEventArgs {}
 unsafe impl ::core::marker::Sync for DependencyPropertyChangedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DependencyPropertyChangedEventHandler(pub ::windows::core::IUnknown);
 impl DependencyPropertyChangedEventHandler {
@@ -6384,7 +6384,7 @@ impl DependencyPropertyChangedEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -6520,11 +6520,11 @@ pub struct DependencyPropertyChangedEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DispatcherTimer(::windows::core::IUnknown);
 impl DispatcherTimer {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Interval(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
@@ -6536,7 +6536,7 @@ impl DispatcherTimer {
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetInterval<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::TimeSpan>,
@@ -6553,7 +6553,7 @@ impl DispatcherTimer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -6565,7 +6565,7 @@ impl DispatcherTimer {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Tick<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -6587,7 +6587,7 @@ impl DispatcherTimer {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveTick<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6604,21 +6604,21 @@ impl DispatcherTimer {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Start(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Start)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Stop(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Stop)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<DispatcherTimer> {
         Self::IDispatcherTimerFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6631,7 +6631,7 @@ impl DispatcherTimer {
             .from_abi::<DispatcherTimer>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<DispatcherTimer> {
@@ -6733,11 +6733,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DispatcherTimer {}
 unsafe impl ::core::marker::Sync for DispatcherTimer {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DragEventArgs(::windows::core::IUnknown);
 impl DragEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -6749,7 +6749,7 @@ impl DragEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -6760,7 +6760,7 @@ impl DragEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Data(
         &self,
     ) -> ::windows::core::Result<::windows::ApplicationModel::DataTransfer::DataPackage> {
@@ -6774,7 +6774,7 @@ impl DragEventArgs {
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackage>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetData<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::ApplicationModel::DataTransfer::DataPackage>,
@@ -6791,7 +6791,7 @@ impl DragEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DataView(
         &self,
     ) -> ::windows::core::Result<::windows::ApplicationModel::DataTransfer::DataPackageView> {
@@ -6805,7 +6805,7 @@ impl DragEventArgs {
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackageView>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragUIOverride(&self) -> ::windows::core::Result<DragUIOverride> {
         let this = self;
         unsafe {
@@ -6817,7 +6817,7 @@ impl DragEventArgs {
             .from_abi::<DragUIOverride>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Modifiers(
         &self,
     ) -> ::windows::core::Result<
@@ -6835,7 +6835,7 @@ impl DragEventArgs {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AcceptedOperation(
         &self,
     ) -> ::windows::core::Result<::windows::ApplicationModel::DataTransfer::DataPackageOperation>
@@ -6851,7 +6851,7 @@ impl DragEventArgs {
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackageOperation>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAcceptedOperation(
         &self,
         value: ::windows::ApplicationModel::DataTransfer::DataPackageOperation,
@@ -6865,7 +6865,7 @@ impl DragEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowedOperations(
         &self,
     ) -> ::windows::core::Result<::windows::ApplicationModel::DataTransfer::DataPackageOperation>
@@ -6881,7 +6881,7 @@ impl DragEventArgs {
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackageOperation>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetDeferral(&self) -> ::windows::core::Result<DragOperationDeferral> {
         let this = self;
         unsafe {
@@ -6893,7 +6893,7 @@ impl DragEventArgs {
             .from_abi::<DragOperationDeferral>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetPosition<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         relativeto: Param0,
@@ -6909,7 +6909,7 @@ impl DragEventArgs {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
@@ -7016,7 +7016,7 @@ impl<'a> ::windows::core::IntoParam<'a, RoutedEventArgs> for &DragEventArgs {
 }
 unsafe impl ::core::marker::Send for DragEventArgs {}
 unsafe impl ::core::marker::Sync for DragEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DragEventHandler(pub ::windows::core::IUnknown);
 impl DragEventHandler {
@@ -7037,7 +7037,7 @@ impl DragEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -7169,11 +7169,11 @@ pub struct DragEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DragOperationDeferral(::windows::core::IUnknown);
 impl DragOperationDeferral {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Complete(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7260,11 +7260,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for DragOperationDeferral {}
 unsafe impl ::core::marker::Sync for DragOperationDeferral {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DragStartingEventArgs(::windows::core::IUnknown);
 impl DragStartingEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Cancel(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -7276,7 +7276,7 @@ impl DragStartingEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetCancel(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7287,7 +7287,7 @@ impl DragStartingEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Data(
         &self,
     ) -> ::windows::core::Result<::windows::ApplicationModel::DataTransfer::DataPackage> {
@@ -7301,7 +7301,7 @@ impl DragStartingEventArgs {
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackage>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragUI(&self) -> ::windows::core::Result<DragUI> {
         let this = self;
         unsafe {
@@ -7313,7 +7313,7 @@ impl DragStartingEventArgs {
             .from_abi::<DragUI>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowedOperations(
         &self,
     ) -> ::windows::core::Result<::windows::ApplicationModel::DataTransfer::DataPackageOperation>
@@ -7329,7 +7329,7 @@ impl DragStartingEventArgs {
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackageOperation>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAllowedOperations(
         &self,
         value: ::windows::ApplicationModel::DataTransfer::DataPackageOperation,
@@ -7343,7 +7343,7 @@ impl DragStartingEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetDeferral(&self) -> ::windows::core::Result<DragOperationDeferral> {
         let this = self;
         unsafe {
@@ -7355,7 +7355,7 @@ impl DragStartingEventArgs {
             .from_abi::<DragOperationDeferral>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetPosition<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         relativeto: Param0,
@@ -7371,7 +7371,7 @@ impl DragStartingEventArgs {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
@@ -7482,11 +7482,11 @@ impl<'a> ::windows::core::IntoParam<'a, RoutedEventArgs> for &DragStartingEventA
 }
 unsafe impl ::core::marker::Send for DragStartingEventArgs {}
 unsafe impl ::core::marker::Sync for DragStartingEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DragUI(::windows::core::IUnknown);
 impl DragUI {
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Imaging'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Imaging\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Imaging")]
     pub fn SetContentFromBitmapImage<
         'a,
@@ -7504,7 +7504,7 @@ impl DragUI {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Imaging'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Imaging\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Imaging")]
     pub fn SetContentFromBitmapImageWithAnchorPoint<
         'a,
@@ -7525,7 +7525,7 @@ impl DragUI {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetContentFromSoftwareBitmap<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::Imaging::SoftwareBitmap>,
@@ -7542,7 +7542,7 @@ impl DragUI {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetContentFromSoftwareBitmapWithAnchorPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::Imaging::SoftwareBitmap>,
@@ -7562,7 +7562,7 @@ impl DragUI {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetContentFromDataPackage(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7647,11 +7647,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DragUI {}
 unsafe impl ::core::marker::Sync for DragUI {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DragUIOverride(::windows::core::IUnknown);
 impl DragUIOverride {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Caption(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -7664,7 +7664,7 @@ impl DragUIOverride {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetCaption<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -7678,7 +7678,7 @@ impl DragUIOverride {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsContentVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -7690,7 +7690,7 @@ impl DragUIOverride {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsContentVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7701,7 +7701,7 @@ impl DragUIOverride {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsCaptionVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -7713,7 +7713,7 @@ impl DragUIOverride {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsCaptionVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7724,7 +7724,7 @@ impl DragUIOverride {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsGlyphVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -7736,7 +7736,7 @@ impl DragUIOverride {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsGlyphVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7747,14 +7747,14 @@ impl DragUIOverride {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Imaging'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Imaging\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Imaging")]
     pub fn SetContentFromBitmapImage<
         'a,
@@ -7772,7 +7772,7 @@ impl DragUIOverride {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Imaging'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Imaging\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Imaging")]
     pub fn SetContentFromBitmapImageWithAnchorPoint<
         'a,
@@ -7793,7 +7793,7 @@ impl DragUIOverride {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetContentFromSoftwareBitmap<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::Imaging::SoftwareBitmap>,
@@ -7810,7 +7810,7 @@ impl DragUIOverride {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetContentFromSoftwareBitmapWithAnchorPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::Imaging::SoftwareBitmap>,
@@ -7905,11 +7905,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DragUIOverride {}
 unsafe impl ::core::marker::Sync for DragUIOverride {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DropCompletedEventArgs(::windows::core::IUnknown);
 impl DropCompletedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DropResult(
         &self,
     ) -> ::windows::core::Result<::windows::ApplicationModel::DataTransfer::DataPackageOperation>
@@ -7925,7 +7925,7 @@ impl DropCompletedEventArgs {
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackageOperation>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
@@ -8037,7 +8037,7 @@ impl<'a> ::windows::core::IntoParam<'a, RoutedEventArgs> for &DropCompletedEvent
 unsafe impl ::core::marker::Send for DropCompletedEventArgs {}
 unsafe impl ::core::marker::Sync for DropCompletedEventArgs {}
 #[repr(C)]
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 pub struct Duration {
     pub TimeSpan: ::windows::Foundation::TimeSpan,
     pub Type: DurationType,
@@ -8083,11 +8083,11 @@ impl ::core::default::Default for Duration {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct DurationHelper(::windows::core::IUnknown);
 impl DurationHelper {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Automatic() -> ::windows::core::Result<Duration> {
         Self::IDurationHelperStatics(|this| unsafe {
             let mut result__: Duration = ::core::mem::zeroed();
@@ -8098,7 +8098,7 @@ impl DurationHelper {
             .from_abi::<Duration>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Forever() -> ::windows::core::Result<Duration> {
         Self::IDurationHelperStatics(|this| unsafe {
             let mut result__: Duration = ::core::mem::zeroed();
@@ -8109,7 +8109,7 @@ impl DurationHelper {
             .from_abi::<Duration>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Compare<
         'a,
         Param0: ::windows::core::IntoParam<'a, Duration>,
@@ -8129,7 +8129,7 @@ impl DurationHelper {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromTimeSpan<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::TimeSpan>,
@@ -8146,7 +8146,7 @@ impl DurationHelper {
             .from_abi::<Duration>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetHasTimeSpan<'a, Param0: ::windows::core::IntoParam<'a, Duration>>(
         target: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -8160,7 +8160,7 @@ impl DurationHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Add<
         'a,
         Param0: ::windows::core::IntoParam<'a, Duration>,
@@ -8180,7 +8180,7 @@ impl DurationHelper {
             .from_abi::<Duration>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Equals<
         'a,
         Param0: ::windows::core::IntoParam<'a, Duration>,
@@ -8200,7 +8200,7 @@ impl DurationHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Subtract<
         'a,
         Param0: ::windows::core::IntoParam<'a, Duration>,
@@ -8306,7 +8306,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DurationHelper {}
 unsafe impl ::core::marker::Sync for DurationHelper {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DurationType(pub i32);
@@ -8342,11 +8342,11 @@ unsafe impl ::windows::core::RuntimeType for DurationType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct EffectiveViewportChangedEventArgs(::windows::core::IUnknown);
 impl EffectiveViewportChangedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn EffectiveViewport(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -8358,7 +8358,7 @@ impl EffectiveViewportChangedEventArgs {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MaxViewport(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -8370,7 +8370,7 @@ impl EffectiveViewportChangedEventArgs {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BringIntoViewDistanceX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -8382,7 +8382,7 @@ impl EffectiveViewportChangedEventArgs {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BringIntoViewDistanceY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -8478,11 +8478,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for EffectiveViewportChangedEventArgs {}
 unsafe impl ::core::marker::Sync for EffectiveViewportChangedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct ElementFactoryGetArgs(::windows::core::IUnknown);
 impl ElementFactoryGetArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Data(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -8494,7 +8494,7 @@ impl ElementFactoryGetArgs {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetData<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -8508,7 +8508,7 @@ impl ElementFactoryGetArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
@@ -8520,7 +8520,7 @@ impl ElementFactoryGetArgs {
             .from_abi::<UIElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetParent<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         value: Param0,
@@ -8534,7 +8534,7 @@ impl ElementFactoryGetArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<ElementFactoryGetArgs> {
         Self::IElementFactoryGetArgsFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8547,7 +8547,7 @@ impl ElementFactoryGetArgs {
             .from_abi::<ElementFactoryGetArgs>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<ElementFactoryGetArgs> {
@@ -8655,11 +8655,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for ElementFactoryGetArgs {}
 unsafe impl ::core::marker::Sync for ElementFactoryGetArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct ElementFactoryRecycleArgs(::windows::core::IUnknown);
 impl ElementFactoryRecycleArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Element(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
@@ -8671,7 +8671,7 @@ impl ElementFactoryRecycleArgs {
             .from_abi::<UIElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetElement<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         value: Param0,
@@ -8685,7 +8685,7 @@ impl ElementFactoryRecycleArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
@@ -8697,7 +8697,7 @@ impl ElementFactoryRecycleArgs {
             .from_abi::<UIElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetParent<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         value: Param0,
@@ -8711,7 +8711,7 @@ impl ElementFactoryRecycleArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<ElementFactoryRecycleArgs> {
         Self::IElementFactoryRecycleArgsFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -8724,7 +8724,7 @@ impl ElementFactoryRecycleArgs {
             .from_abi::<ElementFactoryRecycleArgs>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<ElementFactoryRecycleArgs> {
@@ -8837,7 +8837,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for ElementFactoryRecycleArgs {}
 unsafe impl ::core::marker::Sync for ElementFactoryRecycleArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ElementHighContrastAdjustment(pub u32);
@@ -8904,7 +8904,7 @@ unsafe impl ::windows::core::RuntimeType for ElementHighContrastAdjustment {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ElementSoundKind(pub i32);
@@ -8944,7 +8944,7 @@ unsafe impl ::windows::core::RuntimeType for ElementSoundKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ElementSoundMode(pub i32);
@@ -8980,11 +8980,11 @@ unsafe impl ::windows::core::RuntimeType for ElementSoundMode {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct ElementSoundPlayer(::windows::core::IUnknown);
 impl ElementSoundPlayer {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Volume() -> ::windows::core::Result<f64> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
             let mut result__: f64 = ::core::mem::zeroed();
@@ -8995,7 +8995,7 @@ impl ElementSoundPlayer {
             .from_abi::<f64>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetVolume(value: f64) -> ::windows::core::Result<()> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetVolume)(
@@ -9005,7 +9005,7 @@ impl ElementSoundPlayer {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn State() -> ::windows::core::Result<ElementSoundPlayerState> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
             let mut result__: ElementSoundPlayerState = ::core::mem::zeroed();
@@ -9016,7 +9016,7 @@ impl ElementSoundPlayer {
             .from_abi::<ElementSoundPlayerState>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetState(value: ElementSoundPlayerState) -> ::windows::core::Result<()> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetState)(
@@ -9026,7 +9026,7 @@ impl ElementSoundPlayer {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SpatialAudioMode() -> ::windows::core::Result<ElementSpatialAudioMode> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
             let mut result__: ElementSpatialAudioMode = ::core::mem::zeroed();
@@ -9037,7 +9037,7 @@ impl ElementSoundPlayer {
             .from_abi::<ElementSpatialAudioMode>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetSpatialAudioMode(value: ElementSpatialAudioMode) -> ::windows::core::Result<()> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetSpatialAudioMode)(
@@ -9047,7 +9047,7 @@ impl ElementSoundPlayer {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Play(sound: ElementSoundKind) -> ::windows::core::Result<()> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).Play)(
@@ -9145,7 +9145,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a E
 }
 unsafe impl ::core::marker::Send for ElementSoundPlayer {}
 unsafe impl ::core::marker::Sync for ElementSoundPlayer {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ElementSoundPlayerState(pub i32);
@@ -9184,7 +9184,7 @@ unsafe impl ::windows::core::RuntimeType for ElementSoundPlayerState {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ElementSpatialAudioMode(pub i32);
@@ -9223,7 +9223,7 @@ unsafe impl ::windows::core::RuntimeType for ElementSpatialAudioMode {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ElementTheme(pub i32);
@@ -9259,7 +9259,7 @@ unsafe impl ::windows::core::RuntimeType for ElementTheme {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct EnteredBackgroundEventHandler(pub ::windows::core::IUnknown);
 impl EnteredBackgroundEventHandler {
@@ -9280,7 +9280,7 @@ impl EnteredBackgroundEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -9414,12 +9414,12 @@ pub struct EnteredBackgroundEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct EventTrigger(::windows::core::IUnknown);
 impl EventTrigger {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -9433,7 +9433,7 @@ impl EventTrigger {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -9449,7 +9449,7 @@ impl EventTrigger {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -9469,7 +9469,7 @@ impl EventTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -9483,7 +9483,7 @@ impl EventTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -9499,7 +9499,7 @@ impl EventTrigger {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -9515,7 +9515,7 @@ impl EventTrigger {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -9537,7 +9537,7 @@ impl EventTrigger {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -9556,7 +9556,7 @@ impl EventTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -9568,7 +9568,7 @@ impl EventTrigger {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -9581,7 +9581,7 @@ impl EventTrigger {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RoutedEvent(&self) -> ::windows::core::Result<RoutedEvent> {
         let this = self;
         unsafe {
@@ -9593,7 +9593,7 @@ impl EventTrigger {
             .from_abi::<RoutedEvent>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRoutedEvent<'a, Param0: ::windows::core::IntoParam<'a, RoutedEvent>>(
         &self,
         value: Param0,
@@ -9607,7 +9607,7 @@ impl EventTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Actions(&self) -> ::windows::core::Result<TriggerActionCollection> {
         let this = self;
         unsafe {
@@ -9734,11 +9734,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &EventTrigger {
 }
 unsafe impl ::core::marker::Send for EventTrigger {}
 unsafe impl ::core::marker::Sync for EventTrigger {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct ExceptionRoutedEventArgs(::windows::core::IUnknown);
 impl ExceptionRoutedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ErrorMessage(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -9751,7 +9751,7 @@ impl ExceptionRoutedEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
@@ -9867,7 +9867,7 @@ impl<'a> ::windows::core::IntoParam<'a, RoutedEventArgs> for &ExceptionRoutedEve
 }
 unsafe impl ::core::marker::Send for ExceptionRoutedEventArgs {}
 unsafe impl ::core::marker::Sync for ExceptionRoutedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct ExceptionRoutedEventHandler(pub ::windows::core::IUnknown);
 impl ExceptionRoutedEventHandler {
@@ -9888,7 +9888,7 @@ impl ExceptionRoutedEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -10022,7 +10022,7 @@ pub struct ExceptionRoutedEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FlowDirection(pub i32);
@@ -10057,7 +10057,7 @@ unsafe impl ::windows::core::RuntimeType for FlowDirection {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FocusState(pub i32);
@@ -10094,7 +10094,7 @@ unsafe impl ::windows::core::RuntimeType for FocusState {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FocusVisualKind(pub i32);
@@ -10130,7 +10130,7 @@ unsafe impl ::windows::core::RuntimeType for FocusVisualKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FontCapitals(pub i32);
@@ -10170,7 +10170,7 @@ unsafe impl ::windows::core::RuntimeType for FontCapitals {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FontEastAsianLanguage(pub i32);
@@ -10216,7 +10216,7 @@ unsafe impl ::windows::core::RuntimeType for FontEastAsianLanguage {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FontEastAsianWidths(pub i32);
@@ -10255,7 +10255,7 @@ unsafe impl ::windows::core::RuntimeType for FontEastAsianWidths {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FontFraction(pub i32);
@@ -10291,7 +10291,7 @@ unsafe impl ::windows::core::RuntimeType for FontFraction {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FontNumeralAlignment(pub i32);
@@ -10330,7 +10330,7 @@ unsafe impl ::windows::core::RuntimeType for FontNumeralAlignment {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FontNumeralStyle(pub i32);
@@ -10366,7 +10366,7 @@ unsafe impl ::windows::core::RuntimeType for FontNumeralStyle {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FontVariants(pub i32);
@@ -10405,11 +10405,11 @@ unsafe impl ::windows::core::RuntimeType for FontVariants {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct FrameworkElement(::windows::core::IUnknown);
 impl FrameworkElement {
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -10430,7 +10430,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -10446,7 +10446,7 @@ impl FrameworkElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -10466,7 +10466,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -10480,7 +10480,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -10496,7 +10496,7 @@ impl FrameworkElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -10512,7 +10512,7 @@ impl FrameworkElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -10534,7 +10534,7 @@ impl FrameworkElement {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -10553,7 +10553,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -10565,7 +10565,7 @@ impl FrameworkElement {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -10578,7 +10578,7 @@ impl FrameworkElement {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Triggers(&self) -> ::windows::core::Result<TriggerCollection> {
         let this = self;
         unsafe {
@@ -10590,7 +10590,7 @@ impl FrameworkElement {
             .from_abi::<TriggerCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Resources(&self) -> ::windows::core::Result<ResourceDictionary> {
         let this = self;
         unsafe {
@@ -10602,7 +10602,7 @@ impl FrameworkElement {
             .from_abi::<ResourceDictionary>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetResources<'a, Param0: ::windows::core::IntoParam<'a, ResourceDictionary>>(
         &self,
         value: Param0,
@@ -10616,7 +10616,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Tag(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -10628,7 +10628,7 @@ impl FrameworkElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTag<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -10642,7 +10642,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -10655,7 +10655,7 @@ impl FrameworkElement {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -10669,7 +10669,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualWidth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -10681,7 +10681,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -10693,7 +10693,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Width(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -10705,7 +10705,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10716,7 +10716,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Height(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -10728,7 +10728,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10739,7 +10739,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinWidth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -10751,7 +10751,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetMinWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10762,7 +10762,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MaxWidth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -10774,7 +10774,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetMaxWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10785,7 +10785,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -10797,7 +10797,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetMinHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10808,7 +10808,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MaxHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -10820,7 +10820,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetMaxHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10831,7 +10831,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HorizontalAlignment(&self) -> ::windows::core::Result<HorizontalAlignment> {
         let this = self;
         unsafe {
@@ -10843,7 +10843,7 @@ impl FrameworkElement {
             .from_abi::<HorizontalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHorizontalAlignment(
         &self,
         value: HorizontalAlignment,
@@ -10857,7 +10857,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn VerticalAlignment(&self) -> ::windows::core::Result<VerticalAlignment> {
         let this = self;
         unsafe {
@@ -10869,7 +10869,7 @@ impl FrameworkElement {
             .from_abi::<VerticalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetVerticalAlignment(&self, value: VerticalAlignment) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10880,7 +10880,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Margin(&self) -> ::windows::core::Result<Thickness> {
         let this = self;
         unsafe {
@@ -10892,7 +10892,7 @@ impl FrameworkElement {
             .from_abi::<Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetMargin<'a, Param0: ::windows::core::IntoParam<'a, Thickness>>(
         &self,
         value: Param0,
@@ -10906,7 +10906,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -10919,7 +10919,7 @@ impl FrameworkElement {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -10933,7 +10933,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BaseUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
@@ -10945,7 +10945,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DataContext(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -10957,7 +10957,7 @@ impl FrameworkElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetDataContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -10974,7 +10974,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -10986,7 +10986,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -10997,7 +10997,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualMargin(&self) -> ::windows::core::Result<Thickness> {
         let this = self;
         unsafe {
@@ -11009,7 +11009,7 @@ impl FrameworkElement {
             .from_abi::<Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetFocusVisualMargin<'a, Param0: ::windows::core::IntoParam<'a, Thickness>>(
         &self,
         value: Param0,
@@ -11023,7 +11023,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualSecondaryThickness(&self) -> ::windows::core::Result<Thickness> {
         let this = self;
         unsafe {
@@ -11035,7 +11035,7 @@ impl FrameworkElement {
             .from_abi::<Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetFocusVisualSecondaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, Thickness>,
@@ -11052,7 +11052,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualPrimaryThickness(&self) -> ::windows::core::Result<Thickness> {
         let this = self;
         unsafe {
@@ -11064,7 +11064,7 @@ impl FrameworkElement {
             .from_abi::<Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetFocusVisualPrimaryThickness<'a, Param0: ::windows::core::IntoParam<'a, Thickness>>(
         &self,
         value: Param0,
@@ -11078,7 +11078,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualSecondaryBrush(&self) -> ::windows::core::Result<Media::Brush> {
         let this = self;
@@ -11091,7 +11091,7 @@ impl FrameworkElement {
             .from_abi::<Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualSecondaryBrush<
         'a,
@@ -11109,7 +11109,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualPrimaryBrush(&self) -> ::windows::core::Result<Media::Brush> {
         let this = self;
@@ -11122,7 +11122,7 @@ impl FrameworkElement {
             .from_abi::<Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualPrimaryBrush<'a, Param0: ::windows::core::IntoParam<'a, Media::Brush>>(
         &self,
@@ -11137,7 +11137,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowFocusWhenDisabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -11149,7 +11149,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAllowFocusWhenDisabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -11160,7 +11160,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Style(&self) -> ::windows::core::Result<Style> {
         let this = self;
         unsafe {
@@ -11172,7 +11172,7 @@ impl FrameworkElement {
             .from_abi::<Style>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetStyle<'a, Param0: ::windows::core::IntoParam<'a, Style>>(
         &self,
         value: Param0,
@@ -11186,7 +11186,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
@@ -11198,7 +11198,7 @@ impl FrameworkElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FlowDirection(&self) -> ::windows::core::Result<FlowDirection> {
         let this = self;
         unsafe {
@@ -11210,7 +11210,7 @@ impl FrameworkElement {
             .from_abi::<FlowDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetFlowDirection(&self, value: FlowDirection) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -11221,7 +11221,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RequestedTheme(&self) -> ::windows::core::Result<ElementTheme> {
         let this = self;
         unsafe {
@@ -11233,7 +11233,7 @@ impl FrameworkElement {
             .from_abi::<ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRequestedTheme(&self, value: ElementTheme) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -11244,7 +11244,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsLoaded(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -11256,7 +11256,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualTheme(&self) -> ::windows::core::Result<ElementTheme> {
         let this = self;
         unsafe {
@@ -11268,7 +11268,7 @@ impl FrameworkElement {
             .from_abi::<ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Loaded<'a, Param0: ::windows::core::IntoParam<'a, RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -11284,7 +11284,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveLoaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -11301,7 +11301,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Unloaded<'a, Param0: ::windows::core::IntoParam<'a, RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -11317,7 +11317,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveUnloaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -11334,7 +11334,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -11356,7 +11356,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -11373,7 +11373,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SizeChanged<'a, Param0: ::windows::core::IntoParam<'a, SizeChangedEventHandler>>(
         &self,
         handler: Param0,
@@ -11389,7 +11389,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveSizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -11406,7 +11406,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn LayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -11428,7 +11428,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveLayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -11445,7 +11445,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Loading<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -11470,7 +11470,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveLoading<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -11487,7 +11487,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -11512,7 +11512,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -11529,7 +11529,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn EffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -11554,7 +11554,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveEffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -11571,7 +11571,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -11587,7 +11587,7 @@ impl FrameworkElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn SetBinding<
         'a,
@@ -11608,7 +11608,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn GetBindingExpression<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
@@ -11625,7 +11625,7 @@ impl FrameworkElement {
             .from_abi::<Data::BindingExpression>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn InvalidateViewport(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IFrameworkElementProtected>(self)?;
         unsafe {
@@ -11635,7 +11635,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TagProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11646,7 +11646,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn LanguageProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11657,7 +11657,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualWidthProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11668,7 +11668,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualHeightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11679,7 +11679,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn WidthProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11690,7 +11690,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HeightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11701,7 +11701,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinWidthProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11712,7 +11712,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MaxWidthProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11723,7 +11723,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinHeightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11734,7 +11734,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MaxHeightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11745,7 +11745,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HorizontalAlignmentProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11756,7 +11756,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn VerticalAlignmentProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11767,7 +11767,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MarginProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11778,7 +11778,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn NameProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11789,7 +11789,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DataContextProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11800,7 +11800,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowFocusOnInteractionProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11811,7 +11811,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualMarginProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11822,7 +11822,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualSecondaryThicknessProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11833,7 +11833,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualPrimaryThicknessProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11844,7 +11844,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualSecondaryBrushProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11855,7 +11855,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualPrimaryBrushProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11866,7 +11866,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowFocusWhenDisabledProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11877,7 +11877,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn StyleProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11888,7 +11888,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FlowDirectionProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11899,7 +11899,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RequestedThemeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11910,7 +11910,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualThemeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -11921,7 +11921,7 @@ impl FrameworkElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DeferTree<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<()> {
@@ -11933,7 +11933,7 @@ impl FrameworkElement {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -11945,7 +11945,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -11957,7 +11957,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAllowDrop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -11968,7 +11968,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -11980,7 +11980,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -11991,7 +11991,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Clip(&self) -> ::windows::core::Result<Media::RectangleGeometry> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -12004,7 +12004,7 @@ impl FrameworkElement {
             .from_abi::<Media::RectangleGeometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetClip<'a, Param0: ::windows::core::IntoParam<'a, Media::RectangleGeometry>>(
         &self,
@@ -12019,7 +12019,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn RenderTransform(&self) -> ::windows::core::Result<Media::Transform> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -12032,7 +12032,7 @@ impl FrameworkElement {
             .from_abi::<Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetRenderTransform<'a, Param0: ::windows::core::IntoParam<'a, Media::Transform>>(
         &self,
@@ -12047,7 +12047,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Projection(&self) -> ::windows::core::Result<Media::Projection> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -12060,7 +12060,7 @@ impl FrameworkElement {
             .from_abi::<Media::Projection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetProjection<'a, Param0: ::windows::core::IntoParam<'a, Media::Projection>>(
         &self,
@@ -12075,7 +12075,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn Transform3D(&self) -> ::windows::core::Result<Media::Media3D::Transform3D> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -12088,7 +12088,7 @@ impl FrameworkElement {
             .from_abi::<Media::Media3D::Transform3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn SetTransform3D<
         'a,
@@ -12106,7 +12106,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12118,7 +12118,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRenderTransformOrigin<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -12135,7 +12135,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12147,7 +12147,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsHitTestVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12158,7 +12158,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Visibility(&self) -> ::windows::core::Result<Visibility> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12170,7 +12170,7 @@ impl FrameworkElement {
             .from_abi::<Visibility>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetVisibility(&self, value: Visibility) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12181,7 +12181,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12193,7 +12193,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12205,7 +12205,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetUseLayoutRounding(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12216,7 +12216,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Transitions(&self) -> ::windows::core::Result<Media::Animation::TransitionCollection> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -12229,7 +12229,7 @@ impl FrameworkElement {
             .from_abi::<Media::Animation::TransitionCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetTransitions<
         'a,
@@ -12247,7 +12247,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CacheMode(&self) -> ::windows::core::Result<Media::CacheMode> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -12260,7 +12260,7 @@ impl FrameworkElement {
             .from_abi::<Media::CacheMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCacheMode<'a, Param0: ::windows::core::IntoParam<'a, Media::CacheMode>>(
         &self,
@@ -12275,7 +12275,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12287,7 +12287,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12298,7 +12298,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12310,7 +12310,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsDoubleTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12321,7 +12321,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12333,7 +12333,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetCanDrag(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12344,7 +12344,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12356,7 +12356,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsRightTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12367,7 +12367,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12379,7 +12379,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsHoldingEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12390,7 +12390,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationMode(&self) -> ::windows::core::Result<Input::ManipulationModes> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -12403,7 +12403,7 @@ impl FrameworkElement {
             .from_abi::<Input::ManipulationModes>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetManipulationMode(
         &self,
@@ -12418,7 +12418,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptures(
         &self,
@@ -12434,7 +12434,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Collections::IVectorView<Input::Pointer>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn ContextFlyout(&self) -> ::windows::core::Result<Controls::Primitives::FlyoutBase> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -12447,7 +12447,7 @@ impl FrameworkElement {
             .from_abi::<Controls::Primitives::FlyoutBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn SetContextFlyout<
         'a,
@@ -12465,7 +12465,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CompositeMode(&self) -> ::windows::core::Result<Media::ElementCompositeMode> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -12478,7 +12478,7 @@ impl FrameworkElement {
             .from_abi::<Media::ElementCompositeMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCompositeMode(
         &self,
@@ -12493,7 +12493,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Lights(
         &self,
@@ -12509,7 +12509,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Collections::IVector<Media::XamlLight>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12521,7 +12521,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetCanBeScrollAnchor(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12532,7 +12532,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12544,7 +12544,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12555,7 +12555,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12567,7 +12567,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12578,7 +12578,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12590,7 +12590,7 @@ impl FrameworkElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAccessKeyScopeOwner<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -12604,7 +12604,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12617,7 +12617,7 @@ impl FrameworkElement {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -12631,7 +12631,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(&self) -> ::windows::core::Result<Input::KeyTipPlacementMode> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -12644,7 +12644,7 @@ impl FrameworkElement {
             .from_abi::<Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -12659,7 +12659,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12671,7 +12671,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12682,7 +12682,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12694,7 +12694,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12705,7 +12705,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12717,7 +12717,7 @@ impl FrameworkElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetKeyTipTarget<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -12731,7 +12731,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusKeyboardNavigation(
         &self,
@@ -12746,7 +12746,7 @@ impl FrameworkElement {
             .from_abi::<Input::XYFocusKeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusKeyboardNavigation(
         &self,
@@ -12761,7 +12761,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusUpNavigationStrategy(
         &self,
@@ -12776,7 +12776,7 @@ impl FrameworkElement {
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusUpNavigationStrategy(
         &self,
@@ -12791,7 +12791,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusDownNavigationStrategy(
         &self,
@@ -12806,7 +12806,7 @@ impl FrameworkElement {
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusDownNavigationStrategy(
         &self,
@@ -12821,7 +12821,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusLeftNavigationStrategy(
         &self,
@@ -12836,7 +12836,7 @@ impl FrameworkElement {
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusLeftNavigationStrategy(
         &self,
@@ -12851,7 +12851,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusRightNavigationStrategy(
         &self,
@@ -12866,7 +12866,7 @@ impl FrameworkElement {
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusRightNavigationStrategy(
         &self,
@@ -12881,7 +12881,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAccelerators(
         &self,
@@ -12900,7 +12900,7 @@ impl FrameworkElement {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyboardAcceleratorPlacementTarget(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12912,7 +12912,7 @@ impl FrameworkElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetKeyboardAcceleratorPlacementTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyObject>,
@@ -12929,7 +12929,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAcceleratorPlacementMode(
         &self,
@@ -12944,7 +12944,7 @@ impl FrameworkElement {
             .from_abi::<Input::KeyboardAcceleratorPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyboardAcceleratorPlacementMode(
         &self,
@@ -12959,7 +12959,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HighContrastAdjustment(&self) -> ::windows::core::Result<ElementHighContrastAdjustment> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -12971,7 +12971,7 @@ impl FrameworkElement {
             .from_abi::<ElementHighContrastAdjustment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHighContrastAdjustment(
         &self,
         value: ElementHighContrastAdjustment,
@@ -12985,7 +12985,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TabFocusNavigation(&self) -> ::windows::core::Result<Input::KeyboardNavigationMode> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -12998,7 +12998,7 @@ impl FrameworkElement {
             .from_abi::<Input::KeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetTabFocusNavigation(
         &self,
@@ -13013,7 +13013,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OpacityTransition(&self) -> ::windows::core::Result<ScalarTransition> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13025,7 +13025,7 @@ impl FrameworkElement {
             .from_abi::<ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetOpacityTransition<'a, Param0: ::windows::core::IntoParam<'a, ScalarTransition>>(
         &self,
         value: Param0,
@@ -13039,7 +13039,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13051,7 +13051,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -13068,7 +13068,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TranslationTransition(&self) -> ::windows::core::Result<Vector3Transition> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13080,7 +13080,7 @@ impl FrameworkElement {
             .from_abi::<Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTranslationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, Vector3Transition>,
@@ -13097,7 +13097,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13109,7 +13109,7 @@ impl FrameworkElement {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRotation(&self, value: f32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13120,7 +13120,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RotationTransition(&self) -> ::windows::core::Result<ScalarTransition> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13132,7 +13132,7 @@ impl FrameworkElement {
             .from_abi::<ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRotationTransition<'a, Param0: ::windows::core::IntoParam<'a, ScalarTransition>>(
         &self,
         value: Param0,
@@ -13146,7 +13146,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13158,7 +13158,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetScale<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -13175,7 +13175,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ScaleTransition(&self) -> ::windows::core::Result<Vector3Transition> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13187,7 +13187,7 @@ impl FrameworkElement {
             .from_abi::<Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetScaleTransition<'a, Param0: ::windows::core::IntoParam<'a, Vector3Transition>>(
         &self,
         value: Param0,
@@ -13201,7 +13201,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TransformMatrix(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
@@ -13215,7 +13215,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTransformMatrix<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Matrix4x4>,
@@ -13232,7 +13232,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13244,7 +13244,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetCenterPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -13261,7 +13261,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RotationAxis(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -13275,7 +13275,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRotationAxis<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -13292,7 +13292,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualOffset(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -13306,7 +13306,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13318,7 +13318,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<XamlRoot> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13330,7 +13330,7 @@ impl FrameworkElement {
             .from_abi::<XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, XamlRoot>>(
         &self,
         value: Param0,
@@ -13344,7 +13344,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Shadow(&self) -> ::windows::core::Result<Media::Shadow> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
@@ -13357,7 +13357,7 @@ impl FrameworkElement {
             .from_abi::<Media::Shadow>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetShadow<'a, Param0: ::windows::core::IntoParam<'a, Media::Shadow>>(
         &self,
@@ -13372,7 +13372,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13384,7 +13384,7 @@ impl FrameworkElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13395,7 +13395,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusState(&self) -> ::windows::core::Result<FocusState> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13407,7 +13407,7 @@ impl FrameworkElement {
             .from_abi::<FocusState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13419,7 +13419,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetUseSystemFocusVisuals(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13430,7 +13430,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13442,7 +13442,7 @@ impl FrameworkElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetXYFocusLeft<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -13456,7 +13456,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusRight(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13468,7 +13468,7 @@ impl FrameworkElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetXYFocusRight<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -13482,7 +13482,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusUp(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13494,7 +13494,7 @@ impl FrameworkElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetXYFocusUp<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -13508,7 +13508,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusDown(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13520,7 +13520,7 @@ impl FrameworkElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetXYFocusDown<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -13534,7 +13534,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13546,7 +13546,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsTabStop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13557,7 +13557,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13569,7 +13569,7 @@ impl FrameworkElement {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTabIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -13580,7 +13580,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyUp<'a, Param0: ::windows::core::IntoParam<'a, Input::KeyEventHandler>>(
         &self,
@@ -13597,7 +13597,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13614,7 +13614,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyDown<'a, Param0: ::windows::core::IntoParam<'a, Input::KeyEventHandler>>(
         &self,
@@ -13631,7 +13631,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13648,7 +13648,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GotFocus<'a, Param0: ::windows::core::IntoParam<'a, RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -13664,7 +13664,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13681,7 +13681,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn LostFocus<'a, Param0: ::windows::core::IntoParam<'a, RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -13697,7 +13697,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13714,7 +13714,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -13736,7 +13736,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDragStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13753,7 +13753,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -13775,7 +13775,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13792,7 +13792,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CharacterReceived<
         'a,
@@ -13818,7 +13818,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveCharacterReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13835,7 +13835,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragEnter<'a, Param0: ::windows::core::IntoParam<'a, DragEventHandler>>(
         &self,
         handler: Param0,
@@ -13851,7 +13851,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDragEnter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13868,7 +13868,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragLeave<'a, Param0: ::windows::core::IntoParam<'a, DragEventHandler>>(
         &self,
         handler: Param0,
@@ -13884,7 +13884,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDragLeave<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13901,7 +13901,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragOver<'a, Param0: ::windows::core::IntoParam<'a, DragEventHandler>>(
         &self,
         handler: Param0,
@@ -13917,7 +13917,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDragOver<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13934,7 +13934,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Drop<'a, Param0: ::windows::core::IntoParam<'a, DragEventHandler>>(
         &self,
         handler: Param0,
@@ -13950,7 +13950,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDrop<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -13967,7 +13967,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerPressed<
         'a,
@@ -13987,7 +13987,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14004,7 +14004,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerMoved<'a, Param0: ::windows::core::IntoParam<'a, Input::PointerEventHandler>>(
         &self,
@@ -14021,7 +14021,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14038,7 +14038,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerReleased<
         'a,
@@ -14058,7 +14058,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14075,7 +14075,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerEntered<
         'a,
@@ -14095,7 +14095,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14112,7 +14112,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerExited<'a, Param0: ::windows::core::IntoParam<'a, Input::PointerEventHandler>>(
         &self,
@@ -14129,7 +14129,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14146,7 +14146,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptureLost<
         'a,
@@ -14166,7 +14166,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14183,7 +14183,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCanceled<
         'a,
@@ -14203,7 +14203,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14220,7 +14220,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerWheelChanged<
         'a,
@@ -14240,7 +14240,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14257,7 +14257,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Tapped<'a, Param0: ::windows::core::IntoParam<'a, Input::TappedEventHandler>>(
         &self,
@@ -14274,7 +14274,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14291,7 +14291,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn DoubleTapped<
         'a,
@@ -14311,7 +14311,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDoubleTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14328,7 +14328,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Holding<'a, Param0: ::windows::core::IntoParam<'a, Input::HoldingEventHandler>>(
         &self,
@@ -14345,7 +14345,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveHolding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14362,7 +14362,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ContextRequested<
         'a,
@@ -14385,7 +14385,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveContextRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14402,7 +14402,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -14424,7 +14424,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14441,7 +14441,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn RightTapped<
         'a,
@@ -14461,7 +14461,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveRightTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14478,7 +14478,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarting<
         'a,
@@ -14498,7 +14498,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveManipulationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14515,7 +14515,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationInertiaStarting<
         'a,
@@ -14535,7 +14535,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14552,7 +14552,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarted<
         'a,
@@ -14572,7 +14572,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14589,7 +14589,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationDelta<
         'a,
@@ -14609,7 +14609,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveManipulationDelta<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14626,7 +14626,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationCompleted<
         'a,
@@ -14646,7 +14646,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14663,7 +14663,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -14689,7 +14689,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14706,7 +14706,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -14732,7 +14732,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14749,7 +14749,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -14772,7 +14772,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14789,7 +14789,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ProcessKeyboardAccelerators<
         'a,
@@ -14815,7 +14815,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveProcessKeyboardAccelerators<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14832,7 +14832,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn GettingFocus<
         'a,
@@ -14855,7 +14855,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveGettingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14872,7 +14872,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn LosingFocus<
         'a,
@@ -14895,7 +14895,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveLosingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14912,7 +14912,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn NoFocusCandidateFound<
         'a,
@@ -14938,7 +14938,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveNoFocusCandidateFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14955,7 +14955,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyDown<'a, Param0: ::windows::core::IntoParam<'a, Input::KeyEventHandler>>(
         &self,
@@ -14972,7 +14972,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePreviewKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14989,7 +14989,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyUp<'a, Param0: ::windows::core::IntoParam<'a, Input::KeyEventHandler>>(
         &self,
@@ -15006,7 +15006,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePreviewKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15023,7 +15023,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -15045,7 +15045,7 @@ impl FrameworkElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveBringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15062,7 +15062,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Measure<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         &self,
         availablesize: Param0,
@@ -15076,7 +15076,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Arrange<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         finalrect: Param0,
@@ -15090,7 +15090,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CapturePointer<'a, Param0: ::windows::core::IntoParam<'a, Input::Pointer>>(
         &self,
@@ -15107,7 +15107,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ReleasePointerCapture<'a, Param0: ::windows::core::IntoParam<'a, Input::Pointer>>(
         &self,
@@ -15122,7 +15122,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReleasePointerCaptures(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -15132,7 +15132,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AddHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, RoutedEvent>,
@@ -15154,7 +15154,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, RoutedEvent>,
@@ -15174,7 +15174,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn TransformToVisual<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
@@ -15191,7 +15191,7 @@ impl FrameworkElement {
             .from_abi::<Media::GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn InvalidateMeasure(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -15201,7 +15201,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn InvalidateArrange(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -15211,7 +15211,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -15221,7 +15221,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -15233,7 +15233,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn StartDragAsync<
         'a,
@@ -15259,7 +15259,7 @@ impl FrameworkElement {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn StartBringIntoView(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -15269,7 +15269,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn StartBringIntoViewWithOptions<
         'a,
         Param0: ::windows::core::IntoParam<'a, BringIntoViewOptions>,
@@ -15286,7 +15286,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TryInvokeKeyboardAccelerator<
         'a,
@@ -15304,7 +15304,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Focus(&self, value: FocusState) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
@@ -15317,7 +15317,7 @@ impl FrameworkElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StartAnimation<
         'a,
@@ -15335,7 +15335,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StopAnimation<
         'a,
@@ -15353,7 +15353,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<IUIElementProtected>(self)?;
@@ -15366,7 +15366,7 @@ impl FrameworkElement {
             .from_abi::<super::Input::InputCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn SetProtectedCursor<
         'a,
@@ -15384,7 +15384,7 @@ impl FrameworkElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::Composition::Visual> {
         let this = &::windows::core::Interface::cast::<super::Composition::IVisualElement2>(self)?;
@@ -15611,11 +15611,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &FrameworkElement 
 }
 unsafe impl ::core::marker::Send for FrameworkElement {}
 unsafe impl ::core::marker::Sync for FrameworkElement {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct FrameworkTemplate(::windows::core::IUnknown);
 impl FrameworkTemplate {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15631,7 +15631,7 @@ impl FrameworkTemplate {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -15651,7 +15651,7 @@ impl FrameworkTemplate {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15665,7 +15665,7 @@ impl FrameworkTemplate {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15681,7 +15681,7 @@ impl FrameworkTemplate {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15697,7 +15697,7 @@ impl FrameworkTemplate {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -15719,7 +15719,7 @@ impl FrameworkTemplate {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -15738,7 +15738,7 @@ impl FrameworkTemplate {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -15750,7 +15750,7 @@ impl FrameworkTemplate {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -15858,12 +15858,12 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &FrameworkTemplate
 }
 unsafe impl ::core::marker::Send for FrameworkTemplate {}
 unsafe impl ::core::marker::Sync for FrameworkTemplate {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct FrameworkView(::windows::core::IUnknown);
 impl FrameworkView {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -15877,7 +15877,7 @@ impl FrameworkView {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Initialize<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::ApplicationModel::Core::CoreApplicationView>,
@@ -15896,7 +15896,7 @@ impl FrameworkView {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetWindow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Core::CoreWindow>,
@@ -15915,7 +15915,7 @@ impl FrameworkView {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Load<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         entrypoint: Param0,
@@ -15931,7 +15931,7 @@ impl FrameworkView {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Run(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<
             ::windows::ApplicationModel::Core::IFrameworkView,
@@ -15940,7 +15940,7 @@ impl FrameworkView {
             (::windows::core::Interface::vtable(this).Run)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Uninitialize(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<
             ::windows::ApplicationModel::Core::IFrameworkView,
@@ -16063,12 +16063,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::ApplicationModel::Core::IFram
 }
 unsafe impl ::core::marker::Send for FrameworkView {}
 unsafe impl ::core::marker::Sync for FrameworkView {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct FrameworkViewSource(::windows::core::IUnknown);
 impl FrameworkViewSource {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -16082,7 +16082,7 @@ impl FrameworkViewSource {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateView(
         &self,
     ) -> ::windows::core::Result<::windows::ApplicationModel::Core::IFrameworkView> {
@@ -16208,7 +16208,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::ApplicationModel::Core::IFram
 unsafe impl ::core::marker::Send for FrameworkViewSource {}
 unsafe impl ::core::marker::Sync for FrameworkViewSource {}
 #[repr(C)]
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 pub struct GridLength {
     pub Value: f64,
     pub GridUnitType: GridUnitType,
@@ -16256,11 +16256,11 @@ impl ::core::default::Default for GridLength {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct GridLengthHelper(::windows::core::IUnknown);
 impl GridLengthHelper {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Auto() -> ::windows::core::Result<GridLength> {
         Self::IGridLengthHelperStatics(|this| unsafe {
             let mut result__: GridLength = ::core::mem::zeroed();
@@ -16271,7 +16271,7 @@ impl GridLengthHelper {
             .from_abi::<GridLength>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromPixels(pixels: f64) -> ::windows::core::Result<GridLength> {
         Self::IGridLengthHelperStatics(|this| unsafe {
             let mut result__: GridLength = ::core::mem::zeroed();
@@ -16283,7 +16283,7 @@ impl GridLengthHelper {
             .from_abi::<GridLength>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromValueAndType(
         value: f64,
         r#type: GridUnitType,
@@ -16299,7 +16299,7 @@ impl GridLengthHelper {
             .from_abi::<GridLength>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetIsAbsolute<'a, Param0: ::windows::core::IntoParam<'a, GridLength>>(
         target: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -16313,7 +16313,7 @@ impl GridLengthHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetIsAuto<'a, Param0: ::windows::core::IntoParam<'a, GridLength>>(
         target: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -16327,7 +16327,7 @@ impl GridLengthHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetIsStar<'a, Param0: ::windows::core::IntoParam<'a, GridLength>>(
         target: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -16341,7 +16341,7 @@ impl GridLengthHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Equals<
         'a,
         Param0: ::windows::core::IntoParam<'a, GridLength>,
@@ -16449,7 +16449,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a G
 }
 unsafe impl ::core::marker::Send for GridLengthHelper {}
 unsafe impl ::core::marker::Sync for GridLengthHelper {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct GridUnitType(pub i32);
@@ -16485,7 +16485,7 @@ unsafe impl ::windows::core::RuntimeType for GridUnitType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct HorizontalAlignment(pub i32);
@@ -17251,11 +17251,11 @@ pub struct IDataTemplate_Vtbl {
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct IDataTemplateExtension(::windows::core::IUnknown);
 impl IDataTemplateExtension {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ResetTemplate(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17265,7 +17265,7 @@ impl IDataTemplateExtension {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ProcessBinding(&self, phase: u32) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -17278,7 +17278,7 @@ impl IDataTemplateExtension {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Controls'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Controls\"`*"]
     #[cfg(feature = "UI_Xaml_Controls")]
     pub fn ProcessBindings<
         'a,
@@ -18122,11 +18122,11 @@ pub struct IEffectiveViewportChangedEventArgs_Vtbl {
         result__: *mut f64,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct IElementFactory(::windows::core::IUnknown);
 impl IElementFactory {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetElement<'a, Param0: ::windows::core::IntoParam<'a, ElementFactoryGetArgs>>(
         &self,
         args: Param0,
@@ -18142,7 +18142,7 @@ impl IElementFactory {
             .from_abi::<UIElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RecycleElement<'a, Param0: ::windows::core::IntoParam<'a, ElementFactoryRecycleArgs>>(
         &self,
         args: Param0,
@@ -22231,11 +22231,11 @@ pub struct IWindowFactory_Vtbl {
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct IWindowNative(::windows::core::IUnknown);
 impl IWindowNative {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub unsafe fn WindowHandle(
         &self,
         hwnd: *mut ::windows::Win32::Foundation::HWND,
@@ -22415,11 +22415,11 @@ unsafe impl ::windows::core::Interface for IXamlRootChangedEventArgs {
 pub struct IXamlRootChangedEventArgs_Vtbl {
     pub base: ::windows::core::IInspectableVtbl,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct IXamlServiceProvider(::windows::core::IUnknown);
 impl IXamlServiceProvider {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetService<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Xaml::Interop::TypeName>,
@@ -22522,11 +22522,11 @@ pub struct IXamlServiceProvider_Vtbl {
         result__: *mut *mut ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct LaunchActivatedEventArgs(::windows::core::IUnknown);
 impl LaunchActivatedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Arguments(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -22539,7 +22539,7 @@ impl LaunchActivatedEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UWPLaunchActivatedEventArgs(
         &self,
     ) -> ::windows::core::Result<::windows::ApplicationModel::Activation::LaunchActivatedEventArgs>
@@ -22638,7 +22638,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for LaunchActivatedEventArgs {}
 unsafe impl ::core::marker::Sync for LaunchActivatedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct LeavingBackgroundEventHandler(pub ::windows::core::IUnknown);
 impl LeavingBackgroundEventHandler {
@@ -22659,7 +22659,7 @@ impl LeavingBackgroundEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -22793,7 +22793,7 @@ pub struct LeavingBackgroundEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct LineStackingStrategy(pub i32);
@@ -22832,11 +22832,11 @@ unsafe impl ::windows::core::RuntimeType for LineStackingStrategy {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct MediaFailedRoutedEventArgs(::windows::core::IUnknown);
 impl MediaFailedRoutedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ErrorMessage(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<IExceptionRoutedEventArgs>(self)?;
         unsafe {
@@ -22849,7 +22849,7 @@ impl MediaFailedRoutedEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ErrorTrace(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -22862,7 +22862,7 @@ impl MediaFailedRoutedEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
@@ -23000,7 +23000,7 @@ impl<'a> ::windows::core::IntoParam<'a, RoutedEventArgs> for &MediaFailedRoutedE
 }
 unsafe impl ::core::marker::Send for MediaFailedRoutedEventArgs {}
 unsafe impl ::core::marker::Sync for MediaFailedRoutedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct OpticalMarginAlignment(pub i32);
@@ -23038,11 +23038,11 @@ unsafe impl ::windows::core::RuntimeType for OpticalMarginAlignment {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct PointHelper(::windows::core::IUnknown);
 impl PointHelper {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromCoordinates(
         x: f32,
         y: f32,
@@ -23141,7 +23141,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a P
 }
 unsafe impl ::core::marker::Send for PointHelper {}
 unsafe impl ::core::marker::Sync for PointHelper {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct PropertyChangedCallback(pub ::windows::core::IUnknown);
 impl PropertyChangedCallback {
@@ -23162,7 +23162,7 @@ impl PropertyChangedCallback {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyObject>,
@@ -23296,11 +23296,11 @@ pub struct PropertyChangedCallback_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct PropertyMetadata(::windows::core::IUnknown);
 impl PropertyMetadata {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DefaultValue(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -23312,7 +23312,7 @@ impl PropertyMetadata {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateDefaultValueCallback(
         &self,
     ) -> ::windows::core::Result<CreateDefaultValueCallback> {
@@ -23326,7 +23326,7 @@ impl PropertyMetadata {
             .from_abi::<CreateDefaultValueCallback>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateInstanceWithDefaultValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -23345,7 +23345,7 @@ impl PropertyMetadata {
             .from_abi::<PropertyMetadata>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateInstanceWithDefaultValue_compose<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -23367,7 +23367,7 @@ impl PropertyMetadata {
             .from_abi::<PropertyMetadata>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateInstanceWithDefaultValueAndCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -23389,7 +23389,7 @@ impl PropertyMetadata {
             .from_abi::<PropertyMetadata>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateInstanceWithDefaultValueAndCallback_compose<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -23414,7 +23414,7 @@ impl PropertyMetadata {
             .from_abi::<PropertyMetadata>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateWithDefaultValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -23431,7 +23431,7 @@ impl PropertyMetadata {
             .from_abi::<PropertyMetadata>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateWithDefaultValueAndCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -23451,7 +23451,7 @@ impl PropertyMetadata {
             .from_abi::<PropertyMetadata>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateWithFactory<
         'a,
         Param0: ::windows::core::IntoParam<'a, CreateDefaultValueCallback>,
@@ -23468,7 +23468,7 @@ impl PropertyMetadata {
             .from_abi::<PropertyMetadata>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateWithFactoryAndCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, CreateDefaultValueCallback>,
@@ -23589,11 +23589,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a P
 }
 unsafe impl ::core::marker::Send for PropertyMetadata {}
 unsafe impl ::core::marker::Sync for PropertyMetadata {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct PropertyPath(::windows::core::IUnknown);
 impl PropertyPath {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23609,7 +23609,7 @@ impl PropertyPath {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -23629,7 +23629,7 @@ impl PropertyPath {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23643,7 +23643,7 @@ impl PropertyPath {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23659,7 +23659,7 @@ impl PropertyPath {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23675,7 +23675,7 @@ impl PropertyPath {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -23697,7 +23697,7 @@ impl PropertyPath {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -23716,7 +23716,7 @@ impl PropertyPath {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -23728,7 +23728,7 @@ impl PropertyPath {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -23741,7 +23741,7 @@ impl PropertyPath {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Path(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -23754,7 +23754,7 @@ impl PropertyPath {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateInstance<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         path: Param0,
     ) -> ::windows::core::Result<PropertyPath> {
@@ -23874,11 +23874,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &PropertyPath {
 }
 unsafe impl ::core::marker::Send for PropertyPath {}
 unsafe impl ::core::marker::Sync for PropertyPath {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct RectHelper(::windows::core::IUnknown);
 impl RectHelper {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Empty() -> ::windows::core::Result<::windows::Foundation::Rect> {
         Self::IRectHelperStatics(|this| unsafe {
             let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
@@ -23889,7 +23889,7 @@ impl RectHelper {
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromCoordinatesAndDimensions(
         x: f32,
         y: f32,
@@ -23909,7 +23909,7 @@ impl RectHelper {
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromPoints<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -23929,7 +23929,7 @@ impl RectHelper {
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromLocationAndSize<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -23949,7 +23949,7 @@ impl RectHelper {
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetIsEmpty<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         target: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -23963,7 +23963,7 @@ impl RectHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetBottom<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         target: Param0,
     ) -> ::windows::core::Result<f32> {
@@ -23977,7 +23977,7 @@ impl RectHelper {
             .from_abi::<f32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetLeft<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         target: Param0,
     ) -> ::windows::core::Result<f32> {
@@ -23991,7 +23991,7 @@ impl RectHelper {
             .from_abi::<f32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetRight<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         target: Param0,
     ) -> ::windows::core::Result<f32> {
@@ -24005,7 +24005,7 @@ impl RectHelper {
             .from_abi::<f32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetTop<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         target: Param0,
     ) -> ::windows::core::Result<f32> {
@@ -24019,7 +24019,7 @@ impl RectHelper {
             .from_abi::<f32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Contains<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -24039,7 +24039,7 @@ impl RectHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Equals<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -24059,7 +24059,7 @@ impl RectHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Intersect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -24079,7 +24079,7 @@ impl RectHelper {
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnionWithPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -24099,7 +24099,7 @@ impl RectHelper {
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnionWithRect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -24202,11 +24202,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a R
 }
 unsafe impl ::core::marker::Send for RectHelper {}
 unsafe impl ::core::marker::Sync for RectHelper {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct ResourceDictionary(::windows::core::IUnknown);
 impl ResourceDictionary {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -24222,7 +24222,7 @@ impl ResourceDictionary {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -24242,7 +24242,7 @@ impl ResourceDictionary {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -24256,7 +24256,7 @@ impl ResourceDictionary {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -24272,7 +24272,7 @@ impl ResourceDictionary {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -24288,7 +24288,7 @@ impl ResourceDictionary {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -24310,7 +24310,7 @@ impl ResourceDictionary {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -24329,7 +24329,7 @@ impl ResourceDictionary {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -24341,7 +24341,7 @@ impl ResourceDictionary {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -24354,7 +24354,7 @@ impl ResourceDictionary {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<
@@ -24387,7 +24387,7 @@ impl ResourceDictionary {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Lookup<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         key: Param0,
@@ -24408,7 +24408,7 @@ impl ResourceDictionary {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IMap<
@@ -24425,7 +24425,7 @@ impl ResourceDictionary {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HasKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         key: Param0,
@@ -24446,7 +24446,7 @@ impl ResourceDictionary {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<
@@ -24473,7 +24473,7 @@ impl ResourceDictionary {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Insert<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -24500,7 +24500,7 @@ impl ResourceDictionary {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Remove<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         key: Param0,
@@ -24519,7 +24519,7 @@ impl ResourceDictionary {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IMap<
@@ -24531,7 +24531,7 @@ impl ResourceDictionary {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Source(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
@@ -24543,7 +24543,7 @@ impl ResourceDictionary {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetSource<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Uri>>(
         &self,
         value: Param0,
@@ -24557,7 +24557,7 @@ impl ResourceDictionary {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MergedDictionaries(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<ResourceDictionary>>
@@ -24572,7 +24572,7 @@ impl ResourceDictionary {
             .from_abi::<::windows::Foundation::Collections::IVector<ResourceDictionary>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ThemeDictionaries(
         &self,
     ) -> ::windows::core::Result<
@@ -24594,7 +24594,7 @@ impl ResourceDictionary {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<ResourceDictionary> {
         Self::IResourceDictionaryFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -24607,7 +24607,7 @@ impl ResourceDictionary {
             .from_abi::<ResourceDictionary>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<ResourceDictionary> {
@@ -24907,7 +24907,7 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &ResourceDictionar
 }
 unsafe impl ::core::marker::Send for ResourceDictionary {}
 unsafe impl ::core::marker::Sync for ResourceDictionary {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct RoutedEvent(::windows::core::IUnknown);
 impl RoutedEvent {}
@@ -24985,11 +24985,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a R
 }
 unsafe impl ::core::marker::Send for RoutedEvent {}
 unsafe impl ::core::marker::Sync for RoutedEvent {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct RoutedEventArgs(::windows::core::IUnknown);
 impl RoutedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -25001,7 +25001,7 @@ impl RoutedEventArgs {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<RoutedEventArgs> {
         Self::IRoutedEventArgsFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -25014,7 +25014,7 @@ impl RoutedEventArgs {
             .from_abi::<RoutedEventArgs>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<RoutedEventArgs> {
@@ -25116,7 +25116,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a R
 }
 unsafe impl ::core::marker::Send for RoutedEventArgs {}
 unsafe impl ::core::marker::Sync for RoutedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct RoutedEventHandler(pub ::windows::core::IUnknown);
 impl RoutedEventHandler {
@@ -25137,7 +25137,7 @@ impl RoutedEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -25269,11 +25269,11 @@ pub struct RoutedEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct ScalarTransition(::windows::core::IUnknown);
 impl ScalarTransition {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Duration(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
@@ -25285,7 +25285,7 @@ impl ScalarTransition {
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetDuration<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::TimeSpan>,
@@ -25302,7 +25302,7 @@ impl ScalarTransition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<ScalarTransition> {
         Self::IScalarTransitionFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -25315,7 +25315,7 @@ impl ScalarTransition {
             .from_abi::<ScalarTransition>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<ScalarTransition> {
@@ -25419,12 +25419,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a S
 }
 unsafe impl ::core::marker::Send for ScalarTransition {}
 unsafe impl ::core::marker::Sync for ScalarTransition {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct Setter(::windows::core::IUnknown);
 impl Setter {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -25438,7 +25438,7 @@ impl Setter {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25454,7 +25454,7 @@ impl Setter {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -25474,7 +25474,7 @@ impl Setter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25488,7 +25488,7 @@ impl Setter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25504,7 +25504,7 @@ impl Setter {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25520,7 +25520,7 @@ impl Setter {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -25542,7 +25542,7 @@ impl Setter {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -25561,7 +25561,7 @@ impl Setter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -25573,7 +25573,7 @@ impl Setter {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -25586,7 +25586,7 @@ impl Setter {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Property(&self) -> ::windows::core::Result<DependencyProperty> {
         let this = self;
         unsafe {
@@ -25598,7 +25598,7 @@ impl Setter {
             .from_abi::<DependencyProperty>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetProperty<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         value: Param0,
@@ -25612,7 +25612,7 @@ impl Setter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Value(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -25624,7 +25624,7 @@ impl Setter {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue2<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -25638,7 +25638,7 @@ impl Setter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Target(&self) -> ::windows::core::Result<TargetPropertyPath> {
         let this = self;
         unsafe {
@@ -25650,7 +25650,7 @@ impl Setter {
             .from_abi::<TargetPropertyPath>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTarget<'a, Param0: ::windows::core::IntoParam<'a, TargetPropertyPath>>(
         &self,
         value: Param0,
@@ -25664,7 +25664,7 @@ impl Setter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsSealed(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ISetterBase>(self)?;
         unsafe {
@@ -25676,7 +25676,7 @@ impl Setter {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateInstance<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -25819,11 +25819,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &Setter {
 }
 unsafe impl ::core::marker::Send for Setter {}
 unsafe impl ::core::marker::Sync for Setter {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct SetterBase(::windows::core::IUnknown);
 impl SetterBase {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25839,7 +25839,7 @@ impl SetterBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -25859,7 +25859,7 @@ impl SetterBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25873,7 +25873,7 @@ impl SetterBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25889,7 +25889,7 @@ impl SetterBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25905,7 +25905,7 @@ impl SetterBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -25927,7 +25927,7 @@ impl SetterBase {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -25946,7 +25946,7 @@ impl SetterBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -25958,7 +25958,7 @@ impl SetterBase {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -25971,7 +25971,7 @@ impl SetterBase {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsSealed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -26078,12 +26078,12 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &SetterBase {
 }
 unsafe impl ::core::marker::Send for SetterBase {}
 unsafe impl ::core::marker::Sync for SetterBase {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct SetterBaseCollection(::windows::core::IUnknown);
 impl SetterBaseCollection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -26097,7 +26097,7 @@ impl SetterBaseCollection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<SetterBase>> {
@@ -26113,7 +26113,7 @@ impl SetterBaseCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<SetterBase>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsSealed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -26125,7 +26125,7 @@ impl SetterBaseCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<SetterBase> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IVector<SetterBase>,
@@ -26140,7 +26140,7 @@ impl SetterBaseCollection {
             .from_abi::<SetterBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IVector<SetterBase>,
@@ -26154,7 +26154,7 @@ impl SetterBaseCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<SetterBase>> {
@@ -26170,7 +26170,7 @@ impl SetterBaseCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<SetterBase>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, SetterBase>>(
         &self,
         value: Param0,
@@ -26190,7 +26190,7 @@ impl SetterBaseCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, SetterBase>>(
         &self,
         index: u32,
@@ -26208,7 +26208,7 @@ impl SetterBaseCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, SetterBase>>(
         &self,
         index: u32,
@@ -26226,7 +26226,7 @@ impl SetterBaseCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IVector<SetterBase>,
@@ -26239,7 +26239,7 @@ impl SetterBaseCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, SetterBase>>(
         &self,
         value: Param0,
@@ -26255,7 +26255,7 @@ impl SetterBaseCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IVector<SetterBase>,
@@ -26267,7 +26267,7 @@ impl SetterBaseCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<
             ::windows::Foundation::Collections::IVector<SetterBase>,
@@ -26276,7 +26276,7 @@ impl SetterBaseCollection {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -26297,7 +26297,7 @@ impl SetterBaseCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<SetterBase>],
@@ -26477,11 +26477,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for SetterBaseCollection {}
 unsafe impl ::core::marker::Sync for SetterBaseCollection {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct SizeChangedEventArgs(::windows::core::IUnknown);
 impl SizeChangedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
@@ -26493,7 +26493,7 @@ impl SizeChangedEventArgs {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PreviousSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
@@ -26505,7 +26505,7 @@ impl SizeChangedEventArgs {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn NewSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
@@ -26616,7 +26616,7 @@ impl<'a> ::windows::core::IntoParam<'a, RoutedEventArgs> for &SizeChangedEventAr
 }
 unsafe impl ::core::marker::Send for SizeChangedEventArgs {}
 unsafe impl ::core::marker::Sync for SizeChangedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct SizeChangedEventHandler(pub ::windows::core::IUnknown);
 impl SizeChangedEventHandler {
@@ -26637,7 +26637,7 @@ impl SizeChangedEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -26771,11 +26771,11 @@ pub struct SizeChangedEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct SizeHelper(::windows::core::IUnknown);
 impl SizeHelper {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Empty() -> ::windows::core::Result<::windows::Foundation::Size> {
         Self::ISizeHelperStatics(|this| unsafe {
             let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
@@ -26786,7 +26786,7 @@ impl SizeHelper {
             .from_abi::<::windows::Foundation::Size>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromDimensions(
         width: f32,
         height: f32,
@@ -26802,7 +26802,7 @@ impl SizeHelper {
             .from_abi::<::windows::Foundation::Size>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetIsEmpty<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         target: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -26816,7 +26816,7 @@ impl SizeHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Equals<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>,
@@ -26919,12 +26919,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a S
 }
 unsafe impl ::core::marker::Send for SizeHelper {}
 unsafe impl ::core::marker::Sync for SizeHelper {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct StateTrigger(::windows::core::IUnknown);
 impl StateTrigger {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -26938,7 +26938,7 @@ impl StateTrigger {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -26954,7 +26954,7 @@ impl StateTrigger {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -26974,7 +26974,7 @@ impl StateTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -26988,7 +26988,7 @@ impl StateTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27004,7 +27004,7 @@ impl StateTrigger {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27020,7 +27020,7 @@ impl StateTrigger {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -27042,7 +27042,7 @@ impl StateTrigger {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -27061,7 +27061,7 @@ impl StateTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -27073,7 +27073,7 @@ impl StateTrigger {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -27086,7 +27086,7 @@ impl StateTrigger {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsActive(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -27098,7 +27098,7 @@ impl StateTrigger {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsActive(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -27109,7 +27109,7 @@ impl StateTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetActive(&self, isactive: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IStateTriggerBaseProtected>(self)?;
         unsafe {
@@ -27120,7 +27120,7 @@ impl StateTrigger {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsActiveProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IStateTriggerStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -27257,11 +27257,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &StateTrigger {
 }
 unsafe impl ::core::marker::Send for StateTrigger {}
 unsafe impl ::core::marker::Sync for StateTrigger {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct StateTriggerBase(::windows::core::IUnknown);
 impl StateTriggerBase {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27277,7 +27277,7 @@ impl StateTriggerBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -27297,7 +27297,7 @@ impl StateTriggerBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27311,7 +27311,7 @@ impl StateTriggerBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27327,7 +27327,7 @@ impl StateTriggerBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27343,7 +27343,7 @@ impl StateTriggerBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -27365,7 +27365,7 @@ impl StateTriggerBase {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -27384,7 +27384,7 @@ impl StateTriggerBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -27396,7 +27396,7 @@ impl StateTriggerBase {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -27409,7 +27409,7 @@ impl StateTriggerBase {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetActive(&self, isactive: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IStateTriggerBaseProtected>(self)?;
         unsafe {
@@ -27515,12 +27515,12 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &StateTriggerBase 
 }
 unsafe impl ::core::marker::Send for StateTriggerBase {}
 unsafe impl ::core::marker::Sync for StateTriggerBase {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct Style(::windows::core::IUnknown);
 impl Style {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -27534,7 +27534,7 @@ impl Style {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27550,7 +27550,7 @@ impl Style {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -27570,7 +27570,7 @@ impl Style {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27584,7 +27584,7 @@ impl Style {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27600,7 +27600,7 @@ impl Style {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27616,7 +27616,7 @@ impl Style {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -27638,7 +27638,7 @@ impl Style {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -27657,7 +27657,7 @@ impl Style {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -27669,7 +27669,7 @@ impl Style {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -27682,7 +27682,7 @@ impl Style {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsSealed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -27694,7 +27694,7 @@ impl Style {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Setters(&self) -> ::windows::core::Result<SetterBaseCollection> {
         let this = self;
         unsafe {
@@ -27706,7 +27706,7 @@ impl Style {
             .from_abi::<SetterBaseCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TargetType(&self) -> ::windows::core::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
@@ -27719,7 +27719,7 @@ impl Style {
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTargetType<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Xaml::Interop::TypeName>,
@@ -27736,7 +27736,7 @@ impl Style {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BasedOn(&self) -> ::windows::core::Result<Style> {
         let this = self;
         unsafe {
@@ -27748,7 +27748,7 @@ impl Style {
             .from_abi::<Style>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetBasedOn<'a, Param0: ::windows::core::IntoParam<'a, Style>>(
         &self,
         value: Param0,
@@ -27762,14 +27762,14 @@ impl Style {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Seal(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Seal)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateInstance<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Xaml::Interop::TypeName>,
@@ -27889,7 +27889,7 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &Style {
 }
 unsafe impl ::core::marker::Send for Style {}
 unsafe impl ::core::marker::Sync for Style {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct SuspendingEventHandler(pub ::windows::core::IUnknown);
 impl SuspendingEventHandler {
@@ -27910,7 +27910,7 @@ impl SuspendingEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -28044,12 +28044,12 @@ pub struct SuspendingEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct TargetPropertyPath(::windows::core::IUnknown);
 impl TargetPropertyPath {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -28063,7 +28063,7 @@ impl TargetPropertyPath {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Path(&self) -> ::windows::core::Result<PropertyPath> {
         let this = self;
         unsafe {
@@ -28075,7 +28075,7 @@ impl TargetPropertyPath {
             .from_abi::<PropertyPath>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetPath<'a, Param0: ::windows::core::IntoParam<'a, PropertyPath>>(
         &self,
         value: Param0,
@@ -28089,7 +28089,7 @@ impl TargetPropertyPath {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Target(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
@@ -28101,7 +28101,7 @@ impl TargetPropertyPath {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTarget<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -28115,7 +28115,7 @@ impl TargetPropertyPath {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CreateInstance<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         targetproperty: Param0,
     ) -> ::windows::core::Result<TargetPropertyPath> {
@@ -28217,7 +28217,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a T
 }
 unsafe impl ::core::marker::Send for TargetPropertyPath {}
 unsafe impl ::core::marker::Sync for TargetPropertyPath {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TextAlignment(pub i32);
@@ -28257,7 +28257,7 @@ unsafe impl ::windows::core::RuntimeType for TextAlignment {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TextLineBounds(pub i32);
@@ -28294,7 +28294,7 @@ unsafe impl ::windows::core::RuntimeType for TextLineBounds {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TextReadingOrder(pub i32);
@@ -28330,7 +28330,7 @@ unsafe impl ::windows::core::RuntimeType for TextReadingOrder {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TextTrimming(pub i32);
@@ -28367,7 +28367,7 @@ unsafe impl ::windows::core::RuntimeType for TextTrimming {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TextWrapping(pub i32);
@@ -28404,7 +28404,7 @@ unsafe impl ::windows::core::RuntimeType for TextWrapping {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 pub struct Thickness {
     pub Left: f64,
     pub Top: f64,
@@ -28456,11 +28456,11 @@ impl ::core::default::Default for Thickness {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct ThicknessHelper(::windows::core::IUnknown);
 impl ThicknessHelper {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromLengths(
         left: f64,
         top: f64,
@@ -28480,7 +28480,7 @@ impl ThicknessHelper {
             .from_abi::<Thickness>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromUniformLength(uniformlength: f64) -> ::windows::core::Result<Thickness> {
         Self::IThicknessHelperStatics(|this| unsafe {
             let mut result__: Thickness = ::core::mem::zeroed();
@@ -28578,11 +28578,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a T
 }
 unsafe impl ::core::marker::Send for ThicknessHelper {}
 unsafe impl ::core::marker::Sync for ThicknessHelper {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct TriggerAction(::windows::core::IUnknown);
 impl TriggerAction {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -28598,7 +28598,7 @@ impl TriggerAction {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -28618,7 +28618,7 @@ impl TriggerAction {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -28632,7 +28632,7 @@ impl TriggerAction {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -28648,7 +28648,7 @@ impl TriggerAction {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -28664,7 +28664,7 @@ impl TriggerAction {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -28686,7 +28686,7 @@ impl TriggerAction {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -28705,7 +28705,7 @@ impl TriggerAction {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -28717,7 +28717,7 @@ impl TriggerAction {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -28825,12 +28825,12 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &TriggerAction {
 }
 unsafe impl ::core::marker::Send for TriggerAction {}
 unsafe impl ::core::marker::Sync for TriggerAction {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct TriggerActionCollection(::windows::core::IUnknown);
 impl TriggerActionCollection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -28844,7 +28844,7 @@ impl TriggerActionCollection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<TriggerAction>> {
@@ -28860,7 +28860,7 @@ impl TriggerActionCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<TriggerAction>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<TriggerAction> {
         let this = self;
         unsafe {
@@ -28873,7 +28873,7 @@ impl TriggerActionCollection {
             .from_abi::<TriggerAction>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -28885,7 +28885,7 @@ impl TriggerActionCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<TriggerAction>>
@@ -28900,7 +28900,7 @@ impl TriggerActionCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<TriggerAction>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, TriggerAction>>(
         &self,
         value: Param0,
@@ -28918,7 +28918,7 @@ impl TriggerActionCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, TriggerAction>>(
         &self,
         index: u32,
@@ -28934,7 +28934,7 @@ impl TriggerActionCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, TriggerAction>>(
         &self,
         index: u32,
@@ -28950,7 +28950,7 @@ impl TriggerActionCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -28961,7 +28961,7 @@ impl TriggerActionCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, TriggerAction>>(
         &self,
         value: Param0,
@@ -28975,7 +28975,7 @@ impl TriggerActionCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -28985,14 +28985,14 @@ impl TriggerActionCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -29011,7 +29011,7 @@ impl TriggerActionCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<TriggerAction>],
@@ -29193,11 +29193,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for TriggerActionCollection {}
 unsafe impl ::core::marker::Sync for TriggerActionCollection {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct TriggerBase(::windows::core::IUnknown);
 impl TriggerBase {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -29213,7 +29213,7 @@ impl TriggerBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -29233,7 +29233,7 @@ impl TriggerBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -29247,7 +29247,7 @@ impl TriggerBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -29263,7 +29263,7 @@ impl TriggerBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -29279,7 +29279,7 @@ impl TriggerBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -29301,7 +29301,7 @@ impl TriggerBase {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -29320,7 +29320,7 @@ impl TriggerBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -29332,7 +29332,7 @@ impl TriggerBase {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -29440,11 +29440,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &TriggerBase {
 }
 unsafe impl ::core::marker::Send for TriggerBase {}
 unsafe impl ::core::marker::Sync for TriggerBase {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct TriggerCollection(::windows::core::IUnknown);
 impl TriggerCollection {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<TriggerBase>> {
@@ -29460,7 +29460,7 @@ impl TriggerCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<TriggerBase>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<TriggerBase> {
         let this = self;
         unsafe {
@@ -29473,7 +29473,7 @@ impl TriggerCollection {
             .from_abi::<TriggerBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -29485,7 +29485,7 @@ impl TriggerCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<TriggerBase>> {
@@ -29499,7 +29499,7 @@ impl TriggerCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<TriggerBase>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, TriggerBase>>(
         &self,
         value: Param0,
@@ -29517,7 +29517,7 @@ impl TriggerCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, TriggerBase>>(
         &self,
         index: u32,
@@ -29533,7 +29533,7 @@ impl TriggerCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, TriggerBase>>(
         &self,
         index: u32,
@@ -29549,7 +29549,7 @@ impl TriggerCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -29560,7 +29560,7 @@ impl TriggerCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, TriggerBase>>(
         &self,
         value: Param0,
@@ -29574,7 +29574,7 @@ impl TriggerCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -29584,14 +29584,14 @@ impl TriggerCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -29610,7 +29610,7 @@ impl TriggerCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<TriggerBase>],
@@ -29784,11 +29784,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for TriggerCollection {}
 unsafe impl ::core::marker::Sync for TriggerCollection {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct UIElement(::windows::core::IUnknown);
 impl UIElement {
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -29809,7 +29809,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -29825,7 +29825,7 @@ impl UIElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -29845,7 +29845,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -29859,7 +29859,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -29875,7 +29875,7 @@ impl UIElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -29891,7 +29891,7 @@ impl UIElement {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -29913,7 +29913,7 @@ impl UIElement {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -29932,7 +29932,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -29944,7 +29944,7 @@ impl UIElement {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -29957,7 +29957,7 @@ impl UIElement {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
@@ -29969,7 +29969,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -29981,7 +29981,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAllowDrop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -29992,7 +29992,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -30004,7 +30004,7 @@ impl UIElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30015,7 +30015,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Clip(&self) -> ::windows::core::Result<Media::RectangleGeometry> {
         let this = self;
@@ -30028,7 +30028,7 @@ impl UIElement {
             .from_abi::<Media::RectangleGeometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetClip<'a, Param0: ::windows::core::IntoParam<'a, Media::RectangleGeometry>>(
         &self,
@@ -30043,7 +30043,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn RenderTransform(&self) -> ::windows::core::Result<Media::Transform> {
         let this = self;
@@ -30056,7 +30056,7 @@ impl UIElement {
             .from_abi::<Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetRenderTransform<'a, Param0: ::windows::core::IntoParam<'a, Media::Transform>>(
         &self,
@@ -30071,7 +30071,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Projection(&self) -> ::windows::core::Result<Media::Projection> {
         let this = self;
@@ -30084,7 +30084,7 @@ impl UIElement {
             .from_abi::<Media::Projection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetProjection<'a, Param0: ::windows::core::IntoParam<'a, Media::Projection>>(
         &self,
@@ -30099,7 +30099,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn Transform3D(&self) -> ::windows::core::Result<Media::Media3D::Transform3D> {
         let this = self;
@@ -30112,7 +30112,7 @@ impl UIElement {
             .from_abi::<Media::Media3D::Transform3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn SetTransform3D<
         'a,
@@ -30130,7 +30130,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -30142,7 +30142,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRenderTransformOrigin<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -30159,7 +30159,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -30171,7 +30171,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsHitTestVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30182,7 +30182,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Visibility(&self) -> ::windows::core::Result<Visibility> {
         let this = self;
         unsafe {
@@ -30194,7 +30194,7 @@ impl UIElement {
             .from_abi::<Visibility>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetVisibility(&self, value: Visibility) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30205,7 +30205,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
@@ -30217,7 +30217,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -30229,7 +30229,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetUseLayoutRounding(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30240,7 +30240,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Transitions(&self) -> ::windows::core::Result<Media::Animation::TransitionCollection> {
         let this = self;
@@ -30253,7 +30253,7 @@ impl UIElement {
             .from_abi::<Media::Animation::TransitionCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetTransitions<
         'a,
@@ -30271,7 +30271,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CacheMode(&self) -> ::windows::core::Result<Media::CacheMode> {
         let this = self;
@@ -30284,7 +30284,7 @@ impl UIElement {
             .from_abi::<Media::CacheMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCacheMode<'a, Param0: ::windows::core::IntoParam<'a, Media::CacheMode>>(
         &self,
@@ -30299,7 +30299,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -30311,7 +30311,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30322,7 +30322,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -30334,7 +30334,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsDoubleTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30345,7 +30345,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -30357,7 +30357,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetCanDrag(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30368,7 +30368,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -30380,7 +30380,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsRightTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30391,7 +30391,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -30403,7 +30403,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsHoldingEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30414,7 +30414,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationMode(&self) -> ::windows::core::Result<Input::ManipulationModes> {
         let this = self;
@@ -30427,7 +30427,7 @@ impl UIElement {
             .from_abi::<Input::ManipulationModes>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetManipulationMode(
         &self,
@@ -30442,7 +30442,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptures(
         &self,
@@ -30458,7 +30458,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Collections::IVectorView<Input::Pointer>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn ContextFlyout(&self) -> ::windows::core::Result<Controls::Primitives::FlyoutBase> {
         let this = self;
@@ -30471,7 +30471,7 @@ impl UIElement {
             .from_abi::<Controls::Primitives::FlyoutBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn SetContextFlyout<
         'a,
@@ -30489,7 +30489,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CompositeMode(&self) -> ::windows::core::Result<Media::ElementCompositeMode> {
         let this = self;
@@ -30502,7 +30502,7 @@ impl UIElement {
             .from_abi::<Media::ElementCompositeMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCompositeMode(
         &self,
@@ -30517,7 +30517,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Lights(
         &self,
@@ -30533,7 +30533,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Collections::IVector<Media::XamlLight>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -30545,7 +30545,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetCanBeScrollAnchor(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30556,7 +30556,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -30568,7 +30568,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30579,7 +30579,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -30591,7 +30591,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30602,7 +30602,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
@@ -30614,7 +30614,7 @@ impl UIElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAccessKeyScopeOwner<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -30628,7 +30628,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -30641,7 +30641,7 @@ impl UIElement {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -30655,7 +30655,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(&self) -> ::windows::core::Result<Input::KeyTipPlacementMode> {
         let this = self;
@@ -30668,7 +30668,7 @@ impl UIElement {
             .from_abi::<Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -30683,7 +30683,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -30695,7 +30695,7 @@ impl UIElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30706,7 +30706,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -30718,7 +30718,7 @@ impl UIElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -30729,7 +30729,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
@@ -30741,7 +30741,7 @@ impl UIElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetKeyTipTarget<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -30755,7 +30755,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusKeyboardNavigation(
         &self,
@@ -30770,7 +30770,7 @@ impl UIElement {
             .from_abi::<Input::XYFocusKeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusKeyboardNavigation(
         &self,
@@ -30785,7 +30785,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusUpNavigationStrategy(
         &self,
@@ -30800,7 +30800,7 @@ impl UIElement {
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusUpNavigationStrategy(
         &self,
@@ -30815,7 +30815,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusDownNavigationStrategy(
         &self,
@@ -30830,7 +30830,7 @@ impl UIElement {
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusDownNavigationStrategy(
         &self,
@@ -30845,7 +30845,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusLeftNavigationStrategy(
         &self,
@@ -30860,7 +30860,7 @@ impl UIElement {
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusLeftNavigationStrategy(
         &self,
@@ -30875,7 +30875,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusRightNavigationStrategy(
         &self,
@@ -30890,7 +30890,7 @@ impl UIElement {
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusRightNavigationStrategy(
         &self,
@@ -30905,7 +30905,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAccelerators(
         &self,
@@ -30924,7 +30924,7 @@ impl UIElement {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyboardAcceleratorPlacementTarget(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
@@ -30936,7 +30936,7 @@ impl UIElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetKeyboardAcceleratorPlacementTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyObject>,
@@ -30953,7 +30953,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAcceleratorPlacementMode(
         &self,
@@ -30968,7 +30968,7 @@ impl UIElement {
             .from_abi::<Input::KeyboardAcceleratorPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyboardAcceleratorPlacementMode(
         &self,
@@ -30983,7 +30983,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HighContrastAdjustment(&self) -> ::windows::core::Result<ElementHighContrastAdjustment> {
         let this = self;
         unsafe {
@@ -30995,7 +30995,7 @@ impl UIElement {
             .from_abi::<ElementHighContrastAdjustment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHighContrastAdjustment(
         &self,
         value: ElementHighContrastAdjustment,
@@ -31009,7 +31009,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TabFocusNavigation(&self) -> ::windows::core::Result<Input::KeyboardNavigationMode> {
         let this = self;
@@ -31022,7 +31022,7 @@ impl UIElement {
             .from_abi::<Input::KeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetTabFocusNavigation(
         &self,
@@ -31037,7 +31037,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OpacityTransition(&self) -> ::windows::core::Result<ScalarTransition> {
         let this = self;
         unsafe {
@@ -31049,7 +31049,7 @@ impl UIElement {
             .from_abi::<ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetOpacityTransition<'a, Param0: ::windows::core::IntoParam<'a, ScalarTransition>>(
         &self,
         value: Param0,
@@ -31063,7 +31063,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
@@ -31075,7 +31075,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -31092,7 +31092,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TranslationTransition(&self) -> ::windows::core::Result<Vector3Transition> {
         let this = self;
         unsafe {
@@ -31104,7 +31104,7 @@ impl UIElement {
             .from_abi::<Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTranslationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, Vector3Transition>,
@@ -31121,7 +31121,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -31133,7 +31133,7 @@ impl UIElement {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRotation(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -31144,7 +31144,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RotationTransition(&self) -> ::windows::core::Result<ScalarTransition> {
         let this = self;
         unsafe {
@@ -31156,7 +31156,7 @@ impl UIElement {
             .from_abi::<ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRotationTransition<'a, Param0: ::windows::core::IntoParam<'a, ScalarTransition>>(
         &self,
         value: Param0,
@@ -31170,7 +31170,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
@@ -31182,7 +31182,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetScale<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -31199,7 +31199,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ScaleTransition(&self) -> ::windows::core::Result<Vector3Transition> {
         let this = self;
         unsafe {
@@ -31211,7 +31211,7 @@ impl UIElement {
             .from_abi::<Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetScaleTransition<'a, Param0: ::windows::core::IntoParam<'a, Vector3Transition>>(
         &self,
         value: Param0,
@@ -31225,7 +31225,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TransformMatrix(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
@@ -31239,7 +31239,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTransformMatrix<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Matrix4x4>,
@@ -31256,7 +31256,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
@@ -31268,7 +31268,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetCenterPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -31285,7 +31285,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RotationAxis(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -31299,7 +31299,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRotationAxis<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -31316,7 +31316,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualOffset(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -31330,7 +31330,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = self;
         unsafe {
@@ -31342,7 +31342,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<XamlRoot> {
         let this = self;
         unsafe {
@@ -31354,7 +31354,7 @@ impl UIElement {
             .from_abi::<XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, XamlRoot>>(
         &self,
         value: Param0,
@@ -31368,7 +31368,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Shadow(&self) -> ::windows::core::Result<Media::Shadow> {
         let this = self;
@@ -31381,7 +31381,7 @@ impl UIElement {
             .from_abi::<Media::Shadow>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetShadow<'a, Param0: ::windows::core::IntoParam<'a, Media::Shadow>>(
         &self,
@@ -31396,7 +31396,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -31408,7 +31408,7 @@ impl UIElement {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -31419,7 +31419,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusState(&self) -> ::windows::core::Result<FocusState> {
         let this = self;
         unsafe {
@@ -31431,7 +31431,7 @@ impl UIElement {
             .from_abi::<FocusState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -31443,7 +31443,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetUseSystemFocusVisuals(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -31454,7 +31454,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
@@ -31466,7 +31466,7 @@ impl UIElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetXYFocusLeft<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -31480,7 +31480,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusRight(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
@@ -31492,7 +31492,7 @@ impl UIElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetXYFocusRight<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -31506,7 +31506,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusUp(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
@@ -31518,7 +31518,7 @@ impl UIElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetXYFocusUp<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -31532,7 +31532,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusDown(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
@@ -31544,7 +31544,7 @@ impl UIElement {
             .from_abi::<DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetXYFocusDown<'a, Param0: ::windows::core::IntoParam<'a, DependencyObject>>(
         &self,
         value: Param0,
@@ -31558,7 +31558,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -31570,7 +31570,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetIsTabStop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -31581,7 +31581,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -31593,7 +31593,7 @@ impl UIElement {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTabIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -31604,7 +31604,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyUp<'a, Param0: ::windows::core::IntoParam<'a, Input::KeyEventHandler>>(
         &self,
@@ -31621,7 +31621,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31638,7 +31638,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyDown<'a, Param0: ::windows::core::IntoParam<'a, Input::KeyEventHandler>>(
         &self,
@@ -31655,7 +31655,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31672,7 +31672,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GotFocus<'a, Param0: ::windows::core::IntoParam<'a, RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -31688,7 +31688,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31705,7 +31705,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn LostFocus<'a, Param0: ::windows::core::IntoParam<'a, RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -31721,7 +31721,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31738,7 +31738,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -31760,7 +31760,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDragStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31777,7 +31777,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -31799,7 +31799,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31816,7 +31816,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CharacterReceived<
         'a,
@@ -31842,7 +31842,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveCharacterReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31859,7 +31859,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragEnter<'a, Param0: ::windows::core::IntoParam<'a, DragEventHandler>>(
         &self,
         handler: Param0,
@@ -31875,7 +31875,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDragEnter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31892,7 +31892,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragLeave<'a, Param0: ::windows::core::IntoParam<'a, DragEventHandler>>(
         &self,
         handler: Param0,
@@ -31908,7 +31908,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDragLeave<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31925,7 +31925,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragOver<'a, Param0: ::windows::core::IntoParam<'a, DragEventHandler>>(
         &self,
         handler: Param0,
@@ -31941,7 +31941,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDragOver<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31958,7 +31958,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Drop<'a, Param0: ::windows::core::IntoParam<'a, DragEventHandler>>(
         &self,
         handler: Param0,
@@ -31974,7 +31974,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDrop<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31991,7 +31991,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerPressed<
         'a,
@@ -32011,7 +32011,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32028,7 +32028,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerMoved<'a, Param0: ::windows::core::IntoParam<'a, Input::PointerEventHandler>>(
         &self,
@@ -32045,7 +32045,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32062,7 +32062,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerReleased<
         'a,
@@ -32082,7 +32082,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32099,7 +32099,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerEntered<
         'a,
@@ -32119,7 +32119,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32136,7 +32136,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerExited<'a, Param0: ::windows::core::IntoParam<'a, Input::PointerEventHandler>>(
         &self,
@@ -32153,7 +32153,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32170,7 +32170,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptureLost<
         'a,
@@ -32190,7 +32190,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32207,7 +32207,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCanceled<
         'a,
@@ -32227,7 +32227,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32244,7 +32244,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerWheelChanged<
         'a,
@@ -32264,7 +32264,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32281,7 +32281,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Tapped<'a, Param0: ::windows::core::IntoParam<'a, Input::TappedEventHandler>>(
         &self,
@@ -32298,7 +32298,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32315,7 +32315,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn DoubleTapped<
         'a,
@@ -32335,7 +32335,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveDoubleTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32352,7 +32352,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Holding<'a, Param0: ::windows::core::IntoParam<'a, Input::HoldingEventHandler>>(
         &self,
@@ -32369,7 +32369,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveHolding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32386,7 +32386,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ContextRequested<
         'a,
@@ -32409,7 +32409,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveContextRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32426,7 +32426,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -32448,7 +32448,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32465,7 +32465,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn RightTapped<
         'a,
@@ -32485,7 +32485,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveRightTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32502,7 +32502,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarting<
         'a,
@@ -32522,7 +32522,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveManipulationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32539,7 +32539,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationInertiaStarting<
         'a,
@@ -32559,7 +32559,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32576,7 +32576,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarted<
         'a,
@@ -32596,7 +32596,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32613,7 +32613,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationDelta<
         'a,
@@ -32633,7 +32633,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveManipulationDelta<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32650,7 +32650,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationCompleted<
         'a,
@@ -32670,7 +32670,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32687,7 +32687,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -32713,7 +32713,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32730,7 +32730,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -32756,7 +32756,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32773,7 +32773,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -32796,7 +32796,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32813,7 +32813,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ProcessKeyboardAccelerators<
         'a,
@@ -32839,7 +32839,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveProcessKeyboardAccelerators<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32856,7 +32856,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn GettingFocus<
         'a,
@@ -32879,7 +32879,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveGettingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32896,7 +32896,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn LosingFocus<
         'a,
@@ -32919,7 +32919,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveLosingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32936,7 +32936,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn NoFocusCandidateFound<
         'a,
@@ -32962,7 +32962,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveNoFocusCandidateFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32979,7 +32979,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyDown<'a, Param0: ::windows::core::IntoParam<'a, Input::KeyEventHandler>>(
         &self,
@@ -32996,7 +32996,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePreviewKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -33013,7 +33013,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyUp<'a, Param0: ::windows::core::IntoParam<'a, Input::KeyEventHandler>>(
         &self,
@@ -33030,7 +33030,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemovePreviewKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -33047,7 +33047,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -33069,7 +33069,7 @@ impl UIElement {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveBringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -33086,7 +33086,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Measure<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         &self,
         availablesize: Param0,
@@ -33100,7 +33100,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Arrange<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         finalrect: Param0,
@@ -33114,7 +33114,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CapturePointer<'a, Param0: ::windows::core::IntoParam<'a, Input::Pointer>>(
         &self,
@@ -33131,7 +33131,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ReleasePointerCapture<'a, Param0: ::windows::core::IntoParam<'a, Input::Pointer>>(
         &self,
@@ -33146,7 +33146,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReleasePointerCaptures(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -33156,7 +33156,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AddHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, RoutedEvent>,
@@ -33178,7 +33178,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, RoutedEvent>,
@@ -33198,7 +33198,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn TransformToVisual<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
@@ -33215,7 +33215,7 @@ impl UIElement {
             .from_abi::<Media::GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn InvalidateMeasure(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -33225,7 +33225,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn InvalidateArrange(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -33235,7 +33235,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -33245,7 +33245,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -33257,7 +33257,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn StartDragAsync<
         'a,
@@ -33283,7 +33283,7 @@ impl UIElement {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn StartBringIntoView(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -33293,7 +33293,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn StartBringIntoViewWithOptions<
         'a,
         Param0: ::windows::core::IntoParam<'a, BringIntoViewOptions>,
@@ -33310,7 +33310,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TryInvokeKeyboardAccelerator<
         'a,
@@ -33328,7 +33328,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Focus(&self, value: FocusState) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -33341,7 +33341,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StartAnimation<
         'a,
@@ -33359,7 +33359,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StopAnimation<
         'a,
@@ -33377,7 +33377,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<IUIElementProtected>(self)?;
@@ -33390,7 +33390,7 @@ impl UIElement {
             .from_abi::<super::Input::InputCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn SetProtectedCursor<
         'a,
@@ -33408,7 +33408,7 @@ impl UIElement {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyDownEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33419,7 +33419,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyUpEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33430,7 +33430,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerEnteredEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33441,7 +33441,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerPressedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33452,7 +33452,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerMovedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33463,7 +33463,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerReleasedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33474,7 +33474,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerExitedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33485,7 +33485,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerCaptureLostEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33496,7 +33496,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerCanceledEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33507,7 +33507,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerWheelChangedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33518,7 +33518,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TappedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33529,7 +33529,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DoubleTappedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33540,7 +33540,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HoldingEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33551,7 +33551,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RightTappedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33562,7 +33562,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationStartingEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33573,7 +33573,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationInertiaStartingEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33584,7 +33584,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationStartedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33595,7 +33595,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationDeltaEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33606,7 +33606,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationCompletedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33617,7 +33617,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragEnterEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33628,7 +33628,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragLeaveEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33639,7 +33639,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragOverEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33650,7 +33650,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DropEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33661,7 +33661,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GettingFocusEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33672,7 +33672,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn LosingFocusEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33683,7 +33683,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn NoFocusCandidateFoundEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33694,7 +33694,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PreviewKeyDownEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33705,7 +33705,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CharacterReceivedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33716,7 +33716,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PreviewKeyUpEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33727,7 +33727,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BringIntoViewRequestedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33738,7 +33738,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ContextRequestedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33749,7 +33749,7 @@ impl UIElement {
             .from_abi::<RoutedEvent>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowDropProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33760,7 +33760,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OpacityProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33771,7 +33771,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClipProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33782,7 +33782,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RenderTransformProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33793,7 +33793,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ProjectionProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33804,7 +33804,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Transform3DProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33815,7 +33815,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RenderTransformOriginProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33826,7 +33826,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsHitTestVisibleProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33837,7 +33837,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn VisibilityProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33848,7 +33848,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UseLayoutRoundingProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33859,7 +33859,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TransitionsProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33870,7 +33870,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CacheModeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33881,7 +33881,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsTapEnabledProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33892,7 +33892,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsDoubleTapEnabledProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33903,7 +33903,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CanDragProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33914,7 +33914,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsRightTapEnabledProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33925,7 +33925,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsHoldingEnabledProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33936,7 +33936,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationModeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33947,7 +33947,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerCapturesProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33958,7 +33958,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ContextFlyoutProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33969,7 +33969,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CompositeModeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33980,7 +33980,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn LightsProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -33991,7 +33991,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CanBeScrollAnchorProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34002,7 +34002,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvokedProperty() -> ::windows::core::Result<DependencyProperty>
     {
         Self::IUIElementStatics(|this| unsafe {
@@ -34014,7 +34014,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsAccessKeyScopeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34025,7 +34025,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AccessKeyScopeOwnerProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34036,7 +34036,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AccessKeyProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34047,7 +34047,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipPlacementModeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34058,7 +34058,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipHorizontalOffsetProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34069,7 +34069,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipVerticalOffsetProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34080,7 +34080,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipTargetProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34091,7 +34091,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusKeyboardNavigationProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34102,7 +34102,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusUpNavigationStrategyProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34113,7 +34113,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusDownNavigationStrategyProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34124,7 +34124,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusLeftNavigationStrategyProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34135,7 +34135,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusRightNavigationStrategyProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34146,7 +34146,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyboardAcceleratorPlacementTargetProperty(
     ) -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
@@ -34158,7 +34158,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyboardAcceleratorPlacementModeProperty() -> ::windows::core::Result<DependencyProperty>
     {
         Self::IUIElementStatics(|this| unsafe {
@@ -34170,7 +34170,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HighContrastAdjustmentProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34181,7 +34181,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TabFocusNavigationProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34192,7 +34192,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ShadowProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34203,7 +34203,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusStateProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34214,7 +34214,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UseSystemFocusVisualsProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34225,7 +34225,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusLeftProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34236,7 +34236,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusRightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34247,7 +34247,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusUpProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34258,7 +34258,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusDownProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34269,7 +34269,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsTabStopProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34280,7 +34280,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TabIndexProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34291,7 +34291,7 @@ impl UIElement {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TryStartDirectManipulation<
         'a,
@@ -34309,7 +34309,7 @@ impl UIElement {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterAsScrollPort<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         element: Param0,
     ) -> ::windows::core::Result<()> {
@@ -34321,7 +34321,7 @@ impl UIElement {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::Composition::Visual> {
         let this = &::windows::core::Interface::cast::<super::Composition::IVisualElement2>(self)?;
@@ -34521,11 +34521,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &UIElement {
 }
 unsafe impl ::core::marker::Send for UIElement {}
 unsafe impl ::core::marker::Sync for UIElement {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct UIElementWeakCollection(::windows::core::IUnknown);
 impl UIElementWeakCollection {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<UIElement>> {
@@ -34541,7 +34541,7 @@ impl UIElementWeakCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<UIElement>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<UIElementWeakCollection> {
         Self::IUIElementWeakCollectionFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34554,7 +34554,7 @@ impl UIElementWeakCollection {
             .from_abi::<UIElementWeakCollection>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<UIElementWeakCollection> {
@@ -34570,7 +34570,7 @@ impl UIElementWeakCollection {
             .from_abi::<UIElementWeakCollection>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
@@ -34583,7 +34583,7 @@ impl UIElementWeakCollection {
             .from_abi::<UIElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -34595,7 +34595,7 @@ impl UIElementWeakCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<UIElement>> {
@@ -34609,7 +34609,7 @@ impl UIElementWeakCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<UIElement>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         value: Param0,
@@ -34627,7 +34627,7 @@ impl UIElementWeakCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         index: u32,
@@ -34643,7 +34643,7 @@ impl UIElementWeakCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         index: u32,
@@ -34659,7 +34659,7 @@ impl UIElementWeakCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -34670,7 +34670,7 @@ impl UIElementWeakCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         value: Param0,
@@ -34684,7 +34684,7 @@ impl UIElementWeakCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -34694,14 +34694,14 @@ impl UIElementWeakCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -34720,7 +34720,7 @@ impl UIElementWeakCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<UIElement>],
@@ -34910,11 +34910,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for UIElementWeakCollection {}
 unsafe impl ::core::marker::Sync for UIElementWeakCollection {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct UnhandledExceptionEventArgs(::windows::core::IUnknown);
 impl UnhandledExceptionEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Exception(&self) -> ::windows::core::Result<::windows::core::HRESULT> {
         let this = self;
         unsafe {
@@ -34926,7 +34926,7 @@ impl UnhandledExceptionEventArgs {
             .from_abi::<::windows::core::HRESULT>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Message(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -34939,7 +34939,7 @@ impl UnhandledExceptionEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -34951,7 +34951,7 @@ impl UnhandledExceptionEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -35046,7 +35046,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for UnhandledExceptionEventArgs {}
 unsafe impl ::core::marker::Sync for UnhandledExceptionEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct UnhandledExceptionEventHandler(pub ::windows::core::IUnknown);
 impl UnhandledExceptionEventHandler {
@@ -35067,7 +35067,7 @@ impl UnhandledExceptionEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -35201,11 +35201,11 @@ pub struct UnhandledExceptionEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct Vector3Transition(::windows::core::IUnknown);
 impl Vector3Transition {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Duration(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
@@ -35217,7 +35217,7 @@ impl Vector3Transition {
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetDuration<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::TimeSpan>,
@@ -35234,7 +35234,7 @@ impl Vector3Transition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Components(&self) -> ::windows::core::Result<Vector3TransitionComponents> {
         let this = self;
         unsafe {
@@ -35246,7 +35246,7 @@ impl Vector3Transition {
             .from_abi::<Vector3TransitionComponents>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetComponents(&self, value: Vector3TransitionComponents) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -35257,7 +35257,7 @@ impl Vector3Transition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<Vector3Transition> {
         Self::IVector3TransitionFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -35270,7 +35270,7 @@ impl Vector3Transition {
             .from_abi::<Vector3Transition>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<Vector3Transition> {
@@ -35374,7 +35374,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a V
 }
 unsafe impl ::core::marker::Send for Vector3Transition {}
 unsafe impl ::core::marker::Sync for Vector3Transition {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct Vector3TransitionComponents(pub u32);
@@ -35441,7 +35441,7 @@ unsafe impl ::windows::core::RuntimeType for Vector3TransitionComponents {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct VerticalAlignment(pub i32);
@@ -35478,7 +35478,7 @@ unsafe impl ::windows::core::RuntimeType for VerticalAlignment {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct Visibility(pub i32);
@@ -35513,12 +35513,12 @@ unsafe impl ::windows::core::RuntimeType for Visibility {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct VisualState(::windows::core::IUnknown);
 impl VisualState {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -35532,7 +35532,7 @@ impl VisualState {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -35548,7 +35548,7 @@ impl VisualState {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -35568,7 +35568,7 @@ impl VisualState {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -35582,7 +35582,7 @@ impl VisualState {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -35598,7 +35598,7 @@ impl VisualState {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -35614,7 +35614,7 @@ impl VisualState {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -35636,7 +35636,7 @@ impl VisualState {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -35655,7 +35655,7 @@ impl VisualState {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -35667,7 +35667,7 @@ impl VisualState {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -35680,7 +35680,7 @@ impl VisualState {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -35693,7 +35693,7 @@ impl VisualState {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Storyboard(&self) -> ::windows::core::Result<Media::Animation::Storyboard> {
         let this = self;
@@ -35706,7 +35706,7 @@ impl VisualState {
             .from_abi::<Media::Animation::Storyboard>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetStoryboard<
         'a,
@@ -35724,7 +35724,7 @@ impl VisualState {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Setters(&self) -> ::windows::core::Result<SetterBaseCollection> {
         let this = self;
         unsafe {
@@ -35736,7 +35736,7 @@ impl VisualState {
             .from_abi::<SetterBaseCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn StateTriggers(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<StateTriggerBase>>
@@ -35846,12 +35846,12 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &VisualState {
 }
 unsafe impl ::core::marker::Send for VisualState {}
 unsafe impl ::core::marker::Sync for VisualState {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct VisualStateChangedEventArgs(::windows::core::IUnknown);
 impl VisualStateChangedEventArgs {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -35865,7 +35865,7 @@ impl VisualStateChangedEventArgs {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OldState(&self) -> ::windows::core::Result<VisualState> {
         let this = self;
         unsafe {
@@ -35877,7 +35877,7 @@ impl VisualStateChangedEventArgs {
             .from_abi::<VisualState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetOldState<'a, Param0: ::windows::core::IntoParam<'a, VisualState>>(
         &self,
         value: Param0,
@@ -35891,7 +35891,7 @@ impl VisualStateChangedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn NewState(&self) -> ::windows::core::Result<VisualState> {
         let this = self;
         unsafe {
@@ -35903,7 +35903,7 @@ impl VisualStateChangedEventArgs {
             .from_abi::<VisualState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetNewState<'a, Param0: ::windows::core::IntoParam<'a, VisualState>>(
         &self,
         value: Param0,
@@ -35917,7 +35917,7 @@ impl VisualStateChangedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Controls'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Controls\"`*"]
     #[cfg(feature = "UI_Xaml_Controls")]
     pub fn Control(&self) -> ::windows::core::Result<Controls::Control> {
         let this = self;
@@ -35930,7 +35930,7 @@ impl VisualStateChangedEventArgs {
             .from_abi::<Controls::Control>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Controls'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Controls\"`*"]
     #[cfg(feature = "UI_Xaml_Controls")]
     pub fn SetControl<'a, Param0: ::windows::core::IntoParam<'a, Controls::Control>>(
         &self,
@@ -36029,7 +36029,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for VisualStateChangedEventArgs {}
 unsafe impl ::core::marker::Sync for VisualStateChangedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct VisualStateChangedEventHandler(pub ::windows::core::IUnknown);
 impl VisualStateChangedEventHandler {
@@ -36050,7 +36050,7 @@ impl VisualStateChangedEventHandler {
         };
         unsafe { ::core::mem::transmute(::windows::core::alloc::boxed::Box::new(com)) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Invoke<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -36184,12 +36184,12 @@ pub struct VisualStateChangedEventHandler_Vtbl {
         e: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct VisualStateGroup(::windows::core::IUnknown);
 impl VisualStateGroup {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -36203,7 +36203,7 @@ impl VisualStateGroup {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -36219,7 +36219,7 @@ impl VisualStateGroup {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -36239,7 +36239,7 @@ impl VisualStateGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -36253,7 +36253,7 @@ impl VisualStateGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -36269,7 +36269,7 @@ impl VisualStateGroup {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -36285,7 +36285,7 @@ impl VisualStateGroup {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -36307,7 +36307,7 @@ impl VisualStateGroup {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -36326,7 +36326,7 @@ impl VisualStateGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -36338,7 +36338,7 @@ impl VisualStateGroup {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -36351,7 +36351,7 @@ impl VisualStateGroup {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -36364,7 +36364,7 @@ impl VisualStateGroup {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Transitions(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<VisualTransition>>
@@ -36379,7 +36379,7 @@ impl VisualStateGroup {
             .from_abi::<::windows::Foundation::Collections::IVector<VisualTransition>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn States(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<VisualState>> {
@@ -36393,7 +36393,7 @@ impl VisualStateGroup {
             .from_abi::<::windows::Foundation::Collections::IVector<VisualState>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CurrentState(&self) -> ::windows::core::Result<VisualState> {
         let this = self;
         unsafe {
@@ -36405,7 +36405,7 @@ impl VisualStateGroup {
             .from_abi::<VisualState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CurrentStateChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, VisualStateChangedEventHandler>,
@@ -36424,7 +36424,7 @@ impl VisualStateGroup {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveCurrentStateChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36441,7 +36441,7 @@ impl VisualStateGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CurrentStateChanging<
         'a,
         Param0: ::windows::core::IntoParam<'a, VisualStateChangedEventHandler>,
@@ -36460,7 +36460,7 @@ impl VisualStateGroup {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveCurrentStateChanging<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36572,11 +36572,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &VisualStateGroup 
 }
 unsafe impl ::core::marker::Send for VisualStateGroup {}
 unsafe impl ::core::marker::Sync for VisualStateGroup {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct VisualStateManager(::windows::core::IUnknown);
 impl VisualStateManager {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -36592,7 +36592,7 @@ impl VisualStateManager {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -36612,7 +36612,7 @@ impl VisualStateManager {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -36626,7 +36626,7 @@ impl VisualStateManager {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -36642,7 +36642,7 @@ impl VisualStateManager {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -36658,7 +36658,7 @@ impl VisualStateManager {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -36680,7 +36680,7 @@ impl VisualStateManager {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -36699,7 +36699,7 @@ impl VisualStateManager {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -36711,7 +36711,7 @@ impl VisualStateManager {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -36724,7 +36724,7 @@ impl VisualStateManager {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<VisualStateManager> {
         Self::IVisualStateManagerFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -36737,7 +36737,7 @@ impl VisualStateManager {
             .from_abi::<VisualStateManager>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<VisualStateManager> {
@@ -36753,7 +36753,7 @@ impl VisualStateManager {
             .from_abi::<VisualStateManager>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Controls'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Controls\"`*"]
     #[cfg(feature = "UI_Xaml_Controls")]
     pub fn RaiseCurrentStateChanging<
         'a,
@@ -36780,7 +36780,7 @@ impl VisualStateManager {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Controls'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Controls\"`*"]
     #[cfg(feature = "UI_Xaml_Controls")]
     pub fn RaiseCurrentStateChanged<
         'a,
@@ -36807,7 +36807,7 @@ impl VisualStateManager {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetVisualStateGroups<'a, Param0: ::windows::core::IntoParam<'a, FrameworkElement>>(
         obj: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<VisualStateGroup>>
@@ -36822,7 +36822,7 @@ impl VisualStateManager {
             .from_abi::<::windows::Foundation::Collections::IVector<VisualStateGroup>>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CustomVisualStateManagerProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IVisualStateManagerStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -36833,7 +36833,7 @@ impl VisualStateManager {
             .from_abi::<DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetCustomVisualStateManager<
         'a,
         Param0: ::windows::core::IntoParam<'a, FrameworkElement>,
@@ -36850,7 +36850,7 @@ impl VisualStateManager {
             .from_abi::<VisualStateManager>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetCustomVisualStateManager<
         'a,
         Param0: ::windows::core::IntoParam<'a, FrameworkElement>,
@@ -36868,7 +36868,7 @@ impl VisualStateManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Controls'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Controls\"`*"]
     #[cfg(feature = "UI_Xaml_Controls")]
     pub fn GoToState<
         'a,
@@ -37012,11 +37012,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &VisualStateManage
 }
 unsafe impl ::core::marker::Send for VisualStateManager {}
 unsafe impl ::core::marker::Sync for VisualStateManager {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct VisualTransition(::windows::core::IUnknown);
 impl VisualTransition {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -37032,7 +37032,7 @@ impl VisualTransition {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -37052,7 +37052,7 @@ impl VisualTransition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -37066,7 +37066,7 @@ impl VisualTransition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -37082,7 +37082,7 @@ impl VisualTransition {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GetAnimationBaseValue<'a, Param0: ::windows::core::IntoParam<'a, DependencyProperty>>(
         &self,
         dp: Param0,
@@ -37098,7 +37098,7 @@ impl VisualTransition {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -37120,7 +37120,7 @@ impl VisualTransition {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, DependencyProperty>,
@@ -37139,7 +37139,7 @@ impl VisualTransition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
@@ -37151,7 +37151,7 @@ impl VisualTransition {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
@@ -37164,7 +37164,7 @@ impl VisualTransition {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GeneratedDuration(&self) -> ::windows::core::Result<Duration> {
         let this = self;
         unsafe {
@@ -37176,7 +37176,7 @@ impl VisualTransition {
             .from_abi::<Duration>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetGeneratedDuration<'a, Param0: ::windows::core::IntoParam<'a, Duration>>(
         &self,
         value: Param0,
@@ -37190,7 +37190,7 @@ impl VisualTransition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn GeneratedEasingFunction(
         &self,
@@ -37205,7 +37205,7 @@ impl VisualTransition {
             .from_abi::<Media::Animation::EasingFunctionBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetGeneratedEasingFunction<
         'a,
@@ -37223,7 +37223,7 @@ impl VisualTransition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn To(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -37236,7 +37236,7 @@ impl VisualTransition {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTo<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -37250,7 +37250,7 @@ impl VisualTransition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn From(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -37263,7 +37263,7 @@ impl VisualTransition {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetFrom<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -37277,7 +37277,7 @@ impl VisualTransition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Storyboard(&self) -> ::windows::core::Result<Media::Animation::Storyboard> {
         let this = self;
@@ -37290,7 +37290,7 @@ impl VisualTransition {
             .from_abi::<Media::Animation::Storyboard>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetStoryboard<
         'a,
@@ -37308,7 +37308,7 @@ impl VisualTransition {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<VisualTransition> {
         Self::IVisualTransitionFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -37321,7 +37321,7 @@ impl VisualTransition {
             .from_abi::<VisualTransition>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<VisualTransition> {
@@ -37445,11 +37445,11 @@ impl<'a> ::windows::core::IntoParam<'a, DependencyObject> for &VisualTransition 
 }
 unsafe impl ::core::marker::Send for VisualTransition {}
 unsafe impl ::core::marker::Sync for VisualTransition {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct Window(::windows::core::IUnknown);
 impl Window {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -37461,7 +37461,7 @@ impl Window {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Visible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -37473,7 +37473,7 @@ impl Window {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Content(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
@@ -37485,7 +37485,7 @@ impl Window {
             .from_abi::<UIElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetContent<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         value: Param0,
@@ -37499,7 +37499,7 @@ impl Window {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CoreWindow(&self) -> ::windows::core::Result<::windows::UI::Core::CoreWindow> {
         let this = self;
         unsafe {
@@ -37511,7 +37511,7 @@ impl Window {
             .from_abi::<::windows::UI::Core::CoreWindow>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn Compositor(&self) -> ::windows::core::Result<super::Composition::Compositor> {
         let this = self;
@@ -37524,7 +37524,7 @@ impl Window {
             .from_abi::<super::Composition::Compositor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = self;
         unsafe {
@@ -37536,7 +37536,7 @@ impl Window {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = self;
@@ -37549,7 +37549,7 @@ impl Window {
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Title(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -37562,7 +37562,7 @@ impl Window {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTitle<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -37576,7 +37576,7 @@ impl Window {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ExtendsContentIntoTitleBar(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -37588,7 +37588,7 @@ impl Window {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetExtendsContentIntoTitleBar(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -37599,7 +37599,7 @@ impl Window {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Activated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -37624,7 +37624,7 @@ impl Window {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveActivated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37641,7 +37641,7 @@ impl Window {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Closed<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -37666,7 +37666,7 @@ impl Window {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveClosed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37683,7 +37683,7 @@ impl Window {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -37708,7 +37708,7 @@ impl Window {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveSizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37725,7 +37725,7 @@ impl Window {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn VisibilityChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -37750,7 +37750,7 @@ impl Window {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveVisibilityChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37767,7 +37767,7 @@ impl Window {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Activate(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -37775,14 +37775,14 @@ impl Window {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetTitleBar<'a, Param0: ::windows::core::IntoParam<'a, UIElement>>(
         &self,
         titlebar: Param0,
@@ -37796,7 +37796,7 @@ impl Window {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<Window> {
         Self::IWindowFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -37809,7 +37809,7 @@ impl Window {
             .from_abi::<Window>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn compose<T: ::windows::core::Compose>(compose: T) -> ::windows::core::Result<Window> {
         Self::IWindowFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
@@ -37823,7 +37823,7 @@ impl Window {
             .from_abi::<Window>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Current() -> ::windows::core::Result<Window> {
         Self::IWindowStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -37925,11 +37925,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a W
 }
 unsafe impl ::core::marker::Send for Window {}
 unsafe impl ::core::marker::Sync for Window {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct WindowActivatedEventArgs(::windows::core::IUnknown);
 impl WindowActivatedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -37941,7 +37941,7 @@ impl WindowActivatedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -37952,7 +37952,7 @@ impl WindowActivatedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn WindowActivationState(&self) -> ::windows::core::Result<WindowActivationState> {
         let this = self;
         unsafe {
@@ -38048,7 +38048,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for WindowActivatedEventArgs {}
 unsafe impl ::core::marker::Sync for WindowActivatedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct WindowActivationState(pub i32);
@@ -38087,11 +38087,11 @@ unsafe impl ::windows::core::RuntimeType for WindowActivationState {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct WindowEventArgs(::windows::core::IUnknown);
 impl WindowEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -38103,7 +38103,7 @@ impl WindowEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -38189,11 +38189,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a W
 }
 unsafe impl ::core::marker::Send for WindowEventArgs {}
 unsafe impl ::core::marker::Sync for WindowEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct WindowSizeChangedEventArgs(::windows::core::IUnknown);
 impl WindowSizeChangedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -38205,7 +38205,7 @@ impl WindowSizeChangedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -38216,7 +38216,7 @@ impl WindowSizeChangedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
@@ -38312,11 +38312,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for WindowSizeChangedEventArgs {}
 unsafe impl ::core::marker::Sync for WindowSizeChangedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct WindowVisibilityChangedEventArgs(::windows::core::IUnknown);
 impl WindowVisibilityChangedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -38328,7 +38328,7 @@ impl WindowVisibilityChangedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -38339,7 +38339,7 @@ impl WindowVisibilityChangedEventArgs {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Visible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -38435,11 +38435,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for WindowVisibilityChangedEventArgs {}
 unsafe impl ::core::marker::Sync for WindowVisibilityChangedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct XamlRoot(::windows::core::IUnknown);
 impl XamlRoot {
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Content(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
@@ -38451,7 +38451,7 @@ impl XamlRoot {
             .from_abi::<UIElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
@@ -38463,7 +38463,7 @@ impl XamlRoot {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -38475,7 +38475,7 @@ impl XamlRoot {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsHostVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -38487,7 +38487,7 @@ impl XamlRoot {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Changed<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -38509,7 +38509,7 @@ impl XamlRoot {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml'*"]
+    #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RemoveChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -38601,7 +38601,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a X
 }
 unsafe impl ::core::marker::Send for XamlRoot {}
 unsafe impl ::core::marker::Sync for XamlRoot {}
-#[doc = "*Required features: 'UI_Xaml'*"]
+#[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
 pub struct XamlRootChangedEventArgs(::windows::core::IUnknown);
 impl XamlRootChangedEventArgs {}

@@ -323,10 +323,10 @@ pub struct IResourceNotFoundEventArgs_Vtbl {
         candidate: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
 pub struct KnownResourceQualifierName {}
 impl KnownResourceQualifierName {
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn Contrast() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
@@ -338,7 +338,7 @@ impl KnownResourceQualifierName {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn Custom() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
@@ -350,7 +350,7 @@ impl KnownResourceQualifierName {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn DeviceFamily() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
@@ -362,7 +362,7 @@ impl KnownResourceQualifierName {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn HomeRegion() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
@@ -374,7 +374,7 @@ impl KnownResourceQualifierName {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn Language() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
@@ -386,7 +386,7 @@ impl KnownResourceQualifierName {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn LayoutDirection() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
@@ -398,7 +398,7 @@ impl KnownResourceQualifierName {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn Scale() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
@@ -410,7 +410,7 @@ impl KnownResourceQualifierName {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn TargetSize() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
@@ -422,7 +422,7 @@ impl KnownResourceQualifierName {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn Theme() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IKnownResourceQualifierNameStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
@@ -452,11 +452,11 @@ impl ::windows::core::RuntimeName for KnownResourceQualifierName {
     const NAME: &'static str =
         "Microsoft.Windows.ApplicationModel.Resources.KnownResourceQualifierName";
 }
-#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
 #[repr(transparent)]
 pub struct ResourceCandidate(::windows::core::IUnknown);
 impl ResourceCandidate {
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn ValueAsString(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -469,7 +469,7 @@ impl ResourceCandidate {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn ValueAsBytes(&self) -> ::windows::core::Result<::windows::core::Array<u8>> {
         let this = self;
         unsafe {
@@ -482,7 +482,7 @@ impl ResourceCandidate {
             .and_then(|| result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn Kind(&self) -> ::windows::core::Result<ResourceCandidateKind> {
         let this = self;
         unsafe {
@@ -494,7 +494,7 @@ impl ResourceCandidate {
             .from_abi::<ResourceCandidateKind>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn QualifierValues(
         &self,
     ) -> ::windows::core::Result<
@@ -516,7 +516,7 @@ impl ResourceCandidate {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn CreateInstance<'a, Param1: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         kind: ResourceCandidateKind,
         data: Param1,
@@ -532,7 +532,7 @@ impl ResourceCandidate {
             .from_abi::<ResourceCandidate>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn CreateInstance2(data: &[u8]) -> ::windows::core::Result<ResourceCandidate> {
         Self::IResourceCandidateFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -631,7 +631,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a R
 }
 unsafe impl ::core::marker::Send for ResourceCandidate {}
 unsafe impl ::core::marker::Sync for ResourceCandidate {}
-#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ResourceCandidateKind(pub i32);
@@ -671,11 +671,11 @@ unsafe impl ::windows::core::RuntimeType for ResourceCandidateKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
 #[repr(transparent)]
 pub struct ResourceContext(::windows::core::IUnknown);
 impl ResourceContext {
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn QualifierValues(
         &self,
     ) -> ::windows::core::Result<
@@ -770,12 +770,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a R
 }
 unsafe impl ::core::marker::Send for ResourceContext {}
 unsafe impl ::core::marker::Sync for ResourceContext {}
-#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
 #[repr(transparent)]
 pub struct ResourceLoader(::windows::core::IUnknown);
 impl ResourceLoader {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -789,7 +789,7 @@ impl ResourceLoader {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn GetString<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         resourceid: Param0,
@@ -806,7 +806,7 @@ impl ResourceLoader {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn GetStringForUri<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Uri>,
@@ -826,7 +826,7 @@ impl ResourceLoader {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn CreateInstance<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         filename: Param0,
     ) -> ::windows::core::Result<ResourceLoader> {
@@ -840,7 +840,7 @@ impl ResourceLoader {
             .from_abi::<ResourceLoader>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn CreateInstance2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -860,7 +860,7 @@ impl ResourceLoader {
             .from_abi::<ResourceLoader>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn GetDefaultResourceFilePath() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::IResourceLoaderStatics(|this| unsafe {
             let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
@@ -967,12 +967,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a R
 }
 unsafe impl ::core::marker::Send for ResourceLoader {}
 unsafe impl ::core::marker::Sync for ResourceLoader {}
-#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
 #[repr(transparent)]
 pub struct ResourceManager(::windows::core::IUnknown);
 impl ResourceManager {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -986,7 +986,7 @@ impl ResourceManager {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn MainResourceMap(&self) -> ::windows::core::Result<ResourceMap> {
         let this = self;
         unsafe {
@@ -998,7 +998,7 @@ impl ResourceManager {
             .from_abi::<ResourceMap>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn CreateResourceContext(&self) -> ::windows::core::Result<ResourceContext> {
         let this = self;
         unsafe {
@@ -1010,7 +1010,7 @@ impl ResourceManager {
             .from_abi::<ResourceContext>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn ResourceNotFound<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1032,7 +1032,7 @@ impl ResourceManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn RemoveResourceNotFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1049,7 +1049,7 @@ impl ResourceManager {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn CreateInstance<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         filename: Param0,
     ) -> ::windows::core::Result<ResourceManager> {
@@ -1147,11 +1147,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a R
 }
 unsafe impl ::core::marker::Send for ResourceManager {}
 unsafe impl ::core::marker::Sync for ResourceManager {}
-#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
 #[repr(transparent)]
 pub struct ResourceMap(::windows::core::IUnknown);
 impl ResourceMap {
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn ResourceCount(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -1163,7 +1163,7 @@ impl ResourceMap {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn GetSubtree<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         reference: Param0,
@@ -1179,7 +1179,7 @@ impl ResourceMap {
             .from_abi::<ResourceMap>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn TryGetSubtree<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         reference: Param0,
@@ -1195,7 +1195,7 @@ impl ResourceMap {
             .from_abi::<ResourceMap>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         resource: Param0,
@@ -1211,7 +1211,7 @@ impl ResourceMap {
             .from_abi::<ResourceCandidate>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn GetValueWithContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1233,7 +1233,7 @@ impl ResourceMap {
             .from_abi::<ResourceCandidate>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn GetValueByIndex(
         &self,
         index: u32,
@@ -1257,7 +1257,7 @@ impl ResourceMap {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn GetValueByIndexWithContext<
         'a,
         Param1: ::windows::core::IntoParam<'a, ResourceContext>,
@@ -1286,7 +1286,7 @@ impl ResourceMap {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn TryGetValue<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         resource: Param0,
@@ -1302,7 +1302,7 @@ impl ResourceMap {
             .from_abi::<ResourceCandidate>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn TryGetValueWithContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1397,11 +1397,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a R
 }
 unsafe impl ::core::marker::Send for ResourceMap {}
 unsafe impl ::core::marker::Sync for ResourceMap {}
-#[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
 #[repr(transparent)]
 pub struct ResourceNotFoundEventArgs(::windows::core::IUnknown);
 impl ResourceNotFoundEventArgs {
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn Context(&self) -> ::windows::core::Result<ResourceContext> {
         let this = self;
         unsafe {
@@ -1413,7 +1413,7 @@ impl ResourceNotFoundEventArgs {
             .from_abi::<ResourceContext>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -1426,7 +1426,7 @@ impl ResourceNotFoundEventArgs {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_Resources'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_Resources\"`*"]
     pub fn SetResolvedCandidate<'a, Param0: ::windows::core::IntoParam<'a, ResourceCandidate>>(
         &self,
         candidate: Param0,

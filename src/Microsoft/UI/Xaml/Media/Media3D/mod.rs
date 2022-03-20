@@ -5,12 +5,12 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
 #[repr(transparent)]
 pub struct CompositeTransform3D(::windows::core::IUnknown);
 impl CompositeTransform3D {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -24,7 +24,7 @@ impl CompositeTransform3D {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn CenterX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -36,7 +36,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetCenterX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -47,7 +47,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn CenterY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -59,7 +59,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetCenterY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -70,7 +70,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn CenterZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -82,7 +82,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetCenterZ(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -93,7 +93,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RotationX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -105,7 +105,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetRotationX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -116,7 +116,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RotationY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -128,7 +128,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetRotationY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -139,7 +139,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RotationZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -151,7 +151,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetRotationZ(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -162,7 +162,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ScaleX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -174,7 +174,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetScaleX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -185,7 +185,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ScaleY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -197,7 +197,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetScaleY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -208,7 +208,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ScaleZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -220,7 +220,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetScaleZ(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -231,7 +231,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn TranslateX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -243,7 +243,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetTranslateX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -254,7 +254,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn TranslateY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -266,7 +266,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetTranslateY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -277,7 +277,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn TranslateZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -289,7 +289,7 @@ impl CompositeTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetTranslateZ(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -300,7 +300,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn CenterXProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -311,7 +311,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn CenterYProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -322,7 +322,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn CenterZProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -333,7 +333,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RotationXProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -344,7 +344,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RotationYProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -355,7 +355,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RotationZProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -366,7 +366,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ScaleXProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -377,7 +377,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ScaleYProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -388,7 +388,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ScaleZProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -399,7 +399,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn TranslateXProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -410,7 +410,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn TranslateYProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -421,7 +421,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn TranslateZProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -432,7 +432,7 @@ impl CompositeTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn GetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -451,7 +451,7 @@ impl CompositeTransform3D {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -471,7 +471,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ClearValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -488,7 +488,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ReadLocalValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -507,7 +507,7 @@ impl CompositeTransform3D {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -526,7 +526,7 @@ impl CompositeTransform3D {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -548,7 +548,7 @@ impl CompositeTransform3D {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -567,7 +567,7 @@ impl CompositeTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
@@ -579,7 +579,7 @@ impl CompositeTransform3D {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -1062,7 +1062,7 @@ pub struct ITransform3DFactory_Vtbl {
     ) -> ::windows::core::HRESULT,
 }
 #[repr(C)]
-#[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
 pub struct Matrix3D {
     pub M11: f64,
     pub M12: f64,
@@ -1136,11 +1136,11 @@ impl ::core::default::Default for Matrix3D {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
 #[repr(transparent)]
 pub struct Matrix3DHelper(::windows::core::IUnknown);
 impl Matrix3DHelper {
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn Identity() -> ::windows::core::Result<Matrix3D> {
         Self::IMatrix3DHelperStatics(|this| unsafe {
             let mut result__: Matrix3D = ::core::mem::zeroed();
@@ -1151,7 +1151,7 @@ impl Matrix3DHelper {
             .from_abi::<Matrix3D>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn Multiply<
         'a,
         Param0: ::windows::core::IntoParam<'a, Matrix3D>,
@@ -1171,7 +1171,7 @@ impl Matrix3DHelper {
             .from_abi::<Matrix3D>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn FromElements(
         m11: f64,
         m12: f64,
@@ -1215,7 +1215,7 @@ impl Matrix3DHelper {
             .from_abi::<Matrix3D>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn GetHasInverse<'a, Param0: ::windows::core::IntoParam<'a, Matrix3D>>(
         target: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -1229,7 +1229,7 @@ impl Matrix3DHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn GetIsIdentity<'a, Param0: ::windows::core::IntoParam<'a, Matrix3D>>(
         target: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -1243,7 +1243,7 @@ impl Matrix3DHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn Invert<'a, Param0: ::windows::core::IntoParam<'a, Matrix3D>>(
         target: Param0,
     ) -> ::windows::core::Result<Matrix3D> {
@@ -1341,12 +1341,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a M
 }
 unsafe impl ::core::marker::Send for Matrix3DHelper {}
 unsafe impl ::core::marker::Sync for Matrix3DHelper {}
-#[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
 #[repr(transparent)]
 pub struct PerspectiveTransform3D(::windows::core::IUnknown);
 impl PerspectiveTransform3D {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -1360,7 +1360,7 @@ impl PerspectiveTransform3D {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn GetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1379,7 +1379,7 @@ impl PerspectiveTransform3D {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1399,7 +1399,7 @@ impl PerspectiveTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ClearValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1416,7 +1416,7 @@ impl PerspectiveTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ReadLocalValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1435,7 +1435,7 @@ impl PerspectiveTransform3D {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1454,7 +1454,7 @@ impl PerspectiveTransform3D {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1476,7 +1476,7 @@ impl PerspectiveTransform3D {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1495,7 +1495,7 @@ impl PerspectiveTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
@@ -1507,7 +1507,7 @@ impl PerspectiveTransform3D {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -1522,7 +1522,7 @@ impl PerspectiveTransform3D {
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn Depth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1534,7 +1534,7 @@ impl PerspectiveTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetDepth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1545,7 +1545,7 @@ impl PerspectiveTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn OffsetX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1557,7 +1557,7 @@ impl PerspectiveTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetOffsetX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1568,7 +1568,7 @@ impl PerspectiveTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn OffsetY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -1580,7 +1580,7 @@ impl PerspectiveTransform3D {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetOffsetY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1591,7 +1591,7 @@ impl PerspectiveTransform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn DepthProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IPerspectiveTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1602,7 +1602,7 @@ impl PerspectiveTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn OffsetXProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IPerspectiveTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1613,7 +1613,7 @@ impl PerspectiveTransform3D {
             .from_abi::<super::super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn OffsetYProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IPerspectiveTransform3DStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1758,11 +1758,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::super::DependencyObject>
 }
 unsafe impl ::core::marker::Send for PerspectiveTransform3D {}
 unsafe impl ::core::marker::Sync for PerspectiveTransform3D {}
-#[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
 #[repr(transparent)]
 pub struct Transform3D(::windows::core::IUnknown);
 impl Transform3D {
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn GetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1781,7 +1781,7 @@ impl Transform3D {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1801,7 +1801,7 @@ impl Transform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ClearValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1818,7 +1818,7 @@ impl Transform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ReadLocalValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1837,7 +1837,7 @@ impl Transform3D {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1856,7 +1856,7 @@ impl Transform3D {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1878,7 +1878,7 @@ impl Transform3D {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::DependencyProperty>,
@@ -1897,7 +1897,7 @@ impl Transform3D {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
@@ -1909,7 +1909,7 @@ impl Transform3D {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media_Media3D', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,

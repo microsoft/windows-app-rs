@@ -11,11 +11,11 @@ pub mod Animation;
 pub mod Imaging;
 #[cfg(feature = "UI_Xaml_Media_Media3D")]
 pub mod Media3D;
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct AcrylicBrush(::windows::core::IUnknown);
 impl AcrylicBrush {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TintColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
@@ -27,7 +27,7 @@ impl AcrylicBrush {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTintColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -41,7 +41,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TintOpacity(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -53,7 +53,7 @@ impl AcrylicBrush {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTintOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -64,7 +64,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TintTransitionDuration(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
@@ -78,7 +78,7 @@ impl AcrylicBrush {
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTintTransitionDuration<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::TimeSpan>,
@@ -95,7 +95,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AlwaysUseFallback(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -107,7 +107,7 @@ impl AcrylicBrush {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAlwaysUseFallback(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -118,7 +118,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TintLuminosityOpacity(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<f64>> {
@@ -132,7 +132,7 @@ impl AcrylicBrush {
             .from_abi::<::windows::Foundation::IReference<f64>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTintLuminosityOpacity<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<f64>>,
@@ -149,7 +149,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn new() -> ::windows::core::Result<AcrylicBrush> {
         Self::IAcrylicBrushFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -162,7 +162,7 @@ impl AcrylicBrush {
             .from_abi::<AcrylicBrush>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<AcrylicBrush> {
@@ -178,7 +178,7 @@ impl AcrylicBrush {
             .from_abi::<AcrylicBrush>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TintColorProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAcrylicBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -189,7 +189,7 @@ impl AcrylicBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TintOpacityProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAcrylicBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -200,7 +200,7 @@ impl AcrylicBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TintTransitionDurationProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAcrylicBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -211,7 +211,7 @@ impl AcrylicBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AlwaysUseFallbackProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAcrylicBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -222,7 +222,7 @@ impl AcrylicBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TintLuminosityOpacityProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAcrylicBrushStatics2(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -233,7 +233,7 @@ impl AcrylicBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -255,7 +255,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -267,7 +267,7 @@ impl AcrylicBrush {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -278,7 +278,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -290,7 +290,7 @@ impl AcrylicBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -304,7 +304,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RelativeTransform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -316,7 +316,7 @@ impl AcrylicBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRelativeTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -330,7 +330,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -346,7 +346,7 @@ impl AcrylicBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -366,7 +366,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -380,7 +380,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -396,7 +396,7 @@ impl AcrylicBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -415,7 +415,7 @@ impl AcrylicBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -437,7 +437,7 @@ impl AcrylicBrush {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -456,7 +456,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -468,7 +468,7 @@ impl AcrylicBrush {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -483,7 +483,7 @@ impl AcrylicBrush {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FallbackColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = &::windows::core::Interface::cast::<IXamlCompositionBrushBase>(self)?;
         unsafe {
@@ -495,7 +495,7 @@ impl AcrylicBrush {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetFallbackColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -509,7 +509,7 @@ impl AcrylicBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn CompositionBrush(
         &self,
@@ -524,7 +524,7 @@ impl AcrylicBrush {
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn SetCompositionBrush<
         'a,
@@ -744,7 +744,7 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &AcrylicBru
 }
 unsafe impl ::core::marker::Send for AcrylicBrush {}
 unsafe impl ::core::marker::Sync for AcrylicBrush {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AlignmentX(pub i32);
@@ -780,7 +780,7 @@ unsafe impl ::windows::core::RuntimeType for AlignmentX {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AlignmentY(pub i32);
@@ -816,12 +816,12 @@ unsafe impl ::windows::core::RuntimeType for AlignmentY {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct ArcSegment(::windows::core::IUnknown);
 impl ArcSegment {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -835,7 +835,7 @@ impl ArcSegment {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -847,7 +847,7 @@ impl ArcSegment {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetPoint<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -861,7 +861,7 @@ impl ArcSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
@@ -873,7 +873,7 @@ impl ArcSegment {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetSize<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         &self,
         value: Param0,
@@ -887,7 +887,7 @@ impl ArcSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RotationAngle(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -899,7 +899,7 @@ impl ArcSegment {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRotationAngle(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -910,7 +910,7 @@ impl ArcSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IsLargeArc(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -922,7 +922,7 @@ impl ArcSegment {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetIsLargeArc(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -933,7 +933,7 @@ impl ArcSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SweepDirection(&self) -> ::windows::core::Result<SweepDirection> {
         let this = self;
         unsafe {
@@ -945,7 +945,7 @@ impl ArcSegment {
             .from_abi::<SweepDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetSweepDirection(&self, value: SweepDirection) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -956,7 +956,7 @@ impl ArcSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn PointProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IArcSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -967,7 +967,7 @@ impl ArcSegment {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SizeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IArcSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -978,7 +978,7 @@ impl ArcSegment {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RotationAngleProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IArcSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -989,7 +989,7 @@ impl ArcSegment {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IsLargeArcProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IArcSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1000,7 +1000,7 @@ impl ArcSegment {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SweepDirectionProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IArcSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1011,7 +1011,7 @@ impl ArcSegment {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1027,7 +1027,7 @@ impl ArcSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1047,7 +1047,7 @@ impl ArcSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1061,7 +1061,7 @@ impl ArcSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1077,7 +1077,7 @@ impl ArcSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1096,7 +1096,7 @@ impl ArcSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1118,7 +1118,7 @@ impl ArcSegment {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1137,7 +1137,7 @@ impl ArcSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -1149,7 +1149,7 @@ impl ArcSegment {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -1287,12 +1287,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &ArcSegment
 }
 unsafe impl ::core::marker::Send for ArcSegment {}
 unsafe impl ::core::marker::Sync for ArcSegment {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct BezierSegment(::windows::core::IUnknown);
 impl BezierSegment {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -1306,7 +1306,7 @@ impl BezierSegment {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point1(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -1318,7 +1318,7 @@ impl BezierSegment {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetPoint1<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -1332,7 +1332,7 @@ impl BezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point2(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -1344,7 +1344,7 @@ impl BezierSegment {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetPoint2<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -1358,7 +1358,7 @@ impl BezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point3(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -1370,7 +1370,7 @@ impl BezierSegment {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetPoint3<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -1384,7 +1384,7 @@ impl BezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point1Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IBezierSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1395,7 +1395,7 @@ impl BezierSegment {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point2Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IBezierSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1406,7 +1406,7 @@ impl BezierSegment {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point3Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IBezierSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1417,7 +1417,7 @@ impl BezierSegment {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1433,7 +1433,7 @@ impl BezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1453,7 +1453,7 @@ impl BezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1467,7 +1467,7 @@ impl BezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1483,7 +1483,7 @@ impl BezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1502,7 +1502,7 @@ impl BezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1524,7 +1524,7 @@ impl BezierSegment {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1543,7 +1543,7 @@ impl BezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -1555,7 +1555,7 @@ impl BezierSegment {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -1696,12 +1696,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &BezierSegm
 }
 unsafe impl ::core::marker::Send for BezierSegment {}
 unsafe impl ::core::marker::Sync for BezierSegment {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct BitmapCache(::windows::core::IUnknown);
 impl BitmapCache {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -1715,7 +1715,7 @@ impl BitmapCache {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1731,7 +1731,7 @@ impl BitmapCache {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1751,7 +1751,7 @@ impl BitmapCache {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1765,7 +1765,7 @@ impl BitmapCache {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -1781,7 +1781,7 @@ impl BitmapCache {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1800,7 +1800,7 @@ impl BitmapCache {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1822,7 +1822,7 @@ impl BitmapCache {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -1841,7 +1841,7 @@ impl BitmapCache {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -1853,7 +1853,7 @@ impl BitmapCache {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -1983,11 +1983,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &BitmapCach
 }
 unsafe impl ::core::marker::Send for BitmapCache {}
 unsafe impl ::core::marker::Sync for BitmapCache {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct Brush(::windows::core::IUnknown);
 impl Brush {
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -2009,7 +2009,7 @@ impl Brush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -2021,7 +2021,7 @@ impl Brush {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2032,7 +2032,7 @@ impl Brush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = self;
         unsafe {
@@ -2044,7 +2044,7 @@ impl Brush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -2058,7 +2058,7 @@ impl Brush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RelativeTransform(&self) -> ::windows::core::Result<Transform> {
         let this = self;
         unsafe {
@@ -2070,7 +2070,7 @@ impl Brush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRelativeTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -2084,7 +2084,7 @@ impl Brush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn OpacityProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2095,7 +2095,7 @@ impl Brush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2106,7 +2106,7 @@ impl Brush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RelativeTransformProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2117,7 +2117,7 @@ impl Brush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -2133,7 +2133,7 @@ impl Brush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2153,7 +2153,7 @@ impl Brush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -2167,7 +2167,7 @@ impl Brush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -2183,7 +2183,7 @@ impl Brush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2202,7 +2202,7 @@ impl Brush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2224,7 +2224,7 @@ impl Brush {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2243,7 +2243,7 @@ impl Brush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -2255,7 +2255,7 @@ impl Brush {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -2401,12 +2401,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Brush {
 }
 unsafe impl ::core::marker::Send for Brush {}
 unsafe impl ::core::marker::Sync for Brush {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct BrushCollection(::windows::core::IUnknown);
 impl BrushCollection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -2420,7 +2420,7 @@ impl BrushCollection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<Brush>> {
@@ -2436,7 +2436,7 @@ impl BrushCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<Brush>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<Brush> {
         let this = self;
         unsafe {
@@ -2449,7 +2449,7 @@ impl BrushCollection {
             .from_abi::<Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -2461,7 +2461,7 @@ impl BrushCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<Brush>> {
@@ -2475,7 +2475,7 @@ impl BrushCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<Brush>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, Brush>>(
         &self,
         value: Param0,
@@ -2493,7 +2493,7 @@ impl BrushCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, Brush>>(
         &self,
         index: u32,
@@ -2509,7 +2509,7 @@ impl BrushCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, Brush>>(
         &self,
         index: u32,
@@ -2525,7 +2525,7 @@ impl BrushCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2536,7 +2536,7 @@ impl BrushCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, Brush>>(
         &self,
         value: Param0,
@@ -2550,7 +2550,7 @@ impl BrushCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2560,14 +2560,14 @@ impl BrushCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -2586,7 +2586,7 @@ impl BrushCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<Brush>],
@@ -2767,7 +2767,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for BrushCollection {}
 unsafe impl ::core::marker::Sync for BrushCollection {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct BrushMappingMode(pub i32);
@@ -2803,11 +2803,11 @@ unsafe impl ::windows::core::RuntimeType for BrushMappingMode {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct CacheMode(::windows::core::IUnknown);
 impl CacheMode {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -2823,7 +2823,7 @@ impl CacheMode {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2843,7 +2843,7 @@ impl CacheMode {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -2857,7 +2857,7 @@ impl CacheMode {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -2873,7 +2873,7 @@ impl CacheMode {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2892,7 +2892,7 @@ impl CacheMode {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2914,7 +2914,7 @@ impl CacheMode {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -2933,7 +2933,7 @@ impl CacheMode {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -2945,7 +2945,7 @@ impl CacheMode {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -3055,7 +3055,7 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &CacheMode 
 }
 unsafe impl ::core::marker::Send for CacheMode {}
 unsafe impl ::core::marker::Sync for CacheMode {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ColorInterpolationMode(pub i32);
@@ -3093,12 +3093,12 @@ unsafe impl ::windows::core::RuntimeType for ColorInterpolationMode {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct CompositeTransform(::windows::core::IUnknown);
 impl CompositeTransform {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -3112,7 +3112,7 @@ impl CompositeTransform {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3124,7 +3124,7 @@ impl CompositeTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenterX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3135,7 +3135,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3147,7 +3147,7 @@ impl CompositeTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenterY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3158,7 +3158,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ScaleX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3170,7 +3170,7 @@ impl CompositeTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetScaleX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3181,7 +3181,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ScaleY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3193,7 +3193,7 @@ impl CompositeTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetScaleY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3204,7 +3204,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SkewX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3216,7 +3216,7 @@ impl CompositeTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetSkewX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3227,7 +3227,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SkewY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3239,7 +3239,7 @@ impl CompositeTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetSkewY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3250,7 +3250,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Rotation(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3262,7 +3262,7 @@ impl CompositeTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRotation(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3273,7 +3273,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TranslateX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3285,7 +3285,7 @@ impl CompositeTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTranslateX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3296,7 +3296,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TranslateY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -3308,7 +3308,7 @@ impl CompositeTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTranslateY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3319,7 +3319,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3330,7 +3330,7 @@ impl CompositeTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3341,7 +3341,7 @@ impl CompositeTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ScaleXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3352,7 +3352,7 @@ impl CompositeTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ScaleYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3363,7 +3363,7 @@ impl CompositeTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SkewXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3374,7 +3374,7 @@ impl CompositeTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SkewYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3385,7 +3385,7 @@ impl CompositeTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RotationProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3396,7 +3396,7 @@ impl CompositeTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TranslateXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3407,7 +3407,7 @@ impl CompositeTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TranslateYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ICompositeTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3418,7 +3418,7 @@ impl CompositeTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -3434,7 +3434,7 @@ impl CompositeTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -3454,7 +3454,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -3468,7 +3468,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -3484,7 +3484,7 @@ impl CompositeTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -3503,7 +3503,7 @@ impl CompositeTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -3525,7 +3525,7 @@ impl CompositeTransform {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -3544,7 +3544,7 @@ impl CompositeTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -3556,7 +3556,7 @@ impl CompositeTransform {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -3571,7 +3571,7 @@ impl CompositeTransform {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Inverse(&self) -> ::windows::core::Result<GeneralTransform> {
         let this = &::windows::core::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
@@ -3583,7 +3583,7 @@ impl CompositeTransform {
             .from_abi::<GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -3602,7 +3602,7 @@ impl CompositeTransform {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TryTransform<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -3623,7 +3623,7 @@ impl CompositeTransform {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformBounds<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -3790,11 +3790,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &CompositeT
 }
 unsafe impl ::core::marker::Send for CompositeTransform {}
 unsafe impl ::core::marker::Sync for CompositeTransform {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct CompositionTarget(::windows::core::IUnknown);
 impl CompositionTarget {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Rendering<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3814,7 +3814,7 @@ impl CompositionTarget {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveRendering<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3829,7 +3829,7 @@ impl CompositionTarget {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Rendered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventHandler<RenderedEventArgs>>,
@@ -3846,7 +3846,7 @@ impl CompositionTarget {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveRendered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3861,7 +3861,7 @@ impl CompositionTarget {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SurfaceContentsLost<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3881,7 +3881,7 @@ impl CompositionTarget {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveSurfaceContentsLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3896,7 +3896,7 @@ impl CompositionTarget {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetCompositorForCurrentThread(
     ) -> ::windows::core::Result<super::super::Composition::Compositor> {
@@ -3997,12 +3997,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a C
 }
 unsafe impl ::core::marker::Send for CompositionTarget {}
 unsafe impl ::core::marker::Sync for CompositionTarget {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct DoubleCollection(::windows::core::IUnknown);
 impl DoubleCollection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -4016,7 +4016,7 @@ impl DoubleCollection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<f64>> {
@@ -4032,7 +4032,7 @@ impl DoubleCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<f64>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -4045,7 +4045,7 @@ impl DoubleCollection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -4057,7 +4057,7 @@ impl DoubleCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<f64>> {
@@ -4071,7 +4071,7 @@ impl DoubleCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<f64>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IndexOf(&self, value: f64, index: &mut u32) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -4085,7 +4085,7 @@ impl DoubleCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAt(&self, index: u32, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4097,7 +4097,7 @@ impl DoubleCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn InsertAt(&self, index: u32, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4109,7 +4109,7 @@ impl DoubleCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4120,7 +4120,7 @@ impl DoubleCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Append(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4131,7 +4131,7 @@ impl DoubleCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4141,14 +4141,14 @@ impl DoubleCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetMany(&self, startindex: u32, items: &mut [f64]) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -4163,7 +4163,7 @@ impl DoubleCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReplaceAll(&self, items: &[f64]) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4339,9 +4339,9 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for DoubleCollection {}
 unsafe impl ::core::marker::Sync for DoubleCollection {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 pub const E_SURFACE_CONTENTS_LOST: u32 = 2150301728u32;
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ElementCompositeMode(pub i32);
@@ -4380,12 +4380,12 @@ unsafe impl ::windows::core::RuntimeType for ElementCompositeMode {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct EllipseGeometry(::windows::core::IUnknown);
 impl EllipseGeometry {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -4399,7 +4399,7 @@ impl EllipseGeometry {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -4415,7 +4415,7 @@ impl EllipseGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -4435,7 +4435,7 @@ impl EllipseGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -4449,7 +4449,7 @@ impl EllipseGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -4465,7 +4465,7 @@ impl EllipseGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -4484,7 +4484,7 @@ impl EllipseGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -4506,7 +4506,7 @@ impl EllipseGeometry {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -4525,7 +4525,7 @@ impl EllipseGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -4537,7 +4537,7 @@ impl EllipseGeometry {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -4552,7 +4552,7 @@ impl EllipseGeometry {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Center(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -4564,7 +4564,7 @@ impl EllipseGeometry {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenter<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -4578,7 +4578,7 @@ impl EllipseGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RadiusX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -4590,7 +4590,7 @@ impl EllipseGeometry {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRadiusX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4601,7 +4601,7 @@ impl EllipseGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RadiusY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -4613,7 +4613,7 @@ impl EllipseGeometry {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRadiusY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4624,7 +4624,7 @@ impl EllipseGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IEllipseGeometryStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4635,7 +4635,7 @@ impl EllipseGeometry {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RadiusXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IEllipseGeometryStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4646,7 +4646,7 @@ impl EllipseGeometry {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RadiusYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IEllipseGeometryStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -4657,7 +4657,7 @@ impl EllipseGeometry {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IGeometry>(self)?;
         unsafe {
@@ -4669,7 +4669,7 @@ impl EllipseGeometry {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -4683,7 +4683,7 @@ impl EllipseGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = &::windows::core::Interface::cast::<IGeometry>(self)?;
         unsafe {
@@ -4821,7 +4821,7 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &EllipseGeo
 }
 unsafe impl ::core::marker::Send for EllipseGeometry {}
 unsafe impl ::core::marker::Sync for EllipseGeometry {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FillRule(pub i32);
@@ -4856,11 +4856,11 @@ unsafe impl ::windows::core::RuntimeType for FillRule {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct FontFamily(::windows::core::IUnknown);
 impl FontFamily {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Source(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -4873,7 +4873,7 @@ impl FontFamily {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CreateInstanceWithName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -4892,7 +4892,7 @@ impl FontFamily {
             .from_abi::<FontFamily>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CreateInstanceWithName_compose<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -4914,7 +4914,7 @@ impl FontFamily {
             .from_abi::<FontFamily>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn XamlAutoFontFamily() -> ::windows::core::Result<FontFamily> {
         Self::IFontFamilyStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5016,11 +5016,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a F
 }
 unsafe impl ::core::marker::Send for FontFamily {}
 unsafe impl ::core::marker::Sync for FontFamily {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct GeneralTransform(::windows::core::IUnknown);
 impl GeneralTransform {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5036,7 +5036,7 @@ impl GeneralTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -5056,7 +5056,7 @@ impl GeneralTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5070,7 +5070,7 @@ impl GeneralTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5086,7 +5086,7 @@ impl GeneralTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -5105,7 +5105,7 @@ impl GeneralTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -5127,7 +5127,7 @@ impl GeneralTransform {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -5146,7 +5146,7 @@ impl GeneralTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -5158,7 +5158,7 @@ impl GeneralTransform {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -5173,7 +5173,7 @@ impl GeneralTransform {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Inverse(&self) -> ::windows::core::Result<GeneralTransform> {
         let this = self;
         unsafe {
@@ -5185,7 +5185,7 @@ impl GeneralTransform {
             .from_abi::<GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -5204,7 +5204,7 @@ impl GeneralTransform {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TryTransform<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -5225,7 +5225,7 @@ impl GeneralTransform {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformBounds<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -5339,11 +5339,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &GeneralTra
 }
 unsafe impl ::core::marker::Send for GeneralTransform {}
 unsafe impl ::core::marker::Sync for GeneralTransform {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct Geometry(::windows::core::IUnknown);
 impl Geometry {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5359,7 +5359,7 @@ impl Geometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -5379,7 +5379,7 @@ impl Geometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5393,7 +5393,7 @@ impl Geometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5409,7 +5409,7 @@ impl Geometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -5428,7 +5428,7 @@ impl Geometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -5450,7 +5450,7 @@ impl Geometry {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -5469,7 +5469,7 @@ impl Geometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -5481,7 +5481,7 @@ impl Geometry {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -5496,7 +5496,7 @@ impl Geometry {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = self;
         unsafe {
@@ -5508,7 +5508,7 @@ impl Geometry {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -5522,7 +5522,7 @@ impl Geometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -5534,7 +5534,7 @@ impl Geometry {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Empty() -> ::windows::core::Result<Geometry> {
         Self::IGeometryStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5545,7 +5545,7 @@ impl Geometry {
             .from_abi::<Geometry>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StandardFlatteningTolerance() -> ::windows::core::Result<f64> {
         Self::IGeometryStatics(|this| unsafe {
             let mut result__: f64 = ::core::mem::zeroed();
@@ -5556,7 +5556,7 @@ impl Geometry {
             .from_abi::<f64>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGeometryStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5670,12 +5670,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Geometry {
 }
 unsafe impl ::core::marker::Send for Geometry {}
 unsafe impl ::core::marker::Sync for Geometry {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct GeometryCollection(::windows::core::IUnknown);
 impl GeometryCollection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -5689,7 +5689,7 @@ impl GeometryCollection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<Geometry>> {
@@ -5705,7 +5705,7 @@ impl GeometryCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<Geometry>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<Geometry> {
         let this = self;
         unsafe {
@@ -5718,7 +5718,7 @@ impl GeometryCollection {
             .from_abi::<Geometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -5730,7 +5730,7 @@ impl GeometryCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<Geometry>> {
@@ -5744,7 +5744,7 @@ impl GeometryCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<Geometry>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, Geometry>>(
         &self,
         value: Param0,
@@ -5762,7 +5762,7 @@ impl GeometryCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, Geometry>>(
         &self,
         index: u32,
@@ -5778,7 +5778,7 @@ impl GeometryCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, Geometry>>(
         &self,
         index: u32,
@@ -5794,7 +5794,7 @@ impl GeometryCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5805,7 +5805,7 @@ impl GeometryCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, Geometry>>(
         &self,
         value: Param0,
@@ -5819,7 +5819,7 @@ impl GeometryCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5829,14 +5829,14 @@ impl GeometryCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -5855,7 +5855,7 @@ impl GeometryCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<Geometry>],
@@ -6032,12 +6032,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for GeometryCollection {}
 unsafe impl ::core::marker::Sync for GeometryCollection {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct GeometryGroup(::windows::core::IUnknown);
 impl GeometryGroup {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -6051,7 +6051,7 @@ impl GeometryGroup {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -6067,7 +6067,7 @@ impl GeometryGroup {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6087,7 +6087,7 @@ impl GeometryGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -6101,7 +6101,7 @@ impl GeometryGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -6117,7 +6117,7 @@ impl GeometryGroup {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6136,7 +6136,7 @@ impl GeometryGroup {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6158,7 +6158,7 @@ impl GeometryGroup {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6177,7 +6177,7 @@ impl GeometryGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -6189,7 +6189,7 @@ impl GeometryGroup {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -6204,7 +6204,7 @@ impl GeometryGroup {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IGeometry>(self)?;
         unsafe {
@@ -6216,7 +6216,7 @@ impl GeometryGroup {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -6230,7 +6230,7 @@ impl GeometryGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = &::windows::core::Interface::cast::<IGeometry>(self)?;
         unsafe {
@@ -6242,7 +6242,7 @@ impl GeometryGroup {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FillRule(&self) -> ::windows::core::Result<FillRule> {
         let this = self;
         unsafe {
@@ -6254,7 +6254,7 @@ impl GeometryGroup {
             .from_abi::<FillRule>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetFillRule(&self, value: FillRule) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -6265,7 +6265,7 @@ impl GeometryGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Children(&self) -> ::windows::core::Result<GeometryCollection> {
         let this = self;
         unsafe {
@@ -6277,7 +6277,7 @@ impl GeometryGroup {
             .from_abi::<GeometryCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetChildren<'a, Param0: ::windows::core::IntoParam<'a, GeometryCollection>>(
         &self,
         value: Param0,
@@ -6291,7 +6291,7 @@ impl GeometryGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FillRuleProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGeometryGroupStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6302,7 +6302,7 @@ impl GeometryGroup {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ChildrenProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGeometryGroupStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6439,11 +6439,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &GeometryGr
 }
 unsafe impl ::core::marker::Send for GeometryGroup {}
 unsafe impl ::core::marker::Sync for GeometryGroup {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct GradientBrush(::windows::core::IUnknown);
 impl GradientBrush {
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -6465,7 +6465,7 @@ impl GradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -6477,7 +6477,7 @@ impl GradientBrush {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -6488,7 +6488,7 @@ impl GradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -6500,7 +6500,7 @@ impl GradientBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -6514,7 +6514,7 @@ impl GradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RelativeTransform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -6526,7 +6526,7 @@ impl GradientBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRelativeTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -6540,7 +6540,7 @@ impl GradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -6556,7 +6556,7 @@ impl GradientBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6576,7 +6576,7 @@ impl GradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -6590,7 +6590,7 @@ impl GradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -6606,7 +6606,7 @@ impl GradientBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6625,7 +6625,7 @@ impl GradientBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6647,7 +6647,7 @@ impl GradientBrush {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6666,7 +6666,7 @@ impl GradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -6678,7 +6678,7 @@ impl GradientBrush {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -6693,7 +6693,7 @@ impl GradientBrush {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SpreadMethod(&self) -> ::windows::core::Result<GradientSpreadMethod> {
         let this = self;
         unsafe {
@@ -6705,7 +6705,7 @@ impl GradientBrush {
             .from_abi::<GradientSpreadMethod>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetSpreadMethod(&self, value: GradientSpreadMethod) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -6716,7 +6716,7 @@ impl GradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn MappingMode(&self) -> ::windows::core::Result<BrushMappingMode> {
         let this = self;
         unsafe {
@@ -6728,7 +6728,7 @@ impl GradientBrush {
             .from_abi::<BrushMappingMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetMappingMode(&self, value: BrushMappingMode) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -6739,7 +6739,7 @@ impl GradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ColorInterpolationMode(&self) -> ::windows::core::Result<ColorInterpolationMode> {
         let this = self;
         unsafe {
@@ -6751,7 +6751,7 @@ impl GradientBrush {
             .from_abi::<ColorInterpolationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetColorInterpolationMode(
         &self,
         value: ColorInterpolationMode,
@@ -6765,7 +6765,7 @@ impl GradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GradientStops(&self) -> ::windows::core::Result<GradientStopCollection> {
         let this = self;
         unsafe {
@@ -6777,7 +6777,7 @@ impl GradientBrush {
             .from_abi::<GradientStopCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetGradientStops<'a, Param0: ::windows::core::IntoParam<'a, GradientStopCollection>>(
         &self,
         value: Param0,
@@ -6791,7 +6791,7 @@ impl GradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SpreadMethodProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6802,7 +6802,7 @@ impl GradientBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn MappingModeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6813,7 +6813,7 @@ impl GradientBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ColorInterpolationModeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6824,7 +6824,7 @@ impl GradientBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GradientStopsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6993,7 +6993,7 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &GradientBr
 }
 unsafe impl ::core::marker::Send for GradientBrush {}
 unsafe impl ::core::marker::Sync for GradientBrush {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct GradientSpreadMethod(pub i32);
@@ -7032,12 +7032,12 @@ unsafe impl ::windows::core::RuntimeType for GradientSpreadMethod {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct GradientStop(::windows::core::IUnknown);
 impl GradientStop {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -7051,7 +7051,7 @@ impl GradientStop {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -7067,7 +7067,7 @@ impl GradientStop {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -7087,7 +7087,7 @@ impl GradientStop {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -7101,7 +7101,7 @@ impl GradientStop {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -7117,7 +7117,7 @@ impl GradientStop {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -7136,7 +7136,7 @@ impl GradientStop {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -7158,7 +7158,7 @@ impl GradientStop {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -7177,7 +7177,7 @@ impl GradientStop {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -7189,7 +7189,7 @@ impl GradientStop {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -7204,7 +7204,7 @@ impl GradientStop {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Color(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
@@ -7216,7 +7216,7 @@ impl GradientStop {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -7230,7 +7230,7 @@ impl GradientStop {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Offset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -7242,7 +7242,7 @@ impl GradientStop {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7253,7 +7253,7 @@ impl GradientStop {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ColorProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGradientStopStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7264,7 +7264,7 @@ impl GradientStop {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn OffsetProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IGradientStopStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7381,12 +7381,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &GradientSt
 }
 unsafe impl ::core::marker::Send for GradientStop {}
 unsafe impl ::core::marker::Sync for GradientStop {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct GradientStopCollection(::windows::core::IUnknown);
 impl GradientStopCollection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -7400,7 +7400,7 @@ impl GradientStopCollection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<GradientStop>> {
@@ -7416,7 +7416,7 @@ impl GradientStopCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<GradientStop>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<GradientStop> {
         let this = self;
         unsafe {
@@ -7429,7 +7429,7 @@ impl GradientStopCollection {
             .from_abi::<GradientStop>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -7441,7 +7441,7 @@ impl GradientStopCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<GradientStop>>
@@ -7456,7 +7456,7 @@ impl GradientStopCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<GradientStop>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, GradientStop>>(
         &self,
         value: Param0,
@@ -7474,7 +7474,7 @@ impl GradientStopCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, GradientStop>>(
         &self,
         index: u32,
@@ -7490,7 +7490,7 @@ impl GradientStopCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, GradientStop>>(
         &self,
         index: u32,
@@ -7506,7 +7506,7 @@ impl GradientStopCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7517,7 +7517,7 @@ impl GradientStopCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, GradientStop>>(
         &self,
         value: Param0,
@@ -7531,7 +7531,7 @@ impl GradientStopCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7541,14 +7541,14 @@ impl GradientStopCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -7567,7 +7567,7 @@ impl GradientStopCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<GradientStop>],
@@ -10306,11 +10306,11 @@ pub struct ISolidColorBrushStatics_Vtbl {
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct ISurfaceImageSourceManagerNative(::windows::core::IUnknown);
 impl ISurfaceImageSourceManagerNative {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn FlushAllSurfacesWithDevice<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -10381,11 +10381,11 @@ pub struct ISurfaceImageSourceManagerNative_Vtbl {
         device: *mut ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct ISurfaceImageSourceNative(::windows::core::IUnknown);
 impl ISurfaceImageSourceNative {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn SetDevice<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Dxgi::IDXGIDevice>,
@@ -10399,7 +10399,7 @@ impl ISurfaceImageSourceNative {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn BeginDraw<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::RECT>,
@@ -10417,7 +10417,7 @@ impl ISurfaceImageSourceNative {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn EndDraw(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).EndDraw)(::core::mem::transmute_copy(self)).ok()
     }
@@ -10484,11 +10484,11 @@ pub struct ISurfaceImageSourceNative_Vtbl {
     pub EndDraw:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct ISurfaceImageSourceNativeWithD2D(::windows::core::IUnknown);
 impl ISurfaceImageSourceNativeWithD2D {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn SetDevice<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -10502,7 +10502,7 @@ impl ISurfaceImageSourceNativeWithD2D {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn BeginDraw(
         &self,
         updaterect: *const ::windows::Win32::Foundation::RECT,
@@ -10519,16 +10519,16 @@ impl ISurfaceImageSourceNativeWithD2D {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn EndDraw(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).EndDraw)(::core::mem::transmute_copy(self)).ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn SuspendDraw(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).SuspendDraw)(::core::mem::transmute_copy(self))
             .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn ResumeDraw(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).ResumeDraw)(::core::mem::transmute_copy(self))
             .ok()
@@ -10603,11 +10603,11 @@ pub struct ISurfaceImageSourceNativeWithD2D_Vtbl {
     pub ResumeDraw:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct ISwapChainBackgroundPanelNative(::windows::core::IUnknown);
 impl ISwapChainBackgroundPanelNative {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn SetSwapChain<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Dxgi::IDXGISwapChain>,
@@ -10678,11 +10678,11 @@ pub struct ISwapChainBackgroundPanelNative_Vtbl {
         swapchain: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct ISwapChainPanelNative(::windows::core::IUnknown);
 impl ISwapChainPanelNative {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn SetSwapChain<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Dxgi::IDXGISwapChain>,
@@ -10749,11 +10749,11 @@ pub struct ISwapChainPanelNative_Vtbl {
         swapchain: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct ISwapChainPanelNative2(::windows::core::IUnknown);
 impl ISwapChainPanelNative2 {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn SetSwapChain<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Dxgi::IDXGISwapChain>,
@@ -10767,7 +10767,7 @@ impl ISwapChainPanelNative2 {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn SetSwapChainHandle<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::HANDLE>,
@@ -11089,11 +11089,11 @@ pub struct ITranslateTransformStatics_Vtbl {
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct IVirtualSurfaceImageSourceNative(::windows::core::IUnknown);
 impl IVirtualSurfaceImageSourceNative {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn SetDevice<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Dxgi::IDXGIDevice>,
@@ -11107,7 +11107,7 @@ impl IVirtualSurfaceImageSourceNative {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn BeginDraw<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::RECT>,
@@ -11125,12 +11125,12 @@ impl IVirtualSurfaceImageSourceNative {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn EndDraw(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).base.EndDraw)(::core::mem::transmute_copy(self))
             .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn Invalidate<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::RECT>,
@@ -11144,7 +11144,7 @@ impl IVirtualSurfaceImageSourceNative {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn GetUpdateRectCount(&self) -> ::windows::core::Result<u32> {
         let mut result__: u32 = ::core::mem::zeroed();
         (::windows::core::Interface::vtable(self).GetUpdateRectCount)(
@@ -11153,20 +11153,19 @@ impl IVirtualSurfaceImageSourceNative {
         )
         .from_abi::<u32>(result__)
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn GetUpdateRects(
         &self,
-        updates: *mut ::windows::Win32::Foundation::RECT,
-        count: u32,
+        updates: &mut [::windows::Win32::Foundation::RECT],
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).GetUpdateRects)(
             ::core::mem::transmute_copy(self),
-            ::core::mem::transmute(updates),
-            ::core::mem::transmute(count),
+            ::core::mem::transmute(::windows::core::as_mut_ptr_or_null(updates)),
+            updates.len() as _,
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn GetVisibleBounds(
         &self,
     ) -> ::windows::core::Result<::windows::Win32::Foundation::RECT> {
@@ -11177,7 +11176,7 @@ impl IVirtualSurfaceImageSourceNative {
         )
         .from_abi::<::windows::Win32::Foundation::RECT>(result__)
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn RegisterForUpdatesNeeded<
         'a,
         Param0: ::windows::core::IntoParam<'a, IVirtualSurfaceUpdatesCallbackNative>,
@@ -11191,7 +11190,7 @@ impl IVirtualSurfaceImageSourceNative {
         )
         .ok()
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn Resize(&self, newwidth: i32, newheight: i32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).Resize)(
             ::core::mem::transmute_copy(self),
@@ -11303,11 +11302,11 @@ pub struct IVirtualSurfaceImageSourceNative_Vtbl {
         newheight: i32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct IVirtualSurfaceUpdatesCallbackNative(::windows::core::IUnknown);
 impl IVirtualSurfaceUpdatesCallbackNative {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn UpdatesNeeded(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).UpdatesNeeded)(::core::mem::transmute_copy(self))
             .ok()
@@ -11677,12 +11676,12 @@ pub struct IXamlLightStatics_Vtbl {
         brush: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct ImageBrush(::windows::core::IUnknown);
 impl ImageBrush {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -11696,7 +11695,7 @@ impl ImageBrush {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -11718,7 +11717,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -11730,7 +11729,7 @@ impl ImageBrush {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -11741,7 +11740,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -11753,7 +11752,7 @@ impl ImageBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -11767,7 +11766,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RelativeTransform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -11779,7 +11778,7 @@ impl ImageBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRelativeTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -11793,7 +11792,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -11809,7 +11808,7 @@ impl ImageBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11829,7 +11828,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -11843,7 +11842,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -11859,7 +11858,7 @@ impl ImageBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11878,7 +11877,7 @@ impl ImageBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11900,7 +11899,7 @@ impl ImageBrush {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11919,7 +11918,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -11931,7 +11930,7 @@ impl ImageBrush {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -11946,7 +11945,7 @@ impl ImageBrush {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ImageSource(&self) -> ::windows::core::Result<ImageSource> {
         let this = self;
         unsafe {
@@ -11958,7 +11957,7 @@ impl ImageBrush {
             .from_abi::<ImageSource>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetImageSource<'a, Param0: ::windows::core::IntoParam<'a, ImageSource>>(
         &self,
         value: Param0,
@@ -11972,7 +11971,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ImageFailed<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ExceptionRoutedEventHandler>,
@@ -11991,7 +11990,7 @@ impl ImageBrush {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveImageFailed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12008,7 +12007,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ImageOpened<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -12024,7 +12023,7 @@ impl ImageBrush {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveImageOpened<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12041,7 +12040,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ImageSourceProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IImageBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -12052,7 +12051,7 @@ impl ImageBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AlignmentX(&self) -> ::windows::core::Result<AlignmentX> {
         let this = &::windows::core::Interface::cast::<ITileBrush>(self)?;
         unsafe {
@@ -12064,7 +12063,7 @@ impl ImageBrush {
             .from_abi::<AlignmentX>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAlignmentX(&self, value: AlignmentX) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITileBrush>(self)?;
         unsafe {
@@ -12075,7 +12074,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AlignmentY(&self) -> ::windows::core::Result<AlignmentY> {
         let this = &::windows::core::Interface::cast::<ITileBrush>(self)?;
         unsafe {
@@ -12087,7 +12086,7 @@ impl ImageBrush {
             .from_abi::<AlignmentY>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAlignmentY(&self, value: AlignmentY) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITileBrush>(self)?;
         unsafe {
@@ -12098,7 +12097,7 @@ impl ImageBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Stretch(&self) -> ::windows::core::Result<Stretch> {
         let this = &::windows::core::Interface::cast::<ITileBrush>(self)?;
         unsafe {
@@ -12110,7 +12109,7 @@ impl ImageBrush {
             .from_abi::<Stretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetStretch(&self, value: Stretch) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITileBrush>(self)?;
         unsafe {
@@ -12296,11 +12295,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &ImageBrush
 }
 unsafe impl ::core::marker::Send for ImageBrush {}
 unsafe impl ::core::marker::Sync for ImageBrush {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct ImageSource(::windows::core::IUnknown);
 impl ImageSource {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -12316,7 +12315,7 @@ impl ImageSource {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -12336,7 +12335,7 @@ impl ImageSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -12350,7 +12349,7 @@ impl ImageSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -12366,7 +12365,7 @@ impl ImageSource {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -12385,7 +12384,7 @@ impl ImageSource {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -12407,7 +12406,7 @@ impl ImageSource {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -12426,7 +12425,7 @@ impl ImageSource {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -12438,7 +12437,7 @@ impl ImageSource {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -12548,12 +12547,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &ImageSourc
 }
 unsafe impl ::core::marker::Send for ImageSource {}
 unsafe impl ::core::marker::Sync for ImageSource {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct LineGeometry(::windows::core::IUnknown);
 impl LineGeometry {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -12567,7 +12566,7 @@ impl LineGeometry {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -12583,7 +12582,7 @@ impl LineGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -12603,7 +12602,7 @@ impl LineGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -12617,7 +12616,7 @@ impl LineGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -12633,7 +12632,7 @@ impl LineGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -12652,7 +12651,7 @@ impl LineGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -12674,7 +12673,7 @@ impl LineGeometry {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -12693,7 +12692,7 @@ impl LineGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -12705,7 +12704,7 @@ impl LineGeometry {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -12720,7 +12719,7 @@ impl LineGeometry {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IGeometry>(self)?;
         unsafe {
@@ -12732,7 +12731,7 @@ impl LineGeometry {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -12746,7 +12745,7 @@ impl LineGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = &::windows::core::Interface::cast::<IGeometry>(self)?;
         unsafe {
@@ -12758,7 +12757,7 @@ impl LineGeometry {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StartPoint(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -12770,7 +12769,7 @@ impl LineGeometry {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetStartPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -12787,7 +12786,7 @@ impl LineGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn EndPoint(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -12799,7 +12798,7 @@ impl LineGeometry {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetEndPoint<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -12813,7 +12812,7 @@ impl LineGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StartPointProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ILineGeometryStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -12824,7 +12823,7 @@ impl LineGeometry {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn EndPointProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ILineGeometryStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -12961,12 +12960,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &LineGeomet
 }
 unsafe impl ::core::marker::Send for LineGeometry {}
 unsafe impl ::core::marker::Sync for LineGeometry {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct LineSegment(::windows::core::IUnknown);
 impl LineSegment {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -12980,7 +12979,7 @@ impl LineSegment {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -12996,7 +12995,7 @@ impl LineSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13016,7 +13015,7 @@ impl LineSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -13030,7 +13029,7 @@ impl LineSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -13046,7 +13045,7 @@ impl LineSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13065,7 +13064,7 @@ impl LineSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13087,7 +13086,7 @@ impl LineSegment {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13106,7 +13105,7 @@ impl LineSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -13118,7 +13117,7 @@ impl LineSegment {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -13133,7 +13132,7 @@ impl LineSegment {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -13145,7 +13144,7 @@ impl LineSegment {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetPoint<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -13159,7 +13158,7 @@ impl LineSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn PointProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ILineSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -13293,12 +13292,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &LineSegmen
 }
 unsafe impl ::core::marker::Send for LineSegment {}
 unsafe impl ::core::marker::Sync for LineSegment {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct LinearGradientBrush(::windows::core::IUnknown);
 impl LinearGradientBrush {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -13312,7 +13311,7 @@ impl LinearGradientBrush {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -13334,7 +13333,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -13346,7 +13345,7 @@ impl LinearGradientBrush {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -13357,7 +13356,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -13369,7 +13368,7 @@ impl LinearGradientBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -13383,7 +13382,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RelativeTransform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -13395,7 +13394,7 @@ impl LinearGradientBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRelativeTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -13409,7 +13408,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -13425,7 +13424,7 @@ impl LinearGradientBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13445,7 +13444,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -13459,7 +13458,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -13475,7 +13474,7 @@ impl LinearGradientBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13494,7 +13493,7 @@ impl LinearGradientBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13516,7 +13515,7 @@ impl LinearGradientBrush {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -13535,7 +13534,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -13547,7 +13546,7 @@ impl LinearGradientBrush {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -13562,7 +13561,7 @@ impl LinearGradientBrush {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SpreadMethod(&self) -> ::windows::core::Result<GradientSpreadMethod> {
         let this = &::windows::core::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
@@ -13574,7 +13573,7 @@ impl LinearGradientBrush {
             .from_abi::<GradientSpreadMethod>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetSpreadMethod(&self, value: GradientSpreadMethod) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
@@ -13585,7 +13584,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn MappingMode(&self) -> ::windows::core::Result<BrushMappingMode> {
         let this = &::windows::core::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
@@ -13597,7 +13596,7 @@ impl LinearGradientBrush {
             .from_abi::<BrushMappingMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetMappingMode(&self, value: BrushMappingMode) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
@@ -13608,7 +13607,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ColorInterpolationMode(&self) -> ::windows::core::Result<ColorInterpolationMode> {
         let this = &::windows::core::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
@@ -13620,7 +13619,7 @@ impl LinearGradientBrush {
             .from_abi::<ColorInterpolationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetColorInterpolationMode(
         &self,
         value: ColorInterpolationMode,
@@ -13634,7 +13633,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GradientStops(&self) -> ::windows::core::Result<GradientStopCollection> {
         let this = &::windows::core::Interface::cast::<IGradientBrush>(self)?;
         unsafe {
@@ -13646,7 +13645,7 @@ impl LinearGradientBrush {
             .from_abi::<GradientStopCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetGradientStops<'a, Param0: ::windows::core::IntoParam<'a, GradientStopCollection>>(
         &self,
         value: Param0,
@@ -13660,7 +13659,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StartPoint(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -13672,7 +13671,7 @@ impl LinearGradientBrush {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetStartPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -13689,7 +13688,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn EndPoint(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -13701,7 +13700,7 @@ impl LinearGradientBrush {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetEndPoint<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -13715,7 +13714,7 @@ impl LinearGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CreateInstanceWithGradientStopCollectionAndAngle<
         'a,
         Param0: ::windows::core::IntoParam<'a, GradientStopCollection>,
@@ -13735,7 +13734,7 @@ impl LinearGradientBrush {
             .from_abi::<LinearGradientBrush>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StartPointProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ILinearGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -13746,7 +13745,7 @@ impl LinearGradientBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn EndPointProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ILinearGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -13952,11 +13951,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &LinearGrad
 }
 unsafe impl ::core::marker::Send for LinearGradientBrush {}
 unsafe impl ::core::marker::Sync for LinearGradientBrush {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct LoadedImageSourceLoadCompletedEventArgs(::windows::core::IUnknown);
 impl LoadedImageSourceLoadCompletedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Status(&self) -> ::windows::core::Result<LoadedImageSourceLoadStatus> {
         let this = self;
         unsafe {
@@ -14056,7 +14055,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for LoadedImageSourceLoadCompletedEventArgs {}
 unsafe impl ::core::marker::Sync for LoadedImageSourceLoadCompletedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct LoadedImageSourceLoadStatus(pub i32);
@@ -14096,18 +14095,18 @@ unsafe impl ::windows::core::RuntimeType for LoadedImageSourceLoadStatus {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct LoadedImageSurface(::windows::core::IUnknown);
 impl LoadedImageSurface {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn DecodedPhysicalSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
@@ -14119,7 +14118,7 @@ impl LoadedImageSurface {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn DecodedSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
@@ -14131,7 +14130,7 @@ impl LoadedImageSurface {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn NaturalSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
@@ -14143,7 +14142,7 @@ impl LoadedImageSurface {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn LoadCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -14168,7 +14167,7 @@ impl LoadedImageSurface {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveLoadCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14185,7 +14184,7 @@ impl LoadedImageSurface {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StartLoadFromUriWithSize<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Uri>,
@@ -14205,7 +14204,7 @@ impl LoadedImageSurface {
             .from_abi::<LoadedImageSurface>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StartLoadFromUri<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Uri>,
@@ -14222,7 +14221,7 @@ impl LoadedImageSurface {
             .from_abi::<LoadedImageSurface>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StartLoadFromStreamWithSize<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -14242,7 +14241,7 @@ impl LoadedImageSurface {
             .from_abi::<LoadedImageSurface>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StartLoadFromStream<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -14412,7 +14411,7 @@ impl<'a> ::windows::core::IntoParam<'a, super::super::Composition::ICompositionS
 unsafe impl ::core::marker::Send for LoadedImageSurface {}
 unsafe impl ::core::marker::Sync for LoadedImageSurface {}
 #[repr(C)]
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 pub struct Matrix {
     pub M11: f64,
     pub M12: f64,
@@ -14468,12 +14467,12 @@ impl ::core::default::Default for Matrix {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct Matrix3DProjection(::windows::core::IUnknown);
 impl Matrix3DProjection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -14487,7 +14486,7 @@ impl Matrix3DProjection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -14503,7 +14502,7 @@ impl Matrix3DProjection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -14523,7 +14522,7 @@ impl Matrix3DProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -14537,7 +14536,7 @@ impl Matrix3DProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -14553,7 +14552,7 @@ impl Matrix3DProjection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -14572,7 +14571,7 @@ impl Matrix3DProjection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -14594,7 +14593,7 @@ impl Matrix3DProjection {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -14613,7 +14612,7 @@ impl Matrix3DProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -14625,7 +14624,7 @@ impl Matrix3DProjection {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -14640,7 +14639,7 @@ impl Matrix3DProjection {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn ProjectionMatrix(&self) -> ::windows::core::Result<Media3D::Matrix3D> {
         let this = self;
@@ -14653,7 +14652,7 @@ impl Matrix3DProjection {
             .from_abi::<Media3D::Matrix3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn SetProjectionMatrix<'a, Param0: ::windows::core::IntoParam<'a, Media3D::Matrix3D>>(
         &self,
@@ -14668,7 +14667,7 @@ impl Matrix3DProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ProjectionMatrixProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IMatrix3DProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -14807,11 +14806,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Matrix3DPr
 }
 unsafe impl ::core::marker::Send for Matrix3DProjection {}
 unsafe impl ::core::marker::Sync for Matrix3DProjection {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct MatrixHelper(::windows::core::IUnknown);
 impl MatrixHelper {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Identity() -> ::windows::core::Result<Matrix> {
         Self::IMatrixHelperStatics(|this| unsafe {
             let mut result__: Matrix = ::core::mem::zeroed();
@@ -14822,7 +14821,7 @@ impl MatrixHelper {
             .from_abi::<Matrix>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FromElements(
         m11: f64,
         m12: f64,
@@ -14846,7 +14845,7 @@ impl MatrixHelper {
             .from_abi::<Matrix>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetIsIdentity<'a, Param0: ::windows::core::IntoParam<'a, Matrix>>(
         target: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -14860,7 +14859,7 @@ impl MatrixHelper {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform<
         'a,
         Param0: ::windows::core::IntoParam<'a, Matrix>,
@@ -14966,12 +14965,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a M
 }
 unsafe impl ::core::marker::Send for MatrixHelper {}
 unsafe impl ::core::marker::Sync for MatrixHelper {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct MatrixTransform(::windows::core::IUnknown);
 impl MatrixTransform {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -14985,7 +14984,7 @@ impl MatrixTransform {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15001,7 +15000,7 @@ impl MatrixTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15021,7 +15020,7 @@ impl MatrixTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15035,7 +15034,7 @@ impl MatrixTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15051,7 +15050,7 @@ impl MatrixTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15070,7 +15069,7 @@ impl MatrixTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15092,7 +15091,7 @@ impl MatrixTransform {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15111,7 +15110,7 @@ impl MatrixTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -15123,7 +15122,7 @@ impl MatrixTransform {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -15138,7 +15137,7 @@ impl MatrixTransform {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Inverse(&self) -> ::windows::core::Result<GeneralTransform> {
         let this = &::windows::core::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
@@ -15150,7 +15149,7 @@ impl MatrixTransform {
             .from_abi::<GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -15169,7 +15168,7 @@ impl MatrixTransform {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TryTransform<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -15190,7 +15189,7 @@ impl MatrixTransform {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformBounds<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -15209,7 +15208,7 @@ impl MatrixTransform {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Matrix(&self) -> ::windows::core::Result<Matrix> {
         let this = self;
         unsafe {
@@ -15221,7 +15220,7 @@ impl MatrixTransform {
             .from_abi::<Matrix>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetMatrix<'a, Param0: ::windows::core::IntoParam<'a, Matrix>>(
         &self,
         value: Param0,
@@ -15235,7 +15234,7 @@ impl MatrixTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn MatrixProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IMatrixTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -15392,12 +15391,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &MatrixTran
 }
 unsafe impl ::core::marker::Send for MatrixTransform {}
 unsafe impl ::core::marker::Sync for MatrixTransform {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct PathFigure(::windows::core::IUnknown);
 impl PathFigure {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -15411,7 +15410,7 @@ impl PathFigure {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15427,7 +15426,7 @@ impl PathFigure {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15447,7 +15446,7 @@ impl PathFigure {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15461,7 +15460,7 @@ impl PathFigure {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -15477,7 +15476,7 @@ impl PathFigure {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15496,7 +15495,7 @@ impl PathFigure {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15518,7 +15517,7 @@ impl PathFigure {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -15537,7 +15536,7 @@ impl PathFigure {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -15549,7 +15548,7 @@ impl PathFigure {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -15564,7 +15563,7 @@ impl PathFigure {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Segments(&self) -> ::windows::core::Result<PathSegmentCollection> {
         let this = self;
         unsafe {
@@ -15576,7 +15575,7 @@ impl PathFigure {
             .from_abi::<PathSegmentCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetSegments<'a, Param0: ::windows::core::IntoParam<'a, PathSegmentCollection>>(
         &self,
         value: Param0,
@@ -15590,7 +15589,7 @@ impl PathFigure {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StartPoint(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -15602,7 +15601,7 @@ impl PathFigure {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetStartPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -15619,7 +15618,7 @@ impl PathFigure {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IsClosed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -15631,7 +15630,7 @@ impl PathFigure {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetIsClosed(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -15642,7 +15641,7 @@ impl PathFigure {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IsFilled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -15654,7 +15653,7 @@ impl PathFigure {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetIsFilled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -15665,7 +15664,7 @@ impl PathFigure {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SegmentsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPathFigureStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -15676,7 +15675,7 @@ impl PathFigure {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StartPointProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPathFigureStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -15687,7 +15686,7 @@ impl PathFigure {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IsClosedProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPathFigureStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -15698,7 +15697,7 @@ impl PathFigure {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IsFilledProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPathFigureStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -15812,12 +15811,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &PathFigure
 }
 unsafe impl ::core::marker::Send for PathFigure {}
 unsafe impl ::core::marker::Sync for PathFigure {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct PathFigureCollection(::windows::core::IUnknown);
 impl PathFigureCollection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -15831,7 +15830,7 @@ impl PathFigureCollection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<PathFigure>> {
@@ -15847,7 +15846,7 @@ impl PathFigureCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<PathFigure>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<PathFigure> {
         let this = self;
         unsafe {
@@ -15860,7 +15859,7 @@ impl PathFigureCollection {
             .from_abi::<PathFigure>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -15872,7 +15871,7 @@ impl PathFigureCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<PathFigure>> {
@@ -15886,7 +15885,7 @@ impl PathFigureCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<PathFigure>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, PathFigure>>(
         &self,
         value: Param0,
@@ -15904,7 +15903,7 @@ impl PathFigureCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, PathFigure>>(
         &self,
         index: u32,
@@ -15920,7 +15919,7 @@ impl PathFigureCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, PathFigure>>(
         &self,
         index: u32,
@@ -15936,7 +15935,7 @@ impl PathFigureCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -15947,7 +15946,7 @@ impl PathFigureCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, PathFigure>>(
         &self,
         value: Param0,
@@ -15961,7 +15960,7 @@ impl PathFigureCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -15971,14 +15970,14 @@ impl PathFigureCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -15997,7 +15996,7 @@ impl PathFigureCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<PathFigure>],
@@ -16173,12 +16172,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for PathFigureCollection {}
 unsafe impl ::core::marker::Sync for PathFigureCollection {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct PathGeometry(::windows::core::IUnknown);
 impl PathGeometry {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -16192,7 +16191,7 @@ impl PathGeometry {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16208,7 +16207,7 @@ impl PathGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16228,7 +16227,7 @@ impl PathGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16242,7 +16241,7 @@ impl PathGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16258,7 +16257,7 @@ impl PathGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16277,7 +16276,7 @@ impl PathGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16299,7 +16298,7 @@ impl PathGeometry {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16318,7 +16317,7 @@ impl PathGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -16330,7 +16329,7 @@ impl PathGeometry {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -16345,7 +16344,7 @@ impl PathGeometry {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IGeometry>(self)?;
         unsafe {
@@ -16357,7 +16356,7 @@ impl PathGeometry {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -16371,7 +16370,7 @@ impl PathGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = &::windows::core::Interface::cast::<IGeometry>(self)?;
         unsafe {
@@ -16383,7 +16382,7 @@ impl PathGeometry {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FillRule(&self) -> ::windows::core::Result<FillRule> {
         let this = self;
         unsafe {
@@ -16395,7 +16394,7 @@ impl PathGeometry {
             .from_abi::<FillRule>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetFillRule(&self, value: FillRule) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -16406,7 +16405,7 @@ impl PathGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Figures(&self) -> ::windows::core::Result<PathFigureCollection> {
         let this = self;
         unsafe {
@@ -16418,7 +16417,7 @@ impl PathGeometry {
             .from_abi::<PathFigureCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetFigures<'a, Param0: ::windows::core::IntoParam<'a, PathFigureCollection>>(
         &self,
         value: Param0,
@@ -16432,7 +16431,7 @@ impl PathGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FillRuleProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPathGeometryStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -16443,7 +16442,7 @@ impl PathGeometry {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FiguresProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPathGeometryStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -16580,11 +16579,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &PathGeomet
 }
 unsafe impl ::core::marker::Send for PathGeometry {}
 unsafe impl ::core::marker::Sync for PathGeometry {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct PathSegment(::windows::core::IUnknown);
 impl PathSegment {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16600,7 +16599,7 @@ impl PathSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16620,7 +16619,7 @@ impl PathSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16634,7 +16633,7 @@ impl PathSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16650,7 +16649,7 @@ impl PathSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16669,7 +16668,7 @@ impl PathSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16691,7 +16690,7 @@ impl PathSegment {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16710,7 +16709,7 @@ impl PathSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -16722,7 +16721,7 @@ impl PathSegment {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -16832,12 +16831,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &PathSegmen
 }
 unsafe impl ::core::marker::Send for PathSegment {}
 unsafe impl ::core::marker::Sync for PathSegment {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct PathSegmentCollection(::windows::core::IUnknown);
 impl PathSegmentCollection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -16851,7 +16850,7 @@ impl PathSegmentCollection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<PathSegment>> {
@@ -16867,7 +16866,7 @@ impl PathSegmentCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<PathSegment>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<PathSegment> {
         let this = self;
         unsafe {
@@ -16880,7 +16879,7 @@ impl PathSegmentCollection {
             .from_abi::<PathSegment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -16892,7 +16891,7 @@ impl PathSegmentCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<PathSegment>> {
@@ -16906,7 +16905,7 @@ impl PathSegmentCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<PathSegment>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, PathSegment>>(
         &self,
         value: Param0,
@@ -16924,7 +16923,7 @@ impl PathSegmentCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, PathSegment>>(
         &self,
         index: u32,
@@ -16940,7 +16939,7 @@ impl PathSegmentCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, PathSegment>>(
         &self,
         index: u32,
@@ -16956,7 +16955,7 @@ impl PathSegmentCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -16967,7 +16966,7 @@ impl PathSegmentCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, PathSegment>>(
         &self,
         value: Param0,
@@ -16981,7 +16980,7 @@ impl PathSegmentCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -16991,14 +16990,14 @@ impl PathSegmentCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -17017,7 +17016,7 @@ impl PathSegmentCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<PathSegment>],
@@ -17195,7 +17194,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for PathSegmentCollection {}
 unsafe impl ::core::marker::Sync for PathSegmentCollection {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct PenLineCap(pub i32);
@@ -17232,7 +17231,7 @@ unsafe impl ::windows::core::RuntimeType for PenLineCap {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct PenLineJoin(pub i32);
@@ -17268,12 +17267,12 @@ unsafe impl ::windows::core::RuntimeType for PenLineJoin {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct PlaneProjection(::windows::core::IUnknown);
 impl PlaneProjection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -17287,7 +17286,7 @@ impl PlaneProjection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -17303,7 +17302,7 @@ impl PlaneProjection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -17323,7 +17322,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -17337,7 +17336,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -17353,7 +17352,7 @@ impl PlaneProjection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -17372,7 +17371,7 @@ impl PlaneProjection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -17394,7 +17393,7 @@ impl PlaneProjection {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -17413,7 +17412,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -17425,7 +17424,7 @@ impl PlaneProjection {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -17440,7 +17439,7 @@ impl PlaneProjection {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn LocalOffsetX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17452,7 +17451,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetLocalOffsetX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17463,7 +17462,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn LocalOffsetY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17475,7 +17474,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetLocalOffsetY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17486,7 +17485,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn LocalOffsetZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17498,7 +17497,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetLocalOffsetZ(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17509,7 +17508,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RotationX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17521,7 +17520,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRotationX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17532,7 +17531,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RotationY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17544,7 +17543,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRotationY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17555,7 +17554,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RotationZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17567,7 +17566,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRotationZ(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17578,7 +17577,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterOfRotationX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17590,7 +17589,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenterOfRotationX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17601,7 +17600,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterOfRotationY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17613,7 +17612,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenterOfRotationY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17624,7 +17623,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterOfRotationZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17636,7 +17635,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenterOfRotationZ(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17647,7 +17646,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GlobalOffsetX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17659,7 +17658,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetGlobalOffsetX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17670,7 +17669,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GlobalOffsetY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17682,7 +17681,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetGlobalOffsetY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17693,7 +17692,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GlobalOffsetZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -17705,7 +17704,7 @@ impl PlaneProjection {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetGlobalOffsetZ(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -17716,7 +17715,7 @@ impl PlaneProjection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn ProjectionMatrix(&self) -> ::windows::core::Result<Media3D::Matrix3D> {
         let this = self;
@@ -17729,7 +17728,7 @@ impl PlaneProjection {
             .from_abi::<Media3D::Matrix3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn LocalOffsetXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17740,7 +17739,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn LocalOffsetYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17751,7 +17750,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn LocalOffsetZProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17762,7 +17761,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RotationXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17773,7 +17772,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RotationYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17784,7 +17783,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RotationZProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17795,7 +17794,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterOfRotationXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17806,7 +17805,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterOfRotationYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17817,7 +17816,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterOfRotationZProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17828,7 +17827,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GlobalOffsetXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17839,7 +17838,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GlobalOffsetYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17850,7 +17849,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GlobalOffsetZProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17861,7 +17860,7 @@ impl PlaneProjection {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ProjectionMatrixProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPlaneProjectionStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -17998,12 +17997,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &PlaneProje
 }
 unsafe impl ::core::marker::Send for PlaneProjection {}
 unsafe impl ::core::marker::Sync for PlaneProjection {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct PointCollection(::windows::core::IUnknown);
 impl PointCollection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -18017,7 +18016,7 @@ impl PointCollection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<
@@ -18031,7 +18030,7 @@ impl PointCollection {
             ( :: windows :: core :: Interface :: vtable ( this ) . First ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IIterator :: < ::windows::Foundation:: Point > > ( result__ )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -18044,7 +18043,7 @@ impl PointCollection {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -18056,7 +18055,7 @@ impl PointCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<
@@ -18074,7 +18073,7 @@ impl PointCollection {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -18092,7 +18091,7 @@ impl PointCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         index: u32,
@@ -18108,7 +18107,7 @@ impl PointCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         index: u32,
@@ -18124,7 +18123,7 @@ impl PointCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -18135,7 +18134,7 @@ impl PointCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -18149,7 +18148,7 @@ impl PointCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -18159,14 +18158,14 @@ impl PointCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -18185,7 +18184,7 @@ impl PointCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::windows::Foundation::Point],
@@ -18391,12 +18390,12 @@ impl<'a>
 }
 unsafe impl ::core::marker::Send for PointCollection {}
 unsafe impl ::core::marker::Sync for PointCollection {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct PolyBezierSegment(::windows::core::IUnknown);
 impl PolyBezierSegment {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -18410,7 +18409,7 @@ impl PolyBezierSegment {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -18426,7 +18425,7 @@ impl PolyBezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18446,7 +18445,7 @@ impl PolyBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -18460,7 +18459,7 @@ impl PolyBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -18476,7 +18475,7 @@ impl PolyBezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18495,7 +18494,7 @@ impl PolyBezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18517,7 +18516,7 @@ impl PolyBezierSegment {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18536,7 +18535,7 @@ impl PolyBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -18548,7 +18547,7 @@ impl PolyBezierSegment {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -18563,7 +18562,7 @@ impl PolyBezierSegment {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Points(&self) -> ::windows::core::Result<PointCollection> {
         let this = self;
         unsafe {
@@ -18575,7 +18574,7 @@ impl PolyBezierSegment {
             .from_abi::<PointCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetPoints<'a, Param0: ::windows::core::IntoParam<'a, PointCollection>>(
         &self,
         value: Param0,
@@ -18589,7 +18588,7 @@ impl PolyBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn PointsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPolyBezierSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -18728,12 +18727,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &PolyBezier
 }
 unsafe impl ::core::marker::Send for PolyBezierSegment {}
 unsafe impl ::core::marker::Sync for PolyBezierSegment {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct PolyLineSegment(::windows::core::IUnknown);
 impl PolyLineSegment {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -18747,7 +18746,7 @@ impl PolyLineSegment {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -18763,7 +18762,7 @@ impl PolyLineSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18783,7 +18782,7 @@ impl PolyLineSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -18797,7 +18796,7 @@ impl PolyLineSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -18813,7 +18812,7 @@ impl PolyLineSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18832,7 +18831,7 @@ impl PolyLineSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18854,7 +18853,7 @@ impl PolyLineSegment {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -18873,7 +18872,7 @@ impl PolyLineSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -18885,7 +18884,7 @@ impl PolyLineSegment {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -18900,7 +18899,7 @@ impl PolyLineSegment {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Points(&self) -> ::windows::core::Result<PointCollection> {
         let this = self;
         unsafe {
@@ -18912,7 +18911,7 @@ impl PolyLineSegment {
             .from_abi::<PointCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetPoints<'a, Param0: ::windows::core::IntoParam<'a, PointCollection>>(
         &self,
         value: Param0,
@@ -18926,7 +18925,7 @@ impl PolyLineSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn PointsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPolyLineSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -19063,12 +19062,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &PolyLineSe
 }
 unsafe impl ::core::marker::Send for PolyLineSegment {}
 unsafe impl ::core::marker::Sync for PolyLineSegment {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct PolyQuadraticBezierSegment(::windows::core::IUnknown);
 impl PolyQuadraticBezierSegment {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -19082,7 +19081,7 @@ impl PolyQuadraticBezierSegment {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19098,7 +19097,7 @@ impl PolyQuadraticBezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19118,7 +19117,7 @@ impl PolyQuadraticBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19132,7 +19131,7 @@ impl PolyQuadraticBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19148,7 +19147,7 @@ impl PolyQuadraticBezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19167,7 +19166,7 @@ impl PolyQuadraticBezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19189,7 +19188,7 @@ impl PolyQuadraticBezierSegment {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19208,7 +19207,7 @@ impl PolyQuadraticBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -19220,7 +19219,7 @@ impl PolyQuadraticBezierSegment {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -19235,7 +19234,7 @@ impl PolyQuadraticBezierSegment {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Points(&self) -> ::windows::core::Result<PointCollection> {
         let this = self;
         unsafe {
@@ -19247,7 +19246,7 @@ impl PolyQuadraticBezierSegment {
             .from_abi::<PointCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetPoints<'a, Param0: ::windows::core::IntoParam<'a, PointCollection>>(
         &self,
         value: Param0,
@@ -19261,7 +19260,7 @@ impl PolyQuadraticBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn PointsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPolyQuadraticBezierSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -19407,11 +19406,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &PolyQuadra
 }
 unsafe impl ::core::marker::Send for PolyQuadraticBezierSegment {}
 unsafe impl ::core::marker::Sync for PolyQuadraticBezierSegment {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct Projection(::windows::core::IUnknown);
 impl Projection {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19427,7 +19426,7 @@ impl Projection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19447,7 +19446,7 @@ impl Projection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19461,7 +19460,7 @@ impl Projection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19477,7 +19476,7 @@ impl Projection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19496,7 +19495,7 @@ impl Projection {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19518,7 +19517,7 @@ impl Projection {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19537,7 +19536,7 @@ impl Projection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -19549,7 +19548,7 @@ impl Projection {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -19659,12 +19658,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Projection
 }
 unsafe impl ::core::marker::Send for Projection {}
 unsafe impl ::core::marker::Sync for Projection {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct QuadraticBezierSegment(::windows::core::IUnknown);
 impl QuadraticBezierSegment {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -19678,7 +19677,7 @@ impl QuadraticBezierSegment {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19694,7 +19693,7 @@ impl QuadraticBezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19714,7 +19713,7 @@ impl QuadraticBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19728,7 +19727,7 @@ impl QuadraticBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -19744,7 +19743,7 @@ impl QuadraticBezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19763,7 +19762,7 @@ impl QuadraticBezierSegment {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19785,7 +19784,7 @@ impl QuadraticBezierSegment {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -19804,7 +19803,7 @@ impl QuadraticBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -19816,7 +19815,7 @@ impl QuadraticBezierSegment {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -19831,7 +19830,7 @@ impl QuadraticBezierSegment {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point1(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -19843,7 +19842,7 @@ impl QuadraticBezierSegment {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetPoint1<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -19857,7 +19856,7 @@ impl QuadraticBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point2(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -19869,7 +19868,7 @@ impl QuadraticBezierSegment {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetPoint2<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -19883,7 +19882,7 @@ impl QuadraticBezierSegment {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point1Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IQuadraticBezierSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -19894,7 +19893,7 @@ impl QuadraticBezierSegment {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Point2Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IQuadraticBezierSegmentStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20035,11 +20034,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &QuadraticB
 }
 unsafe impl ::core::marker::Send for QuadraticBezierSegment {}
 unsafe impl ::core::marker::Sync for QuadraticBezierSegment {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct RadialGradientBrush(::windows::core::IUnknown);
 impl RadialGradientBrush {
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -20061,7 +20060,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -20073,7 +20072,7 @@ impl RadialGradientBrush {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -20084,7 +20083,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -20096,7 +20095,7 @@ impl RadialGradientBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -20110,7 +20109,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RelativeTransform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -20122,7 +20121,7 @@ impl RadialGradientBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRelativeTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -20136,7 +20135,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -20152,7 +20151,7 @@ impl RadialGradientBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20172,7 +20171,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -20186,7 +20185,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -20202,7 +20201,7 @@ impl RadialGradientBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20221,7 +20220,7 @@ impl RadialGradientBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20243,7 +20242,7 @@ impl RadialGradientBrush {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20262,7 +20261,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -20274,7 +20273,7 @@ impl RadialGradientBrush {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -20289,7 +20288,7 @@ impl RadialGradientBrush {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Center(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -20301,7 +20300,7 @@ impl RadialGradientBrush {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenter<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         value: Param0,
@@ -20315,7 +20314,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RadiusX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -20327,7 +20326,7 @@ impl RadialGradientBrush {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRadiusX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -20338,7 +20337,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RadiusY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -20350,7 +20349,7 @@ impl RadialGradientBrush {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRadiusY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -20361,7 +20360,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GradientOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
@@ -20373,7 +20372,7 @@ impl RadialGradientBrush {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetGradientOrigin<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -20390,7 +20389,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn MappingMode(&self) -> ::windows::core::Result<BrushMappingMode> {
         let this = self;
         unsafe {
@@ -20402,7 +20401,7 @@ impl RadialGradientBrush {
             .from_abi::<BrushMappingMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetMappingMode(&self, value: BrushMappingMode) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -20413,7 +20412,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn InterpolationSpace(
         &self,
@@ -20429,7 +20428,7 @@ impl RadialGradientBrush {
             .from_abi::<super::super::Composition::CompositionColorSpace>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn SetInterpolationSpace(
         &self,
@@ -20444,7 +20443,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SpreadMethod(&self) -> ::windows::core::Result<GradientSpreadMethod> {
         let this = self;
         unsafe {
@@ -20456,7 +20455,7 @@ impl RadialGradientBrush {
             .from_abi::<GradientSpreadMethod>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetSpreadMethod(&self, value: GradientSpreadMethod) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -20467,7 +20466,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GradientStops(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IObservableVector<GradientStop>>
@@ -20484,7 +20483,7 @@ impl RadialGradientBrush {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn new() -> ::windows::core::Result<RadialGradientBrush> {
         Self::IRadialGradientBrushFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20497,7 +20496,7 @@ impl RadialGradientBrush {
             .from_abi::<RadialGradientBrush>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<RadialGradientBrush> {
@@ -20513,7 +20512,7 @@ impl RadialGradientBrush {
             .from_abi::<RadialGradientBrush>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20524,7 +20523,7 @@ impl RadialGradientBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RadiusXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20535,7 +20534,7 @@ impl RadialGradientBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RadiusYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20546,7 +20545,7 @@ impl RadialGradientBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GradientOriginProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20557,7 +20556,7 @@ impl RadialGradientBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn InterpolationSpaceProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20568,7 +20567,7 @@ impl RadialGradientBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn MappingModeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20579,7 +20578,7 @@ impl RadialGradientBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SpreadMethodProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRadialGradientBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -20590,7 +20589,7 @@ impl RadialGradientBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FallbackColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = &::windows::core::Interface::cast::<IXamlCompositionBrushBase>(self)?;
         unsafe {
@@ -20602,7 +20601,7 @@ impl RadialGradientBrush {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetFallbackColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -20616,7 +20615,7 @@ impl RadialGradientBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn CompositionBrush(
         &self,
@@ -20631,7 +20630,7 @@ impl RadialGradientBrush {
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn SetCompositionBrush<
         'a,
@@ -20846,12 +20845,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &RadialGrad
 }
 unsafe impl ::core::marker::Send for RadialGradientBrush {}
 unsafe impl ::core::marker::Sync for RadialGradientBrush {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct RectangleGeometry(::windows::core::IUnknown);
 impl RectangleGeometry {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -20865,7 +20864,7 @@ impl RectangleGeometry {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -20881,7 +20880,7 @@ impl RectangleGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20901,7 +20900,7 @@ impl RectangleGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -20915,7 +20914,7 @@ impl RectangleGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -20931,7 +20930,7 @@ impl RectangleGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20950,7 +20949,7 @@ impl RectangleGeometry {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20972,7 +20971,7 @@ impl RectangleGeometry {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -20991,7 +20990,7 @@ impl RectangleGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -21003,7 +21002,7 @@ impl RectangleGeometry {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -21018,7 +21017,7 @@ impl RectangleGeometry {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IGeometry>(self)?;
         unsafe {
@@ -21030,7 +21029,7 @@ impl RectangleGeometry {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -21044,7 +21043,7 @@ impl RectangleGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = &::windows::core::Interface::cast::<IGeometry>(self)?;
         unsafe {
@@ -21056,7 +21055,7 @@ impl RectangleGeometry {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Rect(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
@@ -21068,7 +21067,7 @@ impl RectangleGeometry {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRect<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         value: Param0,
@@ -21082,7 +21081,7 @@ impl RectangleGeometry {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RectProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRectangleGeometryStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21221,11 +21220,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &RectangleG
 }
 unsafe impl ::core::marker::Send for RectangleGeometry {}
 unsafe impl ::core::marker::Sync for RectangleGeometry {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct RenderedEventArgs(::windows::core::IUnknown);
 impl RenderedEventArgs {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FrameDuration(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
@@ -21312,11 +21311,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a R
 }
 unsafe impl ::core::marker::Send for RenderedEventArgs {}
 unsafe impl ::core::marker::Sync for RenderedEventArgs {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct RenderingEventArgs(::windows::core::IUnknown);
 impl RenderingEventArgs {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RenderingTime(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
@@ -21403,12 +21402,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a R
 }
 unsafe impl ::core::marker::Send for RenderingEventArgs {}
 unsafe impl ::core::marker::Sync for RenderingEventArgs {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct RotateTransform(::windows::core::IUnknown);
 impl RotateTransform {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -21422,7 +21421,7 @@ impl RotateTransform {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -21438,7 +21437,7 @@ impl RotateTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -21458,7 +21457,7 @@ impl RotateTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -21472,7 +21471,7 @@ impl RotateTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -21488,7 +21487,7 @@ impl RotateTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -21507,7 +21506,7 @@ impl RotateTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -21529,7 +21528,7 @@ impl RotateTransform {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -21548,7 +21547,7 @@ impl RotateTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -21560,7 +21559,7 @@ impl RotateTransform {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -21575,7 +21574,7 @@ impl RotateTransform {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Inverse(&self) -> ::windows::core::Result<GeneralTransform> {
         let this = &::windows::core::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
@@ -21587,7 +21586,7 @@ impl RotateTransform {
             .from_abi::<GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -21606,7 +21605,7 @@ impl RotateTransform {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TryTransform<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -21627,7 +21626,7 @@ impl RotateTransform {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformBounds<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -21646,7 +21645,7 @@ impl RotateTransform {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -21658,7 +21657,7 @@ impl RotateTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenterX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -21669,7 +21668,7 @@ impl RotateTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -21681,7 +21680,7 @@ impl RotateTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenterY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -21692,7 +21691,7 @@ impl RotateTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Angle(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -21704,7 +21703,7 @@ impl RotateTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAngle(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -21715,7 +21714,7 @@ impl RotateTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRotateTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21726,7 +21725,7 @@ impl RotateTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRotateTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21737,7 +21736,7 @@ impl RotateTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AngleProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRotateTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -21894,12 +21893,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &RotateTran
 }
 unsafe impl ::core::marker::Send for RotateTransform {}
 unsafe impl ::core::marker::Sync for RotateTransform {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct ScaleTransform(::windows::core::IUnknown);
 impl ScaleTransform {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -21913,7 +21912,7 @@ impl ScaleTransform {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -21929,7 +21928,7 @@ impl ScaleTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -21949,7 +21948,7 @@ impl ScaleTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -21963,7 +21962,7 @@ impl ScaleTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -21979,7 +21978,7 @@ impl ScaleTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -21998,7 +21997,7 @@ impl ScaleTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22020,7 +22019,7 @@ impl ScaleTransform {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22039,7 +22038,7 @@ impl ScaleTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -22051,7 +22050,7 @@ impl ScaleTransform {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -22066,7 +22065,7 @@ impl ScaleTransform {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Inverse(&self) -> ::windows::core::Result<GeneralTransform> {
         let this = &::windows::core::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
@@ -22078,7 +22077,7 @@ impl ScaleTransform {
             .from_abi::<GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -22097,7 +22096,7 @@ impl ScaleTransform {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TryTransform<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -22118,7 +22117,7 @@ impl ScaleTransform {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformBounds<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -22137,7 +22136,7 @@ impl ScaleTransform {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -22149,7 +22148,7 @@ impl ScaleTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenterX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -22160,7 +22159,7 @@ impl ScaleTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -22172,7 +22171,7 @@ impl ScaleTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenterY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -22183,7 +22182,7 @@ impl ScaleTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ScaleX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -22195,7 +22194,7 @@ impl ScaleTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetScaleX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -22206,7 +22205,7 @@ impl ScaleTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ScaleY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -22218,7 +22217,7 @@ impl ScaleTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetScaleY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -22229,7 +22228,7 @@ impl ScaleTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IScaleTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22240,7 +22239,7 @@ impl ScaleTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IScaleTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22251,7 +22250,7 @@ impl ScaleTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ScaleXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IScaleTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22262,7 +22261,7 @@ impl ScaleTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ScaleYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IScaleTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22419,11 +22418,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &ScaleTrans
 }
 unsafe impl ::core::marker::Send for ScaleTransform {}
 unsafe impl ::core::marker::Sync for ScaleTransform {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct Shadow(::windows::core::IUnknown);
 impl Shadow {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -22439,7 +22438,7 @@ impl Shadow {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22459,7 +22458,7 @@ impl Shadow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -22473,7 +22472,7 @@ impl Shadow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -22489,7 +22488,7 @@ impl Shadow {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22508,7 +22507,7 @@ impl Shadow {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22530,7 +22529,7 @@ impl Shadow {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22549,7 +22548,7 @@ impl Shadow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -22561,7 +22560,7 @@ impl Shadow {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -22671,12 +22670,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Shadow {
 }
 unsafe impl ::core::marker::Send for Shadow {}
 unsafe impl ::core::marker::Sync for Shadow {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct SkewTransform(::windows::core::IUnknown);
 impl SkewTransform {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -22690,7 +22689,7 @@ impl SkewTransform {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -22706,7 +22705,7 @@ impl SkewTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22726,7 +22725,7 @@ impl SkewTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -22740,7 +22739,7 @@ impl SkewTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -22756,7 +22755,7 @@ impl SkewTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22775,7 +22774,7 @@ impl SkewTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22797,7 +22796,7 @@ impl SkewTransform {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22816,7 +22815,7 @@ impl SkewTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -22828,7 +22827,7 @@ impl SkewTransform {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -22843,7 +22842,7 @@ impl SkewTransform {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Inverse(&self) -> ::windows::core::Result<GeneralTransform> {
         let this = &::windows::core::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
@@ -22855,7 +22854,7 @@ impl SkewTransform {
             .from_abi::<GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -22874,7 +22873,7 @@ impl SkewTransform {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TryTransform<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -22895,7 +22894,7 @@ impl SkewTransform {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformBounds<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -22914,7 +22913,7 @@ impl SkewTransform {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -22926,7 +22925,7 @@ impl SkewTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenterX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -22937,7 +22936,7 @@ impl SkewTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -22949,7 +22948,7 @@ impl SkewTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetCenterY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -22960,7 +22959,7 @@ impl SkewTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AngleX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -22972,7 +22971,7 @@ impl SkewTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAngleX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -22983,7 +22982,7 @@ impl SkewTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AngleY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -22995,7 +22994,7 @@ impl SkewTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAngleY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -23006,7 +23005,7 @@ impl SkewTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ISkewTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -23017,7 +23016,7 @@ impl SkewTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CenterYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ISkewTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -23028,7 +23027,7 @@ impl SkewTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AngleXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ISkewTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -23039,7 +23038,7 @@ impl SkewTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AngleYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ISkewTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -23196,12 +23195,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &SkewTransf
 }
 unsafe impl ::core::marker::Send for SkewTransform {}
 unsafe impl ::core::marker::Sync for SkewTransform {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct SolidColorBrush(::windows::core::IUnknown);
 impl SolidColorBrush {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -23215,7 +23214,7 @@ impl SolidColorBrush {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -23237,7 +23236,7 @@ impl SolidColorBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -23249,7 +23248,7 @@ impl SolidColorBrush {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -23260,7 +23259,7 @@ impl SolidColorBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -23272,7 +23271,7 @@ impl SolidColorBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -23286,7 +23285,7 @@ impl SolidColorBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RelativeTransform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -23298,7 +23297,7 @@ impl SolidColorBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRelativeTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -23312,7 +23311,7 @@ impl SolidColorBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23328,7 +23327,7 @@ impl SolidColorBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23348,7 +23347,7 @@ impl SolidColorBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23362,7 +23361,7 @@ impl SolidColorBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23378,7 +23377,7 @@ impl SolidColorBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23397,7 +23396,7 @@ impl SolidColorBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23419,7 +23418,7 @@ impl SolidColorBrush {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23438,7 +23437,7 @@ impl SolidColorBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -23450,7 +23449,7 @@ impl SolidColorBrush {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -23465,7 +23464,7 @@ impl SolidColorBrush {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Color(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
@@ -23477,7 +23476,7 @@ impl SolidColorBrush {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -23491,7 +23490,7 @@ impl SolidColorBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn CreateInstanceWithColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>,
@@ -23508,7 +23507,7 @@ impl SolidColorBrush {
             .from_abi::<SolidColorBrush>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ColorProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ISolidColorBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -23688,7 +23687,7 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &SolidColor
 }
 unsafe impl ::core::marker::Send for SolidColorBrush {}
 unsafe impl ::core::marker::Sync for SolidColorBrush {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct Stretch(pub i32);
@@ -23725,7 +23724,7 @@ unsafe impl ::windows::core::RuntimeType for Stretch {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct StyleSimulations(pub i32);
@@ -23763,7 +23762,7 @@ unsafe impl ::windows::core::RuntimeType for StyleSimulations {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct SweepDirection(pub i32);
@@ -23799,11 +23798,11 @@ unsafe impl ::windows::core::RuntimeType for SweepDirection {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct ThemeShadow(::windows::core::IUnknown);
 impl ThemeShadow {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23819,7 +23818,7 @@ impl ThemeShadow {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23839,7 +23838,7 @@ impl ThemeShadow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23853,7 +23852,7 @@ impl ThemeShadow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -23869,7 +23868,7 @@ impl ThemeShadow {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23888,7 +23887,7 @@ impl ThemeShadow {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23910,7 +23909,7 @@ impl ThemeShadow {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -23929,7 +23928,7 @@ impl ThemeShadow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -23941,7 +23940,7 @@ impl ThemeShadow {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -23956,7 +23955,7 @@ impl ThemeShadow {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Receivers(&self) -> ::windows::core::Result<super::UIElementWeakCollection> {
         let this = self;
         unsafe {
@@ -23968,7 +23967,7 @@ impl ThemeShadow {
             .from_abi::<super::UIElementWeakCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn new() -> ::windows::core::Result<ThemeShadow> {
         Self::IThemeShadowFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -23981,7 +23980,7 @@ impl ThemeShadow {
             .from_abi::<ThemeShadow>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<ThemeShadow> {
@@ -24120,11 +24119,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &ThemeShado
 }
 unsafe impl ::core::marker::Send for ThemeShadow {}
 unsafe impl ::core::marker::Sync for ThemeShadow {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct TileBrush(::windows::core::IUnknown);
 impl TileBrush {
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -24146,7 +24145,7 @@ impl TileBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -24158,7 +24157,7 @@ impl TileBrush {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -24169,7 +24168,7 @@ impl TileBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -24181,7 +24180,7 @@ impl TileBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -24195,7 +24194,7 @@ impl TileBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RelativeTransform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -24207,7 +24206,7 @@ impl TileBrush {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRelativeTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -24221,7 +24220,7 @@ impl TileBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -24237,7 +24236,7 @@ impl TileBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -24257,7 +24256,7 @@ impl TileBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -24271,7 +24270,7 @@ impl TileBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -24287,7 +24286,7 @@ impl TileBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -24306,7 +24305,7 @@ impl TileBrush {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -24328,7 +24327,7 @@ impl TileBrush {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -24347,7 +24346,7 @@ impl TileBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -24359,7 +24358,7 @@ impl TileBrush {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -24374,7 +24373,7 @@ impl TileBrush {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AlignmentX(&self) -> ::windows::core::Result<AlignmentX> {
         let this = self;
         unsafe {
@@ -24386,7 +24385,7 @@ impl TileBrush {
             .from_abi::<AlignmentX>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAlignmentX(&self, value: AlignmentX) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -24397,7 +24396,7 @@ impl TileBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AlignmentY(&self) -> ::windows::core::Result<AlignmentY> {
         let this = self;
         unsafe {
@@ -24409,7 +24408,7 @@ impl TileBrush {
             .from_abi::<AlignmentY>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAlignmentY(&self, value: AlignmentY) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -24420,7 +24419,7 @@ impl TileBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Stretch(&self) -> ::windows::core::Result<Stretch> {
         let this = self;
         unsafe {
@@ -24432,7 +24431,7 @@ impl TileBrush {
             .from_abi::<Stretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetStretch(&self, value: Stretch) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -24443,7 +24442,7 @@ impl TileBrush {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AlignmentXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITileBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -24454,7 +24453,7 @@ impl TileBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AlignmentYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITileBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -24465,7 +24464,7 @@ impl TileBrush {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn StretchProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITileBrushStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -24629,11 +24628,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &TileBrush 
 }
 unsafe impl ::core::marker::Send for TileBrush {}
 unsafe impl ::core::marker::Sync for TileBrush {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct Transform(::windows::core::IUnknown);
 impl Transform {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -24649,7 +24648,7 @@ impl Transform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -24669,7 +24668,7 @@ impl Transform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -24683,7 +24682,7 @@ impl Transform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -24699,7 +24698,7 @@ impl Transform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -24718,7 +24717,7 @@ impl Transform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -24740,7 +24739,7 @@ impl Transform {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -24759,7 +24758,7 @@ impl Transform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -24771,7 +24770,7 @@ impl Transform {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -24786,7 +24785,7 @@ impl Transform {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Inverse(&self) -> ::windows::core::Result<GeneralTransform> {
         let this = &::windows::core::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
@@ -24798,7 +24797,7 @@ impl Transform {
             .from_abi::<GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -24817,7 +24816,7 @@ impl Transform {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TryTransform<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -24838,7 +24837,7 @@ impl Transform {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformBounds<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -24972,12 +24971,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Transform 
 }
 unsafe impl ::core::marker::Send for Transform {}
 unsafe impl ::core::marker::Sync for Transform {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct TransformCollection(::windows::core::IUnknown);
 impl TransformCollection {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -24991,7 +24990,7 @@ impl TransformCollection {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IIterator<Transform>> {
@@ -25007,7 +25006,7 @@ impl TransformCollection {
             .from_abi::<::windows::Foundation::Collections::IIterator<Transform>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<Transform> {
         let this = self;
         unsafe {
@@ -25020,7 +25019,7 @@ impl TransformCollection {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -25032,7 +25031,7 @@ impl TransformCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetView(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<Transform>> {
@@ -25046,7 +25045,7 @@ impl TransformCollection {
             .from_abi::<::windows::Foundation::Collections::IVectorView<Transform>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn IndexOf<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -25064,7 +25063,7 @@ impl TransformCollection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetAt<'a, Param1: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         index: u32,
@@ -25080,7 +25079,7 @@ impl TransformCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn InsertAt<'a, Param1: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         index: u32,
@@ -25096,7 +25095,7 @@ impl TransformCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAt(&self, index: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -25107,7 +25106,7 @@ impl TransformCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Append<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -25121,7 +25120,7 @@ impl TransformCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -25131,14 +25130,14 @@ impl TransformCollection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetMany(
         &self,
         startindex: u32,
@@ -25157,7 +25156,7 @@ impl TransformCollection {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReplaceAll(
         &self,
         items: &[::core::option::Option<Transform>],
@@ -25330,12 +25329,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::Foundation::Collections::IVec
 }
 unsafe impl ::core::marker::Send for TransformCollection {}
 unsafe impl ::core::marker::Sync for TransformCollection {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct TransformGroup(::windows::core::IUnknown);
 impl TransformGroup {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -25349,7 +25348,7 @@ impl TransformGroup {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25365,7 +25364,7 @@ impl TransformGroup {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -25385,7 +25384,7 @@ impl TransformGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25399,7 +25398,7 @@ impl TransformGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25415,7 +25414,7 @@ impl TransformGroup {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -25434,7 +25433,7 @@ impl TransformGroup {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -25456,7 +25455,7 @@ impl TransformGroup {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -25475,7 +25474,7 @@ impl TransformGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -25487,7 +25486,7 @@ impl TransformGroup {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -25502,7 +25501,7 @@ impl TransformGroup {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Inverse(&self) -> ::windows::core::Result<GeneralTransform> {
         let this = &::windows::core::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
@@ -25514,7 +25513,7 @@ impl TransformGroup {
             .from_abi::<GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -25533,7 +25532,7 @@ impl TransformGroup {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TryTransform<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -25554,7 +25553,7 @@ impl TransformGroup {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformBounds<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -25573,7 +25572,7 @@ impl TransformGroup {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Children(&self) -> ::windows::core::Result<TransformCollection> {
         let this = self;
         unsafe {
@@ -25585,7 +25584,7 @@ impl TransformGroup {
             .from_abi::<TransformCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetChildren<'a, Param0: ::windows::core::IntoParam<'a, TransformCollection>>(
         &self,
         value: Param0,
@@ -25599,7 +25598,7 @@ impl TransformGroup {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Value(&self) -> ::windows::core::Result<Matrix> {
         let this = self;
         unsafe {
@@ -25611,7 +25610,7 @@ impl TransformGroup {
             .from_abi::<Matrix>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ChildrenProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITransformGroupStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -25768,12 +25767,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &TransformG
 }
 unsafe impl ::core::marker::Send for TransformGroup {}
 unsafe impl ::core::marker::Sync for TransformGroup {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct TranslateTransform(::windows::core::IUnknown);
 impl TranslateTransform {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -25787,7 +25786,7 @@ impl TranslateTransform {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25803,7 +25802,7 @@ impl TranslateTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -25823,7 +25822,7 @@ impl TranslateTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25837,7 +25836,7 @@ impl TranslateTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -25853,7 +25852,7 @@ impl TranslateTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -25872,7 +25871,7 @@ impl TranslateTransform {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -25894,7 +25893,7 @@ impl TranslateTransform {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -25913,7 +25912,7 @@ impl TranslateTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -25925,7 +25924,7 @@ impl TranslateTransform {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -25940,7 +25939,7 @@ impl TranslateTransform {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Inverse(&self) -> ::windows::core::Result<GeneralTransform> {
         let this = &::windows::core::Interface::cast::<IGeneralTransform>(self)?;
         unsafe {
@@ -25952,7 +25951,7 @@ impl TranslateTransform {
             .from_abi::<GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -25971,7 +25970,7 @@ impl TranslateTransform {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TryTransform<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -25992,7 +25991,7 @@ impl TranslateTransform {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn TransformBounds<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -26011,7 +26010,7 @@ impl TranslateTransform {
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn X(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -26023,7 +26022,7 @@ impl TranslateTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -26034,7 +26033,7 @@ impl TranslateTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Y(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -26046,7 +26045,7 @@ impl TranslateTransform {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -26057,7 +26056,7 @@ impl TranslateTransform {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn XProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITranslateTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -26068,7 +26067,7 @@ impl TranslateTransform {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn YProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ITranslateTransformStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -26227,11 +26226,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &TranslateT
 }
 unsafe impl ::core::marker::Send for TranslateTransform {}
 unsafe impl ::core::marker::Sync for TranslateTransform {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct VisualTreeHelper(::windows::core::IUnknown);
 impl VisualTreeHelper {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FindElementsInHostCoordinatesPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -26252,7 +26251,7 @@ impl VisualTreeHelper {
             .from_abi::<::windows::Foundation::Collections::IIterable<super::UIElement>>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FindElementsInHostCoordinatesRect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -26273,7 +26272,7 @@ impl VisualTreeHelper {
             .from_abi::<::windows::Foundation::Collections::IIterable<super::UIElement>>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FindAllElementsInHostCoordinatesPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -26296,7 +26295,7 @@ impl VisualTreeHelper {
             .from_abi::<::windows::Foundation::Collections::IIterable<super::UIElement>>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FindAllElementsInHostCoordinatesRect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
@@ -26319,7 +26318,7 @@ impl VisualTreeHelper {
             .from_abi::<::windows::Foundation::Collections::IIterable<super::UIElement>>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetChild<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         reference: Param0,
         childindex: i32,
@@ -26335,7 +26334,7 @@ impl VisualTreeHelper {
             .from_abi::<super::DependencyObject>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetChildrenCount<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         reference: Param0,
     ) -> ::windows::core::Result<i32> {
@@ -26349,7 +26348,7 @@ impl VisualTreeHelper {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetParent<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         reference: Param0,
     ) -> ::windows::core::Result<super::DependencyObject> {
@@ -26363,7 +26362,7 @@ impl VisualTreeHelper {
             .from_abi::<super::DependencyObject>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn DisconnectChildrenRecursive<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::UIElement>,
@@ -26378,7 +26377,7 @@ impl VisualTreeHelper {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn GetOpenPopups<'a, Param0: ::windows::core::IntoParam<'a, super::Window>>(
         window: Param0,
@@ -26397,7 +26396,7 @@ impl VisualTreeHelper {
             >>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn GetOpenPopupsForXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         xamlroot: Param0,
@@ -26504,11 +26503,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a V
 }
 unsafe impl ::core::marker::Send for VisualTreeHelper {}
 unsafe impl ::core::marker::Sync for VisualTreeHelper {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct XamlCompositionBrushBase(::windows::core::IUnknown);
 impl XamlCompositionBrushBase {
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -26530,7 +26529,7 @@ impl XamlCompositionBrushBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -26542,7 +26541,7 @@ impl XamlCompositionBrushBase {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -26553,7 +26552,7 @@ impl XamlCompositionBrushBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Transform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -26565,7 +26564,7 @@ impl XamlCompositionBrushBase {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -26579,7 +26578,7 @@ impl XamlCompositionBrushBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RelativeTransform(&self) -> ::windows::core::Result<Transform> {
         let this = &::windows::core::Interface::cast::<IBrush>(self)?;
         unsafe {
@@ -26591,7 +26590,7 @@ impl XamlCompositionBrushBase {
             .from_abi::<Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetRelativeTransform<'a, Param0: ::windows::core::IntoParam<'a, Transform>>(
         &self,
         value: Param0,
@@ -26605,7 +26604,7 @@ impl XamlCompositionBrushBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -26621,7 +26620,7 @@ impl XamlCompositionBrushBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -26641,7 +26640,7 @@ impl XamlCompositionBrushBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -26655,7 +26654,7 @@ impl XamlCompositionBrushBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -26671,7 +26670,7 @@ impl XamlCompositionBrushBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -26690,7 +26689,7 @@ impl XamlCompositionBrushBase {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -26712,7 +26711,7 @@ impl XamlCompositionBrushBase {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -26731,7 +26730,7 @@ impl XamlCompositionBrushBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -26743,7 +26742,7 @@ impl XamlCompositionBrushBase {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -26758,7 +26757,7 @@ impl XamlCompositionBrushBase {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FallbackColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
@@ -26770,7 +26769,7 @@ impl XamlCompositionBrushBase {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetFallbackColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -26784,7 +26783,7 @@ impl XamlCompositionBrushBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn CompositionBrush(
         &self,
@@ -26799,7 +26798,7 @@ impl XamlCompositionBrushBase {
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn SetCompositionBrush<
         'a,
@@ -26817,7 +26816,7 @@ impl XamlCompositionBrushBase {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn FallbackColorProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IXamlCompositionBrushBaseStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -26999,11 +26998,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &XamlCompos
 }
 unsafe impl ::core::marker::Send for XamlCompositionBrushBase {}
 unsafe impl ::core::marker::Sync for XamlCompositionBrushBase {}
-#[doc = "*Required features: 'UI_Xaml_Media'*"]
+#[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
 #[repr(transparent)]
 pub struct XamlLight(::windows::core::IUnknown);
 impl XamlLight {
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27019,7 +27018,7 @@ impl XamlLight {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -27039,7 +27038,7 @@ impl XamlLight {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27053,7 +27052,7 @@ impl XamlLight {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27069,7 +27068,7 @@ impl XamlLight {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -27088,7 +27087,7 @@ impl XamlLight {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -27110,7 +27109,7 @@ impl XamlLight {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -27129,7 +27128,7 @@ impl XamlLight {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -27141,7 +27140,7 @@ impl XamlLight {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -27156,7 +27155,7 @@ impl XamlLight {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn new() -> ::windows::core::Result<XamlLight> {
         Self::IXamlLightFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -27169,7 +27168,7 @@ impl XamlLight {
             .from_abi::<XamlLight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn compose<T: ::windows::core::Compose>(compose: T) -> ::windows::core::Result<XamlLight> {
         Self::IXamlLightFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
@@ -27183,7 +27182,7 @@ impl XamlLight {
             .from_abi::<XamlLight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn CompositionLight(
         &self,
@@ -27198,7 +27197,7 @@ impl XamlLight {
             .from_abi::<super::super::Composition::CompositionLight>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn SetCompositionLight<
         'a,
@@ -27216,7 +27215,7 @@ impl XamlLight {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AddTargetElement<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -27234,7 +27233,7 @@ impl XamlLight {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveTargetElement<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -27252,7 +27251,7 @@ impl XamlLight {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn AddTargetBrush<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -27270,7 +27269,7 @@ impl XamlLight {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub fn RemoveTargetBrush<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,

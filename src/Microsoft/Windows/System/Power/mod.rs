@@ -5,7 +5,7 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'Windows_System_Power'*"]
+#[doc = "*Required features: `\"Windows_System_Power\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct BatteryStatus(pub i32);
@@ -43,7 +43,7 @@ unsafe impl ::windows::core::RuntimeType for BatteryStatus {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Windows_System_Power'*"]
+#[doc = "*Required features: `\"Windows_System_Power\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DisplayStatus(pub i32);
@@ -80,7 +80,7 @@ unsafe impl ::windows::core::RuntimeType for DisplayStatus {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Windows_System_Power'*"]
+#[doc = "*Required features: `\"Windows_System_Power\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct EffectivePowerMode(pub i32);
@@ -121,7 +121,7 @@ unsafe impl ::windows::core::RuntimeType for EffectivePowerMode {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Windows_System_Power'*"]
+#[doc = "*Required features: `\"Windows_System_Power\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct EnergySaverStatus(pub i32);
@@ -314,10 +314,10 @@ pub struct IPowerManagerStatics_Vtbl {
     )
         -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'Windows_System_Power'*"]
+#[doc = "*Required features: `\"Windows_System_Power\"`*"]
 pub struct PowerManager {}
 impl PowerManager {
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn EnergySaverStatus() -> ::windows::core::Result<EnergySaverStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
             let mut result__: EnergySaverStatus = ::core::mem::zeroed();
@@ -328,7 +328,7 @@ impl PowerManager {
             .from_abi::<EnergySaverStatus>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn EnergySaverStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -348,7 +348,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemoveEnergySaverStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -363,7 +363,7 @@ impl PowerManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn BatteryStatus() -> ::windows::core::Result<BatteryStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
             let mut result__: BatteryStatus = ::core::mem::zeroed();
@@ -374,7 +374,7 @@ impl PowerManager {
             .from_abi::<BatteryStatus>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn BatteryStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -394,7 +394,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemoveBatteryStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -409,7 +409,7 @@ impl PowerManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn PowerSupplyStatus() -> ::windows::core::Result<PowerSupplyStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
             let mut result__: PowerSupplyStatus = ::core::mem::zeroed();
@@ -420,7 +420,7 @@ impl PowerManager {
             .from_abi::<PowerSupplyStatus>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn PowerSupplyStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -440,7 +440,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemovePowerSupplyStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -455,7 +455,7 @@ impl PowerManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemainingChargePercent() -> ::windows::core::Result<i32> {
         Self::IPowerManagerStatics(|this| unsafe {
             let mut result__: i32 = ::core::mem::zeroed();
@@ -466,7 +466,7 @@ impl PowerManager {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemainingChargePercentChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -486,7 +486,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemoveRemainingChargePercentChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -501,7 +501,7 @@ impl PowerManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemainingDischargeTime() -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         Self::IPowerManagerStatics(|this| unsafe {
             let mut result__: ::windows::Foundation::TimeSpan = ::core::mem::zeroed();
@@ -512,7 +512,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemainingDischargeTimeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -532,7 +532,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemoveRemainingDischargeTimeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -547,7 +547,7 @@ impl PowerManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn PowerSourceKind() -> ::windows::core::Result<PowerSourceKind> {
         Self::IPowerManagerStatics(|this| unsafe {
             let mut result__: PowerSourceKind = ::core::mem::zeroed();
@@ -558,7 +558,7 @@ impl PowerManager {
             .from_abi::<PowerSourceKind>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn PowerSourceKindChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -578,7 +578,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemovePowerSourceKindChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -593,7 +593,7 @@ impl PowerManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn DisplayStatus() -> ::windows::core::Result<DisplayStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
             let mut result__: DisplayStatus = ::core::mem::zeroed();
@@ -604,7 +604,7 @@ impl PowerManager {
             .from_abi::<DisplayStatus>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn DisplayStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -624,7 +624,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemoveDisplayStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -639,7 +639,7 @@ impl PowerManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn SystemIdleStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -659,7 +659,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemoveSystemIdleStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -674,7 +674,7 @@ impl PowerManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn EffectivePowerMode(
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncOperation<EffectivePowerMode>> {
         Self::IPowerManagerStatics(|this| unsafe {
@@ -686,7 +686,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::IAsyncOperation<EffectivePowerMode>>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn EffectivePowerModeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -706,7 +706,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemoveEffectivePowerModeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -721,7 +721,7 @@ impl PowerManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn UserPresenceStatus() -> ::windows::core::Result<UserPresenceStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
             let mut result__: UserPresenceStatus = ::core::mem::zeroed();
@@ -732,7 +732,7 @@ impl PowerManager {
             .from_abi::<UserPresenceStatus>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn UserPresenceStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -752,7 +752,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemoveUserPresenceStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -767,7 +767,7 @@ impl PowerManager {
             .ok()
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn SystemSuspendStatus() -> ::windows::core::Result<SystemSuspendStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
             let mut result__: SystemSuspendStatus = ::core::mem::zeroed();
@@ -778,7 +778,7 @@ impl PowerManager {
             .from_abi::<SystemSuspendStatus>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn SystemSuspendStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -798,7 +798,7 @@ impl PowerManager {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_System_Power'*"]
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemoveSystemSuspendStatusChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -828,7 +828,7 @@ impl PowerManager {
 impl ::windows::core::RuntimeName for PowerManager {
     const NAME: &'static str = "Microsoft.Windows.System.Power.PowerManager";
 }
-#[doc = "*Required features: 'Windows_System_Power'*"]
+#[doc = "*Required features: `\"Windows_System_Power\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct PowerSourceKind(pub i32);
@@ -864,7 +864,7 @@ unsafe impl ::windows::core::RuntimeType for PowerSourceKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Windows_System_Power'*"]
+#[doc = "*Required features: `\"Windows_System_Power\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct PowerSupplyStatus(pub i32);
@@ -901,7 +901,7 @@ unsafe impl ::windows::core::RuntimeType for PowerSupplyStatus {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Windows_System_Power'*"]
+#[doc = "*Required features: `\"Windows_System_Power\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct SystemSuspendStatus(pub i32);
@@ -939,7 +939,7 @@ unsafe impl ::windows::core::RuntimeType for SystemSuspendStatus {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Windows_System_Power'*"]
+#[doc = "*Required features: `\"Windows_System_Power\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct UserPresenceStatus(pub i32);

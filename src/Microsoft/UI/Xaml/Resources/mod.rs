@@ -5,11 +5,11 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Xaml_Resources'*"]
+#[doc = "*Required features: `\"UI_Xaml_Resources\"`*"]
 #[repr(transparent)]
 pub struct CustomXamlResourceLoader(::windows::core::IUnknown);
 impl CustomXamlResourceLoader {
-    #[doc = "*Required features: 'UI_Xaml_Resources'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Resources\"`*"]
     pub fn new() -> ::windows::core::Result<CustomXamlResourceLoader> {
         Self::ICustomXamlResourceLoaderFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -22,7 +22,7 @@ impl CustomXamlResourceLoader {
             .from_abi::<CustomXamlResourceLoader>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Resources'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Resources\"`*"]
     pub fn compose<T: ::windows::core::Compose>(
         compose: T,
     ) -> ::windows::core::Result<CustomXamlResourceLoader> {
@@ -38,7 +38,7 @@ impl CustomXamlResourceLoader {
             .from_abi::<CustomXamlResourceLoader>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Resources'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Resources\"`*"]
     pub fn Current() -> ::windows::core::Result<CustomXamlResourceLoader> {
         Self::ICustomXamlResourceLoaderStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -49,7 +49,7 @@ impl CustomXamlResourceLoader {
             .from_abi::<CustomXamlResourceLoader>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Resources'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Resources\"`*"]
     pub fn SetCurrent<'a, Param0: ::windows::core::IntoParam<'a, CustomXamlResourceLoader>>(
         value: Param0,
     ) -> ::windows::core::Result<()> {

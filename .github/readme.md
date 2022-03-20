@@ -19,10 +19,7 @@ features = [
 ]
 
 [dependencies.windows]
-version = "0.33.0"
-features = [
-    "alloc"
-]
+version = "0.34.0"
 
 [dependencies.windows-app]
 git = "https://github.com/microsoft/windows-app-rs"

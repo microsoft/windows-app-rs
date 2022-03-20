@@ -5,11 +5,11 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 pub struct AppWindow(::windows::core::IUnknown);
 impl AppWindow {
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Id(&self) -> ::windows::core::Result<super::WindowId> {
         let this = self;
         unsafe {
@@ -21,7 +21,7 @@ impl AppWindow {
             .from_abi::<super::WindowId>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IsShownInSwitchers(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -33,7 +33,7 @@ impl AppWindow {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetIsShownInSwitchers(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -44,7 +44,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IsVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -56,7 +56,7 @@ impl AppWindow {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn OwnerWindowId(&self) -> ::windows::core::Result<super::WindowId> {
         let this = self;
         unsafe {
@@ -68,7 +68,7 @@ impl AppWindow {
             .from_abi::<super::WindowId>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<::windows::Graphics::PointInt32> {
         let this = self;
         unsafe {
@@ -80,7 +80,7 @@ impl AppWindow {
             .from_abi::<::windows::Graphics::PointInt32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Presenter(&self) -> ::windows::core::Result<AppWindowPresenter> {
         let this = self;
         unsafe {
@@ -92,7 +92,7 @@ impl AppWindow {
             .from_abi::<AppWindowPresenter>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<::windows::Graphics::SizeInt32> {
         let this = self;
         unsafe {
@@ -104,7 +104,7 @@ impl AppWindow {
             .from_abi::<::windows::Graphics::SizeInt32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Title(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -117,7 +117,7 @@ impl AppWindow {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetTitle<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -131,7 +131,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn TitleBar(&self) -> ::windows::core::Result<AppWindowTitleBar> {
         let this = self;
         unsafe {
@@ -143,7 +143,7 @@ impl AppWindow {
             .from_abi::<AppWindowTitleBar>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Destroy(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -151,14 +151,14 @@ impl AppWindow {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Hide(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Hide)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Move<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::PointInt32>>(
         &self,
         position: Param0,
@@ -172,7 +172,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn MoveAndResize<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::RectInt32>,
@@ -189,7 +189,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn MoveAndResizeRelativeToDisplayArea<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::RectInt32>,
@@ -209,7 +209,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Resize<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::SizeInt32>>(
         &self,
         size: Param0,
@@ -223,7 +223,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetIcon<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         iconpath: Param0,
@@ -237,7 +237,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetIconWithIconId<'a, Param0: ::windows::core::IntoParam<'a, super::IconId>>(
         &self,
         iconid: Param0,
@@ -251,7 +251,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetPresenter<'a, Param0: ::windows::core::IntoParam<'a, AppWindowPresenter>>(
         &self,
         appwindowpresenter: Param0,
@@ -265,7 +265,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetPresenterByKind(
         &self,
         appwindowpresenterkind: AppWindowPresenterKind,
@@ -279,14 +279,14 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Show(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Show)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ShowWithActivation(&self, activatewindow: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -297,7 +297,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Changed<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -319,7 +319,7 @@ impl AppWindow {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn RemoveChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -336,7 +336,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Closing<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -358,7 +358,7 @@ impl AppWindow {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn RemoveClosing<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -375,7 +375,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Destroying<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -397,7 +397,7 @@ impl AppWindow {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn RemoveDestroying<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -414,7 +414,7 @@ impl AppWindow {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Create() -> ::windows::core::Result<AppWindow> {
         Self::IAppWindowStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -425,7 +425,7 @@ impl AppWindow {
             .from_abi::<AppWindow>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn CreateWithPresenter<'a, Param0: ::windows::core::IntoParam<'a, AppWindowPresenter>>(
         appwindowpresenter: Param0,
     ) -> ::windows::core::Result<AppWindow> {
@@ -439,7 +439,7 @@ impl AppWindow {
             .from_abi::<AppWindow>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn CreateWithPresenterAndOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, AppWindowPresenter>,
@@ -459,7 +459,7 @@ impl AppWindow {
             .from_abi::<AppWindow>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn GetFromWindowId<'a, Param0: ::windows::core::IntoParam<'a, super::WindowId>>(
         windowid: Param0,
     ) -> ::windows::core::Result<AppWindow> {
@@ -556,11 +556,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a A
 }
 unsafe impl ::core::marker::Send for AppWindow {}
 unsafe impl ::core::marker::Sync for AppWindow {}
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 pub struct AppWindowChangedEventArgs(::windows::core::IUnknown);
 impl AppWindowChangedEventArgs {
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn DidPositionChange(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -572,7 +572,7 @@ impl AppWindowChangedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn DidPresenterChange(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -584,7 +584,7 @@ impl AppWindowChangedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn DidSizeChange(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -596,7 +596,7 @@ impl AppWindowChangedEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn DidVisibilityChange(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -690,11 +690,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for AppWindowChangedEventArgs {}
 unsafe impl ::core::marker::Sync for AppWindowChangedEventArgs {}
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 pub struct AppWindowClosingEventArgs(::windows::core::IUnknown);
 impl AppWindowClosingEventArgs {
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Cancel(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -706,7 +706,7 @@ impl AppWindowClosingEventArgs {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetCancel(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -799,11 +799,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for AppWindowClosingEventArgs {}
 unsafe impl ::core::marker::Sync for AppWindowClosingEventArgs {}
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 pub struct AppWindowPresenter(::windows::core::IUnknown);
 impl AppWindowPresenter {
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Kind(&self) -> ::windows::core::Result<AppWindowPresenterKind> {
         let this = self;
         unsafe {
@@ -890,7 +890,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a A
 }
 unsafe impl ::core::marker::Send for AppWindowPresenter {}
 unsafe impl ::core::marker::Sync for AppWindowPresenter {}
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AppWindowPresenterKind(pub i32);
@@ -930,11 +930,11 @@ unsafe impl ::windows::core::RuntimeType for AppWindowPresenterKind {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 pub struct AppWindowTitleBar(::windows::core::IUnknown);
 impl AppWindowTitleBar {
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn BackgroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -948,7 +948,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetBackgroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -965,7 +965,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ButtonBackgroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -979,7 +979,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetButtonBackgroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -996,7 +996,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ButtonForegroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -1010,7 +1010,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetButtonForegroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -1027,7 +1027,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ButtonHoverBackgroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -1041,7 +1041,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetButtonHoverBackgroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -1058,7 +1058,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ButtonHoverForegroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -1072,7 +1072,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetButtonHoverForegroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -1089,7 +1089,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ButtonInactiveBackgroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -1103,7 +1103,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetButtonInactiveBackgroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -1120,7 +1120,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ButtonInactiveForegroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -1134,7 +1134,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetButtonInactiveForegroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -1151,7 +1151,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ButtonPressedBackgroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -1165,7 +1165,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetButtonPressedBackgroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -1182,7 +1182,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ButtonPressedForegroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -1196,7 +1196,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetButtonPressedForegroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -1213,7 +1213,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ExtendsContentIntoTitleBar(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -1225,7 +1225,7 @@ impl AppWindowTitleBar {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetExtendsContentIntoTitleBar(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1236,7 +1236,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ForegroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -1250,7 +1250,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetForegroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -1267,7 +1267,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Height(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -1279,7 +1279,7 @@ impl AppWindowTitleBar {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IconShowOptions(&self) -> ::windows::core::Result<IconShowOptions> {
         let this = self;
         unsafe {
@@ -1291,7 +1291,7 @@ impl AppWindowTitleBar {
             .from_abi::<IconShowOptions>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetIconShowOptions(&self, value: IconShowOptions) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1302,7 +1302,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn InactiveBackgroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -1316,7 +1316,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetInactiveBackgroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -1333,7 +1333,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn InactiveForegroundColor(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
@@ -1347,7 +1347,7 @@ impl AppWindowTitleBar {
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetInactiveForegroundColor<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::IReference<::windows::UI::Color>>,
@@ -1364,7 +1364,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn LeftInset(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -1376,7 +1376,7 @@ impl AppWindowTitleBar {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn RightInset(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -1388,7 +1388,7 @@ impl AppWindowTitleBar {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn ResetToDefault(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1398,7 +1398,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetDragRectangles(
         &self,
         value: &[::windows::Graphics::RectInt32],
@@ -1413,7 +1413,7 @@ impl AppWindowTitleBar {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IsCustomizationSupported() -> ::windows::core::Result<bool> {
         Self::IAppWindowTitleBarStatics(|this| unsafe {
             let mut result__: bool = ::core::mem::zeroed();
@@ -1512,11 +1512,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a A
 }
 unsafe impl ::core::marker::Send for AppWindowTitleBar {}
 unsafe impl ::core::marker::Sync for AppWindowTitleBar {}
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 pub struct CompactOverlayPresenter(::windows::core::IUnknown);
 impl CompactOverlayPresenter {
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Kind(&self) -> ::windows::core::Result<AppWindowPresenterKind> {
         let this = &::windows::core::Interface::cast::<IAppWindowPresenter>(self)?;
         unsafe {
@@ -1528,7 +1528,7 @@ impl CompactOverlayPresenter {
             .from_abi::<AppWindowPresenterKind>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn InitialSize(&self) -> ::windows::core::Result<CompactOverlaySize> {
         let this = self;
         unsafe {
@@ -1540,7 +1540,7 @@ impl CompactOverlayPresenter {
             .from_abi::<CompactOverlaySize>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetInitialSize(&self, value: CompactOverlaySize) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1551,7 +1551,7 @@ impl CompactOverlayPresenter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Create() -> ::windows::core::Result<CompactOverlayPresenter> {
         Self::ICompactOverlayPresenterStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1673,7 +1673,7 @@ impl<'a> ::windows::core::IntoParam<'a, AppWindowPresenter> for &CompactOverlayP
 }
 unsafe impl ::core::marker::Send for CompactOverlayPresenter {}
 unsafe impl ::core::marker::Sync for CompactOverlayPresenter {}
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CompactOverlaySize(pub i32);
@@ -1710,11 +1710,11 @@ unsafe impl ::windows::core::RuntimeType for CompactOverlaySize {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 pub struct DisplayArea(::windows::core::IUnknown);
 impl DisplayArea {
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn DisplayId(&self) -> ::windows::core::Result<super::DisplayId> {
         let this = self;
         unsafe {
@@ -1726,7 +1726,7 @@ impl DisplayArea {
             .from_abi::<super::DisplayId>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IsPrimary(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -1738,7 +1738,7 @@ impl DisplayArea {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn OuterBounds(&self) -> ::windows::core::Result<::windows::Graphics::RectInt32> {
         let this = self;
         unsafe {
@@ -1750,7 +1750,7 @@ impl DisplayArea {
             .from_abi::<::windows::Graphics::RectInt32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn WorkArea(&self) -> ::windows::core::Result<::windows::Graphics::RectInt32> {
         let this = self;
         unsafe {
@@ -1762,7 +1762,7 @@ impl DisplayArea {
             .from_abi::<::windows::Graphics::RectInt32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Primary() -> ::windows::core::Result<DisplayArea> {
         Self::IDisplayAreaStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1773,7 +1773,7 @@ impl DisplayArea {
             .from_abi::<DisplayArea>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn CreateWatcher() -> ::windows::core::Result<DisplayAreaWatcher> {
         Self::IDisplayAreaStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1784,7 +1784,7 @@ impl DisplayArea {
             .from_abi::<DisplayAreaWatcher>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn FindAll(
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<DisplayArea>> {
         Self::IDisplayAreaStatics(|this| unsafe {
@@ -1796,7 +1796,7 @@ impl DisplayArea {
             .from_abi::<::windows::Foundation::Collections::IVectorView<DisplayArea>>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn GetFromWindowId<'a, Param0: ::windows::core::IntoParam<'a, super::WindowId>>(
         windowid: Param0,
         displayareafallback: DisplayAreaFallback,
@@ -1812,7 +1812,7 @@ impl DisplayArea {
             .from_abi::<DisplayArea>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn GetFromPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::PointInt32>,
@@ -1831,7 +1831,7 @@ impl DisplayArea {
             .from_abi::<DisplayArea>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn GetFromRect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::RectInt32>,
@@ -1933,7 +1933,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DisplayArea {}
 unsafe impl ::core::marker::Sync for DisplayArea {}
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DisplayAreaFallback(pub i32);
@@ -1970,11 +1970,11 @@ unsafe impl ::windows::core::RuntimeType for DisplayAreaFallback {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 pub struct DisplayAreaWatcher(::windows::core::IUnknown);
 impl DisplayAreaWatcher {
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Status(&self) -> ::windows::core::Result<DisplayAreaWatcherStatus> {
         let this = self;
         unsafe {
@@ -1986,21 +1986,21 @@ impl DisplayAreaWatcher {
             .from_abi::<DisplayAreaWatcherStatus>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Start(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Start)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Stop(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Stop)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Added<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -2022,7 +2022,7 @@ impl DisplayAreaWatcher {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn RemoveAdded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2039,7 +2039,7 @@ impl DisplayAreaWatcher {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn EnumerationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -2064,7 +2064,7 @@ impl DisplayAreaWatcher {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn RemoveEnumerationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2081,7 +2081,7 @@ impl DisplayAreaWatcher {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Removed<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -2103,7 +2103,7 @@ impl DisplayAreaWatcher {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn RemoveRemoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2120,7 +2120,7 @@ impl DisplayAreaWatcher {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Stopped<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -2145,7 +2145,7 @@ impl DisplayAreaWatcher {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn RemoveStopped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2162,7 +2162,7 @@ impl DisplayAreaWatcher {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Updated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -2184,7 +2184,7 @@ impl DisplayAreaWatcher {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn RemoveUpdated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -2276,7 +2276,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a D
 }
 unsafe impl ::core::marker::Send for DisplayAreaWatcher {}
 unsafe impl ::core::marker::Sync for DisplayAreaWatcher {}
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DisplayAreaWatcherStatus(pub i32);
@@ -2318,11 +2318,11 @@ unsafe impl ::windows::core::RuntimeType for DisplayAreaWatcherStatus {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 pub struct FullScreenPresenter(::windows::core::IUnknown);
 impl FullScreenPresenter {
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Kind(&self) -> ::windows::core::Result<AppWindowPresenterKind> {
         let this = &::windows::core::Interface::cast::<IAppWindowPresenter>(self)?;
         unsafe {
@@ -2334,7 +2334,7 @@ impl FullScreenPresenter {
             .from_abi::<AppWindowPresenterKind>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Create() -> ::windows::core::Result<FullScreenPresenter> {
         Self::IFullScreenPresenterStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3165,7 +3165,7 @@ pub struct IOverlappedPresenterStatics_Vtbl {
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct IconShowOptions(pub i32);
@@ -3201,11 +3201,11 @@ unsafe impl ::windows::core::RuntimeType for IconShowOptions {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 pub struct OverlappedPresenter(::windows::core::IUnknown);
 impl OverlappedPresenter {
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Kind(&self) -> ::windows::core::Result<AppWindowPresenterKind> {
         let this = &::windows::core::Interface::cast::<IAppWindowPresenter>(self)?;
         unsafe {
@@ -3217,7 +3217,7 @@ impl OverlappedPresenter {
             .from_abi::<AppWindowPresenterKind>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn HasBorder(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -3229,7 +3229,7 @@ impl OverlappedPresenter {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn HasTitleBar(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -3241,7 +3241,7 @@ impl OverlappedPresenter {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IsAlwaysOnTop(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -3253,7 +3253,7 @@ impl OverlappedPresenter {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetIsAlwaysOnTop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3264,7 +3264,7 @@ impl OverlappedPresenter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IsMaximizable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -3276,7 +3276,7 @@ impl OverlappedPresenter {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetIsMaximizable(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3287,7 +3287,7 @@ impl OverlappedPresenter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IsMinimizable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -3299,7 +3299,7 @@ impl OverlappedPresenter {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetIsMinimizable(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3310,7 +3310,7 @@ impl OverlappedPresenter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IsModal(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -3322,7 +3322,7 @@ impl OverlappedPresenter {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetIsModal(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3333,7 +3333,7 @@ impl OverlappedPresenter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IsResizable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -3345,7 +3345,7 @@ impl OverlappedPresenter {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetIsResizable(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3356,7 +3356,7 @@ impl OverlappedPresenter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn State(&self) -> ::windows::core::Result<OverlappedPresenterState> {
         let this = self;
         unsafe {
@@ -3368,7 +3368,7 @@ impl OverlappedPresenter {
             .from_abi::<OverlappedPresenterState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Maximize(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3376,7 +3376,7 @@ impl OverlappedPresenter {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Minimize(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3384,7 +3384,7 @@ impl OverlappedPresenter {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Restore(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3392,7 +3392,7 @@ impl OverlappedPresenter {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn SetBorderAndTitleBar(
         &self,
         hasborder: bool,
@@ -3408,7 +3408,7 @@ impl OverlappedPresenter {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Create() -> ::windows::core::Result<OverlappedPresenter> {
         Self::IOverlappedPresenterStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3419,7 +3419,7 @@ impl OverlappedPresenter {
             .from_abi::<OverlappedPresenter>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn CreateForContextMenu() -> ::windows::core::Result<OverlappedPresenter> {
         Self::IOverlappedPresenterStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3430,7 +3430,7 @@ impl OverlappedPresenter {
             .from_abi::<OverlappedPresenter>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn CreateForDialog() -> ::windows::core::Result<OverlappedPresenter> {
         Self::IOverlappedPresenterStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3441,7 +3441,7 @@ impl OverlappedPresenter {
             .from_abi::<OverlappedPresenter>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Windowing'*"]
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn CreateForToolWindow() -> ::windows::core::Result<OverlappedPresenter> {
         Self::IOverlappedPresenterStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3560,7 +3560,7 @@ impl<'a> ::windows::core::IntoParam<'a, AppWindowPresenter> for &OverlappedPrese
 }
 unsafe impl ::core::marker::Send for OverlappedPresenter {}
 unsafe impl ::core::marker::Sync for OverlappedPresenter {}
-#[doc = "*Required features: 'UI_Windowing'*"]
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct OverlappedPresenterState(pub i32);

@@ -5,7 +5,7 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmAllocateBuffer(size: usize) -> *mut ::core::ffi::c_void {
     #[cfg(windows)]
@@ -20,7 +20,7 @@ pub unsafe fn MrmAllocateBuffer(size: usize) -> *mut ::core::ffi::c_void {
     unimplemented!("Unsupported target OS");
 }
 #[repr(C)]
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 pub struct MrmContextHandle__ {
     pub unused: i32,
 }
@@ -57,7 +57,7 @@ impl ::core::default::Default for MrmContextHandle__ {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmCreateResourceContext(
     resourcemanager: *const MrmManagerHandle__,
@@ -81,7 +81,7 @@ pub unsafe fn MrmCreateResourceContext(
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmCreateResourceManager<
     'a,
@@ -108,7 +108,7 @@ pub unsafe fn MrmCreateResourceManager<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmDestroyResourceContext(resourcecontext: *const MrmContextHandle__) {
     #[cfg(windows)]
@@ -122,7 +122,7 @@ pub unsafe fn MrmDestroyResourceContext(resourcecontext: *const MrmContextHandle
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmDestroyResourceManager(resourcemanager: *const MrmManagerHandle__) {
     #[cfg(windows)]
@@ -136,21 +136,24 @@ pub unsafe fn MrmDestroyResourceManager(resourcemanager: *const MrmManagerHandle
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
-pub unsafe fn MrmFreeQualifierNamesOrValues(size: u32, names: *const ::windows::core::PWSTR) {
+pub unsafe fn MrmFreeQualifierNamesOrValues(names: &[::windows::core::PWSTR]) {
     #[cfg(windows)]
     {
         #[link(name = "mrm")]
         extern "system" {
             fn MrmFreeQualifierNamesOrValues(size: u32, names: *const ::windows::core::PWSTR);
         }
-        MrmFreeQualifierNamesOrValues(::core::mem::transmute(size), ::core::mem::transmute(names))
+        MrmFreeQualifierNamesOrValues(
+            names.len() as _,
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(names)),
+        )
     }
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmFreeResource(resource: *const ::core::ffi::c_void) {
     #[cfg(windows)]
@@ -164,7 +167,7 @@ pub unsafe fn MrmFreeResource(resource: *const ::core::ffi::c_void) {
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmGetAllQualifierNames(
     resourcecontext: *const MrmContextHandle__,
@@ -191,7 +194,7 @@ pub unsafe fn MrmGetAllQualifierNames(
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmGetChildResourceMap<
     'a,
@@ -224,7 +227,7 @@ pub unsafe fn MrmGetChildResourceMap<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmGetFilePathFromName<
     'a,
@@ -251,7 +254,7 @@ pub unsafe fn MrmGetFilePathFromName<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmGetQualifier<
     'a,
@@ -281,7 +284,7 @@ pub unsafe fn MrmGetQualifier<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmGetResourceCount(
     resourcemanager: *const MrmManagerHandle__,
@@ -308,7 +311,7 @@ pub unsafe fn MrmGetResourceCount(
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmLoadEmbeddedResource<
     'a,
@@ -344,7 +347,7 @@ pub unsafe fn MrmLoadEmbeddedResource<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmLoadEmbeddedResourceFromResourceUri<
     'a,
@@ -377,7 +380,7 @@ pub unsafe fn MrmLoadEmbeddedResourceFromResourceUri<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmLoadStringOrEmbeddedFromResourceUri<
     'a,
@@ -416,7 +419,7 @@ pub unsafe fn MrmLoadStringOrEmbeddedFromResourceUri<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmLoadStringOrEmbeddedResource<
     'a,
@@ -458,7 +461,7 @@ pub unsafe fn MrmLoadStringOrEmbeddedResource<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmLoadStringOrEmbeddedResourceByIndex(
     resourcemanager: *const MrmManagerHandle__,
@@ -500,7 +503,7 @@ pub unsafe fn MrmLoadStringOrEmbeddedResourceByIndex(
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmLoadStringOrEmbeddedResourceByIndexWithQualifierValues(
     resourcemanager: *const MrmManagerHandle__,
@@ -551,7 +554,7 @@ pub unsafe fn MrmLoadStringOrEmbeddedResourceByIndexWithQualifierValues(
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmLoadStringOrEmbeddedResourceWithQualifierValues<
     'a,
@@ -602,7 +605,7 @@ pub unsafe fn MrmLoadStringOrEmbeddedResourceWithQualifierValues<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmLoadStringResource<
     'a,
@@ -638,7 +641,7 @@ pub unsafe fn MrmLoadStringResource<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmLoadStringResourceFromResourceUri<
     'a,
@@ -672,7 +675,7 @@ pub unsafe fn MrmLoadStringResourceFromResourceUri<
     unimplemented!("Unsupported target OS");
 }
 #[repr(C)]
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 pub struct MrmManagerHandle__ {
     pub unused: i32,
 }
@@ -710,7 +713,7 @@ impl ::core::default::Default for MrmManagerHandle__ {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 pub struct MrmMapHandle__ {
     pub unused: i32,
 }
@@ -748,7 +751,7 @@ impl ::core::default::Default for MrmMapHandle__ {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 pub struct MrmResourceData {
     pub size: u32,
     pub data: *mut ::core::ffi::c_void,
@@ -787,7 +790,7 @@ impl ::core::default::Default for MrmResourceData {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmSetQualifier<
     'a,
@@ -818,17 +821,17 @@ pub unsafe fn MrmSetQualifier<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct MrmType(pub i32);
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 pub const MrmType_Unknown: MrmType = MrmType(0i32);
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 pub const MrmType_String: MrmType = MrmType(1i32);
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 pub const MrmType_Path: MrmType = MrmType(2i32);
-#[doc = "*Required features: 'MRM'*"]
+#[doc = "*Required features: `\"MRM\"`*"]
 pub const MrmType_Embedded: MrmType = MrmType(3i32);
 impl ::core::marker::Copy for MrmType {}
 impl ::core::clone::Clone for MrmType {

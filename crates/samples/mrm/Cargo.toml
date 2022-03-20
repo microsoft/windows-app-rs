@@ -1,21 +1,17 @@
 [package]
-name = "mrm_sample"
+name = "samples_mrm"
 version = "0.0.0"
 publish = false
 edition = "2018"
-
-[dependencies.windows]
-version = "0.33.0"
-features = [
-    "alloc",
-    "Win32_Foundation",
-]
 
 [build-dependencies.windows-app]
 path = "../../../"
 features = [
     "WindowsAppSdk_Foundation",
 ]
+
+[dependencies.windows]
+version = "0.34.0"
 
 [dependencies.windows-app]
 path = "../../../"

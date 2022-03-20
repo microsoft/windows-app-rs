@@ -5,12 +5,12 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+#[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
 #[repr(transparent)]
 pub struct DesktopAcrylicController(::windows::core::IUnknown);
 impl DesktopAcrylicController {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -24,14 +24,14 @@ impl DesktopAcrylicController {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn FallbackColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
@@ -43,7 +43,7 @@ impl DesktopAcrylicController {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetFallbackColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -57,7 +57,7 @@ impl DesktopAcrylicController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn LuminosityOpacity(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -69,7 +69,7 @@ impl DesktopAcrylicController {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetLuminosityOpacity(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -80,7 +80,7 @@ impl DesktopAcrylicController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn TintColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
@@ -92,7 +92,7 @@ impl DesktopAcrylicController {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetTintColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -106,7 +106,7 @@ impl DesktopAcrylicController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn TintOpacity(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -118,7 +118,7 @@ impl DesktopAcrylicController {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetTintOpacity(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -129,7 +129,7 @@ impl DesktopAcrylicController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn IsSupported() -> ::windows::core::Result<bool> {
         Self::IDesktopAcrylicControllerStatics(|this| unsafe {
             let mut result__: bool = ::core::mem::zeroed();
@@ -140,7 +140,7 @@ impl DesktopAcrylicController {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetTargetWithWindowId<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::WindowId>,
@@ -162,7 +162,7 @@ impl DesktopAcrylicController {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetTargetWithCoreWindow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Core::CoreWindow>,
@@ -455,11 +455,11 @@ pub struct IMicaControllerStatics_Vtbl {
         result__: *mut bool,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+#[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
 #[repr(transparent)]
 pub struct ISystemBackdropController(::windows::core::IUnknown);
 impl ISystemBackdropController {
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetTargetWithWindowId<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::WindowId>,
@@ -481,7 +481,7 @@ impl ISystemBackdropController {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetTargetWithCoreWindow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Core::CoreWindow>,
@@ -503,7 +503,7 @@ impl ISystemBackdropController {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
@@ -633,12 +633,12 @@ pub struct ISystemBackdropController_Vtbl {
         result__: *mut bool,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+#[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
 #[repr(transparent)]
 pub struct MicaController(::windows::core::IUnknown);
 impl MicaController {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -652,14 +652,14 @@ impl MicaController {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn FallbackColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
@@ -671,7 +671,7 @@ impl MicaController {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetFallbackColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -685,7 +685,7 @@ impl MicaController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn LuminosityOpacity(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -697,7 +697,7 @@ impl MicaController {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetLuminosityOpacity(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -708,7 +708,7 @@ impl MicaController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn TintColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
@@ -720,7 +720,7 @@ impl MicaController {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetTintColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -734,7 +734,7 @@ impl MicaController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn TintOpacity(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -746,7 +746,7 @@ impl MicaController {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetTintOpacity(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -757,7 +757,7 @@ impl MicaController {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn IsSupported() -> ::windows::core::Result<bool> {
         Self::IMicaControllerStatics(|this| unsafe {
             let mut result__: bool = ::core::mem::zeroed();
@@ -768,7 +768,7 @@ impl MicaController {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetTargetWithWindowId<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::super::WindowId>,
@@ -790,7 +790,7 @@ impl MicaController {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_SystemBackdrops'*"]
+    #[doc = "*Required features: `\"UI_Composition_SystemBackdrops\"`*"]
     pub fn SetTargetWithCoreWindow<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::UI::Core::CoreWindow>,

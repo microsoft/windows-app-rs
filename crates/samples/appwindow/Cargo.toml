@@ -1,27 +1,18 @@
 [package]
-name = "appwindow_sample"
+name = "samples_appwindow"
 version = "0.0.0"
 publish = false
 edition = "2018"
-
-[dependencies.windows]
-version = "0.33.0"
-features = [
-    "alloc",
-    "Foundation_Numerics",
-    "UI_Composition",
-    "UI_Core",
-    "Graphics_Effects",
-    "Win32_Foundation",
-    "Win32_UI_HiDpi",
-    "Win32_UI_WindowsAndMessaging",
-]
 
 [build-dependencies.windows-app]
 path = "../../../"
 features = [
     "WindowsAppSdk_Foundation"
 ]
+
+[dependencies.windows]
+version = "0.34.0"
+features = [ "Win32_UI_HiDpi" ]
 
 [dependencies.windows-app]
 path = "../../../"

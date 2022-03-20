@@ -5,12 +5,12 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+#[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
 #[repr(transparent)]
 pub struct AnimatedAcceptVisualSource(::windows::core::IUnknown);
 impl AnimatedAcceptVisualSource {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -24,7 +24,7 @@ impl AnimatedAcceptVisualSource {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn TryCreateAnimatedVisual<
         'a,
@@ -46,7 +46,7 @@ impl AnimatedAcceptVisualSource {
             .from_abi::<super::IAnimatedVisual>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn Markers(
         &self,
     ) -> ::windows::core::Result<
@@ -58,7 +58,7 @@ impl AnimatedAcceptVisualSource {
             ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn SetColorProperty<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -217,12 +217,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::IAnimatedVisualSource2>
 }
 unsafe impl ::core::marker::Send for AnimatedAcceptVisualSource {}
 unsafe impl ::core::marker::Sync for AnimatedAcceptVisualSource {}
-#[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+#[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
 #[repr(transparent)]
 pub struct AnimatedBackVisualSource(::windows::core::IUnknown);
 impl AnimatedBackVisualSource {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -236,7 +236,7 @@ impl AnimatedBackVisualSource {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn TryCreateAnimatedVisual<
         'a,
@@ -258,7 +258,7 @@ impl AnimatedBackVisualSource {
             .from_abi::<super::IAnimatedVisual>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn Markers(
         &self,
     ) -> ::windows::core::Result<
@@ -270,7 +270,7 @@ impl AnimatedBackVisualSource {
             ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn SetColorProperty<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -427,12 +427,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::IAnimatedVisualSource2>
 }
 unsafe impl ::core::marker::Send for AnimatedBackVisualSource {}
 unsafe impl ::core::marker::Sync for AnimatedBackVisualSource {}
-#[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+#[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
 #[repr(transparent)]
 pub struct AnimatedChevronDownSmallVisualSource(::windows::core::IUnknown);
 impl AnimatedChevronDownSmallVisualSource {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -446,7 +446,7 @@ impl AnimatedChevronDownSmallVisualSource {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn TryCreateAnimatedVisual<
         'a,
@@ -468,7 +468,7 @@ impl AnimatedChevronDownSmallVisualSource {
             .from_abi::<super::IAnimatedVisual>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn Markers(
         &self,
     ) -> ::windows::core::Result<
@@ -480,7 +480,7 @@ impl AnimatedChevronDownSmallVisualSource {
             ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn SetColorProperty<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -651,12 +651,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::IAnimatedVisualSource2>
 }
 unsafe impl ::core::marker::Send for AnimatedChevronDownSmallVisualSource {}
 unsafe impl ::core::marker::Sync for AnimatedChevronDownSmallVisualSource {}
-#[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+#[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
 #[repr(transparent)]
 pub struct AnimatedChevronRightDownSmallVisualSource(::windows::core::IUnknown);
 impl AnimatedChevronRightDownSmallVisualSource {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -670,7 +670,7 @@ impl AnimatedChevronRightDownSmallVisualSource {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn TryCreateAnimatedVisual<
         'a,
@@ -692,7 +692,7 @@ impl AnimatedChevronRightDownSmallVisualSource {
             .from_abi::<super::IAnimatedVisual>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn Markers(
         &self,
     ) -> ::windows::core::Result<
@@ -704,7 +704,7 @@ impl AnimatedChevronRightDownSmallVisualSource {
             ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn SetColorProperty<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -885,12 +885,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::IAnimatedVisualSource2>
 }
 unsafe impl ::core::marker::Send for AnimatedChevronRightDownSmallVisualSource {}
 unsafe impl ::core::marker::Sync for AnimatedChevronRightDownSmallVisualSource {}
-#[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+#[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
 #[repr(transparent)]
 pub struct AnimatedChevronUpDownSmallVisualSource(::windows::core::IUnknown);
 impl AnimatedChevronUpDownSmallVisualSource {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -904,7 +904,7 @@ impl AnimatedChevronUpDownSmallVisualSource {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn TryCreateAnimatedVisual<
         'a,
@@ -926,7 +926,7 @@ impl AnimatedChevronUpDownSmallVisualSource {
             .from_abi::<super::IAnimatedVisual>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn Markers(
         &self,
     ) -> ::windows::core::Result<
@@ -938,7 +938,7 @@ impl AnimatedChevronUpDownSmallVisualSource {
             ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn SetColorProperty<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1111,12 +1111,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::IAnimatedVisualSource2>
 }
 unsafe impl ::core::marker::Send for AnimatedChevronUpDownSmallVisualSource {}
 unsafe impl ::core::marker::Sync for AnimatedChevronUpDownSmallVisualSource {}
-#[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+#[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
 #[repr(transparent)]
 pub struct AnimatedFindVisualSource(::windows::core::IUnknown);
 impl AnimatedFindVisualSource {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -1130,7 +1130,7 @@ impl AnimatedFindVisualSource {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn TryCreateAnimatedVisual<
         'a,
@@ -1152,7 +1152,7 @@ impl AnimatedFindVisualSource {
             .from_abi::<super::IAnimatedVisual>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn Markers(
         &self,
     ) -> ::windows::core::Result<
@@ -1164,7 +1164,7 @@ impl AnimatedFindVisualSource {
             ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn SetColorProperty<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1321,12 +1321,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::IAnimatedVisualSource2>
 }
 unsafe impl ::core::marker::Send for AnimatedFindVisualSource {}
 unsafe impl ::core::marker::Sync for AnimatedFindVisualSource {}
-#[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+#[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
 #[repr(transparent)]
 pub struct AnimatedGlobalNavigationButtonVisualSource(::windows::core::IUnknown);
 impl AnimatedGlobalNavigationButtonVisualSource {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -1340,7 +1340,7 @@ impl AnimatedGlobalNavigationButtonVisualSource {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn TryCreateAnimatedVisual<
         'a,
@@ -1362,7 +1362,7 @@ impl AnimatedGlobalNavigationButtonVisualSource {
             .from_abi::<super::IAnimatedVisual>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn Markers(
         &self,
     ) -> ::windows::core::Result<
@@ -1374,7 +1374,7 @@ impl AnimatedGlobalNavigationButtonVisualSource {
             ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn SetColorProperty<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -1559,12 +1559,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::IAnimatedVisualSource2>
 }
 unsafe impl ::core::marker::Send for AnimatedGlobalNavigationButtonVisualSource {}
 unsafe impl ::core::marker::Sync for AnimatedGlobalNavigationButtonVisualSource {}
-#[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+#[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
 #[repr(transparent)]
 pub struct AnimatedSettingsVisualSource(::windows::core::IUnknown);
 impl AnimatedSettingsVisualSource {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -1578,7 +1578,7 @@ impl AnimatedSettingsVisualSource {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn TryCreateAnimatedVisual<
         'a,
@@ -1600,7 +1600,7 @@ impl AnimatedSettingsVisualSource {
             .from_abi::<super::IAnimatedVisual>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn Markers(
         &self,
     ) -> ::windows::core::Result<
@@ -1612,7 +1612,7 @@ impl AnimatedSettingsVisualSource {
             ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Controls_AnimatedVisuals'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
     pub fn SetColorProperty<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,

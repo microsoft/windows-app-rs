@@ -5,12 +5,12 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Composition_Core'*"]
+#[doc = "*Required features: `\"UI_Composition_Core\"`*"]
 #[repr(transparent)]
 pub struct CompositorController(::windows::core::IUnknown);
 impl CompositorController {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -24,14 +24,14 @@ impl CompositorController {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Composition_Core'*"]
+    #[doc = "*Required features: `\"UI_Composition_Core\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Core'*"]
+    #[doc = "*Required features: `\"UI_Composition_Core\"`*"]
     pub fn Compositor(&self) -> ::windows::core::Result<super::Compositor> {
         let this = self;
         unsafe {
@@ -43,7 +43,7 @@ impl CompositorController {
             .from_abi::<super::Compositor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Core'*"]
+    #[doc = "*Required features: `\"UI_Composition_Core\"`*"]
     pub fn Commit(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -51,7 +51,7 @@ impl CompositorController {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Core'*"]
+    #[doc = "*Required features: `\"UI_Composition_Core\"`*"]
     pub fn EnsurePreviousCommitCompletedAsync(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncAction> {
@@ -65,7 +65,7 @@ impl CompositorController {
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Core'*"]
+    #[doc = "*Required features: `\"UI_Composition_Core\"`*"]
     pub fn CommitNeeded<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -90,7 +90,7 @@ impl CompositorController {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Composition_Core'*"]
+    #[doc = "*Required features: `\"UI_Composition_Core\"`*"]
     pub fn RemoveCommitNeeded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,

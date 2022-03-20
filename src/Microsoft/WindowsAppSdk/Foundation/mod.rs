@@ -5,7 +5,7 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'WindowsAppSdk_Foundation'*"]
+#[doc = "*Required features: `\"WindowsAppSdk_Foundation\"`*"]
 #[inline]
 pub unsafe fn MddBootstrapInitialize<
     'a,
@@ -36,7 +36,7 @@ pub unsafe fn MddBootstrapInitialize<
     #[cfg(not(windows))]
     unimplemented!("Unsupported target OS");
 }
-#[doc = "*Required features: 'WindowsAppSdk_Foundation'*"]
+#[doc = "*Required features: `\"WindowsAppSdk_Foundation\"`*"]
 #[inline]
 pub unsafe fn MddBootstrapShutdown() {
     #[cfg(windows)]

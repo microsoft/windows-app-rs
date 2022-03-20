@@ -5,12 +5,12 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+#[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
 #[repr(transparent)]
 pub struct Ellipse(::windows::core::IUnknown);
 impl Ellipse {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -24,7 +24,7 @@ impl Ellipse {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -46,7 +46,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -62,7 +62,7 @@ impl Ellipse {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -82,7 +82,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -96,7 +96,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -112,7 +112,7 @@ impl Ellipse {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -131,7 +131,7 @@ impl Ellipse {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -153,7 +153,7 @@ impl Ellipse {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -172,7 +172,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -184,7 +184,7 @@ impl Ellipse {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -199,7 +199,7 @@ impl Ellipse {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Triggers(&self) -> ::windows::core::Result<super::TriggerCollection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -211,7 +211,7 @@ impl Ellipse {
             .from_abi::<super::TriggerCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Resources(&self) -> ::windows::core::Result<super::ResourceDictionary> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -223,7 +223,7 @@ impl Ellipse {
             .from_abi::<super::ResourceDictionary>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetResources<'a, Param0: ::windows::core::IntoParam<'a, super::ResourceDictionary>>(
         &self,
         value: Param0,
@@ -237,7 +237,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Tag(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -249,7 +249,7 @@ impl Ellipse {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTag<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -263,7 +263,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -276,7 +276,7 @@ impl Ellipse {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -290,7 +290,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -302,7 +302,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -314,7 +314,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Width(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -326,7 +326,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -337,7 +337,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Height(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -349,7 +349,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -360,7 +360,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -372,7 +372,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -383,7 +383,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -395,7 +395,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -406,7 +406,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -418,7 +418,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -429,7 +429,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -441,7 +441,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -452,7 +452,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HorizontalAlignment(&self) -> ::windows::core::Result<super::HorizontalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -464,7 +464,7 @@ impl Ellipse {
             .from_abi::<super::HorizontalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHorizontalAlignment(
         &self,
         value: super::HorizontalAlignment,
@@ -478,7 +478,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn VerticalAlignment(&self) -> ::windows::core::Result<super::VerticalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -490,7 +490,7 @@ impl Ellipse {
             .from_abi::<super::VerticalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVerticalAlignment(
         &self,
         value: super::VerticalAlignment,
@@ -504,7 +504,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Margin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -516,7 +516,7 @@ impl Ellipse {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -530,7 +530,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -543,7 +543,7 @@ impl Ellipse {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -557,7 +557,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BaseUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -569,7 +569,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContext(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -581,7 +581,7 @@ impl Ellipse {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetDataContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -598,7 +598,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -610,7 +610,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -621,7 +621,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualMargin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -633,7 +633,7 @@ impl Ellipse {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -647,7 +647,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualSecondaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -659,7 +659,7 @@ impl Ellipse {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualSecondaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -676,7 +676,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualPrimaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -688,7 +688,7 @@ impl Ellipse {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualPrimaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -705,7 +705,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualSecondaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -718,7 +718,7 @@ impl Ellipse {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualSecondaryBrush<
         'a,
@@ -736,7 +736,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualPrimaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -749,7 +749,7 @@ impl Ellipse {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualPrimaryBrush<
         'a,
@@ -767,7 +767,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusWhenDisabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -779,7 +779,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusWhenDisabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -790,7 +790,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Style(&self) -> ::windows::core::Result<super::Style> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -802,7 +802,7 @@ impl Ellipse {
             .from_abi::<super::Style>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStyle<'a, Param0: ::windows::core::IntoParam<'a, super::Style>>(
         &self,
         value: Param0,
@@ -816,7 +816,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -828,7 +828,7 @@ impl Ellipse {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FlowDirection(&self) -> ::windows::core::Result<super::FlowDirection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -840,7 +840,7 @@ impl Ellipse {
             .from_abi::<super::FlowDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFlowDirection(&self, value: super::FlowDirection) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -851,7 +851,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RequestedTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -863,7 +863,7 @@ impl Ellipse {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRequestedTheme(&self, value: super::ElementTheme) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -874,7 +874,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsLoaded(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -886,7 +886,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -898,7 +898,7 @@ impl Ellipse {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -914,7 +914,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -931,7 +931,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Unloaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -947,7 +947,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveUnloaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -964,7 +964,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -989,7 +989,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1006,7 +1006,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::SizeChangedEventHandler>,
@@ -1025,7 +1025,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveSizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1042,7 +1042,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1064,7 +1064,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1081,7 +1081,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loading<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1106,7 +1106,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoading<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1123,7 +1123,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1148,7 +1148,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1165,7 +1165,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn EffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -1190,7 +1190,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveEffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -1207,7 +1207,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -1223,7 +1223,7 @@ impl Ellipse {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn SetBinding<
         'a,
@@ -1244,7 +1244,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn GetBindingExpression<
         'a,
@@ -1264,7 +1264,7 @@ impl Ellipse {
             .from_abi::<super::Data::BindingExpression>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateViewport(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElementProtected>(self)?;
         unsafe {
@@ -1274,7 +1274,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Fill(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -1287,7 +1287,7 @@ impl Ellipse {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFill<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -1302,7 +1302,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stroke(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -1315,7 +1315,7 @@ impl Ellipse {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStroke<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -1330,7 +1330,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeMiterLimit(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -1342,7 +1342,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeMiterLimit(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -1353,7 +1353,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeThickness(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -1365,7 +1365,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeThickness(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -1376,7 +1376,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeStartLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -1389,7 +1389,7 @@ impl Ellipse {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeStartLineCap(
         &self,
@@ -1404,7 +1404,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeEndLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -1417,7 +1417,7 @@ impl Ellipse {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeEndLineCap(
         &self,
@@ -1432,7 +1432,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeLineJoin(&self) -> ::windows::core::Result<super::Media::PenLineJoin> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -1445,7 +1445,7 @@ impl Ellipse {
             .from_abi::<super::Media::PenLineJoin>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeLineJoin(
         &self,
@@ -1460,7 +1460,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeDashOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -1472,7 +1472,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeDashOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -1483,7 +1483,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -1496,7 +1496,7 @@ impl Ellipse {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashCap(&self, value: super::Media::PenLineCap) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -1508,7 +1508,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashArray(&self) -> ::windows::core::Result<super::Media::DoubleCollection> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -1521,7 +1521,7 @@ impl Ellipse {
             .from_abi::<super::Media::DoubleCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashArray<
         'a,
@@ -1539,7 +1539,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stretch(&self) -> ::windows::core::Result<super::Media::Stretch> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -1552,7 +1552,7 @@ impl Ellipse {
             .from_abi::<super::Media::Stretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStretch(&self, value: super::Media::Stretch) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -1564,7 +1564,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn GeometryTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -1577,7 +1577,7 @@ impl Ellipse {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetAlphaMask(
         &self,
@@ -1592,7 +1592,7 @@ impl Ellipse {
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1604,7 +1604,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1616,7 +1616,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowDrop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1627,7 +1627,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1639,7 +1639,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1650,7 +1650,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Clip(&self) -> ::windows::core::Result<super::Media::RectangleGeometry> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -1663,7 +1663,7 @@ impl Ellipse {
             .from_abi::<super::Media::RectangleGeometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetClip<'a, Param0: ::windows::core::IntoParam<'a, super::Media::RectangleGeometry>>(
         &self,
@@ -1678,7 +1678,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn RenderTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -1691,7 +1691,7 @@ impl Ellipse {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetRenderTransform<
         'a,
@@ -1709,7 +1709,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Projection(&self) -> ::windows::core::Result<super::Media::Projection> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -1722,7 +1722,7 @@ impl Ellipse {
             .from_abi::<super::Media::Projection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetProjection<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Projection>>(
         &self,
@@ -1737,7 +1737,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn Transform3D(&self) -> ::windows::core::Result<super::Media::Media3D::Transform3D> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -1750,7 +1750,7 @@ impl Ellipse {
             .from_abi::<super::Media::Media3D::Transform3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn SetTransform3D<
         'a,
@@ -1768,7 +1768,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1780,7 +1780,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRenderTransformOrigin<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -1797,7 +1797,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1809,7 +1809,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHitTestVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1820,7 +1820,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Visibility(&self) -> ::windows::core::Result<super::Visibility> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1832,7 +1832,7 @@ impl Ellipse {
             .from_abi::<super::Visibility>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVisibility(&self, value: super::Visibility) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1843,7 +1843,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1855,7 +1855,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1867,7 +1867,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseLayoutRounding(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1878,7 +1878,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Transitions(
         &self,
@@ -1893,7 +1893,7 @@ impl Ellipse {
             .from_abi::<super::Media::Animation::TransitionCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetTransitions<
         'a,
@@ -1911,7 +1911,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CacheMode(&self) -> ::windows::core::Result<super::Media::CacheMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -1924,7 +1924,7 @@ impl Ellipse {
             .from_abi::<super::Media::CacheMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCacheMode<'a, Param0: ::windows::core::IntoParam<'a, super::Media::CacheMode>>(
         &self,
@@ -1939,7 +1939,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1951,7 +1951,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1962,7 +1962,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1974,7 +1974,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsDoubleTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1985,7 +1985,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -1997,7 +1997,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanDrag(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2008,7 +2008,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2020,7 +2020,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsRightTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2031,7 +2031,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2043,7 +2043,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHoldingEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2054,7 +2054,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationMode(&self) -> ::windows::core::Result<super::Input::ManipulationModes> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -2067,7 +2067,7 @@ impl Ellipse {
             .from_abi::<super::Input::ManipulationModes>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetManipulationMode(
         &self,
@@ -2082,7 +2082,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptures(
         &self,
@@ -2101,7 +2101,7 @@ impl Ellipse {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn ContextFlyout(
         &self,
@@ -2116,7 +2116,7 @@ impl Ellipse {
             .from_abi::<super::Controls::Primitives::FlyoutBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn SetContextFlyout<
         'a,
@@ -2134,7 +2134,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CompositeMode(&self) -> ::windows::core::Result<super::Media::ElementCompositeMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -2147,7 +2147,7 @@ impl Ellipse {
             .from_abi::<super::Media::ElementCompositeMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCompositeMode(
         &self,
@@ -2162,7 +2162,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Lights(
         &self,
@@ -2180,7 +2180,7 @@ impl Ellipse {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2192,7 +2192,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanBeScrollAnchor(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2203,7 +2203,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2215,7 +2215,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2226,7 +2226,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2238,7 +2238,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2249,7 +2249,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2261,7 +2261,7 @@ impl Ellipse {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -2278,7 +2278,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2291,7 +2291,7 @@ impl Ellipse {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -2305,7 +2305,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -2320,7 +2320,7 @@ impl Ellipse {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -2335,7 +2335,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2347,7 +2347,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2358,7 +2358,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2370,7 +2370,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2381,7 +2381,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2393,7 +2393,7 @@ impl Ellipse {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipTarget<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -2407,7 +2407,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusKeyboardNavigation(
         &self,
@@ -2422,7 +2422,7 @@ impl Ellipse {
             .from_abi::<super::Input::XYFocusKeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusKeyboardNavigation(
         &self,
@@ -2437,7 +2437,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusUpNavigationStrategy(
         &self,
@@ -2452,7 +2452,7 @@ impl Ellipse {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusUpNavigationStrategy(
         &self,
@@ -2467,7 +2467,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusDownNavigationStrategy(
         &self,
@@ -2482,7 +2482,7 @@ impl Ellipse {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusDownNavigationStrategy(
         &self,
@@ -2497,7 +2497,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusLeftNavigationStrategy(
         &self,
@@ -2512,7 +2512,7 @@ impl Ellipse {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusLeftNavigationStrategy(
         &self,
@@ -2527,7 +2527,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusRightNavigationStrategy(
         &self,
@@ -2542,7 +2542,7 @@ impl Ellipse {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusRightNavigationStrategy(
         &self,
@@ -2557,7 +2557,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAccelerators(
         &self,
@@ -2576,7 +2576,7 @@ impl Ellipse {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyboardAcceleratorPlacementTarget(
         &self,
     ) -> ::windows::core::Result<super::DependencyObject> {
@@ -2590,7 +2590,7 @@ impl Ellipse {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyboardAcceleratorPlacementTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -2607,7 +2607,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAcceleratorPlacementMode(
         &self,
@@ -2623,7 +2623,7 @@ impl Ellipse {
             .from_abi::<super::Input::KeyboardAcceleratorPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyboardAcceleratorPlacementMode(
         &self,
@@ -2638,7 +2638,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HighContrastAdjustment(
         &self,
     ) -> ::windows::core::Result<super::ElementHighContrastAdjustment> {
@@ -2652,7 +2652,7 @@ impl Ellipse {
             .from_abi::<super::ElementHighContrastAdjustment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHighContrastAdjustment(
         &self,
         value: super::ElementHighContrastAdjustment,
@@ -2666,7 +2666,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TabFocusNavigation(
         &self,
@@ -2681,7 +2681,7 @@ impl Ellipse {
             .from_abi::<super::Input::KeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetTabFocusNavigation(
         &self,
@@ -2696,7 +2696,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn OpacityTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2708,7 +2708,7 @@ impl Ellipse {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacityTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -2725,7 +2725,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2737,7 +2737,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -2754,7 +2754,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TranslationTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2766,7 +2766,7 @@ impl Ellipse {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -2783,7 +2783,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2795,7 +2795,7 @@ impl Ellipse {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotation(&self, value: f32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2806,7 +2806,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2818,7 +2818,7 @@ impl Ellipse {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -2835,7 +2835,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2847,7 +2847,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScale<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -2864,7 +2864,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ScaleTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2876,7 +2876,7 @@ impl Ellipse {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScaleTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -2893,7 +2893,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TransformMatrix(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
@@ -2907,7 +2907,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTransformMatrix<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Matrix4x4>,
@@ -2924,7 +2924,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -2936,7 +2936,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCenterPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -2953,7 +2953,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationAxis(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -2967,7 +2967,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationAxis<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -2984,7 +2984,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualOffset(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -2998,7 +2998,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3010,7 +3010,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3022,7 +3022,7 @@ impl Ellipse {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -3036,7 +3036,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Shadow(&self) -> ::windows::core::Result<super::Media::Shadow> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -3049,7 +3049,7 @@ impl Ellipse {
             .from_abi::<super::Media::Shadow>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetShadow<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Shadow>>(
         &self,
@@ -3064,7 +3064,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3076,7 +3076,7 @@ impl Ellipse {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3087,7 +3087,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusState(&self) -> ::windows::core::Result<super::FocusState> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3099,7 +3099,7 @@ impl Ellipse {
             .from_abi::<super::FocusState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3111,7 +3111,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseSystemFocusVisuals(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3122,7 +3122,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3134,7 +3134,7 @@ impl Ellipse {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusLeft<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -3148,7 +3148,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusRight(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3160,7 +3160,7 @@ impl Ellipse {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusRight<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -3174,7 +3174,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusUp(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3186,7 +3186,7 @@ impl Ellipse {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusUp<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -3200,7 +3200,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusDown(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3212,7 +3212,7 @@ impl Ellipse {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusDown<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -3226,7 +3226,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3238,7 +3238,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTabStop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3249,7 +3249,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3261,7 +3261,7 @@ impl Ellipse {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTabIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -3272,7 +3272,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyUp<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -3289,7 +3289,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3306,7 +3306,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyDown<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -3323,7 +3323,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3340,7 +3340,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GotFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -3356,7 +3356,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3373,7 +3373,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LostFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -3389,7 +3389,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3406,7 +3406,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3431,7 +3431,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3448,7 +3448,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -3473,7 +3473,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3490,7 +3490,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CharacterReceived<
         'a,
@@ -3516,7 +3516,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveCharacterReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3533,7 +3533,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragEnter<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -3549,7 +3549,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragEnter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3566,7 +3566,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragLeave<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -3582,7 +3582,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragLeave<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3599,7 +3599,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragOver<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -3615,7 +3615,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragOver<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3632,7 +3632,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Drop<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -3648,7 +3648,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDrop<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3665,7 +3665,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerPressed<
         'a,
@@ -3685,7 +3685,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3702,7 +3702,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerMoved<
         'a,
@@ -3722,7 +3722,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3739,7 +3739,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerReleased<
         'a,
@@ -3759,7 +3759,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3776,7 +3776,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerEntered<
         'a,
@@ -3796,7 +3796,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3813,7 +3813,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerExited<
         'a,
@@ -3833,7 +3833,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3850,7 +3850,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptureLost<
         'a,
@@ -3870,7 +3870,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3887,7 +3887,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCanceled<
         'a,
@@ -3907,7 +3907,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3924,7 +3924,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerWheelChanged<
         'a,
@@ -3944,7 +3944,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3961,7 +3961,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Tapped<'a, Param0: ::windows::core::IntoParam<'a, super::Input::TappedEventHandler>>(
         &self,
@@ -3978,7 +3978,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -3995,7 +3995,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn DoubleTapped<
         'a,
@@ -4015,7 +4015,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDoubleTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4032,7 +4032,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Holding<
         'a,
@@ -4052,7 +4052,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHolding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4069,7 +4069,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ContextRequested<
         'a,
@@ -4095,7 +4095,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4112,7 +4112,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -4134,7 +4134,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4151,7 +4151,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn RightTapped<
         'a,
@@ -4171,7 +4171,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveRightTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4188,7 +4188,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarting<
         'a,
@@ -4208,7 +4208,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4225,7 +4225,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationInertiaStarting<
         'a,
@@ -4245,7 +4245,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4262,7 +4262,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarted<
         'a,
@@ -4282,7 +4282,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4299,7 +4299,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationDelta<
         'a,
@@ -4319,7 +4319,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationDelta<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4336,7 +4336,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationCompleted<
         'a,
@@ -4356,7 +4356,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4373,7 +4373,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -4399,7 +4399,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4416,7 +4416,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -4442,7 +4442,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4459,7 +4459,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -4485,7 +4485,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4502,7 +4502,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ProcessKeyboardAccelerators<
         'a,
@@ -4528,7 +4528,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveProcessKeyboardAccelerators<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4545,7 +4545,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn GettingFocus<
         'a,
@@ -4571,7 +4571,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGettingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4588,7 +4588,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn LosingFocus<
         'a,
@@ -4614,7 +4614,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLosingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4631,7 +4631,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn NoFocusCandidateFound<
         'a,
@@ -4657,7 +4657,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveNoFocusCandidateFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4674,7 +4674,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyDown<
         'a,
@@ -4694,7 +4694,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4711,7 +4711,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyUp<
         'a,
@@ -4731,7 +4731,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4748,7 +4748,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -4773,7 +4773,7 @@ impl Ellipse {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveBringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -4790,7 +4790,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Measure<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         &self,
         availablesize: Param0,
@@ -4804,7 +4804,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Arrange<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         finalrect: Param0,
@@ -4818,7 +4818,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CapturePointer<'a, Param0: ::windows::core::IntoParam<'a, super::Input::Pointer>>(
         &self,
@@ -4835,7 +4835,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ReleasePointerCapture<
         'a,
@@ -4853,7 +4853,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReleasePointerCaptures(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4863,7 +4863,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AddHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -4885,7 +4885,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -4905,7 +4905,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn TransformToVisual<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
@@ -4922,7 +4922,7 @@ impl Ellipse {
             .from_abi::<super::Media::GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateMeasure(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4932,7 +4932,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateArrange(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4942,7 +4942,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4952,7 +4952,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -4964,7 +4964,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn StartDragAsync<
         'a,
@@ -4990,7 +4990,7 @@ impl Ellipse {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoView(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5000,7 +5000,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoViewWithOptions<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::BringIntoViewOptions>,
@@ -5017,7 +5017,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TryInvokeKeyboardAccelerator<
         'a,
@@ -5035,7 +5035,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Focus(&self, value: super::FocusState) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -5048,7 +5048,7 @@ impl Ellipse {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StartAnimation<
         'a,
@@ -5066,7 +5066,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StopAnimation<
         'a,
@@ -5084,7 +5084,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<super::IUIElementProtected>(self)?;
@@ -5097,7 +5097,7 @@ impl Ellipse {
             .from_abi::<super::super::Input::InputCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn SetProtectedCursor<
         'a,
@@ -5115,7 +5115,7 @@ impl Ellipse {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::super::Composition::Visual> {
         let this =
@@ -5931,12 +5931,12 @@ pub struct IShapeStatics_Vtbl {
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+#[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
 #[repr(transparent)]
 pub struct Line(::windows::core::IUnknown);
 impl Line {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -5950,7 +5950,7 @@ impl Line {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -5972,7 +5972,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -5988,7 +5988,7 @@ impl Line {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6008,7 +6008,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -6022,7 +6022,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -6038,7 +6038,7 @@ impl Line {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6057,7 +6057,7 @@ impl Line {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6079,7 +6079,7 @@ impl Line {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -6098,7 +6098,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -6110,7 +6110,7 @@ impl Line {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -6125,7 +6125,7 @@ impl Line {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Triggers(&self) -> ::windows::core::Result<super::TriggerCollection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6137,7 +6137,7 @@ impl Line {
             .from_abi::<super::TriggerCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Resources(&self) -> ::windows::core::Result<super::ResourceDictionary> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6149,7 +6149,7 @@ impl Line {
             .from_abi::<super::ResourceDictionary>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetResources<'a, Param0: ::windows::core::IntoParam<'a, super::ResourceDictionary>>(
         &self,
         value: Param0,
@@ -6163,7 +6163,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Tag(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6175,7 +6175,7 @@ impl Line {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTag<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -6189,7 +6189,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6202,7 +6202,7 @@ impl Line {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -6216,7 +6216,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6228,7 +6228,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6240,7 +6240,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Width(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6252,7 +6252,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6263,7 +6263,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Height(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6275,7 +6275,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6286,7 +6286,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6298,7 +6298,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6309,7 +6309,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6321,7 +6321,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6332,7 +6332,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6344,7 +6344,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6355,7 +6355,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6367,7 +6367,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6378,7 +6378,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HorizontalAlignment(&self) -> ::windows::core::Result<super::HorizontalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6390,7 +6390,7 @@ impl Line {
             .from_abi::<super::HorizontalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHorizontalAlignment(
         &self,
         value: super::HorizontalAlignment,
@@ -6404,7 +6404,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn VerticalAlignment(&self) -> ::windows::core::Result<super::VerticalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6416,7 +6416,7 @@ impl Line {
             .from_abi::<super::VerticalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVerticalAlignment(
         &self,
         value: super::VerticalAlignment,
@@ -6430,7 +6430,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Margin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6442,7 +6442,7 @@ impl Line {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -6456,7 +6456,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6469,7 +6469,7 @@ impl Line {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -6483,7 +6483,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BaseUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6495,7 +6495,7 @@ impl Line {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContext(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6507,7 +6507,7 @@ impl Line {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetDataContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -6524,7 +6524,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6536,7 +6536,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6547,7 +6547,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualMargin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6559,7 +6559,7 @@ impl Line {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -6573,7 +6573,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualSecondaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6585,7 +6585,7 @@ impl Line {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualSecondaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -6602,7 +6602,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualPrimaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6614,7 +6614,7 @@ impl Line {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualPrimaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -6631,7 +6631,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualSecondaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -6644,7 +6644,7 @@ impl Line {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualSecondaryBrush<
         'a,
@@ -6662,7 +6662,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualPrimaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -6675,7 +6675,7 @@ impl Line {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualPrimaryBrush<
         'a,
@@ -6693,7 +6693,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusWhenDisabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6705,7 +6705,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusWhenDisabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6716,7 +6716,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Style(&self) -> ::windows::core::Result<super::Style> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6728,7 +6728,7 @@ impl Line {
             .from_abi::<super::Style>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStyle<'a, Param0: ::windows::core::IntoParam<'a, super::Style>>(
         &self,
         value: Param0,
@@ -6742,7 +6742,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6754,7 +6754,7 @@ impl Line {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FlowDirection(&self) -> ::windows::core::Result<super::FlowDirection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6766,7 +6766,7 @@ impl Line {
             .from_abi::<super::FlowDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFlowDirection(&self, value: super::FlowDirection) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6777,7 +6777,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RequestedTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6789,7 +6789,7 @@ impl Line {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRequestedTheme(&self, value: super::ElementTheme) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6800,7 +6800,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsLoaded(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6812,7 +6812,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -6824,7 +6824,7 @@ impl Line {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -6840,7 +6840,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6857,7 +6857,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Unloaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -6873,7 +6873,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveUnloaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6890,7 +6890,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -6915,7 +6915,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6932,7 +6932,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::SizeChangedEventHandler>,
@@ -6951,7 +6951,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveSizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -6968,7 +6968,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -6990,7 +6990,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7007,7 +7007,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loading<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -7032,7 +7032,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoading<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7049,7 +7049,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -7074,7 +7074,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7091,7 +7091,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn EffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -7116,7 +7116,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveEffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -7133,7 +7133,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -7149,7 +7149,7 @@ impl Line {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn SetBinding<
         'a,
@@ -7170,7 +7170,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn GetBindingExpression<
         'a,
@@ -7190,7 +7190,7 @@ impl Line {
             .from_abi::<super::Data::BindingExpression>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateViewport(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElementProtected>(self)?;
         unsafe {
@@ -7200,7 +7200,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn X1(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -7212,7 +7212,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetX1(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7223,7 +7223,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Y1(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -7235,7 +7235,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetY1(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7246,7 +7246,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn X2(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -7258,7 +7258,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetX2(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7269,7 +7269,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Y2(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -7281,7 +7281,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetY2(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -7292,7 +7292,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn X1Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ILineStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7303,7 +7303,7 @@ impl Line {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Y1Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ILineStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7314,7 +7314,7 @@ impl Line {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn X2Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ILineStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7325,7 +7325,7 @@ impl Line {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Y2Property() -> ::windows::core::Result<super::DependencyProperty> {
         Self::ILineStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7336,7 +7336,7 @@ impl Line {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Fill(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -7349,7 +7349,7 @@ impl Line {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFill<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -7364,7 +7364,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stroke(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -7377,7 +7377,7 @@ impl Line {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStroke<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -7392,7 +7392,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeMiterLimit(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -7404,7 +7404,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeMiterLimit(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -7415,7 +7415,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeThickness(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -7427,7 +7427,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeThickness(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -7438,7 +7438,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeStartLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -7451,7 +7451,7 @@ impl Line {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeStartLineCap(
         &self,
@@ -7466,7 +7466,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeEndLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -7479,7 +7479,7 @@ impl Line {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeEndLineCap(
         &self,
@@ -7494,7 +7494,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeLineJoin(&self) -> ::windows::core::Result<super::Media::PenLineJoin> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -7507,7 +7507,7 @@ impl Line {
             .from_abi::<super::Media::PenLineJoin>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeLineJoin(
         &self,
@@ -7522,7 +7522,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeDashOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -7534,7 +7534,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeDashOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -7545,7 +7545,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -7558,7 +7558,7 @@ impl Line {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashCap(&self, value: super::Media::PenLineCap) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -7570,7 +7570,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashArray(&self) -> ::windows::core::Result<super::Media::DoubleCollection> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -7583,7 +7583,7 @@ impl Line {
             .from_abi::<super::Media::DoubleCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashArray<
         'a,
@@ -7601,7 +7601,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stretch(&self) -> ::windows::core::Result<super::Media::Stretch> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -7614,7 +7614,7 @@ impl Line {
             .from_abi::<super::Media::Stretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStretch(&self, value: super::Media::Stretch) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -7626,7 +7626,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn GeometryTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -7639,7 +7639,7 @@ impl Line {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetAlphaMask(
         &self,
@@ -7654,7 +7654,7 @@ impl Line {
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7666,7 +7666,7 @@ impl Line {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7678,7 +7678,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowDrop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7689,7 +7689,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7701,7 +7701,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7712,7 +7712,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Clip(&self) -> ::windows::core::Result<super::Media::RectangleGeometry> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -7725,7 +7725,7 @@ impl Line {
             .from_abi::<super::Media::RectangleGeometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetClip<'a, Param0: ::windows::core::IntoParam<'a, super::Media::RectangleGeometry>>(
         &self,
@@ -7740,7 +7740,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn RenderTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -7753,7 +7753,7 @@ impl Line {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetRenderTransform<
         'a,
@@ -7771,7 +7771,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Projection(&self) -> ::windows::core::Result<super::Media::Projection> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -7784,7 +7784,7 @@ impl Line {
             .from_abi::<super::Media::Projection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetProjection<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Projection>>(
         &self,
@@ -7799,7 +7799,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn Transform3D(&self) -> ::windows::core::Result<super::Media::Media3D::Transform3D> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -7812,7 +7812,7 @@ impl Line {
             .from_abi::<super::Media::Media3D::Transform3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn SetTransform3D<
         'a,
@@ -7830,7 +7830,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7842,7 +7842,7 @@ impl Line {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRenderTransformOrigin<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -7859,7 +7859,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7871,7 +7871,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHitTestVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7882,7 +7882,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Visibility(&self) -> ::windows::core::Result<super::Visibility> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7894,7 +7894,7 @@ impl Line {
             .from_abi::<super::Visibility>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVisibility(&self, value: super::Visibility) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7905,7 +7905,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7917,7 +7917,7 @@ impl Line {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7929,7 +7929,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseLayoutRounding(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -7940,7 +7940,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Transitions(
         &self,
@@ -7955,7 +7955,7 @@ impl Line {
             .from_abi::<super::Media::Animation::TransitionCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetTransitions<
         'a,
@@ -7973,7 +7973,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CacheMode(&self) -> ::windows::core::Result<super::Media::CacheMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -7986,7 +7986,7 @@ impl Line {
             .from_abi::<super::Media::CacheMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCacheMode<'a, Param0: ::windows::core::IntoParam<'a, super::Media::CacheMode>>(
         &self,
@@ -8001,7 +8001,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8013,7 +8013,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8024,7 +8024,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8036,7 +8036,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsDoubleTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8047,7 +8047,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8059,7 +8059,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanDrag(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8070,7 +8070,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8082,7 +8082,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsRightTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8093,7 +8093,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8105,7 +8105,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHoldingEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8116,7 +8116,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationMode(&self) -> ::windows::core::Result<super::Input::ManipulationModes> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -8129,7 +8129,7 @@ impl Line {
             .from_abi::<super::Input::ManipulationModes>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetManipulationMode(
         &self,
@@ -8144,7 +8144,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptures(
         &self,
@@ -8163,7 +8163,7 @@ impl Line {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn ContextFlyout(
         &self,
@@ -8178,7 +8178,7 @@ impl Line {
             .from_abi::<super::Controls::Primitives::FlyoutBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn SetContextFlyout<
         'a,
@@ -8196,7 +8196,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CompositeMode(&self) -> ::windows::core::Result<super::Media::ElementCompositeMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -8209,7 +8209,7 @@ impl Line {
             .from_abi::<super::Media::ElementCompositeMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCompositeMode(
         &self,
@@ -8224,7 +8224,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Lights(
         &self,
@@ -8242,7 +8242,7 @@ impl Line {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8254,7 +8254,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanBeScrollAnchor(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8265,7 +8265,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8277,7 +8277,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8288,7 +8288,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8300,7 +8300,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8311,7 +8311,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8323,7 +8323,7 @@ impl Line {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -8340,7 +8340,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8353,7 +8353,7 @@ impl Line {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -8367,7 +8367,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -8382,7 +8382,7 @@ impl Line {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -8397,7 +8397,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8409,7 +8409,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8420,7 +8420,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8432,7 +8432,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8443,7 +8443,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8455,7 +8455,7 @@ impl Line {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipTarget<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -8469,7 +8469,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusKeyboardNavigation(
         &self,
@@ -8484,7 +8484,7 @@ impl Line {
             .from_abi::<super::Input::XYFocusKeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusKeyboardNavigation(
         &self,
@@ -8499,7 +8499,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusUpNavigationStrategy(
         &self,
@@ -8514,7 +8514,7 @@ impl Line {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusUpNavigationStrategy(
         &self,
@@ -8529,7 +8529,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusDownNavigationStrategy(
         &self,
@@ -8544,7 +8544,7 @@ impl Line {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusDownNavigationStrategy(
         &self,
@@ -8559,7 +8559,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusLeftNavigationStrategy(
         &self,
@@ -8574,7 +8574,7 @@ impl Line {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusLeftNavigationStrategy(
         &self,
@@ -8589,7 +8589,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusRightNavigationStrategy(
         &self,
@@ -8604,7 +8604,7 @@ impl Line {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusRightNavigationStrategy(
         &self,
@@ -8619,7 +8619,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAccelerators(
         &self,
@@ -8638,7 +8638,7 @@ impl Line {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyboardAcceleratorPlacementTarget(
         &self,
     ) -> ::windows::core::Result<super::DependencyObject> {
@@ -8652,7 +8652,7 @@ impl Line {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyboardAcceleratorPlacementTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -8669,7 +8669,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAcceleratorPlacementMode(
         &self,
@@ -8685,7 +8685,7 @@ impl Line {
             .from_abi::<super::Input::KeyboardAcceleratorPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyboardAcceleratorPlacementMode(
         &self,
@@ -8700,7 +8700,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HighContrastAdjustment(
         &self,
     ) -> ::windows::core::Result<super::ElementHighContrastAdjustment> {
@@ -8714,7 +8714,7 @@ impl Line {
             .from_abi::<super::ElementHighContrastAdjustment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHighContrastAdjustment(
         &self,
         value: super::ElementHighContrastAdjustment,
@@ -8728,7 +8728,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TabFocusNavigation(
         &self,
@@ -8743,7 +8743,7 @@ impl Line {
             .from_abi::<super::Input::KeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetTabFocusNavigation(
         &self,
@@ -8758,7 +8758,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn OpacityTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8770,7 +8770,7 @@ impl Line {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacityTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -8787,7 +8787,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8799,7 +8799,7 @@ impl Line {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -8816,7 +8816,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TranslationTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8828,7 +8828,7 @@ impl Line {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -8845,7 +8845,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8857,7 +8857,7 @@ impl Line {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotation(&self, value: f32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8868,7 +8868,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8880,7 +8880,7 @@ impl Line {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -8897,7 +8897,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8909,7 +8909,7 @@ impl Line {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScale<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -8926,7 +8926,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ScaleTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8938,7 +8938,7 @@ impl Line {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScaleTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -8955,7 +8955,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TransformMatrix(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
@@ -8969,7 +8969,7 @@ impl Line {
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTransformMatrix<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Matrix4x4>,
@@ -8986,7 +8986,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -8998,7 +8998,7 @@ impl Line {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCenterPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -9015,7 +9015,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationAxis(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -9029,7 +9029,7 @@ impl Line {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationAxis<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -9046,7 +9046,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualOffset(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -9060,7 +9060,7 @@ impl Line {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9072,7 +9072,7 @@ impl Line {
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9084,7 +9084,7 @@ impl Line {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -9098,7 +9098,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Shadow(&self) -> ::windows::core::Result<super::Media::Shadow> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -9111,7 +9111,7 @@ impl Line {
             .from_abi::<super::Media::Shadow>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetShadow<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Shadow>>(
         &self,
@@ -9126,7 +9126,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9138,7 +9138,7 @@ impl Line {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9149,7 +9149,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusState(&self) -> ::windows::core::Result<super::FocusState> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9161,7 +9161,7 @@ impl Line {
             .from_abi::<super::FocusState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9173,7 +9173,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseSystemFocusVisuals(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9184,7 +9184,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9196,7 +9196,7 @@ impl Line {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusLeft<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -9210,7 +9210,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusRight(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9222,7 +9222,7 @@ impl Line {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusRight<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -9236,7 +9236,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusUp(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9248,7 +9248,7 @@ impl Line {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusUp<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -9262,7 +9262,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusDown(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9274,7 +9274,7 @@ impl Line {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusDown<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -9288,7 +9288,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9300,7 +9300,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTabStop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9311,7 +9311,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9323,7 +9323,7 @@ impl Line {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTabIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -9334,7 +9334,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyUp<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -9351,7 +9351,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9368,7 +9368,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyDown<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -9385,7 +9385,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9402,7 +9402,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GotFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -9418,7 +9418,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9435,7 +9435,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LostFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -9451,7 +9451,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9468,7 +9468,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -9493,7 +9493,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9510,7 +9510,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -9535,7 +9535,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9552,7 +9552,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CharacterReceived<
         'a,
@@ -9578,7 +9578,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveCharacterReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9595,7 +9595,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragEnter<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -9611,7 +9611,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragEnter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9628,7 +9628,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragLeave<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -9644,7 +9644,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragLeave<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9661,7 +9661,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragOver<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -9677,7 +9677,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragOver<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9694,7 +9694,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Drop<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -9710,7 +9710,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDrop<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9727,7 +9727,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerPressed<
         'a,
@@ -9747,7 +9747,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9764,7 +9764,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerMoved<
         'a,
@@ -9784,7 +9784,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9801,7 +9801,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerReleased<
         'a,
@@ -9821,7 +9821,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9838,7 +9838,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerEntered<
         'a,
@@ -9858,7 +9858,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9875,7 +9875,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerExited<
         'a,
@@ -9895,7 +9895,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9912,7 +9912,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptureLost<
         'a,
@@ -9932,7 +9932,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9949,7 +9949,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCanceled<
         'a,
@@ -9969,7 +9969,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -9986,7 +9986,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerWheelChanged<
         'a,
@@ -10006,7 +10006,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10023,7 +10023,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Tapped<'a, Param0: ::windows::core::IntoParam<'a, super::Input::TappedEventHandler>>(
         &self,
@@ -10040,7 +10040,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10057,7 +10057,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn DoubleTapped<
         'a,
@@ -10077,7 +10077,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDoubleTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10094,7 +10094,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Holding<
         'a,
@@ -10114,7 +10114,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHolding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10131,7 +10131,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ContextRequested<
         'a,
@@ -10157,7 +10157,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10174,7 +10174,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -10196,7 +10196,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10213,7 +10213,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn RightTapped<
         'a,
@@ -10233,7 +10233,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveRightTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10250,7 +10250,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarting<
         'a,
@@ -10270,7 +10270,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10287,7 +10287,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationInertiaStarting<
         'a,
@@ -10307,7 +10307,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10324,7 +10324,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarted<
         'a,
@@ -10344,7 +10344,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10361,7 +10361,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationDelta<
         'a,
@@ -10381,7 +10381,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationDelta<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10398,7 +10398,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationCompleted<
         'a,
@@ -10418,7 +10418,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10435,7 +10435,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -10461,7 +10461,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10478,7 +10478,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -10504,7 +10504,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10521,7 +10521,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -10547,7 +10547,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10564,7 +10564,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ProcessKeyboardAccelerators<
         'a,
@@ -10590,7 +10590,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveProcessKeyboardAccelerators<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10607,7 +10607,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn GettingFocus<
         'a,
@@ -10633,7 +10633,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGettingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10650,7 +10650,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn LosingFocus<
         'a,
@@ -10676,7 +10676,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLosingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10693,7 +10693,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn NoFocusCandidateFound<
         'a,
@@ -10719,7 +10719,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveNoFocusCandidateFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10736,7 +10736,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyDown<
         'a,
@@ -10756,7 +10756,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10773,7 +10773,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyUp<
         'a,
@@ -10793,7 +10793,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10810,7 +10810,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -10835,7 +10835,7 @@ impl Line {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveBringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -10852,7 +10852,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Measure<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         &self,
         availablesize: Param0,
@@ -10866,7 +10866,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Arrange<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         finalrect: Param0,
@@ -10880,7 +10880,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CapturePointer<'a, Param0: ::windows::core::IntoParam<'a, super::Input::Pointer>>(
         &self,
@@ -10897,7 +10897,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ReleasePointerCapture<
         'a,
@@ -10915,7 +10915,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReleasePointerCaptures(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -10925,7 +10925,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AddHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -10947,7 +10947,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -10967,7 +10967,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn TransformToVisual<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
@@ -10984,7 +10984,7 @@ impl Line {
             .from_abi::<super::Media::GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateMeasure(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -10994,7 +10994,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateArrange(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -11004,7 +11004,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -11014,7 +11014,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -11026,7 +11026,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn StartDragAsync<
         'a,
@@ -11052,7 +11052,7 @@ impl Line {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoView(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -11062,7 +11062,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoViewWithOptions<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::BringIntoViewOptions>,
@@ -11079,7 +11079,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TryInvokeKeyboardAccelerator<
         'a,
@@ -11097,7 +11097,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Focus(&self, value: super::FocusState) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -11110,7 +11110,7 @@ impl Line {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StartAnimation<
         'a,
@@ -11128,7 +11128,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StopAnimation<
         'a,
@@ -11146,7 +11146,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<super::IUIElementProtected>(self)?;
@@ -11159,7 +11159,7 @@ impl Line {
             .from_abi::<super::super::Input::InputCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn SetProtectedCursor<
         'a,
@@ -11177,7 +11177,7 @@ impl Line {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::super::Composition::Visual> {
         let this =
@@ -11438,11 +11438,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Line {
 }
 unsafe impl ::core::marker::Send for Line {}
 unsafe impl ::core::marker::Sync for Line {}
-#[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+#[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
 #[repr(transparent)]
 pub struct Path(::windows::core::IUnknown);
 impl Path {
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -11464,7 +11464,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -11480,7 +11480,7 @@ impl Path {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11500,7 +11500,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -11514,7 +11514,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -11530,7 +11530,7 @@ impl Path {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11549,7 +11549,7 @@ impl Path {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11571,7 +11571,7 @@ impl Path {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -11590,7 +11590,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -11602,7 +11602,7 @@ impl Path {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -11617,7 +11617,7 @@ impl Path {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Triggers(&self) -> ::windows::core::Result<super::TriggerCollection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11629,7 +11629,7 @@ impl Path {
             .from_abi::<super::TriggerCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Resources(&self) -> ::windows::core::Result<super::ResourceDictionary> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11641,7 +11641,7 @@ impl Path {
             .from_abi::<super::ResourceDictionary>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetResources<'a, Param0: ::windows::core::IntoParam<'a, super::ResourceDictionary>>(
         &self,
         value: Param0,
@@ -11655,7 +11655,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Tag(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11667,7 +11667,7 @@ impl Path {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTag<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -11681,7 +11681,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11694,7 +11694,7 @@ impl Path {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -11708,7 +11708,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11720,7 +11720,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11732,7 +11732,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Width(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11744,7 +11744,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11755,7 +11755,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Height(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11767,7 +11767,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11778,7 +11778,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11790,7 +11790,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11801,7 +11801,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11813,7 +11813,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11824,7 +11824,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11836,7 +11836,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11847,7 +11847,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11859,7 +11859,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11870,7 +11870,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HorizontalAlignment(&self) -> ::windows::core::Result<super::HorizontalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11882,7 +11882,7 @@ impl Path {
             .from_abi::<super::HorizontalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHorizontalAlignment(
         &self,
         value: super::HorizontalAlignment,
@@ -11896,7 +11896,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn VerticalAlignment(&self) -> ::windows::core::Result<super::VerticalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11908,7 +11908,7 @@ impl Path {
             .from_abi::<super::VerticalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVerticalAlignment(
         &self,
         value: super::VerticalAlignment,
@@ -11922,7 +11922,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Margin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11934,7 +11934,7 @@ impl Path {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -11948,7 +11948,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11961,7 +11961,7 @@ impl Path {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -11975,7 +11975,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BaseUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11987,7 +11987,7 @@ impl Path {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContext(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -11999,7 +11999,7 @@ impl Path {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetDataContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -12016,7 +12016,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12028,7 +12028,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12039,7 +12039,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualMargin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12051,7 +12051,7 @@ impl Path {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -12065,7 +12065,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualSecondaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12077,7 +12077,7 @@ impl Path {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualSecondaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -12094,7 +12094,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualPrimaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12106,7 +12106,7 @@ impl Path {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualPrimaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -12123,7 +12123,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualSecondaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -12136,7 +12136,7 @@ impl Path {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualSecondaryBrush<
         'a,
@@ -12154,7 +12154,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualPrimaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -12167,7 +12167,7 @@ impl Path {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualPrimaryBrush<
         'a,
@@ -12185,7 +12185,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusWhenDisabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12197,7 +12197,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusWhenDisabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12208,7 +12208,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Style(&self) -> ::windows::core::Result<super::Style> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12220,7 +12220,7 @@ impl Path {
             .from_abi::<super::Style>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStyle<'a, Param0: ::windows::core::IntoParam<'a, super::Style>>(
         &self,
         value: Param0,
@@ -12234,7 +12234,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12246,7 +12246,7 @@ impl Path {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FlowDirection(&self) -> ::windows::core::Result<super::FlowDirection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12258,7 +12258,7 @@ impl Path {
             .from_abi::<super::FlowDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFlowDirection(&self, value: super::FlowDirection) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12269,7 +12269,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RequestedTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12281,7 +12281,7 @@ impl Path {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRequestedTheme(&self, value: super::ElementTheme) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12292,7 +12292,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsLoaded(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12304,7 +12304,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -12316,7 +12316,7 @@ impl Path {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -12332,7 +12332,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12349,7 +12349,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Unloaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -12365,7 +12365,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveUnloaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12382,7 +12382,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -12407,7 +12407,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12424,7 +12424,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::SizeChangedEventHandler>,
@@ -12443,7 +12443,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveSizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12460,7 +12460,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -12482,7 +12482,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12499,7 +12499,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loading<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -12524,7 +12524,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoading<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12541,7 +12541,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -12566,7 +12566,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12583,7 +12583,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn EffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -12608,7 +12608,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveEffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -12625,7 +12625,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -12641,7 +12641,7 @@ impl Path {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn SetBinding<
         'a,
@@ -12662,7 +12662,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn GetBindingExpression<
         'a,
@@ -12682,7 +12682,7 @@ impl Path {
             .from_abi::<super::Data::BindingExpression>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateViewport(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElementProtected>(self)?;
         unsafe {
@@ -12692,7 +12692,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Data(&self) -> ::windows::core::Result<super::Media::Geometry> {
         let this = self;
@@ -12705,7 +12705,7 @@ impl Path {
             .from_abi::<super::Media::Geometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetData<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Geometry>>(
         &self,
@@ -12720,7 +12720,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn new() -> ::windows::core::Result<Path> {
         Self::IPathFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -12733,7 +12733,7 @@ impl Path {
             .from_abi::<Path>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn compose<T: ::windows::core::Compose>(compose: T) -> ::windows::core::Result<Path> {
         Self::IPathFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
@@ -12747,7 +12747,7 @@ impl Path {
             .from_abi::<Path>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPathStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -12758,7 +12758,7 @@ impl Path {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Fill(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -12771,7 +12771,7 @@ impl Path {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFill<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -12786,7 +12786,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stroke(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -12799,7 +12799,7 @@ impl Path {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStroke<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -12814,7 +12814,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeMiterLimit(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -12826,7 +12826,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeMiterLimit(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -12837,7 +12837,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeThickness(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -12849,7 +12849,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeThickness(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -12860,7 +12860,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeStartLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -12873,7 +12873,7 @@ impl Path {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeStartLineCap(
         &self,
@@ -12888,7 +12888,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeEndLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -12901,7 +12901,7 @@ impl Path {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeEndLineCap(
         &self,
@@ -12916,7 +12916,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeLineJoin(&self) -> ::windows::core::Result<super::Media::PenLineJoin> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -12929,7 +12929,7 @@ impl Path {
             .from_abi::<super::Media::PenLineJoin>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeLineJoin(
         &self,
@@ -12944,7 +12944,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeDashOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -12956,7 +12956,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeDashOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -12967,7 +12967,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -12980,7 +12980,7 @@ impl Path {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashCap(&self, value: super::Media::PenLineCap) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -12992,7 +12992,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashArray(&self) -> ::windows::core::Result<super::Media::DoubleCollection> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -13005,7 +13005,7 @@ impl Path {
             .from_abi::<super::Media::DoubleCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashArray<
         'a,
@@ -13023,7 +13023,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stretch(&self) -> ::windows::core::Result<super::Media::Stretch> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -13036,7 +13036,7 @@ impl Path {
             .from_abi::<super::Media::Stretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStretch(&self, value: super::Media::Stretch) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -13048,7 +13048,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn GeometryTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -13061,7 +13061,7 @@ impl Path {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetAlphaMask(
         &self,
@@ -13076,7 +13076,7 @@ impl Path {
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13088,7 +13088,7 @@ impl Path {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13100,7 +13100,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowDrop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13111,7 +13111,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13123,7 +13123,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13134,7 +13134,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Clip(&self) -> ::windows::core::Result<super::Media::RectangleGeometry> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -13147,7 +13147,7 @@ impl Path {
             .from_abi::<super::Media::RectangleGeometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetClip<'a, Param0: ::windows::core::IntoParam<'a, super::Media::RectangleGeometry>>(
         &self,
@@ -13162,7 +13162,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn RenderTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -13175,7 +13175,7 @@ impl Path {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetRenderTransform<
         'a,
@@ -13193,7 +13193,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Projection(&self) -> ::windows::core::Result<super::Media::Projection> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -13206,7 +13206,7 @@ impl Path {
             .from_abi::<super::Media::Projection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetProjection<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Projection>>(
         &self,
@@ -13221,7 +13221,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn Transform3D(&self) -> ::windows::core::Result<super::Media::Media3D::Transform3D> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -13234,7 +13234,7 @@ impl Path {
             .from_abi::<super::Media::Media3D::Transform3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn SetTransform3D<
         'a,
@@ -13252,7 +13252,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13264,7 +13264,7 @@ impl Path {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRenderTransformOrigin<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -13281,7 +13281,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13293,7 +13293,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHitTestVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13304,7 +13304,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Visibility(&self) -> ::windows::core::Result<super::Visibility> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13316,7 +13316,7 @@ impl Path {
             .from_abi::<super::Visibility>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVisibility(&self, value: super::Visibility) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13327,7 +13327,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13339,7 +13339,7 @@ impl Path {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13351,7 +13351,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseLayoutRounding(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13362,7 +13362,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Transitions(
         &self,
@@ -13377,7 +13377,7 @@ impl Path {
             .from_abi::<super::Media::Animation::TransitionCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetTransitions<
         'a,
@@ -13395,7 +13395,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CacheMode(&self) -> ::windows::core::Result<super::Media::CacheMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -13408,7 +13408,7 @@ impl Path {
             .from_abi::<super::Media::CacheMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCacheMode<'a, Param0: ::windows::core::IntoParam<'a, super::Media::CacheMode>>(
         &self,
@@ -13423,7 +13423,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13435,7 +13435,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13446,7 +13446,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13458,7 +13458,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsDoubleTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13469,7 +13469,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13481,7 +13481,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanDrag(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13492,7 +13492,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13504,7 +13504,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsRightTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13515,7 +13515,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13527,7 +13527,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHoldingEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13538,7 +13538,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationMode(&self) -> ::windows::core::Result<super::Input::ManipulationModes> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -13551,7 +13551,7 @@ impl Path {
             .from_abi::<super::Input::ManipulationModes>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetManipulationMode(
         &self,
@@ -13566,7 +13566,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptures(
         &self,
@@ -13585,7 +13585,7 @@ impl Path {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn ContextFlyout(
         &self,
@@ -13600,7 +13600,7 @@ impl Path {
             .from_abi::<super::Controls::Primitives::FlyoutBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn SetContextFlyout<
         'a,
@@ -13618,7 +13618,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CompositeMode(&self) -> ::windows::core::Result<super::Media::ElementCompositeMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -13631,7 +13631,7 @@ impl Path {
             .from_abi::<super::Media::ElementCompositeMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCompositeMode(
         &self,
@@ -13646,7 +13646,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Lights(
         &self,
@@ -13664,7 +13664,7 @@ impl Path {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13676,7 +13676,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanBeScrollAnchor(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13687,7 +13687,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13699,7 +13699,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13710,7 +13710,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13722,7 +13722,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13733,7 +13733,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13745,7 +13745,7 @@ impl Path {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -13762,7 +13762,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13775,7 +13775,7 @@ impl Path {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -13789,7 +13789,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -13804,7 +13804,7 @@ impl Path {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -13819,7 +13819,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13831,7 +13831,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13842,7 +13842,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13854,7 +13854,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13865,7 +13865,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -13877,7 +13877,7 @@ impl Path {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipTarget<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -13891,7 +13891,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusKeyboardNavigation(
         &self,
@@ -13906,7 +13906,7 @@ impl Path {
             .from_abi::<super::Input::XYFocusKeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusKeyboardNavigation(
         &self,
@@ -13921,7 +13921,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusUpNavigationStrategy(
         &self,
@@ -13936,7 +13936,7 @@ impl Path {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusUpNavigationStrategy(
         &self,
@@ -13951,7 +13951,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusDownNavigationStrategy(
         &self,
@@ -13966,7 +13966,7 @@ impl Path {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusDownNavigationStrategy(
         &self,
@@ -13981,7 +13981,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusLeftNavigationStrategy(
         &self,
@@ -13996,7 +13996,7 @@ impl Path {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusLeftNavigationStrategy(
         &self,
@@ -14011,7 +14011,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusRightNavigationStrategy(
         &self,
@@ -14026,7 +14026,7 @@ impl Path {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusRightNavigationStrategy(
         &self,
@@ -14041,7 +14041,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAccelerators(
         &self,
@@ -14060,7 +14060,7 @@ impl Path {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyboardAcceleratorPlacementTarget(
         &self,
     ) -> ::windows::core::Result<super::DependencyObject> {
@@ -14074,7 +14074,7 @@ impl Path {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyboardAcceleratorPlacementTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -14091,7 +14091,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAcceleratorPlacementMode(
         &self,
@@ -14107,7 +14107,7 @@ impl Path {
             .from_abi::<super::Input::KeyboardAcceleratorPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyboardAcceleratorPlacementMode(
         &self,
@@ -14122,7 +14122,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HighContrastAdjustment(
         &self,
     ) -> ::windows::core::Result<super::ElementHighContrastAdjustment> {
@@ -14136,7 +14136,7 @@ impl Path {
             .from_abi::<super::ElementHighContrastAdjustment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHighContrastAdjustment(
         &self,
         value: super::ElementHighContrastAdjustment,
@@ -14150,7 +14150,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TabFocusNavigation(
         &self,
@@ -14165,7 +14165,7 @@ impl Path {
             .from_abi::<super::Input::KeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetTabFocusNavigation(
         &self,
@@ -14180,7 +14180,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn OpacityTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14192,7 +14192,7 @@ impl Path {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacityTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -14209,7 +14209,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14221,7 +14221,7 @@ impl Path {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -14238,7 +14238,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TranslationTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14250,7 +14250,7 @@ impl Path {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -14267,7 +14267,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14279,7 +14279,7 @@ impl Path {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotation(&self, value: f32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14290,7 +14290,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14302,7 +14302,7 @@ impl Path {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -14319,7 +14319,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14331,7 +14331,7 @@ impl Path {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScale<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -14348,7 +14348,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ScaleTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14360,7 +14360,7 @@ impl Path {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScaleTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -14377,7 +14377,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TransformMatrix(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
@@ -14391,7 +14391,7 @@ impl Path {
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTransformMatrix<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Matrix4x4>,
@@ -14408,7 +14408,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14420,7 +14420,7 @@ impl Path {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCenterPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -14437,7 +14437,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationAxis(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -14451,7 +14451,7 @@ impl Path {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationAxis<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -14468,7 +14468,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualOffset(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -14482,7 +14482,7 @@ impl Path {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14494,7 +14494,7 @@ impl Path {
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14506,7 +14506,7 @@ impl Path {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -14520,7 +14520,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Shadow(&self) -> ::windows::core::Result<super::Media::Shadow> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -14533,7 +14533,7 @@ impl Path {
             .from_abi::<super::Media::Shadow>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetShadow<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Shadow>>(
         &self,
@@ -14548,7 +14548,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14560,7 +14560,7 @@ impl Path {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14571,7 +14571,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusState(&self) -> ::windows::core::Result<super::FocusState> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14583,7 +14583,7 @@ impl Path {
             .from_abi::<super::FocusState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14595,7 +14595,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseSystemFocusVisuals(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14606,7 +14606,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14618,7 +14618,7 @@ impl Path {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusLeft<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -14632,7 +14632,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusRight(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14644,7 +14644,7 @@ impl Path {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusRight<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -14658,7 +14658,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusUp(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14670,7 +14670,7 @@ impl Path {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusUp<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -14684,7 +14684,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusDown(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14696,7 +14696,7 @@ impl Path {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusDown<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -14710,7 +14710,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14722,7 +14722,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTabStop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14733,7 +14733,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14745,7 +14745,7 @@ impl Path {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTabIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -14756,7 +14756,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyUp<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -14773,7 +14773,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14790,7 +14790,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyDown<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -14807,7 +14807,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14824,7 +14824,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GotFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -14840,7 +14840,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14857,7 +14857,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LostFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -14873,7 +14873,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14890,7 +14890,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -14915,7 +14915,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14932,7 +14932,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -14957,7 +14957,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -14974,7 +14974,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CharacterReceived<
         'a,
@@ -15000,7 +15000,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveCharacterReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15017,7 +15017,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragEnter<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -15033,7 +15033,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragEnter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15050,7 +15050,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragLeave<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -15066,7 +15066,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragLeave<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15083,7 +15083,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragOver<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -15099,7 +15099,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragOver<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15116,7 +15116,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Drop<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -15132,7 +15132,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDrop<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15149,7 +15149,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerPressed<
         'a,
@@ -15169,7 +15169,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15186,7 +15186,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerMoved<
         'a,
@@ -15206,7 +15206,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15223,7 +15223,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerReleased<
         'a,
@@ -15243,7 +15243,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15260,7 +15260,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerEntered<
         'a,
@@ -15280,7 +15280,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15297,7 +15297,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerExited<
         'a,
@@ -15317,7 +15317,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15334,7 +15334,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptureLost<
         'a,
@@ -15354,7 +15354,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15371,7 +15371,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCanceled<
         'a,
@@ -15391,7 +15391,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15408,7 +15408,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerWheelChanged<
         'a,
@@ -15428,7 +15428,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15445,7 +15445,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Tapped<'a, Param0: ::windows::core::IntoParam<'a, super::Input::TappedEventHandler>>(
         &self,
@@ -15462,7 +15462,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15479,7 +15479,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn DoubleTapped<
         'a,
@@ -15499,7 +15499,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDoubleTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15516,7 +15516,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Holding<
         'a,
@@ -15536,7 +15536,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHolding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15553,7 +15553,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ContextRequested<
         'a,
@@ -15579,7 +15579,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15596,7 +15596,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -15618,7 +15618,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15635,7 +15635,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn RightTapped<
         'a,
@@ -15655,7 +15655,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveRightTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15672,7 +15672,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarting<
         'a,
@@ -15692,7 +15692,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15709,7 +15709,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationInertiaStarting<
         'a,
@@ -15729,7 +15729,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15746,7 +15746,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarted<
         'a,
@@ -15766,7 +15766,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15783,7 +15783,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationDelta<
         'a,
@@ -15803,7 +15803,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationDelta<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15820,7 +15820,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationCompleted<
         'a,
@@ -15840,7 +15840,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15857,7 +15857,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -15883,7 +15883,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15900,7 +15900,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -15926,7 +15926,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15943,7 +15943,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -15969,7 +15969,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -15986,7 +15986,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ProcessKeyboardAccelerators<
         'a,
@@ -16012,7 +16012,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveProcessKeyboardAccelerators<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -16029,7 +16029,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn GettingFocus<
         'a,
@@ -16055,7 +16055,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGettingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -16072,7 +16072,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn LosingFocus<
         'a,
@@ -16098,7 +16098,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLosingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -16115,7 +16115,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn NoFocusCandidateFound<
         'a,
@@ -16141,7 +16141,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveNoFocusCandidateFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -16158,7 +16158,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyDown<
         'a,
@@ -16178,7 +16178,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -16195,7 +16195,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyUp<
         'a,
@@ -16215,7 +16215,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -16232,7 +16232,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -16257,7 +16257,7 @@ impl Path {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveBringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -16274,7 +16274,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Measure<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         &self,
         availablesize: Param0,
@@ -16288,7 +16288,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Arrange<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         finalrect: Param0,
@@ -16302,7 +16302,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CapturePointer<'a, Param0: ::windows::core::IntoParam<'a, super::Input::Pointer>>(
         &self,
@@ -16319,7 +16319,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ReleasePointerCapture<
         'a,
@@ -16337,7 +16337,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReleasePointerCaptures(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -16347,7 +16347,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AddHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -16369,7 +16369,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -16389,7 +16389,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn TransformToVisual<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
@@ -16406,7 +16406,7 @@ impl Path {
             .from_abi::<super::Media::GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateMeasure(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -16416,7 +16416,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateArrange(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -16426,7 +16426,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -16436,7 +16436,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -16448,7 +16448,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn StartDragAsync<
         'a,
@@ -16474,7 +16474,7 @@ impl Path {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoView(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -16484,7 +16484,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoViewWithOptions<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::BringIntoViewOptions>,
@@ -16501,7 +16501,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TryInvokeKeyboardAccelerator<
         'a,
@@ -16519,7 +16519,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Focus(&self, value: super::FocusState) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -16532,7 +16532,7 @@ impl Path {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StartAnimation<
         'a,
@@ -16550,7 +16550,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StopAnimation<
         'a,
@@ -16568,7 +16568,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<super::IUIElementProtected>(self)?;
@@ -16581,7 +16581,7 @@ impl Path {
             .from_abi::<super::super::Input::InputCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn SetProtectedCursor<
         'a,
@@ -16599,7 +16599,7 @@ impl Path {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::super::Composition::Visual> {
         let this =
@@ -16868,12 +16868,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Path {
 }
 unsafe impl ::core::marker::Send for Path {}
 unsafe impl ::core::marker::Sync for Path {}
-#[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+#[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
 #[repr(transparent)]
 pub struct Polygon(::windows::core::IUnknown);
 impl Polygon {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -16887,7 +16887,7 @@ impl Polygon {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -16909,7 +16909,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16925,7 +16925,7 @@ impl Polygon {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16945,7 +16945,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16959,7 +16959,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -16975,7 +16975,7 @@ impl Polygon {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -16994,7 +16994,7 @@ impl Polygon {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -17016,7 +17016,7 @@ impl Polygon {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -17035,7 +17035,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -17047,7 +17047,7 @@ impl Polygon {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -17062,7 +17062,7 @@ impl Polygon {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Triggers(&self) -> ::windows::core::Result<super::TriggerCollection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17074,7 +17074,7 @@ impl Polygon {
             .from_abi::<super::TriggerCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Resources(&self) -> ::windows::core::Result<super::ResourceDictionary> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17086,7 +17086,7 @@ impl Polygon {
             .from_abi::<super::ResourceDictionary>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetResources<'a, Param0: ::windows::core::IntoParam<'a, super::ResourceDictionary>>(
         &self,
         value: Param0,
@@ -17100,7 +17100,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Tag(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17112,7 +17112,7 @@ impl Polygon {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTag<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -17126,7 +17126,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17139,7 +17139,7 @@ impl Polygon {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -17153,7 +17153,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17165,7 +17165,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17177,7 +17177,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Width(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17189,7 +17189,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17200,7 +17200,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Height(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17212,7 +17212,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17223,7 +17223,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17235,7 +17235,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17246,7 +17246,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17258,7 +17258,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17269,7 +17269,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17281,7 +17281,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17292,7 +17292,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17304,7 +17304,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17315,7 +17315,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HorizontalAlignment(&self) -> ::windows::core::Result<super::HorizontalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17327,7 +17327,7 @@ impl Polygon {
             .from_abi::<super::HorizontalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHorizontalAlignment(
         &self,
         value: super::HorizontalAlignment,
@@ -17341,7 +17341,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn VerticalAlignment(&self) -> ::windows::core::Result<super::VerticalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17353,7 +17353,7 @@ impl Polygon {
             .from_abi::<super::VerticalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVerticalAlignment(
         &self,
         value: super::VerticalAlignment,
@@ -17367,7 +17367,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Margin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17379,7 +17379,7 @@ impl Polygon {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -17393,7 +17393,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17406,7 +17406,7 @@ impl Polygon {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -17420,7 +17420,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BaseUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17432,7 +17432,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContext(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17444,7 +17444,7 @@ impl Polygon {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetDataContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -17461,7 +17461,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17473,7 +17473,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17484,7 +17484,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualMargin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17496,7 +17496,7 @@ impl Polygon {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -17510,7 +17510,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualSecondaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17522,7 +17522,7 @@ impl Polygon {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualSecondaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -17539,7 +17539,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualPrimaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17551,7 +17551,7 @@ impl Polygon {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualPrimaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -17568,7 +17568,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualSecondaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -17581,7 +17581,7 @@ impl Polygon {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualSecondaryBrush<
         'a,
@@ -17599,7 +17599,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualPrimaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -17612,7 +17612,7 @@ impl Polygon {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualPrimaryBrush<
         'a,
@@ -17630,7 +17630,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusWhenDisabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17642,7 +17642,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusWhenDisabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17653,7 +17653,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Style(&self) -> ::windows::core::Result<super::Style> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17665,7 +17665,7 @@ impl Polygon {
             .from_abi::<super::Style>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStyle<'a, Param0: ::windows::core::IntoParam<'a, super::Style>>(
         &self,
         value: Param0,
@@ -17679,7 +17679,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17691,7 +17691,7 @@ impl Polygon {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FlowDirection(&self) -> ::windows::core::Result<super::FlowDirection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17703,7 +17703,7 @@ impl Polygon {
             .from_abi::<super::FlowDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFlowDirection(&self, value: super::FlowDirection) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17714,7 +17714,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RequestedTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17726,7 +17726,7 @@ impl Polygon {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRequestedTheme(&self, value: super::ElementTheme) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17737,7 +17737,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsLoaded(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17749,7 +17749,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -17761,7 +17761,7 @@ impl Polygon {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -17777,7 +17777,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -17794,7 +17794,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Unloaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -17810,7 +17810,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveUnloaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -17827,7 +17827,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -17852,7 +17852,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -17869,7 +17869,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::SizeChangedEventHandler>,
@@ -17888,7 +17888,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveSizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -17905,7 +17905,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -17927,7 +17927,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -17944,7 +17944,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loading<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -17969,7 +17969,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoading<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -17986,7 +17986,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -18011,7 +18011,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -18028,7 +18028,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn EffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -18053,7 +18053,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveEffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -18070,7 +18070,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -18086,7 +18086,7 @@ impl Polygon {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn SetBinding<
         'a,
@@ -18107,7 +18107,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn GetBindingExpression<
         'a,
@@ -18127,7 +18127,7 @@ impl Polygon {
             .from_abi::<super::Data::BindingExpression>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateViewport(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElementProtected>(self)?;
         unsafe {
@@ -18137,7 +18137,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FillRule(&self) -> ::windows::core::Result<super::Media::FillRule> {
         let this = self;
@@ -18150,7 +18150,7 @@ impl Polygon {
             .from_abi::<super::Media::FillRule>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFillRule(&self, value: super::Media::FillRule) -> ::windows::core::Result<()> {
         let this = self;
@@ -18162,7 +18162,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Points(&self) -> ::windows::core::Result<super::Media::PointCollection> {
         let this = self;
@@ -18175,7 +18175,7 @@ impl Polygon {
             .from_abi::<super::Media::PointCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetPoints<'a, Param0: ::windows::core::IntoParam<'a, super::Media::PointCollection>>(
         &self,
@@ -18190,7 +18190,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FillRuleProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPolygonStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -18201,7 +18201,7 @@ impl Polygon {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn PointsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPolygonStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -18212,7 +18212,7 @@ impl Polygon {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Fill(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -18225,7 +18225,7 @@ impl Polygon {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFill<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -18240,7 +18240,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stroke(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -18253,7 +18253,7 @@ impl Polygon {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStroke<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -18268,7 +18268,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeMiterLimit(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -18280,7 +18280,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeMiterLimit(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -18291,7 +18291,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeThickness(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -18303,7 +18303,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeThickness(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -18314,7 +18314,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeStartLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -18327,7 +18327,7 @@ impl Polygon {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeStartLineCap(
         &self,
@@ -18342,7 +18342,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeEndLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -18355,7 +18355,7 @@ impl Polygon {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeEndLineCap(
         &self,
@@ -18370,7 +18370,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeLineJoin(&self) -> ::windows::core::Result<super::Media::PenLineJoin> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -18383,7 +18383,7 @@ impl Polygon {
             .from_abi::<super::Media::PenLineJoin>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeLineJoin(
         &self,
@@ -18398,7 +18398,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeDashOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -18410,7 +18410,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeDashOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -18421,7 +18421,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -18434,7 +18434,7 @@ impl Polygon {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashCap(&self, value: super::Media::PenLineCap) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -18446,7 +18446,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashArray(&self) -> ::windows::core::Result<super::Media::DoubleCollection> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -18459,7 +18459,7 @@ impl Polygon {
             .from_abi::<super::Media::DoubleCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashArray<
         'a,
@@ -18477,7 +18477,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stretch(&self) -> ::windows::core::Result<super::Media::Stretch> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -18490,7 +18490,7 @@ impl Polygon {
             .from_abi::<super::Media::Stretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStretch(&self, value: super::Media::Stretch) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -18502,7 +18502,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn GeometryTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -18515,7 +18515,7 @@ impl Polygon {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetAlphaMask(
         &self,
@@ -18530,7 +18530,7 @@ impl Polygon {
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18542,7 +18542,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18554,7 +18554,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowDrop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18565,7 +18565,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18577,7 +18577,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18588,7 +18588,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Clip(&self) -> ::windows::core::Result<super::Media::RectangleGeometry> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -18601,7 +18601,7 @@ impl Polygon {
             .from_abi::<super::Media::RectangleGeometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetClip<'a, Param0: ::windows::core::IntoParam<'a, super::Media::RectangleGeometry>>(
         &self,
@@ -18616,7 +18616,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn RenderTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -18629,7 +18629,7 @@ impl Polygon {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetRenderTransform<
         'a,
@@ -18647,7 +18647,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Projection(&self) -> ::windows::core::Result<super::Media::Projection> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -18660,7 +18660,7 @@ impl Polygon {
             .from_abi::<super::Media::Projection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetProjection<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Projection>>(
         &self,
@@ -18675,7 +18675,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn Transform3D(&self) -> ::windows::core::Result<super::Media::Media3D::Transform3D> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -18688,7 +18688,7 @@ impl Polygon {
             .from_abi::<super::Media::Media3D::Transform3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn SetTransform3D<
         'a,
@@ -18706,7 +18706,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18718,7 +18718,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRenderTransformOrigin<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -18735,7 +18735,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18747,7 +18747,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHitTestVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18758,7 +18758,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Visibility(&self) -> ::windows::core::Result<super::Visibility> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18770,7 +18770,7 @@ impl Polygon {
             .from_abi::<super::Visibility>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVisibility(&self, value: super::Visibility) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18781,7 +18781,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18793,7 +18793,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18805,7 +18805,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseLayoutRounding(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18816,7 +18816,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Transitions(
         &self,
@@ -18831,7 +18831,7 @@ impl Polygon {
             .from_abi::<super::Media::Animation::TransitionCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetTransitions<
         'a,
@@ -18849,7 +18849,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CacheMode(&self) -> ::windows::core::Result<super::Media::CacheMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -18862,7 +18862,7 @@ impl Polygon {
             .from_abi::<super::Media::CacheMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCacheMode<'a, Param0: ::windows::core::IntoParam<'a, super::Media::CacheMode>>(
         &self,
@@ -18877,7 +18877,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18889,7 +18889,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18900,7 +18900,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18912,7 +18912,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsDoubleTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18923,7 +18923,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18935,7 +18935,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanDrag(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18946,7 +18946,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18958,7 +18958,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsRightTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18969,7 +18969,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18981,7 +18981,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHoldingEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -18992,7 +18992,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationMode(&self) -> ::windows::core::Result<super::Input::ManipulationModes> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -19005,7 +19005,7 @@ impl Polygon {
             .from_abi::<super::Input::ManipulationModes>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetManipulationMode(
         &self,
@@ -19020,7 +19020,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptures(
         &self,
@@ -19039,7 +19039,7 @@ impl Polygon {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn ContextFlyout(
         &self,
@@ -19054,7 +19054,7 @@ impl Polygon {
             .from_abi::<super::Controls::Primitives::FlyoutBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn SetContextFlyout<
         'a,
@@ -19072,7 +19072,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CompositeMode(&self) -> ::windows::core::Result<super::Media::ElementCompositeMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -19085,7 +19085,7 @@ impl Polygon {
             .from_abi::<super::Media::ElementCompositeMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCompositeMode(
         &self,
@@ -19100,7 +19100,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Lights(
         &self,
@@ -19118,7 +19118,7 @@ impl Polygon {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19130,7 +19130,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanBeScrollAnchor(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19141,7 +19141,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19153,7 +19153,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19164,7 +19164,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19176,7 +19176,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19187,7 +19187,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19199,7 +19199,7 @@ impl Polygon {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -19216,7 +19216,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19229,7 +19229,7 @@ impl Polygon {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -19243,7 +19243,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -19258,7 +19258,7 @@ impl Polygon {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -19273,7 +19273,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19285,7 +19285,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19296,7 +19296,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19308,7 +19308,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19319,7 +19319,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19331,7 +19331,7 @@ impl Polygon {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipTarget<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -19345,7 +19345,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusKeyboardNavigation(
         &self,
@@ -19360,7 +19360,7 @@ impl Polygon {
             .from_abi::<super::Input::XYFocusKeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusKeyboardNavigation(
         &self,
@@ -19375,7 +19375,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusUpNavigationStrategy(
         &self,
@@ -19390,7 +19390,7 @@ impl Polygon {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusUpNavigationStrategy(
         &self,
@@ -19405,7 +19405,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusDownNavigationStrategy(
         &self,
@@ -19420,7 +19420,7 @@ impl Polygon {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusDownNavigationStrategy(
         &self,
@@ -19435,7 +19435,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusLeftNavigationStrategy(
         &self,
@@ -19450,7 +19450,7 @@ impl Polygon {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusLeftNavigationStrategy(
         &self,
@@ -19465,7 +19465,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusRightNavigationStrategy(
         &self,
@@ -19480,7 +19480,7 @@ impl Polygon {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusRightNavigationStrategy(
         &self,
@@ -19495,7 +19495,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAccelerators(
         &self,
@@ -19514,7 +19514,7 @@ impl Polygon {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyboardAcceleratorPlacementTarget(
         &self,
     ) -> ::windows::core::Result<super::DependencyObject> {
@@ -19528,7 +19528,7 @@ impl Polygon {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyboardAcceleratorPlacementTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -19545,7 +19545,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAcceleratorPlacementMode(
         &self,
@@ -19561,7 +19561,7 @@ impl Polygon {
             .from_abi::<super::Input::KeyboardAcceleratorPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyboardAcceleratorPlacementMode(
         &self,
@@ -19576,7 +19576,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HighContrastAdjustment(
         &self,
     ) -> ::windows::core::Result<super::ElementHighContrastAdjustment> {
@@ -19590,7 +19590,7 @@ impl Polygon {
             .from_abi::<super::ElementHighContrastAdjustment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHighContrastAdjustment(
         &self,
         value: super::ElementHighContrastAdjustment,
@@ -19604,7 +19604,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TabFocusNavigation(
         &self,
@@ -19619,7 +19619,7 @@ impl Polygon {
             .from_abi::<super::Input::KeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetTabFocusNavigation(
         &self,
@@ -19634,7 +19634,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn OpacityTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19646,7 +19646,7 @@ impl Polygon {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacityTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -19663,7 +19663,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19675,7 +19675,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -19692,7 +19692,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TranslationTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19704,7 +19704,7 @@ impl Polygon {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -19721,7 +19721,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19733,7 +19733,7 @@ impl Polygon {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotation(&self, value: f32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19744,7 +19744,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19756,7 +19756,7 @@ impl Polygon {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -19773,7 +19773,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19785,7 +19785,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScale<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -19802,7 +19802,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ScaleTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19814,7 +19814,7 @@ impl Polygon {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScaleTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -19831,7 +19831,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TransformMatrix(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
@@ -19845,7 +19845,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTransformMatrix<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Matrix4x4>,
@@ -19862,7 +19862,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19874,7 +19874,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCenterPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -19891,7 +19891,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationAxis(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -19905,7 +19905,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationAxis<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -19922,7 +19922,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualOffset(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -19936,7 +19936,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19948,7 +19948,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -19960,7 +19960,7 @@ impl Polygon {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -19974,7 +19974,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Shadow(&self) -> ::windows::core::Result<super::Media::Shadow> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -19987,7 +19987,7 @@ impl Polygon {
             .from_abi::<super::Media::Shadow>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetShadow<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Shadow>>(
         &self,
@@ -20002,7 +20002,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20014,7 +20014,7 @@ impl Polygon {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20025,7 +20025,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusState(&self) -> ::windows::core::Result<super::FocusState> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20037,7 +20037,7 @@ impl Polygon {
             .from_abi::<super::FocusState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20049,7 +20049,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseSystemFocusVisuals(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20060,7 +20060,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20072,7 +20072,7 @@ impl Polygon {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusLeft<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -20086,7 +20086,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusRight(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20098,7 +20098,7 @@ impl Polygon {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusRight<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -20112,7 +20112,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusUp(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20124,7 +20124,7 @@ impl Polygon {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusUp<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -20138,7 +20138,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusDown(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20150,7 +20150,7 @@ impl Polygon {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusDown<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -20164,7 +20164,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20176,7 +20176,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTabStop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20187,7 +20187,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20199,7 +20199,7 @@ impl Polygon {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTabIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -20210,7 +20210,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyUp<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -20227,7 +20227,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20244,7 +20244,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyDown<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -20261,7 +20261,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20278,7 +20278,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GotFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -20294,7 +20294,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20311,7 +20311,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LostFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -20327,7 +20327,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20344,7 +20344,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -20369,7 +20369,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20386,7 +20386,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -20411,7 +20411,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20428,7 +20428,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CharacterReceived<
         'a,
@@ -20454,7 +20454,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveCharacterReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20471,7 +20471,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragEnter<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -20487,7 +20487,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragEnter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20504,7 +20504,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragLeave<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -20520,7 +20520,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragLeave<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20537,7 +20537,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragOver<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -20553,7 +20553,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragOver<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20570,7 +20570,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Drop<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -20586,7 +20586,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDrop<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20603,7 +20603,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerPressed<
         'a,
@@ -20623,7 +20623,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20640,7 +20640,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerMoved<
         'a,
@@ -20660,7 +20660,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20677,7 +20677,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerReleased<
         'a,
@@ -20697,7 +20697,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20714,7 +20714,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerEntered<
         'a,
@@ -20734,7 +20734,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20751,7 +20751,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerExited<
         'a,
@@ -20771,7 +20771,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20788,7 +20788,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptureLost<
         'a,
@@ -20808,7 +20808,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20825,7 +20825,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCanceled<
         'a,
@@ -20845,7 +20845,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20862,7 +20862,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerWheelChanged<
         'a,
@@ -20882,7 +20882,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20899,7 +20899,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Tapped<'a, Param0: ::windows::core::IntoParam<'a, super::Input::TappedEventHandler>>(
         &self,
@@ -20916,7 +20916,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20933,7 +20933,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn DoubleTapped<
         'a,
@@ -20953,7 +20953,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDoubleTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -20970,7 +20970,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Holding<
         'a,
@@ -20990,7 +20990,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHolding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21007,7 +21007,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ContextRequested<
         'a,
@@ -21033,7 +21033,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21050,7 +21050,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -21072,7 +21072,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21089,7 +21089,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn RightTapped<
         'a,
@@ -21109,7 +21109,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveRightTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21126,7 +21126,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarting<
         'a,
@@ -21146,7 +21146,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21163,7 +21163,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationInertiaStarting<
         'a,
@@ -21183,7 +21183,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21200,7 +21200,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarted<
         'a,
@@ -21220,7 +21220,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21237,7 +21237,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationDelta<
         'a,
@@ -21257,7 +21257,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationDelta<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21274,7 +21274,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationCompleted<
         'a,
@@ -21294,7 +21294,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21311,7 +21311,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -21337,7 +21337,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21354,7 +21354,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -21380,7 +21380,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21397,7 +21397,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -21423,7 +21423,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21440,7 +21440,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ProcessKeyboardAccelerators<
         'a,
@@ -21466,7 +21466,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveProcessKeyboardAccelerators<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21483,7 +21483,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn GettingFocus<
         'a,
@@ -21509,7 +21509,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGettingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21526,7 +21526,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn LosingFocus<
         'a,
@@ -21552,7 +21552,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLosingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21569,7 +21569,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn NoFocusCandidateFound<
         'a,
@@ -21595,7 +21595,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveNoFocusCandidateFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21612,7 +21612,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyDown<
         'a,
@@ -21632,7 +21632,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21649,7 +21649,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyUp<
         'a,
@@ -21669,7 +21669,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21686,7 +21686,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -21711,7 +21711,7 @@ impl Polygon {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveBringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -21728,7 +21728,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Measure<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         &self,
         availablesize: Param0,
@@ -21742,7 +21742,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Arrange<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         finalrect: Param0,
@@ -21756,7 +21756,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CapturePointer<'a, Param0: ::windows::core::IntoParam<'a, super::Input::Pointer>>(
         &self,
@@ -21773,7 +21773,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ReleasePointerCapture<
         'a,
@@ -21791,7 +21791,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReleasePointerCaptures(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -21801,7 +21801,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AddHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -21823,7 +21823,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -21843,7 +21843,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn TransformToVisual<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
@@ -21860,7 +21860,7 @@ impl Polygon {
             .from_abi::<super::Media::GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateMeasure(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -21870,7 +21870,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateArrange(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -21880,7 +21880,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -21890,7 +21890,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -21902,7 +21902,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn StartDragAsync<
         'a,
@@ -21928,7 +21928,7 @@ impl Polygon {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoView(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -21938,7 +21938,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoViewWithOptions<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::BringIntoViewOptions>,
@@ -21955,7 +21955,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TryInvokeKeyboardAccelerator<
         'a,
@@ -21973,7 +21973,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Focus(&self, value: super::FocusState) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -21986,7 +21986,7 @@ impl Polygon {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StartAnimation<
         'a,
@@ -22004,7 +22004,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StopAnimation<
         'a,
@@ -22022,7 +22022,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<super::IUIElementProtected>(self)?;
@@ -22035,7 +22035,7 @@ impl Polygon {
             .from_abi::<super::super::Input::InputCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn SetProtectedCursor<
         'a,
@@ -22053,7 +22053,7 @@ impl Polygon {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::super::Composition::Visual> {
         let this =
@@ -22314,12 +22314,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Polygon {
 }
 unsafe impl ::core::marker::Send for Polygon {}
 unsafe impl ::core::marker::Sync for Polygon {}
-#[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+#[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
 #[repr(transparent)]
 pub struct Polyline(::windows::core::IUnknown);
 impl Polyline {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -22333,7 +22333,7 @@ impl Polyline {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -22355,7 +22355,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -22371,7 +22371,7 @@ impl Polyline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22391,7 +22391,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -22405,7 +22405,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -22421,7 +22421,7 @@ impl Polyline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22440,7 +22440,7 @@ impl Polyline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22462,7 +22462,7 @@ impl Polyline {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -22481,7 +22481,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -22493,7 +22493,7 @@ impl Polyline {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -22508,7 +22508,7 @@ impl Polyline {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Triggers(&self) -> ::windows::core::Result<super::TriggerCollection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22520,7 +22520,7 @@ impl Polyline {
             .from_abi::<super::TriggerCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Resources(&self) -> ::windows::core::Result<super::ResourceDictionary> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22532,7 +22532,7 @@ impl Polyline {
             .from_abi::<super::ResourceDictionary>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetResources<'a, Param0: ::windows::core::IntoParam<'a, super::ResourceDictionary>>(
         &self,
         value: Param0,
@@ -22546,7 +22546,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Tag(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22558,7 +22558,7 @@ impl Polyline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTag<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -22572,7 +22572,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22585,7 +22585,7 @@ impl Polyline {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -22599,7 +22599,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22611,7 +22611,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22623,7 +22623,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Width(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22635,7 +22635,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22646,7 +22646,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Height(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22658,7 +22658,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22669,7 +22669,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22681,7 +22681,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22692,7 +22692,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22704,7 +22704,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22715,7 +22715,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22727,7 +22727,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22738,7 +22738,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22750,7 +22750,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22761,7 +22761,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HorizontalAlignment(&self) -> ::windows::core::Result<super::HorizontalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22773,7 +22773,7 @@ impl Polyline {
             .from_abi::<super::HorizontalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHorizontalAlignment(
         &self,
         value: super::HorizontalAlignment,
@@ -22787,7 +22787,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn VerticalAlignment(&self) -> ::windows::core::Result<super::VerticalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22799,7 +22799,7 @@ impl Polyline {
             .from_abi::<super::VerticalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVerticalAlignment(
         &self,
         value: super::VerticalAlignment,
@@ -22813,7 +22813,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Margin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22825,7 +22825,7 @@ impl Polyline {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -22839,7 +22839,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22852,7 +22852,7 @@ impl Polyline {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -22866,7 +22866,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BaseUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22878,7 +22878,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContext(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22890,7 +22890,7 @@ impl Polyline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetDataContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -22907,7 +22907,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22919,7 +22919,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22930,7 +22930,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualMargin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22942,7 +22942,7 @@ impl Polyline {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -22956,7 +22956,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualSecondaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22968,7 +22968,7 @@ impl Polyline {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualSecondaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -22985,7 +22985,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualPrimaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -22997,7 +22997,7 @@ impl Polyline {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualPrimaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -23014,7 +23014,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualSecondaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -23027,7 +23027,7 @@ impl Polyline {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualSecondaryBrush<
         'a,
@@ -23045,7 +23045,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualPrimaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -23058,7 +23058,7 @@ impl Polyline {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualPrimaryBrush<
         'a,
@@ -23076,7 +23076,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusWhenDisabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -23088,7 +23088,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusWhenDisabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -23099,7 +23099,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Style(&self) -> ::windows::core::Result<super::Style> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -23111,7 +23111,7 @@ impl Polyline {
             .from_abi::<super::Style>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStyle<'a, Param0: ::windows::core::IntoParam<'a, super::Style>>(
         &self,
         value: Param0,
@@ -23125,7 +23125,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -23137,7 +23137,7 @@ impl Polyline {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FlowDirection(&self) -> ::windows::core::Result<super::FlowDirection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -23149,7 +23149,7 @@ impl Polyline {
             .from_abi::<super::FlowDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFlowDirection(&self, value: super::FlowDirection) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -23160,7 +23160,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RequestedTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -23172,7 +23172,7 @@ impl Polyline {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRequestedTheme(&self, value: super::ElementTheme) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -23183,7 +23183,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsLoaded(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -23195,7 +23195,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -23207,7 +23207,7 @@ impl Polyline {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -23223,7 +23223,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -23240,7 +23240,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Unloaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -23256,7 +23256,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveUnloaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -23273,7 +23273,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -23298,7 +23298,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -23315,7 +23315,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::SizeChangedEventHandler>,
@@ -23334,7 +23334,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveSizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -23351,7 +23351,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -23373,7 +23373,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -23390,7 +23390,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loading<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -23415,7 +23415,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoading<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -23432,7 +23432,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -23457,7 +23457,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -23474,7 +23474,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn EffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -23499,7 +23499,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveEffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -23516,7 +23516,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -23532,7 +23532,7 @@ impl Polyline {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn SetBinding<
         'a,
@@ -23553,7 +23553,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn GetBindingExpression<
         'a,
@@ -23573,7 +23573,7 @@ impl Polyline {
             .from_abi::<super::Data::BindingExpression>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateViewport(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElementProtected>(self)?;
         unsafe {
@@ -23583,7 +23583,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FillRule(&self) -> ::windows::core::Result<super::Media::FillRule> {
         let this = self;
@@ -23596,7 +23596,7 @@ impl Polyline {
             .from_abi::<super::Media::FillRule>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFillRule(&self, value: super::Media::FillRule) -> ::windows::core::Result<()> {
         let this = self;
@@ -23608,7 +23608,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Points(&self) -> ::windows::core::Result<super::Media::PointCollection> {
         let this = self;
@@ -23621,7 +23621,7 @@ impl Polyline {
             .from_abi::<super::Media::PointCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetPoints<'a, Param0: ::windows::core::IntoParam<'a, super::Media::PointCollection>>(
         &self,
@@ -23636,7 +23636,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FillRuleProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPolylineStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -23647,7 +23647,7 @@ impl Polyline {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn PointsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPolylineStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -23658,7 +23658,7 @@ impl Polyline {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Fill(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -23671,7 +23671,7 @@ impl Polyline {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFill<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -23686,7 +23686,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stroke(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -23699,7 +23699,7 @@ impl Polyline {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStroke<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -23714,7 +23714,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeMiterLimit(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -23726,7 +23726,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeMiterLimit(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -23737,7 +23737,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeThickness(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -23749,7 +23749,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeThickness(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -23760,7 +23760,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeStartLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -23773,7 +23773,7 @@ impl Polyline {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeStartLineCap(
         &self,
@@ -23788,7 +23788,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeEndLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -23801,7 +23801,7 @@ impl Polyline {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeEndLineCap(
         &self,
@@ -23816,7 +23816,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeLineJoin(&self) -> ::windows::core::Result<super::Media::PenLineJoin> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -23829,7 +23829,7 @@ impl Polyline {
             .from_abi::<super::Media::PenLineJoin>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeLineJoin(
         &self,
@@ -23844,7 +23844,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeDashOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -23856,7 +23856,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeDashOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -23867,7 +23867,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -23880,7 +23880,7 @@ impl Polyline {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashCap(&self, value: super::Media::PenLineCap) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -23892,7 +23892,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashArray(&self) -> ::windows::core::Result<super::Media::DoubleCollection> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -23905,7 +23905,7 @@ impl Polyline {
             .from_abi::<super::Media::DoubleCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashArray<
         'a,
@@ -23923,7 +23923,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stretch(&self) -> ::windows::core::Result<super::Media::Stretch> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -23936,7 +23936,7 @@ impl Polyline {
             .from_abi::<super::Media::Stretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStretch(&self, value: super::Media::Stretch) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -23948,7 +23948,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn GeometryTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -23961,7 +23961,7 @@ impl Polyline {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetAlphaMask(
         &self,
@@ -23976,7 +23976,7 @@ impl Polyline {
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -23988,7 +23988,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24000,7 +24000,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowDrop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24011,7 +24011,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24023,7 +24023,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24034,7 +24034,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Clip(&self) -> ::windows::core::Result<super::Media::RectangleGeometry> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -24047,7 +24047,7 @@ impl Polyline {
             .from_abi::<super::Media::RectangleGeometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetClip<'a, Param0: ::windows::core::IntoParam<'a, super::Media::RectangleGeometry>>(
         &self,
@@ -24062,7 +24062,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn RenderTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -24075,7 +24075,7 @@ impl Polyline {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetRenderTransform<
         'a,
@@ -24093,7 +24093,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Projection(&self) -> ::windows::core::Result<super::Media::Projection> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -24106,7 +24106,7 @@ impl Polyline {
             .from_abi::<super::Media::Projection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetProjection<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Projection>>(
         &self,
@@ -24121,7 +24121,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn Transform3D(&self) -> ::windows::core::Result<super::Media::Media3D::Transform3D> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -24134,7 +24134,7 @@ impl Polyline {
             .from_abi::<super::Media::Media3D::Transform3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn SetTransform3D<
         'a,
@@ -24152,7 +24152,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24164,7 +24164,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRenderTransformOrigin<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -24181,7 +24181,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24193,7 +24193,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHitTestVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24204,7 +24204,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Visibility(&self) -> ::windows::core::Result<super::Visibility> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24216,7 +24216,7 @@ impl Polyline {
             .from_abi::<super::Visibility>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVisibility(&self, value: super::Visibility) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24227,7 +24227,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24239,7 +24239,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24251,7 +24251,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseLayoutRounding(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24262,7 +24262,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Transitions(
         &self,
@@ -24277,7 +24277,7 @@ impl Polyline {
             .from_abi::<super::Media::Animation::TransitionCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetTransitions<
         'a,
@@ -24295,7 +24295,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CacheMode(&self) -> ::windows::core::Result<super::Media::CacheMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -24308,7 +24308,7 @@ impl Polyline {
             .from_abi::<super::Media::CacheMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCacheMode<'a, Param0: ::windows::core::IntoParam<'a, super::Media::CacheMode>>(
         &self,
@@ -24323,7 +24323,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24335,7 +24335,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24346,7 +24346,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24358,7 +24358,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsDoubleTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24369,7 +24369,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24381,7 +24381,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanDrag(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24392,7 +24392,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24404,7 +24404,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsRightTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24415,7 +24415,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24427,7 +24427,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHoldingEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24438,7 +24438,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationMode(&self) -> ::windows::core::Result<super::Input::ManipulationModes> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -24451,7 +24451,7 @@ impl Polyline {
             .from_abi::<super::Input::ManipulationModes>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetManipulationMode(
         &self,
@@ -24466,7 +24466,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptures(
         &self,
@@ -24485,7 +24485,7 @@ impl Polyline {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn ContextFlyout(
         &self,
@@ -24500,7 +24500,7 @@ impl Polyline {
             .from_abi::<super::Controls::Primitives::FlyoutBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn SetContextFlyout<
         'a,
@@ -24518,7 +24518,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CompositeMode(&self) -> ::windows::core::Result<super::Media::ElementCompositeMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -24531,7 +24531,7 @@ impl Polyline {
             .from_abi::<super::Media::ElementCompositeMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCompositeMode(
         &self,
@@ -24546,7 +24546,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Lights(
         &self,
@@ -24564,7 +24564,7 @@ impl Polyline {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24576,7 +24576,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanBeScrollAnchor(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24587,7 +24587,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24599,7 +24599,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24610,7 +24610,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24622,7 +24622,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24633,7 +24633,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24645,7 +24645,7 @@ impl Polyline {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -24662,7 +24662,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24675,7 +24675,7 @@ impl Polyline {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -24689,7 +24689,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -24704,7 +24704,7 @@ impl Polyline {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -24719,7 +24719,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24731,7 +24731,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24742,7 +24742,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24754,7 +24754,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24765,7 +24765,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -24777,7 +24777,7 @@ impl Polyline {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipTarget<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -24791,7 +24791,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusKeyboardNavigation(
         &self,
@@ -24806,7 +24806,7 @@ impl Polyline {
             .from_abi::<super::Input::XYFocusKeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusKeyboardNavigation(
         &self,
@@ -24821,7 +24821,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusUpNavigationStrategy(
         &self,
@@ -24836,7 +24836,7 @@ impl Polyline {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusUpNavigationStrategy(
         &self,
@@ -24851,7 +24851,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusDownNavigationStrategy(
         &self,
@@ -24866,7 +24866,7 @@ impl Polyline {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusDownNavigationStrategy(
         &self,
@@ -24881,7 +24881,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusLeftNavigationStrategy(
         &self,
@@ -24896,7 +24896,7 @@ impl Polyline {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusLeftNavigationStrategy(
         &self,
@@ -24911,7 +24911,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusRightNavigationStrategy(
         &self,
@@ -24926,7 +24926,7 @@ impl Polyline {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusRightNavigationStrategy(
         &self,
@@ -24941,7 +24941,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAccelerators(
         &self,
@@ -24960,7 +24960,7 @@ impl Polyline {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyboardAcceleratorPlacementTarget(
         &self,
     ) -> ::windows::core::Result<super::DependencyObject> {
@@ -24974,7 +24974,7 @@ impl Polyline {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyboardAcceleratorPlacementTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -24991,7 +24991,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAcceleratorPlacementMode(
         &self,
@@ -25007,7 +25007,7 @@ impl Polyline {
             .from_abi::<super::Input::KeyboardAcceleratorPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyboardAcceleratorPlacementMode(
         &self,
@@ -25022,7 +25022,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HighContrastAdjustment(
         &self,
     ) -> ::windows::core::Result<super::ElementHighContrastAdjustment> {
@@ -25036,7 +25036,7 @@ impl Polyline {
             .from_abi::<super::ElementHighContrastAdjustment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHighContrastAdjustment(
         &self,
         value: super::ElementHighContrastAdjustment,
@@ -25050,7 +25050,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TabFocusNavigation(
         &self,
@@ -25065,7 +25065,7 @@ impl Polyline {
             .from_abi::<super::Input::KeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetTabFocusNavigation(
         &self,
@@ -25080,7 +25080,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn OpacityTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25092,7 +25092,7 @@ impl Polyline {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacityTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -25109,7 +25109,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25121,7 +25121,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -25138,7 +25138,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TranslationTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25150,7 +25150,7 @@ impl Polyline {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -25167,7 +25167,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25179,7 +25179,7 @@ impl Polyline {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotation(&self, value: f32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25190,7 +25190,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25202,7 +25202,7 @@ impl Polyline {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -25219,7 +25219,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25231,7 +25231,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScale<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -25248,7 +25248,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ScaleTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25260,7 +25260,7 @@ impl Polyline {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScaleTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -25277,7 +25277,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TransformMatrix(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
@@ -25291,7 +25291,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTransformMatrix<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Matrix4x4>,
@@ -25308,7 +25308,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25320,7 +25320,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCenterPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -25337,7 +25337,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationAxis(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -25351,7 +25351,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationAxis<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -25368,7 +25368,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualOffset(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -25382,7 +25382,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25394,7 +25394,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25406,7 +25406,7 @@ impl Polyline {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -25420,7 +25420,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Shadow(&self) -> ::windows::core::Result<super::Media::Shadow> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -25433,7 +25433,7 @@ impl Polyline {
             .from_abi::<super::Media::Shadow>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetShadow<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Shadow>>(
         &self,
@@ -25448,7 +25448,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25460,7 +25460,7 @@ impl Polyline {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25471,7 +25471,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusState(&self) -> ::windows::core::Result<super::FocusState> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25483,7 +25483,7 @@ impl Polyline {
             .from_abi::<super::FocusState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25495,7 +25495,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseSystemFocusVisuals(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25506,7 +25506,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25518,7 +25518,7 @@ impl Polyline {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusLeft<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -25532,7 +25532,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusRight(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25544,7 +25544,7 @@ impl Polyline {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusRight<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -25558,7 +25558,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusUp(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25570,7 +25570,7 @@ impl Polyline {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusUp<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -25584,7 +25584,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusDown(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25596,7 +25596,7 @@ impl Polyline {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusDown<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -25610,7 +25610,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25622,7 +25622,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTabStop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25633,7 +25633,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25645,7 +25645,7 @@ impl Polyline {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTabIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -25656,7 +25656,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyUp<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -25673,7 +25673,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -25690,7 +25690,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyDown<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -25707,7 +25707,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -25724,7 +25724,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GotFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -25740,7 +25740,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -25757,7 +25757,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LostFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -25773,7 +25773,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -25790,7 +25790,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -25815,7 +25815,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -25832,7 +25832,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -25857,7 +25857,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -25874,7 +25874,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CharacterReceived<
         'a,
@@ -25900,7 +25900,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveCharacterReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -25917,7 +25917,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragEnter<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -25933,7 +25933,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragEnter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -25950,7 +25950,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragLeave<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -25966,7 +25966,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragLeave<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -25983,7 +25983,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragOver<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -25999,7 +25999,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragOver<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26016,7 +26016,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Drop<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -26032,7 +26032,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDrop<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26049,7 +26049,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerPressed<
         'a,
@@ -26069,7 +26069,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26086,7 +26086,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerMoved<
         'a,
@@ -26106,7 +26106,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26123,7 +26123,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerReleased<
         'a,
@@ -26143,7 +26143,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26160,7 +26160,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerEntered<
         'a,
@@ -26180,7 +26180,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26197,7 +26197,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerExited<
         'a,
@@ -26217,7 +26217,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26234,7 +26234,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptureLost<
         'a,
@@ -26254,7 +26254,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26271,7 +26271,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCanceled<
         'a,
@@ -26291,7 +26291,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26308,7 +26308,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerWheelChanged<
         'a,
@@ -26328,7 +26328,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26345,7 +26345,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Tapped<'a, Param0: ::windows::core::IntoParam<'a, super::Input::TappedEventHandler>>(
         &self,
@@ -26362,7 +26362,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26379,7 +26379,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn DoubleTapped<
         'a,
@@ -26399,7 +26399,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDoubleTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26416,7 +26416,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Holding<
         'a,
@@ -26436,7 +26436,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHolding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26453,7 +26453,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ContextRequested<
         'a,
@@ -26479,7 +26479,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26496,7 +26496,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -26518,7 +26518,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26535,7 +26535,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn RightTapped<
         'a,
@@ -26555,7 +26555,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveRightTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26572,7 +26572,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarting<
         'a,
@@ -26592,7 +26592,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26609,7 +26609,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationInertiaStarting<
         'a,
@@ -26629,7 +26629,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26646,7 +26646,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarted<
         'a,
@@ -26666,7 +26666,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26683,7 +26683,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationDelta<
         'a,
@@ -26703,7 +26703,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationDelta<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26720,7 +26720,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationCompleted<
         'a,
@@ -26740,7 +26740,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26757,7 +26757,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -26783,7 +26783,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26800,7 +26800,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -26826,7 +26826,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26843,7 +26843,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -26869,7 +26869,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26886,7 +26886,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ProcessKeyboardAccelerators<
         'a,
@@ -26912,7 +26912,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveProcessKeyboardAccelerators<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26929,7 +26929,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn GettingFocus<
         'a,
@@ -26955,7 +26955,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGettingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -26972,7 +26972,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn LosingFocus<
         'a,
@@ -26998,7 +26998,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLosingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -27015,7 +27015,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn NoFocusCandidateFound<
         'a,
@@ -27041,7 +27041,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveNoFocusCandidateFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -27058,7 +27058,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyDown<
         'a,
@@ -27078,7 +27078,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -27095,7 +27095,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyUp<
         'a,
@@ -27115,7 +27115,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -27132,7 +27132,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -27157,7 +27157,7 @@ impl Polyline {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveBringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -27174,7 +27174,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Measure<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         &self,
         availablesize: Param0,
@@ -27188,7 +27188,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Arrange<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         finalrect: Param0,
@@ -27202,7 +27202,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CapturePointer<'a, Param0: ::windows::core::IntoParam<'a, super::Input::Pointer>>(
         &self,
@@ -27219,7 +27219,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ReleasePointerCapture<
         'a,
@@ -27237,7 +27237,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReleasePointerCaptures(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -27247,7 +27247,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AddHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -27269,7 +27269,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -27289,7 +27289,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn TransformToVisual<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
@@ -27306,7 +27306,7 @@ impl Polyline {
             .from_abi::<super::Media::GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateMeasure(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -27316,7 +27316,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateArrange(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -27326,7 +27326,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -27336,7 +27336,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -27348,7 +27348,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn StartDragAsync<
         'a,
@@ -27374,7 +27374,7 @@ impl Polyline {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoView(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -27384,7 +27384,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoViewWithOptions<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::BringIntoViewOptions>,
@@ -27401,7 +27401,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TryInvokeKeyboardAccelerator<
         'a,
@@ -27419,7 +27419,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Focus(&self, value: super::FocusState) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -27432,7 +27432,7 @@ impl Polyline {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StartAnimation<
         'a,
@@ -27450,7 +27450,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StopAnimation<
         'a,
@@ -27468,7 +27468,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<super::IUIElementProtected>(self)?;
@@ -27481,7 +27481,7 @@ impl Polyline {
             .from_abi::<super::super::Input::InputCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn SetProtectedCursor<
         'a,
@@ -27499,7 +27499,7 @@ impl Polyline {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::super::Composition::Visual> {
         let this =
@@ -27760,12 +27760,12 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Polyline {
 }
 unsafe impl ::core::marker::Send for Polyline {}
 unsafe impl ::core::marker::Sync for Polyline {}
-#[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+#[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
 #[repr(transparent)]
 pub struct Rectangle(::windows::core::IUnknown);
 impl Rectangle {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -27779,7 +27779,7 @@ impl Rectangle {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -27801,7 +27801,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27817,7 +27817,7 @@ impl Rectangle {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -27837,7 +27837,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27851,7 +27851,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -27867,7 +27867,7 @@ impl Rectangle {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -27886,7 +27886,7 @@ impl Rectangle {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -27908,7 +27908,7 @@ impl Rectangle {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -27927,7 +27927,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -27939,7 +27939,7 @@ impl Rectangle {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -27954,7 +27954,7 @@ impl Rectangle {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Triggers(&self) -> ::windows::core::Result<super::TriggerCollection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -27966,7 +27966,7 @@ impl Rectangle {
             .from_abi::<super::TriggerCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Resources(&self) -> ::windows::core::Result<super::ResourceDictionary> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -27978,7 +27978,7 @@ impl Rectangle {
             .from_abi::<super::ResourceDictionary>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetResources<'a, Param0: ::windows::core::IntoParam<'a, super::ResourceDictionary>>(
         &self,
         value: Param0,
@@ -27992,7 +27992,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Tag(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28004,7 +28004,7 @@ impl Rectangle {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTag<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -28018,7 +28018,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28031,7 +28031,7 @@ impl Rectangle {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -28045,7 +28045,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28057,7 +28057,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28069,7 +28069,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Width(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28081,7 +28081,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28092,7 +28092,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Height(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28104,7 +28104,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28115,7 +28115,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28127,7 +28127,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28138,7 +28138,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28150,7 +28150,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28161,7 +28161,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28173,7 +28173,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28184,7 +28184,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28196,7 +28196,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28207,7 +28207,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HorizontalAlignment(&self) -> ::windows::core::Result<super::HorizontalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28219,7 +28219,7 @@ impl Rectangle {
             .from_abi::<super::HorizontalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHorizontalAlignment(
         &self,
         value: super::HorizontalAlignment,
@@ -28233,7 +28233,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn VerticalAlignment(&self) -> ::windows::core::Result<super::VerticalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28245,7 +28245,7 @@ impl Rectangle {
             .from_abi::<super::VerticalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVerticalAlignment(
         &self,
         value: super::VerticalAlignment,
@@ -28259,7 +28259,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Margin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28271,7 +28271,7 @@ impl Rectangle {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -28285,7 +28285,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28298,7 +28298,7 @@ impl Rectangle {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -28312,7 +28312,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BaseUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28324,7 +28324,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContext(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28336,7 +28336,7 @@ impl Rectangle {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetDataContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -28353,7 +28353,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28365,7 +28365,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28376,7 +28376,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualMargin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28388,7 +28388,7 @@ impl Rectangle {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -28402,7 +28402,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualSecondaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28414,7 +28414,7 @@ impl Rectangle {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualSecondaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -28431,7 +28431,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualPrimaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28443,7 +28443,7 @@ impl Rectangle {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualPrimaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -28460,7 +28460,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualSecondaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -28473,7 +28473,7 @@ impl Rectangle {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualSecondaryBrush<
         'a,
@@ -28491,7 +28491,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualPrimaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -28504,7 +28504,7 @@ impl Rectangle {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualPrimaryBrush<
         'a,
@@ -28522,7 +28522,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusWhenDisabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28534,7 +28534,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusWhenDisabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28545,7 +28545,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Style(&self) -> ::windows::core::Result<super::Style> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28557,7 +28557,7 @@ impl Rectangle {
             .from_abi::<super::Style>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStyle<'a, Param0: ::windows::core::IntoParam<'a, super::Style>>(
         &self,
         value: Param0,
@@ -28571,7 +28571,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28583,7 +28583,7 @@ impl Rectangle {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FlowDirection(&self) -> ::windows::core::Result<super::FlowDirection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28595,7 +28595,7 @@ impl Rectangle {
             .from_abi::<super::FlowDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFlowDirection(&self, value: super::FlowDirection) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28606,7 +28606,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RequestedTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28618,7 +28618,7 @@ impl Rectangle {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRequestedTheme(&self, value: super::ElementTheme) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28629,7 +28629,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsLoaded(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28641,7 +28641,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -28653,7 +28653,7 @@ impl Rectangle {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -28669,7 +28669,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -28686,7 +28686,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Unloaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -28702,7 +28702,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveUnloaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -28719,7 +28719,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -28744,7 +28744,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -28761,7 +28761,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::SizeChangedEventHandler>,
@@ -28780,7 +28780,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveSizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -28797,7 +28797,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -28819,7 +28819,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -28836,7 +28836,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loading<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -28861,7 +28861,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoading<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -28878,7 +28878,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -28903,7 +28903,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -28920,7 +28920,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn EffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -28945,7 +28945,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveEffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -28962,7 +28962,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -28978,7 +28978,7 @@ impl Rectangle {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn SetBinding<
         'a,
@@ -28999,7 +28999,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn GetBindingExpression<
         'a,
@@ -29019,7 +29019,7 @@ impl Rectangle {
             .from_abi::<super::Data::BindingExpression>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateViewport(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElementProtected>(self)?;
         unsafe {
@@ -29029,7 +29029,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RadiusX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -29041,7 +29041,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRadiusX(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -29052,7 +29052,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RadiusY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -29064,7 +29064,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRadiusY(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -29075,7 +29075,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RadiusXProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRectangleStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -29086,7 +29086,7 @@ impl Rectangle {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RadiusYProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IRectangleStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -29097,7 +29097,7 @@ impl Rectangle {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Fill(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -29110,7 +29110,7 @@ impl Rectangle {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFill<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -29125,7 +29125,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stroke(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -29138,7 +29138,7 @@ impl Rectangle {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStroke<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -29153,7 +29153,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeMiterLimit(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -29165,7 +29165,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeMiterLimit(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -29176,7 +29176,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeThickness(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -29188,7 +29188,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeThickness(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -29199,7 +29199,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeStartLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -29212,7 +29212,7 @@ impl Rectangle {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeStartLineCap(
         &self,
@@ -29227,7 +29227,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeEndLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -29240,7 +29240,7 @@ impl Rectangle {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeEndLineCap(
         &self,
@@ -29255,7 +29255,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeLineJoin(&self) -> ::windows::core::Result<super::Media::PenLineJoin> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -29268,7 +29268,7 @@ impl Rectangle {
             .from_abi::<super::Media::PenLineJoin>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeLineJoin(
         &self,
@@ -29283,7 +29283,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeDashOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -29295,7 +29295,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeDashOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
         unsafe {
@@ -29306,7 +29306,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -29319,7 +29319,7 @@ impl Rectangle {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashCap(&self, value: super::Media::PenLineCap) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -29331,7 +29331,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashArray(&self) -> ::windows::core::Result<super::Media::DoubleCollection> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -29344,7 +29344,7 @@ impl Rectangle {
             .from_abi::<super::Media::DoubleCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashArray<
         'a,
@@ -29362,7 +29362,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stretch(&self) -> ::windows::core::Result<super::Media::Stretch> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -29375,7 +29375,7 @@ impl Rectangle {
             .from_abi::<super::Media::Stretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStretch(&self, value: super::Media::Stretch) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -29387,7 +29387,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn GeometryTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<IShape>(self)?;
@@ -29400,7 +29400,7 @@ impl Rectangle {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetAlphaMask(
         &self,
@@ -29415,7 +29415,7 @@ impl Rectangle {
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29427,7 +29427,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29439,7 +29439,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowDrop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29450,7 +29450,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29462,7 +29462,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29473,7 +29473,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Clip(&self) -> ::windows::core::Result<super::Media::RectangleGeometry> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -29486,7 +29486,7 @@ impl Rectangle {
             .from_abi::<super::Media::RectangleGeometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetClip<'a, Param0: ::windows::core::IntoParam<'a, super::Media::RectangleGeometry>>(
         &self,
@@ -29501,7 +29501,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn RenderTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -29514,7 +29514,7 @@ impl Rectangle {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetRenderTransform<
         'a,
@@ -29532,7 +29532,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Projection(&self) -> ::windows::core::Result<super::Media::Projection> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -29545,7 +29545,7 @@ impl Rectangle {
             .from_abi::<super::Media::Projection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetProjection<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Projection>>(
         &self,
@@ -29560,7 +29560,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn Transform3D(&self) -> ::windows::core::Result<super::Media::Media3D::Transform3D> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -29573,7 +29573,7 @@ impl Rectangle {
             .from_abi::<super::Media::Media3D::Transform3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn SetTransform3D<
         'a,
@@ -29591,7 +29591,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29603,7 +29603,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRenderTransformOrigin<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -29620,7 +29620,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29632,7 +29632,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHitTestVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29643,7 +29643,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Visibility(&self) -> ::windows::core::Result<super::Visibility> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29655,7 +29655,7 @@ impl Rectangle {
             .from_abi::<super::Visibility>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVisibility(&self, value: super::Visibility) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29666,7 +29666,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29678,7 +29678,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29690,7 +29690,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseLayoutRounding(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29701,7 +29701,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Transitions(
         &self,
@@ -29716,7 +29716,7 @@ impl Rectangle {
             .from_abi::<super::Media::Animation::TransitionCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetTransitions<
         'a,
@@ -29734,7 +29734,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CacheMode(&self) -> ::windows::core::Result<super::Media::CacheMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -29747,7 +29747,7 @@ impl Rectangle {
             .from_abi::<super::Media::CacheMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCacheMode<'a, Param0: ::windows::core::IntoParam<'a, super::Media::CacheMode>>(
         &self,
@@ -29762,7 +29762,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29774,7 +29774,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29785,7 +29785,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29797,7 +29797,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsDoubleTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29808,7 +29808,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29820,7 +29820,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanDrag(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29831,7 +29831,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29843,7 +29843,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsRightTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29854,7 +29854,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29866,7 +29866,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHoldingEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -29877,7 +29877,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationMode(&self) -> ::windows::core::Result<super::Input::ManipulationModes> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -29890,7 +29890,7 @@ impl Rectangle {
             .from_abi::<super::Input::ManipulationModes>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetManipulationMode(
         &self,
@@ -29905,7 +29905,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptures(
         &self,
@@ -29924,7 +29924,7 @@ impl Rectangle {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn ContextFlyout(
         &self,
@@ -29939,7 +29939,7 @@ impl Rectangle {
             .from_abi::<super::Controls::Primitives::FlyoutBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn SetContextFlyout<
         'a,
@@ -29957,7 +29957,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CompositeMode(&self) -> ::windows::core::Result<super::Media::ElementCompositeMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -29970,7 +29970,7 @@ impl Rectangle {
             .from_abi::<super::Media::ElementCompositeMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCompositeMode(
         &self,
@@ -29985,7 +29985,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Lights(
         &self,
@@ -30003,7 +30003,7 @@ impl Rectangle {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30015,7 +30015,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanBeScrollAnchor(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30026,7 +30026,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30038,7 +30038,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30049,7 +30049,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30061,7 +30061,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30072,7 +30072,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30084,7 +30084,7 @@ impl Rectangle {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -30101,7 +30101,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30114,7 +30114,7 @@ impl Rectangle {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -30128,7 +30128,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -30143,7 +30143,7 @@ impl Rectangle {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -30158,7 +30158,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30170,7 +30170,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30181,7 +30181,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30193,7 +30193,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30204,7 +30204,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30216,7 +30216,7 @@ impl Rectangle {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipTarget<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -30230,7 +30230,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusKeyboardNavigation(
         &self,
@@ -30245,7 +30245,7 @@ impl Rectangle {
             .from_abi::<super::Input::XYFocusKeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusKeyboardNavigation(
         &self,
@@ -30260,7 +30260,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusUpNavigationStrategy(
         &self,
@@ -30275,7 +30275,7 @@ impl Rectangle {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusUpNavigationStrategy(
         &self,
@@ -30290,7 +30290,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusDownNavigationStrategy(
         &self,
@@ -30305,7 +30305,7 @@ impl Rectangle {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusDownNavigationStrategy(
         &self,
@@ -30320,7 +30320,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusLeftNavigationStrategy(
         &self,
@@ -30335,7 +30335,7 @@ impl Rectangle {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusLeftNavigationStrategy(
         &self,
@@ -30350,7 +30350,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusRightNavigationStrategy(
         &self,
@@ -30365,7 +30365,7 @@ impl Rectangle {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusRightNavigationStrategy(
         &self,
@@ -30380,7 +30380,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAccelerators(
         &self,
@@ -30399,7 +30399,7 @@ impl Rectangle {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyboardAcceleratorPlacementTarget(
         &self,
     ) -> ::windows::core::Result<super::DependencyObject> {
@@ -30413,7 +30413,7 @@ impl Rectangle {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyboardAcceleratorPlacementTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -30430,7 +30430,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAcceleratorPlacementMode(
         &self,
@@ -30446,7 +30446,7 @@ impl Rectangle {
             .from_abi::<super::Input::KeyboardAcceleratorPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyboardAcceleratorPlacementMode(
         &self,
@@ -30461,7 +30461,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HighContrastAdjustment(
         &self,
     ) -> ::windows::core::Result<super::ElementHighContrastAdjustment> {
@@ -30475,7 +30475,7 @@ impl Rectangle {
             .from_abi::<super::ElementHighContrastAdjustment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHighContrastAdjustment(
         &self,
         value: super::ElementHighContrastAdjustment,
@@ -30489,7 +30489,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TabFocusNavigation(
         &self,
@@ -30504,7 +30504,7 @@ impl Rectangle {
             .from_abi::<super::Input::KeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetTabFocusNavigation(
         &self,
@@ -30519,7 +30519,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn OpacityTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30531,7 +30531,7 @@ impl Rectangle {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacityTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -30548,7 +30548,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30560,7 +30560,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -30577,7 +30577,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TranslationTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30589,7 +30589,7 @@ impl Rectangle {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -30606,7 +30606,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30618,7 +30618,7 @@ impl Rectangle {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotation(&self, value: f32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30629,7 +30629,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30641,7 +30641,7 @@ impl Rectangle {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -30658,7 +30658,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30670,7 +30670,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScale<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -30687,7 +30687,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ScaleTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30699,7 +30699,7 @@ impl Rectangle {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScaleTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -30716,7 +30716,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TransformMatrix(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
@@ -30730,7 +30730,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTransformMatrix<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Matrix4x4>,
@@ -30747,7 +30747,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30759,7 +30759,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCenterPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -30776,7 +30776,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationAxis(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -30790,7 +30790,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationAxis<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -30807,7 +30807,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualOffset(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -30821,7 +30821,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30833,7 +30833,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30845,7 +30845,7 @@ impl Rectangle {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -30859,7 +30859,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Shadow(&self) -> ::windows::core::Result<super::Media::Shadow> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -30872,7 +30872,7 @@ impl Rectangle {
             .from_abi::<super::Media::Shadow>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetShadow<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Shadow>>(
         &self,
@@ -30887,7 +30887,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30899,7 +30899,7 @@ impl Rectangle {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30910,7 +30910,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusState(&self) -> ::windows::core::Result<super::FocusState> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30922,7 +30922,7 @@ impl Rectangle {
             .from_abi::<super::FocusState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30934,7 +30934,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseSystemFocusVisuals(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30945,7 +30945,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30957,7 +30957,7 @@ impl Rectangle {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusLeft<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -30971,7 +30971,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusRight(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -30983,7 +30983,7 @@ impl Rectangle {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusRight<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -30997,7 +30997,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusUp(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -31009,7 +31009,7 @@ impl Rectangle {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusUp<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -31023,7 +31023,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusDown(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -31035,7 +31035,7 @@ impl Rectangle {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusDown<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -31049,7 +31049,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -31061,7 +31061,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTabStop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -31072,7 +31072,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -31084,7 +31084,7 @@ impl Rectangle {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTabIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -31095,7 +31095,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyUp<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -31112,7 +31112,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31129,7 +31129,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyDown<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -31146,7 +31146,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31163,7 +31163,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GotFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -31179,7 +31179,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31196,7 +31196,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LostFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -31212,7 +31212,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31229,7 +31229,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -31254,7 +31254,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31271,7 +31271,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -31296,7 +31296,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31313,7 +31313,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CharacterReceived<
         'a,
@@ -31339,7 +31339,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveCharacterReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31356,7 +31356,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragEnter<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -31372,7 +31372,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragEnter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31389,7 +31389,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragLeave<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -31405,7 +31405,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragLeave<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31422,7 +31422,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragOver<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -31438,7 +31438,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragOver<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31455,7 +31455,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Drop<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -31471,7 +31471,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDrop<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31488,7 +31488,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerPressed<
         'a,
@@ -31508,7 +31508,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31525,7 +31525,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerMoved<
         'a,
@@ -31545,7 +31545,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31562,7 +31562,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerReleased<
         'a,
@@ -31582,7 +31582,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31599,7 +31599,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerEntered<
         'a,
@@ -31619,7 +31619,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31636,7 +31636,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerExited<
         'a,
@@ -31656,7 +31656,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31673,7 +31673,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptureLost<
         'a,
@@ -31693,7 +31693,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31710,7 +31710,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCanceled<
         'a,
@@ -31730,7 +31730,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31747,7 +31747,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerWheelChanged<
         'a,
@@ -31767,7 +31767,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31784,7 +31784,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Tapped<'a, Param0: ::windows::core::IntoParam<'a, super::Input::TappedEventHandler>>(
         &self,
@@ -31801,7 +31801,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31818,7 +31818,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn DoubleTapped<
         'a,
@@ -31838,7 +31838,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDoubleTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31855,7 +31855,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Holding<
         'a,
@@ -31875,7 +31875,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHolding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31892,7 +31892,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ContextRequested<
         'a,
@@ -31918,7 +31918,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31935,7 +31935,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -31957,7 +31957,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -31974,7 +31974,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn RightTapped<
         'a,
@@ -31994,7 +31994,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveRightTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32011,7 +32011,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarting<
         'a,
@@ -32031,7 +32031,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32048,7 +32048,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationInertiaStarting<
         'a,
@@ -32068,7 +32068,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32085,7 +32085,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarted<
         'a,
@@ -32105,7 +32105,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32122,7 +32122,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationDelta<
         'a,
@@ -32142,7 +32142,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationDelta<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32159,7 +32159,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationCompleted<
         'a,
@@ -32179,7 +32179,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32196,7 +32196,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -32222,7 +32222,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32239,7 +32239,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -32265,7 +32265,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32282,7 +32282,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -32308,7 +32308,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32325,7 +32325,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ProcessKeyboardAccelerators<
         'a,
@@ -32351,7 +32351,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveProcessKeyboardAccelerators<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32368,7 +32368,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn GettingFocus<
         'a,
@@ -32394,7 +32394,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGettingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32411,7 +32411,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn LosingFocus<
         'a,
@@ -32437,7 +32437,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLosingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32454,7 +32454,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn NoFocusCandidateFound<
         'a,
@@ -32480,7 +32480,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveNoFocusCandidateFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32497,7 +32497,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyDown<
         'a,
@@ -32517,7 +32517,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32534,7 +32534,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyUp<
         'a,
@@ -32554,7 +32554,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32571,7 +32571,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -32596,7 +32596,7 @@ impl Rectangle {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveBringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -32613,7 +32613,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Measure<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         &self,
         availablesize: Param0,
@@ -32627,7 +32627,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Arrange<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         finalrect: Param0,
@@ -32641,7 +32641,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CapturePointer<'a, Param0: ::windows::core::IntoParam<'a, super::Input::Pointer>>(
         &self,
@@ -32658,7 +32658,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ReleasePointerCapture<
         'a,
@@ -32676,7 +32676,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReleasePointerCaptures(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -32686,7 +32686,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AddHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -32708,7 +32708,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -32728,7 +32728,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn TransformToVisual<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
@@ -32745,7 +32745,7 @@ impl Rectangle {
             .from_abi::<super::Media::GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateMeasure(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -32755,7 +32755,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateArrange(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -32765,7 +32765,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -32775,7 +32775,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -32787,7 +32787,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn StartDragAsync<
         'a,
@@ -32813,7 +32813,7 @@ impl Rectangle {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoView(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -32823,7 +32823,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoViewWithOptions<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::BringIntoViewOptions>,
@@ -32840,7 +32840,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TryInvokeKeyboardAccelerator<
         'a,
@@ -32858,7 +32858,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Focus(&self, value: super::FocusState) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -32871,7 +32871,7 @@ impl Rectangle {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StartAnimation<
         'a,
@@ -32889,7 +32889,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StopAnimation<
         'a,
@@ -32907,7 +32907,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<super::IUIElementProtected>(self)?;
@@ -32920,7 +32920,7 @@ impl Rectangle {
             .from_abi::<super::super::Input::InputCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn SetProtectedCursor<
         'a,
@@ -32938,7 +32938,7 @@ impl Rectangle {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::super::Composition::Visual> {
         let this =
@@ -33201,11 +33201,11 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Rectangle 
 }
 unsafe impl ::core::marker::Send for Rectangle {}
 unsafe impl ::core::marker::Sync for Rectangle {}
-#[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+#[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
 #[repr(transparent)]
 pub struct Shape(::windows::core::IUnknown);
 impl Shape {
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn PopulatePropertyInfo<
         'a,
@@ -33227,7 +33227,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -33243,7 +33243,7 @@ impl Shape {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -33263,7 +33263,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -33277,7 +33277,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -33293,7 +33293,7 @@ impl Shape {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -33312,7 +33312,7 @@ impl Shape {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -33334,7 +33334,7 @@ impl Shape {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -33353,7 +33353,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -33365,7 +33365,7 @@ impl Shape {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -33380,7 +33380,7 @@ impl Shape {
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Triggers(&self) -> ::windows::core::Result<super::TriggerCollection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33392,7 +33392,7 @@ impl Shape {
             .from_abi::<super::TriggerCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Resources(&self) -> ::windows::core::Result<super::ResourceDictionary> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33404,7 +33404,7 @@ impl Shape {
             .from_abi::<super::ResourceDictionary>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetResources<'a, Param0: ::windows::core::IntoParam<'a, super::ResourceDictionary>>(
         &self,
         value: Param0,
@@ -33418,7 +33418,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Tag(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33430,7 +33430,7 @@ impl Shape {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTag<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>>(
         &self,
         value: Param0,
@@ -33444,7 +33444,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33457,7 +33457,7 @@ impl Shape {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetLanguage<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -33471,7 +33471,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33483,7 +33483,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33495,7 +33495,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Width(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33507,7 +33507,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33518,7 +33518,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Height(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33530,7 +33530,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33541,7 +33541,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33553,7 +33553,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33564,7 +33564,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxWidth(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33576,7 +33576,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxWidth(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33587,7 +33587,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MinHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33599,7 +33599,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMinHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33610,7 +33610,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn MaxHeight(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33622,7 +33622,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMaxHeight(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33633,7 +33633,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HorizontalAlignment(&self) -> ::windows::core::Result<super::HorizontalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33645,7 +33645,7 @@ impl Shape {
             .from_abi::<super::HorizontalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHorizontalAlignment(
         &self,
         value: super::HorizontalAlignment,
@@ -33659,7 +33659,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn VerticalAlignment(&self) -> ::windows::core::Result<super::VerticalAlignment> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33671,7 +33671,7 @@ impl Shape {
             .from_abi::<super::VerticalAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVerticalAlignment(
         &self,
         value: super::VerticalAlignment,
@@ -33685,7 +33685,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Margin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33697,7 +33697,7 @@ impl Shape {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -33711,7 +33711,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33724,7 +33724,7 @@ impl Shape {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -33738,7 +33738,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BaseUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33750,7 +33750,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContext(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33762,7 +33762,7 @@ impl Shape {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetDataContext<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
@@ -33779,7 +33779,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33791,7 +33791,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusOnInteraction(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33802,7 +33802,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualMargin(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33814,7 +33814,7 @@ impl Shape {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualMargin<'a, Param0: ::windows::core::IntoParam<'a, super::Thickness>>(
         &self,
         value: Param0,
@@ -33828,7 +33828,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualSecondaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33840,7 +33840,7 @@ impl Shape {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualSecondaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -33857,7 +33857,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusVisualPrimaryThickness(&self) -> ::windows::core::Result<super::Thickness> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33869,7 +33869,7 @@ impl Shape {
             .from_abi::<super::Thickness>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFocusVisualPrimaryThickness<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Thickness>,
@@ -33886,7 +33886,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualSecondaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -33899,7 +33899,7 @@ impl Shape {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualSecondaryBrush<
         'a,
@@ -33917,7 +33917,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn FocusVisualPrimaryBrush(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
@@ -33930,7 +33930,7 @@ impl Shape {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFocusVisualPrimaryBrush<
         'a,
@@ -33948,7 +33948,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowFocusWhenDisabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33960,7 +33960,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowFocusWhenDisabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33971,7 +33971,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Style(&self) -> ::windows::core::Result<super::Style> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -33983,7 +33983,7 @@ impl Shape {
             .from_abi::<super::Style>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStyle<'a, Param0: ::windows::core::IntoParam<'a, super::Style>>(
         &self,
         value: Param0,
@@ -33997,7 +33997,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Parent(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -34009,7 +34009,7 @@ impl Shape {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FlowDirection(&self) -> ::windows::core::Result<super::FlowDirection> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -34021,7 +34021,7 @@ impl Shape {
             .from_abi::<super::FlowDirection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetFlowDirection(&self, value: super::FlowDirection) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -34032,7 +34032,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RequestedTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -34044,7 +34044,7 @@ impl Shape {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRequestedTheme(&self, value: super::ElementTheme) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -34055,7 +34055,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsLoaded(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -34067,7 +34067,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualTheme(&self) -> ::windows::core::Result<super::ElementTheme> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElement>(self)?;
         unsafe {
@@ -34079,7 +34079,7 @@ impl Shape {
             .from_abi::<super::ElementTheme>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -34095,7 +34095,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -34112,7 +34112,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Unloaded<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -34128,7 +34128,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveUnloaded<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -34145,7 +34145,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -34170,7 +34170,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDataContextChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -34187,7 +34187,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::SizeChangedEventHandler>,
@@ -34206,7 +34206,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveSizeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -34223,7 +34223,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -34245,7 +34245,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLayoutUpdated<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -34262,7 +34262,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Loading<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -34287,7 +34287,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLoading<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -34304,7 +34304,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -34329,7 +34329,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveActualThemeChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -34346,7 +34346,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn EffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -34371,7 +34371,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveEffectiveViewportChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -34388,7 +34388,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FindName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         name: Param0,
@@ -34404,7 +34404,7 @@ impl Shape {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn SetBinding<
         'a,
@@ -34425,7 +34425,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Data'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Data\"`*"]
     #[cfg(feature = "UI_Xaml_Data")]
     pub fn GetBindingExpression<
         'a,
@@ -34445,7 +34445,7 @@ impl Shape {
             .from_abi::<super::Data::BindingExpression>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateViewport(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IFrameworkElementProtected>(self)?;
         unsafe {
@@ -34455,7 +34455,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Fill(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = self;
@@ -34468,7 +34468,7 @@ impl Shape {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetFill<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -34483,7 +34483,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stroke(&self) -> ::windows::core::Result<super::Media::Brush> {
         let this = self;
@@ -34496,7 +34496,7 @@ impl Shape {
             .from_abi::<super::Media::Brush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStroke<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Brush>>(
         &self,
@@ -34511,7 +34511,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeMiterLimit(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -34523,7 +34523,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeMiterLimit(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -34534,7 +34534,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeThickness(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -34546,7 +34546,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeThickness(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -34557,7 +34557,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeStartLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = self;
@@ -34570,7 +34570,7 @@ impl Shape {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeStartLineCap(
         &self,
@@ -34585,7 +34585,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeEndLineCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = self;
@@ -34598,7 +34598,7 @@ impl Shape {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeEndLineCap(
         &self,
@@ -34613,7 +34613,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeLineJoin(&self) -> ::windows::core::Result<super::Media::PenLineJoin> {
         let this = self;
@@ -34626,7 +34626,7 @@ impl Shape {
             .from_abi::<super::Media::PenLineJoin>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeLineJoin(
         &self,
@@ -34641,7 +34641,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeDashOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
@@ -34653,7 +34653,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetStrokeDashOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -34664,7 +34664,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashCap(&self) -> ::windows::core::Result<super::Media::PenLineCap> {
         let this = self;
@@ -34677,7 +34677,7 @@ impl Shape {
             .from_abi::<super::Media::PenLineCap>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashCap(&self, value: super::Media::PenLineCap) -> ::windows::core::Result<()> {
         let this = self;
@@ -34689,7 +34689,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn StrokeDashArray(&self) -> ::windows::core::Result<super::Media::DoubleCollection> {
         let this = self;
@@ -34702,7 +34702,7 @@ impl Shape {
             .from_abi::<super::Media::DoubleCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStrokeDashArray<
         'a,
@@ -34720,7 +34720,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Stretch(&self) -> ::windows::core::Result<super::Media::Stretch> {
         let this = self;
@@ -34733,7 +34733,7 @@ impl Shape {
             .from_abi::<super::Media::Stretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetStretch(&self, value: super::Media::Stretch) -> ::windows::core::Result<()> {
         let this = self;
@@ -34745,7 +34745,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn GeometryTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = self;
@@ -34758,7 +34758,7 @@ impl Shape {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetAlphaMask(
         &self,
@@ -34773,7 +34773,7 @@ impl Shape {
             .from_abi::<super::super::Composition::CompositionBrush>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FillProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IShapeStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34784,7 +34784,7 @@ impl Shape {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IShapeStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34795,7 +34795,7 @@ impl Shape {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeMiterLimitProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IShapeStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34806,7 +34806,7 @@ impl Shape {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeThicknessProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IShapeStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34817,7 +34817,7 @@ impl Shape {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeStartLineCapProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IShapeStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34828,7 +34828,7 @@ impl Shape {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeEndLineCapProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IShapeStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34839,7 +34839,7 @@ impl Shape {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeLineJoinProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IShapeStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34850,7 +34850,7 @@ impl Shape {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeDashOffsetProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IShapeStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34861,7 +34861,7 @@ impl Shape {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeDashCapProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IShapeStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34872,7 +34872,7 @@ impl Shape {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StrokeDashArrayProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IShapeStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34883,7 +34883,7 @@ impl Shape {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StretchProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IShapeStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -34894,7 +34894,7 @@ impl Shape {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -34906,7 +34906,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -34918,7 +34918,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAllowDrop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -34929,7 +34929,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -34941,7 +34941,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacity(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -34952,7 +34952,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Clip(&self) -> ::windows::core::Result<super::Media::RectangleGeometry> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -34965,7 +34965,7 @@ impl Shape {
             .from_abi::<super::Media::RectangleGeometry>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetClip<'a, Param0: ::windows::core::IntoParam<'a, super::Media::RectangleGeometry>>(
         &self,
@@ -34980,7 +34980,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn RenderTransform(&self) -> ::windows::core::Result<super::Media::Transform> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -34993,7 +34993,7 @@ impl Shape {
             .from_abi::<super::Media::Transform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetRenderTransform<
         'a,
@@ -35011,7 +35011,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Projection(&self) -> ::windows::core::Result<super::Media::Projection> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -35024,7 +35024,7 @@ impl Shape {
             .from_abi::<super::Media::Projection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetProjection<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Projection>>(
         &self,
@@ -35039,7 +35039,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn Transform3D(&self) -> ::windows::core::Result<super::Media::Media3D::Transform3D> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -35052,7 +35052,7 @@ impl Shape {
             .from_abi::<super::Media::Media3D::Transform3D>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Media3D'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Media3D\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub fn SetTransform3D<
         'a,
@@ -35070,7 +35070,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35082,7 +35082,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::Point>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRenderTransformOrigin<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -35099,7 +35099,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35111,7 +35111,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHitTestVisible(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35122,7 +35122,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Visibility(&self) -> ::windows::core::Result<super::Visibility> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35134,7 +35134,7 @@ impl Shape {
             .from_abi::<super::Visibility>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetVisibility(&self, value: super::Visibility) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35145,7 +35145,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35157,7 +35157,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::Size>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35169,7 +35169,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseLayoutRounding(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35180,7 +35180,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn Transitions(
         &self,
@@ -35195,7 +35195,7 @@ impl Shape {
             .from_abi::<super::Media::Animation::TransitionCollection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media_Animation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media_Animation\"`*"]
     #[cfg(feature = "UI_Xaml_Media_Animation")]
     pub fn SetTransitions<
         'a,
@@ -35213,7 +35213,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CacheMode(&self) -> ::windows::core::Result<super::Media::CacheMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -35226,7 +35226,7 @@ impl Shape {
             .from_abi::<super::Media::CacheMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCacheMode<'a, Param0: ::windows::core::IntoParam<'a, super::Media::CacheMode>>(
         &self,
@@ -35241,7 +35241,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35253,7 +35253,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35264,7 +35264,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35276,7 +35276,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsDoubleTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35287,7 +35287,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35299,7 +35299,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanDrag(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35310,7 +35310,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35322,7 +35322,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsRightTapEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35333,7 +35333,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35345,7 +35345,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsHoldingEnabled(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35356,7 +35356,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationMode(&self) -> ::windows::core::Result<super::Input::ManipulationModes> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -35369,7 +35369,7 @@ impl Shape {
             .from_abi::<super::Input::ManipulationModes>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetManipulationMode(
         &self,
@@ -35384,7 +35384,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptures(
         &self,
@@ -35403,7 +35403,7 @@ impl Shape {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn ContextFlyout(
         &self,
@@ -35418,7 +35418,7 @@ impl Shape {
             .from_abi::<super::Controls::Primitives::FlyoutBase>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Controls_Primitives'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Controls_Primitives\"`*"]
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub fn SetContextFlyout<
         'a,
@@ -35436,7 +35436,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn CompositeMode(&self) -> ::windows::core::Result<super::Media::ElementCompositeMode> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -35449,7 +35449,7 @@ impl Shape {
             .from_abi::<super::Media::ElementCompositeMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetCompositeMode(
         &self,
@@ -35464,7 +35464,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Lights(
         &self,
@@ -35482,7 +35482,7 @@ impl Shape {
             )
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35494,7 +35494,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCanBeScrollAnchor(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35505,7 +35505,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35517,7 +35517,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetExitDisplayModeOnAccessKeyInvoked(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35528,7 +35528,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35540,7 +35540,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsAccessKeyScope(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35551,7 +35551,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35563,7 +35563,7 @@ impl Shape {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKeyScopeOwner<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -35580,7 +35580,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35593,7 +35593,7 @@ impl Shape {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -35607,7 +35607,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyTipPlacementMode(
         &self,
@@ -35622,7 +35622,7 @@ impl Shape {
             .from_abi::<super::Input::KeyTipPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyTipPlacementMode(
         &self,
@@ -35637,7 +35637,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35649,7 +35649,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipHorizontalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35660,7 +35660,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35672,7 +35672,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipVerticalOffset(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35683,7 +35683,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -35695,7 +35695,7 @@ impl Shape {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyTipTarget<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -35709,7 +35709,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusKeyboardNavigation(
         &self,
@@ -35724,7 +35724,7 @@ impl Shape {
             .from_abi::<super::Input::XYFocusKeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusKeyboardNavigation(
         &self,
@@ -35739,7 +35739,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusUpNavigationStrategy(
         &self,
@@ -35754,7 +35754,7 @@ impl Shape {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusUpNavigationStrategy(
         &self,
@@ -35769,7 +35769,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusDownNavigationStrategy(
         &self,
@@ -35784,7 +35784,7 @@ impl Shape {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusDownNavigationStrategy(
         &self,
@@ -35799,7 +35799,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusLeftNavigationStrategy(
         &self,
@@ -35814,7 +35814,7 @@ impl Shape {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusLeftNavigationStrategy(
         &self,
@@ -35829,7 +35829,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn XYFocusRightNavigationStrategy(
         &self,
@@ -35844,7 +35844,7 @@ impl Shape {
             .from_abi::<super::Input::XYFocusNavigationStrategy>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetXYFocusRightNavigationStrategy(
         &self,
@@ -35859,7 +35859,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAccelerators(
         &self,
@@ -35878,7 +35878,7 @@ impl Shape {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn KeyboardAcceleratorPlacementTarget(
         &self,
     ) -> ::windows::core::Result<super::DependencyObject> {
@@ -35892,7 +35892,7 @@ impl Shape {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetKeyboardAcceleratorPlacementTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -35909,7 +35909,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyboardAcceleratorPlacementMode(
         &self,
@@ -35925,7 +35925,7 @@ impl Shape {
             .from_abi::<super::Input::KeyboardAcceleratorPlacementMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetKeyboardAcceleratorPlacementMode(
         &self,
@@ -35940,7 +35940,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn HighContrastAdjustment(
         &self,
     ) -> ::windows::core::Result<super::ElementHighContrastAdjustment> {
@@ -35954,7 +35954,7 @@ impl Shape {
             .from_abi::<super::ElementHighContrastAdjustment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetHighContrastAdjustment(
         &self,
         value: super::ElementHighContrastAdjustment,
@@ -35968,7 +35968,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TabFocusNavigation(
         &self,
@@ -35983,7 +35983,7 @@ impl Shape {
             .from_abi::<super::Input::KeyboardNavigationMode>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn SetTabFocusNavigation(
         &self,
@@ -35998,7 +35998,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn OpacityTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36010,7 +36010,7 @@ impl Shape {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetOpacityTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -36027,7 +36027,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36039,7 +36039,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslation<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -36056,7 +36056,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TranslationTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36068,7 +36068,7 @@ impl Shape {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTranslationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -36085,7 +36085,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36097,7 +36097,7 @@ impl Shape {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotation(&self, value: f32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36108,7 +36108,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationTransition(&self) -> ::windows::core::Result<super::ScalarTransition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36120,7 +36120,7 @@ impl Shape {
             .from_abi::<super::ScalarTransition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::ScalarTransition>,
@@ -36137,7 +36137,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36149,7 +36149,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScale<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -36166,7 +36166,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ScaleTransition(&self) -> ::windows::core::Result<super::Vector3Transition> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36178,7 +36178,7 @@ impl Shape {
             .from_abi::<super::Vector3Transition>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetScaleTransition<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::Vector3Transition>,
@@ -36195,7 +36195,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TransformMatrix(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
@@ -36209,7 +36209,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTransformMatrix<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Matrix4x4>,
@@ -36226,7 +36226,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36238,7 +36238,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetCenterPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -36255,7 +36255,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RotationAxis(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -36269,7 +36269,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRotationAxis<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Numerics::Vector3>,
@@ -36286,7 +36286,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualOffset(
         &self,
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
@@ -36300,7 +36300,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36312,7 +36312,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XamlRoot(&self) -> ::windows::core::Result<super::XamlRoot> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36324,7 +36324,7 @@ impl Shape {
             .from_abi::<super::XamlRoot>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXamlRoot<'a, Param0: ::windows::core::IntoParam<'a, super::XamlRoot>>(
         &self,
         value: Param0,
@@ -36338,7 +36338,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn Shadow(&self) -> ::windows::core::Result<super::Media::Shadow> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
@@ -36351,7 +36351,7 @@ impl Shape {
             .from_abi::<super::Media::Shadow>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn SetShadow<'a, Param0: ::windows::core::IntoParam<'a, super::Media::Shadow>>(
         &self,
@@ -36366,7 +36366,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36378,7 +36378,7 @@ impl Shape {
             .from_abi::<f64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetRasterizationScale(&self, value: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36389,7 +36389,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn FocusState(&self) -> ::windows::core::Result<super::FocusState> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36401,7 +36401,7 @@ impl Shape {
             .from_abi::<super::FocusState>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36413,7 +36413,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetUseSystemFocusVisuals(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36424,7 +36424,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36436,7 +36436,7 @@ impl Shape {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusLeft<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -36450,7 +36450,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusRight(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36462,7 +36462,7 @@ impl Shape {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusRight<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -36476,7 +36476,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusUp(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36488,7 +36488,7 @@ impl Shape {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusUp<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -36502,7 +36502,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn XYFocusDown(&self) -> ::windows::core::Result<super::DependencyObject> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36514,7 +36514,7 @@ impl Shape {
             .from_abi::<super::DependencyObject>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetXYFocusDown<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         &self,
         value: Param0,
@@ -36528,7 +36528,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36540,7 +36540,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetIsTabStop(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36551,7 +36551,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36563,7 +36563,7 @@ impl Shape {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn SetTabIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -36574,7 +36574,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyUp<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -36591,7 +36591,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36608,7 +36608,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn KeyDown<'a, Param0: ::windows::core::IntoParam<'a, super::Input::KeyEventHandler>>(
         &self,
@@ -36625,7 +36625,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36642,7 +36642,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn GotFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -36658,7 +36658,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGotFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36675,7 +36675,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn LostFocus<'a, Param0: ::windows::core::IntoParam<'a, super::RoutedEventHandler>>(
         &self,
         handler: Param0,
@@ -36691,7 +36691,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLostFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36708,7 +36708,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragStarting<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -36733,7 +36733,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36750,7 +36750,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -36775,7 +36775,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDropCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36792,7 +36792,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CharacterReceived<
         'a,
@@ -36818,7 +36818,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveCharacterReceived<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36835,7 +36835,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragEnter<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -36851,7 +36851,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragEnter<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36868,7 +36868,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragLeave<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -36884,7 +36884,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragLeave<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36901,7 +36901,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn DragOver<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -36917,7 +36917,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDragOver<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36934,7 +36934,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Drop<'a, Param0: ::windows::core::IntoParam<'a, super::DragEventHandler>>(
         &self,
         handler: Param0,
@@ -36950,7 +36950,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDrop<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -36967,7 +36967,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerPressed<
         'a,
@@ -36987,7 +36987,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerPressed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37004,7 +37004,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerMoved<
         'a,
@@ -37024,7 +37024,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerMoved<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37041,7 +37041,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerReleased<
         'a,
@@ -37061,7 +37061,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerReleased<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37078,7 +37078,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerEntered<
         'a,
@@ -37098,7 +37098,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerEntered<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37115,7 +37115,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerExited<
         'a,
@@ -37135,7 +37135,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerExited<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37152,7 +37152,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCaptureLost<
         'a,
@@ -37172,7 +37172,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCaptureLost<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37189,7 +37189,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerCanceled<
         'a,
@@ -37209,7 +37209,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37226,7 +37226,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PointerWheelChanged<
         'a,
@@ -37246,7 +37246,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePointerWheelChanged<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37263,7 +37263,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Tapped<'a, Param0: ::windows::core::IntoParam<'a, super::Input::TappedEventHandler>>(
         &self,
@@ -37280,7 +37280,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37297,7 +37297,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn DoubleTapped<
         'a,
@@ -37317,7 +37317,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveDoubleTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37334,7 +37334,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn Holding<
         'a,
@@ -37354,7 +37354,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHolding<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37371,7 +37371,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ContextRequested<
         'a,
@@ -37397,7 +37397,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37414,7 +37414,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -37436,7 +37436,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveContextCanceled<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37453,7 +37453,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn RightTapped<
         'a,
@@ -37473,7 +37473,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveRightTapped<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37490,7 +37490,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarting<
         'a,
@@ -37510,7 +37510,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37527,7 +37527,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationInertiaStarting<
         'a,
@@ -37547,7 +37547,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationInertiaStarting<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37564,7 +37564,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationStarted<
         'a,
@@ -37584,7 +37584,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationStarted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37601,7 +37601,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationDelta<
         'a,
@@ -37621,7 +37621,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationDelta<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37638,7 +37638,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ManipulationCompleted<
         'a,
@@ -37658,7 +37658,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveManipulationCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37675,7 +37675,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayRequested<
         'a,
@@ -37701,7 +37701,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37718,7 +37718,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyDisplayDismissed<
         'a,
@@ -37744,7 +37744,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyDisplayDismissed<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37761,7 +37761,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn AccessKeyInvoked<
         'a,
@@ -37787,7 +37787,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveAccessKeyInvoked<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37804,7 +37804,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ProcessKeyboardAccelerators<
         'a,
@@ -37830,7 +37830,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveProcessKeyboardAccelerators<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37847,7 +37847,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn GettingFocus<
         'a,
@@ -37873,7 +37873,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveGettingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37890,7 +37890,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn LosingFocus<
         'a,
@@ -37916,7 +37916,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveLosingFocus<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37933,7 +37933,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn NoFocusCandidateFound<
         'a,
@@ -37959,7 +37959,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveNoFocusCandidateFound<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -37976,7 +37976,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyDown<
         'a,
@@ -37996,7 +37996,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyDown<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -38013,7 +38013,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn PreviewKeyUp<
         'a,
@@ -38033,7 +38033,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemovePreviewKeyUp<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -38050,7 +38050,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn BringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<
@@ -38075,7 +38075,7 @@ impl Shape {
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveBringIntoViewRequested<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
@@ -38092,7 +38092,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Measure<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Size>>(
         &self,
         availablesize: Param0,
@@ -38106,7 +38106,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Arrange<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>>(
         &self,
         finalrect: Param0,
@@ -38120,7 +38120,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn CapturePointer<'a, Param0: ::windows::core::IntoParam<'a, super::Input::Pointer>>(
         &self,
@@ -38137,7 +38137,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn ReleasePointerCapture<
         'a,
@@ -38155,7 +38155,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn ReleasePointerCaptures(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -38165,7 +38165,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn AddHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -38187,7 +38187,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn RemoveHandler<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::RoutedEvent>,
@@ -38207,7 +38207,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Media'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Media\"`*"]
     #[cfg(feature = "UI_Xaml_Media")]
     pub fn TransformToVisual<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
@@ -38224,7 +38224,7 @@ impl Shape {
             .from_abi::<super::Media::GeneralTransform>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateMeasure(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -38234,7 +38234,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn InvalidateArrange(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -38244,7 +38244,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -38254,7 +38254,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -38266,7 +38266,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn StartDragAsync<
         'a,
@@ -38292,7 +38292,7 @@ impl Shape {
             >>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoView(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -38302,7 +38302,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn StartBringIntoViewWithOptions<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::BringIntoViewOptions>,
@@ -38319,7 +38319,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Xaml_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Xaml_Input\"`*"]
     #[cfg(feature = "UI_Xaml_Input")]
     pub fn TryInvokeKeyboardAccelerator<
         'a,
@@ -38337,7 +38337,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`*"]
     pub fn Focus(&self, value: super::FocusState) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<super::IUIElement>(self)?;
         unsafe {
@@ -38350,7 +38350,7 @@ impl Shape {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StartAnimation<
         'a,
@@ -38368,7 +38368,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn StopAnimation<
         'a,
@@ -38386,7 +38386,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<super::IUIElementProtected>(self)?;
@@ -38399,7 +38399,7 @@ impl Shape {
             .from_abi::<super::super::Input::InputCursor>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Input'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Input\"`*"]
     #[cfg(feature = "UI_Input")]
     pub fn SetProtectedCursor<
         'a,
@@ -38417,7 +38417,7 @@ impl Shape {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Shapes', 'UI_Composition'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
     #[cfg(feature = "UI_Composition")]
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::super::Composition::Visual> {
         let this =

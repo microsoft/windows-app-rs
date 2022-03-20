@@ -5,12 +5,12 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
 #[repr(transparent)]
 pub struct AddPackageDependencyOptions(::windows::core::IUnknown);
 impl AddPackageDependencyOptions {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -24,7 +24,7 @@ impl AddPackageDependencyOptions {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Rank(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -36,7 +36,7 @@ impl AddPackageDependencyOptions {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn SetRank(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -47,7 +47,7 @@ impl AddPackageDependencyOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn PrependIfRankCollision(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -59,7 +59,7 @@ impl AddPackageDependencyOptions {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn SetPrependIfRankCollision(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -153,12 +153,12 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for AddPackageDependencyOptions {}
 unsafe impl ::core::marker::Sync for AddPackageDependencyOptions {}
-#[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
 #[repr(transparent)]
 pub struct CreatePackageDependencyOptions(::windows::core::IUnknown);
 impl CreatePackageDependencyOptions {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -172,7 +172,7 @@ impl CreatePackageDependencyOptions {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Architectures(
         &self,
     ) -> ::windows::core::Result<PackageDependencyProcessorArchitectures> {
@@ -186,7 +186,7 @@ impl CreatePackageDependencyOptions {
             .from_abi::<PackageDependencyProcessorArchitectures>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn SetArchitectures(
         &self,
         value: PackageDependencyProcessorArchitectures,
@@ -200,7 +200,7 @@ impl CreatePackageDependencyOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn VerifyDependencyResolution(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -212,7 +212,7 @@ impl CreatePackageDependencyOptions {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn SetVerifyDependencyResolution(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -223,7 +223,7 @@ impl CreatePackageDependencyOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn LifetimeArtifactKind(
         &self,
     ) -> ::windows::core::Result<PackageDependencyLifetimeArtifactKind> {
@@ -237,7 +237,7 @@ impl CreatePackageDependencyOptions {
             .from_abi::<PackageDependencyLifetimeArtifactKind>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn SetLifetimeArtifactKind(
         &self,
         value: PackageDependencyLifetimeArtifactKind,
@@ -251,7 +251,7 @@ impl CreatePackageDependencyOptions {
             .ok()
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn LifetimeArtifact(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -264,7 +264,7 @@ impl CreatePackageDependencyOptions {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn SetLifetimeArtifact<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -577,11 +577,11 @@ pub struct IPackageDependencyStatics_Vtbl {
         result__: *mut u32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
 #[repr(transparent)]
 pub struct PackageDependency(::windows::core::IUnknown);
 impl PackageDependency {
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Id(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -594,7 +594,7 @@ impl PackageDependency {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Delete(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -602,7 +602,7 @@ impl PackageDependency {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Add(&self) -> ::windows::core::Result<PackageDependencyContext> {
         let this = self;
         unsafe {
@@ -614,7 +614,7 @@ impl PackageDependency {
             .from_abi::<PackageDependencyContext>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Add2<'a, Param0: ::windows::core::IntoParam<'a, AddPackageDependencyOptions>>(
         &self,
         options: Param0,
@@ -630,7 +630,7 @@ impl PackageDependency {
             .from_abi::<PackageDependencyContext>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn GetFromId<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         id: Param0,
     ) -> ::windows::core::Result<PackageDependency> {
@@ -644,7 +644,7 @@ impl PackageDependency {
             .from_abi::<PackageDependency>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn GetFromIdForSystem<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -661,7 +661,7 @@ impl PackageDependency {
             .from_abi::<PackageDependency>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Create<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -681,7 +681,7 @@ impl PackageDependency {
             .from_abi::<PackageDependency>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Create2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -704,7 +704,7 @@ impl PackageDependency {
             .from_abi::<PackageDependency>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn CreateForSystem<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -727,7 +727,7 @@ impl PackageDependency {
             .from_abi::<PackageDependency>(result__)
         })
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn GenerationId() -> ::windows::core::Result<u32> {
         Self::IPackageDependencyStatics(|this| unsafe {
             let mut result__: u32 = ::core::mem::zeroed();
@@ -825,11 +825,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a P
 }
 unsafe impl ::core::marker::Send for PackageDependency {}
 unsafe impl ::core::marker::Sync for PackageDependency {}
-#[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
 #[repr(transparent)]
 pub struct PackageDependencyContext(::windows::core::IUnknown);
 impl PackageDependencyContext {
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn ContextId(&self) -> ::windows::core::Result<PackageDependencyContextId> {
         let this = self;
         unsafe {
@@ -841,7 +841,7 @@ impl PackageDependencyContext {
             .from_abi::<PackageDependencyContextId>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn PackageDependencyId(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -854,7 +854,7 @@ impl PackageDependencyContext {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn PackageFullName(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -867,7 +867,7 @@ impl PackageDependencyContext {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Remove(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -875,7 +875,7 @@ impl PackageDependencyContext {
                 .ok()
         }
     }
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn CreateInstance<
         'a,
         Param0: ::windows::core::IntoParam<'a, PackageDependencyContextId>,
@@ -989,7 +989,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 unsafe impl ::core::marker::Send for PackageDependencyContext {}
 unsafe impl ::core::marker::Sync for PackageDependencyContext {}
 #[repr(C)]
-#[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
 pub struct PackageDependencyContextId {
     pub Id: u64,
 }
@@ -1033,7 +1033,7 @@ impl ::core::default::Default for PackageDependencyContextId {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct PackageDependencyLifetimeArtifactKind(pub i32);
@@ -1070,7 +1070,7 @@ unsafe impl ::windows::core::RuntimeType for PackageDependencyLifetimeArtifactKi
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct PackageDependencyProcessorArchitectures(pub u32);
@@ -1139,10 +1139,10 @@ unsafe impl ::windows::core::RuntimeType for PackageDependencyProcessorArchitect
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+#[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
 pub struct PackageDependencyRank {}
 impl PackageDependencyRank {
-    #[doc = "*Required features: 'Windows_ApplicationModel_DynamicDependency'*"]
+    #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Default() -> ::windows::core::Result<i32> {
         Self::IPackageDependencyRankStatics(|this| unsafe {
             let mut result__: i32 = ::core::mem::zeroed();

@@ -5,7 +5,7 @@
     clashing_extern_declarations,
     clippy::all
 )]
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CaretType(pub i32);
@@ -40,7 +40,7 @@ unsafe impl ::windows::core::RuntimeType for CaretType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FindOptions(pub u32);
@@ -104,11 +104,11 @@ unsafe impl ::windows::core::RuntimeType for FindOptions {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 pub struct FontWeights(::windows::core::IUnknown);
 impl FontWeights {
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Black() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
@@ -119,7 +119,7 @@ impl FontWeights {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Bold() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
@@ -130,7 +130,7 @@ impl FontWeights {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ExtraBlack() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
@@ -141,7 +141,7 @@ impl FontWeights {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ExtraBold() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
@@ -152,7 +152,7 @@ impl FontWeights {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ExtraLight() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
@@ -163,7 +163,7 @@ impl FontWeights {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Light() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
@@ -174,7 +174,7 @@ impl FontWeights {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Medium() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
@@ -185,7 +185,7 @@ impl FontWeights {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Normal() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
@@ -196,7 +196,7 @@ impl FontWeights {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SemiBold() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
@@ -207,7 +207,7 @@ impl FontWeights {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SemiLight() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
@@ -218,7 +218,7 @@ impl FontWeights {
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Thin() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
@@ -312,7 +312,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a F
 }
 unsafe impl ::core::marker::Send for FontWeights {}
 unsafe impl ::core::marker::Sync for FontWeights {}
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct FormatEffect(pub i32);
@@ -349,7 +349,7 @@ unsafe impl ::windows::core::RuntimeType for FormatEffect {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct HorizontalCharacterAlignment(pub i32);
@@ -458,11 +458,11 @@ pub struct IFontWeightsStatics_Vtbl {
         result__: *mut ::windows::UI::Text::FontWeight,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 pub struct ITextCharacterFormat(::windows::core::IUnknown);
 impl ITextCharacterFormat {
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn AllCaps(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -474,7 +474,7 @@ impl ITextCharacterFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetAllCaps(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -485,7 +485,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn BackgroundColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
@@ -497,7 +497,7 @@ impl ITextCharacterFormat {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetBackgroundColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -511,7 +511,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Bold(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -523,7 +523,7 @@ impl ITextCharacterFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetBold(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -534,7 +534,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = self;
         unsafe {
@@ -546,7 +546,7 @@ impl ITextCharacterFormat {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetFontStretch(
         &self,
         value: ::windows::UI::Text::FontStretch,
@@ -560,7 +560,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = self;
         unsafe {
@@ -572,7 +572,7 @@ impl ITextCharacterFormat {
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetFontStyle(
         &self,
         value: ::windows::UI::Text::FontStyle,
@@ -586,7 +586,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ForegroundColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
@@ -598,7 +598,7 @@ impl ITextCharacterFormat {
             .from_abi::<::windows::UI::Color>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetForegroundColor<'a, Param0: ::windows::core::IntoParam<'a, ::windows::UI::Color>>(
         &self,
         value: Param0,
@@ -612,7 +612,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Hidden(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -624,7 +624,7 @@ impl ITextCharacterFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetHidden(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -635,7 +635,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Italic(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -647,7 +647,7 @@ impl ITextCharacterFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetItalic(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -658,7 +658,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Kerning(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -670,7 +670,7 @@ impl ITextCharacterFormat {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetKerning(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -681,7 +681,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn LanguageTag(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -694,7 +694,7 @@ impl ITextCharacterFormat {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetLanguageTag<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -708,7 +708,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn LinkType(&self) -> ::windows::core::Result<LinkType> {
         let this = self;
         unsafe {
@@ -720,7 +720,7 @@ impl ITextCharacterFormat {
             .from_abi::<LinkType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -733,7 +733,7 @@ impl ITextCharacterFormat {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -747,7 +747,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Outline(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -759,7 +759,7 @@ impl ITextCharacterFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetOutline(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -770,7 +770,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Position(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -782,7 +782,7 @@ impl ITextCharacterFormat {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetPosition(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -793,7 +793,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ProtectedText(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -805,7 +805,7 @@ impl ITextCharacterFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetProtectedText(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -816,7 +816,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Size(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -828,7 +828,7 @@ impl ITextCharacterFormat {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetSize(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -839,7 +839,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SmallCaps(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -851,7 +851,7 @@ impl ITextCharacterFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetSmallCaps(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -862,7 +862,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Spacing(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -874,7 +874,7 @@ impl ITextCharacterFormat {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetSpacing(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -885,7 +885,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Strikethrough(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -897,7 +897,7 @@ impl ITextCharacterFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetStrikethrough(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -908,7 +908,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Subscript(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -920,7 +920,7 @@ impl ITextCharacterFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetSubscript(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -931,7 +931,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Superscript(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -943,7 +943,7 @@ impl ITextCharacterFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetSuperscript(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -954,7 +954,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn TextScript(&self) -> ::windows::core::Result<TextScript> {
         let this = self;
         unsafe {
@@ -966,7 +966,7 @@ impl ITextCharacterFormat {
             .from_abi::<TextScript>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetTextScript(&self, value: TextScript) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -977,7 +977,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Underline(&self) -> ::windows::core::Result<UnderlineType> {
         let this = self;
         unsafe {
@@ -989,7 +989,7 @@ impl ITextCharacterFormat {
             .from_abi::<UnderlineType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetUnderline(&self, value: UnderlineType) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1000,7 +1000,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Weight(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -1012,7 +1012,7 @@ impl ITextCharacterFormat {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetWeight(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1023,7 +1023,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetClone<'a, Param0: ::windows::core::IntoParam<'a, ITextCharacterFormat>>(
         &self,
         value: Param0,
@@ -1037,7 +1037,7 @@ impl ITextCharacterFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetClone(&self) -> ::windows::core::Result<ITextCharacterFormat> {
         let this = self;
         unsafe {
@@ -1049,7 +1049,7 @@ impl ITextCharacterFormat {
             .from_abi::<ITextCharacterFormat>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn IsEqual<'a, Param0: ::windows::core::IntoParam<'a, ITextCharacterFormat>>(
         &self,
         format: Param0,
@@ -1530,11 +1530,11 @@ pub struct ITextDocument_Vtbl {
     pub ClearUndoRedoHistory:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 pub struct ITextParagraphFormat(::windows::core::IUnknown);
 impl ITextParagraphFormat {
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Alignment(&self) -> ::windows::core::Result<ParagraphAlignment> {
         let this = self;
         unsafe {
@@ -1546,7 +1546,7 @@ impl ITextParagraphFormat {
             .from_abi::<ParagraphAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetAlignment(&self, value: ParagraphAlignment) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1557,7 +1557,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn FirstLineIndent(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -1569,7 +1569,7 @@ impl ITextParagraphFormat {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn KeepTogether(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -1581,7 +1581,7 @@ impl ITextParagraphFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetKeepTogether(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1592,7 +1592,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn KeepWithNext(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -1604,7 +1604,7 @@ impl ITextParagraphFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetKeepWithNext(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1615,7 +1615,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn LeftIndent(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -1627,7 +1627,7 @@ impl ITextParagraphFormat {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn LineSpacing(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -1639,7 +1639,7 @@ impl ITextParagraphFormat {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn LineSpacingRule(&self) -> ::windows::core::Result<LineSpacingRule> {
         let this = self;
         unsafe {
@@ -1651,7 +1651,7 @@ impl ITextParagraphFormat {
             .from_abi::<LineSpacingRule>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ListAlignment(&self) -> ::windows::core::Result<MarkerAlignment> {
         let this = self;
         unsafe {
@@ -1663,7 +1663,7 @@ impl ITextParagraphFormat {
             .from_abi::<MarkerAlignment>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetListAlignment(&self, value: MarkerAlignment) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1674,7 +1674,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ListLevelIndex(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -1686,7 +1686,7 @@ impl ITextParagraphFormat {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetListLevelIndex(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1697,7 +1697,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ListStart(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -1709,7 +1709,7 @@ impl ITextParagraphFormat {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetListStart(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1720,7 +1720,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ListStyle(&self) -> ::windows::core::Result<MarkerStyle> {
         let this = self;
         unsafe {
@@ -1732,7 +1732,7 @@ impl ITextParagraphFormat {
             .from_abi::<MarkerStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetListStyle(&self, value: MarkerStyle) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1743,7 +1743,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ListTab(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -1755,7 +1755,7 @@ impl ITextParagraphFormat {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetListTab(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1766,7 +1766,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ListType(&self) -> ::windows::core::Result<MarkerType> {
         let this = self;
         unsafe {
@@ -1778,7 +1778,7 @@ impl ITextParagraphFormat {
             .from_abi::<MarkerType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetListType(&self, value: MarkerType) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1789,7 +1789,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn NoLineNumber(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -1801,7 +1801,7 @@ impl ITextParagraphFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetNoLineNumber(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1812,7 +1812,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn PageBreakBefore(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -1824,7 +1824,7 @@ impl ITextParagraphFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetPageBreakBefore(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1835,7 +1835,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn RightIndent(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -1847,7 +1847,7 @@ impl ITextParagraphFormat {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetRightIndent(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1858,7 +1858,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn RightToLeft(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -1870,7 +1870,7 @@ impl ITextParagraphFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetRightToLeft(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1881,7 +1881,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Style(&self) -> ::windows::core::Result<ParagraphStyle> {
         let this = self;
         unsafe {
@@ -1893,7 +1893,7 @@ impl ITextParagraphFormat {
             .from_abi::<ParagraphStyle>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetStyle(&self, value: ParagraphStyle) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1904,7 +1904,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SpaceAfter(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -1916,7 +1916,7 @@ impl ITextParagraphFormat {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetSpaceAfter(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1927,7 +1927,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SpaceBefore(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -1939,7 +1939,7 @@ impl ITextParagraphFormat {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetSpaceBefore(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1950,7 +1950,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn WidowControl(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
@@ -1962,7 +1962,7 @@ impl ITextParagraphFormat {
             .from_abi::<FormatEffect>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetWidowControl(&self, value: FormatEffect) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -1973,7 +1973,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn TabCount(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -1985,7 +1985,7 @@ impl ITextParagraphFormat {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn AddTab(
         &self,
         position: f32,
@@ -2003,7 +2003,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ClearAllTabs(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2013,7 +2013,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn DeleteTab(&self, position: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2024,7 +2024,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetClone(&self) -> ::windows::core::Result<ITextParagraphFormat> {
         let this = self;
         unsafe {
@@ -2036,7 +2036,7 @@ impl ITextParagraphFormat {
             .from_abi::<ITextParagraphFormat>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetTab(
         &self,
         index: i32,
@@ -2056,7 +2056,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn IsEqual<'a, Param0: ::windows::core::IntoParam<'a, ITextParagraphFormat>>(
         &self,
         format: Param0,
@@ -2072,7 +2072,7 @@ impl ITextParagraphFormat {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetClone<'a, Param0: ::windows::core::IntoParam<'a, ITextParagraphFormat>>(
         &self,
         format: Param0,
@@ -2086,7 +2086,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetIndents(&self, start: f32, left: f32, right: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2099,7 +2099,7 @@ impl ITextParagraphFormat {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetLineSpacing(
         &self,
         rule: LineSpacingRule,
@@ -2393,11 +2393,11 @@ pub struct ITextParagraphFormat_Vtbl {
         spacing: f32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 pub struct ITextRange(::windows::core::IUnknown);
 impl ITextRange {
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Character(&self) -> ::windows::core::Result<u16> {
         let this = self;
         unsafe {
@@ -2409,7 +2409,7 @@ impl ITextRange {
             .from_abi::<u16>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetCharacter(&self, value: u16) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2420,7 +2420,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn CharacterFormat(&self) -> ::windows::core::Result<ITextCharacterFormat> {
         let this = self;
         unsafe {
@@ -2432,7 +2432,7 @@ impl ITextRange {
             .from_abi::<ITextCharacterFormat>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetCharacterFormat<'a, Param0: ::windows::core::IntoParam<'a, ITextCharacterFormat>>(
         &self,
         value: Param0,
@@ -2446,7 +2446,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn FormattedText(&self) -> ::windows::core::Result<ITextRange> {
         let this = self;
         unsafe {
@@ -2458,7 +2458,7 @@ impl ITextRange {
             .from_abi::<ITextRange>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetFormattedText<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         value: Param0,
@@ -2472,7 +2472,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn EndPosition(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2484,7 +2484,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetEndPosition(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2495,7 +2495,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Gravity(&self) -> ::windows::core::Result<RangeGravity> {
         let this = self;
         unsafe {
@@ -2507,7 +2507,7 @@ impl ITextRange {
             .from_abi::<RangeGravity>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetGravity(&self, value: RangeGravity) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2518,7 +2518,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Length(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2530,7 +2530,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Link(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -2543,7 +2543,7 @@ impl ITextRange {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetLink<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -2557,7 +2557,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ParagraphFormat(&self) -> ::windows::core::Result<ITextParagraphFormat> {
         let this = self;
         unsafe {
@@ -2569,7 +2569,7 @@ impl ITextRange {
             .from_abi::<ITextParagraphFormat>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetParagraphFormat<'a, Param0: ::windows::core::IntoParam<'a, ITextParagraphFormat>>(
         &self,
         value: Param0,
@@ -2583,7 +2583,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn StartPosition(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2595,7 +2595,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetStartPosition(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2606,7 +2606,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn StoryLength(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2618,7 +2618,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Text(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -2631,7 +2631,7 @@ impl ITextRange {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetText<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -2645,7 +2645,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn CanPaste(&self, format: i32) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -2658,7 +2658,7 @@ impl ITextRange {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ChangeCase(&self, value: LetterCase) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2669,7 +2669,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Collapse(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2680,21 +2680,21 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Copy(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Copy)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Cut(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Cut)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Delete(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2708,7 +2708,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn EndOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2722,7 +2722,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Expand(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2735,7 +2735,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn FindText<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -2755,7 +2755,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetCharacterUtf32(&self, value: &mut u32, offset: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2767,7 +2767,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetClone(&self) -> ::windows::core::Result<ITextRange> {
         let this = self;
         unsafe {
@@ -2779,7 +2779,7 @@ impl ITextRange {
             .from_abi::<ITextRange>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetIndex(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2792,7 +2792,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetPoint(
         &self,
         horizontalalign: HorizontalCharacterAlignment,
@@ -2812,7 +2812,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetRect(
         &self,
         options: PointOptions,
@@ -2830,7 +2830,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetText(
         &self,
         options: TextGetOptions,
@@ -2846,7 +2846,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetTextViaStream<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -2865,7 +2865,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn InRange<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         range: Param0,
@@ -2881,7 +2881,7 @@ impl ITextRange {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn InsertImage<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -2909,7 +2909,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn InStory<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         range: Param0,
@@ -2925,7 +2925,7 @@ impl ITextRange {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn IsEqual<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         range: Param0,
@@ -2941,7 +2941,7 @@ impl ITextRange {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Move(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2955,7 +2955,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MoveEnd(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2969,7 +2969,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MoveStart(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -2983,7 +2983,7 @@ impl ITextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Paste(&self, format: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -2994,7 +2994,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ScrollIntoView(&self, value: PointOptions) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3005,7 +3005,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MatchSelection(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3015,7 +3015,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetIndex(
         &self,
         unit: TextRangeUnit,
@@ -3033,7 +3033,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetPoint<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         point: Param0,
@@ -3051,7 +3051,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetRange(&self, startposition: i32, endposition: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3063,7 +3063,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetText2<'a, Param1: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         options: TextSetOptions,
@@ -3079,7 +3079,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetTextViaStream<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -3098,7 +3098,7 @@ impl ITextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn StartOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -3428,11 +3428,11 @@ pub struct ITextRange_Vtbl {
         result__: *mut i32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 pub struct ITextSelection(::windows::core::IUnknown);
 impl ITextSelection {
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Options(&self) -> ::windows::core::Result<SelectionOptions> {
         let this = self;
         unsafe {
@@ -3444,7 +3444,7 @@ impl ITextSelection {
             .from_abi::<SelectionOptions>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetOptions(&self, value: SelectionOptions) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -3455,7 +3455,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Type(&self) -> ::windows::core::Result<SelectionType> {
         let this = self;
         unsafe {
@@ -3467,7 +3467,7 @@ impl ITextSelection {
             .from_abi::<SelectionType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn EndKey(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -3481,7 +3481,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn HomeKey(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -3495,7 +3495,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MoveDown(
         &self,
         unit: TextRangeUnit,
@@ -3515,7 +3515,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MoveLeft(
         &self,
         unit: TextRangeUnit,
@@ -3535,7 +3535,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MoveRight(
         &self,
         unit: TextRangeUnit,
@@ -3555,7 +3555,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MoveUp(
         &self,
         unit: TextRangeUnit,
@@ -3575,7 +3575,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn TypeText<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -3589,7 +3589,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Character(&self) -> ::windows::core::Result<u16> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3601,7 +3601,7 @@ impl ITextSelection {
             .from_abi::<u16>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetCharacter(&self, value: u16) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3612,7 +3612,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn CharacterFormat(&self) -> ::windows::core::Result<ITextCharacterFormat> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3624,7 +3624,7 @@ impl ITextSelection {
             .from_abi::<ITextCharacterFormat>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetCharacterFormat<'a, Param0: ::windows::core::IntoParam<'a, ITextCharacterFormat>>(
         &self,
         value: Param0,
@@ -3638,7 +3638,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn FormattedText(&self) -> ::windows::core::Result<ITextRange> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3650,7 +3650,7 @@ impl ITextSelection {
             .from_abi::<ITextRange>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetFormattedText<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         value: Param0,
@@ -3664,7 +3664,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn EndPosition(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3676,7 +3676,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetEndPosition(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3687,7 +3687,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Gravity(&self) -> ::windows::core::Result<RangeGravity> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3699,7 +3699,7 @@ impl ITextSelection {
             .from_abi::<RangeGravity>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetGravity(&self, value: RangeGravity) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3710,7 +3710,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Length(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3722,7 +3722,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Link(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3735,7 +3735,7 @@ impl ITextSelection {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetLink<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -3749,7 +3749,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ParagraphFormat(&self) -> ::windows::core::Result<ITextParagraphFormat> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3761,7 +3761,7 @@ impl ITextSelection {
             .from_abi::<ITextParagraphFormat>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetParagraphFormat<'a, Param0: ::windows::core::IntoParam<'a, ITextParagraphFormat>>(
         &self,
         value: Param0,
@@ -3775,7 +3775,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn StartPosition(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3787,7 +3787,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetStartPosition(&self, value: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3798,7 +3798,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn StoryLength(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3810,7 +3810,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Text(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3823,7 +3823,7 @@ impl ITextSelection {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetText<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -3837,7 +3837,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn CanPaste(&self, format: i32) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3850,7 +3850,7 @@ impl ITextSelection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ChangeCase(&self, value: LetterCase) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3861,7 +3861,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Collapse(&self, value: bool) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3872,21 +3872,21 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Copy(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Copy)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Cut(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Cut)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Delete(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3900,7 +3900,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn EndOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3914,7 +3914,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Expand(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3927,7 +3927,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn FindText<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -3947,7 +3947,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetCharacterUtf32(&self, value: &mut u32, offset: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3959,7 +3959,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetClone(&self) -> ::windows::core::Result<ITextRange> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3971,7 +3971,7 @@ impl ITextSelection {
             .from_abi::<ITextRange>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetIndex(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -3984,7 +3984,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetPoint(
         &self,
         horizontalalign: HorizontalCharacterAlignment,
@@ -4004,7 +4004,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetRect(
         &self,
         options: PointOptions,
@@ -4022,7 +4022,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetText(
         &self,
         options: TextGetOptions,
@@ -4038,7 +4038,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetTextViaStream<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -4057,7 +4057,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn InRange<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         range: Param0,
@@ -4073,7 +4073,7 @@ impl ITextSelection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn InsertImage<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -4101,7 +4101,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn InStory<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         range: Param0,
@@ -4117,7 +4117,7 @@ impl ITextSelection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn IsEqual<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         range: Param0,
@@ -4133,7 +4133,7 @@ impl ITextSelection {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Move(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -4147,7 +4147,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MoveEnd(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -4161,7 +4161,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MoveStart(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -4175,7 +4175,7 @@ impl ITextSelection {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Paste(&self, format: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -4186,7 +4186,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ScrollIntoView(&self, value: PointOptions) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -4197,7 +4197,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MatchSelection(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -4207,7 +4207,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetIndex(
         &self,
         unit: TextRangeUnit,
@@ -4225,7 +4225,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetPoint<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         point: Param0,
@@ -4243,7 +4243,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetRange(&self, startposition: i32, endposition: i32) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -4255,7 +4255,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetText2<'a, Param1: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         options: TextSetOptions,
@@ -4271,7 +4271,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetTextViaStream<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -4290,7 +4290,7 @@ impl ITextSelection {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn StartOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
@@ -4459,7 +4459,7 @@ pub struct ITextSelection_Vtbl {
         value: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct LetterCase(pub i32);
@@ -4494,7 +4494,7 @@ unsafe impl ::windows::core::RuntimeType for LetterCase {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct LineSpacingRule(pub i32);
@@ -4535,7 +4535,7 @@ unsafe impl ::windows::core::RuntimeType for LineSpacingRule {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct LinkType(pub i32);
@@ -4577,7 +4577,7 @@ unsafe impl ::windows::core::RuntimeType for LinkType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct MarkerAlignment(pub i32);
@@ -4614,7 +4614,7 @@ unsafe impl ::windows::core::RuntimeType for MarkerAlignment {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct MarkerStyle(pub i32);
@@ -4654,7 +4654,7 @@ unsafe impl ::windows::core::RuntimeType for MarkerStyle {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct MarkerType(pub i32);
@@ -4712,7 +4712,7 @@ unsafe impl ::windows::core::RuntimeType for MarkerType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ParagraphAlignment(pub i32);
@@ -4750,7 +4750,7 @@ unsafe impl ::windows::core::RuntimeType for ParagraphAlignment {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ParagraphStyle(pub i32);
@@ -4795,7 +4795,7 @@ unsafe impl ::windows::core::RuntimeType for ParagraphStyle {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct PointOptions(pub u32);
@@ -4864,7 +4864,7 @@ unsafe impl ::windows::core::RuntimeType for PointOptions {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct RangeGravity(pub i32);
@@ -4902,7 +4902,7 @@ unsafe impl ::windows::core::RuntimeType for RangeGravity {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct RichEditMathMode(pub i32);
@@ -4937,11 +4937,11 @@ unsafe impl ::windows::core::RuntimeType for RichEditMathMode {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 pub struct RichEditTextDocument(::windows::core::IUnknown);
 impl RichEditTextDocument {
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn CaretType(&self) -> ::windows::core::Result<CaretType> {
         let this = self;
         unsafe {
@@ -4953,7 +4953,7 @@ impl RichEditTextDocument {
             .from_abi::<CaretType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetCaretType(&self, value: CaretType) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4964,7 +4964,7 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn DefaultTabStop(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
@@ -4976,7 +4976,7 @@ impl RichEditTextDocument {
             .from_abi::<f32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetDefaultTabStop(&self, value: f32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -4987,7 +4987,7 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Selection(&self) -> ::windows::core::Result<ITextSelection> {
         let this = self;
         unsafe {
@@ -4999,7 +4999,7 @@ impl RichEditTextDocument {
             .from_abi::<ITextSelection>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn UndoLimit(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
@@ -5011,7 +5011,7 @@ impl RichEditTextDocument {
             .from_abi::<u32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetUndoLimit(&self, value: u32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5022,7 +5022,7 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn CanCopy(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5034,7 +5034,7 @@ impl RichEditTextDocument {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn CanPaste(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5046,7 +5046,7 @@ impl RichEditTextDocument {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn CanRedo(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5058,7 +5058,7 @@ impl RichEditTextDocument {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn CanUndo(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5070,7 +5070,7 @@ impl RichEditTextDocument {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ApplyDisplayUpdates(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5082,7 +5082,7 @@ impl RichEditTextDocument {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn BatchDisplayUpdates(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5094,7 +5094,7 @@ impl RichEditTextDocument {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn BeginUndoGroup(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5104,7 +5104,7 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn EndUndoGroup(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5114,7 +5114,7 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetDefaultCharacterFormat(&self) -> ::windows::core::Result<ITextCharacterFormat> {
         let this = self;
         unsafe {
@@ -5126,7 +5126,7 @@ impl RichEditTextDocument {
             .from_abi::<ITextCharacterFormat>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetDefaultParagraphFormat(&self) -> ::windows::core::Result<ITextParagraphFormat> {
         let this = self;
         unsafe {
@@ -5138,7 +5138,7 @@ impl RichEditTextDocument {
             .from_abi::<ITextParagraphFormat>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetRange(
         &self,
         startposition: i32,
@@ -5156,7 +5156,7 @@ impl RichEditTextDocument {
             .from_abi::<ITextRange>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetRangeFromPoint<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
@@ -5177,7 +5177,7 @@ impl RichEditTextDocument {
             .from_abi::<ITextRange>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetText(
         &self,
         options: TextGetOptions,
@@ -5193,7 +5193,7 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn LoadFromStream<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -5212,14 +5212,14 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Redo(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Redo)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SaveToStream<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -5238,7 +5238,7 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetDefaultCharacterFormat<
         'a,
         Param0: ::windows::core::IntoParam<'a, ITextCharacterFormat>,
@@ -5255,7 +5255,7 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetDefaultParagraphFormat<
         'a,
         Param0: ::windows::core::IntoParam<'a, ITextParagraphFormat>,
@@ -5272,7 +5272,7 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetText<'a, Param1: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         options: TextSetOptions,
@@ -5288,14 +5288,14 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Undo(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Undo)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn AlignmentIncludesTrailingWhitespace(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5307,7 +5307,7 @@ impl RichEditTextDocument {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetAlignmentIncludesTrailingWhitespace(
         &self,
         value: bool,
@@ -5321,7 +5321,7 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn IgnoreTrailingCharacterSpacing(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5333,7 +5333,7 @@ impl RichEditTextDocument {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetIgnoreTrailingCharacterSpacing(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5344,7 +5344,7 @@ impl RichEditTextDocument {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ClearUndoRedoHistory(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5433,11 +5433,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for RichEditTextDocument {}
 unsafe impl ::core::marker::Sync for RichEditTextDocument {}
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 pub struct RichEditTextRange(::windows::core::IUnknown);
 impl RichEditTextRange {
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Character(&self) -> ::windows::core::Result<u16> {
         let this = self;
         unsafe {
@@ -5449,7 +5449,7 @@ impl RichEditTextRange {
             .from_abi::<u16>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetCharacter(&self, value: u16) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5460,7 +5460,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn CharacterFormat(&self) -> ::windows::core::Result<ITextCharacterFormat> {
         let this = self;
         unsafe {
@@ -5472,7 +5472,7 @@ impl RichEditTextRange {
             .from_abi::<ITextCharacterFormat>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetCharacterFormat<'a, Param0: ::windows::core::IntoParam<'a, ITextCharacterFormat>>(
         &self,
         value: Param0,
@@ -5486,7 +5486,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn FormattedText(&self) -> ::windows::core::Result<ITextRange> {
         let this = self;
         unsafe {
@@ -5498,7 +5498,7 @@ impl RichEditTextRange {
             .from_abi::<ITextRange>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetFormattedText<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         value: Param0,
@@ -5512,7 +5512,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn EndPosition(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5524,7 +5524,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetEndPosition(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5535,7 +5535,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Gravity(&self) -> ::windows::core::Result<RangeGravity> {
         let this = self;
         unsafe {
@@ -5547,7 +5547,7 @@ impl RichEditTextRange {
             .from_abi::<RangeGravity>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetGravity(&self, value: RangeGravity) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5558,7 +5558,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Length(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5570,7 +5570,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Link(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -5583,7 +5583,7 @@ impl RichEditTextRange {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetLink<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -5597,7 +5597,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ParagraphFormat(&self) -> ::windows::core::Result<ITextParagraphFormat> {
         let this = self;
         unsafe {
@@ -5609,7 +5609,7 @@ impl RichEditTextRange {
             .from_abi::<ITextParagraphFormat>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetParagraphFormat<'a, Param0: ::windows::core::IntoParam<'a, ITextParagraphFormat>>(
         &self,
         value: Param0,
@@ -5623,7 +5623,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn StartPosition(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5635,7 +5635,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetStartPosition(&self, value: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5646,7 +5646,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn StoryLength(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5658,7 +5658,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Text(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
@@ -5671,7 +5671,7 @@ impl RichEditTextRange {
             .from_abi::<::windows::core::HSTRING>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetText<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -5685,7 +5685,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn CanPaste(&self, format: i32) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
@@ -5698,7 +5698,7 @@ impl RichEditTextRange {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ChangeCase(&self, value: LetterCase) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5709,7 +5709,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Collapse(&self, value: bool) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5720,21 +5720,21 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Copy(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Copy)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Cut(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Cut)(::core::mem::transmute_copy(this)).ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Delete(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5748,7 +5748,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn EndOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5762,7 +5762,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Expand(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5775,7 +5775,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn FindText<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         value: Param0,
@@ -5795,7 +5795,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetCharacterUtf32(&self, value: &mut u32, offset: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -5807,7 +5807,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetClone(&self) -> ::windows::core::Result<ITextRange> {
         let this = self;
         unsafe {
@@ -5819,7 +5819,7 @@ impl RichEditTextRange {
             .from_abi::<ITextRange>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetIndex(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5832,7 +5832,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetPoint(
         &self,
         horizontalalign: HorizontalCharacterAlignment,
@@ -5852,7 +5852,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetRect(
         &self,
         options: PointOptions,
@@ -5870,7 +5870,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetText(
         &self,
         options: TextGetOptions,
@@ -5886,7 +5886,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn GetTextViaStream<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -5905,7 +5905,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn InRange<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         range: Param0,
@@ -5921,7 +5921,7 @@ impl RichEditTextRange {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn InsertImage<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
@@ -5949,7 +5949,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn InStory<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         range: Param0,
@@ -5965,7 +5965,7 @@ impl RichEditTextRange {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn IsEqual<'a, Param0: ::windows::core::IntoParam<'a, ITextRange>>(
         &self,
         range: Param0,
@@ -5981,7 +5981,7 @@ impl RichEditTextRange {
             .from_abi::<bool>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Move(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -5995,7 +5995,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MoveEnd(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -6009,7 +6009,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MoveStart(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -6023,7 +6023,7 @@ impl RichEditTextRange {
             .from_abi::<i32>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Paste(&self, format: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -6034,7 +6034,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ScrollIntoView(&self, value: PointOptions) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -6045,7 +6045,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MatchSelection(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -6055,7 +6055,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetIndex(
         &self,
         unit: TextRangeUnit,
@@ -6073,7 +6073,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetPoint<'a, Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>>(
         &self,
         point: Param0,
@@ -6091,7 +6091,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetRange(&self, startposition: i32, endposition: i32) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -6103,7 +6103,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetText2<'a, Param1: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
         &self,
         options: TextSetOptions,
@@ -6119,7 +6119,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SetTextViaStream<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
@@ -6138,7 +6138,7 @@ impl RichEditTextRange {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn StartOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
@@ -6251,7 +6251,7 @@ impl<'a> ::windows::core::IntoParam<'a, ITextRange> for &RichEditTextRange {
 }
 unsafe impl ::core::marker::Send for RichEditTextRange {}
 unsafe impl ::core::marker::Sync for RichEditTextRange {}
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct SelectionOptions(pub u32);
@@ -6317,7 +6317,7 @@ unsafe impl ::windows::core::RuntimeType for SelectionOptions {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct SelectionType(pub i32);
@@ -6355,7 +6355,7 @@ unsafe impl ::windows::core::RuntimeType for SelectionType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TabAlignment(pub i32);
@@ -6393,7 +6393,7 @@ unsafe impl ::windows::core::RuntimeType for TabAlignment {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TabLeader(pub i32);
@@ -6432,10 +6432,10 @@ unsafe impl ::windows::core::RuntimeType for TabLeader {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 pub struct TextConstants {}
 impl TextConstants {
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn AutoColor() -> ::windows::core::Result<::windows::UI::Color> {
         Self::ITextConstantsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
@@ -6446,7 +6446,7 @@ impl TextConstants {
             .from_abi::<::windows::UI::Color>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MinUnitCount() -> ::windows::core::Result<i32> {
         Self::ITextConstantsStatics(|this| unsafe {
             let mut result__: i32 = ::core::mem::zeroed();
@@ -6457,7 +6457,7 @@ impl TextConstants {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MaxUnitCount() -> ::windows::core::Result<i32> {
         Self::ITextConstantsStatics(|this| unsafe {
             let mut result__: i32 = ::core::mem::zeroed();
@@ -6468,7 +6468,7 @@ impl TextConstants {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn UndefinedColor() -> ::windows::core::Result<::windows::UI::Color> {
         Self::ITextConstantsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
@@ -6479,7 +6479,7 @@ impl TextConstants {
             .from_abi::<::windows::UI::Color>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn UndefinedFloatValue() -> ::windows::core::Result<f32> {
         Self::ITextConstantsStatics(|this| unsafe {
             let mut result__: f32 = ::core::mem::zeroed();
@@ -6490,7 +6490,7 @@ impl TextConstants {
             .from_abi::<f32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn UndefinedInt32Value() -> ::windows::core::Result<i32> {
         Self::ITextConstantsStatics(|this| unsafe {
             let mut result__: i32 = ::core::mem::zeroed();
@@ -6501,7 +6501,7 @@ impl TextConstants {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn UndefinedFontStretch() -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         Self::ITextConstantsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
@@ -6512,7 +6512,7 @@ impl TextConstants {
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Text'*"]
+    #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn UndefinedFontStyle() -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         Self::ITextConstantsStatics(|this| unsafe {
             let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
@@ -6538,7 +6538,7 @@ impl TextConstants {
 impl ::windows::core::RuntimeName for TextConstants {
     const NAME: &'static str = "Microsoft.UI.Text.TextConstants";
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TextGetOptions(pub u32);
@@ -6608,7 +6608,7 @@ unsafe impl ::windows::core::RuntimeType for TextGetOptions {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TextRangeUnit(pub i32);
@@ -6674,7 +6674,7 @@ unsafe impl ::windows::core::RuntimeType for TextRangeUnit {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TextScript(pub i32);
@@ -6771,7 +6771,7 @@ unsafe impl ::windows::core::RuntimeType for TextScript {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct TextSetOptions(pub u32);
@@ -6839,7 +6839,7 @@ unsafe impl ::windows::core::RuntimeType for TextSetOptions {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct UnderlineType(pub i32);
@@ -6892,7 +6892,7 @@ unsafe impl ::windows::core::RuntimeType for UnderlineType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Text'*"]
+#[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct VerticalCharacterAlignment(pub i32);

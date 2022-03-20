@@ -11,11 +11,11 @@ pub mod Peers;
 pub mod Provider;
 #[cfg(feature = "UI_Xaml_Automation_Text")]
 pub mod Text;
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct AnnotationPatternIdentifiers(::windows::core::IUnknown);
 impl AnnotationPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AnnotationTypeIdProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAnnotationPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -26,7 +26,7 @@ impl AnnotationPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AnnotationTypeNameProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAnnotationPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -37,7 +37,7 @@ impl AnnotationPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AuthorProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAnnotationPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -48,7 +48,7 @@ impl AnnotationPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn DateTimeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAnnotationPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -59,7 +59,7 @@ impl AnnotationPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn TargetProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAnnotationPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -167,7 +167,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for AnnotationPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for AnnotationPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AnnotationType(pub i32);
@@ -224,7 +224,7 @@ unsafe impl ::windows::core::RuntimeType for AnnotationType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AutomationActiveEnd(pub i32);
@@ -261,7 +261,7 @@ unsafe impl ::windows::core::RuntimeType for AutomationActiveEnd {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AutomationAnimationStyle(pub i32);
@@ -305,12 +305,12 @@ unsafe impl ::windows::core::RuntimeType for AutomationAnimationStyle {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct AutomationAnnotation(::windows::core::IUnknown);
 impl AutomationAnnotation {
     pub fn new() -> ::windows::core::Result<Self> {
-        Self::IActivationFactory(|f| f.activate_instance::<Self>())
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
     }
     fn IActivationFactory<
         R,
@@ -324,7 +324,7 @@ impl AutomationAnnotation {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn Type(&self) -> ::windows::core::Result<AnnotationType> {
         let this = self;
         unsafe {
@@ -336,7 +336,7 @@ impl AutomationAnnotation {
             .from_abi::<AnnotationType>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetType(&self, value: AnnotationType) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
@@ -347,7 +347,7 @@ impl AutomationAnnotation {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn Element(&self) -> ::windows::core::Result<super::UIElement> {
         let this = self;
         unsafe {
@@ -359,7 +359,7 @@ impl AutomationAnnotation {
             .from_abi::<super::UIElement>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetElement<'a, Param0: ::windows::core::IntoParam<'a, super::UIElement>>(
         &self,
         value: Param0,
@@ -373,7 +373,7 @@ impl AutomationAnnotation {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CreateInstance(r#type: AnnotationType) -> ::windows::core::Result<AutomationAnnotation> {
         Self::IAutomationAnnotationFactory(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -385,7 +385,7 @@ impl AutomationAnnotation {
             .from_abi::<AutomationAnnotation>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CreateWithElementParameter<
         'a,
         Param1: ::windows::core::IntoParam<'a, super::UIElement>,
@@ -404,7 +404,7 @@ impl AutomationAnnotation {
             .from_abi::<AutomationAnnotation>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn TypeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationAnnotationStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -415,7 +415,7 @@ impl AutomationAnnotation {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ElementProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationAnnotationStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -426,7 +426,7 @@ impl AutomationAnnotation {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -442,7 +442,7 @@ impl AutomationAnnotation {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -462,7 +462,7 @@ impl AutomationAnnotation {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ClearValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -476,7 +476,7 @@ impl AutomationAnnotation {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ReadLocalValue<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>>(
         &self,
         dp: Param0,
@@ -492,7 +492,7 @@ impl AutomationAnnotation {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetAnimationBaseValue<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -511,7 +511,7 @@ impl AutomationAnnotation {
             .from_abi::<::windows::core::IInspectable>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn RegisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -533,7 +533,7 @@ impl AutomationAnnotation {
             .from_abi::<i64>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn UnregisterPropertyChangedCallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyProperty>,
@@ -552,7 +552,7 @@ impl AutomationAnnotation {
             .ok()
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
@@ -564,7 +564,7 @@ impl AutomationAnnotation {
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation', 'UI_Dispatching'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`, `\"UI_Dispatching\"`*"]
     #[cfg(feature = "UI_Dispatching")]
     pub fn DispatcherQueue(
         &self,
@@ -702,7 +702,7 @@ impl<'a> ::windows::core::IntoParam<'a, super::DependencyObject> for &Automation
 }
 unsafe impl ::core::marker::Send for AutomationAnnotation {}
 unsafe impl ::core::marker::Sync for AutomationAnnotation {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AutomationBulletStyle(pub i32);
@@ -745,7 +745,7 @@ unsafe impl ::windows::core::RuntimeType for AutomationBulletStyle {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AutomationCaretBidiMode(pub i32);
@@ -783,7 +783,7 @@ unsafe impl ::windows::core::RuntimeType for AutomationCaretBidiMode {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AutomationCaretPosition(pub i32);
@@ -822,11 +822,11 @@ unsafe impl ::windows::core::RuntimeType for AutomationCaretPosition {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct AutomationElementIdentifiers(::windows::core::IUnknown);
 impl AutomationElementIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AcceleratorKeyProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -837,7 +837,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AccessKeyProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -848,7 +848,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AutomationIdProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -859,7 +859,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn BoundingRectangleProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -870,7 +870,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ClassNameProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -881,7 +881,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ClickablePointProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -892,7 +892,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ControlTypeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -903,7 +903,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn HasKeyboardFocusProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -914,7 +914,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn HelpTextProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -925,7 +925,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsContentElementProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -936,7 +936,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsControlElementProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -947,7 +947,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsEnabledProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -958,7 +958,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsKeyboardFocusableProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -969,7 +969,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsOffscreenProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -980,7 +980,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsPasswordProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -991,7 +991,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsRequiredForFormProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1002,7 +1002,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ItemStatusProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1013,7 +1013,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ItemTypeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1024,7 +1024,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LabeledByProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1035,7 +1035,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LocalizedControlTypeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1046,7 +1046,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn NameProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1057,7 +1057,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn OrientationProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1068,7 +1068,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LiveSettingProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1079,7 +1079,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ControlledPeersProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1090,7 +1090,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn PositionInSetProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1101,7 +1101,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SizeOfSetProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1112,7 +1112,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LevelProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1123,7 +1123,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AnnotationsProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1134,7 +1134,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LandmarkTypeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1145,7 +1145,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LocalizedLandmarkTypeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1156,7 +1156,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsPeripheralProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1167,7 +1167,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsDataValidForFormProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1178,7 +1178,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn FullDescriptionProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1189,7 +1189,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn DescribedByProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1200,7 +1200,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn FlowsToProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1211,7 +1211,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn FlowsFromProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1222,7 +1222,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CultureProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1233,7 +1233,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn HeadingLevelProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1244,7 +1244,7 @@ impl AutomationElementIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsDialogProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IAutomationElementIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1352,7 +1352,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for AutomationElementIdentifiers {}
 unsafe impl ::core::marker::Sync for AutomationElementIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AutomationFlowDirections(pub i32);
@@ -1392,7 +1392,7 @@ unsafe impl ::windows::core::RuntimeType for AutomationFlowDirections {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AutomationOutlineStyles(pub i32);
@@ -1433,11 +1433,11 @@ unsafe impl ::windows::core::RuntimeType for AutomationOutlineStyles {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct AutomationProperties(::windows::core::IUnknown);
 impl AutomationProperties {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AcceleratorKeyProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1448,7 +1448,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetAcceleratorKey<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1466,7 +1466,7 @@ impl AutomationProperties {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetAcceleratorKey<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1484,7 +1484,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AccessKeyProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1495,7 +1495,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetAccessKey<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<::windows::core::HSTRING> {
@@ -1510,7 +1510,7 @@ impl AutomationProperties {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetAccessKey<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1528,7 +1528,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AutomationIdProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1539,7 +1539,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetAutomationId<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<::windows::core::HSTRING> {
@@ -1554,7 +1554,7 @@ impl AutomationProperties {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetAutomationId<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1572,7 +1572,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn HelpTextProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1583,7 +1583,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetHelpText<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<::windows::core::HSTRING> {
@@ -1598,7 +1598,7 @@ impl AutomationProperties {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetHelpText<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1616,7 +1616,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsRequiredForFormProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1627,7 +1627,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetIsRequiredForForm<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1644,7 +1644,7 @@ impl AutomationProperties {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetIsRequiredForForm<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1661,7 +1661,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ItemStatusProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1672,7 +1672,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetItemStatus<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<::windows::core::HSTRING> {
@@ -1687,7 +1687,7 @@ impl AutomationProperties {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetItemStatus<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1705,7 +1705,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ItemTypeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1716,7 +1716,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetItemType<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<::windows::core::HSTRING> {
@@ -1731,7 +1731,7 @@ impl AutomationProperties {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetItemType<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1749,7 +1749,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LabeledByProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1760,7 +1760,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetLabeledBy<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<super::UIElement> {
@@ -1774,7 +1774,7 @@ impl AutomationProperties {
             .from_abi::<super::UIElement>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetLabeledBy<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1792,7 +1792,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn NameProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1803,7 +1803,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetName<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<::windows::core::HSTRING> {
@@ -1818,7 +1818,7 @@ impl AutomationProperties {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetName<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1836,7 +1836,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LiveSettingProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1847,7 +1847,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation', 'UI_Xaml_Automation_Peers'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`, `\"UI_Xaml_Automation_Peers\"`*"]
     #[cfg(feature = "UI_Xaml_Automation_Peers")]
     pub fn GetLiveSetting<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
@@ -1862,7 +1862,7 @@ impl AutomationProperties {
             .from_abi::<Peers::AutomationLiveSetting>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation', 'UI_Xaml_Automation_Peers'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`, `\"UI_Xaml_Automation_Peers\"`*"]
     #[cfg(feature = "UI_Xaml_Automation_Peers")]
     pub fn SetLiveSetting<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
@@ -1877,7 +1877,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AccessibilityViewProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1888,7 +1888,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation', 'UI_Xaml_Automation_Peers'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`, `\"UI_Xaml_Automation_Peers\"`*"]
     #[cfg(feature = "UI_Xaml_Automation_Peers")]
     pub fn GetAccessibilityView<
         'a,
@@ -1906,7 +1906,7 @@ impl AutomationProperties {
             .from_abi::<Peers::AccessibilityView>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation', 'UI_Xaml_Automation_Peers'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`, `\"UI_Xaml_Automation_Peers\"`*"]
     #[cfg(feature = "UI_Xaml_Automation_Peers")]
     pub fn SetAccessibilityView<
         'a,
@@ -1924,7 +1924,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ControlledPeersProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1935,7 +1935,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetControlledPeers<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -1953,7 +1953,7 @@ impl AutomationProperties {
             .from_abi::<::windows::Foundation::Collections::IVector<super::UIElement>>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn PositionInSetProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -1964,7 +1964,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetPositionInSet<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<i32> {
@@ -1978,7 +1978,7 @@ impl AutomationProperties {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetPositionInSet<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: i32,
@@ -1992,7 +1992,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SizeOfSetProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2003,7 +2003,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetSizeOfSet<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<i32> {
@@ -2017,7 +2017,7 @@ impl AutomationProperties {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetSizeOfSet<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: i32,
@@ -2031,7 +2031,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LevelProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2042,7 +2042,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetLevel<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<i32> {
@@ -2056,7 +2056,7 @@ impl AutomationProperties {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetLevel<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: i32,
@@ -2070,7 +2070,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn AnnotationsProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2081,7 +2081,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetAnnotations<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<AutomationAnnotation>>
@@ -2096,7 +2096,7 @@ impl AutomationProperties {
             .from_abi::<::windows::Foundation::Collections::IVector<AutomationAnnotation>>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LandmarkTypeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2107,7 +2107,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation', 'UI_Xaml_Automation_Peers'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`, `\"UI_Xaml_Automation_Peers\"`*"]
     #[cfg(feature = "UI_Xaml_Automation_Peers")]
     pub fn GetLandmarkType<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
@@ -2122,7 +2122,7 @@ impl AutomationProperties {
             .from_abi::<Peers::AutomationLandmarkType>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation', 'UI_Xaml_Automation_Peers'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`, `\"UI_Xaml_Automation_Peers\"`*"]
     #[cfg(feature = "UI_Xaml_Automation_Peers")]
     pub fn SetLandmarkType<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
@@ -2137,7 +2137,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LocalizedLandmarkTypeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2148,7 +2148,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetLocalizedLandmarkType<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -2166,7 +2166,7 @@ impl AutomationProperties {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetLocalizedLandmarkType<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -2184,7 +2184,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsPeripheralProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2195,7 +2195,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetIsPeripheral<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -2209,7 +2209,7 @@ impl AutomationProperties {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetIsPeripheral<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -2223,7 +2223,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsDataValidForFormProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2234,7 +2234,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetIsDataValidForForm<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -2251,7 +2251,7 @@ impl AutomationProperties {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetIsDataValidForForm<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -2268,7 +2268,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn FullDescriptionProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2279,7 +2279,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetFullDescription<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -2297,7 +2297,7 @@ impl AutomationProperties {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetFullDescription<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -2315,7 +2315,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LocalizedControlTypeProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2326,7 +2326,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetLocalizedControlType<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -2344,7 +2344,7 @@ impl AutomationProperties {
             .from_abi::<::windows::core::HSTRING>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetLocalizedControlType<
         'a,
         Param0: ::windows::core::IntoParam<'a, super::DependencyObject>,
@@ -2362,7 +2362,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn DescribedByProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2373,7 +2373,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetDescribedBy<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<super::DependencyObject>>
@@ -2390,7 +2390,7 @@ impl AutomationProperties {
             )
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn FlowsToProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2401,7 +2401,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetFlowsTo<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<super::DependencyObject>>
@@ -2418,7 +2418,7 @@ impl AutomationProperties {
             )
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn FlowsFromProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2429,7 +2429,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetFlowsFrom<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<super::DependencyObject>>
@@ -2446,7 +2446,7 @@ impl AutomationProperties {
             )
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CultureProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2457,7 +2457,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetCulture<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<i32> {
@@ -2471,7 +2471,7 @@ impl AutomationProperties {
             .from_abi::<i32>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetCulture<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: i32,
@@ -2485,7 +2485,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn HeadingLevelProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2496,7 +2496,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation', 'UI_Xaml_Automation_Peers'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`, `\"UI_Xaml_Automation_Peers\"`*"]
     #[cfg(feature = "UI_Xaml_Automation_Peers")]
     pub fn GetHeadingLevel<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
@@ -2511,7 +2511,7 @@ impl AutomationProperties {
             .from_abi::<Peers::AutomationHeadingLevel>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation', 'UI_Xaml_Automation_Peers'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`, `\"UI_Xaml_Automation_Peers\"`*"]
     #[cfg(feature = "UI_Xaml_Automation_Peers")]
     pub fn SetHeadingLevel<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
@@ -2526,7 +2526,7 @@ impl AutomationProperties {
             .ok()
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsDialogProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IAutomationPropertiesStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2537,7 +2537,7 @@ impl AutomationProperties {
             .from_abi::<super::DependencyProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GetIsDialog<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
     ) -> ::windows::core::Result<bool> {
@@ -2551,7 +2551,7 @@ impl AutomationProperties {
             .from_abi::<bool>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SetIsDialog<'a, Param0: ::windows::core::IntoParam<'a, super::DependencyObject>>(
         element: Param0,
         value: bool,
@@ -2655,7 +2655,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for AutomationProperties {}
 unsafe impl ::core::marker::Sync for AutomationProperties {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct AutomationProperty(::windows::core::IUnknown);
 impl AutomationProperty {}
@@ -2731,7 +2731,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a A
 }
 unsafe impl ::core::marker::Send for AutomationProperty {}
 unsafe impl ::core::marker::Sync for AutomationProperty {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AutomationStyleId(pub i32);
@@ -2780,7 +2780,7 @@ unsafe impl ::windows::core::RuntimeType for AutomationStyleId {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AutomationTextDecorationLineStyle(pub i32);
@@ -2835,7 +2835,7 @@ unsafe impl ::windows::core::RuntimeType for AutomationTextDecorationLineStyle {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct AutomationTextEditChangeType(pub i32);
@@ -2875,11 +2875,11 @@ unsafe impl ::windows::core::RuntimeType for AutomationTextEditChangeType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct DockPatternIdentifiers(::windows::core::IUnknown);
 impl DockPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn DockPositionProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IDockPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -2980,7 +2980,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for DockPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for DockPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DockPosition(pub i32);
@@ -3020,11 +3020,11 @@ unsafe impl ::windows::core::RuntimeType for DockPosition {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct DragPatternIdentifiers(::windows::core::IUnknown);
 impl DragPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn DropEffectProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IDragPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3035,7 +3035,7 @@ impl DragPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn DropEffectsProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IDragPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3046,7 +3046,7 @@ impl DragPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn GrabbedItemsProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IDragPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3057,7 +3057,7 @@ impl DragPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsGrabbedProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IDragPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3158,11 +3158,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for DragPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for DragPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct DropTargetPatternIdentifiers(::windows::core::IUnknown);
 impl DropTargetPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn DropTargetEffectProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IDropTargetPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3173,7 +3173,7 @@ impl DropTargetPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn DropTargetEffectsProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IDropTargetPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3281,11 +3281,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for DropTargetPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for DropTargetPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct ExpandCollapsePatternIdentifiers(::windows::core::IUnknown);
 impl ExpandCollapsePatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ExpandCollapseStateProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IExpandCollapsePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3393,7 +3393,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for ExpandCollapsePatternIdentifiers {}
 unsafe impl ::core::marker::Sync for ExpandCollapsePatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ExpandCollapseState(pub i32);
@@ -3431,11 +3431,11 @@ unsafe impl ::windows::core::RuntimeType for ExpandCollapseState {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct GridItemPatternIdentifiers(::windows::core::IUnknown);
 impl GridItemPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ColumnProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IGridItemPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3446,7 +3446,7 @@ impl GridItemPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ColumnSpanProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IGridItemPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3457,7 +3457,7 @@ impl GridItemPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ContainingGridProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IGridItemPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3468,7 +3468,7 @@ impl GridItemPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn RowProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IGridItemPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3479,7 +3479,7 @@ impl GridItemPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn RowSpanProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IGridItemPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3585,11 +3585,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for GridItemPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for GridItemPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct GridPatternIdentifiers(::windows::core::IUnknown);
 impl GridPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ColumnCountProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IGridPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3600,7 +3600,7 @@ impl GridPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn RowCountProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IGridPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5209,11 +5209,11 @@ pub struct IWindowPatternIdentifiersStatics_Vtbl {
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct MultipleViewPatternIdentifiers(::windows::core::IUnknown);
 impl MultipleViewPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CurrentViewProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IMultipleViewPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5224,7 +5224,7 @@ impl MultipleViewPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SupportedViewsProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IMultipleViewPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5332,11 +5332,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for MultipleViewPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for MultipleViewPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct RangeValuePatternIdentifiers(::windows::core::IUnknown);
 impl RangeValuePatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsReadOnlyProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IRangeValuePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5347,7 +5347,7 @@ impl RangeValuePatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn LargeChangeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IRangeValuePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5358,7 +5358,7 @@ impl RangeValuePatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn MaximumProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IRangeValuePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5369,7 +5369,7 @@ impl RangeValuePatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn MinimumProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IRangeValuePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5380,7 +5380,7 @@ impl RangeValuePatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SmallChangeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IRangeValuePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5391,7 +5391,7 @@ impl RangeValuePatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ValueProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IRangeValuePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5499,7 +5499,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for RangeValuePatternIdentifiers {}
 unsafe impl ::core::marker::Sync for RangeValuePatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct RowOrColumnMajor(pub i32);
@@ -5536,7 +5536,7 @@ unsafe impl ::windows::core::RuntimeType for RowOrColumnMajor {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ScrollAmount(pub i32);
@@ -5575,11 +5575,11 @@ unsafe impl ::windows::core::RuntimeType for ScrollAmount {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct ScrollPatternIdentifiers(::windows::core::IUnknown);
 impl ScrollPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn HorizontallyScrollableProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IScrollPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5590,7 +5590,7 @@ impl ScrollPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn HorizontalScrollPercentProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IScrollPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5601,7 +5601,7 @@ impl ScrollPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn HorizontalViewSizeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IScrollPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5612,7 +5612,7 @@ impl ScrollPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn NoScroll() -> ::windows::core::Result<f64> {
         Self::IScrollPatternIdentifiersStatics(|this| unsafe {
             let mut result__: f64 = ::core::mem::zeroed();
@@ -5623,7 +5623,7 @@ impl ScrollPatternIdentifiers {
             .from_abi::<f64>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn VerticallyScrollableProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IScrollPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5634,7 +5634,7 @@ impl ScrollPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn VerticalScrollPercentProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IScrollPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5645,7 +5645,7 @@ impl ScrollPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn VerticalViewSizeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IScrollPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5751,11 +5751,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for ScrollPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for ScrollPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct SelectionItemPatternIdentifiers(::windows::core::IUnknown);
 impl SelectionItemPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsSelectedProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ISelectionItemPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5766,7 +5766,7 @@ impl SelectionItemPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SelectionContainerProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ISelectionItemPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5874,11 +5874,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for SelectionItemPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for SelectionItemPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct SelectionPatternIdentifiers(::windows::core::IUnknown);
 impl SelectionPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CanSelectMultipleProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ISelectionPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5889,7 +5889,7 @@ impl SelectionPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsSelectionRequiredProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ISelectionPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -5900,7 +5900,7 @@ impl SelectionPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn SelectionProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ISelectionPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6006,11 +6006,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for SelectionPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for SelectionPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct SpreadsheetItemPatternIdentifiers(::windows::core::IUnknown);
 impl SpreadsheetItemPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn FormulaProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ISpreadsheetItemPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6118,11 +6118,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for SpreadsheetItemPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for SpreadsheetItemPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct StylesPatternIdentifiers(::windows::core::IUnknown);
 impl StylesPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ExtendedPropertiesProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IStylesPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6133,7 +6133,7 @@ impl StylesPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn FillColorProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IStylesPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6144,7 +6144,7 @@ impl StylesPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn FillPatternColorProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IStylesPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6155,7 +6155,7 @@ impl StylesPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn FillPatternStyleProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IStylesPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6166,7 +6166,7 @@ impl StylesPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ShapeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IStylesPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6177,7 +6177,7 @@ impl StylesPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn StyleIdProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IStylesPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6188,7 +6188,7 @@ impl StylesPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn StyleNameProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IStylesPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6294,7 +6294,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for StylesPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for StylesPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct SupportedTextSelection(pub i32);
@@ -6333,7 +6333,7 @@ unsafe impl ::windows::core::RuntimeType for SupportedTextSelection {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct SynchronizedInputType(pub i32);
@@ -6375,11 +6375,11 @@ unsafe impl ::windows::core::RuntimeType for SynchronizedInputType {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct TableItemPatternIdentifiers(::windows::core::IUnknown);
 impl TableItemPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ColumnHeaderItemsProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITableItemPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6390,7 +6390,7 @@ impl TableItemPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn RowHeaderItemsProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITableItemPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6496,11 +6496,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for TableItemPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for TableItemPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct TablePatternIdentifiers(::windows::core::IUnknown);
 impl TablePatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ColumnHeadersProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITablePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6511,7 +6511,7 @@ impl TablePatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn RowHeadersProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITablePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6522,7 +6522,7 @@ impl TablePatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn RowOrColumnMajorProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITablePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6624,11 +6624,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for TablePatternIdentifiers {}
 unsafe impl ::core::marker::Sync for TablePatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct TogglePatternIdentifiers(::windows::core::IUnknown);
 impl TogglePatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ToggleStateProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITogglePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6734,7 +6734,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for TogglePatternIdentifiers {}
 unsafe impl ::core::marker::Sync for TogglePatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ToggleState(pub i32);
@@ -6771,11 +6771,11 @@ unsafe impl ::windows::core::RuntimeType for ToggleState {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct TransformPattern2Identifiers(::windows::core::IUnknown);
 impl TransformPattern2Identifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CanZoomProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITransformPattern2IdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6786,7 +6786,7 @@ impl TransformPattern2Identifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ZoomLevelProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITransformPattern2IdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6797,7 +6797,7 @@ impl TransformPattern2Identifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn MaxZoomProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITransformPattern2IdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6808,7 +6808,7 @@ impl TransformPattern2Identifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn MinZoomProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITransformPattern2IdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6916,11 +6916,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for TransformPattern2Identifiers {}
 unsafe impl ::core::marker::Sync for TransformPattern2Identifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct TransformPatternIdentifiers(::windows::core::IUnknown);
 impl TransformPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CanMoveProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITransformPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6931,7 +6931,7 @@ impl TransformPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CanResizeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITransformPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -6942,7 +6942,7 @@ impl TransformPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CanRotateProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::ITransformPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7048,11 +7048,11 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for TransformPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for TransformPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct ValuePatternIdentifiers(::windows::core::IUnknown);
 impl ValuePatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsReadOnlyProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IValuePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7063,7 +7063,7 @@ impl ValuePatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn ValueProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IValuePatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7165,7 +7165,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for ValuePatternIdentifiers {}
 unsafe impl ::core::marker::Sync for ValuePatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct WindowInteractionState(pub i32);
@@ -7206,11 +7206,11 @@ unsafe impl ::windows::core::RuntimeType for WindowInteractionState {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 pub struct WindowPatternIdentifiers(::windows::core::IUnknown);
 impl WindowPatternIdentifiers {
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CanMaximizeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IWindowPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7221,7 +7221,7 @@ impl WindowPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn CanMinimizeProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IWindowPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7232,7 +7232,7 @@ impl WindowPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsModalProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IWindowPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7243,7 +7243,7 @@ impl WindowPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn IsTopmostProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IWindowPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7254,7 +7254,7 @@ impl WindowPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn WindowInteractionStateProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IWindowPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7265,7 +7265,7 @@ impl WindowPatternIdentifiers {
             .from_abi::<AutomationProperty>(result__)
         })
     }
-    #[doc = "*Required features: 'UI_Xaml_Automation'*"]
+    #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
     pub fn WindowVisualStateProperty() -> ::windows::core::Result<AutomationProperty> {
         Self::IWindowPatternIdentifiersStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -7371,7 +7371,7 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for WindowPatternIdentifiers {}
 unsafe impl ::core::marker::Sync for WindowPatternIdentifiers {}
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct WindowVisualState(pub i32);
@@ -7408,7 +7408,7 @@ unsafe impl ::windows::core::RuntimeType for WindowVisualState {
         Ok(*from)
     }
 }
-#[doc = "*Required features: 'UI_Xaml_Automation'*"]
+#[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct ZoomUnit(pub i32);
