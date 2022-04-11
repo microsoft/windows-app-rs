@@ -1,7 +1,11 @@
 use quote::*;
 use rayon::prelude::*;
-use std::{collections::{HashSet, HashMap}, fs::{OpenOptions}, io::prelude::*};
-use windows_metadata::{reader::{TypeTree, TypeReader, Type}};
+use std::{
+    collections::{HashMap, HashSet},
+    fs::OpenOptions,
+    io::prelude::*,
+};
+use windows_metadata::reader::{Type, TypeReader, TypeTree};
 
 fn main() {
     let start = std::time::Instant::now();
@@ -38,15 +42,14 @@ fn parse_manifest(map: &mut HashMap<String, String>) {
         let text = std::fs::read_to_string(entry.unwrap().path()).unwrap();
         let doc = roxmltree::Document::parse(&text).unwrap();
 
-        doc
-        .descendants()
-        .filter(|n| n.is_element() && n.has_tag_name("activatableClass"))
-        .for_each(|n| {
-            let class = n.attribute("name").unwrap();
-            let library = n.parent_element().unwrap().attribute("name").unwrap();
-            map.insert(class.to_string(), library.to_string());
-        });
-    };
+        doc.descendants()
+            .filter(|n| n.is_element() && n.has_tag_name("activatableClass"))
+            .for_each(|n| {
+                let class = n.attribute("name").unwrap();
+                let library = n.parent_element().unwrap().attribute("name").unwrap();
+                map.insert(class.to_string(), library.to_string());
+            });
+    }
 }
 
 fn write_toml(output: &std::path::Path, tree: &TypeTree) {
