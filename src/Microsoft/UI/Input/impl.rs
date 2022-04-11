@@ -88,8 +88,11 @@ impl IPointerPointTransform_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IPointerPointTransform, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                IPointerPointTransform,
+                OFFSET,
+            >(),
             Inverse: Inverse::<Identity, Impl, OFFSET>,
             TryTransform: TryTransform::<Identity, Impl, OFFSET>,
             TryTransformBounds: TryTransformBounds::<Identity, Impl, OFFSET>,

@@ -21,7 +21,7 @@ impl AccessKeyDisplayDismissedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             AccessKeyDisplayDismissedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -124,7 +124,7 @@ impl AccessKeyDisplayRequestedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             AccessKeyDisplayRequestedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -240,7 +240,7 @@ impl AccessKeyInvokedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             AccessKeyInvokedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -441,7 +441,7 @@ impl AccessKeyManager {
         static mut SHARED: ::windows::core::FactoryCache<
             AccessKeyManager,
             IAccessKeyManagerStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -829,7 +829,7 @@ impl ContextRequestedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             ContextRequestedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -1052,7 +1052,7 @@ impl<
     > DoubleTappedEventHandlerBox<F>
 {
     const VTABLE: DoubleTappedEventHandler_Vtbl = DoubleTappedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -1135,7 +1135,7 @@ unsafe impl ::windows::core::RuntimeType for DoubleTappedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct DoubleTappedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -1158,7 +1158,7 @@ impl DoubleTappedRoutedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             DoubleTappedRoutedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`, `\"UI_Input\"`*"]
@@ -1443,7 +1443,7 @@ impl FindNextElementOptions {
         static mut SHARED: ::windows::core::FactoryCache<
             FindNextElementOptions,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -2030,7 +2030,7 @@ impl FocusManager {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<FocusManager, IFocusManagerStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -2812,7 +2812,7 @@ impl<
     > HoldingEventHandlerBox<F>
 {
     const VTABLE: HoldingEventHandler_Vtbl = HoldingEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -2893,7 +2893,7 @@ unsafe impl ::windows::core::RuntimeType for HoldingEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct HoldingEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -2916,7 +2916,7 @@ impl HoldingRoutedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             HoldingRoutedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`, `\"UI_Input\"`*"]
@@ -3106,7 +3106,7 @@ unsafe impl ::windows::core::Interface for IAccessKeyDisplayDismissedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAccessKeyDisplayDismissedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -3119,7 +3119,7 @@ unsafe impl ::windows::core::Interface for IAccessKeyDisplayRequestedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAccessKeyDisplayRequestedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PressedKeys: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -3136,7 +3136,7 @@ unsafe impl ::windows::core::Interface for IAccessKeyInvokedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAccessKeyInvokedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Handled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -3157,7 +3157,7 @@ unsafe impl ::windows::core::Interface for IAccessKeyManager {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAccessKeyManager_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -3170,7 +3170,7 @@ unsafe impl ::windows::core::Interface for IAccessKeyManagerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAccessKeyManagerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsDisplayModeEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -3207,7 +3207,7 @@ unsafe impl ::windows::core::Interface for ICanExecuteRequestedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICanExecuteRequestedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Parameter: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -3232,7 +3232,7 @@ unsafe impl ::windows::core::Interface for ICharacterReceivedRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICharacterReceivedRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Character: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut u16,
@@ -3396,7 +3396,7 @@ unsafe impl ::windows::core::Interface for ICommand {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICommand_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CanExecuteChanged: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -3427,7 +3427,7 @@ unsafe impl ::windows::core::Interface for IContextRequestedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IContextRequestedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Handled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -3454,7 +3454,7 @@ unsafe impl ::windows::core::Interface for IDoubleTappedRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDoubleTappedRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Input")]
     pub PointerDeviceType: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -3487,7 +3487,7 @@ unsafe impl ::windows::core::Interface for IExecuteRequestedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IExecuteRequestedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Parameter: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -3504,7 +3504,7 @@ unsafe impl ::windows::core::Interface for IFindNextElementOptions {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFindNextElementOptions_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub SearchRoot: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3551,7 +3551,7 @@ unsafe impl ::windows::core::Interface for IFocusManager {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFocusManager_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -3564,7 +3564,7 @@ unsafe impl ::windows::core::Interface for IFocusManagerGotFocusEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFocusManagerGotFocusEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub NewFocusedElement: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3585,7 +3585,7 @@ unsafe impl ::windows::core::Interface for IFocusManagerLostFocusEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFocusManagerLostFocusEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OldFocusedElement: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3606,7 +3606,7 @@ unsafe impl ::windows::core::Interface for IFocusManagerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFocusManagerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GotFocus: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -3725,7 +3725,7 @@ unsafe impl ::windows::core::Interface for IFocusMovementResult {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFocusMovementResult_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Succeeded: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -3742,7 +3742,7 @@ unsafe impl ::windows::core::Interface for IGettingFocusEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGettingFocusEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OldFocusedElement: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3808,7 +3808,7 @@ unsafe impl ::windows::core::Interface for IHoldingRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IHoldingRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Input")]
     pub PointerDeviceType: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -3848,7 +3848,7 @@ unsafe impl ::windows::core::Interface for IInertiaExpansionBehavior {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInertiaExpansionBehavior_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DesiredDeceleration: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -3877,7 +3877,7 @@ unsafe impl ::windows::core::Interface for IInertiaRotationBehavior {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInertiaRotationBehavior_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DesiredDeceleration: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -3906,7 +3906,7 @@ unsafe impl ::windows::core::Interface for IInertiaTranslationBehavior {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInertiaTranslationBehavior_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DesiredDeceleration: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -3935,7 +3935,7 @@ unsafe impl ::windows::core::Interface for IInputScope {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputScope_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Names: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3952,7 +3952,7 @@ unsafe impl ::windows::core::Interface for IInputScopeName {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputScopeName_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub NameValue: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut InputScopeNameValue,
@@ -3973,7 +3973,7 @@ unsafe impl ::windows::core::Interface for IInputScopeNameFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputScopeNameFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         namevalue: InputScopeNameValue,
@@ -3991,7 +3991,7 @@ unsafe impl ::windows::core::Interface for IKeyRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IKeyRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Key: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::System::VirtualKey,
@@ -4028,7 +4028,7 @@ unsafe impl ::windows::core::Interface for IKeyboardAccelerator {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IKeyboardAccelerator_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Key: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::System::VirtualKey,
@@ -4082,7 +4082,7 @@ unsafe impl ::windows::core::Interface for IKeyboardAcceleratorFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IKeyboardAcceleratorFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -4101,7 +4101,7 @@ unsafe impl ::windows::core::Interface for IKeyboardAcceleratorInvokedEventArgs 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IKeyboardAcceleratorInvokedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Handled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -4130,7 +4130,7 @@ unsafe impl ::windows::core::Interface for IKeyboardAcceleratorStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IKeyboardAcceleratorStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeyProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4159,7 +4159,7 @@ unsafe impl ::windows::core::Interface for ILosingFocusEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILosingFocusEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OldFocusedElement: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4225,7 +4225,7 @@ unsafe impl ::windows::core::Interface for IManipulationCompletedRoutedEventArgs
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationCompletedRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Container: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4279,7 +4279,7 @@ unsafe impl ::windows::core::Interface for IManipulationDeltaRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationDeltaRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Container: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4342,7 +4342,7 @@ unsafe impl ::windows::core::Interface for IManipulationInertiaStartingRoutedEve
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationInertiaStartingRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Container: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4419,7 +4419,7 @@ unsafe impl ::windows::core::Interface for IManipulationPivot {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationPivot_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Center: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -4448,7 +4448,7 @@ unsafe impl ::windows::core::Interface for IManipulationPivotFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationPivotFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithCenterAndRadius: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         center: ::windows::Foundation::Point,
@@ -4468,7 +4468,7 @@ unsafe impl ::windows::core::Interface for IManipulationStartedRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationStartedRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Container: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4513,7 +4513,7 @@ unsafe impl ::windows::core::Interface for IManipulationStartedRoutedEventArgsFa
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationStartedRoutedEventArgsFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -4532,7 +4532,7 @@ unsafe impl ::windows::core::Interface for IManipulationStartingRoutedEventArgs 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationStartingRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Mode: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ManipulationModes,
@@ -4577,7 +4577,7 @@ unsafe impl ::windows::core::Interface for INoFocusCandidateFoundEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct INoFocusCandidateFoundEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Direction: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut FocusNavigationDirection,
@@ -4606,7 +4606,7 @@ unsafe impl ::windows::core::Interface for IPointer {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointer_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PointerId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut u32,
@@ -4638,7 +4638,7 @@ unsafe impl ::windows::core::Interface for IPointerRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointerRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Pointer: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4687,7 +4687,7 @@ unsafe impl ::windows::core::Interface for IProcessKeyboardAcceleratorEventArgs 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IProcessKeyboardAcceleratorEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Key: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::System::VirtualKey,
@@ -4716,7 +4716,7 @@ unsafe impl ::windows::core::Interface for IRightTappedRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRightTappedRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Input")]
     pub PointerDeviceType: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -4749,7 +4749,7 @@ unsafe impl ::windows::core::Interface for IStandardUICommand {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStandardUICommand_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Kind: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut StandardUICommandKind,
@@ -4770,7 +4770,7 @@ unsafe impl ::windows::core::Interface for IStandardUICommandFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStandardUICommandFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -4796,7 +4796,7 @@ unsafe impl ::windows::core::Interface for IStandardUICommandStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStandardUICommandStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KindProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4813,7 +4813,7 @@ unsafe impl ::windows::core::Interface for ITappedRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITappedRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Input")]
     pub PointerDeviceType: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -4846,7 +4846,7 @@ unsafe impl ::windows::core::Interface for IXamlUICommand {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlUICommand_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Label: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -4929,7 +4929,7 @@ unsafe impl ::windows::core::Interface for IXamlUICommandFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlUICommandFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -4948,7 +4948,7 @@ unsafe impl ::windows::core::Interface for IXamlUICommandStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlUICommandStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub LabelProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5382,7 +5382,7 @@ impl InputScope {
         static mut SHARED: ::windows::core::FactoryCache<
             InputScope,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -5663,7 +5663,7 @@ impl InputScopeName {
         static mut SHARED: ::windows::core::FactoryCache<
             InputScopeName,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -5864,7 +5864,7 @@ impl InputScopeName {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<InputScopeName, IInputScopeNameFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6104,7 +6104,7 @@ impl<
     > KeyEventHandlerBox<F>
 {
     const VTABLE: KeyEventHandler_Vtbl = KeyEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -6185,7 +6185,7 @@ unsafe impl ::windows::core::RuntimeType for KeyEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct KeyEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -6796,7 +6796,7 @@ impl KeyboardAccelerator {
         static mut SHARED: ::windows::core::FactoryCache<
             KeyboardAccelerator,
             IKeyboardAcceleratorFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -6809,7 +6809,7 @@ impl KeyboardAccelerator {
         static mut SHARED: ::windows::core::FactoryCache<
             KeyboardAccelerator,
             IKeyboardAcceleratorStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -7465,7 +7465,7 @@ impl<
     > ManipulationCompletedEventHandlerBox<F>
 {
     const VTABLE: ManipulationCompletedEventHandler_Vtbl = ManipulationCompletedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -7549,7 +7549,7 @@ unsafe impl ::windows::core::RuntimeType for ManipulationCompletedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ManipulationCompletedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -7572,7 +7572,7 @@ impl ManipulationCompletedRoutedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationCompletedRoutedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -7864,7 +7864,7 @@ impl<
     > ManipulationDeltaEventHandlerBox<F>
 {
     const VTABLE: ManipulationDeltaEventHandler_Vtbl = ManipulationDeltaEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -7947,7 +7947,7 @@ unsafe impl ::windows::core::RuntimeType for ManipulationDeltaEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ManipulationDeltaEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -7970,7 +7970,7 @@ impl ManipulationDeltaRoutedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationDeltaRoutedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -8282,7 +8282,7 @@ impl<
 {
     const VTABLE: ManipulationInertiaStartingEventHandler_Vtbl =
         ManipulationInertiaStartingEventHandler_Vtbl {
-            base: ::windows::core::IUnknownVtbl {
+            base__: ::windows::core::IUnknownVtbl {
                 QueryInterface: Self::QueryInterface,
                 AddRef: Self::AddRef,
                 Release: Self::Release,
@@ -8366,7 +8366,7 @@ unsafe impl ::windows::core::RuntimeType for ManipulationInertiaStartingEventHan
 #[repr(C)]
 #[doc(hidden)]
 pub struct ManipulationInertiaStartingEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -8389,7 +8389,7 @@ impl ManipulationInertiaStartingRoutedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationInertiaStartingRoutedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -8788,7 +8788,7 @@ impl ManipulationPivot {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationPivot,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -8869,7 +8869,7 @@ impl ManipulationPivot {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationPivot,
             IManipulationPivotFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -9012,7 +9012,7 @@ impl<
     > ManipulationStartedEventHandlerBox<F>
 {
     const VTABLE: ManipulationStartedEventHandler_Vtbl = ManipulationStartedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -9095,7 +9095,7 @@ unsafe impl ::windows::core::RuntimeType for ManipulationStartedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ManipulationStartedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -9240,7 +9240,7 @@ impl ManipulationStartedRoutedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationStartedRoutedEventArgs,
             IManipulationStartedRoutedEventArgsFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -9416,7 +9416,7 @@ impl<
     > ManipulationStartingEventHandlerBox<F>
 {
     const VTABLE: ManipulationStartingEventHandler_Vtbl = ManipulationStartingEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -9500,7 +9500,7 @@ unsafe impl ::windows::core::RuntimeType for ManipulationStartingEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ManipulationStartingEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -9523,7 +9523,7 @@ impl ManipulationStartingRoutedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationStartingRoutedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -10108,7 +10108,7 @@ impl<
     > PointerEventHandlerBox<F>
 {
     const VTABLE: PointerEventHandler_Vtbl = PointerEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -10189,7 +10189,7 @@ unsafe impl ::windows::core::RuntimeType for PointerEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct PointerEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -10606,7 +10606,7 @@ impl<
     > RightTappedEventHandlerBox<F>
 {
     const VTABLE: RightTappedEventHandler_Vtbl = RightTappedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -10689,7 +10689,7 @@ unsafe impl ::windows::core::RuntimeType for RightTappedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct RightTappedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -10712,7 +10712,7 @@ impl RightTappedRoutedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             RightTappedRoutedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`, `\"UI_Input\"`*"]
@@ -11457,7 +11457,7 @@ impl StandardUICommand {
         static mut SHARED: ::windows::core::FactoryCache<
             StandardUICommand,
             IStandardUICommandFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -11470,7 +11470,7 @@ impl StandardUICommand {
         static mut SHARED: ::windows::core::FactoryCache<
             StandardUICommand,
             IStandardUICommandStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -11730,7 +11730,7 @@ impl<
     > TappedEventHandlerBox<F>
 {
     const VTABLE: TappedEventHandler_Vtbl = TappedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -11811,7 +11811,7 @@ unsafe impl ::windows::core::RuntimeType for TappedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct TappedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -11834,7 +11834,7 @@ impl TappedRoutedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             TappedRoutedEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Input\"`*"]
@@ -12692,7 +12692,7 @@ impl XamlUICommand {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<XamlUICommand, IXamlUICommandFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -12703,7 +12703,7 @@ impl XamlUICommand {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<XamlUICommand, IXamlUICommandStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

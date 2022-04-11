@@ -16,7 +16,7 @@ unsafe impl ::windows::core::Interface for ISceneLightingEffect {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISceneLightingEffect_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AmbientAmount: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f32,
@@ -69,7 +69,7 @@ unsafe impl ::windows::core::Interface for ISceneLightingEffect2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISceneLightingEffect2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ReflectanceModel: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut SceneLightingEffectReflectanceModel,
@@ -95,7 +95,7 @@ impl SceneLightingEffect {
         static mut SHARED: ::windows::core::FactoryCache<
             SceneLightingEffect,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Composition_Effects\"`*"]

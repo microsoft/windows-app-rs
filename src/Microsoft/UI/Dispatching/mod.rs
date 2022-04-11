@@ -173,7 +173,7 @@ impl DispatcherQueue {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<DispatcherQueue, IDispatcherQueueStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"CoreMessagingXP.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -313,7 +313,7 @@ impl DispatcherQueueController {
         static mut SHARED: ::windows::core::FactoryCache<
             DispatcherQueueController,
             IDispatcherQueueControllerStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"CoreMessagingXP.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -433,7 +433,7 @@ impl<F: FnMut() -> ::windows::core::Result<()> + ::core::marker::Send + 'static>
     DispatcherQueueHandlerBox<F>
 {
     const VTABLE: DispatcherQueueHandler_Vtbl = DispatcherQueueHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -512,7 +512,7 @@ unsafe impl ::windows::core::RuntimeType for DispatcherQueueHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct DispatcherQueueHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -875,7 +875,7 @@ unsafe impl ::windows::core::Interface for IDispatcherQueue {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDispatcherQueue_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateTimer: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -921,7 +921,7 @@ unsafe impl ::windows::core::Interface for IDispatcherQueue2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDispatcherQueue2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HasThreadAccess: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -938,7 +938,7 @@ unsafe impl ::windows::core::Interface for IDispatcherQueueController {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDispatcherQueueController_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DispatcherQueue: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -959,7 +959,7 @@ unsafe impl ::windows::core::Interface for IDispatcherQueueControllerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDispatcherQueueControllerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateOnDedicatedThread: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -980,7 +980,7 @@ unsafe impl ::windows::core::Interface for IDispatcherQueueShutdownStartingEvent
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDispatcherQueueShutdownStartingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetDeferral: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -997,7 +997,7 @@ unsafe impl ::windows::core::Interface for IDispatcherQueueStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDispatcherQueueStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetForCurrentThread: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1014,7 +1014,7 @@ unsafe impl ::windows::core::Interface for IDispatcherQueueTimer {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDispatcherQueueTimer_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Interval: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::TimeSpan,

@@ -30,7 +30,7 @@ impl IBindableIterable_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IBindableIterable, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IBindableIterable, OFFSET>(),
             First: First::<Identity, Impl, OFFSET>,
         }
     }
@@ -110,7 +110,7 @@ impl IBindableIterator_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IBindableIterator, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IBindableIterator, OFFSET>(),
             Current: Current::<Identity, Impl, OFFSET>,
             HasCurrent: HasCurrent::<Identity, Impl, OFFSET>,
             MoveNext: MoveNext::<Identity, Impl, OFFSET>,
@@ -176,7 +176,7 @@ impl IBindableObservableVector_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IBindableObservableVector,
                 OFFSET,
@@ -382,7 +382,7 @@ impl IBindableVector_Vtbl {
             (*this).Clear().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IBindableVector, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IBindableVector, OFFSET>(),
             GetAt: GetAt::<Identity, Impl, OFFSET>,
             Size: Size::<Identity, Impl, OFFSET>,
             GetView: GetView::<Identity, Impl, OFFSET>,
@@ -481,7 +481,8 @@ impl IBindableVectorView_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IBindableVectorView, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IBindableVectorView, OFFSET>(
+            ),
             GetAt: GetAt::<Identity, Impl, OFFSET>,
             Size: Size::<Identity, Impl, OFFSET>,
             IndexOf: IndexOf::<Identity, Impl, OFFSET>,
@@ -545,7 +546,7 @@ impl INotifyCollectionChanged_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 INotifyCollectionChanged,
                 OFFSET,

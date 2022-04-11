@@ -5,8 +5,252 @@
     clashing_extern_declarations,
     clippy::all
 )]
+#[cfg(feature = "UI_Input_Experimental")]
+pub mod Experimental;
 #[cfg(feature = "UI_Input_Interop")]
 pub mod Interop;
+#[doc = "*Required features: `\"UI_Input\"`*"]
+#[repr(transparent)]
+pub struct CharacterReceivedEventArgs(::windows::core::IUnknown);
+impl CharacterReceivedEventArgs {
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn Handled(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__: bool = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).Handled)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetHandled)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn KeyCode(&self) -> ::windows::core::Result<u32> {
+        let this = self;
+        unsafe {
+            let mut result__: u32 = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).KeyCode)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<u32>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn KeyStatus(&self) -> ::windows::core::Result<PhysicalKeyStatus> {
+        let this = self;
+        unsafe {
+            let mut result__: PhysicalKeyStatus = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).KeyStatus)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<PhysicalKeyStatus>(result__)
+        }
+    }
+}
+impl ::core::clone::Clone for CharacterReceivedEventArgs {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for CharacterReceivedEventArgs {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for CharacterReceivedEventArgs {}
+impl ::core::fmt::Debug for CharacterReceivedEventArgs {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CharacterReceivedEventArgs")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CharacterReceivedEventArgs {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"rc(Microsoft.UI.Input.CharacterReceivedEventArgs;{36122718-9263-592b-8d87-8f86543ffc95})",
+    );
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for CharacterReceivedEventArgs {
+    type Vtable = ICharacterReceivedEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        <ICharacterReceivedEventArgs as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for CharacterReceivedEventArgs {
+    const NAME: &'static str = "Microsoft.UI.Input.CharacterReceivedEventArgs";
+}
+impl ::core::convert::From<CharacterReceivedEventArgs> for ::windows::core::IUnknown {
+    fn from(value: CharacterReceivedEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CharacterReceivedEventArgs> for ::windows::core::IUnknown {
+    fn from(value: &CharacterReceivedEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for CharacterReceivedEventArgs {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for &'a CharacterReceivedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<CharacterReceivedEventArgs> for ::windows::core::IInspectable {
+    fn from(value: CharacterReceivedEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CharacterReceivedEventArgs> for ::windows::core::IInspectable {
+    fn from(value: &CharacterReceivedEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for CharacterReceivedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a CharacterReceivedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for CharacterReceivedEventArgs {}
+unsafe impl ::core::marker::Sync for CharacterReceivedEventArgs {}
+#[doc = "*Required features: `\"UI_Input\"`*"]
+#[repr(transparent)]
+pub struct ContextMenuKeyEventArgs(::windows::core::IUnknown);
+impl ContextMenuKeyEventArgs {
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn Handled(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__: bool = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).Handled)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetHandled)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
+        }
+    }
+}
+impl ::core::clone::Clone for ContextMenuKeyEventArgs {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for ContextMenuKeyEventArgs {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for ContextMenuKeyEventArgs {}
+impl ::core::fmt::Debug for ContextMenuKeyEventArgs {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("ContextMenuKeyEventArgs")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for ContextMenuKeyEventArgs {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"rc(Microsoft.UI.Input.ContextMenuKeyEventArgs;{f6025762-9426-541a-b647-037abdbecefc})",
+    );
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for ContextMenuKeyEventArgs {
+    type Vtable = IContextMenuKeyEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        <IContextMenuKeyEventArgs as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for ContextMenuKeyEventArgs {
+    const NAME: &'static str = "Microsoft.UI.Input.ContextMenuKeyEventArgs";
+}
+impl ::core::convert::From<ContextMenuKeyEventArgs> for ::windows::core::IUnknown {
+    fn from(value: ContextMenuKeyEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&ContextMenuKeyEventArgs> for ::windows::core::IUnknown {
+    fn from(value: &ContextMenuKeyEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for ContextMenuKeyEventArgs {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a ContextMenuKeyEventArgs {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<ContextMenuKeyEventArgs> for ::windows::core::IInspectable {
+    fn from(value: ContextMenuKeyEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&ContextMenuKeyEventArgs> for ::windows::core::IInspectable {
+    fn from(value: &ContextMenuKeyEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for ContextMenuKeyEventArgs {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a ContextMenuKeyEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for ContextMenuKeyEventArgs {}
+unsafe impl ::core::marker::Sync for ContextMenuKeyEventArgs {}
 #[repr(C)]
 #[doc = "*Required features: `\"UI_Input\"`*"]
 pub struct CrossSlideThresholds {
@@ -386,7 +630,7 @@ impl GestureRecognizer {
         static mut SHARED: ::windows::core::FactoryCache<
             GestureRecognizer,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Input.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Input\"`*"]
@@ -1551,6 +1795,56 @@ unsafe impl ::windows::core::RuntimeType for HoldingState {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct ICharacterReceivedEventArgs(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICharacterReceivedEventArgs {
+    type Vtable = ICharacterReceivedEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x36122718_9263_592b_8d87_8f86543ffc95);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICharacterReceivedEventArgs_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub Handled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetHandled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+    pub KeyCode: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut u32,
+    ) -> ::windows::core::HRESULT,
+    pub KeyStatus: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut PhysicalKeyStatus,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IContextMenuKeyEventArgs(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IContextMenuKeyEventArgs {
+    type Vtable = IContextMenuKeyEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xf6025762_9426_541a_b647_037abdbecefc);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IContextMenuKeyEventArgs_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub Handled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetHandled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct ICrossSlidingEventArgs(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for ICrossSlidingEventArgs {
     type Vtable = ICrossSlidingEventArgs_Vtbl;
@@ -1560,7 +1854,7 @@ unsafe impl ::windows::core::Interface for ICrossSlidingEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICrossSlidingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CrossSlidingState: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut CrossSlidingState,
@@ -1585,7 +1879,7 @@ unsafe impl ::windows::core::Interface for IDraggingEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDraggingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DraggingState: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut DraggingState,
@@ -1610,7 +1904,7 @@ unsafe impl ::windows::core::Interface for IGestureRecognizer {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGestureRecognizer_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AutoProcessInertia: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -1866,7 +2160,7 @@ unsafe impl ::windows::core::Interface for IHoldingEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IHoldingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HoldingState: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut HoldingState,
@@ -1882,6 +2176,63 @@ pub struct IHoldingEventArgs_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IInputActivationListener(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IInputActivationListener {
+    type Vtable = IInputActivationListener_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x3b818627_6ce7_5e0d_a0f5_6684fd1aec78);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IInputActivationListener_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub State: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut InputActivationState,
+    ) -> ::windows::core::HRESULT,
+    pub InputActivationChanged: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveInputActivationChanged: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IInputActivationListenerActivationChangedEventArgs(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IInputActivationListenerActivationChangedEventArgs {
+    type Vtable = IInputActivationListenerActivationChangedEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x7978526b_00b6_5303_8f7d_55bef36da786);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IInputActivationListenerActivationChangedEventArgs_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IInputActivationListenerStatics(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IInputActivationListenerStatics {
+    type Vtable = IInputActivationListenerStatics_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x4e1f31e2_b8c4_5798_baff_03910facab99);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IInputActivationListenerStatics_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub GetForInputSite: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        inputsite: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IInputCursor(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IInputCursor {
     type Vtable = IInputCursor_Vtbl;
@@ -1891,7 +2242,7 @@ unsafe impl ::windows::core::Interface for IInputCursor {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputCursor_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1904,7 +2255,7 @@ unsafe impl ::windows::core::Interface for IInputCursorFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputCursorFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1917,7 +2268,7 @@ unsafe impl ::windows::core::Interface for IInputDesktopResourceCursor {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputDesktopResourceCursor_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ModuleName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -1938,7 +2289,7 @@ unsafe impl ::windows::core::Interface for IInputDesktopResourceCursorStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputDesktopResourceCursorStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         resourceid: u32,
@@ -1953,6 +2304,144 @@ pub struct IInputDesktopResourceCursorStatics_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IInputFocusChangedEventArgs(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IInputFocusChangedEventArgs {
+    type Vtable = IInputFocusChangedEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xd85b1b7a_045d_5a1b_9966_ebc0b3d47567);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IInputFocusChangedEventArgs_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IInputKeyboardSource(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IInputKeyboardSource {
+    type Vtable = IInputKeyboardSource_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xed61b906_16ad_5df7_a550_5e6f7d2229f7);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IInputKeyboardSource_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IInputKeyboardSource2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IInputKeyboardSource2 {
+    type Vtable = IInputKeyboardSource2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xc2e811b6_a807_5a95_a04c_da8e744e7183);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IInputKeyboardSource2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub HasFocus: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub GetCurrentKeyState: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        virtualkey: ::windows::System::VirtualKey,
+        result__: *mut VirtualKeyState,
+    ) -> ::windows::core::HRESULT,
+    pub GetKeyState: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        virtualkey: ::windows::System::VirtualKey,
+        result__: *mut VirtualKeyState,
+    ) -> ::windows::core::HRESULT,
+    pub TrySetFocus: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub AcceleratorKeyActivated: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveAcceleratorKeyActivated: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub CharacterReceived: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveCharacterReceived: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub ContextMenuKey: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveContextMenuKey: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub GotFocus: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveGotFocus: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub KeyDown: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveKeyDown: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub KeyUp: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveKeyUp: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub LostFocus: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveLostFocus: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub SystemKeyDown: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveSystemKeyDown: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub SystemKeyUp: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveSystemKeyUp: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IInputKeyboardSourceStatics(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IInputKeyboardSourceStatics {
     type Vtable = IInputKeyboardSourceStatics_Vtbl;
@@ -1962,11 +2451,29 @@ unsafe impl ::windows::core::Interface for IInputKeyboardSourceStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputKeyboardSourceStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetKeyStateForCurrentThread: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         virtualkey: ::windows::System::VirtualKey,
         result__: *mut ::windows::UI::Core::CoreVirtualKeyStates,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IInputKeyboardSourceStatics2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IInputKeyboardSourceStatics2 {
+    type Vtable = IInputKeyboardSourceStatics2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x1a2ddd59_aa27_50ea_bb7c_402f0d749427);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IInputKeyboardSourceStatics2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub GetForInputSite: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        inputsite: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
 #[doc(hidden)]
@@ -1980,7 +2487,7 @@ unsafe impl ::windows::core::Interface for IInputLightDismissAction {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputLightDismissAction_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Dismissed: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -2002,7 +2509,7 @@ unsafe impl ::windows::core::Interface for IInputLightDismissActionStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputLightDismissActionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetForWindowId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         windowid: super::WindowId,
@@ -2020,7 +2527,7 @@ unsafe impl ::windows::core::Interface for IInputLightDismissEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputLightDismissEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2033,7 +2540,7 @@ unsafe impl ::windows::core::Interface for IInputObject {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputObject_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Dispatching")]
     pub DispatcherQueue: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -2053,7 +2560,7 @@ unsafe impl ::windows::core::Interface for IInputObjectFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputObjectFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2066,7 +2573,7 @@ unsafe impl ::windows::core::Interface for IInputPointerSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputPointerSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Cursor: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2172,6 +2679,55 @@ pub struct IInputPointerSource_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IInputPointerSource2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IInputPointerSource2 {
+    type Vtable = IInputPointerSource2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x3771b5c9_d8b8_5d6e_8975_c679ba66d850);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IInputPointerSource2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub DirectManipulationHitTest: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveDirectManipulationHitTest: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub TouchHitTesting: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveTouchHitTesting: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IInputPointerSourceStatics(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IInputPointerSourceStatics {
+    type Vtable = IInputPointerSourceStatics_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xd520517f_4a37_5055_87a0_8bbb1a63c839);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IInputPointerSourceStatics_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub CreateForInputSite: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        inputsite: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IInputSystemCursor(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IInputSystemCursor {
     type Vtable = IInputSystemCursor_Vtbl;
@@ -2181,7 +2737,7 @@ unsafe impl ::windows::core::Interface for IInputSystemCursor {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputSystemCursor_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CursorShape: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut InputSystemCursorShape,
@@ -2198,11 +2754,44 @@ unsafe impl ::windows::core::Interface for IInputSystemCursorStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInputSystemCursorStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         r#type: InputSystemCursorShape,
         result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IKeyEventArgs(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IKeyEventArgs {
+    type Vtable = IKeyEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x40d5bb74_977e_5194_8039_9f6c44427bbb);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IKeyEventArgs_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub Handled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetHandled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+    pub KeyStatus: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut PhysicalKeyStatus,
+    ) -> ::windows::core::HRESULT,
+    pub Timestamp: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut u64,
+    ) -> ::windows::core::HRESULT,
+    pub VirtualKey: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::System::VirtualKey,
     ) -> ::windows::core::HRESULT,
 }
 #[doc(hidden)]
@@ -2216,7 +2805,7 @@ unsafe impl ::windows::core::Interface for IManipulationCompletedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationCompletedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Cumulative: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ManipulationDelta,
@@ -2245,7 +2834,7 @@ unsafe impl ::windows::core::Interface for IManipulationInertiaStartingEventArgs
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationInertiaStartingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Cumulative: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ManipulationDelta,
@@ -2278,7 +2867,7 @@ unsafe impl ::windows::core::Interface for IManipulationStartedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationStartedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Cumulative: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ManipulationDelta,
@@ -2303,7 +2892,7 @@ unsafe impl ::windows::core::Interface for IManipulationUpdatedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IManipulationUpdatedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Cumulative: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ManipulationDelta,
@@ -2336,7 +2925,7 @@ unsafe impl ::windows::core::Interface for IMouseWheelParameters {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMouseWheelParameters_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CharTranslation: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -2381,7 +2970,7 @@ unsafe impl ::windows::core::Interface for IPointerEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointerEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CurrentPoint: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2420,7 +3009,7 @@ unsafe impl ::windows::core::Interface for IPointerPoint {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointerPoint_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FrameId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut u32,
@@ -2466,7 +3055,7 @@ unsafe impl ::windows::core::Interface for IPointerPointProperties {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointerPointProperties_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ContactRect: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Rect,
@@ -2687,7 +3276,7 @@ unsafe impl ::windows::core::Interface for IPointerPointTransform {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointerPointTransform_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Inverse: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2716,7 +3305,7 @@ unsafe impl ::windows::core::Interface for IPointerPredictor {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointerPredictor_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PredictionTime: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::TimeSpan,
@@ -2743,7 +3332,7 @@ unsafe impl ::windows::core::Interface for IPointerPredictorStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointerPredictorStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateForInputPointerSource: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         inputpointersource: ::windows::core::RawPtr,
@@ -2761,7 +3350,7 @@ unsafe impl ::windows::core::Interface for IRightTappedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRightTappedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PointerDeviceType: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut PointerDeviceType,
@@ -2782,7 +3371,7 @@ unsafe impl ::windows::core::Interface for ITappedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITappedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PointerDeviceType: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut PointerDeviceType,
@@ -2795,6 +3384,390 @@ pub struct ITappedEventArgs_Vtbl {
         this: *mut ::core::ffi::c_void,
         result__: *mut u32,
     ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ITouchHitTestingEventArgs(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ITouchHitTestingEventArgs {
+    type Vtable = ITouchHitTestingEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xc2196f0c_60ed_5b5d_b919_aa7357e0a25c);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ITouchHitTestingEventArgs_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub BoundingBox: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::Foundation::Rect,
+    ) -> ::windows::core::HRESULT,
+    pub Handled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetHandled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+    pub Point: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::Foundation::Point,
+    ) -> ::windows::core::HRESULT,
+    pub GetProximityEvaluation: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ProximityEvaluation,
+    ) -> ::windows::core::HRESULT,
+    pub SetProximityEvaluation: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        proximityevaluation: ProximityEvaluation,
+    ) -> ::windows::core::HRESULT,
+    pub EvaluateProximityToRect: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        controlboundingbox: ::windows::Foundation::Rect,
+        result__: *mut ProximityEvaluation,
+    ) -> ::windows::core::HRESULT,
+    pub EvaluateProximityToPolygon: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        controlVertices_array_size: u32,
+        controlvertices: *const ::windows::Foundation::Point,
+        result__: *mut ProximityEvaluation,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc = "*Required features: `\"UI_Input\"`*"]
+#[repr(transparent)]
+pub struct InputActivationListener(::windows::core::IUnknown);
+impl InputActivationListener {
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn State(&self) -> ::windows::core::Result<InputActivationState> {
+        let this = self;
+        unsafe {
+            let mut result__: InputActivationState = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).State)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<InputActivationState>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn InputActivationChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                InputActivationListener,
+                InputActivationListenerActivationChangedEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = self;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).InputActivationChanged)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveInputActivationChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveInputActivationChanged)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn GetForInputSite<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
+    >(
+        inputsite: Param0,
+    ) -> ::windows::core::Result<InputActivationListener> {
+        Self::IInputActivationListenerStatics(|this| unsafe {
+            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).GetForInputSite)(
+                ::core::mem::transmute_copy(this),
+                inputsite.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<InputActivationListener>(result__)
+        })
+    }
+    #[doc = "*Required features: `\"UI_Input\"`, `\"UI_Dispatching\"`*"]
+    #[cfg(feature = "UI_Dispatching")]
+    pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
+        let this = &::windows::core::Interface::cast::<IInputObject>(self)?;
+        unsafe {
+            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).DispatcherQueue)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<super::Dispatching::DispatcherQueue>(result__)
+        }
+    }
+    #[doc(hidden)]
+    pub fn IInputActivationListenerStatics<
+        R,
+        F: FnOnce(&IInputActivationListenerStatics) -> ::windows::core::Result<R>,
+    >(
+        callback: F,
+    ) -> ::windows::core::Result<R> {
+        static mut SHARED: ::windows::core::FactoryCache<
+            InputActivationListener,
+            IInputActivationListenerStatics,
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Input.dll\0");
+        unsafe { SHARED.call(callback) }
+    }
+}
+impl ::core::clone::Clone for InputActivationListener {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for InputActivationListener {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for InputActivationListener {}
+impl ::core::fmt::Debug for InputActivationListener {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("InputActivationListener")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for InputActivationListener {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"rc(Microsoft.UI.Input.InputActivationListener;{3b818627-6ce7-5e0d-a0f5-6684fd1aec78})",
+    );
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for InputActivationListener {
+    type Vtable = IInputActivationListener_Vtbl;
+    const IID: ::windows::core::GUID =
+        <IInputActivationListener as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for InputActivationListener {
+    const NAME: &'static str = "Microsoft.UI.Input.InputActivationListener";
+}
+impl ::core::convert::From<InputActivationListener> for ::windows::core::IUnknown {
+    fn from(value: InputActivationListener) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&InputActivationListener> for ::windows::core::IUnknown {
+    fn from(value: &InputActivationListener) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for InputActivationListener {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a InputActivationListener {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<InputActivationListener> for ::windows::core::IInspectable {
+    fn from(value: InputActivationListener) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&InputActivationListener> for ::windows::core::IInspectable {
+    fn from(value: &InputActivationListener) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for InputActivationListener {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a InputActivationListener
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<InputActivationListener> for InputObject {
+    fn from(value: InputActivationListener) -> Self {
+        ::core::convert::From::from(&value)
+    }
+}
+impl ::core::convert::From<&InputActivationListener> for InputObject {
+    fn from(value: &InputActivationListener) -> Self {
+        ::windows::core::Interface::cast(value).unwrap()
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, InputObject> for InputActivationListener {
+    fn into_param(self) -> ::windows::core::Param<'a, InputObject> {
+        ::windows::core::IntoParam::into_param(&self)
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, InputObject> for &InputActivationListener {
+    fn into_param(self) -> ::windows::core::Param<'a, InputObject> {
+        ::windows::core::Param::Owned(::core::convert::Into::<InputObject>::into(self))
+    }
+}
+unsafe impl ::core::marker::Send for InputActivationListener {}
+unsafe impl ::core::marker::Sync for InputActivationListener {}
+#[doc = "*Required features: `\"UI_Input\"`*"]
+#[repr(transparent)]
+pub struct InputActivationListenerActivationChangedEventArgs(::windows::core::IUnknown);
+impl InputActivationListenerActivationChangedEventArgs {}
+impl ::core::clone::Clone for InputActivationListenerActivationChangedEventArgs {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for InputActivationListenerActivationChangedEventArgs {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for InputActivationListenerActivationChangedEventArgs {}
+impl ::core::fmt::Debug for InputActivationListenerActivationChangedEventArgs {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("InputActivationListenerActivationChangedEventArgs")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for InputActivationListenerActivationChangedEventArgs {
+    const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.UI.Input.InputActivationListenerActivationChangedEventArgs;{7978526b-00b6-5303-8f7d-55bef36da786})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for InputActivationListenerActivationChangedEventArgs {
+    type Vtable = IInputActivationListenerActivationChangedEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        <IInputActivationListenerActivationChangedEventArgs as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for InputActivationListenerActivationChangedEventArgs {
+    const NAME: &'static str =
+        "Microsoft.UI.Input.InputActivationListenerActivationChangedEventArgs";
+}
+impl ::core::convert::From<InputActivationListenerActivationChangedEventArgs>
+    for ::windows::core::IUnknown
+{
+    fn from(value: InputActivationListenerActivationChangedEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&InputActivationListenerActivationChangedEventArgs>
+    for ::windows::core::IUnknown
+{
+    fn from(value: &InputActivationListenerActivationChangedEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for InputActivationListenerActivationChangedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for &'a InputActivationListenerActivationChangedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<InputActivationListenerActivationChangedEventArgs>
+    for ::windows::core::IInspectable
+{
+    fn from(value: InputActivationListenerActivationChangedEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&InputActivationListenerActivationChangedEventArgs>
+    for ::windows::core::IInspectable
+{
+    fn from(value: &InputActivationListenerActivationChangedEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for InputActivationListenerActivationChangedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a InputActivationListenerActivationChangedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for InputActivationListenerActivationChangedEventArgs {}
+unsafe impl ::core::marker::Sync for InputActivationListenerActivationChangedEventArgs {}
+#[doc = "*Required features: `\"UI_Input\"`*"]
+#[repr(transparent)]
+#[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
+pub struct InputActivationState(pub i32);
+impl InputActivationState {
+    pub const None: Self = Self(0i32);
+    pub const Deactivated: Self = Self(1i32);
+    pub const Activated: Self = Self(2i32);
+}
+impl ::core::marker::Copy for InputActivationState {}
+impl ::core::clone::Clone for InputActivationState {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::default::Default for InputActivationState {
+    fn default() -> Self {
+        Self(0)
+    }
+}
+unsafe impl ::windows::core::Abi for InputActivationState {
+    type Abi = Self;
+}
+impl ::core::fmt::Debug for InputActivationState {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("InputActivationState")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for InputActivationState {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"enum(Microsoft.UI.Input.InputActivationState;i4)",
+    );
+    type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
 }
 #[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
@@ -2983,7 +3956,7 @@ impl InputDesktopResourceCursor {
         static mut SHARED: ::windows::core::FactoryCache<
             InputDesktopResourceCursor,
             IInputDesktopResourceCursorStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Input.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3119,8 +4092,515 @@ impl<'a> ::windows::core::IntoParam<'a, InputCursor> for &InputDesktopResourceCu
 unsafe impl ::core::marker::Send for InputDesktopResourceCursor {}
 unsafe impl ::core::marker::Sync for InputDesktopResourceCursor {}
 #[doc = "*Required features: `\"UI_Input\"`*"]
-pub struct InputKeyboardSource {}
+#[repr(transparent)]
+pub struct InputFocusChangedEventArgs(::windows::core::IUnknown);
+impl InputFocusChangedEventArgs {}
+impl ::core::clone::Clone for InputFocusChangedEventArgs {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for InputFocusChangedEventArgs {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for InputFocusChangedEventArgs {}
+impl ::core::fmt::Debug for InputFocusChangedEventArgs {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("InputFocusChangedEventArgs")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for InputFocusChangedEventArgs {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"rc(Microsoft.UI.Input.InputFocusChangedEventArgs;{d85b1b7a-045d-5a1b-9966-ebc0b3d47567})",
+    );
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for InputFocusChangedEventArgs {
+    type Vtable = IInputFocusChangedEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        <IInputFocusChangedEventArgs as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for InputFocusChangedEventArgs {
+    const NAME: &'static str = "Microsoft.UI.Input.InputFocusChangedEventArgs";
+}
+impl ::core::convert::From<InputFocusChangedEventArgs> for ::windows::core::IUnknown {
+    fn from(value: InputFocusChangedEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&InputFocusChangedEventArgs> for ::windows::core::IUnknown {
+    fn from(value: &InputFocusChangedEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for InputFocusChangedEventArgs {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for &'a InputFocusChangedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<InputFocusChangedEventArgs> for ::windows::core::IInspectable {
+    fn from(value: InputFocusChangedEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&InputFocusChangedEventArgs> for ::windows::core::IInspectable {
+    fn from(value: &InputFocusChangedEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for InputFocusChangedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a InputFocusChangedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for InputFocusChangedEventArgs {}
+unsafe impl ::core::marker::Sync for InputFocusChangedEventArgs {}
+#[doc = "*Required features: `\"UI_Input\"`*"]
+#[repr(transparent)]
+pub struct InputKeyboardSource(::windows::core::IUnknown);
 impl InputKeyboardSource {
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn HasFocus(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: bool = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).HasFocus)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn GetCurrentKeyState(
+        &self,
+        virtualkey: ::windows::System::VirtualKey,
+    ) -> ::windows::core::Result<VirtualKeyState> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: VirtualKeyState = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).GetCurrentKeyState)(
+                ::core::mem::transmute_copy(this),
+                virtualkey,
+                &mut result__,
+            )
+            .from_abi::<VirtualKeyState>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn GetKeyState(
+        &self,
+        virtualkey: ::windows::System::VirtualKey,
+    ) -> ::windows::core::Result<VirtualKeyState> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: VirtualKeyState = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).GetKeyState)(
+                ::core::mem::transmute_copy(this),
+                virtualkey,
+                &mut result__,
+            )
+            .from_abi::<VirtualKeyState>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn TrySetFocus(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: bool = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).TrySetFocus)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn AcceleratorKeyActivated<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                InputKeyboardSource,
+                ::windows::UI::Core::AcceleratorKeyEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).AcceleratorKeyActivated)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveAcceleratorKeyActivated<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveAcceleratorKeyActivated)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn CharacterReceived<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                InputKeyboardSource,
+                CharacterReceivedEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).CharacterReceived)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveCharacterReceived<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveCharacterReceived)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn ContextMenuKey<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<InputKeyboardSource, ContextMenuKeyEventArgs>,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).ContextMenuKey)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveContextMenuKey<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveContextMenuKey)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn GotFocus<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                InputKeyboardSource,
+                InputFocusChangedEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).GotFocus)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveGotFocus<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveGotFocus)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn KeyDown<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<InputKeyboardSource, KeyEventArgs>,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).KeyDown)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveKeyDown<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveKeyDown)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn KeyUp<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<InputKeyboardSource, KeyEventArgs>,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).KeyUp)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveKeyUp<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveKeyUp)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn LostFocus<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                InputKeyboardSource,
+                InputFocusChangedEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).LostFocus)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveLostFocus<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveLostFocus)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn SystemKeyDown<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<InputKeyboardSource, KeyEventArgs>,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).SystemKeyDown)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveSystemKeyDown<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveSystemKeyDown)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn SystemKeyUp<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<InputKeyboardSource, KeyEventArgs>,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).SystemKeyUp)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveSystemKeyUp<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IInputKeyboardSource2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveSystemKeyUp)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
     #[doc = "*Required features: `\"UI_Input\"`*"]
     pub fn GetKeyStateForCurrentThread(
         virtualkey: ::windows::System::VirtualKey,
@@ -3135,6 +4615,36 @@ impl InputKeyboardSource {
             .from_abi::<::windows::UI::Core::CoreVirtualKeyStates>(result__)
         })
     }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn GetForInputSite<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
+    >(
+        inputsite: Param0,
+    ) -> ::windows::core::Result<InputKeyboardSource> {
+        Self::IInputKeyboardSourceStatics2(|this| unsafe {
+            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).GetForInputSite)(
+                ::core::mem::transmute_copy(this),
+                inputsite.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<InputKeyboardSource>(result__)
+        })
+    }
+    #[doc = "*Required features: `\"UI_Input\"`, `\"UI_Dispatching\"`*"]
+    #[cfg(feature = "UI_Dispatching")]
+    pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
+        let this = &::windows::core::Interface::cast::<IInputObject>(self)?;
+        unsafe {
+            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).DispatcherQueue)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<super::Dispatching::DispatcherQueue>(result__)
+        }
+    }
     #[doc(hidden)]
     pub fn IInputKeyboardSourceStatics<
         R,
@@ -3145,13 +4655,117 @@ impl InputKeyboardSource {
         static mut SHARED: ::windows::core::FactoryCache<
             InputKeyboardSource,
             IInputKeyboardSourceStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Input.dll\0");
         unsafe { SHARED.call(callback) }
     }
+    #[doc(hidden)]
+    pub fn IInputKeyboardSourceStatics2<
+        R,
+        F: FnOnce(&IInputKeyboardSourceStatics2) -> ::windows::core::Result<R>,
+    >(
+        callback: F,
+    ) -> ::windows::core::Result<R> {
+        static mut SHARED: ::windows::core::FactoryCache<
+            InputKeyboardSource,
+            IInputKeyboardSourceStatics2,
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Input.dll\0");
+        unsafe { SHARED.call(callback) }
+    }
+}
+impl ::core::clone::Clone for InputKeyboardSource {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for InputKeyboardSource {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for InputKeyboardSource {}
+impl ::core::fmt::Debug for InputKeyboardSource {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("InputKeyboardSource").field(&self.0).finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for InputKeyboardSource {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"rc(Microsoft.UI.Input.InputKeyboardSource;{ed61b906-16ad-5df7-a550-5e6f7d2229f7})",
+    );
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for InputKeyboardSource {
+    type Vtable = IInputKeyboardSource_Vtbl;
+    const IID: ::windows::core::GUID = <IInputKeyboardSource as ::windows::core::Interface>::IID;
 }
 impl ::windows::core::RuntimeName for InputKeyboardSource {
     const NAME: &'static str = "Microsoft.UI.Input.InputKeyboardSource";
 }
+impl ::core::convert::From<InputKeyboardSource> for ::windows::core::IUnknown {
+    fn from(value: InputKeyboardSource) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&InputKeyboardSource> for ::windows::core::IUnknown {
+    fn from(value: &InputKeyboardSource) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for InputKeyboardSource {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a InputKeyboardSource {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<InputKeyboardSource> for ::windows::core::IInspectable {
+    fn from(value: InputKeyboardSource) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&InputKeyboardSource> for ::windows::core::IInspectable {
+    fn from(value: &InputKeyboardSource) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for InputKeyboardSource {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a InputKeyboardSource {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<InputKeyboardSource> for InputObject {
+    fn from(value: InputKeyboardSource) -> Self {
+        ::core::convert::From::from(&value)
+    }
+}
+impl ::core::convert::From<&InputKeyboardSource> for InputObject {
+    fn from(value: &InputKeyboardSource) -> Self {
+        ::windows::core::Interface::cast(value).unwrap()
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, InputObject> for InputKeyboardSource {
+    fn into_param(self) -> ::windows::core::Param<'a, InputObject> {
+        ::windows::core::IntoParam::into_param(&self)
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, InputObject> for &InputKeyboardSource {
+    fn into_param(self) -> ::windows::core::Param<'a, InputObject> {
+        ::windows::core::Param::Owned(::core::convert::Into::<InputObject>::into(self))
+    }
+}
+unsafe impl ::core::marker::Send for InputKeyboardSource {}
+unsafe impl ::core::marker::Sync for InputKeyboardSource {}
 #[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct InputLightDismissAction(::windows::core::IUnknown);
@@ -3235,7 +4849,7 @@ impl InputLightDismissAction {
         static mut SHARED: ::windows::core::FactoryCache<
             InputLightDismissAction,
             IInputLightDismissActionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Input.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3962,6 +5576,114 @@ impl InputPointerSource {
             .ok()
         }
     }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn DirectManipulationHitTest<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<InputPointerSource, PointerEventArgs>,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<IInputPointerSource2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).DirectManipulationHitTest)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveDirectManipulationHitTest<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IInputPointerSource2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveDirectManipulationHitTest)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn TouchHitTesting<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<InputPointerSource, TouchHitTestingEventArgs>,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<IInputPointerSource2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).TouchHitTesting)(
+                ::core::mem::transmute_copy(this),
+                handler.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn RemoveTouchHitTesting<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IInputPointerSource2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveTouchHitTesting)(
+                ::core::mem::transmute_copy(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn CreateForInputSite<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::IInspectable>,
+    >(
+        inputsite: Param0,
+    ) -> ::windows::core::Result<InputPointerSource> {
+        Self::IInputPointerSourceStatics(|this| unsafe {
+            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).CreateForInputSite)(
+                ::core::mem::transmute_copy(this),
+                inputsite.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<InputPointerSource>(result__)
+        })
+    }
+    #[doc(hidden)]
+    pub fn IInputPointerSourceStatics<
+        R,
+        F: FnOnce(&IInputPointerSourceStatics) -> ::windows::core::Result<R>,
+    >(
+        callback: F,
+    ) -> ::windows::core::Result<R> {
+        static mut SHARED: ::windows::core::FactoryCache<
+            InputPointerSource,
+            IInputPointerSourceStatics,
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Input.dll\0");
+        unsafe { SHARED.call(callback) }
+    }
 }
 impl ::core::clone::Clone for InputPointerSource {
     fn clone(&self) -> Self {
@@ -4170,7 +5892,7 @@ impl InputSystemCursor {
         static mut SHARED: ::windows::core::FactoryCache<
             InputSystemCursor,
             IInputSystemCursorStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Input.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -4344,6 +6066,144 @@ unsafe impl ::windows::core::RuntimeType for InputSystemCursorShape {
         Ok(*from)
     }
 }
+#[doc = "*Required features: `\"UI_Input\"`*"]
+#[repr(transparent)]
+pub struct KeyEventArgs(::windows::core::IUnknown);
+impl KeyEventArgs {
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn Handled(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__: bool = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).Handled)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetHandled)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn KeyStatus(&self) -> ::windows::core::Result<PhysicalKeyStatus> {
+        let this = self;
+        unsafe {
+            let mut result__: PhysicalKeyStatus = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).KeyStatus)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<PhysicalKeyStatus>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn Timestamp(&self) -> ::windows::core::Result<u64> {
+        let this = self;
+        unsafe {
+            let mut result__: u64 = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).Timestamp)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<u64>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn VirtualKey(&self) -> ::windows::core::Result<::windows::System::VirtualKey> {
+        let this = self;
+        unsafe {
+            let mut result__: ::windows::System::VirtualKey = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).VirtualKey)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<::windows::System::VirtualKey>(result__)
+        }
+    }
+}
+impl ::core::clone::Clone for KeyEventArgs {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for KeyEventArgs {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for KeyEventArgs {}
+impl ::core::fmt::Debug for KeyEventArgs {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("KeyEventArgs").field(&self.0).finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for KeyEventArgs {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"rc(Microsoft.UI.Input.KeyEventArgs;{40d5bb74-977e-5194-8039-9f6c44427bbb})",
+    );
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for KeyEventArgs {
+    type Vtable = IKeyEventArgs_Vtbl;
+    const IID: ::windows::core::GUID = <IKeyEventArgs as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for KeyEventArgs {
+    const NAME: &'static str = "Microsoft.UI.Input.KeyEventArgs";
+}
+impl ::core::convert::From<KeyEventArgs> for ::windows::core::IUnknown {
+    fn from(value: KeyEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&KeyEventArgs> for ::windows::core::IUnknown {
+    fn from(value: &KeyEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for KeyEventArgs {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a KeyEventArgs {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<KeyEventArgs> for ::windows::core::IInspectable {
+    fn from(value: KeyEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&KeyEventArgs> for ::windows::core::IInspectable {
+    fn from(value: &KeyEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for KeyEventArgs {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a KeyEventArgs {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for KeyEventArgs {}
+unsafe impl ::core::marker::Sync for KeyEventArgs {}
 #[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 pub struct ManipulationCompletedEventArgs(::windows::core::IUnknown);
@@ -5189,6 +7049,63 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
 }
 unsafe impl ::core::marker::Send for MouseWheelParameters {}
 unsafe impl ::core::marker::Sync for MouseWheelParameters {}
+#[repr(C)]
+#[doc = "*Required features: `\"UI_Input\"`*"]
+pub struct PhysicalKeyStatus {
+    pub RepeatCount: u32,
+    pub ScanCode: u32,
+    pub IsExtendedKey: bool,
+    pub IsMenuKeyDown: bool,
+    pub WasKeyDown: bool,
+    pub IsKeyReleased: bool,
+}
+impl ::core::marker::Copy for PhysicalKeyStatus {}
+impl ::core::clone::Clone for PhysicalKeyStatus {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::fmt::Debug for PhysicalKeyStatus {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_struct("PhysicalKeyStatus")
+            .field("RepeatCount", &self.RepeatCount)
+            .field("ScanCode", &self.ScanCode)
+            .field("IsExtendedKey", &self.IsExtendedKey)
+            .field("IsMenuKeyDown", &self.IsMenuKeyDown)
+            .field("WasKeyDown", &self.WasKeyDown)
+            .field("IsKeyReleased", &self.IsKeyReleased)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::Abi for PhysicalKeyStatus {
+    type Abi = Self;
+}
+unsafe impl ::windows::core::RuntimeType for PhysicalKeyStatus {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"struct(Microsoft.UI.Input.PhysicalKeyStatus;u4;u4;b1;b1;b1;b1)",
+    );
+    type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
+}
+impl ::core::cmp::PartialEq for PhysicalKeyStatus {
+    fn eq(&self, other: &Self) -> bool {
+        unsafe {
+            ::windows::core::memcmp(
+                self as *const _ as _,
+                other as *const _ as _,
+                core::mem::size_of::<PhysicalKeyStatus>(),
+            ) == 0
+        }
+    }
+}
+impl ::core::cmp::Eq for PhysicalKeyStatus {}
+impl ::core::default::Default for PhysicalKeyStatus {
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
+}
 #[doc = "*Required features: `\"UI_Input\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
@@ -5986,7 +7903,7 @@ impl PointerPredictor {
         static mut SHARED: ::windows::core::FactoryCache<
             PointerPredictor,
             IPointerPredictorStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Input.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6130,6 +8047,55 @@ unsafe impl ::windows::core::RuntimeType for PointerUpdateKind {
     type DefaultType = Self;
     fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
         Ok(*from)
+    }
+}
+#[repr(C)]
+#[doc = "*Required features: `\"UI_Input\"`*"]
+pub struct ProximityEvaluation {
+    pub Score: i32,
+    pub AdjustedPoint: ::windows::Foundation::Point,
+}
+impl ::core::marker::Copy for ProximityEvaluation {}
+impl ::core::clone::Clone for ProximityEvaluation {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::fmt::Debug for ProximityEvaluation {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_struct("ProximityEvaluation")
+            .field("Score", &self.Score)
+            .field("AdjustedPoint", &self.AdjustedPoint)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::Abi for ProximityEvaluation {
+    type Abi = Self;
+}
+unsafe impl ::windows::core::RuntimeType for ProximityEvaluation {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"struct(Microsoft.UI.Input.ProximityEvaluation;i4;struct(Windows.Foundation.Point;f4;f4))",
+    );
+    type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
+}
+impl ::core::cmp::PartialEq for ProximityEvaluation {
+    fn eq(&self, other: &Self) -> bool {
+        unsafe {
+            ::windows::core::memcmp(
+                self as *const _ as _,
+                other as *const _ as _,
+                core::mem::size_of::<ProximityEvaluation>(),
+            ) == 0
+        }
+    }
+}
+impl ::core::cmp::Eq for ProximityEvaluation {}
+impl ::core::default::Default for ProximityEvaluation {
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
     }
 }
 #[doc = "*Required features: `\"UI_Input\"`*"]
@@ -6354,5 +8320,269 @@ impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for &'a T
 }
 unsafe impl ::core::marker::Send for TappedEventArgs {}
 unsafe impl ::core::marker::Sync for TappedEventArgs {}
+#[doc = "*Required features: `\"UI_Input\"`*"]
+#[repr(transparent)]
+pub struct TouchHitTestingEventArgs(::windows::core::IUnknown);
+impl TouchHitTestingEventArgs {
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn BoundingBox(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
+        let this = self;
+        unsafe {
+            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).BoundingBox)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::Rect>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn Handled(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__: bool = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).Handled)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetHandled)(
+                ::core::mem::transmute_copy(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn Point(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
+        let this = self;
+        unsafe {
+            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).Point)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<::windows::Foundation::Point>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn GetProximityEvaluation(&self) -> ::windows::core::Result<ProximityEvaluation> {
+        let this = self;
+        unsafe {
+            let mut result__: ProximityEvaluation = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).GetProximityEvaluation)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<ProximityEvaluation>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn SetProximityEvaluation<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ProximityEvaluation>,
+    >(
+        &self,
+        proximityevaluation: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetProximityEvaluation)(
+                ::core::mem::transmute_copy(this),
+                proximityevaluation.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn EvaluateProximityToRect<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Rect>,
+    >(
+        &self,
+        controlboundingbox: Param0,
+    ) -> ::windows::core::Result<ProximityEvaluation> {
+        let this = self;
+        unsafe {
+            let mut result__: ProximityEvaluation = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).EvaluateProximityToRect)(
+                ::core::mem::transmute_copy(this),
+                controlboundingbox.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<ProximityEvaluation>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Input\"`*"]
+    pub fn EvaluateProximityToPolygon(
+        &self,
+        controlvertices: &[::windows::Foundation::Point],
+    ) -> ::windows::core::Result<ProximityEvaluation> {
+        let this = self;
+        unsafe {
+            let mut result__: ProximityEvaluation = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).EvaluateProximityToPolygon)(
+                ::core::mem::transmute_copy(this),
+                controlvertices.len() as u32,
+                ::core::mem::transmute(controlvertices.as_ptr()),
+                &mut result__,
+            )
+            .from_abi::<ProximityEvaluation>(result__)
+        }
+    }
+}
+impl ::core::clone::Clone for TouchHitTestingEventArgs {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for TouchHitTestingEventArgs {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for TouchHitTestingEventArgs {}
+impl ::core::fmt::Debug for TouchHitTestingEventArgs {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("TouchHitTestingEventArgs")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for TouchHitTestingEventArgs {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"rc(Microsoft.UI.Input.TouchHitTestingEventArgs;{c2196f0c-60ed-5b5d-b919-aa7357e0a25c})",
+    );
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for TouchHitTestingEventArgs {
+    type Vtable = ITouchHitTestingEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        <ITouchHitTestingEventArgs as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for TouchHitTestingEventArgs {
+    const NAME: &'static str = "Microsoft.UI.Input.TouchHitTestingEventArgs";
+}
+impl ::core::convert::From<TouchHitTestingEventArgs> for ::windows::core::IUnknown {
+    fn from(value: TouchHitTestingEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&TouchHitTestingEventArgs> for ::windows::core::IUnknown {
+    fn from(value: &TouchHitTestingEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for TouchHitTestingEventArgs {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for &'a TouchHitTestingEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<TouchHitTestingEventArgs> for ::windows::core::IInspectable {
+    fn from(value: TouchHitTestingEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&TouchHitTestingEventArgs> for ::windows::core::IInspectable {
+    fn from(value: &TouchHitTestingEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for TouchHitTestingEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a TouchHitTestingEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for TouchHitTestingEventArgs {}
+unsafe impl ::core::marker::Sync for TouchHitTestingEventArgs {}
+#[doc = "*Required features: `\"UI_Input\"`*"]
+#[repr(transparent)]
+#[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
+pub struct VirtualKeyState(pub u32);
+impl VirtualKeyState {
+    pub const None: Self = Self(0u32);
+    pub const Down: Self = Self(1u32);
+    pub const Locked: Self = Self(2u32);
+}
+impl ::core::marker::Copy for VirtualKeyState {}
+impl ::core::clone::Clone for VirtualKeyState {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::default::Default for VirtualKeyState {
+    fn default() -> Self {
+        Self(0)
+    }
+}
+unsafe impl ::windows::core::Abi for VirtualKeyState {
+    type Abi = Self;
+}
+impl ::core::fmt::Debug for VirtualKeyState {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("VirtualKeyState").field(&self.0).finish()
+    }
+}
+impl ::core::ops::BitOr for VirtualKeyState {
+    type Output = Self;
+    fn bitor(self, other: Self) -> Self {
+        Self(self.0 | other.0)
+    }
+}
+impl ::core::ops::BitAnd for VirtualKeyState {
+    type Output = Self;
+    fn bitand(self, other: Self) -> Self {
+        Self(self.0 & other.0)
+    }
+}
+impl ::core::ops::BitOrAssign for VirtualKeyState {
+    fn bitor_assign(&mut self, other: Self) {
+        self.0.bitor_assign(other.0)
+    }
+}
+impl ::core::ops::BitAndAssign for VirtualKeyState {
+    fn bitand_assign(&mut self, other: Self) {
+        self.0.bitand_assign(other.0)
+    }
+}
+impl ::core::ops::Not for VirtualKeyState {
+    type Output = Self;
+    fn not(self) -> Self {
+        Self(self.0.not())
+    }
+}
+unsafe impl ::windows::core::RuntimeType for VirtualKeyState {
+    const SIGNATURE: ::windows::core::ConstBuffer =
+        ::windows::core::ConstBuffer::from_slice(b"enum(Microsoft.UI.Input.VirtualKeyState;u4)");
+    type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
+}
 #[cfg(feature = "implement")]
 ::core::include!("impl.rs");

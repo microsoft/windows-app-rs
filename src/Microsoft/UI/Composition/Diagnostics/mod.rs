@@ -262,7 +262,7 @@ impl CompositionDebugSettings {
         static mut SHARED: ::windows::core::FactoryCache<
             CompositionDebugSettings,
             ICompositionDebugSettingsStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -358,7 +358,7 @@ unsafe impl ::windows::core::Interface for ICompositionDebugHeatMaps {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionDebugHeatMaps_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Hide: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         subtree: ::windows::core::RawPtr,
@@ -388,7 +388,7 @@ unsafe impl ::windows::core::Interface for ICompositionDebugSettings {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionDebugSettings_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HeatMaps: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -405,7 +405,7 @@ unsafe impl ::windows::core::Interface for ICompositionDebugSettingsStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionDebugSettingsStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TryGetSettings: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         compositor: ::windows::core::RawPtr,

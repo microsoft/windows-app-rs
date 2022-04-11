@@ -33,7 +33,7 @@ impl IAnimationObject_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IAnimationObject, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IAnimationObject, OFFSET>(),
             PopulatePropertyInfo: PopulatePropertyInfo::<Identity, Impl, OFFSET>,
         }
     }
@@ -52,7 +52,7 @@ impl ICompositionAnimationBase_Vtbl {
         const OFFSET: isize,
     >() -> ICompositionAnimationBase_Vtbl {
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 ICompositionAnimationBase,
                 OFFSET,
@@ -74,7 +74,8 @@ impl ICompositionSurface_Vtbl {
         const OFFSET: isize,
     >() -> ICompositionSurface_Vtbl {
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ICompositionSurface, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ICompositionSurface, OFFSET>(
+            ),
         }
     }
     pub fn matches(iid: &windows::core::GUID) -> bool {
@@ -113,7 +114,7 @@ impl ICompositionSurfaceFacade_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 ICompositionSurfaceFacade,
                 OFFSET,
@@ -136,7 +137,7 @@ impl IVisualElement_Vtbl {
         const OFFSET: isize,
     >() -> IVisualElement_Vtbl {
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IVisualElement, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IVisualElement, OFFSET>(),
         }
     }
     pub fn matches(iid: &windows::core::GUID) -> bool {
@@ -175,7 +176,7 @@ impl IVisualElement2_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IVisualElement2, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IVisualElement2, OFFSET>(),
             GetVisualInternal: GetVisualInternal::<Identity, Impl, OFFSET>,
         }
     }

@@ -234,7 +234,7 @@ impl FontWeights {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<FontWeights, IFontWeightsStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"WinUIEdit.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -399,7 +399,7 @@ unsafe impl ::windows::core::Interface for IFontWeights {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFontWeights_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -412,7 +412,7 @@ unsafe impl ::windows::core::Interface for IFontWeightsStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFontWeightsStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Black: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::UI::Text::FontWeight,
@@ -1142,7 +1142,7 @@ unsafe impl ::windows::core::Interface for ITextCharacterFormat {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextCharacterFormat_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AllCaps: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut FormatEffect,
@@ -1356,7 +1356,7 @@ unsafe impl ::windows::core::Interface for ITextConstantsStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextConstantsStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AutoColor: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::UI::Color,
@@ -1401,7 +1401,7 @@ unsafe impl ::windows::core::Interface for ITextDocument {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextDocument_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CaretType: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut CaretType,
@@ -2192,7 +2192,7 @@ unsafe impl ::windows::core::Interface for ITextParagraphFormat {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextParagraphFormat_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Alignment: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ParagraphAlignment,
@@ -3185,7 +3185,7 @@ unsafe impl ::windows::core::Interface for ITextRange {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextRange_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Character: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut u16,
@@ -4401,7 +4401,7 @@ unsafe impl ::windows::core::Interface for ITextSelection {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextSelection_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Options: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut SelectionOptions,
@@ -6531,7 +6531,7 @@ impl TextConstants {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<TextConstants, ITextConstantsStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"WinUIEdit.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

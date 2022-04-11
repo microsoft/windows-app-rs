@@ -53,7 +53,7 @@ impl IFlyoutBaseOverrides_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IFlyoutBaseOverrides, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IFlyoutBaseOverrides, OFFSET>(
             ),
             CreatePresenter: CreatePresenter::<Identity, Impl, OFFSET>,
             OnProcessKeyboardAccelerators: OnProcessKeyboardAccelerators::<Identity, Impl, OFFSET>,
@@ -109,7 +109,7 @@ impl IPickerFlyoutBaseOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IPickerFlyoutBaseOverrides,
                 OFFSET,
@@ -182,7 +182,8 @@ impl IRangeBaseOverrides_Vtbl {
             (*this).OnValueChanged(oldvalue, newvalue).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IRangeBaseOverrides, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IRangeBaseOverrides, OFFSET>(
+            ),
             OnMinimumChanged: OnMinimumChanged::<Identity, Impl, OFFSET>,
             OnMaximumChanged: OnMaximumChanged::<Identity, Impl, OFFSET>,
             OnValueChanged: OnValueChanged::<Identity, Impl, OFFSET>,
@@ -390,7 +391,7 @@ impl IScrollSnapPointsInfo_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IScrollSnapPointsInfo, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IScrollSnapPointsInfo, OFFSET>(
             ),
             AreHorizontalSnapPointsRegular: AreHorizontalSnapPointsRegular::<Identity, Impl, OFFSET>,
             AreVerticalSnapPointsRegular: AreVerticalSnapPointsRegular::<Identity, Impl, OFFSET>,
@@ -440,8 +441,11 @@ impl IToggleButtonOverrides_Vtbl {
             (*this).OnToggle().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IToggleButtonOverrides, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                IToggleButtonOverrides,
+                OFFSET,
+            >(),
             OnToggle: OnToggle::<Identity, Impl, OFFSET>,
         }
     }

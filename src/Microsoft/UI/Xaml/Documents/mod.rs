@@ -1038,7 +1038,7 @@ impl Block {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Block, IBlockStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1523,7 +1523,7 @@ impl Bold {
         static mut SHARED: ::windows::core::FactoryCache<
             Bold,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
@@ -2568,7 +2568,7 @@ impl Glyphs {
         static mut SHARED: ::windows::core::FactoryCache<
             Glyphs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Composition\"`*"]
@@ -7727,7 +7727,7 @@ impl Glyphs {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Glyphs, IGlyphsStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -7965,7 +7965,7 @@ impl Hyperlink {
         static mut SHARED: ::windows::core::FactoryCache<
             Hyperlink,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
@@ -9480,7 +9480,7 @@ impl Hyperlink {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Hyperlink, IHyperlinkStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -9763,7 +9763,7 @@ unsafe impl ::windows::core::Interface for IBlock {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBlock_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TextAlignment: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut super::TextAlignment,
@@ -9816,7 +9816,7 @@ unsafe impl ::windows::core::Interface for IBlockFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBlockFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -9835,7 +9835,7 @@ unsafe impl ::windows::core::Interface for IBlockStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBlockStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TextAlignmentProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9868,7 +9868,7 @@ unsafe impl ::windows::core::Interface for IBold {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBold_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -9881,7 +9881,7 @@ unsafe impl ::windows::core::Interface for IGlyphs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGlyphs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub UnicodeString: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -9986,7 +9986,7 @@ unsafe impl ::windows::core::Interface for IGlyphsStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGlyphsStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub UnicodeStringProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10039,7 +10039,7 @@ unsafe impl ::windows::core::Interface for IHyperlink {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IHyperlink_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub NavigateUri: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10219,7 +10219,7 @@ unsafe impl ::windows::core::Interface for IHyperlinkClickEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IHyperlinkClickEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -10232,7 +10232,7 @@ unsafe impl ::windows::core::Interface for IHyperlinkStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IHyperlinkStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub NavigateUriProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10305,7 +10305,7 @@ unsafe impl ::windows::core::Interface for IInline {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInline_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -10318,7 +10318,7 @@ unsafe impl ::windows::core::Interface for IInlineFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInlineFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -10337,7 +10337,7 @@ unsafe impl ::windows::core::Interface for IInlineUIContainer {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInlineUIContainer_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Child: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10358,7 +10358,7 @@ unsafe impl ::windows::core::Interface for IItalic {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IItalic_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -10371,7 +10371,7 @@ unsafe impl ::windows::core::Interface for ILineBreak {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILineBreak_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -10384,7 +10384,7 @@ unsafe impl ::windows::core::Interface for IParagraph {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IParagraph_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Inlines: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10409,7 +10409,7 @@ unsafe impl ::windows::core::Interface for IParagraphStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IParagraphStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TextIndentProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10426,7 +10426,7 @@ unsafe impl ::windows::core::Interface for IRun {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRun_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Text: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -10455,7 +10455,7 @@ unsafe impl ::windows::core::Interface for IRunStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRunStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FlowDirectionProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10472,7 +10472,7 @@ unsafe impl ::windows::core::Interface for ISpan {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISpan_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Inlines: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10493,7 +10493,7 @@ unsafe impl ::windows::core::Interface for ISpanFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISpanFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -10512,7 +10512,7 @@ unsafe impl ::windows::core::Interface for ITextElement {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextElement_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Name: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -10758,7 +10758,7 @@ unsafe impl ::windows::core::Interface for ITextElementFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextElementFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -10771,7 +10771,7 @@ unsafe impl ::windows::core::Interface for ITextElementOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextElementOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OnDisconnectVisualChildren:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -10786,7 +10786,7 @@ unsafe impl ::windows::core::Interface for ITextElementStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextElementStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FontSizeProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10873,7 +10873,7 @@ unsafe impl ::windows::core::Interface for ITextHighlighter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextHighlighter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Ranges: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10918,7 +10918,7 @@ unsafe impl ::windows::core::Interface for ITextHighlighterBase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextHighlighterBase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -10931,7 +10931,7 @@ unsafe impl ::windows::core::Interface for ITextHighlighterBaseFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextHighlighterBaseFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -10944,7 +10944,7 @@ unsafe impl ::windows::core::Interface for ITextHighlighterFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextHighlighterFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -10963,7 +10963,7 @@ unsafe impl ::windows::core::Interface for ITextHighlighterStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextHighlighterStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ForegroundProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10984,7 +10984,7 @@ unsafe impl ::windows::core::Interface for ITextPointer {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextPointer_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Parent: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -11024,7 +11024,7 @@ unsafe impl ::windows::core::Interface for ITypography {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITypography_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -11037,7 +11037,7 @@ unsafe impl ::windows::core::Interface for ITypographyStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITypographyStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AnnotationAlternatesProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -11652,7 +11652,7 @@ unsafe impl ::windows::core::Interface for IUnderline {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IUnderline_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
 #[repr(transparent)]
@@ -12985,7 +12985,7 @@ impl InlineUIContainer {
         static mut SHARED: ::windows::core::FactoryCache<
             InlineUIContainer,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
@@ -14010,7 +14010,7 @@ impl Italic {
         static mut SHARED: ::windows::core::FactoryCache<
             Italic,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
@@ -15055,7 +15055,7 @@ impl LineBreak {
         static mut SHARED: ::windows::core::FactoryCache<
             LineBreak,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
@@ -16090,7 +16090,7 @@ impl Paragraph {
         static mut SHARED: ::windows::core::FactoryCache<
             Paragraph,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
@@ -17113,7 +17113,7 @@ impl Paragraph {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Paragraph, IParagraphStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -17265,7 +17265,7 @@ impl Run {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Run, ::windows::core::IActivationFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
@@ -18179,7 +18179,7 @@ impl Run {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Run, IRunStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -19224,7 +19224,7 @@ impl Span {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Span, ISpanFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -20416,7 +20416,7 @@ impl TextElement {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<TextElement, ITextElementStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -20647,7 +20647,7 @@ impl TextHighlighter {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<TextHighlighter, ITextHighlighterFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -20658,7 +20658,7 @@ impl TextHighlighter {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<TextHighlighter, ITextHighlighterStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -23050,7 +23050,7 @@ impl Typography {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Typography, ITypographyStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -23144,7 +23144,7 @@ impl Underline {
         static mut SHARED: ::windows::core::FactoryCache<
             Underline,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]

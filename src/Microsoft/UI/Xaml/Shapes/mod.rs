@@ -21,7 +21,7 @@ impl Ellipse {
         static mut SHARED: ::windows::core::FactoryCache<
             Ellipse,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
@@ -5379,7 +5379,7 @@ unsafe impl ::windows::core::Interface for IEllipse {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEllipse_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -5392,7 +5392,7 @@ unsafe impl ::windows::core::Interface for ILine {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILine_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub X1: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -5437,7 +5437,7 @@ unsafe impl ::windows::core::Interface for ILineStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILineStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub X1Property: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5466,7 +5466,7 @@ unsafe impl ::windows::core::Interface for IPath {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPath_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Media")]
     pub Data: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -5493,7 +5493,7 @@ unsafe impl ::windows::core::Interface for IPathFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPathFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -5512,7 +5512,7 @@ unsafe impl ::windows::core::Interface for IPathStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPathStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DataProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5529,7 +5529,7 @@ unsafe impl ::windows::core::Interface for IPolygon {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPolygon_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Media")]
     pub FillRule: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -5570,7 +5570,7 @@ unsafe impl ::windows::core::Interface for IPolygonStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPolygonStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FillRuleProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5591,7 +5591,7 @@ unsafe impl ::windows::core::Interface for IPolyline {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPolyline_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Media")]
     pub FillRule: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -5632,7 +5632,7 @@ unsafe impl ::windows::core::Interface for IPolylineStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPolylineStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FillRuleProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5653,7 +5653,7 @@ unsafe impl ::windows::core::Interface for IRectangle {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRectangle_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RadiusX: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -5682,7 +5682,7 @@ unsafe impl ::windows::core::Interface for IRectangleStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRectangleStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RadiusXProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5703,7 +5703,7 @@ unsafe impl ::windows::core::Interface for IShape {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IShape_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Media")]
     pub Fill: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -5866,7 +5866,7 @@ unsafe impl ::windows::core::Interface for IShapeFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IShapeFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -5885,7 +5885,7 @@ unsafe impl ::windows::core::Interface for IShapeStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IShapeStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FillProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5947,7 +5947,7 @@ impl Line {
         static mut SHARED: ::windows::core::FactoryCache<
             Line,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
@@ -11196,7 +11196,7 @@ impl Line {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Line, ILineStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -16618,7 +16618,7 @@ impl Path {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Path, IPathFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -16626,7 +16626,7 @@ impl Path {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Path, IPathStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -16884,7 +16884,7 @@ impl Polygon {
         static mut SHARED: ::windows::core::FactoryCache<
             Polygon,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
@@ -22072,7 +22072,7 @@ impl Polygon {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Polygon, IPolygonStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -22330,7 +22330,7 @@ impl Polyline {
         static mut SHARED: ::windows::core::FactoryCache<
             Polyline,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
@@ -27518,7 +27518,7 @@ impl Polyline {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Polyline, IPolylineStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -27776,7 +27776,7 @@ impl Rectangle {
         static mut SHARED: ::windows::core::FactoryCache<
             Rectangle,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Shapes\"`, `\"UI_Composition\"`*"]
@@ -32957,7 +32957,7 @@ impl Rectangle {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Rectangle, IRectangleStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -38436,7 +38436,7 @@ impl Shape {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Shape, IShapeStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

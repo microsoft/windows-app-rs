@@ -73,7 +73,7 @@ impl IAnimatedVisual_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IAnimatedVisual, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IAnimatedVisual, OFFSET>(),
             RootVisual: RootVisual::<Identity, Impl, OFFSET>,
             Size: Size::<Identity, Impl, OFFSET>,
             Duration: Duration::<Identity, Impl, OFFSET>,
@@ -127,7 +127,7 @@ impl IAnimatedVisualSource_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IAnimatedVisualSource, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IAnimatedVisualSource, OFFSET>(
             ),
             TryCreateAnimatedVisual: TryCreateAnimatedVisual::<Identity, Impl, OFFSET>,
         }
@@ -198,8 +198,11 @@ impl IAnimatedVisualSource2_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IAnimatedVisualSource2, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                IAnimatedVisualSource2,
+                OFFSET,
+            >(),
             Markers: Markers::<Identity, Impl, OFFSET>,
             SetColorProperty: SetColorProperty::<Identity, Impl, OFFSET>,
         }
@@ -292,7 +295,7 @@ impl IAppBarOverrides_Vtbl {
             (*this).OnOpening(::core::mem::transmute(&e)).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IAppBarOverrides, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IAppBarOverrides, OFFSET>(),
             OnClosed: OnClosed::<Identity, Impl, OFFSET>,
             OnOpened: OnOpened::<Identity, Impl, OFFSET>,
             OnClosing: OnClosing::<Identity, Impl, OFFSET>,
@@ -351,7 +354,8 @@ impl IComboBoxOverrides_Vtbl {
             (*this).OnDropDownOpened(::core::mem::transmute(&e)).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IComboBoxOverrides, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IComboBoxOverrides, OFFSET>(
+            ),
             OnDropDownClosed: OnDropDownClosed::<Identity, Impl, OFFSET>,
             OnDropDownOpened: OnDropDownOpened::<Identity, Impl, OFFSET>,
         }
@@ -458,7 +462,8 @@ impl ICommandBarElement_Vtbl {
             (*this).SetDynamicOverflowOrder(value).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ICommandBarElement, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ICommandBarElement, OFFSET>(
+            ),
             IsCompact: IsCompact::<Identity, Impl, OFFSET>,
             SetIsCompact: SetIsCompact::<Identity, Impl, OFFSET>,
             IsInOverflow: IsInOverflow::<Identity, Impl, OFFSET>,
@@ -557,7 +562,7 @@ impl IContentControlOverrides_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IContentControlOverrides,
                 OFFSET,
@@ -637,7 +642,7 @@ impl IContentPresenterOverrides_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IContentPresenterOverrides,
                 OFFSET,
@@ -1189,7 +1194,7 @@ impl IControlOverrides_Vtbl {
             (*this).OnDrop(::core::mem::transmute(&e)).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IControlOverrides, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IControlOverrides, OFFSET>(),
             OnPointerEntered: OnPointerEntered::<Identity, Impl, OFFSET>,
             OnPointerPressed: OnPointerPressed::<Identity, Impl, OFFSET>,
             OnPointerMoved: OnPointerMoved::<Identity, Impl, OFFSET>,
@@ -1289,7 +1294,7 @@ impl IDataTemplateSelectorOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IDataTemplateSelectorOverrides,
                 OFFSET,
@@ -1364,7 +1369,7 @@ impl IDynamicAnimatedVisualSource_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IDynamicAnimatedVisualSource,
                 OFFSET,
@@ -1419,7 +1424,7 @@ impl IGroupStyleSelectorOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IGroupStyleSelectorOverrides,
                 OFFSET,
@@ -1487,7 +1492,7 @@ impl IIconSourceOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IIconSourceOverrides, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IIconSourceOverrides, OFFSET>(
             ),
             CreateIconElementCore: CreateIconElementCore::<Identity, Impl, OFFSET>,
             GetIconElementPropertyCore: GetIconElementPropertyCore::<Identity, Impl, OFFSET>,
@@ -1535,7 +1540,7 @@ impl IInsertionPanel_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IInsertionPanel, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IInsertionPanel, OFFSET>(),
             GetInsertionIndexes: GetInsertionIndexes::<Identity, Impl, OFFSET>,
         }
     }
@@ -1648,7 +1653,7 @@ impl IItemContainerMapping_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IItemContainerMapping, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IItemContainerMapping, OFFSET>(
             ),
             ItemFromContainer: ItemFromContainer::<Identity, Impl, OFFSET>,
             ContainerFromItem: ContainerFromItem::<Identity, Impl, OFFSET>,
@@ -1909,8 +1914,11 @@ impl IItemsControlOverrides_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IItemsControlOverrides, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                IItemsControlOverrides,
+                OFFSET,
+            >(),
             IsItemItsOwnContainerOverride: IsItemItsOwnContainerOverride::<Identity, Impl, OFFSET>,
             GetContainerForItemOverride: GetContainerForItemOverride::<Identity, Impl, OFFSET>,
             ClearContainerForItemOverride: ClearContainerForItemOverride::<Identity, Impl, OFFSET>,
@@ -1989,7 +1997,7 @@ impl IKeyIndexMapping_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IKeyIndexMapping, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IKeyIndexMapping, OFFSET>(),
             KeyFromIndex: KeyFromIndex::<Identity, Impl, OFFSET>,
             IndexFromKey: IndexFromKey::<Identity, Impl, OFFSET>,
         }
@@ -2050,8 +2058,11 @@ impl ILayoutContextOverrides_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ILayoutContextOverrides, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                ILayoutContextOverrides,
+                OFFSET,
+            >(),
             LayoutStateCore: LayoutStateCore::<Identity, Impl, OFFSET>,
             SetLayoutStateCore: SetLayoutStateCore::<Identity, Impl, OFFSET>,
         }
@@ -2096,7 +2107,7 @@ impl INavigate_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, INavigate, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, INavigate, OFFSET>(),
             Navigate: Navigate::<Identity, Impl, OFFSET>,
         }
     }
@@ -2138,7 +2149,7 @@ impl INonVirtualizingLayoutContextOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 INonVirtualizingLayoutContextOverrides,
                 OFFSET,
@@ -2260,7 +2271,7 @@ impl INonVirtualizingLayoutOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 INonVirtualizingLayoutOverrides,
                 OFFSET,
@@ -2344,7 +2355,7 @@ impl IPageOverrides_Vtbl {
             (*this).OnNavigatingFrom(::core::mem::transmute(&e)).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IPageOverrides, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IPageOverrides, OFFSET>(),
             OnNavigatedFrom: OnNavigatedFrom::<Identity, Impl, OFFSET>,
             OnNavigatedTo: OnNavigatedTo::<Identity, Impl, OFFSET>,
             OnNavigatingFrom: OnNavigatingFrom::<Identity, Impl, OFFSET>,
@@ -2422,7 +2433,7 @@ impl IScrollAnchorProvider_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IScrollAnchorProvider, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IScrollAnchorProvider, OFFSET>(
             ),
             CurrentAnchor: CurrentAnchor::<Identity, Impl, OFFSET>,
             RegisterAnchorCandidate: RegisterAnchorCandidate::<Identity, Impl, OFFSET>,
@@ -2681,7 +2692,7 @@ impl ISemanticZoomInformation_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 ISemanticZoomInformation,
                 OFFSET,
@@ -2746,8 +2757,11 @@ impl IStyleSelectorOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IStyleSelectorOverrides, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                IStyleSelectorOverrides,
+                OFFSET,
+            >(),
             SelectStyleCore: SelectStyleCore::<Identity, Impl, OFFSET>,
         }
     }
@@ -2856,8 +2870,11 @@ impl IToggleSwitchOverrides_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IToggleSwitchOverrides, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                IToggleSwitchOverrides,
+                OFFSET,
+            >(),
             OnToggled: OnToggled::<Identity, Impl, OFFSET>,
             OnOnContentChanged: OnOnContentChanged::<Identity, Impl, OFFSET>,
             OnOffContentChanged: OnOffContentChanged::<Identity, Impl, OFFSET>,
@@ -3047,7 +3064,7 @@ impl IVirtualizingLayoutContextOverrides_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IVirtualizingLayoutContextOverrides,
                 OFFSET,
@@ -3207,7 +3224,7 @@ impl IVirtualizingLayoutOverrides_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IVirtualizingLayoutOverrides,
                 OFFSET,
@@ -3292,7 +3309,7 @@ impl IVirtualizingPanelOverrides_Vtbl {
             (*this).BringIndexIntoView(index).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IVirtualizingPanelOverrides,
                 OFFSET,
@@ -3338,7 +3355,7 @@ impl IVirtualizingStackPanelOverrides_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IVirtualizingStackPanelOverrides,
                 OFFSET,

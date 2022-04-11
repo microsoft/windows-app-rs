@@ -550,7 +550,7 @@ impl AcrylicBrush {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<AcrylicBrush, IAcrylicBrushFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -561,7 +561,7 @@ impl AcrylicBrush {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<AcrylicBrush, IAcrylicBrushStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -572,7 +572,7 @@ impl AcrylicBrush {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<AcrylicBrush, IAcrylicBrushStatics2> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -832,7 +832,7 @@ impl ArcSegment {
         static mut SHARED: ::windows::core::FactoryCache<
             ArcSegment,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -1169,7 +1169,7 @@ impl ArcSegment {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<ArcSegment, IArcSegmentStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1303,7 +1303,7 @@ impl BezierSegment {
         static mut SHARED: ::windows::core::FactoryCache<
             BezierSegment,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -1578,7 +1578,7 @@ impl BezierSegment {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<BezierSegment, IBezierSegmentStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1712,7 +1712,7 @@ impl BitmapCache {
         static mut SHARED: ::windows::core::FactoryCache<
             BitmapCache,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -2275,7 +2275,7 @@ impl Brush {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Brush, IBrushStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -2417,7 +2417,7 @@ impl BrushCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             BrushCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -3109,7 +3109,7 @@ impl CompositeTransform {
         static mut SHARED: ::windows::core::FactoryCache<
             CompositeTransform,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -3652,7 +3652,7 @@ impl CompositeTransform {
         static mut SHARED: ::windows::core::FactoryCache<
             CompositeTransform,
             ICompositeTransformStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3919,7 +3919,7 @@ impl CompositionTarget {
         static mut SHARED: ::windows::core::FactoryCache<
             CompositionTarget,
             ICompositionTargetStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -4013,7 +4013,7 @@ impl DoubleCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             DoubleCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -4396,7 +4396,7 @@ impl EllipseGeometry {
         static mut SHARED: ::windows::core::FactoryCache<
             EllipseGeometry,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -4703,7 +4703,7 @@ impl EllipseGeometry {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<EllipseGeometry, IEllipseGeometryStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -4930,7 +4930,7 @@ impl FontFamily {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<FontFamily, IFontFamilyFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -4938,7 +4938,7 @@ impl FontFamily {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<FontFamily, IFontFamilyStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -5572,7 +5572,7 @@ impl Geometry {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Geometry, IGeometryStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -5686,7 +5686,7 @@ impl GeometryCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             GeometryCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -6048,7 +6048,7 @@ impl GeometryGroup {
         static mut SHARED: ::windows::core::FactoryCache<
             GeometryGroup,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -6321,7 +6321,7 @@ impl GeometryGroup {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<GeometryGroup, IGeometryGroupStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6843,7 +6843,7 @@ impl GradientBrush {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<GradientBrush, IGradientBrushStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -7048,7 +7048,7 @@ impl GradientStop {
         static mut SHARED: ::windows::core::FactoryCache<
             GradientStop,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -7283,7 +7283,7 @@ impl GradientStop {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<GradientStop, IGradientStopStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -7397,7 +7397,7 @@ impl GradientStopCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             GradientStopCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -7756,7 +7756,7 @@ unsafe impl ::windows::core::Interface for IAcrylicBrush {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAcrylicBrush_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TintColor: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::UI::Color,
@@ -7801,7 +7801,7 @@ unsafe impl ::windows::core::Interface for IAcrylicBrush2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAcrylicBrush2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TintLuminosityOpacity: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -7822,7 +7822,7 @@ unsafe impl ::windows::core::Interface for IAcrylicBrushFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAcrylicBrushFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -7841,7 +7841,7 @@ unsafe impl ::windows::core::Interface for IAcrylicBrushStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAcrylicBrushStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TintColorProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -7870,7 +7870,7 @@ unsafe impl ::windows::core::Interface for IAcrylicBrushStatics2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAcrylicBrushStatics2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TintLuminosityOpacityProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -7887,7 +7887,7 @@ unsafe impl ::windows::core::Interface for IArcSegment {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IArcSegment_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Point: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -7940,7 +7940,7 @@ unsafe impl ::windows::core::Interface for IArcSegmentStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IArcSegmentStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PointProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -7973,7 +7973,7 @@ unsafe impl ::windows::core::Interface for IBezierSegment {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBezierSegment_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Point1: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -8010,7 +8010,7 @@ unsafe impl ::windows::core::Interface for IBezierSegmentStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBezierSegmentStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Point1Property: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8035,7 +8035,7 @@ unsafe impl ::windows::core::Interface for IBitmapCache {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapCache_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -8048,7 +8048,7 @@ unsafe impl ::windows::core::Interface for IBrush {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBrush_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Opacity: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -8085,7 +8085,7 @@ unsafe impl ::windows::core::Interface for IBrushFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBrushFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -8104,7 +8104,7 @@ unsafe impl ::windows::core::Interface for IBrushOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBrushOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Composition")]
     pub PopulatePropertyInfoOverride: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -8125,7 +8125,7 @@ unsafe impl ::windows::core::Interface for IBrushStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBrushStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OpacityProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8150,7 +8150,7 @@ unsafe impl ::windows::core::Interface for ICacheMode {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICacheMode_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -8163,7 +8163,7 @@ unsafe impl ::windows::core::Interface for ICacheModeFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICacheModeFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -8182,7 +8182,7 @@ unsafe impl ::windows::core::Interface for ICompositeTransform {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositeTransform_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterX: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -8267,7 +8267,7 @@ unsafe impl ::windows::core::Interface for ICompositeTransformStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositeTransformStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterXProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8316,7 +8316,7 @@ unsafe impl ::windows::core::Interface for ICompositionTarget {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionTarget_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -8329,7 +8329,7 @@ unsafe impl ::windows::core::Interface for ICompositionTargetStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionTargetStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Rendering: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -8376,7 +8376,7 @@ unsafe impl ::windows::core::Interface for IEllipseGeometry {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEllipseGeometry_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Center: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -8413,7 +8413,7 @@ unsafe impl ::windows::core::Interface for IEllipseGeometryStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEllipseGeometryStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8438,7 +8438,7 @@ unsafe impl ::windows::core::Interface for IFontFamily {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFontFamily_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Source: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -8455,7 +8455,7 @@ unsafe impl ::windows::core::Interface for IFontFamilyFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFontFamilyFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         familyname: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -8475,7 +8475,7 @@ unsafe impl ::windows::core::Interface for IFontFamilyStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFontFamilyStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub XamlAutoFontFamily: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8492,7 +8492,7 @@ unsafe impl ::windows::core::Interface for IGeneralTransform {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGeneralTransform_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Inverse: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8525,7 +8525,7 @@ unsafe impl ::windows::core::Interface for IGeneralTransformFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGeneralTransformFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -8544,7 +8544,7 @@ unsafe impl ::windows::core::Interface for IGeneralTransformOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGeneralTransformOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub InverseCore: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8572,7 +8572,7 @@ unsafe impl ::windows::core::Interface for IGeometry {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGeometry_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Transform: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8597,7 +8597,7 @@ unsafe impl ::windows::core::Interface for IGeometryFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGeometryFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -8610,7 +8610,7 @@ unsafe impl ::windows::core::Interface for IGeometryGroup {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGeometryGroup_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FillRule: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut FillRule,
@@ -8639,7 +8639,7 @@ unsafe impl ::windows::core::Interface for IGeometryGroupStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGeometryGroupStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FillRuleProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8660,7 +8660,7 @@ unsafe impl ::windows::core::Interface for IGeometryStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGeometryStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Empty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8685,7 +8685,7 @@ unsafe impl ::windows::core::Interface for IGradientBrush {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGradientBrush_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub SpreadMethod: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut GradientSpreadMethod,
@@ -8730,7 +8730,7 @@ unsafe impl ::windows::core::Interface for IGradientBrushFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGradientBrushFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -8749,7 +8749,7 @@ unsafe impl ::windows::core::Interface for IGradientBrushStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGradientBrushStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub SpreadMethodProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8778,7 +8778,7 @@ unsafe impl ::windows::core::Interface for IGradientStop {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGradientStop_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Color: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::UI::Color,
@@ -8807,7 +8807,7 @@ unsafe impl ::windows::core::Interface for IGradientStopStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGradientStopStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ColorProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8828,7 +8828,7 @@ unsafe impl ::windows::core::Interface for IImageBrush {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IImageBrush_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ImageSource: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8867,7 +8867,7 @@ unsafe impl ::windows::core::Interface for IImageBrushStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IImageBrushStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ImageSourceProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8884,7 +8884,7 @@ unsafe impl ::windows::core::Interface for IImageSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IImageSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -8897,7 +8897,7 @@ unsafe impl ::windows::core::Interface for IImageSourceFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IImageSourceFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -8910,7 +8910,7 @@ unsafe impl ::windows::core::Interface for ILineGeometry {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILineGeometry_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub StartPoint: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -8939,7 +8939,7 @@ unsafe impl ::windows::core::Interface for ILineGeometryStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILineGeometryStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub StartPointProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8960,7 +8960,7 @@ unsafe impl ::windows::core::Interface for ILineSegment {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILineSegment_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Point: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -8981,7 +8981,7 @@ unsafe impl ::windows::core::Interface for ILineSegmentStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILineSegmentStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PointProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -8998,7 +8998,7 @@ unsafe impl ::windows::core::Interface for ILinearGradientBrush {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILinearGradientBrush_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub StartPoint: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -9027,7 +9027,7 @@ unsafe impl ::windows::core::Interface for ILinearGradientBrushFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILinearGradientBrushFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithGradientStopCollectionAndAngle:
         unsafe extern "system" fn(
             this: *mut ::core::ffi::c_void,
@@ -9047,7 +9047,7 @@ unsafe impl ::windows::core::Interface for ILinearGradientBrushStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILinearGradientBrushStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub StartPointProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9068,7 +9068,7 @@ unsafe impl ::windows::core::Interface for ILoadedImageSourceLoadCompletedEventA
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILoadedImageSourceLoadCompletedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Status: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut LoadedImageSourceLoadStatus,
@@ -9085,7 +9085,7 @@ unsafe impl ::windows::core::Interface for ILoadedImageSurface {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILoadedImageSurface_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DecodedPhysicalSize: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Size,
@@ -9119,7 +9119,7 @@ unsafe impl ::windows::core::Interface for ILoadedImageSurfaceStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILoadedImageSurfaceStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub StartLoadFromUriWithSize: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         uri: ::windows::core::RawPtr,
@@ -9154,7 +9154,7 @@ unsafe impl ::windows::core::Interface for IMatrix3DProjection {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMatrix3DProjection_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Media_Media3D")]
     pub ProjectionMatrix: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -9181,7 +9181,7 @@ unsafe impl ::windows::core::Interface for IMatrix3DProjectionStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMatrix3DProjectionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ProjectionMatrixProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9198,7 +9198,7 @@ unsafe impl ::windows::core::Interface for IMatrixHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMatrixHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -9211,7 +9211,7 @@ unsafe impl ::windows::core::Interface for IMatrixHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMatrixHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Identity: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut Matrix,
@@ -9249,7 +9249,7 @@ unsafe impl ::windows::core::Interface for IMatrixTransform {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMatrixTransform_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Matrix: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut Matrix,
@@ -9270,7 +9270,7 @@ unsafe impl ::windows::core::Interface for IMatrixTransformStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMatrixTransformStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub MatrixProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9287,7 +9287,7 @@ unsafe impl ::windows::core::Interface for IPathFigure {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPathFigure_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Segments: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9332,7 +9332,7 @@ unsafe impl ::windows::core::Interface for IPathFigureStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPathFigureStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub SegmentsProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9361,7 +9361,7 @@ unsafe impl ::windows::core::Interface for IPathGeometry {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPathGeometry_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FillRule: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut FillRule,
@@ -9390,7 +9390,7 @@ unsafe impl ::windows::core::Interface for IPathGeometryStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPathGeometryStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FillRuleProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9411,7 +9411,7 @@ unsafe impl ::windows::core::Interface for IPathSegment {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPathSegment_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -9424,7 +9424,7 @@ unsafe impl ::windows::core::Interface for IPathSegmentFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPathSegmentFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -9437,7 +9437,7 @@ unsafe impl ::windows::core::Interface for IPlaneProjection {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPlaneProjection_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub LocalOffsetX: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -9553,7 +9553,7 @@ unsafe impl ::windows::core::Interface for IPlaneProjectionStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPlaneProjectionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub LocalOffsetXProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9618,7 +9618,7 @@ unsafe impl ::windows::core::Interface for IPolyBezierSegment {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPolyBezierSegment_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Points: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9639,7 +9639,7 @@ unsafe impl ::windows::core::Interface for IPolyBezierSegmentStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPolyBezierSegmentStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PointsProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9656,7 +9656,7 @@ unsafe impl ::windows::core::Interface for IPolyLineSegment {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPolyLineSegment_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Points: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9677,7 +9677,7 @@ unsafe impl ::windows::core::Interface for IPolyLineSegmentStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPolyLineSegmentStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PointsProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9694,7 +9694,7 @@ unsafe impl ::windows::core::Interface for IPolyQuadraticBezierSegment {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPolyQuadraticBezierSegment_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Points: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9715,7 +9715,7 @@ unsafe impl ::windows::core::Interface for IPolyQuadraticBezierSegmentStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPolyQuadraticBezierSegmentStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PointsProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9732,7 +9732,7 @@ unsafe impl ::windows::core::Interface for IProjection {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IProjection_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -9745,7 +9745,7 @@ unsafe impl ::windows::core::Interface for IProjectionFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IProjectionFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -9764,7 +9764,7 @@ unsafe impl ::windows::core::Interface for IQuadraticBezierSegment {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IQuadraticBezierSegment_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Point1: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -9793,7 +9793,7 @@ unsafe impl ::windows::core::Interface for IQuadraticBezierSegmentStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IQuadraticBezierSegmentStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Point1Property: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9814,7 +9814,7 @@ unsafe impl ::windows::core::Interface for IRadialGradientBrush {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRadialGradientBrush_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Center: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -9893,7 +9893,7 @@ unsafe impl ::windows::core::Interface for IRadialGradientBrushFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRadialGradientBrushFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -9912,7 +9912,7 @@ unsafe impl ::windows::core::Interface for IRadialGradientBrushStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRadialGradientBrushStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9953,7 +9953,7 @@ unsafe impl ::windows::core::Interface for IRectangleGeometry {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRectangleGeometry_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Rect: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Rect,
@@ -9974,7 +9974,7 @@ unsafe impl ::windows::core::Interface for IRectangleGeometryStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRectangleGeometryStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RectProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -9991,7 +9991,7 @@ unsafe impl ::windows::core::Interface for IRenderedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRenderedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FrameDuration: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::TimeSpan,
@@ -10008,7 +10008,7 @@ unsafe impl ::windows::core::Interface for IRenderingEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRenderingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RenderingTime: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::TimeSpan,
@@ -10025,7 +10025,7 @@ unsafe impl ::windows::core::Interface for IRotateTransform {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRotateTransform_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterX: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -10062,7 +10062,7 @@ unsafe impl ::windows::core::Interface for IRotateTransformStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRotateTransformStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterXProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10087,7 +10087,7 @@ unsafe impl ::windows::core::Interface for IScaleTransform {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IScaleTransform_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterX: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -10132,7 +10132,7 @@ unsafe impl ::windows::core::Interface for IScaleTransformStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IScaleTransformStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterXProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10161,7 +10161,7 @@ unsafe impl ::windows::core::Interface for IShadow {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IShadow_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -10174,7 +10174,7 @@ unsafe impl ::windows::core::Interface for IShadowFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IShadowFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -10187,7 +10187,7 @@ unsafe impl ::windows::core::Interface for ISkewTransform {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISkewTransform_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterX: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -10232,7 +10232,7 @@ unsafe impl ::windows::core::Interface for ISkewTransformStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISkewTransformStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterXProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10261,7 +10261,7 @@ unsafe impl ::windows::core::Interface for ISolidColorBrush {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISolidColorBrush_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Color: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::UI::Color,
@@ -10282,7 +10282,7 @@ unsafe impl ::windows::core::Interface for ISolidColorBrushFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISolidColorBrushFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithColor: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         color: ::windows::UI::Color,
@@ -10300,7 +10300,7 @@ unsafe impl ::windows::core::Interface for ISolidColorBrushStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISolidColorBrushStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ColorProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10375,7 +10375,7 @@ unsafe impl ::windows::core::Interface for ISurfaceImageSourceManagerNative {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISurfaceImageSourceManagerNative_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub FlushAllSurfacesWithDevice: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         device: *mut ::core::ffi::c_void,
@@ -10470,7 +10470,7 @@ unsafe impl ::windows::core::Interface for ISurfaceImageSourceNative {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISurfaceImageSourceNative_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub SetDevice: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         device: ::windows::core::RawPtr,
@@ -10584,7 +10584,7 @@ unsafe impl ::windows::core::Interface for ISurfaceImageSourceNativeWithD2D {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISurfaceImageSourceNativeWithD2D_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub SetDevice: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         device: *mut ::core::ffi::c_void,
@@ -10672,7 +10672,7 @@ unsafe impl ::windows::core::Interface for ISwapChainBackgroundPanelNative {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISwapChainBackgroundPanelNative_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub SetSwapChain: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         swapchain: ::windows::core::RawPtr,
@@ -10743,7 +10743,7 @@ unsafe impl ::windows::core::Interface for ISwapChainPanelNative {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISwapChainPanelNative_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub SetSwapChain: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         swapchain: ::windows::core::RawPtr,
@@ -10761,7 +10761,7 @@ impl ISwapChainPanelNative2 {
         &self,
         swapchain: Param0,
     ) -> ::windows::core::Result<()> {
-        (::windows::core::Interface::vtable(self).base.SetSwapChain)(
+        (::windows::core::Interface::vtable(self).base__.SetSwapChain)(
             ::core::mem::transmute_copy(self),
             swapchain.into_param().abi(),
         )
@@ -10848,7 +10848,7 @@ unsafe impl ::windows::core::Interface for ISwapChainPanelNative2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISwapChainPanelNative2_Vtbl {
-    pub base: ISwapChainPanelNative_Vtbl,
+    pub base__: ISwapChainPanelNative_Vtbl,
     pub SetSwapChainHandle: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         swapchainhandle: ::windows::Win32::Foundation::HANDLE,
@@ -10865,7 +10865,7 @@ unsafe impl ::windows::core::Interface for IThemeShadow {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IThemeShadow_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Receivers: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10882,7 +10882,7 @@ unsafe impl ::windows::core::Interface for IThemeShadowFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IThemeShadowFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -10901,7 +10901,7 @@ unsafe impl ::windows::core::Interface for ITileBrush {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITileBrush_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AlignmentX: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut AlignmentX,
@@ -10938,7 +10938,7 @@ unsafe impl ::windows::core::Interface for ITileBrushFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITileBrushFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -10957,7 +10957,7 @@ unsafe impl ::windows::core::Interface for ITileBrushStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITileBrushStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AlignmentXProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -10982,7 +10982,7 @@ unsafe impl ::windows::core::Interface for ITransform {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransform_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -10995,7 +10995,7 @@ unsafe impl ::windows::core::Interface for ITransformFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransformFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -11008,7 +11008,7 @@ unsafe impl ::windows::core::Interface for ITransformGroup {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransformGroup_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Children: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -11033,7 +11033,7 @@ unsafe impl ::windows::core::Interface for ITransformGroupStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransformGroupStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ChildrenProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -11050,7 +11050,7 @@ unsafe impl ::windows::core::Interface for ITranslateTransform {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITranslateTransform_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub X: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -11079,7 +11079,7 @@ unsafe impl ::windows::core::Interface for ITranslateTransformStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITranslateTransformStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub XProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -11101,7 +11101,7 @@ impl IVirtualSurfaceImageSourceNative {
         &self,
         device: Param0,
     ) -> ::windows::core::Result<()> {
-        (::windows::core::Interface::vtable(self).base.SetDevice)(
+        (::windows::core::Interface::vtable(self).base__.SetDevice)(
             ::core::mem::transmute_copy(self),
             device.into_param().abi(),
         )
@@ -11117,7 +11117,7 @@ impl IVirtualSurfaceImageSourceNative {
         surface: *mut ::core::option::Option<::windows::Win32::Graphics::Dxgi::IDXGISurface>,
         offset: *mut ::windows::Win32::Foundation::POINT,
     ) -> ::windows::core::Result<()> {
-        (::windows::core::Interface::vtable(self).base.BeginDraw)(
+        (::windows::core::Interface::vtable(self).base__.BeginDraw)(
             ::core::mem::transmute_copy(self),
             updaterect.into_param().abi(),
             ::core::mem::transmute(surface),
@@ -11127,7 +11127,7 @@ impl IVirtualSurfaceImageSourceNative {
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
     pub unsafe fn EndDraw(&self) -> ::windows::core::Result<()> {
-        (::windows::core::Interface::vtable(self).base.EndDraw)(::core::mem::transmute_copy(self))
+        (::windows::core::Interface::vtable(self).base__.EndDraw)(::core::mem::transmute_copy(self))
             .ok()
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -11274,7 +11274,7 @@ unsafe impl ::windows::core::Interface for IVirtualSurfaceImageSourceNative {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVirtualSurfaceImageSourceNative_Vtbl {
-    pub base: ISurfaceImageSourceNative_Vtbl,
+    pub base__: ISurfaceImageSourceNative_Vtbl,
     pub Invalidate: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         updaterect: ::windows::Win32::Foundation::RECT,
@@ -11362,7 +11362,7 @@ unsafe impl ::windows::core::Interface for IVirtualSurfaceUpdatesCallbackNative 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVirtualSurfaceUpdatesCallbackNative_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub UpdatesNeeded:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -11377,7 +11377,7 @@ unsafe impl ::windows::core::Interface for IVisualTreeHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualTreeHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -11390,7 +11390,7 @@ unsafe impl ::windows::core::Interface for IVisualTreeHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualTreeHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FindElementsInHostCoordinatesPoint: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         intersectingpoint: ::windows::Foundation::Point,
@@ -11469,7 +11469,7 @@ unsafe impl ::windows::core::Interface for IXamlCompositionBrushBase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlCompositionBrushBase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FallbackColor: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::UI::Color,
@@ -11490,7 +11490,7 @@ unsafe impl ::windows::core::Interface for IXamlCompositionBrushBaseFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlCompositionBrushBaseFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -11509,7 +11509,7 @@ unsafe impl ::windows::core::Interface for IXamlCompositionBrushBaseOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlCompositionBrushBaseOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OnConnected:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
     pub OnDisconnected:
@@ -11526,7 +11526,7 @@ unsafe impl ::windows::core::Interface for IXamlCompositionBrushBaseProtected {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlCompositionBrushBaseProtected_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Composition")]
     pub CompositionBrush: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -11553,7 +11553,7 @@ unsafe impl ::windows::core::Interface for IXamlCompositionBrushBaseStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlCompositionBrushBaseStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FallbackColorProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -11570,7 +11570,7 @@ unsafe impl ::windows::core::Interface for IXamlLight {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlLight_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -11583,7 +11583,7 @@ unsafe impl ::windows::core::Interface for IXamlLightFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlLightFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -11602,7 +11602,7 @@ unsafe impl ::windows::core::Interface for IXamlLightOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlLightOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -11627,7 +11627,7 @@ unsafe impl ::windows::core::Interface for IXamlLightProtected {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlLightProtected_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Composition")]
     pub CompositionLight: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -11654,7 +11654,7 @@ unsafe impl ::windows::core::Interface for IXamlLightStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlLightStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AddTargetElement: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         lightid: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -11692,7 +11692,7 @@ impl ImageBrush {
         static mut SHARED: ::windows::core::FactoryCache<
             ImageBrush,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
@@ -12125,7 +12125,7 @@ impl ImageBrush {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<ImageBrush, IImageBrushStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -12563,7 +12563,7 @@ impl LineGeometry {
         static mut SHARED: ::windows::core::FactoryCache<
             LineGeometry,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -12842,7 +12842,7 @@ impl LineGeometry {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<LineGeometry, ILineGeometryStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -12976,7 +12976,7 @@ impl LineSegment {
         static mut SHARED: ::windows::core::FactoryCache<
             LineSegment,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -13174,7 +13174,7 @@ impl LineSegment {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<LineSegment, ILineSegmentStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -13308,7 +13308,7 @@ impl LinearGradientBrush {
         static mut SHARED: ::windows::core::FactoryCache<
             LinearGradientBrush,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
@@ -13766,7 +13766,7 @@ impl LinearGradientBrush {
         static mut SHARED: ::windows::core::FactoryCache<
             LinearGradientBrush,
             ILinearGradientBrushFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -13779,7 +13779,7 @@ impl LinearGradientBrush {
         static mut SHARED: ::windows::core::FactoryCache<
             LinearGradientBrush,
             ILinearGradientBrushStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -14268,7 +14268,7 @@ impl LoadedImageSurface {
         static mut SHARED: ::windows::core::FactoryCache<
             LoadedImageSurface,
             ILoadedImageSurfaceStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -14483,7 +14483,7 @@ impl Matrix3DProjection {
         static mut SHARED: ::windows::core::FactoryCache<
             Matrix3DProjection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -14688,7 +14688,7 @@ impl Matrix3DProjection {
         static mut SHARED: ::windows::core::FactoryCache<
             Matrix3DProjection,
             IMatrix3DProjectionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -14887,7 +14887,7 @@ impl MatrixHelper {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<MatrixHelper, IMatrixHelperStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -14981,7 +14981,7 @@ impl MatrixTransform {
         static mut SHARED: ::windows::core::FactoryCache<
             MatrixTransform,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -15253,7 +15253,7 @@ impl MatrixTransform {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<MatrixTransform, IMatrixTransformStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -15407,7 +15407,7 @@ impl PathFigure {
         static mut SHARED: ::windows::core::FactoryCache<
             PathFigure,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -15713,7 +15713,7 @@ impl PathFigure {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<PathFigure, IPathFigureStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -15827,7 +15827,7 @@ impl PathFigureCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             PathFigureCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -16188,7 +16188,7 @@ impl PathGeometry {
         static mut SHARED: ::windows::core::FactoryCache<
             PathGeometry,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -16461,7 +16461,7 @@ impl PathGeometry {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<PathGeometry, IPathGeometryStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -16847,7 +16847,7 @@ impl PathSegmentCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             PathSegmentCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -17283,7 +17283,7 @@ impl PlaneProjection {
         static mut SHARED: ::windows::core::FactoryCache<
             PlaneProjection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -17879,7 +17879,7 @@ impl PlaneProjection {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<PlaneProjection, IPlaneProjectionStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -18013,7 +18013,7 @@ impl PointCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             PointCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -18406,7 +18406,7 @@ impl PolyBezierSegment {
         static mut SHARED: ::windows::core::FactoryCache<
             PolyBezierSegment,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -18609,7 +18609,7 @@ impl PolyBezierSegment {
         static mut SHARED: ::windows::core::FactoryCache<
             PolyBezierSegment,
             IPolyBezierSegmentStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -18743,7 +18743,7 @@ impl PolyLineSegment {
         static mut SHARED: ::windows::core::FactoryCache<
             PolyLineSegment,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -18944,7 +18944,7 @@ impl PolyLineSegment {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<PolyLineSegment, IPolyLineSegmentStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -19078,7 +19078,7 @@ impl PolyQuadraticBezierSegment {
         static mut SHARED: ::windows::core::FactoryCache<
             PolyQuadraticBezierSegment,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -19281,7 +19281,7 @@ impl PolyQuadraticBezierSegment {
         static mut SHARED: ::windows::core::FactoryCache<
             PolyQuadraticBezierSegment,
             IPolyQuadraticBezierSegmentStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -19674,7 +19674,7 @@ impl QuadraticBezierSegment {
         static mut SHARED: ::windows::core::FactoryCache<
             QuadraticBezierSegment,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -19914,7 +19914,7 @@ impl QuadraticBezierSegment {
         static mut SHARED: ::windows::core::FactoryCache<
             QuadraticBezierSegment,
             IQuadraticBezierSegmentStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -20658,7 +20658,7 @@ impl RadialGradientBrush {
         static mut SHARED: ::windows::core::FactoryCache<
             RadialGradientBrush,
             IRadialGradientBrushFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -20671,7 +20671,7 @@ impl RadialGradientBrush {
         static mut SHARED: ::windows::core::FactoryCache<
             RadialGradientBrush,
             IRadialGradientBrushStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -20861,7 +20861,7 @@ impl RectangleGeometry {
         static mut SHARED: ::windows::core::FactoryCache<
             RectangleGeometry,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -21102,7 +21102,7 @@ impl RectangleGeometry {
         static mut SHARED: ::windows::core::FactoryCache<
             RectangleGeometry,
             IRectangleGeometryStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -21418,7 +21418,7 @@ impl RotateTransform {
         static mut SHARED: ::windows::core::FactoryCache<
             RotateTransform,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -21755,7 +21755,7 @@ impl RotateTransform {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<RotateTransform, IRotateTransformStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -21909,7 +21909,7 @@ impl ScaleTransform {
         static mut SHARED: ::windows::core::FactoryCache<
             ScaleTransform,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -22280,7 +22280,7 @@ impl ScaleTransform {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<ScaleTransform, IScaleTransformStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -22686,7 +22686,7 @@ impl SkewTransform {
         static mut SHARED: ::windows::core::FactoryCache<
             SkewTransform,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -23057,7 +23057,7 @@ impl SkewTransform {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<SkewTransform, ISkewTransformStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -23211,7 +23211,7 @@ impl SolidColorBrush {
         static mut SHARED: ::windows::core::FactoryCache<
             SolidColorBrush,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`, `\"UI_Composition\"`*"]
@@ -23526,7 +23526,7 @@ impl SolidColorBrush {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<SolidColorBrush, ISolidColorBrushFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -23537,7 +23537,7 @@ impl SolidColorBrush {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<SolidColorBrush, ISolidColorBrushStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -24001,7 +24001,7 @@ impl ThemeShadow {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<ThemeShadow, IThemeShadowFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -24480,7 +24480,7 @@ impl TileBrush {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<TileBrush, ITileBrushStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -24987,7 +24987,7 @@ impl TransformCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             TransformCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -25345,7 +25345,7 @@ impl TransformGroup {
         static mut SHARED: ::windows::core::FactoryCache<
             TransformGroup,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -25629,7 +25629,7 @@ impl TransformGroup {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<TransformGroup, ITransformGroupStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -25783,7 +25783,7 @@ impl TranslateTransform {
         static mut SHARED: ::windows::core::FactoryCache<
             TranslateTransform,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media\"`*"]
@@ -26088,7 +26088,7 @@ impl TranslateTransform {
         static mut SHARED: ::windows::core::FactoryCache<
             TranslateTransform,
             ITranslateTransformStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -26425,7 +26425,7 @@ impl VisualTreeHelper {
         static mut SHARED: ::windows::core::FactoryCache<
             VisualTreeHelper,
             IVisualTreeHelperStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -26837,7 +26837,7 @@ impl XamlCompositionBrushBase {
         static mut SHARED: ::windows::core::FactoryCache<
             XamlCompositionBrushBase,
             IXamlCompositionBrushBaseStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -27292,7 +27292,7 @@ impl XamlLight {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<XamlLight, IXamlLightFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -27300,7 +27300,7 @@ impl XamlLight {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<XamlLight, IXamlLightStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

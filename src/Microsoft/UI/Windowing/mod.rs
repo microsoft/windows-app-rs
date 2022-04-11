@@ -415,6 +415,30 @@ impl AppWindow {
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn InsertAfter<'a, Param0: ::windows::core::IntoParam<'a, super::WindowId>>(
+        &self,
+        insertafterwindowid: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IAppWindow2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).InsertAfter)(
+                ::core::mem::transmute_copy(this),
+                insertafterwindowid.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn ShowWithDefaultPresenterState(&self) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IAppWindow2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).ShowWithDefaultPresenterState)(
+                ::core::mem::transmute_copy(this),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Create() -> ::windows::core::Result<AppWindow> {
         Self::IAppWindowStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -478,7 +502,7 @@ impl AppWindow {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<AppWindow, IAppWindowStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Windowing.Core.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -606,6 +630,30 @@ impl AppWindowChangedEventArgs {
                 &mut result__,
             )
             .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn DidZOrderChange(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<IAppWindowChangedEventArgs2>(self)?;
+        unsafe {
+            let mut result__: bool = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).DidZOrderChange)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn InsertedAfterWindowId(&self) -> ::windows::core::Result<super::WindowId> {
+        let this = &::windows::core::Interface::cast::<IAppWindowChangedEventArgs2>(self)?;
+        unsafe {
+            let mut result__: super::WindowId = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).InsertedAfterWindowId)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<super::WindowId>(result__)
         }
     }
 }
@@ -1414,6 +1462,20 @@ impl AppWindowTitleBar {
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn SetExtendedTitleBarHeight(
+        &self,
+        height: ExtendedTitleBarHeight,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IAppWindowTitleBar2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetExtendedTitleBarHeight)(
+                ::core::mem::transmute_copy(this),
+                height,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IsCustomizationSupported() -> ::windows::core::Result<bool> {
         Self::IAppWindowTitleBarStatics(|this| unsafe {
             let mut result__: bool = ::core::mem::zeroed();
@@ -1434,7 +1496,7 @@ impl AppWindowTitleBar {
         static mut SHARED: ::windows::core::FactoryCache<
             AppWindowTitleBar,
             IAppWindowTitleBarStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Windowing.Core.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1572,7 +1634,7 @@ impl CompactOverlayPresenter {
         static mut SHARED: ::windows::core::FactoryCache<
             CompactOverlayPresenter,
             ICompactOverlayPresenterStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Windowing.Core.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1855,7 +1917,7 @@ impl DisplayArea {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<DisplayArea, IDisplayAreaStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Windowing.Core.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -2320,6 +2382,45 @@ unsafe impl ::windows::core::RuntimeType for DisplayAreaWatcherStatus {
 }
 #[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
+#[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
+pub struct ExtendedTitleBarHeight(pub i32);
+impl ExtendedTitleBarHeight {
+    pub const Default: Self = Self(0i32);
+    pub const Standard: Self = Self(1i32);
+    pub const Tall: Self = Self(2i32);
+}
+impl ::core::marker::Copy for ExtendedTitleBarHeight {}
+impl ::core::clone::Clone for ExtendedTitleBarHeight {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::default::Default for ExtendedTitleBarHeight {
+    fn default() -> Self {
+        Self(0)
+    }
+}
+unsafe impl ::windows::core::Abi for ExtendedTitleBarHeight {
+    type Abi = Self;
+}
+impl ::core::fmt::Debug for ExtendedTitleBarHeight {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("ExtendedTitleBarHeight")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for ExtendedTitleBarHeight {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"enum(Microsoft.UI.Windowing.ExtendedTitleBarHeight;i4)",
+    );
+    type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
+}
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
+#[repr(transparent)]
 pub struct FullScreenPresenter(::windows::core::IUnknown);
 impl FullScreenPresenter {
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
@@ -2355,7 +2456,7 @@ impl FullScreenPresenter {
         static mut SHARED: ::windows::core::FactoryCache<
             FullScreenPresenter,
             IFullScreenPresenterStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Windowing.Core.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -2464,7 +2565,7 @@ unsafe impl ::windows::core::Interface for IAppWindow {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindow_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Id: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut super::WindowId,
@@ -2581,6 +2682,25 @@ pub struct IAppWindow_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IAppWindow2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IAppWindow2 {
+    type Vtable = IAppWindow2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x1f2ec4b9_1859_5349_ac89_77f41e1560d2);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IAppWindow2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub InsertAfter: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        insertafterwindowid: super::WindowId,
+    ) -> ::windows::core::HRESULT,
+    pub ShowWithDefaultPresenterState:
+        unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IAppWindowChangedEventArgs(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IAppWindowChangedEventArgs {
     type Vtable = IAppWindowChangedEventArgs_Vtbl;
@@ -2590,7 +2710,7 @@ unsafe impl ::windows::core::Interface for IAppWindowChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DidPositionChange: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -2610,6 +2730,27 @@ pub struct IAppWindowChangedEventArgs_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IAppWindowChangedEventArgs2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IAppWindowChangedEventArgs2 {
+    type Vtable = IAppWindowChangedEventArgs2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xaba27f69_d92f_5105_b530_d78eaca2c8ad);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IAppWindowChangedEventArgs2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub DidZOrderChange: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub InsertedAfterWindowId: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut super::WindowId,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IAppWindowClosingEventArgs(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IAppWindowClosingEventArgs {
     type Vtable = IAppWindowClosingEventArgs_Vtbl;
@@ -2619,7 +2760,7 @@ unsafe impl ::windows::core::Interface for IAppWindowClosingEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowClosingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Cancel: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -2640,7 +2781,7 @@ unsafe impl ::windows::core::Interface for IAppWindowPresenter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowPresenter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Kind: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut AppWindowPresenterKind,
@@ -2657,7 +2798,7 @@ unsafe impl ::windows::core::Interface for IAppWindowPresenterFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowPresenterFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2670,7 +2811,7 @@ unsafe impl ::windows::core::Interface for IAppWindowStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2703,7 +2844,7 @@ unsafe impl ::windows::core::Interface for IAppWindowTitleBar {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowTitleBar_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub BackgroundColor: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2840,6 +2981,23 @@ pub struct IAppWindowTitleBar_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IAppWindowTitleBar2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IAppWindowTitleBar2 {
+    type Vtable = IAppWindowTitleBar2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x967ce07b_3a06_5dbb_806b_46fd2374a2f6);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IAppWindowTitleBar2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub SetExtendedTitleBarHeight: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        height: ExtendedTitleBarHeight,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IAppWindowTitleBarStatics(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IAppWindowTitleBarStatics {
     type Vtable = IAppWindowTitleBarStatics_Vtbl;
@@ -2849,7 +3007,7 @@ unsafe impl ::windows::core::Interface for IAppWindowTitleBarStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowTitleBarStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsCustomizationSupported: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -2866,7 +3024,7 @@ unsafe impl ::windows::core::Interface for ICompactOverlayPresenter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompactOverlayPresenter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub InitialSize: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut CompactOverlaySize,
@@ -2887,7 +3045,7 @@ unsafe impl ::windows::core::Interface for ICompactOverlayPresenterStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompactOverlayPresenterStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2904,7 +3062,7 @@ unsafe impl ::windows::core::Interface for IDisplayArea {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDisplayArea_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DisplayId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut super::DisplayId,
@@ -2933,7 +3091,7 @@ unsafe impl ::windows::core::Interface for IDisplayAreaStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDisplayAreaStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Primary: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2976,7 +3134,7 @@ unsafe impl ::windows::core::Interface for IDisplayAreaWatcher {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDisplayAreaWatcher_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Status: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut DisplayAreaWatcherStatus,
@@ -3041,7 +3199,7 @@ unsafe impl ::windows::core::Interface for IFullScreenPresenter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFullScreenPresenter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -3054,7 +3212,7 @@ unsafe impl ::windows::core::Interface for IFullScreenPresenterStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFullScreenPresenterStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3071,7 +3229,7 @@ unsafe impl ::windows::core::Interface for IOverlappedPresenter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IOverlappedPresenter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HasBorder: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -3138,6 +3296,35 @@ pub struct IOverlappedPresenter_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IOverlappedPresenter2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IOverlappedPresenter2 {
+    type Vtable = IOverlappedPresenter2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xc83b6066_e5ad_53d0_a0ae_0d6e35729ed9);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IOverlappedPresenter2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub ClientSize: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::Graphics::SizeInt32,
+    ) -> ::windows::core::HRESULT,
+    pub MinimizeWithActivation: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        activatewindow: bool,
+    ) -> ::windows::core::HRESULT,
+    pub ResizeToClientSize: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        size: ::windows::Graphics::SizeInt32,
+    ) -> ::windows::core::HRESULT,
+    pub RestoreWithActivation: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        activatewindow: bool,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IOverlappedPresenterStatics(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IOverlappedPresenterStatics {
     type Vtable = IOverlappedPresenterStatics_Vtbl;
@@ -3147,7 +3334,7 @@ unsafe impl ::windows::core::Interface for IOverlappedPresenterStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IOverlappedPresenterStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3163,6 +3350,23 @@ pub struct IOverlappedPresenterStatics_Vtbl {
     pub CreateForToolWindow: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IOverlappedPresenterStatics2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IOverlappedPresenterStatics2 {
+    type Vtable = IOverlappedPresenterStatics2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x3fa318db_61ff_5475_94af_51ecbd781b5f);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IOverlappedPresenterStatics2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub DefaultState: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut OverlappedPresenterState,
     ) -> ::windows::core::HRESULT,
 }
 #[doc = "*Required features: `\"UI_Windowing\"`*"]
@@ -3409,6 +3613,57 @@ impl OverlappedPresenter {
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn ClientSize(&self) -> ::windows::core::Result<::windows::Graphics::SizeInt32> {
+        let this = &::windows::core::Interface::cast::<IOverlappedPresenter2>(self)?;
+        unsafe {
+            let mut result__: ::windows::Graphics::SizeInt32 = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).ClientSize)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<::windows::Graphics::SizeInt32>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn MinimizeWithActivation(&self, activatewindow: bool) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IOverlappedPresenter2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).MinimizeWithActivation)(
+                ::core::mem::transmute_copy(this),
+                activatewindow,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn ResizeToClientSize<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::SizeInt32>,
+    >(
+        &self,
+        size: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IOverlappedPresenter2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).ResizeToClientSize)(
+                ::core::mem::transmute_copy(this),
+                size.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn RestoreWithActivation(&self, activatewindow: bool) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IOverlappedPresenter2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RestoreWithActivation)(
+                ::core::mem::transmute_copy(this),
+                activatewindow,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Create() -> ::windows::core::Result<OverlappedPresenter> {
         Self::IOverlappedPresenterStatics(|this| unsafe {
             let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
@@ -3452,6 +3707,17 @@ impl OverlappedPresenter {
             .from_abi::<OverlappedPresenter>(result__)
         })
     }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn DefaultState() -> ::windows::core::Result<OverlappedPresenterState> {
+        Self::IOverlappedPresenterStatics2(|this| unsafe {
+            let mut result__: OverlappedPresenterState = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).DefaultState)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<OverlappedPresenterState>(result__)
+        })
+    }
     #[doc(hidden)]
     pub fn IOverlappedPresenterStatics<
         R,
@@ -3462,7 +3728,20 @@ impl OverlappedPresenter {
         static mut SHARED: ::windows::core::FactoryCache<
             OverlappedPresenter,
             IOverlappedPresenterStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Windowing.Core.dll\0");
+        unsafe { SHARED.call(callback) }
+    }
+    #[doc(hidden)]
+    pub fn IOverlappedPresenterStatics2<
+        R,
+        F: FnOnce(&IOverlappedPresenterStatics2) -> ::windows::core::Result<R>,
+    >(
+        callback: F,
+    ) -> ::windows::core::Result<R> {
+        static mut SHARED: ::windows::core::FactoryCache<
+            OverlappedPresenter,
+            IOverlappedPresenterStatics2,
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Windowing.Core.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

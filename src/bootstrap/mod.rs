@@ -13,25 +13,19 @@ use windows::Win32::Storage::Packaging::Appx::{
 ///
 /// If multiple packages meet the criteria, the best candidate is selected.
 pub fn initialize() -> windows::core::Result<()> {
-    let mdd_version = (1 << 16) | 0_u32;
+    let mdd_version = (1 << 16) | 1_u32;
     let min_framework_version = PACKAGE_VERSION {
         Anonymous: PACKAGE_VERSION_0 {
             Anonymous: PACKAGE_VERSION_0_0 {
                 Revision: 0,
-                Build: 455,
-                Minor: 319,
-                Major: 0,
+                Build: 2307,
+                Minor: 447,
+                Major: 1000,
             },
         },
     };
 
-    unsafe {
-        MddBootstrapInitialize(
-            mdd_version,
-            windows::core::PCWSTR::default(),
-            min_framework_version,
-        )
-    }
+    unsafe { MddBootstrapInitialize(mdd_version, "preview1", min_framework_version) }
 }
 
 /// Undo the changes made by `initialize()`.

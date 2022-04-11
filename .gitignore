@@ -1,9 +1,11 @@
-.vscode
+.packages
 .vs
-target
-packages
-obj
-bin
+.vscode
+*.filters
 *.lock
 *.user
-*.filters
+bin
+obj
+packages
+packages.config
+target

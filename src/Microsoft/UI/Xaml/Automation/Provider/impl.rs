@@ -110,7 +110,8 @@ impl IAnnotationProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IAnnotationProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IAnnotationProvider, OFFSET>(
+            ),
             AnnotationTypeId: AnnotationTypeId::<Identity, Impl, OFFSET>,
             AnnotationTypeName: AnnotationTypeName::<Identity, Impl, OFFSET>,
             Author: Author::<Identity, Impl, OFFSET>,
@@ -161,7 +162,7 @@ impl ICustomNavigationProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 ICustomNavigationProvider,
                 OFFSET,
@@ -218,7 +219,7 @@ impl IDockProvider_Vtbl {
             (*this).SetDockPosition(dockposition).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IDockProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IDockProvider, OFFSET>(),
             DockPosition: DockPosition::<Identity, Impl, OFFSET>,
             SetDockPosition: SetDockPosition::<Identity, Impl, OFFSET>,
         }
@@ -327,7 +328,7 @@ impl IDragProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IDragProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IDragProvider, OFFSET>(),
             IsGrabbed: IsGrabbed::<Identity, Impl, OFFSET>,
             DropEffect: DropEffect::<Identity, Impl, OFFSET>,
             DropEffects: DropEffects::<Identity, Impl, OFFSET>,
@@ -394,7 +395,8 @@ impl IDropTargetProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IDropTargetProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IDropTargetProvider, OFFSET>(
+            ),
             DropEffect: DropEffect::<Identity, Impl, OFFSET>,
             DropEffects: DropEffects::<Identity, Impl, OFFSET>,
         }
@@ -459,8 +461,11 @@ impl IExpandCollapseProvider_Vtbl {
             (*this).Expand().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IExpandCollapseProvider, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                IExpandCollapseProvider,
+                OFFSET,
+            >(),
             ExpandCollapseState: ExpandCollapseState::<Identity, Impl, OFFSET>,
             Collapse: Collapse::<Identity, Impl, OFFSET>,
             Expand: Expand::<Identity, Impl, OFFSET>,
@@ -582,7 +587,7 @@ impl IGridItemProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IGridItemProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IGridItemProvider, OFFSET>(),
             Column: Column::<Identity, Impl, OFFSET>,
             ColumnSpan: ColumnSpan::<Identity, Impl, OFFSET>,
             ContainingGrid: ContainingGrid::<Identity, Impl, OFFSET>,
@@ -668,7 +673,7 @@ impl IGridProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IGridProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IGridProvider, OFFSET>(),
             ColumnCount: ColumnCount::<Identity, Impl, OFFSET>,
             RowCount: RowCount::<Identity, Impl, OFFSET>,
             GetItem: GetItem::<Identity, Impl, OFFSET>,
@@ -702,7 +707,7 @@ impl IInvokeProvider_Vtbl {
             (*this).Invoke().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IInvokeProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IInvokeProvider, OFFSET>(),
             Invoke: Invoke::<Identity, Impl, OFFSET>,
         }
     }
@@ -754,8 +759,11 @@ impl IItemContainerProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IItemContainerProvider, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                IItemContainerProvider,
+                OFFSET,
+            >(),
             FindItemByProperty: FindItemByProperty::<Identity, Impl, OFFSET>,
         }
     }
@@ -851,7 +859,7 @@ impl IMultipleViewProvider_Vtbl {
             (*this).SetCurrentView(viewid).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IMultipleViewProvider, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IMultipleViewProvider, OFFSET>(
             ),
             CurrentView: CurrentView::<Identity, Impl, OFFSET>,
             GetSupportedViews: GetSupportedViews::<Identity, Impl, OFFSET>,
@@ -895,7 +903,7 @@ impl IObjectModelProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IObjectModelProvider, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IObjectModelProvider, OFFSET>(
             ),
             GetUnderlyingObjectModel: GetUnderlyingObjectModel::<Identity, Impl, OFFSET>,
         }
@@ -1049,7 +1057,8 @@ impl IRangeValueProvider_Vtbl {
             (*this).SetValue(value).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IRangeValueProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IRangeValueProvider, OFFSET>(
+            ),
             IsReadOnly: IsReadOnly::<Identity, Impl, OFFSET>,
             LargeChange: LargeChange::<Identity, Impl, OFFSET>,
             Maximum: Maximum::<Identity, Impl, OFFSET>,
@@ -1087,7 +1096,8 @@ impl IScrollItemProvider_Vtbl {
             (*this).ScrollIntoView().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IScrollItemProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IScrollItemProvider, OFFSET>(
+            ),
             ScrollIntoView: ScrollIntoView::<Identity, Impl, OFFSET>,
         }
     }
@@ -1265,7 +1275,7 @@ impl IScrollProvider_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IScrollProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IScrollProvider, OFFSET>(),
             HorizontallyScrollable: HorizontallyScrollable::<Identity, Impl, OFFSET>,
             HorizontalScrollPercent: HorizontalScrollPercent::<Identity, Impl, OFFSET>,
             HorizontalViewSize: HorizontalViewSize::<Identity, Impl, OFFSET>,
@@ -1368,8 +1378,11 @@ impl ISelectionItemProvider_Vtbl {
             (*this).Select().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ISelectionItemProvider, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                ISelectionItemProvider,
+                OFFSET,
+            >(),
             IsSelected: IsSelected::<Identity, Impl, OFFSET>,
             SelectionContainer: SelectionContainer::<Identity, Impl, OFFSET>,
             AddToSelection: AddToSelection::<Identity, Impl, OFFSET>,
@@ -1457,7 +1470,8 @@ impl ISelectionProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ISelectionProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ISelectionProvider, OFFSET>(
+            ),
             CanSelectMultiple: CanSelectMultiple::<Identity, Impl, OFFSET>,
             IsSelectionRequired: IsSelectionRequired::<Identity, Impl, OFFSET>,
             GetSelection: GetSelection::<Identity, Impl, OFFSET>,
@@ -1547,7 +1561,7 @@ impl ISpreadsheetItemProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 ISpreadsheetItemProvider,
                 OFFSET,
@@ -1597,7 +1611,7 @@ impl ISpreadsheetProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ISpreadsheetProvider, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ISpreadsheetProvider, OFFSET>(
             ),
             GetItemByName: GetItemByName::<Identity, Impl, OFFSET>,
         }
@@ -1758,7 +1772,7 @@ impl IStylesProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IStylesProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IStylesProvider, OFFSET>(),
             ExtendedProperties: ExtendedProperties::<Identity, Impl, OFFSET>,
             FillColor: FillColor::<Identity, Impl, OFFSET>,
             FillPatternColor: FillPatternColor::<Identity, Impl, OFFSET>,
@@ -1812,7 +1826,7 @@ impl ISynchronizedInputProvider_Vtbl {
             (*this).StartListening(inputtype).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 ISynchronizedInputProvider,
                 OFFSET,
@@ -1885,7 +1899,8 @@ impl ITableItemProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITableItemProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITableItemProvider, OFFSET>(
+            ),
             GetColumnHeaderItems: GetColumnHeaderItems::<Identity, Impl, OFFSET>,
             GetRowHeaderItems: GetRowHeaderItems::<Identity, Impl, OFFSET>,
         }
@@ -1974,7 +1989,7 @@ impl ITableProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITableProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITableProvider, OFFSET>(),
             RowOrColumnMajor: RowOrColumnMajor::<Identity, Impl, OFFSET>,
             GetColumnHeaders: GetColumnHeaders::<Identity, Impl, OFFSET>,
             GetRowHeaders: GetRowHeaders::<Identity, Impl, OFFSET>,
@@ -2036,7 +2051,8 @@ impl ITextChildProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITextChildProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITextChildProvider, OFFSET>(
+            ),
             TextContainer: TextContainer::<Identity, Impl, OFFSET>,
             TextRange: TextRange::<Identity, Impl, OFFSET>,
         }
@@ -2097,7 +2113,7 @@ impl ITextEditProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITextEditProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITextEditProvider, OFFSET>(),
             GetActiveComposition: GetActiveComposition::<Identity, Impl, OFFSET>,
             GetConversionTarget: GetConversionTarget::<Identity, Impl, OFFSET>,
         }
@@ -2252,7 +2268,7 @@ impl ITextProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITextProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITextProvider, OFFSET>(),
             DocumentRange: DocumentRange::<Identity, Impl, OFFSET>,
             SupportedTextSelection: SupportedTextSelection::<Identity, Impl, OFFSET>,
             GetSelection: GetSelection::<Identity, Impl, OFFSET>,
@@ -2322,7 +2338,7 @@ impl ITextProvider2_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITextProvider2, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITextProvider2, OFFSET>(),
             RangeFromAnnotation: RangeFromAnnotation::<Identity, Impl, OFFSET>,
             GetCaretRange: GetCaretRange::<Identity, Impl, OFFSET>,
         }
@@ -2730,7 +2746,8 @@ impl ITextRangeProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITextRangeProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITextRangeProvider, OFFSET>(
+            ),
             Clone: Clone::<Identity, Impl, OFFSET>,
             Compare: Compare::<Identity, Impl, OFFSET>,
             CompareEndpoints: CompareEndpoints::<Identity, Impl, OFFSET>,
@@ -2782,7 +2799,8 @@ impl ITextRangeProvider2_Vtbl {
             (*this).ShowContextMenu().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITextRangeProvider2, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITextRangeProvider2, OFFSET>(
+            ),
             ShowContextMenu: ShowContextMenu::<Identity, Impl, OFFSET>,
         }
     }
@@ -2834,7 +2852,7 @@ impl IToggleProvider_Vtbl {
             (*this).Toggle().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IToggleProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IToggleProvider, OFFSET>(),
             ToggleState: ToggleState::<Identity, Impl, OFFSET>,
             Toggle: Toggle::<Identity, Impl, OFFSET>,
         }
@@ -2956,7 +2974,8 @@ impl ITransformProvider_Vtbl {
             (*this).Rotate(degrees).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITransformProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITransformProvider, OFFSET>(
+            ),
             CanMove: CanMove::<Identity, Impl, OFFSET>,
             CanResize: CanResize::<Identity, Impl, OFFSET>,
             CanRotate: CanRotate::<Identity, Impl, OFFSET>,
@@ -3087,7 +3106,8 @@ impl ITransformProvider2_Vtbl {
             (*this).ZoomByUnit(zoomunit).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITransformProvider2, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITransformProvider2, OFFSET>(
+            ),
             CanZoom: CanZoom::<Identity, Impl, OFFSET>,
             ZoomLevel: ZoomLevel::<Identity, Impl, OFFSET>,
             MaxZoom: MaxZoom::<Identity, Impl, OFFSET>,
@@ -3165,7 +3185,7 @@ impl IValueProvider_Vtbl {
             (*this).SetValue(::core::mem::transmute(&value)).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IValueProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IValueProvider, OFFSET>(),
             IsReadOnly: IsReadOnly::<Identity, Impl, OFFSET>,
             Value: Value::<Identity, Impl, OFFSET>,
             SetValue: SetValue::<Identity, Impl, OFFSET>,
@@ -3199,7 +3219,7 @@ impl IVirtualizedItemProvider_Vtbl {
             (*this).Realize().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IVirtualizedItemProvider,
                 OFFSET,
@@ -3389,7 +3409,7 @@ impl IWindowProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IWindowProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IWindowProvider, OFFSET>(),
             IsModal: IsModal::<Identity, Impl, OFFSET>,
             IsTopmost: IsTopmost::<Identity, Impl, OFFSET>,
             Maximizable: Maximizable::<Identity, Impl, OFFSET>,

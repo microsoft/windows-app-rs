@@ -21,7 +21,7 @@ impl AddPagesEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             AddPagesEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
@@ -178,7 +178,7 @@ impl<
     > AddPagesEventHandlerBox<F>
 {
     const VTABLE: AddPagesEventHandler_Vtbl = AddPagesEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -261,7 +261,7 @@ unsafe impl ::windows::core::RuntimeType for AddPagesEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct AddPagesEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -284,7 +284,7 @@ impl GetPreviewPageEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             GetPreviewPageEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
@@ -442,7 +442,7 @@ impl<
     > GetPreviewPageEventHandlerBox<F>
 {
     const VTABLE: GetPreviewPageEventHandler_Vtbl = GetPreviewPageEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -525,7 +525,7 @@ unsafe impl ::windows::core::RuntimeType for GetPreviewPageEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct GetPreviewPageEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -543,7 +543,7 @@ unsafe impl ::windows::core::Interface for IAddPagesEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAddPagesEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PrintTaskOptions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -560,7 +560,7 @@ unsafe impl ::windows::core::Interface for IGetPreviewPageEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGetPreviewPageEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PageNumber: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -577,7 +577,7 @@ unsafe impl ::windows::core::Interface for IPaginateEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPaginateEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PrintTaskOptions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -598,7 +598,7 @@ unsafe impl ::windows::core::Interface for IPrintDocument {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPrintDocument_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DocumentSource: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -660,7 +660,7 @@ unsafe impl ::windows::core::Interface for IPrintDocumentFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPrintDocumentFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -679,7 +679,7 @@ unsafe impl ::windows::core::Interface for IPrintDocumentStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPrintDocumentStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DocumentSourceProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -701,7 +701,7 @@ impl PaginateEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             PaginateEventArgs,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
@@ -870,7 +870,7 @@ impl<
     > PaginateEventHandlerBox<F>
 {
     const VTABLE: PaginateEventHandler_Vtbl = PaginateEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -953,7 +953,7 @@ unsafe impl ::windows::core::RuntimeType for PaginateEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct PaginateEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -1385,7 +1385,7 @@ impl PrintDocument {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<PrintDocument, IPrintDocumentFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -1396,7 +1396,7 @@ impl PrintDocument {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<PrintDocument, IPrintDocumentStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

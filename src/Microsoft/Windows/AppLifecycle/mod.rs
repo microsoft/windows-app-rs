@@ -138,7 +138,7 @@ impl ActivationRegistrationManager {
         static mut SHARED: ::windows::core::FactoryCache<
             ActivationRegistrationManager,
             IActivationRegistrationManagerStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.WindowsAppRuntime.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -408,12 +408,38 @@ impl AppInstance {
             .from_abi::<AppInstance>(result__)
         })
     }
+    #[doc = "*Required features: `\"Windows_AppLifecycle\"`*"]
+    pub fn Restart<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
+        arguments: Param0,
+    ) -> ::windows::core::Result<::windows::ApplicationModel::Core::AppRestartFailureReason> {
+        Self::IAppInstanceStatics2(|this| unsafe {
+            let mut result__: ::windows::ApplicationModel::Core::AppRestartFailureReason =
+                ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).Restart)(
+                ::core::mem::transmute_copy(this),
+                arguments.into_param().abi(),
+                &mut result__,
+            )
+            .from_abi::<::windows::ApplicationModel::Core::AppRestartFailureReason>(result__)
+        })
+    }
     #[doc(hidden)]
     pub fn IAppInstanceStatics<R, F: FnOnce(&IAppInstanceStatics) -> ::windows::core::Result<R>>(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<AppInstance, IAppInstanceStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.WindowsAppRuntime.dll\0");
+        unsafe { SHARED.call(callback) }
+    }
+    #[doc(hidden)]
+    pub fn IAppInstanceStatics2<
+        R,
+        F: FnOnce(&IAppInstanceStatics2) -> ::windows::core::Result<R>,
+    >(
+        callback: F,
+    ) -> ::windows::core::Result<R> {
+        static mut SHARED: ::windows::core::FactoryCache<AppInstance, IAppInstanceStatics2> =
+            ::windows::core::FactoryCache::from_library(b"Microsoft.WindowsAppRuntime.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -541,6 +567,7 @@ impl ExtendedActivationKind {
     pub const PhoneCallActivation: Self = Self(1025i32);
     pub const VpnForeground: Self = Self(1026i32);
     pub const Push: Self = Self(5000i32);
+    pub const AppNotification: Self = Self(5001i32);
 }
 impl ::core::marker::Copy for ExtendedActivationKind {}
 impl ::core::clone::Clone for ExtendedActivationKind {
@@ -583,7 +610,7 @@ unsafe impl ::windows::core::Interface for IActivationRegistrationManagerStatics
 #[repr(C)]
 #[doc(hidden)]
 pub struct IActivationRegistrationManagerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RegisterForFileTypeActivation: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         supportedFileTypes_array_size: u32,
@@ -633,7 +660,7 @@ unsafe impl ::windows::core::Interface for IAppActivationArguments {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppActivationArguments_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Kind: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ExtendedActivationKind,
@@ -654,7 +681,7 @@ unsafe impl ::windows::core::Interface for IAppInstance {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppInstance_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub UnregisterKey:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
     pub RedirectActivationToAsync: unsafe extern "system" fn(
@@ -699,7 +726,7 @@ unsafe impl ::windows::core::Interface for IAppInstanceStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppInstanceStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetCurrent: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -712,6 +739,24 @@ pub struct IAppInstanceStatics_Vtbl {
         this: *mut ::core::ffi::c_void,
         key: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IAppInstanceStatics2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IAppInstanceStatics2 {
+    type Vtable = IAppInstanceStatics2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xfe9f1885_7160_5397_ba9b_5890b24fdc04);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IAppInstanceStatics2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub Restart: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        arguments: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+        result__: *mut ::windows::ApplicationModel::Core::AppRestartFailureReason,
     ) -> ::windows::core::HRESULT,
 }
 #[cfg(feature = "implement")]

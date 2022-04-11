@@ -16,7 +16,7 @@ unsafe impl ::windows::core::Interface for IXamlControlsXamlMetaDataProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlControlsXamlMetaDataProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -29,7 +29,7 @@ unsafe impl ::windows::core::Interface for IXamlControlsXamlMetaDataProviderStat
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlControlsXamlMetaDataProviderStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Initialize:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -51,7 +51,7 @@ impl XamlControlsXamlMetaDataProvider {
         static mut SHARED: ::windows::core::FactoryCache<
             XamlControlsXamlMetaDataProvider,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_XamlTypeInfo\"`*"]
@@ -130,7 +130,7 @@ impl XamlControlsXamlMetaDataProvider {
         static mut SHARED: ::windows::core::FactoryCache<
             XamlControlsXamlMetaDataProvider,
             IXamlControlsXamlMetaDataProviderStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

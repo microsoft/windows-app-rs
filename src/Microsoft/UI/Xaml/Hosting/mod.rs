@@ -156,7 +156,7 @@ impl ElementCompositionPreview {
         static mut SHARED: ::windows::core::FactoryCache<
             ElementCompositionPreview,
             IElementCompositionPreviewStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -334,7 +334,7 @@ unsafe impl ::windows::core::Interface for IDesktopWindowXamlSourceNative {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDesktopWindowXamlSourceNative_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub AttachToWindow: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         parentwnd: ::windows::Win32::Foundation::HWND,
@@ -360,7 +360,7 @@ unsafe impl ::windows::core::Interface for IElementCompositionPreview {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElementCompositionPreview_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -373,7 +373,7 @@ unsafe impl ::windows::core::Interface for IElementCompositionPreviewStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElementCompositionPreviewStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Composition")]
     pub GetElementVisual: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -506,7 +506,7 @@ unsafe impl ::windows::core::Interface for IFindReferenceTargetsCallback {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFindReferenceTargetsCallback_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub FoundTrackerTarget: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         target: ::windows::core::RawPtr,
@@ -621,7 +621,7 @@ unsafe impl ::windows::core::Interface for IReferenceTracker {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IReferenceTracker_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub ConnectFromTrackerSource:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
     pub DisconnectFromTrackerSource:
@@ -693,7 +693,7 @@ unsafe impl ::windows::core::Interface for IReferenceTrackerExtension {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IReferenceTrackerExtension_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
 }
 #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
@@ -803,7 +803,7 @@ unsafe impl ::windows::core::Interface for IReferenceTrackerHost {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IReferenceTrackerHost_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub DisconnectUnusedReferenceSources: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         options: __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001,
@@ -919,7 +919,7 @@ unsafe impl ::windows::core::Interface for IReferenceTrackerManager {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IReferenceTrackerManager_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub ReferenceTrackingStarted:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
     pub FindTrackerTargetsCompleted: unsafe extern "system" fn(
@@ -1006,7 +1006,7 @@ unsafe impl ::windows::core::Interface for IReferenceTrackerTarget {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IReferenceTrackerTarget_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub AddRefFromReferenceTracker:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> u32,
     pub ReleaseFromReferenceTracker:
@@ -1115,7 +1115,7 @@ unsafe impl ::windows::core::Interface for ITrackerOwner {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITrackerOwner_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub CreateTrackerHandle: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         returnvalue: *mut *mut TrackerHandle__,

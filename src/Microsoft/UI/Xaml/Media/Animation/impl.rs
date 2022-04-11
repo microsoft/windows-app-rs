@@ -51,7 +51,7 @@ impl INavigationTransitionInfoOverrides_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 INavigationTransitionInfoOverrides,
                 OFFSET,

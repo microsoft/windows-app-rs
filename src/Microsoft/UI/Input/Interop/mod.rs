@@ -16,7 +16,7 @@ unsafe impl ::windows::core::Interface for IPenDeviceInteropStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPenDeviceInteropStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromPointerPoint: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         pointerpoint: ::windows::core::RawPtr,
@@ -50,7 +50,7 @@ impl PenDeviceInterop {
         static mut SHARED: ::windows::core::FactoryCache<
             PenDeviceInterop,
             IPenDeviceInteropStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Input.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

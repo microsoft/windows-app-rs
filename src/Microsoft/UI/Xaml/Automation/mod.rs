@@ -80,7 +80,7 @@ impl AnnotationPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             AnnotationPatternIdentifiers,
             IAnnotationPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -321,7 +321,7 @@ impl AutomationAnnotation {
         static mut SHARED: ::windows::core::FactoryCache<
             AutomationAnnotation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation\"`*"]
@@ -589,7 +589,7 @@ impl AutomationAnnotation {
         static mut SHARED: ::windows::core::FactoryCache<
             AutomationAnnotation,
             IAutomationAnnotationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -602,7 +602,7 @@ impl AutomationAnnotation {
         static mut SHARED: ::windows::core::FactoryCache<
             AutomationAnnotation,
             IAutomationAnnotationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1265,7 +1265,7 @@ impl AutomationElementIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             AutomationElementIdentifiers,
             IAutomationElementIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -2575,7 +2575,7 @@ impl AutomationProperties {
         static mut SHARED: ::windows::core::FactoryCache<
             AutomationProperties,
             IAutomationPropertiesStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -2900,7 +2900,7 @@ impl DockPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             DockPatternIdentifiers,
             IDockPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3078,7 +3078,7 @@ impl DragPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             DragPatternIdentifiers,
             IDragPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3194,7 +3194,7 @@ impl DropTargetPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             DropTargetPatternIdentifiers,
             IDropTargetPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3306,7 +3306,7 @@ impl ExpandCollapsePatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             ExpandCollapsePatternIdentifiers,
             IExpandCollapsePatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3500,7 +3500,7 @@ impl GridItemPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             GridItemPatternIdentifiers,
             IGridItemPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3621,7 +3621,7 @@ impl GridPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             GridPatternIdentifiers,
             IGridPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3712,7 +3712,7 @@ unsafe impl ::windows::core::Interface for IAnnotationPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAnnotationPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -3725,7 +3725,7 @@ unsafe impl ::windows::core::Interface for IAnnotationPatternIdentifiersStatics 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAnnotationPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AnnotationTypeIdProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3758,7 +3758,7 @@ unsafe impl ::windows::core::Interface for IAutomationAnnotation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAutomationAnnotation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Type: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut AnnotationType,
@@ -3787,7 +3787,7 @@ unsafe impl ::windows::core::Interface for IAutomationAnnotationFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAutomationAnnotationFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         r#type: AnnotationType,
@@ -3811,7 +3811,7 @@ unsafe impl ::windows::core::Interface for IAutomationAnnotationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAutomationAnnotationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TypeProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3832,7 +3832,7 @@ unsafe impl ::windows::core::Interface for IAutomationElementIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAutomationElementIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -3845,7 +3845,7 @@ unsafe impl ::windows::core::Interface for IAutomationElementIdentifiersStatics 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAutomationElementIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AcceleratorKeyProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4014,7 +4014,7 @@ unsafe impl ::windows::core::Interface for IAutomationProperties {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAutomationProperties_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4027,7 +4027,7 @@ unsafe impl ::windows::core::Interface for IAutomationPropertiesStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAutomationPropertiesStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AcceleratorKeyProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4431,7 +4431,7 @@ unsafe impl ::windows::core::Interface for IAutomationProperty {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAutomationProperty_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4444,7 +4444,7 @@ unsafe impl ::windows::core::Interface for IDockPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDockPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4457,7 +4457,7 @@ unsafe impl ::windows::core::Interface for IDockPatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDockPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DockPositionProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4474,7 +4474,7 @@ unsafe impl ::windows::core::Interface for IDragPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4487,7 +4487,7 @@ unsafe impl ::windows::core::Interface for IDragPatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DropEffectProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4516,7 +4516,7 @@ unsafe impl ::windows::core::Interface for IDropTargetPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDropTargetPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4529,7 +4529,7 @@ unsafe impl ::windows::core::Interface for IDropTargetPatternIdentifiersStatics 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDropTargetPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DropTargetEffectProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4550,7 +4550,7 @@ unsafe impl ::windows::core::Interface for IExpandCollapsePatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IExpandCollapsePatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4563,7 +4563,7 @@ unsafe impl ::windows::core::Interface for IExpandCollapsePatternIdentifiersStat
 #[repr(C)]
 #[doc(hidden)]
 pub struct IExpandCollapsePatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ExpandCollapseStateProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4580,7 +4580,7 @@ unsafe impl ::windows::core::Interface for IGridItemPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGridItemPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4593,7 +4593,7 @@ unsafe impl ::windows::core::Interface for IGridItemPatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGridItemPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ColumnProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4626,7 +4626,7 @@ unsafe impl ::windows::core::Interface for IGridPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGridPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4639,7 +4639,7 @@ unsafe impl ::windows::core::Interface for IGridPatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGridPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ColumnCountProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4660,7 +4660,7 @@ unsafe impl ::windows::core::Interface for IMultipleViewPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMultipleViewPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4673,7 +4673,7 @@ unsafe impl ::windows::core::Interface for IMultipleViewPatternIdentifiersStatic
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMultipleViewPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CurrentViewProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4694,7 +4694,7 @@ unsafe impl ::windows::core::Interface for IRangeValuePatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRangeValuePatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4707,7 +4707,7 @@ unsafe impl ::windows::core::Interface for IRangeValuePatternIdentifiersStatics 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRangeValuePatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsReadOnlyProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4744,7 +4744,7 @@ unsafe impl ::windows::core::Interface for IScrollPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IScrollPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4757,7 +4757,7 @@ unsafe impl ::windows::core::Interface for IScrollPatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IScrollPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HorizontallyScrollableProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4798,7 +4798,7 @@ unsafe impl ::windows::core::Interface for ISelectionItemPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISelectionItemPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4811,7 +4811,7 @@ unsafe impl ::windows::core::Interface for ISelectionItemPatternIdentifiersStati
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISelectionItemPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsSelectedProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4832,7 +4832,7 @@ unsafe impl ::windows::core::Interface for ISelectionPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISelectionPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4845,7 +4845,7 @@ unsafe impl ::windows::core::Interface for ISelectionPatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISelectionPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CanSelectMultipleProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4870,7 +4870,7 @@ unsafe impl ::windows::core::Interface for ISpreadsheetItemPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISpreadsheetItemPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4883,7 +4883,7 @@ unsafe impl ::windows::core::Interface for ISpreadsheetItemPatternIdentifiersSta
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISpreadsheetItemPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FormulaProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4900,7 +4900,7 @@ unsafe impl ::windows::core::Interface for IStylesPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStylesPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4913,7 +4913,7 @@ unsafe impl ::windows::core::Interface for IStylesPatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStylesPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ExtendedPropertiesProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4954,7 +4954,7 @@ unsafe impl ::windows::core::Interface for ITableItemPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITableItemPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -4967,7 +4967,7 @@ unsafe impl ::windows::core::Interface for ITableItemPatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITableItemPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ColumnHeaderItemsProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4988,7 +4988,7 @@ unsafe impl ::windows::core::Interface for ITablePatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITablePatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -5001,7 +5001,7 @@ unsafe impl ::windows::core::Interface for ITablePatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITablePatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ColumnHeadersProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5026,7 +5026,7 @@ unsafe impl ::windows::core::Interface for ITogglePatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITogglePatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -5039,7 +5039,7 @@ unsafe impl ::windows::core::Interface for ITogglePatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITogglePatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ToggleStateProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5056,7 +5056,7 @@ unsafe impl ::windows::core::Interface for ITransformPattern2Identifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransformPattern2Identifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -5069,7 +5069,7 @@ unsafe impl ::windows::core::Interface for ITransformPattern2IdentifiersStatics 
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransformPattern2IdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CanZoomProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5098,7 +5098,7 @@ unsafe impl ::windows::core::Interface for ITransformPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransformPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -5111,7 +5111,7 @@ unsafe impl ::windows::core::Interface for ITransformPatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransformPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CanMoveProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5136,7 +5136,7 @@ unsafe impl ::windows::core::Interface for IValuePatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IValuePatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -5149,7 +5149,7 @@ unsafe impl ::windows::core::Interface for IValuePatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IValuePatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsReadOnlyProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5170,7 +5170,7 @@ unsafe impl ::windows::core::Interface for IWindowPatternIdentifiers {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWindowPatternIdentifiers_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -5183,7 +5183,7 @@ unsafe impl ::windows::core::Interface for IWindowPatternIdentifiersStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWindowPatternIdentifiersStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CanMaximizeProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -5245,7 +5245,7 @@ impl MultipleViewPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             MultipleViewPatternIdentifiers,
             IMultipleViewPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -5412,7 +5412,7 @@ impl RangeValuePatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             RangeValuePatternIdentifiers,
             IRangeValuePatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -5666,7 +5666,7 @@ impl ScrollPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             ScrollPatternIdentifiers,
             IScrollPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -5787,7 +5787,7 @@ impl SelectionItemPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             SelectionItemPatternIdentifiers,
             ISelectionItemPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -5921,7 +5921,7 @@ impl SelectionPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             SelectionPatternIdentifiers,
             ISelectionPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6031,7 +6031,7 @@ impl SpreadsheetItemPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             SpreadsheetItemPatternIdentifiers,
             ISpreadsheetItemPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6209,7 +6209,7 @@ impl StylesPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             StylesPatternIdentifiers,
             IStylesPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6411,7 +6411,7 @@ impl TableItemPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             TableItemPatternIdentifiers,
             ITableItemPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6543,7 +6543,7 @@ impl TablePatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             TablePatternIdentifiers,
             ITablePatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6649,7 +6649,7 @@ impl TogglePatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             TogglePatternIdentifiers,
             ITogglePatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6829,7 +6829,7 @@ impl TransformPattern2Identifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             TransformPattern2Identifiers,
             ITransformPattern2IdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6963,7 +6963,7 @@ impl TransformPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             TransformPatternIdentifiers,
             ITransformPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -7084,7 +7084,7 @@ impl ValuePatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             ValuePatternIdentifiers,
             IValuePatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -7286,7 +7286,7 @@ impl WindowPatternIdentifiers {
         static mut SHARED: ::windows::core::FactoryCache<
             WindowPatternIdentifiers,
             IWindowPatternIdentifiersStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

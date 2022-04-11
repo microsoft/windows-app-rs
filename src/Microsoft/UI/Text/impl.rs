@@ -858,7 +858,7 @@ impl ITextCharacterFormat_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITextCharacterFormat, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITextCharacterFormat, OFFSET>(
             ),
             AllCaps: AllCaps::<Identity, Impl, OFFSET>,
             SetAllCaps: SetAllCaps::<Identity, Impl, OFFSET>,
@@ -1752,7 +1752,7 @@ impl ITextParagraphFormat_Vtbl {
             (*this).SetLineSpacing(rule, spacing).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITextParagraphFormat, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITextParagraphFormat, OFFSET>(
             ),
             Alignment: Alignment::<Identity, Impl, OFFSET>,
             SetAlignment: SetAlignment::<Identity, Impl, OFFSET>,
@@ -2808,7 +2808,7 @@ impl ITextRange_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITextRange, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITextRange, OFFSET>(),
             Character: Character::<Identity, Impl, OFFSET>,
             SetCharacter: SetCharacter::<Identity, Impl, OFFSET>,
             CharacterFormat: CharacterFormat::<Identity, Impl, OFFSET>,
@@ -3097,7 +3097,7 @@ impl ITextSelection_Vtbl {
             (*this).TypeText(::core::mem::transmute(&value)).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ITextSelection, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ITextSelection, OFFSET>(),
             Options: Options::<Identity, Impl, OFFSET>,
             SetOptions: SetOptions::<Identity, Impl, OFFSET>,
             Type: Type::<Identity, Impl, OFFSET>,

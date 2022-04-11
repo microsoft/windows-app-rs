@@ -21,7 +21,7 @@ impl AddDeleteThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             AddDeleteThemeTransition,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -330,7 +330,7 @@ impl BackEase {
         static mut SHARED: ::windows::core::FactoryCache<
             BackEase,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -570,7 +570,7 @@ impl BackEase {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<BackEase, IBackEaseStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -733,7 +733,7 @@ impl BasicConnectedAnimationConfiguration {
         static mut SHARED: ::windows::core::FactoryCache<
             BasicConnectedAnimationConfiguration,
             IBasicConnectedAnimationConfigurationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -869,7 +869,7 @@ impl BeginStoryboard {
         static mut SHARED: ::windows::core::FactoryCache<
             BeginStoryboard,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -1079,7 +1079,7 @@ impl BeginStoryboard {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<BeginStoryboard, IBeginStoryboardStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1215,7 +1215,7 @@ impl BounceEase {
         static mut SHARED: ::windows::core::FactoryCache<
             BounceEase,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -1489,7 +1489,7 @@ impl BounceEase {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<BounceEase, IBounceEaseStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1625,7 +1625,7 @@ impl CircleEase {
         static mut SHARED: ::windows::core::FactoryCache<
             CircleEase,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -1996,7 +1996,7 @@ impl ColorAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             ColorAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -2564,7 +2564,7 @@ impl ColorAnimation {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<ColorAnimation, IColorAnimationStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -2698,7 +2698,7 @@ impl ColorAnimationUsingKeyFrames {
         static mut SHARED: ::windows::core::FactoryCache<
             ColorAnimationUsingKeyFrames,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -3117,7 +3117,7 @@ impl ColorAnimationUsingKeyFrames {
         static mut SHARED: ::windows::core::FactoryCache<
             ColorAnimationUsingKeyFrames,
             IColorAnimationUsingKeyFramesStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3498,7 +3498,7 @@ impl ColorKeyFrame {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<ColorKeyFrame, IColorKeyFrameStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3612,7 +3612,7 @@ impl ColorKeyFrameCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             ColorKeyFrameCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -3980,7 +3980,7 @@ impl CommonNavigationTransitionInfo {
         static mut SHARED: ::windows::core::FactoryCache<
             CommonNavigationTransitionInfo,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -4235,7 +4235,7 @@ impl CommonNavigationTransitionInfo {
         static mut SHARED: ::windows::core::FactoryCache<
             CommonNavigationTransitionInfo,
             ICommonNavigationTransitionInfoStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -4866,7 +4866,7 @@ impl ConnectedAnimationService {
         static mut SHARED: ::windows::core::FactoryCache<
             ConnectedAnimationService,
             IConnectedAnimationServiceStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -4967,7 +4967,7 @@ impl ContentThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             ContentThemeTransition,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -5210,7 +5210,7 @@ impl ContentThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             ContentThemeTransition,
             IContentThemeTransitionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -5350,7 +5350,7 @@ impl ContinuumNavigationTransitionInfo {
         static mut SHARED: ::windows::core::FactoryCache<
             ContinuumNavigationTransitionInfo,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -5695,7 +5695,7 @@ impl ContinuumNavigationTransitionInfo {
         static mut SHARED: ::windows::core::FactoryCache<
             ContinuumNavigationTransitionInfo,
             IContinuumNavigationTransitionInfoStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -5851,7 +5851,7 @@ impl CubicEase {
         static mut SHARED: ::windows::core::FactoryCache<
             CubicEase,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -6212,7 +6212,7 @@ impl DirectConnectedAnimationConfiguration {
         static mut SHARED: ::windows::core::FactoryCache<
             DirectConnectedAnimationConfiguration,
             IDirectConnectedAnimationConfigurationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6350,7 +6350,7 @@ impl DiscreteColorKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             DiscreteColorKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -6702,7 +6702,7 @@ impl DiscreteDoubleKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             DiscreteDoubleKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -7053,7 +7053,7 @@ impl DiscreteObjectKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             DiscreteObjectKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -7407,7 +7407,7 @@ impl DiscretePointKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             DiscretePointKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -7759,7 +7759,7 @@ impl DoubleAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             DoubleAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -8321,7 +8321,7 @@ impl DoubleAnimation {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<DoubleAnimation, IDoubleAnimationStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -8455,7 +8455,7 @@ impl DoubleAnimationUsingKeyFrames {
         static mut SHARED: ::windows::core::FactoryCache<
             DoubleAnimationUsingKeyFrames,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -8874,7 +8874,7 @@ impl DoubleAnimationUsingKeyFrames {
         static mut SHARED: ::windows::core::FactoryCache<
             DoubleAnimationUsingKeyFrames,
             IDoubleAnimationUsingKeyFramesStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -9252,7 +9252,7 @@ impl DoubleKeyFrame {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<DoubleKeyFrame, IDoubleKeyFrameStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -9366,7 +9366,7 @@ impl DoubleKeyFrameCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             DoubleKeyFrameCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -9739,7 +9739,7 @@ impl DragItemThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             DragItemThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -10149,7 +10149,7 @@ impl DragItemThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             DragItemThemeAnimation,
             IDragItemThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -10289,7 +10289,7 @@ impl DragOverThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             DragOverThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -10775,7 +10775,7 @@ impl DragOverThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             DragOverThemeAnimation,
             IDragOverThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -10915,7 +10915,7 @@ impl DrillInNavigationTransitionInfo {
         static mut SHARED: ::windows::core::FactoryCache<
             DrillInNavigationTransitionInfo,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -11232,7 +11232,7 @@ impl DrillInThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             DrillInThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -11767,7 +11767,7 @@ impl DrillInThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             DrillInThemeAnimation,
             IDrillInThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -11905,7 +11905,7 @@ impl DrillOutThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             DrillOutThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -12440,7 +12440,7 @@ impl DrillOutThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             DrillOutThemeAnimation,
             IDrillOutThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -12580,7 +12580,7 @@ impl DropTargetItemThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             DropTargetItemThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -12990,7 +12990,7 @@ impl DropTargetItemThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             DropTargetItemThemeAnimation,
             IDropTargetItemThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -13139,7 +13139,7 @@ impl EasingColorKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             EasingColorKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -13403,7 +13403,7 @@ impl EasingColorKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             EasingColorKeyFrame,
             IEasingColorKeyFrameStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -13537,7 +13537,7 @@ impl EasingDoubleKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             EasingDoubleKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -13798,7 +13798,7 @@ impl EasingDoubleKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             EasingDoubleKeyFrame,
             IEasingDoubleKeyFrameStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -14143,7 +14143,7 @@ impl EasingFunctionBase {
         static mut SHARED: ::windows::core::FactoryCache<
             EasingFunctionBase,
             IEasingFunctionBaseStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -14294,7 +14294,7 @@ impl EasingPointKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             EasingPointKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -14558,7 +14558,7 @@ impl EasingPointKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             EasingPointKeyFrame,
             IEasingPointKeyFrameStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -14692,7 +14692,7 @@ impl EdgeUIThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             EdgeUIThemeTransition,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -14909,7 +14909,7 @@ impl EdgeUIThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             EdgeUIThemeTransition,
             IEdgeUIThemeTransitionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -15047,7 +15047,7 @@ impl ElasticEase {
         static mut SHARED: ::windows::core::FactoryCache<
             ElasticEase,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -15321,7 +15321,7 @@ impl ElasticEase {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<ElasticEase, IElasticEaseStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -15457,7 +15457,7 @@ impl EntranceNavigationTransitionInfo {
         static mut SHARED: ::windows::core::FactoryCache<
             EntranceNavigationTransitionInfo,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -15677,7 +15677,7 @@ impl EntranceNavigationTransitionInfo {
         static mut SHARED: ::windows::core::FactoryCache<
             EntranceNavigationTransitionInfo,
             IEntranceNavigationTransitionInfoStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -15832,7 +15832,7 @@ impl EntranceThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             EntranceThemeTransition,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -16112,7 +16112,7 @@ impl EntranceThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             EntranceThemeTransition,
             IEntranceThemeTransitionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -16255,7 +16255,7 @@ impl ExponentialEase {
         static mut SHARED: ::windows::core::FactoryCache<
             ExponentialEase,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -16498,7 +16498,7 @@ impl ExponentialEase {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<ExponentialEase, IExponentialEaseStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -16632,7 +16632,7 @@ impl FadeInThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             FadeInThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -17042,7 +17042,7 @@ impl FadeInThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             FadeInThemeAnimation,
             IFadeInThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -17180,7 +17180,7 @@ impl FadeOutThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             FadeOutThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -17590,7 +17590,7 @@ impl FadeOutThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             FadeOutThemeAnimation,
             IFadeOutThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -17814,7 +17814,7 @@ impl GravityConnectedAnimationConfiguration {
         static mut SHARED: ::windows::core::FactoryCache<
             GravityConnectedAnimationConfiguration,
             IGravityConnectedAnimationConfigurationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -17947,7 +17947,7 @@ unsafe impl ::windows::core::Interface for IAddDeleteThemeTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAddDeleteThemeTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -17960,7 +17960,7 @@ unsafe impl ::windows::core::Interface for IBackEase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBackEase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Amplitude: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -17981,7 +17981,7 @@ unsafe impl ::windows::core::Interface for IBackEaseStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBackEaseStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AmplitudeProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -17998,7 +17998,7 @@ unsafe impl ::windows::core::Interface for IBasicConnectedAnimationConfiguration
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBasicConnectedAnimationConfiguration_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18011,7 +18011,7 @@ unsafe impl ::windows::core::Interface for IBasicConnectedAnimationConfiguration
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBasicConnectedAnimationConfigurationFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -18030,7 +18030,7 @@ unsafe impl ::windows::core::Interface for IBeginStoryboard {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBeginStoryboard_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Storyboard: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18051,7 +18051,7 @@ unsafe impl ::windows::core::Interface for IBeginStoryboardStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBeginStoryboardStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub StoryboardProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18068,7 +18068,7 @@ unsafe impl ::windows::core::Interface for IBounceEase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBounceEase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Bounces: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -18097,7 +18097,7 @@ unsafe impl ::windows::core::Interface for IBounceEaseStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBounceEaseStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub BouncesProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18118,7 +18118,7 @@ unsafe impl ::windows::core::Interface for ICircleEase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICircleEase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18131,7 +18131,7 @@ unsafe impl ::windows::core::Interface for IColorAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub From: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18184,7 +18184,7 @@ unsafe impl ::windows::core::Interface for IColorAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18218,7 +18218,7 @@ unsafe impl ::windows::core::Interface for IColorAnimationUsingKeyFrames {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorAnimationUsingKeyFrames_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeyFrames: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18243,7 +18243,7 @@ unsafe impl ::windows::core::Interface for IColorAnimationUsingKeyFramesStatics 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorAnimationUsingKeyFramesStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EnableDependentAnimationProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18261,7 +18261,7 @@ unsafe impl ::windows::core::Interface for IColorKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Value: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::UI::Color,
@@ -18290,7 +18290,7 @@ unsafe impl ::windows::core::Interface for IColorKeyFrameFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorKeyFrameFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -18309,7 +18309,7 @@ unsafe impl ::windows::core::Interface for IColorKeyFrameStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorKeyFrameStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ValueProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18330,7 +18330,7 @@ unsafe impl ::windows::core::Interface for ICommonNavigationTransitionInfo {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICommonNavigationTransitionInfo_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsStaggeringEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -18351,7 +18351,7 @@ unsafe impl ::windows::core::Interface for ICommonNavigationTransitionInfoStatic
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICommonNavigationTransitionInfoStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsStaggeringEnabledProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18382,7 +18382,7 @@ unsafe impl ::windows::core::Interface for IConnectedAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IConnectedAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsScaleAnimationEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -18441,7 +18441,7 @@ unsafe impl ::windows::core::Interface for IConnectedAnimationConfiguration {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IConnectedAnimationConfiguration_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18454,7 +18454,7 @@ unsafe impl ::windows::core::Interface for IConnectedAnimationConfigurationFacto
 #[repr(C)]
 #[doc(hidden)]
 pub struct IConnectedAnimationConfigurationFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18467,7 +18467,7 @@ unsafe impl ::windows::core::Interface for IConnectedAnimationService {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IConnectedAnimationService_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DefaultDuration: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::TimeSpan,
@@ -18513,7 +18513,7 @@ unsafe impl ::windows::core::Interface for IConnectedAnimationServiceStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IConnectedAnimationServiceStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetForCurrentView: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18530,7 +18530,7 @@ unsafe impl ::windows::core::Interface for IContentThemeTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IContentThemeTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HorizontalOffset: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -18559,7 +18559,7 @@ unsafe impl ::windows::core::Interface for IContentThemeTransitionStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IContentThemeTransitionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HorizontalOffsetProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18580,7 +18580,7 @@ unsafe impl ::windows::core::Interface for IContinuumNavigationTransitionInfo {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IContinuumNavigationTransitionInfo_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ExitElement: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18601,7 +18601,7 @@ unsafe impl ::windows::core::Interface for IContinuumNavigationTransitionInfoSta
 #[repr(C)]
 #[doc(hidden)]
 pub struct IContinuumNavigationTransitionInfoStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ExitElementProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18666,7 +18666,7 @@ unsafe impl ::windows::core::Interface for ICubicEase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICubicEase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18679,7 +18679,7 @@ unsafe impl ::windows::core::Interface for IDirectConnectedAnimationConfiguratio
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDirectConnectedAnimationConfiguration_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18692,7 +18692,7 @@ unsafe impl ::windows::core::Interface for IDirectConnectedAnimationConfiguratio
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDirectConnectedAnimationConfigurationFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -18711,7 +18711,7 @@ unsafe impl ::windows::core::Interface for IDiscreteColorKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDiscreteColorKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18724,7 +18724,7 @@ unsafe impl ::windows::core::Interface for IDiscreteDoubleKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDiscreteDoubleKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18737,7 +18737,7 @@ unsafe impl ::windows::core::Interface for IDiscreteObjectKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDiscreteObjectKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18750,7 +18750,7 @@ unsafe impl ::windows::core::Interface for IDiscretePointKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDiscretePointKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18763,7 +18763,7 @@ unsafe impl ::windows::core::Interface for IDoubleAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDoubleAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub From: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18816,7 +18816,7 @@ unsafe impl ::windows::core::Interface for IDoubleAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDoubleAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18850,7 +18850,7 @@ unsafe impl ::windows::core::Interface for IDoubleAnimationUsingKeyFrames {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDoubleAnimationUsingKeyFrames_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeyFrames: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18875,7 +18875,7 @@ unsafe impl ::windows::core::Interface for IDoubleAnimationUsingKeyFramesStatics
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDoubleAnimationUsingKeyFramesStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EnableDependentAnimationProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18893,7 +18893,7 @@ unsafe impl ::windows::core::Interface for IDoubleKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDoubleKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Value: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -18922,7 +18922,7 @@ unsafe impl ::windows::core::Interface for IDoubleKeyFrameFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDoubleKeyFrameFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -18941,7 +18941,7 @@ unsafe impl ::windows::core::Interface for IDoubleKeyFrameStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDoubleKeyFrameStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ValueProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18962,7 +18962,7 @@ unsafe impl ::windows::core::Interface for IDragItemThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragItemThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -18983,7 +18983,7 @@ unsafe impl ::windows::core::Interface for IDragItemThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragItemThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19000,7 +19000,7 @@ unsafe impl ::windows::core::Interface for IDragOverThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragOverThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -19043,7 +19043,7 @@ unsafe impl ::windows::core::Interface for IDragOverThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragOverThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19068,7 +19068,7 @@ unsafe impl ::windows::core::Interface for IDrillInNavigationTransitionInfo {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDrillInNavigationTransitionInfo_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19081,7 +19081,7 @@ unsafe impl ::windows::core::Interface for IDrillInThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDrillInThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EntranceTargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -19126,7 +19126,7 @@ unsafe impl ::windows::core::Interface for IDrillInThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDrillInThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EntranceTargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19155,7 +19155,7 @@ unsafe impl ::windows::core::Interface for IDrillOutThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDrillOutThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EntranceTargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -19200,7 +19200,7 @@ unsafe impl ::windows::core::Interface for IDrillOutThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDrillOutThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EntranceTargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19229,7 +19229,7 @@ unsafe impl ::windows::core::Interface for IDropTargetItemThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDropTargetItemThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -19250,7 +19250,7 @@ unsafe impl ::windows::core::Interface for IDropTargetItemThemeAnimationStatics 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDropTargetItemThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19267,7 +19267,7 @@ unsafe impl ::windows::core::Interface for IEasingColorKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEasingColorKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EasingFunction: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19288,7 +19288,7 @@ unsafe impl ::windows::core::Interface for IEasingColorKeyFrameStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEasingColorKeyFrameStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EasingFunctionProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19305,7 +19305,7 @@ unsafe impl ::windows::core::Interface for IEasingDoubleKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEasingDoubleKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EasingFunction: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19326,7 +19326,7 @@ unsafe impl ::windows::core::Interface for IEasingDoubleKeyFrameStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEasingDoubleKeyFrameStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EasingFunctionProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19343,7 +19343,7 @@ unsafe impl ::windows::core::Interface for IEasingFunctionBase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEasingFunctionBase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EasingMode: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut EasingMode,
@@ -19369,7 +19369,7 @@ unsafe impl ::windows::core::Interface for IEasingFunctionBaseFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEasingFunctionBaseFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19382,7 +19382,7 @@ unsafe impl ::windows::core::Interface for IEasingFunctionBaseStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEasingFunctionBaseStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EasingModeProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19399,7 +19399,7 @@ unsafe impl ::windows::core::Interface for IEasingPointKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEasingPointKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EasingFunction: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19420,7 +19420,7 @@ unsafe impl ::windows::core::Interface for IEasingPointKeyFrameStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEasingPointKeyFrameStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EasingFunctionProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19437,7 +19437,7 @@ unsafe impl ::windows::core::Interface for IEdgeUIThemeTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEdgeUIThemeTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub Edge: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -19464,7 +19464,7 @@ unsafe impl ::windows::core::Interface for IEdgeUIThemeTransitionStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEdgeUIThemeTransitionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EdgeProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19481,7 +19481,7 @@ unsafe impl ::windows::core::Interface for IElasticEase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElasticEase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Oscillations: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -19510,7 +19510,7 @@ unsafe impl ::windows::core::Interface for IElasticEaseStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElasticEaseStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OscillationsProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19531,7 +19531,7 @@ unsafe impl ::windows::core::Interface for IEntranceNavigationTransitionInfo {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEntranceNavigationTransitionInfo_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19544,7 +19544,7 @@ unsafe impl ::windows::core::Interface for IEntranceNavigationTransitionInfoStat
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEntranceNavigationTransitionInfoStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsTargetElementProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19571,7 +19571,7 @@ unsafe impl ::windows::core::Interface for IEntranceThemeTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEntranceThemeTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromHorizontalOffset: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -19608,7 +19608,7 @@ unsafe impl ::windows::core::Interface for IEntranceThemeTransitionStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEntranceThemeTransitionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromHorizontalOffsetProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19633,7 +19633,7 @@ unsafe impl ::windows::core::Interface for IExponentialEase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IExponentialEase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Exponent: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -19654,7 +19654,7 @@ unsafe impl ::windows::core::Interface for IExponentialEaseStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IExponentialEaseStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ExponentProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19671,7 +19671,7 @@ unsafe impl ::windows::core::Interface for IFadeInThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFadeInThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -19692,7 +19692,7 @@ unsafe impl ::windows::core::Interface for IFadeInThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFadeInThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19709,7 +19709,7 @@ unsafe impl ::windows::core::Interface for IFadeOutThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFadeOutThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -19730,7 +19730,7 @@ unsafe impl ::windows::core::Interface for IFadeOutThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFadeOutThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19747,7 +19747,7 @@ unsafe impl ::windows::core::Interface for IGravityConnectedAnimationConfigurati
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGravityConnectedAnimationConfiguration_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsShadowEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -19768,7 +19768,7 @@ unsafe impl ::windows::core::Interface for IGravityConnectedAnimationConfigurati
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGravityConnectedAnimationConfigurationFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -19787,7 +19787,7 @@ unsafe impl ::windows::core::Interface for IKeySpline {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IKeySpline_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ControlPoint1: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -19816,7 +19816,7 @@ unsafe impl ::windows::core::Interface for IKeyTimeHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IKeyTimeHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19829,7 +19829,7 @@ unsafe impl ::windows::core::Interface for IKeyTimeHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IKeyTimeHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromTimeSpan: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         timespan: ::windows::Foundation::TimeSpan,
@@ -19847,7 +19847,7 @@ unsafe impl ::windows::core::Interface for ILinearColorKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILinearColorKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19860,7 +19860,7 @@ unsafe impl ::windows::core::Interface for ILinearDoubleKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILinearDoubleKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19873,7 +19873,7 @@ unsafe impl ::windows::core::Interface for ILinearPointKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILinearPointKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19886,7 +19886,7 @@ unsafe impl ::windows::core::Interface for INavigationThemeTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct INavigationThemeTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DefaultNavigationTransitionInfo: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19908,7 +19908,7 @@ unsafe impl ::windows::core::Interface for INavigationThemeTransitionStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct INavigationThemeTransitionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DefaultNavigationTransitionInfoProperty:
         unsafe extern "system" fn(
             this: *mut ::core::ffi::c_void,
@@ -19926,7 +19926,7 @@ unsafe impl ::windows::core::Interface for INavigationTransitionInfo {
 #[repr(C)]
 #[doc(hidden)]
 pub struct INavigationTransitionInfo_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19939,7 +19939,7 @@ unsafe impl ::windows::core::Interface for INavigationTransitionInfoFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct INavigationTransitionInfoFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -19958,7 +19958,7 @@ unsafe impl ::windows::core::Interface for INavigationTransitionInfoOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct INavigationTransitionInfoOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetNavigationStateCore: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -19979,7 +19979,7 @@ unsafe impl ::windows::core::Interface for IObjectAnimationUsingKeyFrames {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IObjectAnimationUsingKeyFrames_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeyFrames: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20004,7 +20004,7 @@ unsafe impl ::windows::core::Interface for IObjectAnimationUsingKeyFramesStatics
 #[repr(C)]
 #[doc(hidden)]
 pub struct IObjectAnimationUsingKeyFramesStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EnableDependentAnimationProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20022,7 +20022,7 @@ unsafe impl ::windows::core::Interface for IObjectKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IObjectKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Value: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -20051,7 +20051,7 @@ unsafe impl ::windows::core::Interface for IObjectKeyFrameFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IObjectKeyFrameFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -20070,7 +20070,7 @@ unsafe impl ::windows::core::Interface for IObjectKeyFrameStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IObjectKeyFrameStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ValueProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20091,7 +20091,7 @@ unsafe impl ::windows::core::Interface for IPaneThemeTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPaneThemeTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Controls_Primitives")]
     pub Edge: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -20118,7 +20118,7 @@ unsafe impl ::windows::core::Interface for IPaneThemeTransitionStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPaneThemeTransitionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EdgeProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20135,7 +20135,7 @@ unsafe impl ::windows::core::Interface for IPointAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub From: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20188,7 +20188,7 @@ unsafe impl ::windows::core::Interface for IPointAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20222,7 +20222,7 @@ unsafe impl ::windows::core::Interface for IPointAnimationUsingKeyFrames {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointAnimationUsingKeyFrames_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeyFrames: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20247,7 +20247,7 @@ unsafe impl ::windows::core::Interface for IPointAnimationUsingKeyFramesStatics 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointAnimationUsingKeyFramesStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EnableDependentAnimationProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20265,7 +20265,7 @@ unsafe impl ::windows::core::Interface for IPointKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Value: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Point,
@@ -20294,7 +20294,7 @@ unsafe impl ::windows::core::Interface for IPointKeyFrameFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointKeyFrameFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -20313,7 +20313,7 @@ unsafe impl ::windows::core::Interface for IPointKeyFrameStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointKeyFrameStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ValueProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20334,7 +20334,7 @@ unsafe impl ::windows::core::Interface for IPointerDownThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointerDownThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -20355,7 +20355,7 @@ unsafe impl ::windows::core::Interface for IPointerDownThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointerDownThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20372,7 +20372,7 @@ unsafe impl ::windows::core::Interface for IPointerUpThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointerUpThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -20393,7 +20393,7 @@ unsafe impl ::windows::core::Interface for IPointerUpThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointerUpThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20410,7 +20410,7 @@ unsafe impl ::windows::core::Interface for IPopInThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPopInThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -20447,7 +20447,7 @@ unsafe impl ::windows::core::Interface for IPopInThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPopInThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20472,7 +20472,7 @@ unsafe impl ::windows::core::Interface for IPopOutThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPopOutThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -20493,7 +20493,7 @@ unsafe impl ::windows::core::Interface for IPopOutThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPopOutThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20510,7 +20510,7 @@ unsafe impl ::windows::core::Interface for IPopupThemeTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPopupThemeTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromHorizontalOffset: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -20539,7 +20539,7 @@ unsafe impl ::windows::core::Interface for IPopupThemeTransitionStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPopupThemeTransitionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromHorizontalOffsetProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20560,7 +20560,7 @@ unsafe impl ::windows::core::Interface for IPowerEase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPowerEase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Power: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -20581,7 +20581,7 @@ unsafe impl ::windows::core::Interface for IPowerEaseStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPowerEaseStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PowerProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20598,7 +20598,7 @@ unsafe impl ::windows::core::Interface for IQuadraticEase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IQuadraticEase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -20611,7 +20611,7 @@ unsafe impl ::windows::core::Interface for IQuarticEase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IQuarticEase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -20624,7 +20624,7 @@ unsafe impl ::windows::core::Interface for IQuinticEase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IQuinticEase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -20637,7 +20637,7 @@ unsafe impl ::windows::core::Interface for IReorderThemeTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IReorderThemeTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -20650,7 +20650,7 @@ unsafe impl ::windows::core::Interface for IRepeatBehaviorHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRepeatBehaviorHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -20663,7 +20663,7 @@ unsafe impl ::windows::core::Interface for IRepeatBehaviorHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRepeatBehaviorHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Forever: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut RepeatBehavior,
@@ -20706,7 +20706,7 @@ unsafe impl ::windows::core::Interface for IRepositionThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRepositionThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -20743,7 +20743,7 @@ unsafe impl ::windows::core::Interface for IRepositionThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRepositionThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20768,7 +20768,7 @@ unsafe impl ::windows::core::Interface for IRepositionThemeTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRepositionThemeTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsStaggeringEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -20789,7 +20789,7 @@ unsafe impl ::windows::core::Interface for IRepositionThemeTransitionStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRepositionThemeTransitionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsStaggeringEnabledProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20806,7 +20806,7 @@ unsafe impl ::windows::core::Interface for ISineEase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISineEase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -20819,7 +20819,7 @@ unsafe impl ::windows::core::Interface for ISlideNavigationTransitionInfo {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISlideNavigationTransitionInfo_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Effect: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut SlideNavigationTransitionEffect,
@@ -20840,7 +20840,7 @@ unsafe impl ::windows::core::Interface for ISlideNavigationTransitionInfoStatics
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISlideNavigationTransitionInfoStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EffectProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20857,7 +20857,7 @@ unsafe impl ::windows::core::Interface for ISplineColorKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISplineColorKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeySpline: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20878,7 +20878,7 @@ unsafe impl ::windows::core::Interface for ISplineColorKeyFrameStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISplineColorKeyFrameStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeySplineProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20895,7 +20895,7 @@ unsafe impl ::windows::core::Interface for ISplineDoubleKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISplineDoubleKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeySpline: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20916,7 +20916,7 @@ unsafe impl ::windows::core::Interface for ISplineDoubleKeyFrameStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISplineDoubleKeyFrameStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeySplineProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20933,7 +20933,7 @@ unsafe impl ::windows::core::Interface for ISplinePointKeyFrame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISplinePointKeyFrame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeySpline: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20954,7 +20954,7 @@ unsafe impl ::windows::core::Interface for ISplinePointKeyFrameStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISplinePointKeyFrameStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeySplineProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -20971,7 +20971,7 @@ unsafe impl ::windows::core::Interface for ISplitCloseThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISplitCloseThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OpenedTargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -21078,7 +21078,7 @@ unsafe impl ::windows::core::Interface for ISplitCloseThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISplitCloseThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OpenedTargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -21137,7 +21137,7 @@ unsafe impl ::windows::core::Interface for ISplitOpenThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISplitOpenThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OpenedTargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -21244,7 +21244,7 @@ unsafe impl ::windows::core::Interface for ISplitOpenThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISplitOpenThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OpenedTargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -21303,7 +21303,7 @@ unsafe impl ::windows::core::Interface for IStoryboard {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStoryboard_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Children: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -21345,7 +21345,7 @@ unsafe impl ::windows::core::Interface for IStoryboardStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStoryboardStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetPropertyProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -21391,7 +21391,7 @@ unsafe impl ::windows::core::Interface for ISuppressNavigationTransitionInfo {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISuppressNavigationTransitionInfo_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -21404,7 +21404,7 @@ unsafe impl ::windows::core::Interface for ISwipeBackThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISwipeBackThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -21441,7 +21441,7 @@ unsafe impl ::windows::core::Interface for ISwipeBackThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISwipeBackThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -21466,7 +21466,7 @@ unsafe impl ::windows::core::Interface for ISwipeHintThemeAnimation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISwipeHintThemeAnimation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -21503,7 +21503,7 @@ unsafe impl ::windows::core::Interface for ISwipeHintThemeAnimationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISwipeHintThemeAnimationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetNameProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -21528,7 +21528,7 @@ unsafe impl ::windows::core::Interface for ITimeline {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITimeline_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AutoReverse: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -21598,7 +21598,7 @@ unsafe impl ::windows::core::Interface for ITimelineFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITimelineFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -21617,7 +21617,7 @@ unsafe impl ::windows::core::Interface for ITimelineStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITimelineStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AllowDependentAnimations: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -21662,7 +21662,7 @@ unsafe impl ::windows::core::Interface for ITransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -21675,7 +21675,7 @@ unsafe impl ::windows::core::Interface for ITransitionFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransitionFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
 #[repr(transparent)]
@@ -21693,7 +21693,7 @@ impl KeySpline {
         static mut SHARED: ::windows::core::FactoryCache<
             KeySpline,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -22089,7 +22089,7 @@ impl KeyTimeHelper {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<KeyTimeHelper, IKeyTimeHelperStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -22181,7 +22181,7 @@ impl LinearColorKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             LinearColorKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -22529,7 +22529,7 @@ impl LinearDoubleKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             LinearDoubleKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -22878,7 +22878,7 @@ impl LinearPointKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             LinearPointKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -23226,7 +23226,7 @@ impl NavigationThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             NavigationThemeTransition,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -23444,7 +23444,7 @@ impl NavigationThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             NavigationThemeTransition,
             INavigationThemeTransitionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -23865,7 +23865,7 @@ impl ObjectAnimationUsingKeyFrames {
         static mut SHARED: ::windows::core::FactoryCache<
             ObjectAnimationUsingKeyFrames,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -24284,7 +24284,7 @@ impl ObjectAnimationUsingKeyFrames {
         static mut SHARED: ::windows::core::FactoryCache<
             ObjectAnimationUsingKeyFrames,
             IObjectAnimationUsingKeyFramesStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -24665,7 +24665,7 @@ impl ObjectKeyFrame {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<ObjectKeyFrame, IObjectKeyFrameStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -24779,7 +24779,7 @@ impl ObjectKeyFrameCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             ObjectKeyFrameCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -25152,7 +25152,7 @@ impl PaneThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             PaneThemeTransition,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -25369,7 +25369,7 @@ impl PaneThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             PaneThemeTransition,
             IPaneThemeTransitionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -25503,7 +25503,7 @@ impl PointAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             PointAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -26083,7 +26083,7 @@ impl PointAnimation {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<PointAnimation, IPointAnimationStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -26217,7 +26217,7 @@ impl PointAnimationUsingKeyFrames {
         static mut SHARED: ::windows::core::FactoryCache<
             PointAnimationUsingKeyFrames,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -26636,7 +26636,7 @@ impl PointAnimationUsingKeyFrames {
         static mut SHARED: ::windows::core::FactoryCache<
             PointAnimationUsingKeyFrames,
             IPointAnimationUsingKeyFramesStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -27017,7 +27017,7 @@ impl PointKeyFrame {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<PointKeyFrame, IPointKeyFrameStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -27131,7 +27131,7 @@ impl PointKeyFrameCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             PointKeyFrameCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -27499,7 +27499,7 @@ impl PointerDownThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             PointerDownThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -27909,7 +27909,7 @@ impl PointerDownThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             PointerDownThemeAnimation,
             IPointerDownThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -28056,7 +28056,7 @@ impl PointerUpThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             PointerUpThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -28466,7 +28466,7 @@ impl PointerUpThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             PointerUpThemeAnimation,
             IPointerUpThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -28609,7 +28609,7 @@ impl PopInThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             PopInThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -29089,7 +29089,7 @@ impl PopInThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             PopInThemeAnimation,
             IPopInThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -29223,7 +29223,7 @@ impl PopOutThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             PopOutThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -29633,7 +29633,7 @@ impl PopOutThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             PopOutThemeAnimation,
             IPopOutThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -29771,7 +29771,7 @@ impl PopupThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             PopupThemeTransition,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -30016,7 +30016,7 @@ impl PopupThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             PopupThemeTransition,
             IPopupThemeTransitionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -30154,7 +30154,7 @@ impl PowerEase {
         static mut SHARED: ::windows::core::FactoryCache<
             PowerEase,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -30394,7 +30394,7 @@ impl PowerEase {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<PowerEase, IPowerEaseStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -30530,7 +30530,7 @@ impl QuadraticEase {
         static mut SHARED: ::windows::core::FactoryCache<
             QuadraticEase,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -30862,7 +30862,7 @@ impl QuarticEase {
         static mut SHARED: ::windows::core::FactoryCache<
             QuarticEase,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -31196,7 +31196,7 @@ impl QuinticEase {
         static mut SHARED: ::windows::core::FactoryCache<
             QuinticEase,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -31530,7 +31530,7 @@ impl ReorderThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             ReorderThemeTransition,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -31967,7 +31967,7 @@ impl RepeatBehaviorHelper {
         static mut SHARED: ::windows::core::FactoryCache<
             RepeatBehaviorHelper,
             IRepeatBehaviorHelperStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -32100,7 +32100,7 @@ impl RepositionThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             RepositionThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -32580,7 +32580,7 @@ impl RepositionThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             RepositionThemeAnimation,
             IRepositionThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -32727,7 +32727,7 @@ impl RepositionThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             RepositionThemeTransition,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -32937,7 +32937,7 @@ impl RepositionThemeTransition {
         static mut SHARED: ::windows::core::FactoryCache<
             RepositionThemeTransition,
             IRepositionThemeTransitionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -33084,7 +33084,7 @@ impl SineEase {
         static mut SHARED: ::windows::core::FactoryCache<
             SineEase,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -33457,7 +33457,7 @@ impl SlideNavigationTransitionInfo {
         static mut SHARED: ::windows::core::FactoryCache<
             SlideNavigationTransitionInfo,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -33666,7 +33666,7 @@ impl SlideNavigationTransitionInfo {
         static mut SHARED: ::windows::core::FactoryCache<
             SlideNavigationTransitionInfo,
             ISlideNavigationTransitionInfoStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -33821,7 +33821,7 @@ impl SplineColorKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             SplineColorKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -34085,7 +34085,7 @@ impl SplineColorKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             SplineColorKeyFrame,
             ISplineColorKeyFrameStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -34219,7 +34219,7 @@ impl SplineDoubleKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             SplineDoubleKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -34480,7 +34480,7 @@ impl SplineDoubleKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             SplineDoubleKeyFrame,
             ISplineDoubleKeyFrameStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -34618,7 +34618,7 @@ impl SplinePointKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             SplinePointKeyFrame,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -34882,7 +34882,7 @@ impl SplinePointKeyFrame {
         static mut SHARED: ::windows::core::FactoryCache<
             SplinePointKeyFrame,
             ISplinePointKeyFrameStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -35016,7 +35016,7 @@ impl SplitCloseThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             SplitCloseThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -35812,7 +35812,7 @@ impl SplitCloseThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             SplitCloseThemeAnimation,
             ISplitCloseThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -35959,7 +35959,7 @@ impl SplitOpenThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             SplitOpenThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -36755,7 +36755,7 @@ impl SplitOpenThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             SplitOpenThemeAnimation,
             ISplitOpenThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -36898,7 +36898,7 @@ impl Storyboard {
         static mut SHARED: ::windows::core::FactoryCache<
             Storyboard,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -37475,7 +37475,7 @@ impl Storyboard {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Storyboard, IStoryboardStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -37611,7 +37611,7 @@ impl SuppressNavigationTransitionInfo {
         static mut SHARED: ::windows::core::FactoryCache<
             SuppressNavigationTransitionInfo,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Phone.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -37928,7 +37928,7 @@ impl SwipeBackThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             SwipeBackThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -38408,7 +38408,7 @@ impl SwipeBackThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             SwipeBackThemeAnimation,
             ISwipeBackThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -38551,7 +38551,7 @@ impl SwipeHintThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             SwipeHintThemeAnimation,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -39030,7 +39030,7 @@ impl SwipeHintThemeAnimation {
         static mut SHARED: ::windows::core::FactoryCache<
             SwipeHintThemeAnimation,
             ISwipeHintThemeAnimationStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -39612,7 +39612,7 @@ impl Timeline {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Timeline, ITimelineStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -39728,7 +39728,7 @@ impl TimelineCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             TimelineCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]
@@ -40353,7 +40353,7 @@ impl TransitionCollection {
         static mut SHARED: ::windows::core::FactoryCache<
             TransitionCollection,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Animation\"`*"]

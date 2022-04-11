@@ -66,7 +66,7 @@ impl IDesktopWindowXamlSourceNative_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
+            base__: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
             AttachToWindow: AttachToWindow::<Identity, Impl, OFFSET>,
             WindowHandle: WindowHandle::<Identity, Impl, OFFSET>,
             PreTranslateMessage: PreTranslateMessage::<Identity, Impl, OFFSET>,
@@ -103,7 +103,7 @@ impl IFindReferenceTargetsCallback_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
+            base__: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
             FoundTrackerTarget: FoundTrackerTarget::<Identity, Impl, OFFSET>,
         }
     }
@@ -217,7 +217,7 @@ impl IReferenceTracker_Vtbl {
             (*this).PegFromTrackerSource().into()
         }
         Self {
-            base: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
+            base__: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
             ConnectFromTrackerSource: ConnectFromTrackerSource::<Identity, Impl, OFFSET>,
             DisconnectFromTrackerSource: DisconnectFromTrackerSource::<Identity, Impl, OFFSET>,
             FindTrackerTargets: FindTrackerTargets::<Identity, Impl, OFFSET>,
@@ -239,7 +239,7 @@ impl IReferenceTrackerExtension_Vtbl {
         const OFFSET: isize,
     >() -> IReferenceTrackerExtension_Vtbl {
         Self {
-            base: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
+            base__: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
         }
     }
     pub fn matches(iid: &windows::core::GUID) -> bool {
@@ -350,7 +350,7 @@ impl IReferenceTrackerHost_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
+            base__: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
             DisconnectUnusedReferenceSources: DisconnectUnusedReferenceSources::<
                 Identity,
                 Impl,
@@ -441,7 +441,7 @@ impl IReferenceTrackerManager_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
+            base__: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
             ReferenceTrackingStarted: ReferenceTrackingStarted::<Identity, Impl, OFFSET>,
             FindTrackerTargetsCompleted: FindTrackerTargetsCompleted::<Identity, Impl, OFFSET>,
             ReferenceTrackingCompleted: ReferenceTrackingCompleted::<Identity, Impl, OFFSET>,
@@ -509,7 +509,7 @@ impl IReferenceTrackerTarget_Vtbl {
             (*this).Unpeg().into()
         }
         Self {
-            base: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
+            base__: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
             AddRefFromReferenceTracker: AddRefFromReferenceTracker::<Identity, Impl, OFFSET>,
             ReleaseFromReferenceTracker: ReleaseFromReferenceTracker::<Identity, Impl, OFFSET>,
             Peg: Peg::<Identity, Impl, OFFSET>,
@@ -606,7 +606,7 @@ impl ITrackerOwner_Vtbl {
             )
         }
         Self {
-            base: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
+            base__: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
             CreateTrackerHandle: CreateTrackerHandle::<Identity, Impl, OFFSET>,
             DeleteTrackerHandle: DeleteTrackerHandle::<Identity, Impl, OFFSET>,
             SetTrackerValue: SetTrackerValue::<Identity, Impl, OFFSET>,

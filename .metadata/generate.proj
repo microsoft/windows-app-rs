@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<Project Sdk="Microsoft.Windows.WinmdGenerator/0.15.49-preview">
+<Project Sdk="Microsoft.Windows.WinmdGenerator/0.21.3-preview">
 
     <PropertyGroup Label="Globals">
         <OutputWinmd>../.windows/winmd/Microsoft.WindowsAppSdk.Generated.winmd</OutputWinmd>
-        <WinmdVersion>2.0.0</WinmdVersion>
+        <WinmdVersion>3.0.0</WinmdVersion>
         <ExcludeFromCrossarch>Microsoft.MRM;Microsoft.UI.Xaml;Microsoft.UI.Xaml.Hosting;Microsoft.UI.Xaml.Media;Microsoft.WindowsAppSdk.Foundation</ExcludeFromCrossarch>
     </PropertyGroup>
+
+    <Target Name="CopyManifest" AfterTargets="Build">
+        <ItemGroup>
+            <WindowsAppSdkManifests Include="$(PkgMicrosoft_WindowsAppSDK)\manifests\**\*.manifest" />
+        </ItemGroup>
+        <Copy SourceFiles="@(WindowsAppSdkManifests)" DestinationFiles="manifests/%(Filename)%(Extension)" />
+    </Target>
 
     <ItemGroup>
         <MuxHeaders Include="$(PkgMicrosoft_WindowsAppSDK)\include\microsoft.ui.xaml.*.h" />
@@ -40,10 +47,9 @@
             <Namespace>Microsoft.WindowsAppSdk.Foundation</Namespace>
         </Partition>
 
-        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" GeneratePathProperty="true">
+        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.0-preview1" GeneratePathProperty="true">
             <IncludeAssets>none</IncludeAssets>
         </PackageReference>
-
     </ItemGroup>
 
 </Project>

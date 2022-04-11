@@ -286,6 +286,29 @@ impl CompositionConditionalValue {
             .from_abi::<super::AnimationController>(result__)
         }
     }
+    #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
+    pub fn StartAnimationWithController<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, super::CompositionAnimation>,
+        Param2: ::windows::core::IntoParam<'a, super::AnimationController>,
+    >(
+        &self,
+        propertyname: Param0,
+        animation: Param1,
+        animationcontroller: Param2,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<super::ICompositionObject5>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).StartAnimationWithController)(
+                ::core::mem::transmute_copy(this),
+                propertyname.into_param().abi(),
+                animation.into_param().abi(),
+                animationcontroller.into_param().abi(),
+            )
+            .ok()
+        }
+    }
     #[doc(hidden)]
     pub fn ICompositionConditionalValueStatics<
         R,
@@ -296,7 +319,7 @@ impl CompositionConditionalValue {
         static mut SHARED: ::windows::core::FactoryCache<
             CompositionConditionalValue,
             ICompositionConditionalValueStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -719,6 +742,29 @@ impl CompositionInteractionSourceCollection {
         }
     }
     #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
+    pub fn StartAnimationWithController<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, super::CompositionAnimation>,
+        Param2: ::windows::core::IntoParam<'a, super::AnimationController>,
+    >(
+        &self,
+        propertyname: Param0,
+        animation: Param1,
+        animationcontroller: Param2,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<super::ICompositionObject5>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).StartAnimationWithController)(
+                ::core::mem::transmute_copy(this),
+                propertyname.into_param().abi(),
+                animation.into_param().abi(),
+                animationcontroller.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
     pub fn First(
         &self,
     ) -> ::windows::core::Result<
@@ -988,7 +1034,7 @@ unsafe impl ::windows::core::Interface for ICompositionConditionalValue {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionConditionalValue_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Condition: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1017,7 +1063,7 @@ unsafe impl ::windows::core::Interface for ICompositionConditionalValueStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionConditionalValueStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         compositor: ::windows::core::RawPtr,
@@ -1110,7 +1156,7 @@ unsafe impl ::windows::core::Interface for ICompositionInteractionSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionInteractionSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1123,7 +1169,7 @@ unsafe impl ::windows::core::Interface for ICompositionInteractionSourceCollecti
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionInteractionSourceCollection_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Count: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1150,7 +1196,7 @@ unsafe impl ::windows::core::Interface for IInteractionSourceConfiguration {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionSourceConfiguration_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PositionXSourceMode: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut InteractionSourceRedirectionMode,
@@ -1187,7 +1233,7 @@ unsafe impl ::windows::core::Interface for IInteractionTracker {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTracker_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub InteractionSources: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1351,7 +1397,7 @@ unsafe impl ::windows::core::Interface for IInteractionTracker2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTracker2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ConfigureCenterPointXInertiaModifiers:
         unsafe extern "system" fn(
             this: *mut ::core::ffi::c_void,
@@ -1374,7 +1420,7 @@ unsafe impl ::windows::core::Interface for IInteractionTracker3 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTracker3_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ConfigureVector2PositionInertiaModifiers:
         unsafe extern "system" fn(
             this: *mut ::core::ffi::c_void,
@@ -1392,7 +1438,7 @@ unsafe impl ::windows::core::Interface for IInteractionTracker4 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTracker4_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TryUpdatePositionWithOption: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         value: ::windows::Foundation::Numerics::Vector3,
@@ -1421,7 +1467,7 @@ unsafe impl ::windows::core::Interface for IInteractionTracker5 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTracker5_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TryUpdatePositionWithOption: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         value: ::windows::Foundation::Numerics::Vector3,
@@ -1441,7 +1487,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerCustomAnimationSta
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerCustomAnimationStateEnteredArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RequestId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1458,7 +1504,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerCustomAnimationSta
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerCustomAnimationStateEnteredArgs2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsFromBinding: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -1475,7 +1521,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerIdleStateEnteredAr
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerIdleStateEnteredArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RequestId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1492,7 +1538,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerIdleStateEnteredAr
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerIdleStateEnteredArgs2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsFromBinding: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -1509,7 +1555,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInertiaModifier {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInertiaModifier_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1522,7 +1568,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInertiaModifierFac
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInertiaModifierFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1535,7 +1581,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInertiaMotion {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInertiaMotion_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Condition: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1564,7 +1610,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInertiaMotionStati
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInertiaMotionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         compositor: ::windows::core::RawPtr,
@@ -1582,7 +1628,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInertiaNaturalMoti
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInertiaNaturalMotion_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Condition: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1611,7 +1657,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInertiaNaturalMoti
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInertiaNaturalMotionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         compositor: ::windows::core::RawPtr,
@@ -1629,7 +1675,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInertiaRestingValu
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInertiaRestingValue_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Condition: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1658,7 +1704,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInertiaRestingValu
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInertiaRestingValueStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         compositor: ::windows::core::RawPtr,
@@ -1676,7 +1722,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInertiaStateEntere
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInertiaStateEnteredArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ModifiedRestingPosition: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1718,7 +1764,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInertiaStateEntere
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInertiaStateEnteredArgs2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsInertiaFromImpulse: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -1735,7 +1781,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInertiaStateEntere
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInertiaStateEnteredArgs3_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsFromBinding: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -1752,7 +1798,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInteractingStateEn
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInteractingStateEnteredArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RequestId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1769,7 +1815,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerInteractingStateEn
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerInteractingStateEnteredArgs2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsFromBinding: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -1980,7 +2026,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerOwner {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerOwner_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CustomAnimationStateEntered: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: ::windows::core::RawPtr,
@@ -2023,7 +2069,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerRequestIgnoredArgs
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerRequestIgnoredArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RequestId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -2040,7 +2086,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         compositor: ::windows::core::RawPtr,
@@ -2064,7 +2110,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerStatics2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerStatics2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub SetBindingMode: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         boundtracker1: ::windows::core::RawPtr,
@@ -2089,7 +2135,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerValuesChangedArgs 
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerValuesChangedArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Position: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Numerics::Vector3,
@@ -2114,7 +2160,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerVector2InertiaModi
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerVector2InertiaModifier_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2127,7 +2173,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerVector2InertiaModi
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerVector2InertiaModifierFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2140,7 +2186,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerVector2InertiaNatu
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerVector2InertiaNaturalMotion_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Condition: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2169,7 +2215,7 @@ unsafe impl ::windows::core::Interface for IInteractionTrackerVector2InertiaNatu
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInteractionTrackerVector2InertiaNaturalMotionStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         compositor: ::windows::core::RawPtr,
@@ -2187,7 +2233,7 @@ unsafe impl ::windows::core::Interface for IVisualInteractionSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualInteractionSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsPositionXRailsEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -2283,7 +2329,7 @@ unsafe impl ::windows::core::Interface for IVisualInteractionSource2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualInteractionSource2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DeltaPosition: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Numerics::Vector3,
@@ -2342,7 +2388,7 @@ unsafe impl ::windows::core::Interface for IVisualInteractionSource3 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualInteractionSource3_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PointerWheelConfig: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2359,7 +2405,7 @@ unsafe impl ::windows::core::Interface for IVisualInteractionSourceObjectFactory
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualInteractionSourceObjectFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2372,7 +2418,7 @@ unsafe impl ::windows::core::Interface for IVisualInteractionSourceStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualInteractionSourceStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         source: ::windows::core::RawPtr,
@@ -2390,7 +2436,7 @@ unsafe impl ::windows::core::Interface for IVisualInteractionSourceStatics2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualInteractionSourceStatics2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateFromIVisualElement: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         source: ::windows::core::RawPtr,
@@ -2717,6 +2763,29 @@ impl InteractionSourceConfiguration {
                 &mut result__,
             )
             .from_abi::<super::AnimationController>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
+    pub fn StartAnimationWithController<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, super::CompositionAnimation>,
+        Param2: ::windows::core::IntoParam<'a, super::AnimationController>,
+    >(
+        &self,
+        propertyname: Param0,
+        animation: Param1,
+        animationcontroller: Param2,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<super::ICompositionObject5>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).StartAnimationWithController)(
+                ::core::mem::transmute_copy(this),
+                propertyname.into_param().abi(),
+                animation.into_param().abi(),
+                animationcontroller.into_param().abi(),
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
@@ -3256,6 +3325,29 @@ impl InteractionTracker {
                 &mut result__,
             )
             .from_abi::<super::AnimationController>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
+    pub fn StartAnimationWithController<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, super::CompositionAnimation>,
+        Param2: ::windows::core::IntoParam<'a, super::AnimationController>,
+    >(
+        &self,
+        propertyname: Param0,
+        animation: Param1,
+        animationcontroller: Param2,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<super::ICompositionObject5>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).StartAnimationWithController)(
+                ::core::mem::transmute_copy(this),
+                propertyname.into_param().abi(),
+                animation.into_param().abi(),
+                animationcontroller.into_param().abi(),
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
@@ -3992,7 +4084,7 @@ impl InteractionTracker {
         static mut SHARED: ::windows::core::FactoryCache<
             InteractionTracker,
             IInteractionTrackerStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -4005,7 +4097,7 @@ impl InteractionTracker {
         static mut SHARED: ::windows::core::FactoryCache<
             InteractionTracker,
             IInteractionTrackerStatics2,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -4645,6 +4737,29 @@ impl InteractionTrackerInertiaModifier {
             .from_abi::<super::AnimationController>(result__)
         }
     }
+    #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
+    pub fn StartAnimationWithController<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, super::CompositionAnimation>,
+        Param2: ::windows::core::IntoParam<'a, super::AnimationController>,
+    >(
+        &self,
+        propertyname: Param0,
+        animation: Param1,
+        animationcontroller: Param2,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<super::ICompositionObject5>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).StartAnimationWithController)(
+                ::core::mem::transmute_copy(this),
+                propertyname.into_param().abi(),
+                animation.into_param().abi(),
+                animationcontroller.into_param().abi(),
+            )
+            .ok()
+        }
+    }
 }
 impl ::core::clone::Clone for InteractionTrackerInertiaModifier {
     fn clone(&self) -> Self {
@@ -5032,6 +5147,29 @@ impl InteractionTrackerInertiaMotion {
         }
     }
     #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
+    pub fn StartAnimationWithController<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, super::CompositionAnimation>,
+        Param2: ::windows::core::IntoParam<'a, super::AnimationController>,
+    >(
+        &self,
+        propertyname: Param0,
+        animation: Param1,
+        animationcontroller: Param2,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<super::ICompositionObject5>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).StartAnimationWithController)(
+                ::core::mem::transmute_copy(this),
+                propertyname.into_param().abi(),
+                animation.into_param().abi(),
+                animationcontroller.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
     pub fn Condition(&self) -> ::windows::core::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
@@ -5107,7 +5245,7 @@ impl InteractionTrackerInertiaMotion {
         static mut SHARED: ::windows::core::FactoryCache<
             InteractionTrackerInertiaMotion,
             IInteractionTrackerInertiaMotionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -5523,6 +5661,29 @@ impl InteractionTrackerInertiaNaturalMotion {
         }
     }
     #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
+    pub fn StartAnimationWithController<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, super::CompositionAnimation>,
+        Param2: ::windows::core::IntoParam<'a, super::AnimationController>,
+    >(
+        &self,
+        propertyname: Param0,
+        animation: Param1,
+        animationcontroller: Param2,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<super::ICompositionObject5>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).StartAnimationWithController)(
+                ::core::mem::transmute_copy(this),
+                propertyname.into_param().abi(),
+                animation.into_param().abi(),
+                animationcontroller.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
     pub fn Condition(&self) -> ::windows::core::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
@@ -5601,7 +5762,7 @@ impl InteractionTrackerInertiaNaturalMotion {
         static mut SHARED: ::windows::core::FactoryCache<
             InteractionTrackerInertiaNaturalMotion,
             IInteractionTrackerInertiaNaturalMotionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -6025,6 +6186,29 @@ impl InteractionTrackerInertiaRestingValue {
         }
     }
     #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
+    pub fn StartAnimationWithController<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, super::CompositionAnimation>,
+        Param2: ::windows::core::IntoParam<'a, super::AnimationController>,
+    >(
+        &self,
+        propertyname: Param0,
+        animation: Param1,
+        animationcontroller: Param2,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<super::ICompositionObject5>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).StartAnimationWithController)(
+                ::core::mem::transmute_copy(this),
+                propertyname.into_param().abi(),
+                animation.into_param().abi(),
+                animationcontroller.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
     pub fn Condition(&self) -> ::windows::core::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
@@ -6103,7 +6287,7 @@ impl InteractionTrackerInertiaRestingValue {
         static mut SHARED: ::windows::core::FactoryCache<
             InteractionTrackerInertiaRestingValue,
             IInteractionTrackerInertiaRestingValueStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -7128,6 +7312,29 @@ impl InteractionTrackerVector2InertiaModifier {
             .from_abi::<super::AnimationController>(result__)
         }
     }
+    #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
+    pub fn StartAnimationWithController<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, super::CompositionAnimation>,
+        Param2: ::windows::core::IntoParam<'a, super::AnimationController>,
+    >(
+        &self,
+        propertyname: Param0,
+        animation: Param1,
+        animationcontroller: Param2,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<super::ICompositionObject5>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).StartAnimationWithController)(
+                ::core::mem::transmute_copy(this),
+                propertyname.into_param().abi(),
+                animation.into_param().abi(),
+                animationcontroller.into_param().abi(),
+            )
+            .ok()
+        }
+    }
 }
 impl ::core::clone::Clone for InteractionTrackerVector2InertiaModifier {
     fn clone(&self) -> Self {
@@ -7525,6 +7732,29 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         }
     }
     #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
+    pub fn StartAnimationWithController<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, super::CompositionAnimation>,
+        Param2: ::windows::core::IntoParam<'a, super::AnimationController>,
+    >(
+        &self,
+        propertyname: Param0,
+        animation: Param1,
+        animationcontroller: Param2,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<super::ICompositionObject5>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).StartAnimationWithController)(
+                ::core::mem::transmute_copy(this),
+                propertyname.into_param().abi(),
+                animation.into_param().abi(),
+                animationcontroller.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
     pub fn Condition(&self) -> ::windows::core::Result<super::ExpressionAnimation> {
         let this = self;
         unsafe {
@@ -7605,7 +7835,7 @@ impl InteractionTrackerVector2InertiaNaturalMotion {
         static mut SHARED: ::windows::core::FactoryCache<
             InteractionTrackerVector2InertiaNaturalMotion,
             IInteractionTrackerVector2InertiaNaturalMotionStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -8046,6 +8276,29 @@ impl VisualInteractionSource {
                 &mut result__,
             )
             .from_abi::<super::AnimationController>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
+    pub fn StartAnimationWithController<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, super::CompositionAnimation>,
+        Param2: ::windows::core::IntoParam<'a, super::AnimationController>,
+    >(
+        &self,
+        propertyname: Param0,
+        animation: Param1,
+        animationcontroller: Param2,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<super::ICompositionObject5>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).StartAnimationWithController)(
+                ::core::mem::transmute_copy(this),
+                propertyname.into_param().abi(),
+                animation.into_param().abi(),
+                animationcontroller.into_param().abi(),
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Composition_Interactions\"`*"]
@@ -8534,7 +8787,7 @@ impl VisualInteractionSource {
         static mut SHARED: ::windows::core::FactoryCache<
             VisualInteractionSource,
             IVisualInteractionSourceStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -8547,7 +8800,7 @@ impl VisualInteractionSource {
         static mut SHARED: ::windows::core::FactoryCache<
             VisualInteractionSource,
             IVisualInteractionSourceStatics2,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

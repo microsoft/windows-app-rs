@@ -70,7 +70,7 @@ impl<
     > BindableVectorChangedEventHandlerBox<F>
 {
     const VTABLE: BindableVectorChangedEventHandler_Vtbl = BindableVectorChangedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -154,7 +154,7 @@ unsafe impl ::windows::core::RuntimeType for BindableVectorChangedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct BindableVectorChangedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         vector: ::windows::core::RawPtr,
@@ -250,7 +250,7 @@ unsafe impl ::windows::core::Interface for IBindableIterable {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBindableIterable_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub First: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -369,7 +369,7 @@ unsafe impl ::windows::core::Interface for IBindableIterator {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBindableIterator_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Current: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -693,7 +693,7 @@ unsafe impl ::windows::core::Interface for IBindableObservableVector {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBindableObservableVector_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub VectorChanged: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -946,7 +946,7 @@ unsafe impl ::windows::core::Interface for IBindableVector {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBindableVector_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetAt: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         index: u32,
@@ -1145,7 +1145,7 @@ unsafe impl ::windows::core::Interface for IBindableVectorView {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBindableVectorView_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetAt: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         index: u32,
@@ -1283,7 +1283,7 @@ unsafe impl ::windows::core::Interface for INotifyCollectionChanged {
 #[repr(C)]
 #[doc(hidden)]
 pub struct INotifyCollectionChanged_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CollectionChanged: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -1305,7 +1305,7 @@ unsafe impl ::windows::core::Interface for INotifyCollectionChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct INotifyCollectionChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Action: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut NotifyCollectionChangedAction,
@@ -1338,7 +1338,7 @@ unsafe impl ::windows::core::Interface for INotifyCollectionChangedEventArgsFact
 #[repr(C)]
 #[doc(hidden)]
 pub struct INotifyCollectionChangedEventArgsFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithAllParameters: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         action: NotifyCollectionChangedAction,
@@ -1525,7 +1525,7 @@ impl NotifyCollectionChangedEventArgs {
         static mut SHARED: ::windows::core::FactoryCache<
             NotifyCollectionChangedEventArgs,
             INotifyCollectionChangedEventArgsFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1678,7 +1678,7 @@ impl<
 {
     const VTABLE: NotifyCollectionChangedEventHandler_Vtbl =
         NotifyCollectionChangedEventHandler_Vtbl {
-            base: ::windows::core::IUnknownVtbl {
+            base__: ::windows::core::IUnknownVtbl {
                 QueryInterface: Self::QueryInterface,
                 AddRef: Self::AddRef,
                 Release: Self::Release,
@@ -1762,7 +1762,7 @@ unsafe impl ::windows::core::RuntimeType for NotifyCollectionChangedEventHandler
 #[repr(C)]
 #[doc(hidden)]
 pub struct NotifyCollectionChangedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,

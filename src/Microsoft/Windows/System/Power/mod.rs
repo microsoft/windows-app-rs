@@ -170,7 +170,7 @@ unsafe impl ::windows::core::Interface for IPowerManagerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPowerManagerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EnergySaverStatus: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut EnergySaverStatus,
@@ -313,6 +313,23 @@ pub struct IPowerManagerStatics_Vtbl {
         token: ::windows::Foundation::EventRegistrationToken,
     )
         -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IPowerManagerStatics2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IPowerManagerStatics2 {
+    type Vtable = IPowerManagerStatics2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x61f3cc25_65b4_5def_9c9b_990cef3b0833);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IPowerManagerStatics2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub EffectivePowerMode2: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut EffectivePowerMode,
+    ) -> ::windows::core::HRESULT,
 }
 #[doc = "*Required features: `\"Windows_System_Power\"`*"]
 pub struct PowerManager {}
@@ -813,6 +830,17 @@ impl PowerManager {
             .ok()
         })
     }
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
+    pub fn EffectivePowerMode2() -> ::windows::core::Result<EffectivePowerMode> {
+        Self::IPowerManagerStatics2(|this| unsafe {
+            let mut result__: EffectivePowerMode = ::core::mem::zeroed();
+            (::windows::core::Interface::vtable(this).EffectivePowerMode2)(
+                ::core::mem::transmute_copy(this),
+                &mut result__,
+            )
+            .from_abi::<EffectivePowerMode>(result__)
+        })
+    }
     #[doc(hidden)]
     pub fn IPowerManagerStatics<
         R,
@@ -821,7 +849,18 @@ impl PowerManager {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<PowerManager, IPowerManagerStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.WindowsAppRuntime.dll\0");
+        unsafe { SHARED.call(callback) }
+    }
+    #[doc(hidden)]
+    pub fn IPowerManagerStatics2<
+        R,
+        F: FnOnce(&IPowerManagerStatics2) -> ::windows::core::Result<R>,
+    >(
+        callback: F,
+    ) -> ::windows::core::Result<R> {
+        static mut SHARED: ::windows::core::FactoryCache<PowerManager, IPowerManagerStatics2> =
+            ::windows::core::FactoryCache::from_library(b"Microsoft.WindowsAppRuntime.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

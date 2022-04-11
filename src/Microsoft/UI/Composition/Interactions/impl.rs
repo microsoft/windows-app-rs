@@ -10,7 +10,7 @@ impl ICompositionInteractionSource_Vtbl {
         const OFFSET: isize,
     >() -> ICompositionInteractionSource_Vtbl {
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 ICompositionInteractionSource,
                 OFFSET,
@@ -171,7 +171,7 @@ impl IInteractionTrackerOwner_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IInteractionTrackerOwner,
                 OFFSET,

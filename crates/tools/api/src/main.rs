@@ -1,11 +1,11 @@
 use quote::*;
 use rayon::prelude::*;
-use std::{collections::HashSet, fs::OpenOptions, io::prelude::*};
-use windows_metadata::Type;
+use std::{collections::{HashSet, HashMap}, fs::{OpenOptions}, io::prelude::*};
+use windows_metadata::{reader::{TypeTree, TypeReader, Type}};
 
 fn main() {
     let start = std::time::Instant::now();
-    let mut output_path = std::path::PathBuf::from(windows_metadata::workspace_dir());
+    let mut output_path = std::path::PathBuf::from("");
 
     gen_bootstrap(&mut output_path);
 
@@ -13,15 +13,18 @@ fn main() {
     let _ = std::fs::remove_dir_all(&output_path);
     output_path.pop();
 
-    let reader = windows_metadata::TypeReader::get();
+    let reader = TypeReader::get();
     let root = reader.types.get_namespace("Microsoft").unwrap();
 
     let mut trees = Vec::new();
     collect_subtrees(&output_path, root, &mut trees);
 
+    let mut class_map = HashMap::new();
+    parse_manifest(&mut class_map);
+
     trees
         .par_iter()
-        .for_each(|tree| gen_tree(&output_path, tree));
+        .for_each(|tree| gen_tree(&output_path, tree, &class_map));
 
     output_path.pop();
     output_path.push("Cargo.toml");
@@ -30,7 +33,23 @@ fn main() {
     println!("Elapsed: {} ms", start.elapsed().as_millis());
 }
 
-fn write_toml(output: &std::path::Path, tree: &windows_metadata::TypeTree) {
+fn parse_manifest(map: &mut HashMap<String, String>) {
+    for entry in std::fs::read_dir(".metadata/manifests").unwrap() {
+        let text = std::fs::read_to_string(entry.unwrap().path()).unwrap();
+        let doc = roxmltree::Document::parse(&text).unwrap();
+
+        doc
+        .descendants()
+        .filter(|n| n.is_element() && n.has_tag_name("activatableClass"))
+        .for_each(|n| {
+            let class = n.attribute("name").unwrap();
+            let library = n.parent_element().unwrap().attribute("name").unwrap();
+            map.insert(class.to_string(), library.to_string());
+        });
+    };
+}
+
+fn write_toml(output: &std::path::Path, tree: &TypeTree) {
     let mut file = std::fs::File::create(&output).unwrap();
 
     file.write_all(
@@ -67,7 +86,7 @@ default-target = "x86_64-pc-windows-msvc"
 targets = []
 
 [dependencies.windows]
-version = "0.34.0"
+git = "https://github.com/microsoft/windows-rs/crates/libs/windows"
 features = [
     "alloc",
     "Foundation_Collections",
@@ -88,15 +107,15 @@ deprecated = []
     write_features(&mut file, tree.namespace, tree);
 }
 
-fn write_features(file: &mut std::fs::File, root: &'static str, tree: &windows_metadata::TypeTree) {
+fn write_features(file: &mut std::fs::File, root: &'static str, tree: &TypeTree) {
     for tree in tree.namespaces.values() {
         write_feature(file, root, tree);
         write_features(file, root, tree);
     }
 }
 
-fn write_feature(file: &mut std::fs::File, root: &'static str, tree: &windows_metadata::TypeTree) {
-    let reader = windows_metadata::TypeReader::get();
+fn write_feature(file: &mut std::fs::File, root: &'static str, tree: &TypeTree) {
+    let reader = TypeReader::get();
     let dependencies = tree
         .types
         .keys()
@@ -145,8 +164,8 @@ fn write_feature(file: &mut std::fs::File, root: &'static str, tree: &windows_me
 
 fn collect_subtrees<'a>(
     output: &std::path::Path,
-    tree: &'a windows_metadata::TypeTree,
-    trees: &mut Vec<&'a windows_metadata::TypeTree>,
+    tree: &'a TypeTree,
+    trees: &mut Vec<&'a TypeTree>,
 ) {
     trees.push(tree);
 
@@ -159,7 +178,7 @@ fn collect_subtrees<'a>(
     std::fs::create_dir_all(&path).unwrap();
 }
 
-fn gen_tree(output: &std::path::Path, tree: &windows_metadata::TypeTree) {
+fn gen_tree(output: &std::path::Path, tree: &TypeTree, class_map: &HashMap<String, String>) {
     let mut path = std::path::PathBuf::from(output);
 
     path.push(tree.namespace.replace('.', "/"));
@@ -170,6 +189,7 @@ fn gen_tree(output: &std::path::Path, tree: &windows_metadata::TypeTree) {
         cfg: true,
         doc: true,
         windows_extern: true,
+        class_map: class_map.clone(),
         ..Default::default()
     };
     let mut tokens = windows_bindgen::gen_namespace(&gen);

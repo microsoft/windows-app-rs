@@ -1,0 +1,26 @@
+[package]
+name = "samples_battery_xcopy"
+version = "0.0.0"
+publish = false
+edition = "2018"
+
+[build-dependencies.windows-app]
+path = "../../../"
+features = [
+    "WindowsAppSdk_Foundation",
+]
+
+[dependencies.windows]
+git = "https://github.com/microsoft/windows-rs"
+features = [
+    "alloc",
+    "Win32_Foundation",
+    "Win32_System_LibraryLoader",
+]
+
+[dependencies.windows-app]
+path = "../../../"
+features = [
+    "WindowsAppSdk_Foundation",
+    "Windows_System_Power"
+]

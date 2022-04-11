@@ -7,6 +7,8 @@
 )]
 #[cfg(feature = "UI_Composition")]
 pub mod Composition;
+#[cfg(feature = "UI_Content")]
+pub mod Content;
 #[cfg(feature = "UI_Dispatching")]
 pub mod Dispatching;
 #[cfg(feature = "UI_Input")]
@@ -41,7 +43,7 @@ impl ColorHelper {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<ColorHelper, IColorHelperStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1679,7 +1681,7 @@ impl Colors {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Colors, IColorsStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"dcompi.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1814,7 +1816,7 @@ unsafe impl ::windows::core::Interface for IColorHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1827,7 +1829,7 @@ unsafe impl ::windows::core::Interface for IColorHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromArgb: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         a: u8,
@@ -1848,7 +1850,7 @@ unsafe impl ::windows::core::Interface for IColors {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColors_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1861,7 +1863,7 @@ unsafe impl ::windows::core::Interface for IColorsStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorsStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AliceBlue: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::UI::Color,

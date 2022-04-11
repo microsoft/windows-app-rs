@@ -21,7 +21,7 @@ impl CompositeTransform3D {
         static mut SHARED: ::windows::core::FactoryCache<
             CompositeTransform3D,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
@@ -604,7 +604,7 @@ impl CompositeTransform3D {
         static mut SHARED: ::windows::core::FactoryCache<
             CompositeTransform3D,
             ICompositeTransform3DStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -737,7 +737,7 @@ unsafe impl ::windows::core::Interface for ICompositeTransform3D {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositeTransform3D_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterX: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -846,7 +846,7 @@ unsafe impl ::windows::core::Interface for ICompositeTransform3DStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositeTransform3DStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterXProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -907,7 +907,7 @@ unsafe impl ::windows::core::Interface for IMatrix3DHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMatrix3DHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -920,7 +920,7 @@ unsafe impl ::windows::core::Interface for IMatrix3DHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMatrix3DHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Identity: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut Matrix3D,
@@ -978,7 +978,7 @@ unsafe impl ::windows::core::Interface for IPerspectiveTransform3D {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPerspectiveTransform3D_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Depth: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -1015,7 +1015,7 @@ unsafe impl ::windows::core::Interface for IPerspectiveTransform3DStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPerspectiveTransform3DStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DepthProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1040,7 +1040,7 @@ unsafe impl ::windows::core::Interface for ITransform3D {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransform3D_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1053,7 +1053,7 @@ unsafe impl ::windows::core::Interface for ITransform3DFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransform3DFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -1265,7 +1265,7 @@ impl Matrix3DHelper {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<Matrix3DHelper, IMatrix3DHelperStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1357,7 +1357,7 @@ impl PerspectiveTransform3D {
         static mut SHARED: ::windows::core::FactoryCache<
             PerspectiveTransform3D,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
@@ -1634,7 +1634,7 @@ impl PerspectiveTransform3D {
         static mut SHARED: ::windows::core::FactoryCache<
             PerspectiveTransform3D,
             IPerspectiveTransform3DStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

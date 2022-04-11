@@ -969,7 +969,7 @@ impl IAutomationPeerOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IAutomationPeerOverrides,
                 OFFSET,
@@ -1064,7 +1064,7 @@ impl IItemsControlAutomationPeerOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IItemsControlAutomationPeerOverrides,
                 OFFSET,

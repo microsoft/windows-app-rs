@@ -104,7 +104,7 @@ impl ICoreWebView2DispatchAdapter_Vtbl {
             (*this).Clean().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 ICoreWebView2DispatchAdapter,
                 OFFSET,

@@ -40,7 +40,7 @@ impl DeploymentManager {
         static mut SHARED: ::windows::core::FactoryCache<
             DeploymentManager,
             IDeploymentManagerStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.WindowsAppRuntime.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -228,7 +228,7 @@ unsafe impl ::windows::core::Interface for IDeploymentManagerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDeploymentManagerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetStatus: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -249,7 +249,7 @@ unsafe impl ::windows::core::Interface for IDeploymentResult {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDeploymentResult_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Status: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut DeploymentStatus,
@@ -270,7 +270,7 @@ unsafe impl ::windows::core::Interface for IDeploymentResultFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDeploymentResultFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         status: DeploymentStatus,

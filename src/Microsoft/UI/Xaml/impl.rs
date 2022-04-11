@@ -28,7 +28,7 @@ impl IApplicationOverrides_Vtbl {
             (*this).OnLaunched(::core::mem::transmute(&args)).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IApplicationOverrides, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IApplicationOverrides, OFFSET>(
             ),
             OnLaunched: OnLaunched::<Identity, Impl, OFFSET>,
         }
@@ -109,8 +109,11 @@ impl IDataTemplateExtension_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IDataTemplateExtension, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                IDataTemplateExtension,
+                OFFSET,
+            >(),
             ResetTemplate: ResetTemplate::<Identity, Impl, OFFSET>,
             ProcessBinding: ProcessBinding::<Identity, Impl, OFFSET>,
             ProcessBindings: ProcessBindings::<Identity, Impl, OFFSET>,
@@ -172,7 +175,7 @@ impl IElementFactory_Vtbl {
             (*this).RecycleElement(::core::mem::transmute(&args)).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IElementFactory, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IElementFactory, OFFSET>(),
             GetElement: GetElement::<Identity, Impl, OFFSET>,
             RecycleElement: RecycleElement::<Identity, Impl, OFFSET>,
         }
@@ -281,7 +284,7 @@ impl IFrameworkElementOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IFrameworkElementOverrides,
                 OFFSET,
@@ -497,7 +500,8 @@ impl IUIElementOverrides_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IUIElementOverrides, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IUIElementOverrides, OFFSET>(
+            ),
             OnCreateAutomationPeer: OnCreateAutomationPeer::<Identity, Impl, OFFSET>,
             OnDisconnectVisualChildren: OnDisconnectVisualChildren::<Identity, Impl, OFFSET>,
             FindSubElementsForTouchTargeting: FindSubElementsForTouchTargeting::<
@@ -572,7 +576,7 @@ impl IVisualStateManagerOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IVisualStateManagerOverrides,
                 OFFSET,
@@ -611,7 +615,7 @@ impl IWindowNative_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
+            base__: ::windows::core::IUnknownVtbl::new::<Identity, OFFSET>(),
             WindowHandle: WindowHandle::<Identity, Impl, OFFSET>,
         }
     }
@@ -655,7 +659,7 @@ impl IXamlServiceProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IXamlServiceProvider, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IXamlServiceProvider, OFFSET>(
             ),
             GetService: GetService::<Identity, Impl, OFFSET>,
         }

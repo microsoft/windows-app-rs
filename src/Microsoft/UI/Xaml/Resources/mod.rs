@@ -71,7 +71,7 @@ impl CustomXamlResourceLoader {
         static mut SHARED: ::windows::core::FactoryCache<
             CustomXamlResourceLoader,
             ICustomXamlResourceLoaderFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -84,7 +84,7 @@ impl CustomXamlResourceLoader {
         static mut SHARED: ::windows::core::FactoryCache<
             CustomXamlResourceLoader,
             ICustomXamlResourceLoaderStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -180,7 +180,7 @@ unsafe impl ::windows::core::Interface for ICustomXamlResourceLoader {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICustomXamlResourceLoader_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -193,7 +193,7 @@ unsafe impl ::windows::core::Interface for ICustomXamlResourceLoaderFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICustomXamlResourceLoaderFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -212,7 +212,7 @@ unsafe impl ::windows::core::Interface for ICustomXamlResourceLoaderOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICustomXamlResourceLoaderOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetResource: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         resourceid: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -233,7 +233,7 @@ unsafe impl ::windows::core::Interface for ICustomXamlResourceLoaderStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICustomXamlResourceLoaderStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Current: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,

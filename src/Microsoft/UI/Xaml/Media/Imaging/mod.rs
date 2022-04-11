@@ -85,7 +85,7 @@ impl BitmapImage {
         static mut SHARED: ::windows::core::FactoryCache<
             BitmapImage,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
@@ -708,7 +708,7 @@ impl BitmapImage {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<BitmapImage, IBitmapImageFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -716,7 +716,7 @@ impl BitmapImage {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<BitmapImage, IBitmapImageStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1112,7 +1112,7 @@ impl BitmapSource {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<BitmapSource, IBitmapSourceStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1442,7 +1442,7 @@ impl<
     > DownloadProgressEventHandlerBox<F>
 {
     const VTABLE: DownloadProgressEventHandler_Vtbl = DownloadProgressEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -1525,7 +1525,7 @@ unsafe impl ::windows::core::RuntimeType for DownloadProgressEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct DownloadProgressEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -1543,7 +1543,7 @@ unsafe impl ::windows::core::Interface for IBitmapImage {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapImage_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateOptions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut BitmapCreateOptions,
@@ -1641,7 +1641,7 @@ unsafe impl ::windows::core::Interface for IBitmapImageFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapImageFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithUriSource: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         urisource: ::windows::core::RawPtr,
@@ -1659,7 +1659,7 @@ unsafe impl ::windows::core::Interface for IBitmapImageStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapImageStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateOptionsProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1704,7 +1704,7 @@ unsafe impl ::windows::core::Interface for IBitmapSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PixelWidth: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1734,7 +1734,7 @@ unsafe impl ::windows::core::Interface for IBitmapSourceFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapSourceFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -1753,7 +1753,7 @@ unsafe impl ::windows::core::Interface for IBitmapSourceStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapSourceStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PixelWidthProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1774,7 +1774,7 @@ unsafe impl ::windows::core::Interface for IDownloadProgressEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDownloadProgressEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Progress: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1795,7 +1795,7 @@ unsafe impl ::windows::core::Interface for IRenderTargetBitmap {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRenderTargetBitmap_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PixelWidth: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1832,7 +1832,7 @@ unsafe impl ::windows::core::Interface for IRenderTargetBitmapStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRenderTargetBitmapStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PixelWidthProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1853,7 +1853,7 @@ unsafe impl ::windows::core::Interface for ISoftwareBitmapSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISoftwareBitmapSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub SetBitmapAsync: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         softwarebitmap: ::windows::core::RawPtr,
@@ -1871,7 +1871,7 @@ unsafe impl ::windows::core::Interface for ISurfaceImageSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISurfaceImageSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1884,7 +1884,7 @@ unsafe impl ::windows::core::Interface for ISurfaceImageSourceFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISurfaceImageSourceFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithDimensions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         pixelwidth: i32,
@@ -1915,7 +1915,7 @@ unsafe impl ::windows::core::Interface for ISvgImageSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISvgImageSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub UriSource: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1975,7 +1975,7 @@ unsafe impl ::windows::core::Interface for ISvgImageSourceFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISvgImageSourceFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -2001,7 +2001,7 @@ unsafe impl ::windows::core::Interface for ISvgImageSourceFailedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISvgImageSourceFailedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Status: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut SvgImageSourceLoadStatus,
@@ -2018,7 +2018,7 @@ unsafe impl ::windows::core::Interface for ISvgImageSourceOpenedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISvgImageSourceOpenedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2031,7 +2031,7 @@ unsafe impl ::windows::core::Interface for ISvgImageSourceStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISvgImageSourceStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub UriSourceProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2056,7 +2056,7 @@ unsafe impl ::windows::core::Interface for IVirtualSurfaceImageSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVirtualSurfaceImageSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2069,7 +2069,7 @@ unsafe impl ::windows::core::Interface for IVirtualSurfaceImageSourceFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVirtualSurfaceImageSourceFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithDimensions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         pixelwidth: i32,
@@ -2096,7 +2096,7 @@ unsafe impl ::windows::core::Interface for IWriteableBitmap {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWriteableBitmap_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PixelBuffer: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2115,7 +2115,7 @@ unsafe impl ::windows::core::Interface for IWriteableBitmapFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWriteableBitmapFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithDimensions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         pixelwidth: i32,
@@ -2134,7 +2134,7 @@ unsafe impl ::windows::core::Interface for IXamlRenderingBackgroundTask {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlRenderingBackgroundTask_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2147,7 +2147,7 @@ unsafe impl ::windows::core::Interface for IXamlRenderingBackgroundTaskFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlRenderingBackgroundTaskFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -2166,7 +2166,7 @@ unsafe impl ::windows::core::Interface for IXamlRenderingBackgroundTaskOverrides
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlRenderingBackgroundTaskOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OnRun: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         taskinstance: ::windows::core::RawPtr,
@@ -2188,7 +2188,7 @@ impl RenderTargetBitmap {
         static mut SHARED: ::windows::core::FactoryCache<
             RenderTargetBitmap,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
@@ -2466,7 +2466,7 @@ impl RenderTargetBitmap {
         static mut SHARED: ::windows::core::FactoryCache<
             RenderTargetBitmap,
             IRenderTargetBitmapStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -2600,7 +2600,7 @@ impl SoftwareBitmapSource {
         static mut SHARED: ::windows::core::FactoryCache<
             SoftwareBitmapSource,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
@@ -3192,7 +3192,7 @@ impl SurfaceImageSource {
         static mut SHARED: ::windows::core::FactoryCache<
             SurfaceImageSource,
             ISurfaceImageSourceFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -3759,7 +3759,7 @@ impl SvgImageSource {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<SvgImageSource, ISvgImageSourceFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc(hidden)]
@@ -3770,7 +3770,7 @@ impl SvgImageSource {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<SvgImageSource, ISvgImageSourceStatics> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -4325,7 +4325,7 @@ impl VirtualSurfaceImageSource {
         static mut SHARED: ::windows::core::FactoryCache<
             VirtualSurfaceImageSource,
             IVirtualSurfaceImageSourceFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -4746,7 +4746,7 @@ impl WriteableBitmap {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<WriteableBitmap, IWriteableBitmapFactory> =
-            ::windows::core::FactoryCache::new();
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

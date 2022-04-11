@@ -21,7 +21,7 @@ impl AddPackageDependencyOptions {
         static mut SHARED: ::windows::core::FactoryCache<
             AddPackageDependencyOptions,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.WindowsAppRuntime.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
@@ -169,7 +169,7 @@ impl CreatePackageDependencyOptions {
         static mut SHARED: ::windows::core::FactoryCache<
             CreatePackageDependencyOptions,
             ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.WindowsAppRuntime.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
@@ -377,7 +377,7 @@ unsafe impl ::windows::core::Interface for IAddPackageDependencyOptions {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAddPackageDependencyOptions_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Rank: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -406,7 +406,7 @@ unsafe impl ::windows::core::Interface for ICreatePackageDependencyOptions {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICreatePackageDependencyOptions_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Architectures: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut PackageDependencyProcessorArchitectures,
@@ -451,7 +451,7 @@ unsafe impl ::windows::core::Interface for IPackageDependency {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPackageDependency_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Id: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -479,7 +479,7 @@ unsafe impl ::windows::core::Interface for IPackageDependencyContext {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPackageDependencyContext_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ContextId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut PackageDependencyContextId,
@@ -506,7 +506,7 @@ unsafe impl ::windows::core::Interface for IPackageDependencyContextFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPackageDependencyContextFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         contextid: PackageDependencyContextId,
@@ -524,7 +524,7 @@ unsafe impl ::windows::core::Interface for IPackageDependencyRankStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPackageDependencyRankStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Default: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -541,7 +541,7 @@ unsafe impl ::windows::core::Interface for IPackageDependencyStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPackageDependencyStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetFromId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         id: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -748,7 +748,7 @@ impl PackageDependency {
         static mut SHARED: ::windows::core::FactoryCache<
             PackageDependency,
             IPackageDependencyStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.WindowsAppRuntime.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -902,7 +902,7 @@ impl PackageDependencyContext {
         static mut SHARED: ::windows::core::FactoryCache<
             PackageDependencyContext,
             IPackageDependencyContextFactory,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.WindowsAppRuntime.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }
@@ -1163,7 +1163,7 @@ impl PackageDependencyRank {
         static mut SHARED: ::windows::core::FactoryCache<
             PackageDependencyRank,
             IPackageDependencyRankStatics,
-        > = ::windows::core::FactoryCache::new();
+        > = ::windows::core::FactoryCache::from_library(b"Microsoft.WindowsAppRuntime.dll\0");
         unsafe { SHARED.call(callback) }
     }
 }

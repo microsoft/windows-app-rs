@@ -56,7 +56,8 @@ impl IComponentConnector_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IComponentConnector, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IComponentConnector, OFFSET>(
+            ),
             Connect: Connect::<Identity, Impl, OFFSET>,
             GetBindingConnector: GetBindingConnector::<Identity, Impl, OFFSET>,
         }
@@ -118,8 +119,11 @@ impl IDataTemplateComponent_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IDataTemplateComponent, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                IDataTemplateComponent,
+                OFFSET,
+            >(),
             Recycle: Recycle::<Identity, Impl, OFFSET>,
             ProcessBindings: ProcessBindings::<Identity, Impl, OFFSET>,
         }
@@ -186,7 +190,7 @@ impl IMarkupExtensionOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IMarkupExtensionOverrides,
                 OFFSET,
@@ -255,7 +259,8 @@ impl IProvideValueTarget_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IProvideValueTarget, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IProvideValueTarget, OFFSET>(
+            ),
             TargetObject: TargetObject::<Identity, Impl, OFFSET>,
             TargetProperty: TargetProperty::<Identity, Impl, OFFSET>,
         }
@@ -296,7 +301,8 @@ impl IRootObjectProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IRootObjectProvider, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IRootObjectProvider, OFFSET>(
+            ),
             RootObject: RootObject::<Identity, Impl, OFFSET>,
         }
     }
@@ -336,7 +342,7 @@ impl IUriContext_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IUriContext, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IUriContext, OFFSET>(),
             BaseUri: BaseUri::<Identity, Impl, OFFSET>,
         }
     }
@@ -370,7 +376,7 @@ impl IXamlBindScopeDiagnostics_Vtbl {
             (*this).Disable(linenumber, columnnumber).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IXamlBindScopeDiagnostics,
                 OFFSET,
@@ -561,7 +567,7 @@ impl IXamlMember_Vtbl {
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IXamlMember, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IXamlMember, OFFSET>(),
             IsAttachable: IsAttachable::<Identity, Impl, OFFSET>,
             IsDependencyProperty: IsDependencyProperty::<Identity, Impl, OFFSET>,
             IsReadOnly: IsReadOnly::<Identity, Impl, OFFSET>,
@@ -660,7 +666,7 @@ impl IXamlMetadataProvider_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IXamlMetadataProvider, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IXamlMetadataProvider, OFFSET>(
             ),
             GetXamlType: GetXamlType::<Identity, Impl, OFFSET>,
             GetXamlTypeByFullName: GetXamlTypeByFullName::<Identity, Impl, OFFSET>,
@@ -1069,7 +1075,7 @@ impl IXamlType_Vtbl {
             (*this).RunInitializer().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IXamlType, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IXamlType, OFFSET>(),
             BaseType: BaseType::<Identity, Impl, OFFSET>,
             ContentProperty: ContentProperty::<Identity, Impl, OFFSET>,
             FullName: FullName::<Identity, Impl, OFFSET>,
@@ -1131,7 +1137,7 @@ impl IXamlTypeResolver_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IXamlTypeResolver, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IXamlTypeResolver, OFFSET>(),
             Resolve: Resolve::<Identity, Impl, OFFSET>,
         }
     }
