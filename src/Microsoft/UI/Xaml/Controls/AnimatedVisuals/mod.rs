@@ -14,13 +14,13 @@ impl AnimatedAcceptVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedAcceptVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -226,13 +226,13 @@ impl AnimatedBackVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedBackVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -436,13 +436,13 @@ impl AnimatedChevronDownSmallVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedChevronDownSmallVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -660,13 +660,13 @@ impl AnimatedChevronRightDownSmallVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedChevronRightDownSmallVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -894,13 +894,13 @@ impl AnimatedChevronUpDownSmallVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedChevronUpDownSmallVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -1120,13 +1120,13 @@ impl AnimatedFindVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedFindVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -1330,13 +1330,13 @@ impl AnimatedGlobalNavigationButtonVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedGlobalNavigationButtonVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -1568,13 +1568,13 @@ impl AnimatedSettingsVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedSettingsVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.Controls.dll\0");
         unsafe { SHARED.call(callback) }
     }

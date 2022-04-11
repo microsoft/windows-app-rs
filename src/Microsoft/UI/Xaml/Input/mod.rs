@@ -14,13 +14,13 @@ impl AccessKeyDisplayDismissedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AccessKeyDisplayDismissedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -117,13 +117,13 @@ impl AccessKeyDisplayRequestedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AccessKeyDisplayRequestedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -233,13 +233,13 @@ impl AccessKeyInvokedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AccessKeyInvokedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -822,13 +822,13 @@ impl ContextRequestedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             ContextRequestedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -1151,13 +1151,13 @@ impl DoubleTappedRoutedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             DoubleTappedRoutedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -1436,13 +1436,13 @@ impl FindNextElementOptions {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             FindNextElementOptions,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -2909,13 +2909,13 @@ impl HoldingRoutedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             HoldingRoutedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -5375,13 +5375,13 @@ impl InputScope {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             InputScope,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -5656,13 +5656,13 @@ impl InputScopeName {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             InputScopeName,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -7565,13 +7565,13 @@ impl ManipulationCompletedRoutedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationCompletedRoutedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -7963,13 +7963,13 @@ impl ManipulationDeltaRoutedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationDeltaRoutedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -8382,13 +8382,13 @@ impl ManipulationInertiaStartingRoutedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationInertiaStartingRoutedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -8781,13 +8781,13 @@ impl ManipulationPivot {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationPivot,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -9516,13 +9516,13 @@ impl ManipulationStartingRoutedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             ManipulationStartingRoutedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -10705,13 +10705,13 @@ impl RightTappedRoutedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             RightTappedRoutedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -11827,13 +11827,13 @@ impl TappedRoutedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             TappedRoutedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }

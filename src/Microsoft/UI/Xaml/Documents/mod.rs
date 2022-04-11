@@ -1516,14 +1516,12 @@ impl Bold {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
-        static mut SHARED: ::windows::core::FactoryCache<
-            Bold,
-            ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
+        static mut SHARED: ::windows::core::FactoryCache<Bold, ::windows::core::IGenericFactory> =
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
@@ -2561,14 +2559,12 @@ impl Glyphs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
-        static mut SHARED: ::windows::core::FactoryCache<
-            Glyphs,
-            ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
+        static mut SHARED: ::windows::core::FactoryCache<Glyphs, ::windows::core::IGenericFactory> =
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`, `\"UI_Composition\"`*"]
@@ -7958,13 +7954,13 @@ impl Hyperlink {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             Hyperlink,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -12978,13 +12974,13 @@ impl InlineUIContainer {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             InlineUIContainer,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -14003,14 +13999,12 @@ impl Italic {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
-        static mut SHARED: ::windows::core::FactoryCache<
-            Italic,
-            ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
+        static mut SHARED: ::windows::core::FactoryCache<Italic, ::windows::core::IGenericFactory> =
+            ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_Documents\"`*"]
@@ -15048,13 +15042,13 @@ impl LineBreak {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             LineBreak,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -16083,13 +16077,13 @@ impl Paragraph {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             Paragraph,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -17260,11 +17254,11 @@ impl Run {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
-        static mut SHARED: ::windows::core::FactoryCache<Run, ::windows::core::IActivationFactory> =
+        static mut SHARED: ::windows::core::FactoryCache<Run, ::windows::core::IGenericFactory> =
             ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }
@@ -23137,13 +23131,13 @@ impl Underline {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             Underline,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::from_library(b"Microsoft.UI.Xaml.dll\0");
         unsafe { SHARED.call(callback) }
     }

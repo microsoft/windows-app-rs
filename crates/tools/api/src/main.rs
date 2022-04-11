@@ -86,7 +86,7 @@ default-target = "x86_64-pc-windows-msvc"
 targets = []
 
 [dependencies.windows]
-git = "https://github.com/microsoft/windows-rs/crates/libs/windows"
+git = "https://github.com/microsoft/windows-rs"
 features = [
     "alloc",
     "Foundation_Collections",
