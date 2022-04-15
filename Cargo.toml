@@ -44,6 +44,7 @@ features = [
 [features]
 default = []
 deprecated = []
+implement = ["windows/implement"]
 Foundation = []
 Graphics = []
 Graphics_DirectX = ["Graphics"]
