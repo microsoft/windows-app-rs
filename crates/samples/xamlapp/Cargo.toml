@@ -1,0 +1,27 @@
+[package]
+name = "samples_xamlapp"
+version = "0.0.0"
+publish = false
+edition = "2018"
+
+[build-dependencies.windows-app]
+path = "../../../"
+features = [
+    "WindowsAppSdk_Foundation"
+]
+
+[dependencies.windows]
+version = "0.34.0"
+features = [
+    "alloc",
+    "implement",
+    "Win32_UI_HiDpi",
+]
+
+[dependencies.windows-app]
+path = "../../../"
+features = [
+    "implement",
+    "WindowsAppSdk_Foundation",
+    "UI_Xaml_Controls_Primitives",
+]
