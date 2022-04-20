@@ -67,7 +67,7 @@ default-target = "x86_64-pc-windows-msvc"
 targets = []
 
 [dependencies.windows]
-version = "0.34.0"
+version = "0.35.0"
 features = [
     "alloc",
     "Foundation_Collections",
