@@ -79,7 +79,7 @@ impl IApplicationOverrides_Impl for App {
         });
 
         let result = window.Activate();
-        *self._window.borrow_mut() = Some(window.into());
+        *self._window.borrow_mut() = Some(window);
         result
     }
 }
