@@ -12,7 +12,8 @@ pub fn to_output_dir() {
     path.pop();
     path.pop();
     path.push("Microsoft.WindowsAppRuntime.Bootstrap.dll");
-    if let Ok(mut file) = OpenOptions::new().create_new(true).write(true).open(path) {
+    if let Ok(mut file) = OpenOptions::new().create_new(true).write(true).open(&path) {
         file.write_all(&generated::BOOTSTRAP_DLL_BYTES).unwrap();
     }
+    println!("cargo:rerun-if-changed={}", path.display());
 }
