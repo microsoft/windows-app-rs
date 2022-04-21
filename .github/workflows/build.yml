@@ -33,11 +33,11 @@ jobs:
 
     - name: windows-app build (nightly)
       run: cargo test --workspace --target ${{ matrix.other }}
-      if: rust == 'nightly'
+      if: matrix.rust == 'nightly'
 
     - name: windows-app build (stable)
       run: cargo test --workspace --exclude samples_xamlapp --target ${{ matrix.other }}
-      if: rust == 'stable'
+      if: matrix.rust == 'stable'
 
   cargo_fmt:
     runs-on: windows-latest
