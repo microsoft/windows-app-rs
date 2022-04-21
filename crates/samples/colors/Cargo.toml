@@ -1,5 +1,5 @@
 [package]
-name = "samples_colors"
+name = "sample_colors"
 version = "0.0.0"
 publish = false
 edition = "2018"

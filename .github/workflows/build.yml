@@ -31,13 +31,19 @@ jobs:
     - run: rustup update --no-self-update ${{ matrix.rust }} && rustup default ${{ matrix.rust }}
     - run: rustup target add ${{ matrix.other }}
 
-    - name: windows-app build (nightly)
-      run: cargo test --workspace --target ${{ matrix.other }}
-      if: matrix.rust == 'nightly'
+    - name: windows-app build
+      run: >
+        cargo test --target ${{ matrix.other }} -p windows-app &&
+        cargo test --target ${{ matrix.other }} -p sample_appwindow &&
+        cargo test --target ${{ matrix.other }} -p sample_battery &&
+        cargo test --target ${{ matrix.other }} -p sample_colors &&
+        cargo test --target ${{ matrix.other }} -p sample_mrm &&
+        cargo test --target ${{ matrix.other }} -p tool_api
 
-    - name: windows-app build (stable)
-      run: cargo test --workspace --exclude samples_xamlapp --target ${{ matrix.other }}
-      if: matrix.rust == 'stable'
+    - name: windows-app build (nightly additions)
+      run: >
+        cargo test --target ${{ matrix.other }} -p sample_xamlapp
+      if: matrix.rust == 'nightly'
 
   cargo_fmt:
     runs-on: windows-latest
@@ -53,4 +59,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run cargo doc
-      run: cargo doc --no-deps --workspace
+      run: cargo doc --exclude sample_xamlapp  --no-deps --workspace

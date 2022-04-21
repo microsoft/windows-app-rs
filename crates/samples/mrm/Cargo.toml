@@ -1,5 +1,5 @@
 [package]
-name = "samples_mrm"
+name = "sample_mrm"
 version = "0.0.0"
 publish = false
 edition = "2018"

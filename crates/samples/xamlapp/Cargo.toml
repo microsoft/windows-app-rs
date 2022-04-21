@@ -1,5 +1,5 @@
 [package]
-name = "samples_xamlapp"
+name = "sample_xamlapp"
 version = "0.0.0"
 publish = false
 edition = "2018"
