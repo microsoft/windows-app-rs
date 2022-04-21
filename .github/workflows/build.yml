@@ -31,8 +31,8 @@ jobs:
     - run: rustup update --no-self-update ${{ matrix.rust }} && rustup default ${{ matrix.rust }}
     - run: rustup target add ${{ matrix.other }}
 
-    - name: windows build
-      run: cargo test --all --target ${{ matrix.other }}
+    - name: windows-app build
+      run: cargo test --workspace --target ${{ matrix.other }} --exclude sample_xamlapp
 
   cargo_fmt:
     runs-on: windows-latest
@@ -48,4 +48,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Run cargo doc
-      run: cargo doc --no-deps --workspace
+      run: cargo doc --no-deps --workspace --exclude sample_xamlapp

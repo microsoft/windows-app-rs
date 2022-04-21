@@ -1,12 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<Project Sdk="Microsoft.Windows.WinmdGenerator/0.15.49-preview">
+<Project Sdk="Microsoft.Windows.WinmdGenerator/0.22.14-preview">
 
     <PropertyGroup Label="Globals">
         <OutputWinmd>../.windows/winmd/Microsoft.WindowsAppSdk.Generated.winmd</OutputWinmd>
-        <WinmdVersion>2.0.0</WinmdVersion>
+        <WinmdVersion>255.255.255.255</WinmdVersion>
         <ExcludeFromCrossarch>Microsoft.MRM;Microsoft.UI.Xaml;Microsoft.UI.Xaml.Hosting;Microsoft.UI.Xaml.Media;Microsoft.WindowsAppSdk.Foundation</ExcludeFromCrossarch>
     </PropertyGroup>
+
+    <Target Name="UpdateCrateBootstrap" AfterTargets="Build">
+        <Copy
+            SourceFiles="$(PkgMicrosoft_WindowsAppSDK)\lib\win10-arm64\Microsoft.WindowsAppRuntime.Bootstrap.lib"
+            DestinationFolder="../crates/targets/aarch64_msvc/lib"
+        />
+        <Copy
+            SourceFiles="$(PkgMicrosoft_WindowsAppSDK)\runtimes\win10-arm64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll"
+            DestinationFolder="../crates/tools/api/bootstrap/arm64"
+        />
+        <Copy
+            SourceFiles="$(PkgMicrosoft_WindowsAppSDK)\lib\win10-x64\Microsoft.WindowsAppRuntime.Bootstrap.lib"
+            DestinationFolder="../crates/targets/x86_64_msvc/lib"
+        />
+        <Copy
+            SourceFiles="$(PkgMicrosoft_WindowsAppSDK)\runtimes\win10-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll"
+            DestinationFolder="../crates/tools/api/bootstrap/x64"
+        />
+        <Copy
+            SourceFiles="$(PkgMicrosoft_WindowsAppSDK)\lib\win10-x86\Microsoft.WindowsAppRuntime.Bootstrap.lib"
+            DestinationFolder="../crates/targets/i686_msvc/lib"
+        />
+        <Copy
+            SourceFiles="$(PkgMicrosoft_WindowsAppSDK)\runtimes\win10-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll"
+            DestinationFolder="../crates/tools/api/bootstrap/x86"
+        />
+    </Target>
 
     <ItemGroup>
         <MuxHeaders Include="$(PkgMicrosoft_WindowsAppSDK)\include\microsoft.ui.xaml.*.h" />
@@ -40,7 +67,7 @@
             <Namespace>Microsoft.WindowsAppSdk.Foundation</Namespace>
         </Partition>
 
-        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.0" GeneratePathProperty="true">
+        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.0.3" GeneratePathProperty="true">
             <IncludeAssets>none</IncludeAssets>
         </PackageReference>
 

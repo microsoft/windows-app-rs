@@ -18,9 +18,9 @@ pub fn initialize() -> windows::core::Result<()> {
         Anonymous: PACKAGE_VERSION_0 {
             Anonymous: PACKAGE_VERSION_0_0 {
                 Revision: 0,
-                Build: 455,
-                Minor: 319,
-                Major: 0,
+                Build: 1654,
+                Minor: 469,
+                Major: 3,
             },
         },
     };
