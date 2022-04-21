@@ -31,8 +31,13 @@ jobs:
     - run: rustup update --no-self-update ${{ matrix.rust }} && rustup default ${{ matrix.rust }}
     - run: rustup target add ${{ matrix.other }}
 
-    - name: windows build
-      run: cargo test --all --target ${{ matrix.other }}
+    - name: windows-app build (nightly)
+      run: cargo test --workspace --target ${{ matrix.other }}
+      if: rust == 'nightly'
+
+    - name: windows-app build (stable)
+      run: cargo test --workspace --exclude samples_xamlapp --target ${{ matrix.other }}
+      if: rust == 'stable'
 
   cargo_fmt:
     runs-on: windows-latest
