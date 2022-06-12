@@ -61,23 +61,25 @@
     <activatableClass name="Microsoft.UI.Composition.Visual" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
   </file>
   <file name="Microsoft.UI.Input.dll" xmlns="urn:schemas-microsoft-com:asm.v1">
+    <activatableClass name="Microsoft.UI.Content.ContentAppWindowBridge" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Content.ContentExternalOutputLink" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Content.ContentIsland" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Content.ContentSite" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Content.CoreWindowSiteBridge" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Content.DesktopChildSiteBridge" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
-    <activatableClass name="Microsoft.UI.Content.ContentAppWindowBridge" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Content.PopupWindowSiteBridge" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+    <activatableClass name="Microsoft.UI.Content.SystemVisualSiteBridge" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.Experimental.ExpFocusController" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.Experimental.ExpFocusNavigationHost" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.Experimental.ExpFocusNavigationRequest" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
-    <activatableClass name="Microsoft.UI.Input.Experimental.ExpIndependentPointerInputObserver" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.Experimental.ExpInputObject" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.Experimental.ExpPointerPoint" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.GestureRecognizer" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.InputActivationListener" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.InputCursor" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+    <activatableClass name="Microsoft.UI.Input.InputCustomCursor" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.InputDesktopResourceCursor" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+    <activatableClass name="Microsoft.UI.Input.InputDesktopNamedResourceCursor" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.InputKeyboardSource" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.InputLightDismissAction" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Input.InputObject" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
@@ -96,8 +98,8 @@
     <activatableClass name="Microsoft.UI.Windowing.OverlappedPresenter" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
   </file>
   <file name="wuceffectsi.dll" xmlns="urn:schemas-microsoft-com:asm.v1">
-    <activatableClass name="Microsoft.UI.Composition.SystemBackdrops.CompositionBackdropPolicy" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Composition.SystemBackdrops.DesktopAcrylicController" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
     <activatableClass name="Microsoft.UI.Composition.SystemBackdrops.MicaController" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
+    <activatableClass name="Microsoft.UI.Composition.SystemBackdrops.SystemBackdropConfiguration" threadingModel="both" xmlns="urn:schemas-microsoft-com:winrt.v1" />
   </file>
 </assembly>

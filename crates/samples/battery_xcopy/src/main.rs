@@ -7,7 +7,7 @@ use windows_app::Microsoft::Windows::System::Power::*;
 
 fn main() -> ::windows::core::Result<()> {
     unsafe {
-        if LoadLibraryW(r"Microsoft.WindowsAppRuntime.dll").0 == 0 {
+        if LoadLibraryW(r"Microsoft.WindowsAppRuntime.dll").is_err() {
             MessageBoxW(
                 HWND::default(),
                 "This sample requires Windows App SDK files to be deployed before use. (Run Stage.ps1)",

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<Project Sdk="Microsoft.Windows.WinmdGenerator/0.21.3-preview">
+<Project Sdk="Microsoft.Windows.WinmdGenerator/0.23.2-preview">
 
     <PropertyGroup Label="Globals">
         <OutputWinmd>../.windows/winmd/Microsoft.WindowsAppSdk.Generated.winmd</OutputWinmd>
@@ -47,7 +47,7 @@
             <Namespace>Microsoft.WindowsAppSdk.Foundation</Namespace>
         </Partition>
 
-        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.0-preview1" GeneratePathProperty="true">
+        <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.1.0" GeneratePathProperty="true">
             <IncludeAssets>none</IncludeAssets>
         </PackageReference>
     </ItemGroup>

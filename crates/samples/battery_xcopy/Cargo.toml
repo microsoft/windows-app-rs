@@ -4,11 +4,8 @@ version = "0.0.0"
 publish = false
 edition = "2018"
 
-[build-dependencies.windows-app]
-path = "../../../"
-features = [
-    "WindowsAppSdk_Foundation",
-]
+[build-dependencies.windows-app-deploy]
+path = "../../libs/windows-app-deploy"
 
 [dependencies.windows]
 git = "https://github.com/microsoft/windows-rs"
@@ -19,8 +16,9 @@ features = [
 ]
 
 [dependencies.windows-app]
-path = "../../../"
+path = "../../libs/windows-app"
 features = [
+    "bootstrap",
     "WindowsAppSdk_Foundation",
     "Windows_System_Power"
 ]

@@ -33,7 +33,7 @@ fn sample_main() -> Result<()> {
         Ok(())
     }))?;
 
-    let hwnd: HWND = window.Id()?.into();
+    let hwnd = HWND(window.Id()?.Value as _);
     resize_window(hwnd, 800, 600).then(|| {
         center_window(hwnd);
     });

@@ -8,6 +8,5 @@ publish = false
 quote = "1.0"
 rayon = "1.5.1"
 serde = "1.0.136"
-roxmltree = "0.14.1"
 windows-bindgen = { git = "https://github.com/microsoft/windows-rs" }
 windows-metadata = { git = "https://github.com/microsoft/windows-rs" }
