@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
 #[repr(transparent)]
 pub struct IAnnotationProvider(::windows::core::IUnknown);
@@ -13,10 +6,10 @@ impl IAnnotationProvider {
     pub fn AnnotationTypeId(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).AnnotationTypeId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -25,11 +18,12 @@ impl IAnnotationProvider {
     pub fn AnnotationTypeName(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).AnnotationTypeName)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -38,11 +32,12 @@ impl IAnnotationProvider {
     pub fn Author(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Author)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -51,11 +46,12 @@ impl IAnnotationProvider {
     pub fn DateTime(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).DateTime)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -64,10 +60,10 @@ impl IAnnotationProvider {
     pub fn Target(&self) -> ::windows::core::Result<IRawElementProviderSimple> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Target)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IRawElementProviderSimple>(result__)
         }
@@ -145,7 +141,7 @@ unsafe impl ::windows::core::Interface for IAnnotationProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAnnotationProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AnnotationTypeId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -179,11 +175,11 @@ impl ICustomNavigationProvider {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).NavigateCustom)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 direction,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -269,7 +265,7 @@ unsafe impl ::windows::core::Interface for ICustomNavigationProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICustomNavigationProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Automation_Peers")]
     pub NavigateCustom: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -287,10 +283,10 @@ impl IDockProvider {
     pub fn DockPosition(&self) -> ::windows::core::Result<super::DockPosition> {
         let this = self;
         unsafe {
-            let mut result__: super::DockPosition = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::DockPosition>::zeroed();
             (::windows::core::Interface::vtable(this).DockPosition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::DockPosition>(result__)
         }
@@ -303,7 +299,7 @@ impl IDockProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDockPosition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dockposition,
             )
             .ok()
@@ -382,7 +378,7 @@ unsafe impl ::windows::core::Interface for IDockProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDockProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DockPosition: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut super::DockPosition,
@@ -400,10 +396,10 @@ impl IDragProvider {
     pub fn IsGrabbed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsGrabbed)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -412,11 +408,12 @@ impl IDragProvider {
     pub fn DropEffect(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).DropEffect)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -427,14 +424,17 @@ impl IDragProvider {
     ) -> ::windows::core::Result<::windows::core::Array<::windows::core::HSTRING>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).DropEffects)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<::windows::core::HSTRING>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<::windows::core::HSTRING>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -443,14 +443,17 @@ impl IDragProvider {
     ) -> ::windows::core::Result<::windows::core::Array<IRawElementProviderSimple>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<IRawElementProviderSimple> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<IRawElementProviderSimple>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetGrabbedItems)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
 }
@@ -526,7 +529,7 @@ unsafe impl ::windows::core::Interface for IDragProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsGrabbed: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -554,11 +557,12 @@ impl IDropTargetProvider {
     pub fn DropEffect(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).DropEffect)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -569,14 +573,17 @@ impl IDropTargetProvider {
     ) -> ::windows::core::Result<::windows::core::Array<::windows::core::HSTRING>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).DropEffects)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<::windows::core::HSTRING>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<::windows::core::HSTRING>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
 }
@@ -652,7 +659,7 @@ unsafe impl ::windows::core::Interface for IDropTargetProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDropTargetProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DropEffect: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -671,10 +678,10 @@ impl IExpandCollapseProvider {
     pub fn ExpandCollapseState(&self) -> ::windows::core::Result<super::ExpandCollapseState> {
         let this = self;
         unsafe {
-            let mut result__: super::ExpandCollapseState = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::ExpandCollapseState>::zeroed();
             (::windows::core::Interface::vtable(this).ExpandCollapseState)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::ExpandCollapseState>(result__)
         }
@@ -683,16 +690,20 @@ impl IExpandCollapseProvider {
     pub fn Collapse(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Collapse)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Collapse)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
     pub fn Expand(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Expand)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Expand)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
 }
@@ -772,7 +783,7 @@ unsafe impl ::windows::core::Interface for IExpandCollapseProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IExpandCollapseProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ExpandCollapseState: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut super::ExpandCollapseState,
@@ -790,10 +801,10 @@ impl IGridItemProvider {
     pub fn Column(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Column)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -802,10 +813,10 @@ impl IGridItemProvider {
     pub fn ColumnSpan(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).ColumnSpan)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -814,10 +825,10 @@ impl IGridItemProvider {
     pub fn ContainingGrid(&self) -> ::windows::core::Result<IRawElementProviderSimple> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ContainingGrid)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IRawElementProviderSimple>(result__)
         }
@@ -826,10 +837,10 @@ impl IGridItemProvider {
     pub fn Row(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Row)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -838,10 +849,10 @@ impl IGridItemProvider {
     pub fn RowSpan(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).RowSpan)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -919,7 +930,7 @@ unsafe impl ::windows::core::Interface for IGridItemProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGridItemProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Column: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -949,10 +960,10 @@ impl IGridProvider {
     pub fn ColumnCount(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).ColumnCount)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -961,10 +972,10 @@ impl IGridProvider {
     pub fn RowCount(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).RowCount)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -977,12 +988,12 @@ impl IGridProvider {
     ) -> ::windows::core::Result<IRawElementProviderSimple> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetItem)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 row,
                 column,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<IRawElementProviderSimple>(result__)
         }
@@ -1060,7 +1071,7 @@ unsafe impl ::windows::core::Interface for IGridProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGridProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ColumnCount: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1087,7 +1098,7 @@ unsafe impl ::windows::core::Interface for IIRawElementProviderSimple {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IIRawElementProviderSimple_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
 #[repr(transparent)]
@@ -1097,8 +1108,10 @@ impl IInvokeProvider {
     pub fn Invoke(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Invoke)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Invoke)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
 }
@@ -1174,7 +1187,7 @@ unsafe impl ::windows::core::Interface for IInvokeProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IInvokeProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Invoke:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -1196,13 +1209,13 @@ impl IItemContainerProvider {
     ) -> ::windows::core::Result<IRawElementProviderSimple> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FindItemByProperty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 startafter.into_param().abi(),
                 automationproperty.into_param().abi(),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<IRawElementProviderSimple>(result__)
         }
@@ -1284,7 +1297,7 @@ unsafe impl ::windows::core::Interface for IItemContainerProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IItemContainerProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FindItemByProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         startafter: ::windows::core::RawPtr,
@@ -1301,10 +1314,10 @@ impl IMultipleViewProvider {
     pub fn CurrentView(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).CurrentView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1313,25 +1326,26 @@ impl IMultipleViewProvider {
     pub fn GetSupportedViews(&self) -> ::windows::core::Result<::windows::core::Array<i32>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<i32> = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::Array<i32>>::zeroed();
             (::windows::core::Interface::vtable(this).GetSupportedViews)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<i32>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<i32>::set_abi_len(result__.assume_init_mut()),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
     pub fn GetViewName(&self, viewid: i32) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetViewName)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 viewid,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -1341,7 +1355,7 @@ impl IMultipleViewProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCurrentView)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 viewid,
             )
             .ok()
@@ -1424,7 +1438,7 @@ unsafe impl ::windows::core::Interface for IMultipleViewProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMultipleViewProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CurrentView: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1454,10 +1468,10 @@ impl IObjectModelProvider {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetUnderlyingObjectModel)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1539,7 +1553,7 @@ unsafe impl ::windows::core::Interface for IObjectModelProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IObjectModelProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetUnderlyingObjectModel: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -1553,10 +1567,10 @@ impl IRangeValueProvider {
     pub fn IsReadOnly(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsReadOnly)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1565,10 +1579,10 @@ impl IRangeValueProvider {
     pub fn LargeChange(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).LargeChange)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1577,10 +1591,10 @@ impl IRangeValueProvider {
     pub fn Maximum(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).Maximum)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1589,10 +1603,10 @@ impl IRangeValueProvider {
     pub fn Minimum(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).Minimum)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1601,10 +1615,10 @@ impl IRangeValueProvider {
     pub fn SmallChange(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).SmallChange)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1613,10 +1627,10 @@ impl IRangeValueProvider {
     pub fn Value(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).Value)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1626,7 +1640,7 @@ impl IRangeValueProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1705,7 +1719,7 @@ unsafe impl ::windows::core::Interface for IRangeValueProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRangeValueProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsReadOnly: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -1749,11 +1763,11 @@ impl IRawElementProviderSimple {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1771,7 +1785,7 @@ impl IRawElementProviderSimple {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1789,7 +1803,7 @@ impl IRawElementProviderSimple {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1805,11 +1819,11 @@ impl IRawElementProviderSimple {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1824,11 +1838,11 @@ impl IRawElementProviderSimple {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1845,12 +1859,12 @@ impl IRawElementProviderSimple {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -1867,7 +1881,7 @@ impl IRawElementProviderSimple {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1878,10 +1892,10 @@ impl IRawElementProviderSimple {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -1893,10 +1907,10 @@ impl IRawElementProviderSimple {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -2017,9 +2031,9 @@ impl IScrollItemProvider {
     pub fn ScrollIntoView(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).ScrollIntoView)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).ScrollIntoView)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -2096,7 +2110,7 @@ unsafe impl ::windows::core::Interface for IScrollItemProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IScrollItemProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ScrollIntoView:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -2108,10 +2122,10 @@ impl IScrollProvider {
     pub fn HorizontallyScrollable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).HorizontallyScrollable)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2120,10 +2134,10 @@ impl IScrollProvider {
     pub fn HorizontalScrollPercent(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).HorizontalScrollPercent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -2132,10 +2146,10 @@ impl IScrollProvider {
     pub fn HorizontalViewSize(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).HorizontalViewSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -2144,10 +2158,10 @@ impl IScrollProvider {
     pub fn VerticallyScrollable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).VerticallyScrollable)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2156,10 +2170,10 @@ impl IScrollProvider {
     pub fn VerticalScrollPercent(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).VerticalScrollPercent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -2168,10 +2182,10 @@ impl IScrollProvider {
     pub fn VerticalViewSize(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).VerticalViewSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -2185,7 +2199,7 @@ impl IScrollProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Scroll)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 horizontalamount,
                 verticalamount,
             )
@@ -2201,7 +2215,7 @@ impl IScrollProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetScrollPercent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 horizontalpercent,
                 verticalpercent,
             )
@@ -2281,7 +2295,7 @@ unsafe impl ::windows::core::Interface for IScrollProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IScrollProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HorizontallyScrollable: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -2325,10 +2339,10 @@ impl ISelectionItemProvider {
     pub fn IsSelected(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsSelected)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2337,10 +2351,10 @@ impl ISelectionItemProvider {
     pub fn SelectionContainer(&self) -> ::windows::core::Result<IRawElementProviderSimple> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).SelectionContainer)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IRawElementProviderSimple>(result__)
         }
@@ -2349,9 +2363,9 @@ impl ISelectionItemProvider {
     pub fn AddToSelection(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).AddToSelection)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).AddToSelection)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -2360,7 +2374,7 @@ impl ISelectionItemProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveFromSelection)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -2369,8 +2383,10 @@ impl ISelectionItemProvider {
     pub fn Select(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Select)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Select)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
 }
@@ -2450,7 +2466,7 @@ unsafe impl ::windows::core::Interface for ISelectionItemProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISelectionItemProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsSelected: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -2474,10 +2490,10 @@ impl ISelectionProvider {
     pub fn CanSelectMultiple(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanSelectMultiple)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2486,10 +2502,10 @@ impl ISelectionProvider {
     pub fn IsSelectionRequired(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsSelectionRequired)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2500,14 +2516,17 @@ impl ISelectionProvider {
     ) -> ::windows::core::Result<::windows::core::Array<IRawElementProviderSimple>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<IRawElementProviderSimple> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<IRawElementProviderSimple>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetSelection)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
 }
@@ -2583,7 +2602,7 @@ unsafe impl ::windows::core::Interface for ISelectionProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISelectionProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CanSelectMultiple: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -2606,11 +2625,12 @@ impl ISpreadsheetItemProvider {
     pub fn Formula(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Formula)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -2621,14 +2641,17 @@ impl ISpreadsheetItemProvider {
     ) -> ::windows::core::Result<::windows::core::Array<IRawElementProviderSimple>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<IRawElementProviderSimple> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<IRawElementProviderSimple>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetAnnotationObjects)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -2637,13 +2660,16 @@ impl ISpreadsheetItemProvider {
     ) -> ::windows::core::Result<::windows::core::Array<super::AnnotationType>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<super::AnnotationType> = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::core::Array<super::AnnotationType>>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnnotationTypes)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<super::AnnotationType>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<super::AnnotationType>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
 }
@@ -2727,7 +2753,7 @@ unsafe impl ::windows::core::Interface for ISpreadsheetItemProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISpreadsheetItemProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Formula: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -2754,11 +2780,11 @@ impl ISpreadsheetProvider {
     ) -> ::windows::core::Result<IRawElementProviderSimple> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetItemByName)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<IRawElementProviderSimple>(result__)
         }
@@ -2840,7 +2866,7 @@ unsafe impl ::windows::core::Interface for ISpreadsheetProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISpreadsheetProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetItemByName: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         name: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -2855,11 +2881,12 @@ impl IStylesProvider {
     pub fn ExtendedProperties(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ExtendedProperties)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -2868,10 +2895,10 @@ impl IStylesProvider {
     pub fn FillColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::UI::Color>::zeroed();
             (::windows::core::Interface::vtable(this).FillColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Color>(result__)
         }
@@ -2880,10 +2907,10 @@ impl IStylesProvider {
     pub fn FillPatternColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::UI::Color>::zeroed();
             (::windows::core::Interface::vtable(this).FillPatternColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Color>(result__)
         }
@@ -2892,11 +2919,12 @@ impl IStylesProvider {
     pub fn FillPatternStyle(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).FillPatternStyle)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -2905,11 +2933,12 @@ impl IStylesProvider {
     pub fn Shape(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Shape)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -2918,10 +2947,10 @@ impl IStylesProvider {
     pub fn StyleId(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StyleId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2930,11 +2959,12 @@ impl IStylesProvider {
     pub fn StyleName(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).StyleName)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -3012,7 +3042,7 @@ unsafe impl ::windows::core::Interface for IStylesProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStylesProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ExtendedProperties: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -3050,8 +3080,10 @@ impl ISynchronizedInputProvider {
     pub fn Cancel(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Cancel)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Cancel)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -3062,7 +3094,7 @@ impl ISynchronizedInputProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).StartListening)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 inputtype,
             )
             .ok()
@@ -3149,7 +3181,7 @@ unsafe impl ::windows::core::Interface for ISynchronizedInputProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISynchronizedInputProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Cancel:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
     pub StartListening: unsafe extern "system" fn(
@@ -3167,14 +3199,17 @@ impl ITableItemProvider {
     ) -> ::windows::core::Result<::windows::core::Array<IRawElementProviderSimple>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<IRawElementProviderSimple> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<IRawElementProviderSimple>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetColumnHeaderItems)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -3183,14 +3218,17 @@ impl ITableItemProvider {
     ) -> ::windows::core::Result<::windows::core::Array<IRawElementProviderSimple>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<IRawElementProviderSimple> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<IRawElementProviderSimple>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetRowHeaderItems)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
 }
@@ -3266,7 +3304,7 @@ unsafe impl ::windows::core::Interface for ITableItemProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITableItemProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetColumnHeaderItems: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result_size__: *mut u32,
@@ -3286,10 +3324,10 @@ impl ITableProvider {
     pub fn RowOrColumnMajor(&self) -> ::windows::core::Result<super::RowOrColumnMajor> {
         let this = self;
         unsafe {
-            let mut result__: super::RowOrColumnMajor = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::RowOrColumnMajor>::zeroed();
             (::windows::core::Interface::vtable(this).RowOrColumnMajor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::RowOrColumnMajor>(result__)
         }
@@ -3300,14 +3338,17 @@ impl ITableProvider {
     ) -> ::windows::core::Result<::windows::core::Array<IRawElementProviderSimple>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<IRawElementProviderSimple> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<IRawElementProviderSimple>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetColumnHeaders)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -3316,14 +3357,17 @@ impl ITableProvider {
     ) -> ::windows::core::Result<::windows::core::Array<IRawElementProviderSimple>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<IRawElementProviderSimple> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<IRawElementProviderSimple>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetRowHeaders)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
 }
@@ -3399,7 +3443,7 @@ unsafe impl ::windows::core::Interface for ITableProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITableProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RowOrColumnMajor: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut super::RowOrColumnMajor,
@@ -3423,10 +3467,10 @@ impl ITextChildProvider {
     pub fn TextContainer(&self) -> ::windows::core::Result<IRawElementProviderSimple> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TextContainer)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IRawElementProviderSimple>(result__)
         }
@@ -3435,10 +3479,10 @@ impl ITextChildProvider {
     pub fn TextRange(&self) -> ::windows::core::Result<ITextRangeProvider> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TextRange)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -3516,7 +3560,7 @@ unsafe impl ::windows::core::Interface for ITextChildProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextChildProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TextContainer: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3534,10 +3578,10 @@ impl ITextEditProvider {
     pub fn GetActiveComposition(&self) -> ::windows::core::Result<ITextRangeProvider> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetActiveComposition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -3546,10 +3590,10 @@ impl ITextEditProvider {
     pub fn GetConversionTarget(&self) -> ::windows::core::Result<ITextRangeProvider> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetConversionTarget)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -3558,10 +3602,10 @@ impl ITextEditProvider {
     pub fn DocumentRange(&self) -> ::windows::core::Result<ITextRangeProvider> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DocumentRange)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -3570,10 +3614,10 @@ impl ITextEditProvider {
     pub fn SupportedTextSelection(&self) -> ::windows::core::Result<super::SupportedTextSelection> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: super::SupportedTextSelection = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::SupportedTextSelection>::zeroed();
             (::windows::core::Interface::vtable(this).SupportedTextSelection)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::SupportedTextSelection>(result__)
         }
@@ -3584,13 +3628,16 @@ impl ITextEditProvider {
     ) -> ::windows::core::Result<::windows::core::Array<ITextRangeProvider>> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::Array<ITextRangeProvider> = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::core::Array<ITextRangeProvider>>::zeroed();
             (::windows::core::Interface::vtable(this).GetSelection)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -3599,13 +3646,16 @@ impl ITextEditProvider {
     ) -> ::windows::core::Result<::windows::core::Array<ITextRangeProvider>> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::Array<ITextRangeProvider> = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::core::Array<ITextRangeProvider>>::zeroed();
             (::windows::core::Interface::vtable(this).GetVisibleRanges)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -3615,11 +3665,11 @@ impl ITextEditProvider {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RangeFromChild)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 childelement.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -3634,11 +3684,11 @@ impl ITextEditProvider {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RangeFromPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 screenlocation.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -3740,7 +3790,7 @@ unsafe impl ::windows::core::Interface for ITextEditProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextEditProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetActiveComposition: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3758,10 +3808,10 @@ impl ITextProvider {
     pub fn DocumentRange(&self) -> ::windows::core::Result<ITextRangeProvider> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DocumentRange)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -3770,10 +3820,10 @@ impl ITextProvider {
     pub fn SupportedTextSelection(&self) -> ::windows::core::Result<super::SupportedTextSelection> {
         let this = self;
         unsafe {
-            let mut result__: super::SupportedTextSelection = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::SupportedTextSelection>::zeroed();
             (::windows::core::Interface::vtable(this).SupportedTextSelection)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::SupportedTextSelection>(result__)
         }
@@ -3784,13 +3834,16 @@ impl ITextProvider {
     ) -> ::windows::core::Result<::windows::core::Array<ITextRangeProvider>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<ITextRangeProvider> = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::core::Array<ITextRangeProvider>>::zeroed();
             (::windows::core::Interface::vtable(this).GetSelection)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -3799,13 +3852,16 @@ impl ITextProvider {
     ) -> ::windows::core::Result<::windows::core::Array<ITextRangeProvider>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<ITextRangeProvider> = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::core::Array<ITextRangeProvider>>::zeroed();
             (::windows::core::Interface::vtable(this).GetVisibleRanges)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -3815,11 +3871,11 @@ impl ITextProvider {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RangeFromChild)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 childelement.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -3834,11 +3890,11 @@ impl ITextProvider {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RangeFromPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 screenlocation.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -3916,7 +3972,7 @@ unsafe impl ::windows::core::Interface for ITextProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DocumentRange: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3960,11 +4016,11 @@ impl ITextProvider2 {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RangeFromAnnotation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 annotationelement.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -3976,11 +4032,11 @@ impl ITextProvider2 {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetCaretRange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 isactive,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -3989,10 +4045,10 @@ impl ITextProvider2 {
     pub fn DocumentRange(&self) -> ::windows::core::Result<ITextRangeProvider> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DocumentRange)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -4001,10 +4057,10 @@ impl ITextProvider2 {
     pub fn SupportedTextSelection(&self) -> ::windows::core::Result<super::SupportedTextSelection> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: super::SupportedTextSelection = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::SupportedTextSelection>::zeroed();
             (::windows::core::Interface::vtable(this).SupportedTextSelection)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::SupportedTextSelection>(result__)
         }
@@ -4015,13 +4071,16 @@ impl ITextProvider2 {
     ) -> ::windows::core::Result<::windows::core::Array<ITextRangeProvider>> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::Array<ITextRangeProvider> = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::core::Array<ITextRangeProvider>>::zeroed();
             (::windows::core::Interface::vtable(this).GetSelection)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -4030,13 +4089,16 @@ impl ITextProvider2 {
     ) -> ::windows::core::Result<::windows::core::Array<ITextRangeProvider>> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::Array<ITextRangeProvider> = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::core::Array<ITextRangeProvider>>::zeroed();
             (::windows::core::Interface::vtable(this).GetVisibleRanges)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<ITextRangeProvider>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -4046,11 +4108,11 @@ impl ITextProvider2 {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RangeFromChild)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 childelement.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -4065,11 +4127,11 @@ impl ITextProvider2 {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = &::windows::core::Interface::cast::<ITextProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RangeFromPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 screenlocation.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -4171,7 +4233,7 @@ unsafe impl ::windows::core::Interface for ITextProvider2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextProvider2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RangeFromAnnotation: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         annotationelement: ::windows::core::RawPtr,
@@ -4191,10 +4253,10 @@ impl ITextRangeProvider {
     pub fn Clone(&self) -> ::windows::core::Result<ITextRangeProvider> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Clone)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -4206,11 +4268,11 @@ impl ITextRangeProvider {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Compare)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 textrangeprovider.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4225,13 +4287,13 @@ impl ITextRangeProvider {
     ) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).CompareEndpoints)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 endpoint,
                 textrangeprovider.into_param().abi(),
                 targetendpoint,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4245,7 +4307,7 @@ impl ITextRangeProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ExpandToEnclosingUnit)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
             )
             .ok()
@@ -4263,13 +4325,13 @@ impl ITextRangeProvider {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FindAttribute)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 attributeid,
                 value.into_param().abi(),
                 backward,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -4283,13 +4345,13 @@ impl ITextRangeProvider {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FindText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 text.into_param().abi(),
                 backward,
                 ignorecase,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -4301,11 +4363,11 @@ impl ITextRangeProvider {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAttributeValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 attributeid,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4318,7 +4380,7 @@ impl ITextRangeProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetBoundingRectangles)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 returnvalue.set_abi_len(),
                 returnvalue as *mut _ as _,
             )
@@ -4329,10 +4391,10 @@ impl ITextRangeProvider {
     pub fn GetEnclosingElement(&self) -> ::windows::core::Result<IRawElementProviderSimple> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetEnclosingElement)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IRawElementProviderSimple>(result__)
         }
@@ -4341,12 +4403,13 @@ impl ITextRangeProvider {
     pub fn GetText(&self, maxlength: i32) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 maxlength,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -4356,12 +4419,12 @@ impl ITextRangeProvider {
     pub fn Move(&self, unit: super::Text::TextUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Move)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4376,13 +4439,13 @@ impl ITextRangeProvider {
     ) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveEndpointByUnit)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 endpoint,
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4398,7 +4461,7 @@ impl ITextRangeProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).MoveEndpointByRange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 endpoint,
                 textrangeprovider.into_param().abi(),
                 targetendpoint,
@@ -4410,17 +4473,19 @@ impl ITextRangeProvider {
     pub fn Select(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Select)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Select)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
     pub fn AddToSelection(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).AddToSelection)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).AddToSelection)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -4429,7 +4494,7 @@ impl ITextRangeProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveFromSelection)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -4439,7 +4504,7 @@ impl ITextRangeProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ScrollIntoView)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 aligntotop,
             )
             .ok()
@@ -4451,14 +4516,17 @@ impl ITextRangeProvider {
     ) -> ::windows::core::Result<::windows::core::Array<IRawElementProviderSimple>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<IRawElementProviderSimple> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<IRawElementProviderSimple>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetChildren)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
 }
@@ -4534,7 +4602,7 @@ unsafe impl ::windows::core::Interface for ITextRangeProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextRangeProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Clone: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -4646,9 +4714,9 @@ impl ITextRangeProvider2 {
     pub fn ShowContextMenu(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).ShowContextMenu)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).ShowContextMenu)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -4656,10 +4724,10 @@ impl ITextRangeProvider2 {
     pub fn Clone(&self) -> ::windows::core::Result<ITextRangeProvider> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Clone)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -4671,11 +4739,11 @@ impl ITextRangeProvider2 {
     ) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Compare)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 textrangeprovider.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4690,13 +4758,13 @@ impl ITextRangeProvider2 {
     ) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).CompareEndpoints)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 endpoint,
                 textrangeprovider.into_param().abi(),
                 targetendpoint,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4710,7 +4778,7 @@ impl ITextRangeProvider2 {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ExpandToEnclosingUnit)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
             )
             .ok()
@@ -4728,13 +4796,13 @@ impl ITextRangeProvider2 {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FindAttribute)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 attributeid,
                 value.into_param().abi(),
                 backward,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -4748,13 +4816,13 @@ impl ITextRangeProvider2 {
     ) -> ::windows::core::Result<ITextRangeProvider> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FindText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 text.into_param().abi(),
                 backward,
                 ignorecase,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRangeProvider>(result__)
         }
@@ -4766,11 +4834,11 @@ impl ITextRangeProvider2 {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAttributeValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 attributeid,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4783,7 +4851,7 @@ impl ITextRangeProvider2 {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).GetBoundingRectangles)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 returnvalue.set_abi_len(),
                 returnvalue as *mut _ as _,
             )
@@ -4794,10 +4862,10 @@ impl ITextRangeProvider2 {
     pub fn GetEnclosingElement(&self) -> ::windows::core::Result<IRawElementProviderSimple> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetEnclosingElement)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IRawElementProviderSimple>(result__)
         }
@@ -4806,12 +4874,13 @@ impl ITextRangeProvider2 {
     pub fn GetText(&self, maxlength: i32) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 maxlength,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -4821,12 +4890,12 @@ impl ITextRangeProvider2 {
     pub fn Move(&self, unit: super::Text::TextUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Move)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4841,13 +4910,13 @@ impl ITextRangeProvider2 {
     ) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveEndpointByUnit)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 endpoint,
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4863,7 +4932,7 @@ impl ITextRangeProvider2 {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).MoveEndpointByRange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 endpoint,
                 textrangeprovider.into_param().abi(),
                 targetendpoint,
@@ -4875,17 +4944,19 @@ impl ITextRangeProvider2 {
     pub fn Select(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Select)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Select)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
     pub fn AddToSelection(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).AddToSelection)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).AddToSelection)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -4894,7 +4965,7 @@ impl ITextRangeProvider2 {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveFromSelection)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -4904,7 +4975,7 @@ impl ITextRangeProvider2 {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ScrollIntoView)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 aligntotop,
             )
             .ok()
@@ -4916,14 +4987,17 @@ impl ITextRangeProvider2 {
     ) -> ::windows::core::Result<::windows::core::Array<IRawElementProviderSimple>> {
         let this = &::windows::core::Interface::cast::<ITextRangeProvider>(self)?;
         unsafe {
-            let mut result__: ::windows::core::Array<IRawElementProviderSimple> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<IRawElementProviderSimple>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetChildren)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<IRawElementProviderSimple>::set_abi_len(
+                    result__.assume_init_mut(),
+                ),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
 }
@@ -5023,7 +5097,7 @@ unsafe impl ::windows::core::Interface for ITextRangeProvider2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextRangeProvider2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ShowContextMenu:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -5035,10 +5109,10 @@ impl IToggleProvider {
     pub fn ToggleState(&self) -> ::windows::core::Result<super::ToggleState> {
         let this = self;
         unsafe {
-            let mut result__: super::ToggleState = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::ToggleState>::zeroed();
             (::windows::core::Interface::vtable(this).ToggleState)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::ToggleState>(result__)
         }
@@ -5047,8 +5121,10 @@ impl IToggleProvider {
     pub fn Toggle(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Toggle)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Toggle)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
 }
@@ -5124,7 +5200,7 @@ unsafe impl ::windows::core::Interface for IToggleProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IToggleProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ToggleState: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut super::ToggleState,
@@ -5140,10 +5216,10 @@ impl ITransformProvider {
     pub fn CanMove(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanMove)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5152,10 +5228,10 @@ impl ITransformProvider {
     pub fn CanResize(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanResize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5164,10 +5240,10 @@ impl ITransformProvider {
     pub fn CanRotate(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanRotate)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5176,8 +5252,12 @@ impl ITransformProvider {
     pub fn Move(&self, x: f64, y: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Move)(::core::mem::transmute_copy(this), x, y)
-                .ok()
+            (::windows::core::Interface::vtable(this).Move)(
+                ::windows::core::Interface::as_raw(this),
+                x,
+                y,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -5185,7 +5265,7 @@ impl ITransformProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Resize)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 width,
                 height,
             )
@@ -5197,7 +5277,7 @@ impl ITransformProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Rotate)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 degrees,
             )
             .ok()
@@ -5276,7 +5356,7 @@ unsafe impl ::windows::core::Interface for ITransformProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransformProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CanMove: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -5312,10 +5392,10 @@ impl ITransformProvider2 {
     pub fn CanZoom(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanZoom)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5324,10 +5404,10 @@ impl ITransformProvider2 {
     pub fn ZoomLevel(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).ZoomLevel)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -5336,10 +5416,10 @@ impl ITransformProvider2 {
     pub fn MaxZoom(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MaxZoom)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -5348,10 +5428,10 @@ impl ITransformProvider2 {
     pub fn MinZoom(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MinZoom)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -5360,8 +5440,11 @@ impl ITransformProvider2 {
     pub fn Zoom(&self, zoom: f64) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Zoom)(::core::mem::transmute_copy(this), zoom)
-                .ok()
+            (::windows::core::Interface::vtable(this).Zoom)(
+                ::windows::core::Interface::as_raw(this),
+                zoom,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -5369,7 +5452,7 @@ impl ITransformProvider2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ZoomByUnit)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 zoomunit,
             )
             .ok()
@@ -5379,10 +5462,10 @@ impl ITransformProvider2 {
     pub fn CanMove(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITransformProvider>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanMove)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5391,10 +5474,10 @@ impl ITransformProvider2 {
     pub fn CanResize(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITransformProvider>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanResize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5403,10 +5486,10 @@ impl ITransformProvider2 {
     pub fn CanRotate(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITransformProvider>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanRotate)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5415,8 +5498,12 @@ impl ITransformProvider2 {
     pub fn Move(&self, x: f64, y: f64) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITransformProvider>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Move)(::core::mem::transmute_copy(this), x, y)
-                .ok()
+            (::windows::core::Interface::vtable(this).Move)(
+                ::windows::core::Interface::as_raw(this),
+                x,
+                y,
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -5424,7 +5511,7 @@ impl ITransformProvider2 {
         let this = &::windows::core::Interface::cast::<ITransformProvider>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Resize)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 width,
                 height,
             )
@@ -5436,7 +5523,7 @@ impl ITransformProvider2 {
         let this = &::windows::core::Interface::cast::<ITransformProvider>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Rotate)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 degrees,
             )
             .ok()
@@ -5539,7 +5626,7 @@ unsafe impl ::windows::core::Interface for ITransformProvider2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransformProvider2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CanZoom: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -5573,10 +5660,10 @@ impl IValueProvider {
     pub fn IsReadOnly(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsReadOnly)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5585,11 +5672,12 @@ impl IValueProvider {
     pub fn Value(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Value)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -5602,7 +5690,7 @@ impl IValueProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5681,7 +5769,7 @@ unsafe impl ::windows::core::Interface for IValueProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IValueProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsReadOnly: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -5703,8 +5791,10 @@ impl IVirtualizedItemProvider {
     pub fn Realize(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Realize)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Realize)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
 }
@@ -5788,7 +5878,7 @@ unsafe impl ::windows::core::Interface for IVirtualizedItemProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVirtualizedItemProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Realize:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -5800,10 +5890,10 @@ impl IWindowProvider {
     pub fn IsModal(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsModal)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5812,10 +5902,10 @@ impl IWindowProvider {
     pub fn IsTopmost(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsTopmost)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5824,10 +5914,10 @@ impl IWindowProvider {
     pub fn Maximizable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Maximizable)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5836,10 +5926,10 @@ impl IWindowProvider {
     pub fn Minimizable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Minimizable)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5848,10 +5938,10 @@ impl IWindowProvider {
     pub fn InteractionState(&self) -> ::windows::core::Result<super::WindowInteractionState> {
         let this = self;
         unsafe {
-            let mut result__: super::WindowInteractionState = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::WindowInteractionState>::zeroed();
             (::windows::core::Interface::vtable(this).InteractionState)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::WindowInteractionState>(result__)
         }
@@ -5860,10 +5950,10 @@ impl IWindowProvider {
     pub fn VisualState(&self) -> ::windows::core::Result<super::WindowVisualState> {
         let this = self;
         unsafe {
-            let mut result__: super::WindowVisualState = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::WindowVisualState>::zeroed();
             (::windows::core::Interface::vtable(this).VisualState)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::WindowVisualState>(result__)
         }
@@ -5872,7 +5962,10 @@ impl IWindowProvider {
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Close)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Automation_Provider\"`*"]
@@ -5880,7 +5973,7 @@ impl IWindowProvider {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetVisualState)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 state,
             )
             .ok()
@@ -5890,11 +5983,11 @@ impl IWindowProvider {
     pub fn WaitForInputIdle(&self, milliseconds: i32) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).WaitForInputIdle)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 milliseconds,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5972,7 +6065,7 @@ unsafe impl ::windows::core::Interface for IWindowProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWindowProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsModal: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,

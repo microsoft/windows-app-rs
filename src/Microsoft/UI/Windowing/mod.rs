@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Windowing\"`*"]
 #[repr(transparent)]
 pub struct AppWindow(::windows::core::IUnknown);
@@ -13,10 +6,10 @@ impl AppWindow {
     pub fn Id(&self) -> ::windows::core::Result<super::WindowId> {
         let this = self;
         unsafe {
-            let mut result__: super::WindowId = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::WindowId>::zeroed();
             (::windows::core::Interface::vtable(this).Id)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::WindowId>(result__)
         }
@@ -25,10 +18,10 @@ impl AppWindow {
     pub fn IsShownInSwitchers(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsShownInSwitchers)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -38,7 +31,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsShownInSwitchers)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -48,10 +41,10 @@ impl AppWindow {
     pub fn IsVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsVisible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -60,10 +53,10 @@ impl AppWindow {
     pub fn OwnerWindowId(&self) -> ::windows::core::Result<super::WindowId> {
         let this = self;
         unsafe {
-            let mut result__: super::WindowId = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::WindowId>::zeroed();
             (::windows::core::Interface::vtable(this).OwnerWindowId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::WindowId>(result__)
         }
@@ -72,10 +65,11 @@ impl AppWindow {
     pub fn Position(&self) -> ::windows::core::Result<::windows::Graphics::PointInt32> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Graphics::PointInt32 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Graphics::PointInt32>::zeroed();
             (::windows::core::Interface::vtable(this).Position)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Graphics::PointInt32>(result__)
         }
@@ -84,10 +78,10 @@ impl AppWindow {
     pub fn Presenter(&self) -> ::windows::core::Result<AppWindowPresenter> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Presenter)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<AppWindowPresenter>(result__)
         }
@@ -96,10 +90,10 @@ impl AppWindow {
     pub fn Size(&self) -> ::windows::core::Result<::windows::Graphics::SizeInt32> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Graphics::SizeInt32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Graphics::SizeInt32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Graphics::SizeInt32>(result__)
         }
@@ -108,11 +102,12 @@ impl AppWindow {
     pub fn Title(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Title)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -125,7 +120,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTitle)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -135,10 +130,10 @@ impl AppWindow {
     pub fn TitleBar(&self) -> ::windows::core::Result<AppWindowTitleBar> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TitleBar)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<AppWindowTitleBar>(result__)
         }
@@ -147,15 +142,20 @@ impl AppWindow {
     pub fn Destroy(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Destroy)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Destroy)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Hide(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Hide)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Hide)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
@@ -166,7 +166,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Move)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 position.into_param().abi(),
             )
             .ok()
@@ -183,7 +183,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).MoveAndResize)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 rect.into_param().abi(),
             )
             .ok()
@@ -202,7 +202,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).MoveAndResizeRelativeToDisplayArea)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 rect.into_param().abi(),
                 displayarea.into_param().abi(),
             )
@@ -217,7 +217,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Resize)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 size.into_param().abi(),
             )
             .ok()
@@ -231,7 +231,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIcon)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 iconpath.into_param().abi(),
             )
             .ok()
@@ -245,7 +245,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIconWithIconId)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 iconid.into_param().abi(),
             )
             .ok()
@@ -259,7 +259,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPresenter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 appwindowpresenter.into_param().abi(),
             )
             .ok()
@@ -273,7 +273,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPresenterByKind)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 appwindowpresenterkind,
             )
             .ok()
@@ -283,7 +283,10 @@ impl AppWindow {
     pub fn Show(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Show)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Show)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
@@ -291,7 +294,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ShowWithActivation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 activatewindow,
             )
             .ok()
@@ -310,11 +313,12 @@ impl AppWindow {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Changed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -330,7 +334,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -349,11 +353,12 @@ impl AppWindow {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Closing)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -369,7 +374,7 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveClosing)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -388,11 +393,12 @@ impl AppWindow {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Destroying)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -408,8 +414,81 @@ impl AppWindow {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDestroying)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn ClientSize(&self) -> ::windows::core::Result<::windows::Graphics::SizeInt32> {
+        let this = &::windows::core::Interface::cast::<IAppWindow2>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Graphics::SizeInt32>::zeroed();
+            (::windows::core::Interface::vtable(this).ClientSize)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Graphics::SizeInt32>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn MoveInZOrderAtBottom(&self) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IAppWindow2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).MoveInZOrderAtBottom)(
+                ::windows::core::Interface::as_raw(this),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn MoveInZOrderAtTop(&self) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IAppWindow2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).MoveInZOrderAtTop)(
+                ::windows::core::Interface::as_raw(this),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn MoveInZOrderBelow<'a, Param0: ::windows::core::IntoParam<'a, super::WindowId>>(
+        &self,
+        windowid: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IAppWindow2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).MoveInZOrderBelow)(
+                ::windows::core::Interface::as_raw(this),
+                windowid.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn ResizeClient<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Graphics::SizeInt32>,
+    >(
+        &self,
+        size: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IAppWindow2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).ResizeClient)(
+                ::windows::core::Interface::as_raw(this),
+                size.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn ShowOnceWithRequestedStartupState(&self) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IAppWindow2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).ShowOnceWithRequestedStartupState)(
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -417,10 +496,10 @@ impl AppWindow {
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Create() -> ::windows::core::Result<AppWindow> {
         Self::IAppWindowStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Create)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<AppWindow>(result__)
         })
@@ -430,11 +509,11 @@ impl AppWindow {
         appwindowpresenter: Param0,
     ) -> ::windows::core::Result<AppWindow> {
         Self::IAppWindowStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateWithPresenter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 appwindowpresenter.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<AppWindow>(result__)
         })
@@ -449,12 +528,12 @@ impl AppWindow {
         ownerwindowid: Param1,
     ) -> ::windows::core::Result<AppWindow> {
         Self::IAppWindowStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateWithPresenterAndOwner)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 appwindowpresenter.into_param().abi(),
                 ownerwindowid.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<AppWindow>(result__)
         })
@@ -464,11 +543,11 @@ impl AppWindow {
         windowid: Param0,
     ) -> ::windows::core::Result<AppWindow> {
         Self::IAppWindowStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetFromWindowId)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 windowid.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<AppWindow>(result__)
         })
@@ -564,10 +643,10 @@ impl AppWindowChangedEventArgs {
     pub fn DidPositionChange(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).DidPositionChange)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -576,10 +655,10 @@ impl AppWindowChangedEventArgs {
     pub fn DidPresenterChange(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).DidPresenterChange)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -588,10 +667,10 @@ impl AppWindowChangedEventArgs {
     pub fn DidSizeChange(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).DidSizeChange)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -600,12 +679,60 @@ impl AppWindowChangedEventArgs {
     pub fn DidVisibilityChange(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).DidVisibilityChange)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn DidZOrderChange(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<IAppWindowChangedEventArgs2>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).DidZOrderChange)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn IsZOrderAtBottom(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<IAppWindowChangedEventArgs2>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).IsZOrderAtBottom)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn IsZOrderAtTop(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<IAppWindowChangedEventArgs2>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).IsZOrderAtTop)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn ZOrderBelowWindowId(&self) -> ::windows::core::Result<super::WindowId> {
+        let this = &::windows::core::Interface::cast::<IAppWindowChangedEventArgs2>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<super::WindowId>::zeroed();
+            (::windows::core::Interface::vtable(this).ZOrderBelowWindowId)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<super::WindowId>(result__)
         }
     }
 }
@@ -698,10 +825,10 @@ impl AppWindowClosingEventArgs {
     pub fn Cancel(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Cancel)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -711,7 +838,7 @@ impl AppWindowClosingEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCancel)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -807,10 +934,10 @@ impl AppWindowPresenter {
     pub fn Kind(&self) -> ::windows::core::Result<AppWindowPresenterKind> {
         let this = self;
         unsafe {
-            let mut result__: AppWindowPresenterKind = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<AppWindowPresenterKind>::zeroed();
             (::windows::core::Interface::vtable(this).Kind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<AppWindowPresenterKind>(result__)
         }
@@ -940,10 +1067,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BackgroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -959,7 +1086,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBackgroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -971,10 +1098,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ButtonBackgroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -990,7 +1117,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetButtonBackgroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1002,10 +1129,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ButtonForegroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -1021,7 +1148,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetButtonForegroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1033,10 +1160,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ButtonHoverBackgroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -1052,7 +1179,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetButtonHoverBackgroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1064,10 +1191,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ButtonHoverForegroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -1083,7 +1210,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetButtonHoverForegroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1095,10 +1222,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ButtonInactiveBackgroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -1114,7 +1241,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetButtonInactiveBackgroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1126,10 +1253,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ButtonInactiveForegroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -1145,7 +1272,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetButtonInactiveForegroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1157,10 +1284,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ButtonPressedBackgroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -1176,7 +1303,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetButtonPressedBackgroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1188,10 +1315,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ButtonPressedForegroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -1207,7 +1334,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetButtonPressedForegroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1217,10 +1344,10 @@ impl AppWindowTitleBar {
     pub fn ExtendsContentIntoTitleBar(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ExtendsContentIntoTitleBar)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1230,7 +1357,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetExtendsContentIntoTitleBar)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1242,10 +1369,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ForegroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -1261,7 +1388,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetForegroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1271,10 +1398,10 @@ impl AppWindowTitleBar {
     pub fn Height(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Height)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1283,10 +1410,10 @@ impl AppWindowTitleBar {
     pub fn IconShowOptions(&self) -> ::windows::core::Result<IconShowOptions> {
         let this = self;
         unsafe {
-            let mut result__: IconShowOptions = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<IconShowOptions>::zeroed();
             (::windows::core::Interface::vtable(this).IconShowOptions)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IconShowOptions>(result__)
         }
@@ -1296,7 +1423,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIconShowOptions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1308,10 +1435,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).InactiveBackgroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -1327,7 +1454,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetInactiveBackgroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1339,10 +1466,10 @@ impl AppWindowTitleBar {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).InactiveForegroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -1358,7 +1485,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetInactiveForegroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1368,10 +1495,10 @@ impl AppWindowTitleBar {
     pub fn LeftInset(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).LeftInset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1380,10 +1507,10 @@ impl AppWindowTitleBar {
     pub fn RightInset(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).RightInset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1392,9 +1519,9 @@ impl AppWindowTitleBar {
     pub fn ResetToDefault(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).ResetToDefault)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).ResetToDefault)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -1406,7 +1533,7 @@ impl AppWindowTitleBar {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDragRectangles)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.len() as u32,
                 ::core::mem::transmute(value.as_ptr()),
             )
@@ -1414,12 +1541,38 @@ impl AppWindowTitleBar {
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn PreferredHeightOption(&self) -> ::windows::core::Result<TitleBarHeightOption> {
+        let this = &::windows::core::Interface::cast::<IAppWindowTitleBar2>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<TitleBarHeightOption>::zeroed();
+            (::windows::core::Interface::vtable(this).PreferredHeightOption)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<TitleBarHeightOption>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn SetPreferredHeightOption(
+        &self,
+        value: TitleBarHeightOption,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IAppWindowTitleBar2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetPreferredHeightOption)(
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn IsCustomizationSupported() -> ::windows::core::Result<bool> {
         Self::IAppWindowTitleBarStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsCustomizationSupported)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -1520,10 +1673,10 @@ impl CompactOverlayPresenter {
     pub fn Kind(&self) -> ::windows::core::Result<AppWindowPresenterKind> {
         let this = &::windows::core::Interface::cast::<IAppWindowPresenter>(self)?;
         unsafe {
-            let mut result__: AppWindowPresenterKind = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<AppWindowPresenterKind>::zeroed();
             (::windows::core::Interface::vtable(this).Kind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<AppWindowPresenterKind>(result__)
         }
@@ -1532,10 +1685,10 @@ impl CompactOverlayPresenter {
     pub fn InitialSize(&self) -> ::windows::core::Result<CompactOverlaySize> {
         let this = self;
         unsafe {
-            let mut result__: CompactOverlaySize = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CompactOverlaySize>::zeroed();
             (::windows::core::Interface::vtable(this).InitialSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CompactOverlaySize>(result__)
         }
@@ -1545,7 +1698,7 @@ impl CompactOverlayPresenter {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetInitialSize)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1554,10 +1707,10 @@ impl CompactOverlayPresenter {
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Create() -> ::windows::core::Result<CompactOverlayPresenter> {
         Self::ICompactOverlayPresenterStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Create)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CompactOverlayPresenter>(result__)
         })
@@ -1718,10 +1871,10 @@ impl DisplayArea {
     pub fn DisplayId(&self) -> ::windows::core::Result<super::DisplayId> {
         let this = self;
         unsafe {
-            let mut result__: super::DisplayId = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<super::DisplayId>::zeroed();
             (::windows::core::Interface::vtable(this).DisplayId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::DisplayId>(result__)
         }
@@ -1730,10 +1883,10 @@ impl DisplayArea {
     pub fn IsPrimary(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsPrimary)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1742,10 +1895,10 @@ impl DisplayArea {
     pub fn OuterBounds(&self) -> ::windows::core::Result<::windows::Graphics::RectInt32> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Graphics::RectInt32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Graphics::RectInt32>::zeroed();
             (::windows::core::Interface::vtable(this).OuterBounds)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Graphics::RectInt32>(result__)
         }
@@ -1754,10 +1907,10 @@ impl DisplayArea {
     pub fn WorkArea(&self) -> ::windows::core::Result<::windows::Graphics::RectInt32> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Graphics::RectInt32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Graphics::RectInt32>::zeroed();
             (::windows::core::Interface::vtable(this).WorkArea)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Graphics::RectInt32>(result__)
         }
@@ -1765,10 +1918,10 @@ impl DisplayArea {
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Primary() -> ::windows::core::Result<DisplayArea> {
         Self::IDisplayAreaStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Primary)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DisplayArea>(result__)
         })
@@ -1776,10 +1929,10 @@ impl DisplayArea {
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn CreateWatcher() -> ::windows::core::Result<DisplayAreaWatcher> {
         Self::IDisplayAreaStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateWatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DisplayAreaWatcher>(result__)
         })
@@ -1788,10 +1941,10 @@ impl DisplayArea {
     pub fn FindAll(
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<DisplayArea>> {
         Self::IDisplayAreaStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FindAll)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<DisplayArea>>(result__)
         })
@@ -1802,12 +1955,12 @@ impl DisplayArea {
         displayareafallback: DisplayAreaFallback,
     ) -> ::windows::core::Result<DisplayArea> {
         Self::IDisplayAreaStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetFromWindowId)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 windowid.into_param().abi(),
                 displayareafallback,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DisplayArea>(result__)
         })
@@ -1821,12 +1974,12 @@ impl DisplayArea {
         displayareafallback: DisplayAreaFallback,
     ) -> ::windows::core::Result<DisplayArea> {
         Self::IDisplayAreaStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetFromPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 point.into_param().abi(),
                 displayareafallback,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DisplayArea>(result__)
         })
@@ -1840,12 +1993,12 @@ impl DisplayArea {
         displayareafallback: DisplayAreaFallback,
     ) -> ::windows::core::Result<DisplayArea> {
         Self::IDisplayAreaStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetFromRect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 rect.into_param().abi(),
                 displayareafallback,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DisplayArea>(result__)
         })
@@ -1978,10 +2131,10 @@ impl DisplayAreaWatcher {
     pub fn Status(&self) -> ::windows::core::Result<DisplayAreaWatcherStatus> {
         let this = self;
         unsafe {
-            let mut result__: DisplayAreaWatcherStatus = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<DisplayAreaWatcherStatus>::zeroed();
             (::windows::core::Interface::vtable(this).Status)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DisplayAreaWatcherStatus>(result__)
         }
@@ -1990,14 +2143,20 @@ impl DisplayAreaWatcher {
     pub fn Start(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Start)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Start)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Stop(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Stop)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Stop)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
@@ -2013,11 +2172,12 @@ impl DisplayAreaWatcher {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Added)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -2033,7 +2193,7 @@ impl DisplayAreaWatcher {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAdded)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2055,11 +2215,12 @@ impl DisplayAreaWatcher {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).EnumerationCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -2075,7 +2236,7 @@ impl DisplayAreaWatcher {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveEnumerationCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2094,11 +2255,12 @@ impl DisplayAreaWatcher {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Removed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -2114,7 +2276,7 @@ impl DisplayAreaWatcher {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveRemoved)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2136,11 +2298,12 @@ impl DisplayAreaWatcher {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Stopped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -2156,7 +2319,7 @@ impl DisplayAreaWatcher {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveStopped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2175,11 +2338,12 @@ impl DisplayAreaWatcher {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Updated)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -2195,7 +2359,7 @@ impl DisplayAreaWatcher {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveUpdated)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2326,10 +2490,10 @@ impl FullScreenPresenter {
     pub fn Kind(&self) -> ::windows::core::Result<AppWindowPresenterKind> {
         let this = &::windows::core::Interface::cast::<IAppWindowPresenter>(self)?;
         unsafe {
-            let mut result__: AppWindowPresenterKind = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<AppWindowPresenterKind>::zeroed();
             (::windows::core::Interface::vtable(this).Kind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<AppWindowPresenterKind>(result__)
         }
@@ -2337,10 +2501,10 @@ impl FullScreenPresenter {
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Create() -> ::windows::core::Result<FullScreenPresenter> {
         Self::IFullScreenPresenterStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Create)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FullScreenPresenter>(result__)
         })
@@ -2464,7 +2628,7 @@ unsafe impl ::windows::core::Interface for IAppWindow {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindow_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Id: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut super::WindowId,
@@ -2581,6 +2745,37 @@ pub struct IAppWindow_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IAppWindow2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IAppWindow2 {
+    type Vtable = IAppWindow2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x6cd41292_794c_5cac_8961_210d012c6ebc);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IAppWindow2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub ClientSize: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::Graphics::SizeInt32,
+    ) -> ::windows::core::HRESULT,
+    pub MoveInZOrderAtBottom:
+        unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
+    pub MoveInZOrderAtTop:
+        unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
+    pub MoveInZOrderBelow: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        windowid: super::WindowId,
+    ) -> ::windows::core::HRESULT,
+    pub ResizeClient: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        size: ::windows::Graphics::SizeInt32,
+    ) -> ::windows::core::HRESULT,
+    pub ShowOnceWithRequestedStartupState:
+        unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IAppWindowChangedEventArgs(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IAppWindowChangedEventArgs {
     type Vtable = IAppWindowChangedEventArgs_Vtbl;
@@ -2590,7 +2785,7 @@ unsafe impl ::windows::core::Interface for IAppWindowChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DidPositionChange: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -2610,6 +2805,35 @@ pub struct IAppWindowChangedEventArgs_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IAppWindowChangedEventArgs2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IAppWindowChangedEventArgs2 {
+    type Vtable = IAppWindowChangedEventArgs2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xa773ab4c_a5ec_50e8_98ac_247fe6cd4227);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IAppWindowChangedEventArgs2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub DidZOrderChange: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub IsZOrderAtBottom: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub IsZOrderAtTop: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub ZOrderBelowWindowId: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut super::WindowId,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IAppWindowClosingEventArgs(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IAppWindowClosingEventArgs {
     type Vtable = IAppWindowClosingEventArgs_Vtbl;
@@ -2619,7 +2843,7 @@ unsafe impl ::windows::core::Interface for IAppWindowClosingEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowClosingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Cancel: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -2640,7 +2864,7 @@ unsafe impl ::windows::core::Interface for IAppWindowPresenter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowPresenter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Kind: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut AppWindowPresenterKind,
@@ -2657,7 +2881,7 @@ unsafe impl ::windows::core::Interface for IAppWindowPresenterFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowPresenterFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2670,7 +2894,7 @@ unsafe impl ::windows::core::Interface for IAppWindowStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2703,7 +2927,7 @@ unsafe impl ::windows::core::Interface for IAppWindowTitleBar {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowTitleBar_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub BackgroundColor: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2840,6 +3064,27 @@ pub struct IAppWindowTitleBar_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IAppWindowTitleBar2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IAppWindowTitleBar2 {
+    type Vtable = IAppWindowTitleBar2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x86faed38_748a_5b4b_9ccf_3ba0496c9041);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IAppWindowTitleBar2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub PreferredHeightOption: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut TitleBarHeightOption,
+    ) -> ::windows::core::HRESULT,
+    pub SetPreferredHeightOption: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: TitleBarHeightOption,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IAppWindowTitleBarStatics(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IAppWindowTitleBarStatics {
     type Vtable = IAppWindowTitleBarStatics_Vtbl;
@@ -2849,7 +3094,7 @@ unsafe impl ::windows::core::Interface for IAppWindowTitleBarStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAppWindowTitleBarStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsCustomizationSupported: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -2866,7 +3111,7 @@ unsafe impl ::windows::core::Interface for ICompactOverlayPresenter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompactOverlayPresenter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub InitialSize: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut CompactOverlaySize,
@@ -2887,7 +3132,7 @@ unsafe impl ::windows::core::Interface for ICompactOverlayPresenterStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompactOverlayPresenterStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2904,7 +3149,7 @@ unsafe impl ::windows::core::Interface for IDisplayArea {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDisplayArea_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DisplayId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut super::DisplayId,
@@ -2933,7 +3178,7 @@ unsafe impl ::windows::core::Interface for IDisplayAreaStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDisplayAreaStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Primary: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2976,7 +3221,7 @@ unsafe impl ::windows::core::Interface for IDisplayAreaWatcher {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDisplayAreaWatcher_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Status: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut DisplayAreaWatcherStatus,
@@ -3041,7 +3286,7 @@ unsafe impl ::windows::core::Interface for IFullScreenPresenter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFullScreenPresenter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -3054,7 +3299,7 @@ unsafe impl ::windows::core::Interface for IFullScreenPresenterStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFullScreenPresenterStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3071,7 +3316,7 @@ unsafe impl ::windows::core::Interface for IOverlappedPresenter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IOverlappedPresenter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HasBorder: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -3138,6 +3383,27 @@ pub struct IOverlappedPresenter_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IOverlappedPresenter2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IOverlappedPresenter2 {
+    type Vtable = IOverlappedPresenter2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x5c6ccd93_4244_5cd2_b355_ed5ea34df730);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IOverlappedPresenter2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub MinimizeWithActivation: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        activatewindow: bool,
+    ) -> ::windows::core::HRESULT,
+    pub RestoreWithActivation: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        activatewindow: bool,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IOverlappedPresenterStatics(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IOverlappedPresenterStatics {
     type Vtable = IOverlappedPresenterStatics_Vtbl;
@@ -3147,7 +3413,7 @@ unsafe impl ::windows::core::Interface for IOverlappedPresenterStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IOverlappedPresenterStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Create: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -3163,6 +3429,23 @@ pub struct IOverlappedPresenterStatics_Vtbl {
     pub CreateForToolWindow: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IOverlappedPresenterStatics2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IOverlappedPresenterStatics2 {
+    type Vtable = IOverlappedPresenterStatics2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xed5c4f92_32f4_5d15_80d0_b2a5efa04d39);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IOverlappedPresenterStatics2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub RequestedStartupState: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut OverlappedPresenterState,
     ) -> ::windows::core::HRESULT,
 }
 #[doc = "*Required features: `\"UI_Windowing\"`*"]
@@ -3209,10 +3492,10 @@ impl OverlappedPresenter {
     pub fn Kind(&self) -> ::windows::core::Result<AppWindowPresenterKind> {
         let this = &::windows::core::Interface::cast::<IAppWindowPresenter>(self)?;
         unsafe {
-            let mut result__: AppWindowPresenterKind = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<AppWindowPresenterKind>::zeroed();
             (::windows::core::Interface::vtable(this).Kind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<AppWindowPresenterKind>(result__)
         }
@@ -3221,10 +3504,10 @@ impl OverlappedPresenter {
     pub fn HasBorder(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).HasBorder)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3233,10 +3516,10 @@ impl OverlappedPresenter {
     pub fn HasTitleBar(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).HasTitleBar)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3245,10 +3528,10 @@ impl OverlappedPresenter {
     pub fn IsAlwaysOnTop(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsAlwaysOnTop)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3258,7 +3541,7 @@ impl OverlappedPresenter {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsAlwaysOnTop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3268,10 +3551,10 @@ impl OverlappedPresenter {
     pub fn IsMaximizable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsMaximizable)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3281,7 +3564,7 @@ impl OverlappedPresenter {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsMaximizable)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3291,10 +3574,10 @@ impl OverlappedPresenter {
     pub fn IsMinimizable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsMinimizable)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3304,7 +3587,7 @@ impl OverlappedPresenter {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsMinimizable)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3314,10 +3597,10 @@ impl OverlappedPresenter {
     pub fn IsModal(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsModal)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3327,7 +3610,7 @@ impl OverlappedPresenter {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsModal)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3337,10 +3620,10 @@ impl OverlappedPresenter {
     pub fn IsResizable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsResizable)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3350,7 +3633,7 @@ impl OverlappedPresenter {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsResizable)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3360,10 +3643,10 @@ impl OverlappedPresenter {
     pub fn State(&self) -> ::windows::core::Result<OverlappedPresenterState> {
         let this = self;
         unsafe {
-            let mut result__: OverlappedPresenterState = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<OverlappedPresenterState>::zeroed();
             (::windows::core::Interface::vtable(this).State)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<OverlappedPresenterState>(result__)
         }
@@ -3372,24 +3655,30 @@ impl OverlappedPresenter {
     pub fn Maximize(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Maximize)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Maximize)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Minimize(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Minimize)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Minimize)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Restore(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Restore)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Restore)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
@@ -3401,7 +3690,7 @@ impl OverlappedPresenter {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBorderAndTitleBar)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 hasborder,
                 hastitlebar,
             )
@@ -3409,12 +3698,34 @@ impl OverlappedPresenter {
         }
     }
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn MinimizeWithActivation(&self, activatewindow: bool) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IOverlappedPresenter2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).MinimizeWithActivation)(
+                ::windows::core::Interface::as_raw(this),
+                activatewindow,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn RestoreWithActivation(&self, activatewindow: bool) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<IOverlappedPresenter2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RestoreWithActivation)(
+                ::windows::core::Interface::as_raw(this),
+                activatewindow,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn Create() -> ::windows::core::Result<OverlappedPresenter> {
         Self::IOverlappedPresenterStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Create)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<OverlappedPresenter>(result__)
         })
@@ -3422,10 +3733,10 @@ impl OverlappedPresenter {
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn CreateForContextMenu() -> ::windows::core::Result<OverlappedPresenter> {
         Self::IOverlappedPresenterStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateForContextMenu)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<OverlappedPresenter>(result__)
         })
@@ -3433,10 +3744,10 @@ impl OverlappedPresenter {
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn CreateForDialog() -> ::windows::core::Result<OverlappedPresenter> {
         Self::IOverlappedPresenterStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateForDialog)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<OverlappedPresenter>(result__)
         })
@@ -3444,12 +3755,23 @@ impl OverlappedPresenter {
     #[doc = "*Required features: `\"UI_Windowing\"`*"]
     pub fn CreateForToolWindow() -> ::windows::core::Result<OverlappedPresenter> {
         Self::IOverlappedPresenterStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateForToolWindow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<OverlappedPresenter>(result__)
+        })
+    }
+    #[doc = "*Required features: `\"UI_Windowing\"`*"]
+    pub fn RequestedStartupState() -> ::windows::core::Result<OverlappedPresenterState> {
+        Self::IOverlappedPresenterStatics2(|this| unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<OverlappedPresenterState>::zeroed();
+            (::windows::core::Interface::vtable(this).RequestedStartupState)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<OverlappedPresenterState>(result__)
         })
     }
     #[doc(hidden)]
@@ -3462,6 +3784,19 @@ impl OverlappedPresenter {
         static mut SHARED: ::windows::core::FactoryCache<
             OverlappedPresenter,
             IOverlappedPresenterStatics,
+        > = ::windows::core::FactoryCache::new();
+        unsafe { SHARED.call(callback) }
+    }
+    #[doc(hidden)]
+    pub fn IOverlappedPresenterStatics2<
+        R,
+        F: FnOnce(&IOverlappedPresenterStatics2) -> ::windows::core::Result<R>,
+    >(
+        callback: F,
+    ) -> ::windows::core::Result<R> {
+        static mut SHARED: ::windows::core::FactoryCache<
+            OverlappedPresenter,
+            IOverlappedPresenterStatics2,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -3593,6 +3928,44 @@ impl ::core::fmt::Debug for OverlappedPresenterState {
 unsafe impl ::windows::core::RuntimeType for OverlappedPresenterState {
     const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
         b"enum(Microsoft.UI.Windowing.OverlappedPresenterState;i4)",
+    );
+    type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
+}
+#[doc = "*Required features: `\"UI_Windowing\"`*"]
+#[repr(transparent)]
+#[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
+pub struct TitleBarHeightOption(pub i32);
+impl TitleBarHeightOption {
+    pub const Standard: Self = Self(0i32);
+    pub const Tall: Self = Self(1i32);
+}
+impl ::core::marker::Copy for TitleBarHeightOption {}
+impl ::core::clone::Clone for TitleBarHeightOption {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::default::Default for TitleBarHeightOption {
+    fn default() -> Self {
+        Self(0)
+    }
+}
+unsafe impl ::windows::core::Abi for TitleBarHeightOption {
+    type Abi = Self;
+}
+impl ::core::fmt::Debug for TitleBarHeightOption {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("TitleBarHeightOption")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for TitleBarHeightOption {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"enum(Microsoft.UI.Windowing.TitleBarHeightOption;i4)",
     );
     type DefaultType = Self;
     fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {

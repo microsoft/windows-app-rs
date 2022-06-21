@@ -1,11 +1,11 @@
 use quote::*;
 use rayon::prelude::*;
 use std::{collections::HashSet, fs::OpenOptions, io::prelude::*};
-use windows_metadata::Type;
+use windows_metadata::reader::{Type, TypeReader, TypeTree};
 
 fn main() {
     let start = std::time::Instant::now();
-    let mut output_path = std::path::PathBuf::from(windows_metadata::workspace_dir());
+    let mut output_path = std::path::PathBuf::from("");
 
     gen_bootstrap(&mut output_path);
 
@@ -13,7 +13,7 @@ fn main() {
     let _ = std::fs::remove_dir_all(&output_path);
     output_path.pop();
 
-    let reader = windows_metadata::TypeReader::get();
+    let reader = TypeReader::get();
     let root = reader.types.get_namespace("Microsoft").unwrap();
 
     let mut trees = Vec::new();
@@ -30,7 +30,7 @@ fn main() {
     println!("Elapsed: {} ms", start.elapsed().as_millis());
 }
 
-fn write_toml(output: &std::path::Path, tree: &windows_metadata::TypeTree) {
+fn write_toml(output: &std::path::Path, tree: &TypeTree) {
     let mut file = std::fs::File::create(&output).unwrap();
 
     file.write_all(
@@ -67,7 +67,7 @@ default-target = "x86_64-pc-windows-msvc"
 targets = []
 
 [dependencies.windows]
-version = "0.35.0"
+version = "0.37"
 features = [
     "alloc",
     "Foundation_Collections",
@@ -89,15 +89,15 @@ implement = ["windows/implement"]
     write_features(&mut file, tree.namespace, tree);
 }
 
-fn write_features(file: &mut std::fs::File, root: &'static str, tree: &windows_metadata::TypeTree) {
+fn write_features(file: &mut std::fs::File, root: &'static str, tree: &windows_metadata::reader::TypeTree) {
     for tree in tree.namespaces.values() {
         write_feature(file, root, tree);
         write_features(file, root, tree);
     }
 }
 
-fn write_feature(file: &mut std::fs::File, root: &'static str, tree: &windows_metadata::TypeTree) {
-    let reader = windows_metadata::TypeReader::get();
+fn write_feature(file: &mut std::fs::File, root: &'static str, tree: &windows_metadata::reader::TypeTree) {
+    let reader = TypeReader::get();
     let dependencies = tree
         .types
         .keys()
@@ -146,8 +146,8 @@ fn write_feature(file: &mut std::fs::File, root: &'static str, tree: &windows_me
 
 fn collect_subtrees<'a>(
     output: &std::path::Path,
-    tree: &'a windows_metadata::TypeTree,
-    trees: &mut Vec<&'a windows_metadata::TypeTree>,
+    tree: &'a windows_metadata::reader::TypeTree,
+    trees: &mut Vec<&'a windows_metadata::reader::TypeTree>,
 ) {
     trees.push(tree);
 
@@ -160,7 +160,7 @@ fn collect_subtrees<'a>(
     std::fs::create_dir_all(&path).unwrap();
 }
 
-fn gen_tree(output: &std::path::Path, tree: &windows_metadata::TypeTree) {
+fn gen_tree(output: &std::path::Path, tree: &TypeTree) {
     let mut path = std::path::PathBuf::from(output);
 
     path.push(tree.namespace.replace('.', "/"));

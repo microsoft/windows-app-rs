@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"MRM\"`*"]
 #[inline]
 pub unsafe fn MrmAllocateBuffer(size: usize) -> *mut ::core::ffi::c_void {
@@ -71,10 +64,10 @@ pub unsafe fn MrmCreateResourceContext(
                 resourcecontext: *mut *mut MrmContextHandle__,
             ) -> ::windows::core::HRESULT;
         }
-        let mut result__: *mut MrmContextHandle__ = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<*mut MrmContextHandle__>::zeroed();
         MrmCreateResourceContext(
             ::core::mem::transmute(resourcemanager),
-            ::core::mem::transmute(&mut result__),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<*mut MrmContextHandle__>(result__)
     }
@@ -98,10 +91,10 @@ pub unsafe fn MrmCreateResourceManager<
                 resourcemanager: *mut *mut MrmManagerHandle__,
             ) -> ::windows::core::HRESULT;
         }
-        let mut result__: *mut MrmManagerHandle__ = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<*mut MrmManagerHandle__>::zeroed();
         MrmCreateResourceManager(
             prifilename.into_param().abi(),
-            ::core::mem::transmute(&mut result__),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<*mut MrmManagerHandle__>(result__)
     }
@@ -215,12 +208,12 @@ pub unsafe fn MrmGetChildResourceMap<
                 childresourcemap: *mut *mut MrmMapHandle__,
             ) -> ::windows::core::HRESULT;
         }
-        let mut result__: *mut MrmMapHandle__ = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<*mut MrmMapHandle__>::zeroed();
         MrmGetChildResourceMap(
             ::core::mem::transmute(resourcemanager),
             ::core::mem::transmute(resourcemap),
             childresourcemapname.into_param().abi(),
-            ::core::mem::transmute(&mut result__),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<*mut MrmMapHandle__>(result__)
     }
@@ -244,10 +237,10 @@ pub unsafe fn MrmGetFilePathFromName<
                 filepath: *mut ::windows::core::PWSTR,
             ) -> ::windows::core::HRESULT;
         }
-        let mut result__: ::windows::core::PWSTR = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::PWSTR>::zeroed();
         MrmGetFilePathFromName(
             filename.into_param().abi(),
-            ::core::mem::transmute(&mut result__),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<::windows::core::PWSTR>(result__)
     }
@@ -273,11 +266,11 @@ pub unsafe fn MrmGetQualifier<
                 qualifiervalue: *mut ::windows::core::PWSTR,
             ) -> ::windows::core::HRESULT;
         }
-        let mut result__: ::windows::core::PWSTR = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::PWSTR>::zeroed();
         MrmGetQualifier(
             ::core::mem::transmute(resourcecontext),
             qualifiername.into_param().abi(),
-            ::core::mem::transmute(&mut result__),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<::windows::core::PWSTR>(result__)
     }
@@ -300,11 +293,11 @@ pub unsafe fn MrmGetResourceCount(
                 count: *mut u32,
             ) -> ::windows::core::HRESULT;
         }
-        let mut result__: u32 = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
         MrmGetResourceCount(
             ::core::mem::transmute(resourcemanager),
             ::core::mem::transmute(resourcemap),
-            ::core::mem::transmute(&mut result__),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<u32>(result__)
     }
@@ -334,13 +327,13 @@ pub unsafe fn MrmLoadEmbeddedResource<
                 data: *mut MrmResourceData,
             ) -> ::windows::core::HRESULT;
         }
-        let mut result__: MrmResourceData = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<MrmResourceData>::zeroed();
         MrmLoadEmbeddedResource(
             ::core::mem::transmute(resourcemanager),
             ::core::mem::transmute(resourcecontext),
             ::core::mem::transmute(resourcemap),
             resourceid.into_param().abi(),
-            ::core::mem::transmute(&mut result__),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<MrmResourceData>(result__)
     }
@@ -368,12 +361,12 @@ pub unsafe fn MrmLoadEmbeddedResourceFromResourceUri<
                 data: *mut MrmResourceData,
             ) -> ::windows::core::HRESULT;
         }
-        let mut result__: MrmResourceData = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<MrmResourceData>::zeroed();
         MrmLoadEmbeddedResourceFromResourceUri(
             ::core::mem::transmute(resourcemanager),
             ::core::mem::transmute(resourcecontext),
             resourceuri.into_param().abi(),
-            ::core::mem::transmute(&mut result__),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<MrmResourceData>(result__)
     }
@@ -628,13 +621,13 @@ pub unsafe fn MrmLoadStringResource<
                 resourcestring: *mut ::windows::core::PWSTR,
             ) -> ::windows::core::HRESULT;
         }
-        let mut result__: ::windows::core::PWSTR = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::PWSTR>::zeroed();
         MrmLoadStringResource(
             ::core::mem::transmute(resourcemanager),
             ::core::mem::transmute(resourcecontext),
             ::core::mem::transmute(resourcemap),
             resourceid.into_param().abi(),
-            ::core::mem::transmute(&mut result__),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<::windows::core::PWSTR>(result__)
     }
@@ -662,12 +655,12 @@ pub unsafe fn MrmLoadStringResourceFromResourceUri<
                 resourcestring: *mut ::windows::core::PWSTR,
             ) -> ::windows::core::HRESULT;
         }
-        let mut result__: ::windows::core::PWSTR = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::PWSTR>::zeroed();
         MrmLoadStringResourceFromResourceUri(
             ::core::mem::transmute(resourcemanager),
             ::core::mem::transmute(resourcecontext),
             resourceuri.into_param().abi(),
-            ::core::mem::transmute(&mut result__),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<::windows::core::PWSTR>(result__)
     }

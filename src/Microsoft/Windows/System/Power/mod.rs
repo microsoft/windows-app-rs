@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"Windows_System_Power\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
@@ -170,7 +163,7 @@ unsafe impl ::windows::core::Interface for IPowerManagerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPowerManagerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EnergySaverStatus: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut EnergySaverStatus,
@@ -314,16 +307,33 @@ pub struct IPowerManagerStatics_Vtbl {
     )
         -> ::windows::core::HRESULT,
 }
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IPowerManagerStatics2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IPowerManagerStatics2 {
+    type Vtable = IPowerManagerStatics2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x61f3cc25_65b4_5def_9c9b_990cef3b0833);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IPowerManagerStatics2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub EffectivePowerMode2: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut EffectivePowerMode,
+    ) -> ::windows::core::HRESULT,
+}
 #[doc = "*Required features: `\"Windows_System_Power\"`*"]
 pub struct PowerManager {}
 impl PowerManager {
     #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn EnergySaverStatus() -> ::windows::core::Result<EnergySaverStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: EnergySaverStatus = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<EnergySaverStatus>::zeroed();
             (::windows::core::Interface::vtable(this).EnergySaverStatus)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<EnergySaverStatus>(result__)
         })
@@ -339,11 +349,12 @@ impl PowerManager {
         handler: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).EnergySaverStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
@@ -357,7 +368,7 @@ impl PowerManager {
     ) -> ::windows::core::Result<()> {
         Self::IPowerManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RemoveEnergySaverStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -366,10 +377,10 @@ impl PowerManager {
     #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn BatteryStatus() -> ::windows::core::Result<BatteryStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: BatteryStatus = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<BatteryStatus>::zeroed();
             (::windows::core::Interface::vtable(this).BatteryStatus)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<BatteryStatus>(result__)
         })
@@ -385,11 +396,12 @@ impl PowerManager {
         handler: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).BatteryStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
@@ -403,7 +415,7 @@ impl PowerManager {
     ) -> ::windows::core::Result<()> {
         Self::IPowerManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RemoveBatteryStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -412,10 +424,10 @@ impl PowerManager {
     #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn PowerSupplyStatus() -> ::windows::core::Result<PowerSupplyStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: PowerSupplyStatus = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<PowerSupplyStatus>::zeroed();
             (::windows::core::Interface::vtable(this).PowerSupplyStatus)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<PowerSupplyStatus>(result__)
         })
@@ -431,11 +443,12 @@ impl PowerManager {
         handler: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PowerSupplyStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
@@ -449,7 +462,7 @@ impl PowerManager {
     ) -> ::windows::core::Result<()> {
         Self::IPowerManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RemovePowerSupplyStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -458,10 +471,10 @@ impl PowerManager {
     #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemainingChargePercent() -> ::windows::core::Result<i32> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).RemainingChargePercent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         })
@@ -477,11 +490,12 @@ impl PowerManager {
         handler: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).RemainingChargePercentChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
@@ -495,7 +509,7 @@ impl PowerManager {
     ) -> ::windows::core::Result<()> {
         Self::IPowerManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RemoveRemainingChargePercentChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -504,10 +518,11 @@ impl PowerManager {
     #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn RemainingDischargeTime() -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::TimeSpan = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::TimeSpan>::zeroed();
             (::windows::core::Interface::vtable(this).RemainingDischargeTime)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         })
@@ -523,11 +538,12 @@ impl PowerManager {
         handler: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).RemainingDischargeTimeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
@@ -541,7 +557,7 @@ impl PowerManager {
     ) -> ::windows::core::Result<()> {
         Self::IPowerManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RemoveRemainingDischargeTimeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -550,10 +566,10 @@ impl PowerManager {
     #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn PowerSourceKind() -> ::windows::core::Result<PowerSourceKind> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: PowerSourceKind = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<PowerSourceKind>::zeroed();
             (::windows::core::Interface::vtable(this).PowerSourceKind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<PowerSourceKind>(result__)
         })
@@ -569,11 +585,12 @@ impl PowerManager {
         handler: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PowerSourceKindChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
@@ -587,7 +604,7 @@ impl PowerManager {
     ) -> ::windows::core::Result<()> {
         Self::IPowerManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RemovePowerSourceKindChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -596,10 +613,10 @@ impl PowerManager {
     #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn DisplayStatus() -> ::windows::core::Result<DisplayStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: DisplayStatus = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<DisplayStatus>::zeroed();
             (::windows::core::Interface::vtable(this).DisplayStatus)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DisplayStatus>(result__)
         })
@@ -615,11 +632,12 @@ impl PowerManager {
         handler: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DisplayStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
@@ -633,7 +651,7 @@ impl PowerManager {
     ) -> ::windows::core::Result<()> {
         Self::IPowerManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RemoveDisplayStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -650,11 +668,12 @@ impl PowerManager {
         handler: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).SystemIdleStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
@@ -668,7 +687,7 @@ impl PowerManager {
     ) -> ::windows::core::Result<()> {
         Self::IPowerManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RemoveSystemIdleStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -678,10 +697,10 @@ impl PowerManager {
     pub fn EffectivePowerMode(
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncOperation<EffectivePowerMode>> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).EffectivePowerMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<EffectivePowerMode>>(result__)
         })
@@ -697,11 +716,12 @@ impl PowerManager {
         handler: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).EffectivePowerModeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
@@ -715,7 +735,7 @@ impl PowerManager {
     ) -> ::windows::core::Result<()> {
         Self::IPowerManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RemoveEffectivePowerModeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -724,10 +744,10 @@ impl PowerManager {
     #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn UserPresenceStatus() -> ::windows::core::Result<UserPresenceStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: UserPresenceStatus = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<UserPresenceStatus>::zeroed();
             (::windows::core::Interface::vtable(this).UserPresenceStatus)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<UserPresenceStatus>(result__)
         })
@@ -743,11 +763,12 @@ impl PowerManager {
         handler: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).UserPresenceStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
@@ -761,7 +782,7 @@ impl PowerManager {
     ) -> ::windows::core::Result<()> {
         Self::IPowerManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RemoveUserPresenceStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -770,10 +791,10 @@ impl PowerManager {
     #[doc = "*Required features: `\"Windows_System_Power\"`*"]
     pub fn SystemSuspendStatus() -> ::windows::core::Result<SystemSuspendStatus> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: SystemSuspendStatus = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<SystemSuspendStatus>::zeroed();
             (::windows::core::Interface::vtable(this).SystemSuspendStatus)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<SystemSuspendStatus>(result__)
         })
@@ -789,11 +810,12 @@ impl PowerManager {
         handler: Param0,
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         Self::IPowerManagerStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).SystemSuspendStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         })
@@ -807,10 +829,21 @@ impl PowerManager {
     ) -> ::windows::core::Result<()> {
         Self::IPowerManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RemoveSystemSuspendStatusChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
+        })
+    }
+    #[doc = "*Required features: `\"Windows_System_Power\"`*"]
+    pub fn EffectivePowerMode2() -> ::windows::core::Result<EffectivePowerMode> {
+        Self::IPowerManagerStatics2(|this| unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<EffectivePowerMode>::zeroed();
+            (::windows::core::Interface::vtable(this).EffectivePowerMode2)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<EffectivePowerMode>(result__)
         })
     }
     #[doc(hidden)]
@@ -821,6 +854,17 @@ impl PowerManager {
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<PowerManager, IPowerManagerStatics> =
+            ::windows::core::FactoryCache::new();
+        unsafe { SHARED.call(callback) }
+    }
+    #[doc(hidden)]
+    pub fn IPowerManagerStatics2<
+        R,
+        F: FnOnce(&IPowerManagerStatics2) -> ::windows::core::Result<R>,
+    >(
+        callback: F,
+    ) -> ::windows::core::Result<R> {
+        static mut SHARED: ::windows::core::FactoryCache<PowerManager, IPowerManagerStatics2> =
             ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }

@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
 #[repr(transparent)]
 pub struct AddPackageDependencyOptions(::windows::core::IUnknown);
@@ -14,13 +7,13 @@ impl AddPackageDependencyOptions {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AddPackageDependencyOptions,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -28,10 +21,10 @@ impl AddPackageDependencyOptions {
     pub fn Rank(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Rank)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -41,7 +34,7 @@ impl AddPackageDependencyOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRank)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -51,10 +44,10 @@ impl AddPackageDependencyOptions {
     pub fn PrependIfRankCollision(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).PrependIfRankCollision)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -64,7 +57,7 @@ impl AddPackageDependencyOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPrependIfRankCollision)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -162,13 +155,13 @@ impl CreatePackageDependencyOptions {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             CreatePackageDependencyOptions,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -178,10 +171,11 @@ impl CreatePackageDependencyOptions {
     ) -> ::windows::core::Result<PackageDependencyProcessorArchitectures> {
         let this = self;
         unsafe {
-            let mut result__: PackageDependencyProcessorArchitectures = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<PackageDependencyProcessorArchitectures>::zeroed();
             (::windows::core::Interface::vtable(this).Architectures)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<PackageDependencyProcessorArchitectures>(result__)
         }
@@ -194,7 +188,7 @@ impl CreatePackageDependencyOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetArchitectures)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -204,10 +198,10 @@ impl CreatePackageDependencyOptions {
     pub fn VerifyDependencyResolution(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).VerifyDependencyResolution)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -217,7 +211,7 @@ impl CreatePackageDependencyOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetVerifyDependencyResolution)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -229,10 +223,11 @@ impl CreatePackageDependencyOptions {
     ) -> ::windows::core::Result<PackageDependencyLifetimeArtifactKind> {
         let this = self;
         unsafe {
-            let mut result__: PackageDependencyLifetimeArtifactKind = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<PackageDependencyLifetimeArtifactKind>::zeroed();
             (::windows::core::Interface::vtable(this).LifetimeArtifactKind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<PackageDependencyLifetimeArtifactKind>(result__)
         }
@@ -245,7 +240,7 @@ impl CreatePackageDependencyOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetLifetimeArtifactKind)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -255,11 +250,12 @@ impl CreatePackageDependencyOptions {
     pub fn LifetimeArtifact(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).LifetimeArtifact)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -275,7 +271,7 @@ impl CreatePackageDependencyOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetLifetimeArtifact)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -377,7 +373,7 @@ unsafe impl ::windows::core::Interface for IAddPackageDependencyOptions {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAddPackageDependencyOptions_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Rank: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -406,7 +402,7 @@ unsafe impl ::windows::core::Interface for ICreatePackageDependencyOptions {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICreatePackageDependencyOptions_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Architectures: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut PackageDependencyProcessorArchitectures,
@@ -451,7 +447,7 @@ unsafe impl ::windows::core::Interface for IPackageDependency {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPackageDependency_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Id: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -479,7 +475,7 @@ unsafe impl ::windows::core::Interface for IPackageDependencyContext {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPackageDependencyContext_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ContextId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut PackageDependencyContextId,
@@ -506,7 +502,7 @@ unsafe impl ::windows::core::Interface for IPackageDependencyContextFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPackageDependencyContextFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         contextid: PackageDependencyContextId,
@@ -524,7 +520,7 @@ unsafe impl ::windows::core::Interface for IPackageDependencyRankStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPackageDependencyRankStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Default: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -541,7 +537,7 @@ unsafe impl ::windows::core::Interface for IPackageDependencyStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPackageDependencyStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetFromId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         id: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -585,11 +581,12 @@ impl PackageDependency {
     pub fn Id(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Id)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -598,18 +595,20 @@ impl PackageDependency {
     pub fn Delete(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Delete)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Delete)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Add(&self) -> ::windows::core::Result<PackageDependencyContext> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Add)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<PackageDependencyContext>(result__)
         }
@@ -621,11 +620,11 @@ impl PackageDependency {
     ) -> ::windows::core::Result<PackageDependencyContext> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Add2)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PackageDependencyContext>(result__)
         }
@@ -635,11 +634,11 @@ impl PackageDependency {
         id: Param0,
     ) -> ::windows::core::Result<PackageDependency> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetFromId)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 id.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PackageDependency>(result__)
         })
@@ -652,11 +651,11 @@ impl PackageDependency {
         id: Param0,
     ) -> ::windows::core::Result<PackageDependency> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetFromIdForSystem)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 id.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PackageDependency>(result__)
         })
@@ -671,12 +670,12 @@ impl PackageDependency {
         minversion: Param1,
     ) -> ::windows::core::Result<PackageDependency> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Create)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 packagefamilyname.into_param().abi(),
                 minversion.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PackageDependency>(result__)
         })
@@ -693,13 +692,13 @@ impl PackageDependency {
         options: Param2,
     ) -> ::windows::core::Result<PackageDependency> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Create2)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 packagefamilyname.into_param().abi(),
                 minversion.into_param().abi(),
                 options.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PackageDependency>(result__)
         })
@@ -716,13 +715,13 @@ impl PackageDependency {
         options: Param2,
     ) -> ::windows::core::Result<PackageDependency> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateForSystem)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 packagefamilyname.into_param().abi(),
                 minversion.into_param().abi(),
                 options.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PackageDependency>(result__)
         })
@@ -730,10 +729,10 @@ impl PackageDependency {
     #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn GenerationId() -> ::windows::core::Result<u32> {
         Self::IPackageDependencyStatics(|this| unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).GenerationId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         })
@@ -833,10 +832,10 @@ impl PackageDependencyContext {
     pub fn ContextId(&self) -> ::windows::core::Result<PackageDependencyContextId> {
         let this = self;
         unsafe {
-            let mut result__: PackageDependencyContextId = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<PackageDependencyContextId>::zeroed();
             (::windows::core::Interface::vtable(this).ContextId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<PackageDependencyContextId>(result__)
         }
@@ -845,11 +844,12 @@ impl PackageDependencyContext {
     pub fn PackageDependencyId(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).PackageDependencyId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -858,11 +858,12 @@ impl PackageDependencyContext {
     pub fn PackageFullName(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).PackageFullName)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -871,8 +872,10 @@ impl PackageDependencyContext {
     pub fn Remove(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Remove)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Remove)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
@@ -883,11 +886,11 @@ impl PackageDependencyContext {
         contextid: Param0,
     ) -> ::windows::core::Result<PackageDependencyContext> {
         Self::IPackageDependencyContextFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 contextid.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PackageDependencyContext>(result__)
         })
@@ -1145,10 +1148,10 @@ impl PackageDependencyRank {
     #[doc = "*Required features: `\"Windows_ApplicationModel_DynamicDependency\"`*"]
     pub fn Default() -> ::windows::core::Result<i32> {
         Self::IPackageDependencyRankStatics(|this| unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Default)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         })

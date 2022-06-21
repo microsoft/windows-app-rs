@@ -8,5 +8,5 @@ publish = false
 quote = "1.0"
 rayon = "1.5.1"
 serde = "1.0.136"
-windows-bindgen = "0.34"
-windows-metadata = "0.34"
+windows-bindgen = "0.37"
+windows-metadata = "0.37"

@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc(hidden)]
 #[repr(transparent)]
 pub struct IXamlControlsXamlMetaDataProvider(::windows::core::IUnknown);
@@ -16,7 +9,7 @@ unsafe impl ::windows::core::Interface for IXamlControlsXamlMetaDataProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlControlsXamlMetaDataProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -29,7 +22,7 @@ unsafe impl ::windows::core::Interface for IXamlControlsXamlMetaDataProviderStat
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlControlsXamlMetaDataProviderStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Initialize:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -44,21 +37,23 @@ impl XamlControlsXamlMetaDataProvider {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             XamlControlsXamlMetaDataProvider,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml_XamlTypeInfo\"`*"]
     pub fn Initialize() -> ::windows::core::Result<()> {
         Self::IXamlControlsXamlMetaDataProviderStatics(|this| unsafe {
-            (::windows::core::Interface::vtable(this).Initialize)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Initialize)(
+                ::windows::core::Interface::as_raw(this),
+            )
+            .ok()
         })
     }
     #[doc = "*Required features: `\"UI_Xaml_XamlTypeInfo\"`, `\"UI_Xaml_Markup\"`*"]
@@ -72,11 +67,11 @@ impl XamlControlsXamlMetaDataProvider {
     ) -> ::windows::core::Result<super::Markup::IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetXamlType)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 r#type.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Markup::IXamlType>(result__)
         }
@@ -92,11 +87,11 @@ impl XamlControlsXamlMetaDataProvider {
     ) -> ::windows::core::Result<super::Markup::IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetXamlTypeByFullName)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 fullname.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Markup::IXamlType>(result__)
         }
@@ -108,16 +103,17 @@ impl XamlControlsXamlMetaDataProvider {
     ) -> ::windows::core::Result<::windows::core::Array<super::Markup::XmlnsDefinition>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<super::Markup::XmlnsDefinition> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::core::Array<super::Markup::XmlnsDefinition>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetXmlnsDefinitions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::windows::core::Array::<super::Markup::XmlnsDefinition>::set_abi_len(
-                    &mut result__,
+                    result__.assume_init_mut(),
                 ),
-                &mut result__ as *mut _ as _,
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
     #[doc(hidden)]

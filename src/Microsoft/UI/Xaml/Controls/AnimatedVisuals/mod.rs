@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
 #[repr(transparent)]
 pub struct AnimatedAcceptVisualSource(::windows::core::IUnknown);
@@ -14,13 +7,13 @@ impl AnimatedAcceptVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedAcceptVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -36,12 +29,12 @@ impl AnimatedAcceptVisualSource {
     ) -> ::windows::core::Result<super::IAnimatedVisual> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TryCreateAnimatedVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 compositor.into_param().abi(),
                 diagnostics as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::IAnimatedVisual>(result__)
         }
@@ -54,8 +47,8 @@ impl AnimatedAcceptVisualSource {
     > {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: windows :: core :: Interface :: as_raw ( this ) , result__ . as_mut_ptr ( ) ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
@@ -71,7 +64,7 @@ impl AnimatedAcceptVisualSource {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetColorProperty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 propertyname.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -226,13 +219,13 @@ impl AnimatedBackVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedBackVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -248,12 +241,12 @@ impl AnimatedBackVisualSource {
     ) -> ::windows::core::Result<super::IAnimatedVisual> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TryCreateAnimatedVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 compositor.into_param().abi(),
                 diagnostics as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::IAnimatedVisual>(result__)
         }
@@ -266,8 +259,8 @@ impl AnimatedBackVisualSource {
     > {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: windows :: core :: Interface :: as_raw ( this ) , result__ . as_mut_ptr ( ) ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
@@ -283,7 +276,7 @@ impl AnimatedBackVisualSource {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetColorProperty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 propertyname.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -436,13 +429,13 @@ impl AnimatedChevronDownSmallVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedChevronDownSmallVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -458,12 +451,12 @@ impl AnimatedChevronDownSmallVisualSource {
     ) -> ::windows::core::Result<super::IAnimatedVisual> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TryCreateAnimatedVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 compositor.into_param().abi(),
                 diagnostics as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::IAnimatedVisual>(result__)
         }
@@ -476,8 +469,8 @@ impl AnimatedChevronDownSmallVisualSource {
     > {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: windows :: core :: Interface :: as_raw ( this ) , result__ . as_mut_ptr ( ) ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
@@ -493,7 +486,7 @@ impl AnimatedChevronDownSmallVisualSource {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetColorProperty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 propertyname.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -660,13 +653,13 @@ impl AnimatedChevronRightDownSmallVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedChevronRightDownSmallVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -682,12 +675,12 @@ impl AnimatedChevronRightDownSmallVisualSource {
     ) -> ::windows::core::Result<super::IAnimatedVisual> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TryCreateAnimatedVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 compositor.into_param().abi(),
                 diagnostics as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::IAnimatedVisual>(result__)
         }
@@ -700,8 +693,8 @@ impl AnimatedChevronRightDownSmallVisualSource {
     > {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: windows :: core :: Interface :: as_raw ( this ) , result__ . as_mut_ptr ( ) ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
@@ -717,7 +710,7 @@ impl AnimatedChevronRightDownSmallVisualSource {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetColorProperty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 propertyname.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -894,13 +887,13 @@ impl AnimatedChevronUpDownSmallVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedChevronUpDownSmallVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -916,12 +909,12 @@ impl AnimatedChevronUpDownSmallVisualSource {
     ) -> ::windows::core::Result<super::IAnimatedVisual> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TryCreateAnimatedVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 compositor.into_param().abi(),
                 diagnostics as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::IAnimatedVisual>(result__)
         }
@@ -934,8 +927,8 @@ impl AnimatedChevronUpDownSmallVisualSource {
     > {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: windows :: core :: Interface :: as_raw ( this ) , result__ . as_mut_ptr ( ) ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
@@ -951,7 +944,7 @@ impl AnimatedChevronUpDownSmallVisualSource {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetColorProperty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 propertyname.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1120,13 +1113,13 @@ impl AnimatedFindVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedFindVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -1142,12 +1135,12 @@ impl AnimatedFindVisualSource {
     ) -> ::windows::core::Result<super::IAnimatedVisual> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TryCreateAnimatedVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 compositor.into_param().abi(),
                 diagnostics as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::IAnimatedVisual>(result__)
         }
@@ -1160,8 +1153,8 @@ impl AnimatedFindVisualSource {
     > {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: windows :: core :: Interface :: as_raw ( this ) , result__ . as_mut_ptr ( ) ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
@@ -1177,7 +1170,7 @@ impl AnimatedFindVisualSource {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetColorProperty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 propertyname.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1330,13 +1323,13 @@ impl AnimatedGlobalNavigationButtonVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedGlobalNavigationButtonVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -1352,12 +1345,12 @@ impl AnimatedGlobalNavigationButtonVisualSource {
     ) -> ::windows::core::Result<super::IAnimatedVisual> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TryCreateAnimatedVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 compositor.into_param().abi(),
                 diagnostics as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::IAnimatedVisual>(result__)
         }
@@ -1370,8 +1363,8 @@ impl AnimatedGlobalNavigationButtonVisualSource {
     > {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: windows :: core :: Interface :: as_raw ( this ) , result__ . as_mut_ptr ( ) ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
@@ -1387,7 +1380,7 @@ impl AnimatedGlobalNavigationButtonVisualSource {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetColorProperty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 propertyname.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1568,13 +1561,13 @@ impl AnimatedSettingsVisualSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AnimatedSettingsVisualSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -1590,12 +1583,12 @@ impl AnimatedSettingsVisualSource {
     ) -> ::windows::core::Result<super::IAnimatedVisual> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TryCreateAnimatedVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 compositor.into_param().abi(),
                 diagnostics as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::IAnimatedVisual>(result__)
         }
@@ -1608,8 +1601,8 @@ impl AnimatedSettingsVisualSource {
     > {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
-            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: core :: mem :: transmute_copy ( this ) , & mut result__ ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            ( :: windows :: core :: Interface :: vtable ( this ) . Markers ) ( :: windows :: core :: Interface :: as_raw ( this ) , result__ . as_mut_ptr ( ) ) . from_abi :: < ::windows::Foundation::Collections:: IMapView :: < :: windows :: core :: HSTRING , f64 > > ( result__ )
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Controls_AnimatedVisuals\"`*"]
@@ -1625,7 +1618,7 @@ impl AnimatedSettingsVisualSource {
         let this = &::windows::core::Interface::cast::<super::IAnimatedVisualSource2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetColorProperty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 propertyname.into_param().abi(),
                 value.into_param().abi(),
             )
