@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
 #[repr(transparent)]
 pub struct AddPagesEventArgs(::windows::core::IUnknown);
@@ -14,13 +7,13 @@ impl AddPagesEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             AddPagesEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -30,10 +23,10 @@ impl AddPagesEventArgs {
     ) -> ::windows::core::Result<::windows::Graphics::Printing::PrintTaskOptions> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PrintTaskOptions)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Graphics::Printing::PrintTaskOptions>(result__)
         }
@@ -147,7 +140,7 @@ impl AddPagesEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -178,7 +171,7 @@ impl<
     > AddPagesEventHandlerBox<F>
 {
     const VTABLE: AddPagesEventHandler_Vtbl = AddPagesEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -188,7 +181,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<AddPagesEventHandler as ::windows::core::Interface>::IID
@@ -261,7 +254,7 @@ unsafe impl ::windows::core::RuntimeType for AddPagesEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct AddPagesEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -277,13 +270,13 @@ impl GetPreviewPageEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             GetPreviewPageEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -291,10 +284,10 @@ impl GetPreviewPageEventArgs {
     pub fn PageNumber(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).PageNumber)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -411,7 +404,7 @@ impl GetPreviewPageEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -442,7 +435,7 @@ impl<
     > GetPreviewPageEventHandlerBox<F>
 {
     const VTABLE: GetPreviewPageEventHandler_Vtbl = GetPreviewPageEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -452,7 +445,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<GetPreviewPageEventHandler as ::windows::core::Interface>::IID
@@ -525,7 +518,7 @@ unsafe impl ::windows::core::RuntimeType for GetPreviewPageEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct GetPreviewPageEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -543,7 +536,7 @@ unsafe impl ::windows::core::Interface for IAddPagesEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAddPagesEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PrintTaskOptions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -560,7 +553,7 @@ unsafe impl ::windows::core::Interface for IGetPreviewPageEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGetPreviewPageEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PageNumber: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -577,7 +570,7 @@ unsafe impl ::windows::core::Interface for IPaginateEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPaginateEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PrintTaskOptions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -598,7 +591,7 @@ unsafe impl ::windows::core::Interface for IPrintDocument {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPrintDocument_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DocumentSource: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -660,7 +653,7 @@ unsafe impl ::windows::core::Interface for IPrintDocumentFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPrintDocumentFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -679,7 +672,7 @@ unsafe impl ::windows::core::Interface for IPrintDocumentStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPrintDocumentStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DocumentSourceProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -694,13 +687,13 @@ impl PaginateEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             PaginateEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -710,10 +703,10 @@ impl PaginateEventArgs {
     ) -> ::windows::core::Result<::windows::Graphics::Printing::PrintTaskOptions> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PrintTaskOptions)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Graphics::Printing::PrintTaskOptions>(result__)
         }
@@ -722,10 +715,10 @@ impl PaginateEventArgs {
     pub fn CurrentPreviewPageNumber(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).CurrentPreviewPageNumber)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -839,7 +832,7 @@ impl PaginateEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -870,7 +863,7 @@ impl<
     > PaginateEventHandlerBox<F>
 {
     const VTABLE: PaginateEventHandler_Vtbl = PaginateEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -880,7 +873,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<PaginateEventHandler as ::windows::core::Interface>::IID
@@ -953,7 +946,7 @@ unsafe impl ::windows::core::RuntimeType for PaginateEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct PaginateEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -1009,11 +1002,11 @@ impl PrintDocument {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1031,7 +1024,7 @@ impl PrintDocument {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1046,7 +1039,7 @@ impl PrintDocument {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1059,11 +1052,11 @@ impl PrintDocument {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1078,11 +1071,11 @@ impl PrintDocument {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1099,12 +1092,12 @@ impl PrintDocument {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -1121,7 +1114,7 @@ impl PrintDocument {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1132,10 +1125,10 @@ impl PrintDocument {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -1147,10 +1140,10 @@ impl PrintDocument {
     ) -> ::windows::core::Result<super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -1161,10 +1154,10 @@ impl PrintDocument {
     ) -> ::windows::core::Result<::windows::Graphics::Printing::IPrintDocumentSource> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DocumentSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Graphics::Printing::IPrintDocumentSource>(result__)
         }
@@ -1176,11 +1169,12 @@ impl PrintDocument {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Paginate)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -1196,7 +1190,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePaginate)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1212,11 +1206,12 @@ impl PrintDocument {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).GetPreviewPage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -1232,7 +1227,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveGetPreviewPage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1245,11 +1240,12 @@ impl PrintDocument {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).AddPages)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -1265,7 +1261,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAddPages)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1279,7 +1275,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).AddPage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pagevisual.into_param().abi(),
             )
             .ok()
@@ -1290,7 +1286,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).AddPagesComplete)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -1304,7 +1300,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPreviewPageCount)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 count,
                 r#type,
             )
@@ -1320,7 +1316,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPreviewPage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pagenumber,
                 pagevisual.into_param().abi(),
             )
@@ -1332,7 +1328,7 @@ impl PrintDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).InvalidatePreview)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -1340,12 +1336,12 @@ impl PrintDocument {
     #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn new() -> ::windows::core::Result<PrintDocument> {
         Self::IPrintDocumentFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PrintDocument>(result__)
         })
@@ -1356,12 +1352,12 @@ impl PrintDocument {
     ) -> ::windows::core::Result<PrintDocument> {
         Self::IPrintDocumentFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PrintDocument>(result__)
         })
@@ -1369,10 +1365,10 @@ impl PrintDocument {
     #[doc = "*Required features: `\"UI_Xaml_Printing\"`*"]
     pub fn DocumentSourceProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IPrintDocumentStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DocumentSourceProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::DependencyProperty>(result__)
         })

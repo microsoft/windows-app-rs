@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc(hidden)]
 #[repr(transparent)]
 pub struct ISceneLightingEffect(::windows::core::IUnknown);
@@ -16,7 +9,7 @@ unsafe impl ::windows::core::Interface for ISceneLightingEffect {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISceneLightingEffect_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AmbientAmount: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f32,
@@ -69,7 +62,7 @@ unsafe impl ::windows::core::Interface for ISceneLightingEffect2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISceneLightingEffect2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ReflectanceModel: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut SceneLightingEffectReflectanceModel,
@@ -88,13 +81,13 @@ impl SceneLightingEffect {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             SceneLightingEffect,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -104,11 +97,12 @@ impl SceneLightingEffect {
             ::windows::Graphics::Effects::IGraphicsEffect,
         >(self)?;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Name)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -123,7 +117,7 @@ impl SceneLightingEffect {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetName)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
             )
             .ok()
@@ -133,10 +127,10 @@ impl SceneLightingEffect {
     pub fn AmbientAmount(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).AmbientAmount)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -146,7 +140,7 @@ impl SceneLightingEffect {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAmbientAmount)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -156,10 +150,10 @@ impl SceneLightingEffect {
     pub fn DiffuseAmount(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).DiffuseAmount)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -169,7 +163,7 @@ impl SceneLightingEffect {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDiffuseAmount)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -181,10 +175,10 @@ impl SceneLightingEffect {
     ) -> ::windows::core::Result<::windows::Graphics::Effects::IGraphicsEffectSource> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).NormalMapSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Graphics::Effects::IGraphicsEffectSource>(result__)
         }
@@ -200,7 +194,7 @@ impl SceneLightingEffect {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetNormalMapSource)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -210,10 +204,10 @@ impl SceneLightingEffect {
     pub fn SpecularAmount(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).SpecularAmount)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -223,7 +217,7 @@ impl SceneLightingEffect {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSpecularAmount)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -233,10 +227,10 @@ impl SceneLightingEffect {
     pub fn SpecularShine(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).SpecularShine)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -246,7 +240,7 @@ impl SceneLightingEffect {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSpecularShine)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -256,10 +250,11 @@ impl SceneLightingEffect {
     pub fn ReflectanceModel(&self) -> ::windows::core::Result<SceneLightingEffectReflectanceModel> {
         let this = &::windows::core::Interface::cast::<ISceneLightingEffect2>(self)?;
         unsafe {
-            let mut result__: SceneLightingEffectReflectanceModel = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<SceneLightingEffectReflectanceModel>::zeroed();
             (::windows::core::Interface::vtable(this).ReflectanceModel)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<SceneLightingEffectReflectanceModel>(result__)
         }
@@ -272,7 +267,7 @@ impl SceneLightingEffect {
         let this = &::windows::core::Interface::cast::<ISceneLightingEffect2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetReflectanceModel)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()

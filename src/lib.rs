@@ -4,8 +4,12 @@ extern crate windows;
 
 pub mod core;
 
-#[allow(unused_variables)]
+#[allow(non_snake_case)]
+#[allow(non_upper_case_globals)]
+#[allow(clippy::derivable_impls)]
 pub mod Microsoft;
 
 #[cfg(feature = "WindowsAppSdk_Foundation")]
 pub mod bootstrap;
+
+pub mod build;

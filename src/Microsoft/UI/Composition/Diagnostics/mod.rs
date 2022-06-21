@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Composition_Diagnostics\"`*"]
 #[repr(transparent)]
 pub struct CompositionDebugHeatMaps(::windows::core::IUnknown);
@@ -17,7 +10,7 @@ impl CompositionDebugHeatMaps {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Hide)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 subtree.into_param().abi(),
             )
             .ok()
@@ -31,7 +24,7 @@ impl CompositionDebugHeatMaps {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ShowMemoryUsage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 subtree.into_param().abi(),
             )
             .ok()
@@ -46,7 +39,7 @@ impl CompositionDebugHeatMaps {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ShowOverdraw)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 subtree.into_param().abi(),
                 contentkinds,
             )
@@ -61,7 +54,7 @@ impl CompositionDebugHeatMaps {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ShowRedraw)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 subtree.into_param().abi(),
             )
             .ok()
@@ -230,10 +223,10 @@ impl CompositionDebugSettings {
     pub fn HeatMaps(&self) -> ::windows::core::Result<CompositionDebugHeatMaps> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).HeatMaps)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CompositionDebugHeatMaps>(result__)
         }
@@ -243,11 +236,11 @@ impl CompositionDebugSettings {
         compositor: Param0,
     ) -> ::windows::core::Result<CompositionDebugSettings> {
         Self::ICompositionDebugSettingsStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TryGetSettings)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 compositor.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CompositionDebugSettings>(result__)
         })
@@ -358,7 +351,7 @@ unsafe impl ::windows::core::Interface for ICompositionDebugHeatMaps {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionDebugHeatMaps_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Hide: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         subtree: ::windows::core::RawPtr,
@@ -388,7 +381,7 @@ unsafe impl ::windows::core::Interface for ICompositionDebugSettings {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionDebugSettings_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HeatMaps: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -405,7 +398,7 @@ unsafe impl ::windows::core::Interface for ICompositionDebugSettingsStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositionDebugSettingsStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TryGetSettings: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         compositor: ::windows::core::RawPtr,

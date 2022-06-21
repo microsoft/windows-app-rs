@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 pub struct CoreWebView2(::windows::core::IUnknown);
@@ -13,10 +6,10 @@ impl CoreWebView2 {
     pub fn Settings(&self) -> ::windows::core::Result<CoreWebView2Settings> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Settings)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2Settings>(result__)
         }
@@ -25,11 +18,12 @@ impl CoreWebView2 {
     pub fn Source(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Source)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -38,10 +32,10 @@ impl CoreWebView2 {
     pub fn BrowserProcessId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).BrowserProcessId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -50,10 +44,10 @@ impl CoreWebView2 {
     pub fn CanGoBack(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanGoBack)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -62,10 +56,10 @@ impl CoreWebView2 {
     pub fn CanGoForward(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanGoForward)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -74,11 +68,12 @@ impl CoreWebView2 {
     pub fn DocumentTitle(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).DocumentTitle)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -87,10 +82,10 @@ impl CoreWebView2 {
     pub fn ContainsFullScreenElement(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ContainsFullScreenElement)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -111,11 +106,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).NavigationStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -131,7 +127,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveNavigationStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -153,11 +149,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ContentLoading)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -173,7 +170,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveContentLoading)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -195,11 +192,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).SourceChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -215,7 +213,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveSourceChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -234,11 +232,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).HistoryChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -254,7 +253,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveHistoryChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -276,11 +275,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).NavigationCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -296,7 +296,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveNavigationCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -318,11 +318,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).FrameNavigationStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -338,7 +339,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveFrameNavigationStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -360,11 +361,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).FrameNavigationCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -380,7 +382,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveFrameNavigationCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -402,11 +404,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ScriptDialogOpening)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -422,7 +425,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveScriptDialogOpening)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -444,11 +447,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PermissionRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -464,7 +468,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePermissionRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -486,11 +490,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ProcessFailed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -506,7 +511,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveProcessFailed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -528,11 +533,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).WebMessageReceived)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -548,7 +554,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveWebMessageReceived)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -570,11 +576,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).NewWindowRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -590,7 +597,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveNewWindowRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -609,11 +616,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DocumentTitleChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -629,7 +637,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDocumentTitleChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -648,11 +656,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ContainsFullScreenElementChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -668,7 +677,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveContainsFullScreenElementChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -690,11 +699,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).WebResourceRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -710,7 +720,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveWebResourceRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -729,11 +739,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).WindowCloseRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -749,7 +760,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveWindowCloseRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -763,7 +774,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Navigate)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 uri.into_param().abi(),
             )
             .ok()
@@ -780,7 +791,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).NavigateToString)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 htmlcontent.into_param().abi(),
             )
             .ok()
@@ -797,11 +808,11 @@ impl CoreWebView2 {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AddScriptToExecuteOnDocumentCreatedAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 javascript.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<::windows::core::HSTRING>>(result__)
         }
@@ -817,7 +828,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveScriptToExecuteOnDocumentCreated)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 id.into_param().abi(),
             )
             .ok()
@@ -834,11 +845,11 @@ impl CoreWebView2 {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ExecuteScriptAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 javascript.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<::windows::core::HSTRING>>(result__)
         }
@@ -854,12 +865,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncAction> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CapturePreviewAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 imageformat,
                 imagestream.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
         }
@@ -868,8 +879,10 @@ impl CoreWebView2 {
     pub fn Reload(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Reload)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Reload)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
@@ -883,7 +896,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).PostWebMessageAsJson)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 webmessageasjson.into_param().abi(),
             )
             .ok()
@@ -900,7 +913,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).PostWebMessageAsString)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 webmessageasstring.into_param().abi(),
             )
             .ok()
@@ -919,12 +932,12 @@ impl CoreWebView2 {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CallDevToolsProtocolMethodAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 methodname.into_param().abi(),
                 parametersasjson.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<::windows::core::HSTRING>>(result__)
         }
@@ -933,16 +946,20 @@ impl CoreWebView2 {
     pub fn GoBack(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).GoBack)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).GoBack)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GoForward(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).GoForward)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).GoForward)(
+                ::windows::core::Interface::as_raw(this),
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
@@ -955,11 +972,11 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<CoreWebView2DevToolsProtocolEventReceiver> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDevToolsProtocolEventReceiver)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 eventname.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2DevToolsProtocolEventReceiver>(result__)
         }
@@ -968,7 +985,10 @@ impl CoreWebView2 {
     pub fn Stop(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Stop)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Stop)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
@@ -984,7 +1004,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).AddHostObjectToScript)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
                 rawobject.into_param().abi(),
             )
@@ -1002,7 +1022,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveHostObjectFromScript)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
             )
             .ok()
@@ -1013,7 +1033,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).OpenDevToolsWindow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -1030,7 +1050,7 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).AddWebResourceRequestedFilter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 uri.into_param().abi(),
                 resourcecontext,
             )
@@ -1049,9 +1069,175 @@ impl CoreWebView2 {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveWebResourceRequestedFilter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 uri.into_param().abi(),
                 resourcecontext,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn BasicAuthenticationRequested<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                CoreWebView2,
+                CoreWebView2BasicAuthenticationRequestedEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_10>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).BasicAuthenticationRequested)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveBasicAuthenticationRequested<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_10>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveBasicAuthenticationRequested)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn ContextMenuRequested<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                CoreWebView2,
+                CoreWebView2ContextMenuRequestedEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_11>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).ContextMenuRequested)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveContextMenuRequested<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_11>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveContextMenuRequested)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn CallDevToolsProtocolMethodForSessionAsync<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param2: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+    >(
+        &self,
+        sessionid: Param0,
+        methodname: Param1,
+        parametersasjson: Param2,
+    ) -> ::windows::core::Result<::windows::Foundation::IAsyncOperation<::windows::core::HSTRING>>
+    {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_11>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).CallDevToolsProtocolMethodForSessionAsync)(
+                ::windows::core::Interface::as_raw(this),
+                sessionid.into_param().abi(),
+                methodname.into_param().abi(),
+                parametersasjson.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::IAsyncOperation<::windows::core::HSTRING>>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn StatusBarText(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_12>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).StatusBarText)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn StatusBarTextChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<CoreWebView2, ::windows::core::IInspectable>,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_12>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).StatusBarTextChanged)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveStatusBarTextChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_12>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveStatusBarTextChanged)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
             )
             .ok()
         }
@@ -1060,10 +1246,10 @@ impl CoreWebView2 {
     pub fn CookieManager(&self) -> ::windows::core::Result<CoreWebView2CookieManager> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CookieManager)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2CookieManager>(result__)
         }
@@ -1072,10 +1258,10 @@ impl CoreWebView2 {
     pub fn Environment(&self) -> ::windows::core::Result<CoreWebView2Environment> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Environment)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2Environment>(result__)
         }
@@ -1096,11 +1282,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_2>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).WebResourceResponseReceived)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -1116,7 +1303,7 @@ impl CoreWebView2 {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveWebResourceResponseReceived)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1138,11 +1325,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_2>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DOMContentLoaded)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -1158,7 +1346,7 @@ impl CoreWebView2 {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDOMContentLoaded)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1175,7 +1363,7 @@ impl CoreWebView2 {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).NavigateWithWebResourceRequest)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 request.into_param().abi(),
             )
             .ok()
@@ -1185,10 +1373,10 @@ impl CoreWebView2 {
     pub fn IsSuspended(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_3>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsSuspended)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1199,10 +1387,10 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncOperation<bool>> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_3>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TrySuspendAsync)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<bool>>(result__)
         }
@@ -1211,8 +1399,10 @@ impl CoreWebView2 {
     pub fn Resume(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_3>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Resume)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Resume)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
@@ -1229,7 +1419,7 @@ impl CoreWebView2 {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_3>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetVirtualHostNameToFolderMapping)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 hostname.into_param().abi(),
                 folderpath.into_param().abi(),
                 accesskind,
@@ -1248,7 +1438,7 @@ impl CoreWebView2 {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_3>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearVirtualHostNameToFolderMapping)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 hostname.into_param().abi(),
             )
             .ok()
@@ -1270,11 +1460,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_4>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).FrameCreated)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -1290,7 +1481,7 @@ impl CoreWebView2 {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_4>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveFrameCreated)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1312,11 +1503,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_4>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DownloadStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -1332,7 +1524,7 @@ impl CoreWebView2 {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_4>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDownloadStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1354,11 +1546,12 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_5>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ClientCertificateRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -1374,7 +1567,7 @@ impl CoreWebView2 {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_5>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveClientCertificateRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1385,7 +1578,7 @@ impl CoreWebView2 {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_6>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).OpenTaskManagerWindow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -1402,14 +1595,262 @@ impl CoreWebView2 {
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncOperation<bool>> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2_7>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PrintToPdfAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 resultfilepath.into_param().abi(),
                 printsettings.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<bool>>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn IsMuted(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_8>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).IsMuted)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetIsMuted(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_8>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetIsMuted)(
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn IsDocumentPlayingAudio(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_8>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).IsDocumentPlayingAudio)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn IsMutedChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<CoreWebView2, ::windows::core::IInspectable>,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_8>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).IsMutedChanged)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveIsMutedChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_8>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveIsMutedChanged)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn IsDocumentPlayingAudioChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<CoreWebView2, ::windows::core::IInspectable>,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_8>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).IsDocumentPlayingAudioChanged)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveIsDocumentPlayingAudioChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_8>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveIsDocumentPlayingAudioChanged)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn IsDefaultDownloadDialogOpen(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_9>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).IsDefaultDownloadDialogOpen)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn DefaultDownloadDialogCornerAlignment(
+        &self,
+    ) -> ::windows::core::Result<CoreWebView2DefaultDownloadDialogCornerAlignment> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_9>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                CoreWebView2DefaultDownloadDialogCornerAlignment,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).DefaultDownloadDialogCornerAlignment)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<CoreWebView2DefaultDownloadDialogCornerAlignment>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetDefaultDownloadDialogCornerAlignment(
+        &self,
+        value: CoreWebView2DefaultDownloadDialogCornerAlignment,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_9>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetDefaultDownloadDialogCornerAlignment)(
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn DefaultDownloadDialogMargin(
+        &self,
+    ) -> ::windows::core::Result<::windows::Foundation::Point> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_9>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Point>::zeroed();
+            (::windows::core::Interface::vtable(this).DefaultDownloadDialogMargin)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::Point>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetDefaultDownloadDialogMargin<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::Point>,
+    >(
+        &self,
+        value: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_9>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetDefaultDownloadDialogMargin)(
+                ::windows::core::Interface::as_raw(this),
+                value.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn IsDefaultDownloadDialogOpenChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<CoreWebView2, ::windows::core::IInspectable>,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_9>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).IsDefaultDownloadDialogOpenChanged)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveIsDefaultDownloadDialogOpenChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_9>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveIsDefaultDownloadDialogOpenChanged)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn OpenDefaultDownloadDialog(&self) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_9>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).OpenDefaultDownloadDialog)(
+                ::windows::core::Interface::as_raw(this),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn CloseDefaultDownloadDialog(&self) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2_9>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).CloseDefaultDownloadDialog)(
+                ::windows::core::Interface::as_raw(this),
+            )
+            .ok()
         }
     }
 }
@@ -1495,10 +1936,10 @@ impl CoreWebView2AcceleratorKeyPressedEventArgs {
     pub fn KeyEventKind(&self) -> ::windows::core::Result<CoreWebView2KeyEventKind> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2KeyEventKind = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2KeyEventKind>::zeroed();
             (::windows::core::Interface::vtable(this).KeyEventKind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2KeyEventKind>(result__)
         }
@@ -1507,10 +1948,10 @@ impl CoreWebView2AcceleratorKeyPressedEventArgs {
     pub fn VirtualKey(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).VirtualKey)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -1519,10 +1960,10 @@ impl CoreWebView2AcceleratorKeyPressedEventArgs {
     pub fn KeyEventLParam(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).KeyEventLParam)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1531,10 +1972,10 @@ impl CoreWebView2AcceleratorKeyPressedEventArgs {
     pub fn PhysicalKeyStatus(&self) -> ::windows::core::Result<CoreWebView2PhysicalKeyStatus> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2PhysicalKeyStatus = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2PhysicalKeyStatus>::zeroed();
             (::windows::core::Interface::vtable(this).PhysicalKeyStatus)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2PhysicalKeyStatus>(result__)
         }
@@ -1543,10 +1984,10 @@ impl CoreWebView2AcceleratorKeyPressedEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1556,7 +1997,7 @@ impl CoreWebView2AcceleratorKeyPressedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1657,6 +2098,327 @@ unsafe impl ::core::marker::Send for CoreWebView2AcceleratorKeyPressedEventArgs 
 unsafe impl ::core::marker::Sync for CoreWebView2AcceleratorKeyPressedEventArgs {}
 #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
+pub struct CoreWebView2BasicAuthenticationRequestedEventArgs(::windows::core::IUnknown);
+impl CoreWebView2BasicAuthenticationRequestedEventArgs {
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).Uri)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Challenge(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).Challenge)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Response(&self) -> ::windows::core::Result<CoreWebView2BasicAuthenticationResponse> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).Response)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<CoreWebView2BasicAuthenticationResponse>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Cancel(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).Cancel)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetCancel(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetCancel)(
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).GetDeferral)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::Deferral>(result__)
+        }
+    }
+}
+impl ::core::clone::Clone for CoreWebView2BasicAuthenticationRequestedEventArgs {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for CoreWebView2BasicAuthenticationRequestedEventArgs {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for CoreWebView2BasicAuthenticationRequestedEventArgs {}
+impl ::core::fmt::Debug for CoreWebView2BasicAuthenticationRequestedEventArgs {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CoreWebView2BasicAuthenticationRequestedEventArgs")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CoreWebView2BasicAuthenticationRequestedEventArgs {
+    const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs;{4b16330c-4ca5-555e-af21-164334405f63})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for CoreWebView2BasicAuthenticationRequestedEventArgs {
+    type Vtable = ICoreWebView2BasicAuthenticationRequestedEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        <ICoreWebView2BasicAuthenticationRequestedEventArgs as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for CoreWebView2BasicAuthenticationRequestedEventArgs {
+    const NAME: &'static str =
+        "Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationRequestedEventArgs";
+}
+impl ::core::convert::From<CoreWebView2BasicAuthenticationRequestedEventArgs>
+    for ::windows::core::IUnknown
+{
+    fn from(value: CoreWebView2BasicAuthenticationRequestedEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2BasicAuthenticationRequestedEventArgs>
+    for ::windows::core::IUnknown
+{
+    fn from(value: &CoreWebView2BasicAuthenticationRequestedEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for CoreWebView2BasicAuthenticationRequestedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for &'a CoreWebView2BasicAuthenticationRequestedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<CoreWebView2BasicAuthenticationRequestedEventArgs>
+    for ::windows::core::IInspectable
+{
+    fn from(value: CoreWebView2BasicAuthenticationRequestedEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2BasicAuthenticationRequestedEventArgs>
+    for ::windows::core::IInspectable
+{
+    fn from(value: &CoreWebView2BasicAuthenticationRequestedEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for CoreWebView2BasicAuthenticationRequestedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a CoreWebView2BasicAuthenticationRequestedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for CoreWebView2BasicAuthenticationRequestedEventArgs {}
+unsafe impl ::core::marker::Sync for CoreWebView2BasicAuthenticationRequestedEventArgs {}
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+#[repr(transparent)]
+pub struct CoreWebView2BasicAuthenticationResponse(::windows::core::IUnknown);
+impl CoreWebView2BasicAuthenticationResponse {
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn UserName(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).UserName)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetUserName<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
+        &self,
+        value: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetUserName)(
+                ::windows::core::Interface::as_raw(this),
+                value.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Password(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).Password)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetPassword<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
+        &self,
+        value: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetPassword)(
+                ::windows::core::Interface::as_raw(this),
+                value.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+}
+impl ::core::clone::Clone for CoreWebView2BasicAuthenticationResponse {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for CoreWebView2BasicAuthenticationResponse {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for CoreWebView2BasicAuthenticationResponse {}
+impl ::core::fmt::Debug for CoreWebView2BasicAuthenticationResponse {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CoreWebView2BasicAuthenticationResponse")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CoreWebView2BasicAuthenticationResponse {
+    const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse;{08df33b9-6e38-5962-9ffd-caab3c30fbc1})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for CoreWebView2BasicAuthenticationResponse {
+    type Vtable = ICoreWebView2BasicAuthenticationResponse_Vtbl;
+    const IID: ::windows::core::GUID =
+        <ICoreWebView2BasicAuthenticationResponse as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for CoreWebView2BasicAuthenticationResponse {
+    const NAME: &'static str =
+        "Microsoft.Web.WebView2.Core.CoreWebView2BasicAuthenticationResponse";
+}
+impl ::core::convert::From<CoreWebView2BasicAuthenticationResponse> for ::windows::core::IUnknown {
+    fn from(value: CoreWebView2BasicAuthenticationResponse) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2BasicAuthenticationResponse> for ::windows::core::IUnknown {
+    fn from(value: &CoreWebView2BasicAuthenticationResponse) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for CoreWebView2BasicAuthenticationResponse
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for &'a CoreWebView2BasicAuthenticationResponse
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<CoreWebView2BasicAuthenticationResponse>
+    for ::windows::core::IInspectable
+{
+    fn from(value: CoreWebView2BasicAuthenticationResponse) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2BasicAuthenticationResponse>
+    for ::windows::core::IInspectable
+{
+    fn from(value: &CoreWebView2BasicAuthenticationResponse) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for CoreWebView2BasicAuthenticationResponse
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a CoreWebView2BasicAuthenticationResponse
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for CoreWebView2BasicAuthenticationResponse {}
+unsafe impl ::core::marker::Sync for CoreWebView2BasicAuthenticationResponse {}
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+#[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2BoundsMode(pub i32);
 impl CoreWebView2BoundsMode {
@@ -1741,10 +2503,11 @@ impl CoreWebView2BrowserProcessExitedEventArgs {
     ) -> ::windows::core::Result<CoreWebView2BrowserProcessExitKind> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2BrowserProcessExitKind = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<CoreWebView2BrowserProcessExitKind>::zeroed();
             (::windows::core::Interface::vtable(this).BrowserProcessExitKind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2BrowserProcessExitKind>(result__)
         }
@@ -1753,10 +2516,10 @@ impl CoreWebView2BrowserProcessExitedEventArgs {
     pub fn BrowserProcessId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).BrowserProcessId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -1902,10 +2665,10 @@ impl CoreWebView2ClientCertificate {
     ) -> ::windows::core::Result<::windows::Security::Cryptography::Certificates::Certificate> {
         let this = &::windows::core::Interface::cast::<CoreWebView2ClientCertificate_Manual>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ToCertificate)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Security::Cryptography::Certificates::Certificate>(result__)
         }
@@ -1914,11 +2677,12 @@ impl CoreWebView2ClientCertificate {
     pub fn Subject(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Subject)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -1927,11 +2691,12 @@ impl CoreWebView2ClientCertificate {
     pub fn Issuer(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Issuer)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -1940,10 +2705,10 @@ impl CoreWebView2ClientCertificate {
     pub fn ValidFrom(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).ValidFrom)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1952,10 +2717,10 @@ impl CoreWebView2ClientCertificate {
     pub fn ValidTo(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).ValidTo)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1964,11 +2729,12 @@ impl CoreWebView2ClientCertificate {
     pub fn DerEncodedSerialNumber(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).DerEncodedSerialNumber)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -1977,11 +2743,12 @@ impl CoreWebView2ClientCertificate {
     pub fn DisplayName(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).DisplayName)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -1994,10 +2761,10 @@ impl CoreWebView2ClientCertificate {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PemEncodedIssuerCertificateChain)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<::windows::core::HSTRING>>(
                 result__,
@@ -2008,10 +2775,11 @@ impl CoreWebView2ClientCertificate {
     pub fn Kind(&self) -> ::windows::core::Result<CoreWebView2ClientCertificateKind> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2ClientCertificateKind = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<CoreWebView2ClientCertificateKind>::zeroed();
             (::windows::core::Interface::vtable(this).Kind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2ClientCertificateKind>(result__)
         }
@@ -2020,11 +2788,12 @@ impl CoreWebView2ClientCertificate {
     pub fn ToPemEncoding(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ToPemEncoding)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -2160,11 +2929,12 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
     pub fn Host(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Host)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -2173,10 +2943,10 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
     pub fn Port(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Port)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2185,10 +2955,10 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
     pub fn IsProxy(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsProxy)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2201,10 +2971,10 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AllowedCertificateAuthorities)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<::windows::core::HSTRING>>(
                 result__,
@@ -2219,10 +2989,10 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).MutuallyTrustedCertificates)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<
                 CoreWebView2ClientCertificate,
@@ -2233,10 +3003,10 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
     pub fn SelectedCertificate(&self) -> ::windows::core::Result<CoreWebView2ClientCertificate> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).SelectedCertificate)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2ClientCertificate>(result__)
         }
@@ -2252,7 +3022,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSelectedCertificate)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2262,10 +3032,10 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
     pub fn Cancel(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Cancel)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2275,7 +3045,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCancel)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -2285,10 +3055,10 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2298,7 +3068,7 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -2308,10 +3078,10 @@ impl CoreWebView2ClientCertificateRequestedEventArgs {
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDeferral)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Deferral>(result__)
         }
@@ -2420,7 +3190,7 @@ unsafe impl ::windows::core::Interface for CoreWebView2ClientCertificate_Manual 
 #[repr(C)]
 #[doc(hidden)]
 pub struct CoreWebView2ClientCertificate_Manual_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ToCertificate: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2434,10 +3204,10 @@ impl CoreWebView2CompositionController {
     pub fn RootVisualTarget(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).RootVisualTarget)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -2453,7 +3223,7 @@ impl CoreWebView2CompositionController {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRootVisualTarget)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2475,11 +3245,12 @@ impl CoreWebView2CompositionController {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).CursorChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -2495,7 +3266,7 @@ impl CoreWebView2CompositionController {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveCursorChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2515,7 +3286,7 @@ impl CoreWebView2CompositionController {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SendMouseInput)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 eventkind,
                 virtualkeys,
                 mousedata,
@@ -2533,7 +3304,7 @@ impl CoreWebView2CompositionController {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SendPointerInput)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 eventkind,
                 pointerinfo.into_param().abi(),
             )
@@ -2544,10 +3315,10 @@ impl CoreWebView2CompositionController {
     pub fn Cursor(&self) -> ::windows::core::Result<::windows::UI::Core::CoreCursor> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Cursor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreCursor>(result__)
         }
@@ -2556,10 +3327,10 @@ impl CoreWebView2CompositionController {
     pub fn IsVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsVisible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2569,7 +3340,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsVisible)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -2579,10 +3350,10 @@ impl CoreWebView2CompositionController {
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).Bounds)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
@@ -2595,7 +3366,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBounds)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2605,10 +3376,10 @@ impl CoreWebView2CompositionController {
     pub fn ZoomFactor(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).ZoomFactor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -2618,7 +3389,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetZoomFactor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -2628,10 +3399,10 @@ impl CoreWebView2CompositionController {
     pub fn ParentWindow(&self) -> ::windows::core::Result<CoreWebView2ControllerWindowReference> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ParentWindow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2ControllerWindowReference>(result__)
         }
@@ -2647,7 +3418,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetParentWindow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2657,10 +3428,10 @@ impl CoreWebView2CompositionController {
     pub fn CoreWebView2(&self) -> ::windows::core::Result<CoreWebView2> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CoreWebView2)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2>(result__)
         }
@@ -2681,11 +3452,12 @@ impl CoreWebView2CompositionController {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ZoomFactorChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -2701,7 +3473,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveZoomFactorChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2723,11 +3495,12 @@ impl CoreWebView2CompositionController {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).MoveFocusRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -2743,7 +3516,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveMoveFocusRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2765,11 +3538,12 @@ impl CoreWebView2CompositionController {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).GotFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -2785,7 +3559,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveGotFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2807,11 +3581,12 @@ impl CoreWebView2CompositionController {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).LostFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -2827,7 +3602,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveLostFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2849,11 +3624,12 @@ impl CoreWebView2CompositionController {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).AcceleratorKeyPressed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -2869,7 +3645,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAcceleratorKeyPressed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -2887,7 +3663,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBoundsAndZoomFactor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 bounds.into_param().abi(),
                 zoomfactor,
             )
@@ -2899,7 +3675,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).MoveFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 reason,
             )
             .ok()
@@ -2910,7 +3686,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).NotifyParentWindowPositionChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -2919,17 +3695,20 @@ impl CoreWebView2CompositionController {
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Close)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DefaultBackgroundColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller2>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::UI::Color>::zeroed();
             (::windows::core::Interface::vtable(this).DefaultBackgroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Color>(result__)
         }
@@ -2945,7 +3724,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDefaultBackgroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2955,10 +3734,10 @@ impl CoreWebView2CompositionController {
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).RasterizationScale)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -2968,7 +3747,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRasterizationScale)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -2978,10 +3757,10 @@ impl CoreWebView2CompositionController {
     pub fn ShouldDetectMonitorScaleChanges(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ShouldDetectMonitorScaleChanges)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2991,7 +3770,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetShouldDetectMonitorScaleChanges)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3001,10 +3780,10 @@ impl CoreWebView2CompositionController {
     pub fn BoundsMode(&self) -> ::windows::core::Result<CoreWebView2BoundsMode> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
-            let mut result__: CoreWebView2BoundsMode = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2BoundsMode>::zeroed();
             (::windows::core::Interface::vtable(this).BoundsMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2BoundsMode>(result__)
         }
@@ -3014,7 +3793,7 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBoundsMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3036,11 +3815,12 @@ impl CoreWebView2CompositionController {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).RasterizationScaleChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -3056,8 +3836,31 @@ impl CoreWebView2CompositionController {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveRasterizationScaleChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn AllowExternalDrop(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Controller4>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).AllowExternalDrop)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetAllowExternalDrop(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Controller4>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetAllowExternalDrop)(
+                ::windows::core::Interface::as_raw(this),
+                value,
             )
             .ok()
         }
@@ -3178,10 +3981,10 @@ impl CoreWebView2ContentLoadingEventArgs {
     pub fn IsErrorPage(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsErrorPage)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3190,10 +3993,10 @@ impl CoreWebView2ContentLoadingEventArgs {
     pub fn NavigationId(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
-            let mut result__: u64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u64>::zeroed();
             (::windows::core::Interface::vtable(this).NavigationId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u64>(result__)
         }
@@ -3284,16 +4087,826 @@ unsafe impl ::core::marker::Send for CoreWebView2ContentLoadingEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2ContentLoadingEventArgs {}
 #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
+pub struct CoreWebView2ContextMenuItem(::windows::core::IUnknown);
+impl CoreWebView2ContextMenuItem {
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).Name)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Label(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).Label)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn CommandId(&self) -> ::windows::core::Result<i32> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
+            (::windows::core::Interface::vtable(this).CommandId)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<i32>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn ShortcutKeyDescription(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).ShortcutKeyDescription)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Icon(
+        &self,
+    ) -> ::windows::core::Result<::windows::Storage::Streams::IRandomAccessStream> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).Icon)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Storage::Streams::IRandomAccessStream>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Kind(&self) -> ::windows::core::Result<CoreWebView2ContextMenuItemKind> {
+        let this = self;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<CoreWebView2ContextMenuItemKind>::zeroed();
+            (::windows::core::Interface::vtable(this).Kind)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<CoreWebView2ContextMenuItemKind>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn IsEnabled(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).IsEnabled)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetIsEnabled(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetIsEnabled)(
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn IsChecked(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).IsChecked)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetIsChecked(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetIsChecked)(
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Children(
+        &self,
+    ) -> ::windows::core::Result<
+        ::windows::Foundation::Collections::IVector<CoreWebView2ContextMenuItem>,
+    > {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).Children)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::Collections::IVector<CoreWebView2ContextMenuItem>>(
+                result__,
+            )
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn CustomItemSelected<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                CoreWebView2ContextMenuItem,
+                ::windows::core::IInspectable,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = self;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).CustomItemSelected)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveCustomItemSelected<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveCustomItemSelected)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+}
+impl ::core::clone::Clone for CoreWebView2ContextMenuItem {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for CoreWebView2ContextMenuItem {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for CoreWebView2ContextMenuItem {}
+impl ::core::fmt::Debug for CoreWebView2ContextMenuItem {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CoreWebView2ContextMenuItem")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CoreWebView2ContextMenuItem {
+    const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem;{2a65706f-941a-52cd-8651-a165586b0abf})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for CoreWebView2ContextMenuItem {
+    type Vtable = ICoreWebView2ContextMenuItem_Vtbl;
+    const IID: ::windows::core::GUID =
+        <ICoreWebView2ContextMenuItem as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for CoreWebView2ContextMenuItem {
+    const NAME: &'static str = "Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItem";
+}
+impl ::core::convert::From<CoreWebView2ContextMenuItem> for ::windows::core::IUnknown {
+    fn from(value: CoreWebView2ContextMenuItem) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2ContextMenuItem> for ::windows::core::IUnknown {
+    fn from(value: &CoreWebView2ContextMenuItem) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for CoreWebView2ContextMenuItem {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for &'a CoreWebView2ContextMenuItem
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<CoreWebView2ContextMenuItem> for ::windows::core::IInspectable {
+    fn from(value: CoreWebView2ContextMenuItem) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2ContextMenuItem> for ::windows::core::IInspectable {
+    fn from(value: &CoreWebView2ContextMenuItem) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for CoreWebView2ContextMenuItem
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a CoreWebView2ContextMenuItem
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for CoreWebView2ContextMenuItem {}
+unsafe impl ::core::marker::Sync for CoreWebView2ContextMenuItem {}
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+#[repr(transparent)]
+#[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
+pub struct CoreWebView2ContextMenuItemKind(pub i32);
+impl CoreWebView2ContextMenuItemKind {
+    pub const Command: Self = Self(0i32);
+    pub const CheckBox: Self = Self(1i32);
+    pub const Radio: Self = Self(2i32);
+    pub const Separator: Self = Self(3i32);
+    pub const Submenu: Self = Self(4i32);
+}
+impl ::core::marker::Copy for CoreWebView2ContextMenuItemKind {}
+impl ::core::clone::Clone for CoreWebView2ContextMenuItemKind {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::default::Default for CoreWebView2ContextMenuItemKind {
+    fn default() -> Self {
+        Self(0)
+    }
+}
+unsafe impl ::windows::core::Abi for CoreWebView2ContextMenuItemKind {
+    type Abi = Self;
+}
+impl ::core::fmt::Debug for CoreWebView2ContextMenuItemKind {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CoreWebView2ContextMenuItemKind")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CoreWebView2ContextMenuItemKind {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"enum(Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuItemKind;i4)",
+    );
+    type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
+}
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+#[repr(transparent)]
+pub struct CoreWebView2ContextMenuRequestedEventArgs(::windows::core::IUnknown);
+impl CoreWebView2ContextMenuRequestedEventArgs {
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn MenuItems(
+        &self,
+    ) -> ::windows::core::Result<
+        ::windows::Foundation::Collections::IVector<CoreWebView2ContextMenuItem>,
+    > {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).MenuItems)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::Collections::IVector<CoreWebView2ContextMenuItem>>(
+                result__,
+            )
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn ContextMenuTarget(&self) -> ::windows::core::Result<CoreWebView2ContextMenuTarget> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).ContextMenuTarget)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<CoreWebView2ContextMenuTarget>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Location(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Point>::zeroed();
+            (::windows::core::Interface::vtable(this).Location)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::Point>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SelectedCommandId(&self) -> ::windows::core::Result<i32> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
+            (::windows::core::Interface::vtable(this).SelectedCommandId)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<i32>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetSelectedCommandId(&self, value: i32) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetSelectedCommandId)(
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Handled(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).Handled)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetHandled)(
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).GetDeferral)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::Deferral>(result__)
+        }
+    }
+}
+impl ::core::clone::Clone for CoreWebView2ContextMenuRequestedEventArgs {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for CoreWebView2ContextMenuRequestedEventArgs {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for CoreWebView2ContextMenuRequestedEventArgs {}
+impl ::core::fmt::Debug for CoreWebView2ContextMenuRequestedEventArgs {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CoreWebView2ContextMenuRequestedEventArgs")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CoreWebView2ContextMenuRequestedEventArgs {
+    const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs;{d77bdd8c-9b3e-596e-ae80-320c0df4ecbc})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for CoreWebView2ContextMenuRequestedEventArgs {
+    type Vtable = ICoreWebView2ContextMenuRequestedEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        <ICoreWebView2ContextMenuRequestedEventArgs as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for CoreWebView2ContextMenuRequestedEventArgs {
+    const NAME: &'static str =
+        "Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuRequestedEventArgs";
+}
+impl ::core::convert::From<CoreWebView2ContextMenuRequestedEventArgs>
+    for ::windows::core::IUnknown
+{
+    fn from(value: CoreWebView2ContextMenuRequestedEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2ContextMenuRequestedEventArgs>
+    for ::windows::core::IUnknown
+{
+    fn from(value: &CoreWebView2ContextMenuRequestedEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for CoreWebView2ContextMenuRequestedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for &'a CoreWebView2ContextMenuRequestedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<CoreWebView2ContextMenuRequestedEventArgs>
+    for ::windows::core::IInspectable
+{
+    fn from(value: CoreWebView2ContextMenuRequestedEventArgs) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2ContextMenuRequestedEventArgs>
+    for ::windows::core::IInspectable
+{
+    fn from(value: &CoreWebView2ContextMenuRequestedEventArgs) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for CoreWebView2ContextMenuRequestedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a CoreWebView2ContextMenuRequestedEventArgs
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for CoreWebView2ContextMenuRequestedEventArgs {}
+unsafe impl ::core::marker::Sync for CoreWebView2ContextMenuRequestedEventArgs {}
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+#[repr(transparent)]
+pub struct CoreWebView2ContextMenuTarget(::windows::core::IUnknown);
+impl CoreWebView2ContextMenuTarget {
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Kind(&self) -> ::windows::core::Result<CoreWebView2ContextMenuTargetKind> {
+        let this = self;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<CoreWebView2ContextMenuTargetKind>::zeroed();
+            (::windows::core::Interface::vtable(this).Kind)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<CoreWebView2ContextMenuTargetKind>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn IsEditable(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).IsEditable)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn IsRequestedForMainFrame(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).IsRequestedForMainFrame)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn PageUri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).PageUri)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn FrameUri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).FrameUri)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn HasLinkUri(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).HasLinkUri)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn LinkUri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).LinkUri)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn HasLinkText(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).HasLinkText)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn LinkText(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).LinkText)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn HasSourceUri(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).HasSourceUri)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SourceUri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).SourceUri)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn HasSelection(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).HasSelection)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SelectionText(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).SelectionText)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+}
+impl ::core::clone::Clone for CoreWebView2ContextMenuTarget {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for CoreWebView2ContextMenuTarget {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for CoreWebView2ContextMenuTarget {}
+impl ::core::fmt::Debug for CoreWebView2ContextMenuTarget {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CoreWebView2ContextMenuTarget")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CoreWebView2ContextMenuTarget {
+    const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget;{41e24e6a-4612-5bd9-8e61-e9280615205e})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for CoreWebView2ContextMenuTarget {
+    type Vtable = ICoreWebView2ContextMenuTarget_Vtbl;
+    const IID: ::windows::core::GUID =
+        <ICoreWebView2ContextMenuTarget as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for CoreWebView2ContextMenuTarget {
+    const NAME: &'static str = "Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTarget";
+}
+impl ::core::convert::From<CoreWebView2ContextMenuTarget> for ::windows::core::IUnknown {
+    fn from(value: CoreWebView2ContextMenuTarget) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2ContextMenuTarget> for ::windows::core::IUnknown {
+    fn from(value: &CoreWebView2ContextMenuTarget) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for CoreWebView2ContextMenuTarget
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for &'a CoreWebView2ContextMenuTarget
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<CoreWebView2ContextMenuTarget> for ::windows::core::IInspectable {
+    fn from(value: CoreWebView2ContextMenuTarget) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2ContextMenuTarget> for ::windows::core::IInspectable {
+    fn from(value: &CoreWebView2ContextMenuTarget) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for CoreWebView2ContextMenuTarget
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a CoreWebView2ContextMenuTarget
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for CoreWebView2ContextMenuTarget {}
+unsafe impl ::core::marker::Sync for CoreWebView2ContextMenuTarget {}
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+#[repr(transparent)]
+#[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
+pub struct CoreWebView2ContextMenuTargetKind(pub i32);
+impl CoreWebView2ContextMenuTargetKind {
+    pub const Page: Self = Self(0i32);
+    pub const Image: Self = Self(1i32);
+    pub const SelectedText: Self = Self(2i32);
+    pub const Audio: Self = Self(3i32);
+    pub const Video: Self = Self(4i32);
+}
+impl ::core::marker::Copy for CoreWebView2ContextMenuTargetKind {}
+impl ::core::clone::Clone for CoreWebView2ContextMenuTargetKind {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::default::Default for CoreWebView2ContextMenuTargetKind {
+    fn default() -> Self {
+        Self(0)
+    }
+}
+unsafe impl ::windows::core::Abi for CoreWebView2ContextMenuTargetKind {
+    type Abi = Self;
+}
+impl ::core::fmt::Debug for CoreWebView2ContextMenuTargetKind {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CoreWebView2ContextMenuTargetKind")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CoreWebView2ContextMenuTargetKind {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"enum(Microsoft.Web.WebView2.Core.CoreWebView2ContextMenuTargetKind;i4)",
+    );
+    type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
+}
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+#[repr(transparent)]
 pub struct CoreWebView2Controller(::windows::core::IUnknown);
 impl CoreWebView2Controller {
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn IsVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsVisible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3303,7 +4916,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsVisible)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3313,10 +4926,10 @@ impl CoreWebView2Controller {
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).Bounds)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
@@ -3329,7 +4942,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBounds)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3339,10 +4952,10 @@ impl CoreWebView2Controller {
     pub fn ZoomFactor(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).ZoomFactor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -3352,7 +4965,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetZoomFactor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3362,10 +4975,10 @@ impl CoreWebView2Controller {
     pub fn ParentWindow(&self) -> ::windows::core::Result<CoreWebView2ControllerWindowReference> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ParentWindow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2ControllerWindowReference>(result__)
         }
@@ -3381,7 +4994,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetParentWindow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3391,10 +5004,10 @@ impl CoreWebView2Controller {
     pub fn CoreWebView2(&self) -> ::windows::core::Result<CoreWebView2> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CoreWebView2)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2>(result__)
         }
@@ -3415,11 +5028,12 @@ impl CoreWebView2Controller {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ZoomFactorChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -3435,7 +5049,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveZoomFactorChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3457,11 +5071,12 @@ impl CoreWebView2Controller {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).MoveFocusRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -3477,7 +5092,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveMoveFocusRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3499,11 +5114,12 @@ impl CoreWebView2Controller {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).GotFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -3519,7 +5135,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveGotFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3541,11 +5157,12 @@ impl CoreWebView2Controller {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).LostFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -3561,7 +5178,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveLostFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3583,11 +5200,12 @@ impl CoreWebView2Controller {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).AcceleratorKeyPressed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -3603,7 +5221,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAcceleratorKeyPressed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3621,7 +5239,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBoundsAndZoomFactor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 bounds.into_param().abi(),
                 zoomfactor,
             )
@@ -3633,7 +5251,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).MoveFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 reason,
             )
             .ok()
@@ -3644,7 +5262,7 @@ impl CoreWebView2Controller {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).NotifyParentWindowPositionChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -3653,17 +5271,20 @@ impl CoreWebView2Controller {
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Close)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn DefaultBackgroundColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller2>(self)?;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::UI::Color>::zeroed();
             (::windows::core::Interface::vtable(this).DefaultBackgroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Color>(result__)
         }
@@ -3679,7 +5300,7 @@ impl CoreWebView2Controller {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDefaultBackgroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3689,10 +5310,10 @@ impl CoreWebView2Controller {
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).RasterizationScale)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -3702,7 +5323,7 @@ impl CoreWebView2Controller {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRasterizationScale)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3712,10 +5333,10 @@ impl CoreWebView2Controller {
     pub fn ShouldDetectMonitorScaleChanges(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ShouldDetectMonitorScaleChanges)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3725,7 +5346,7 @@ impl CoreWebView2Controller {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetShouldDetectMonitorScaleChanges)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3735,10 +5356,10 @@ impl CoreWebView2Controller {
     pub fn BoundsMode(&self) -> ::windows::core::Result<CoreWebView2BoundsMode> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
-            let mut result__: CoreWebView2BoundsMode = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2BoundsMode>::zeroed();
             (::windows::core::Interface::vtable(this).BoundsMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2BoundsMode>(result__)
         }
@@ -3748,7 +5369,7 @@ impl CoreWebView2Controller {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBoundsMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3770,11 +5391,12 @@ impl CoreWebView2Controller {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).RasterizationScaleChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -3790,8 +5412,31 @@ impl CoreWebView2Controller {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Controller3>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveRasterizationScaleChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn AllowExternalDrop(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Controller4>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).AllowExternalDrop)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetAllowExternalDrop(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Controller4>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetAllowExternalDrop)(
+                ::windows::core::Interface::as_raw(this),
+                value,
             )
             .ok()
         }
@@ -3881,10 +5526,10 @@ impl CoreWebView2ControllerWindowReference {
     pub fn WindowHandle(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
-            let mut result__: u64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u64>::zeroed();
             (::windows::core::Interface::vtable(this).WindowHandle)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u64>(result__)
         }
@@ -3893,10 +5538,10 @@ impl CoreWebView2ControllerWindowReference {
     pub fn CoreWindow(&self) -> ::windows::core::Result<::windows::UI::Core::CoreWindow> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CoreWindow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreWindow>(result__)
         }
@@ -3906,11 +5551,11 @@ impl CoreWebView2ControllerWindowReference {
         windowhandle: u64,
     ) -> ::windows::core::Result<CoreWebView2ControllerWindowReference> {
         Self::ICoreWebView2ControllerWindowReferenceStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateFromWindowHandle)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 windowhandle,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2ControllerWindowReference>(result__)
         })
@@ -3923,11 +5568,11 @@ impl CoreWebView2ControllerWindowReference {
         corewindow: Param0,
     ) -> ::windows::core::Result<CoreWebView2ControllerWindowReference> {
         Self::ICoreWebView2ControllerWindowReferenceStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateFromCoreWindow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 corewindow.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2ControllerWindowReference>(result__)
         })
@@ -4041,11 +5686,12 @@ impl CoreWebView2Cookie {
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Name)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -4054,11 +5700,12 @@ impl CoreWebView2Cookie {
     pub fn Value(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Value)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -4071,7 +5718,7 @@ impl CoreWebView2Cookie {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4081,11 +5728,12 @@ impl CoreWebView2Cookie {
     pub fn Domain(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Domain)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -4094,11 +5742,12 @@ impl CoreWebView2Cookie {
     pub fn Path(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Path)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -4107,10 +5756,10 @@ impl CoreWebView2Cookie {
     pub fn Expires(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).Expires)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -4120,7 +5769,7 @@ impl CoreWebView2Cookie {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetExpires)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4130,10 +5779,10 @@ impl CoreWebView2Cookie {
     pub fn IsHttpOnly(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsHttpOnly)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4143,7 +5792,7 @@ impl CoreWebView2Cookie {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsHttpOnly)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4153,10 +5802,10 @@ impl CoreWebView2Cookie {
     pub fn SameSite(&self) -> ::windows::core::Result<CoreWebView2CookieSameSiteKind> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2CookieSameSiteKind = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2CookieSameSiteKind>::zeroed();
             (::windows::core::Interface::vtable(this).SameSite)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2CookieSameSiteKind>(result__)
         }
@@ -4169,7 +5818,7 @@ impl CoreWebView2Cookie {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSameSite)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4179,10 +5828,10 @@ impl CoreWebView2Cookie {
     pub fn IsSecure(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsSecure)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4192,7 +5841,7 @@ impl CoreWebView2Cookie {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsSecure)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4202,10 +5851,10 @@ impl CoreWebView2Cookie {
     pub fn IsSession(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsSession)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4303,14 +5952,14 @@ impl CoreWebView2CookieManager {
     ) -> ::windows::core::Result<CoreWebView2Cookie> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateCookie)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
                 value.into_param().abi(),
                 domain.into_param().abi(),
                 path.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2Cookie>(result__)
         }
@@ -4322,11 +5971,11 @@ impl CoreWebView2CookieManager {
     ) -> ::windows::core::Result<CoreWebView2Cookie> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CopyCookie)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 cookieparam.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2Cookie>(result__)
         }
@@ -4339,7 +5988,7 @@ impl CoreWebView2CookieManager {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).AddOrUpdateCookie)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 cookie.into_param().abi(),
             )
             .ok()
@@ -4353,7 +6002,7 @@ impl CoreWebView2CookieManager {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).DeleteCookie)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 cookie.into_param().abi(),
             )
             .ok()
@@ -4372,7 +6021,7 @@ impl CoreWebView2CookieManager {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).DeleteCookies)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
                 uri.into_param().abi(),
             )
@@ -4394,7 +6043,7 @@ impl CoreWebView2CookieManager {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).DeleteCookiesWithDomainAndPath)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
                 domain.into_param().abi(),
                 path.into_param().abi(),
@@ -4407,9 +6056,31 @@ impl CoreWebView2CookieManager {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).DeleteAllCookies)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn GetCookiesAsync<'a, Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>>(
+        &self,
+        uri: Param0,
+    ) -> ::windows::core::Result<
+        ::windows::Foundation::IAsyncOperation<
+            ::windows::Foundation::Collections::IVectorView<CoreWebView2Cookie>,
+        >,
+    > {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2CookieManager_Manual>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).GetCookiesAsync)(
+                ::windows::core::Interface::as_raw(this),
+                uri.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::IAsyncOperation<
+                ::windows::Foundation::Collections::IVectorView<CoreWebView2Cookie>,
+            >>(result__)
         }
     }
 }
@@ -4541,10 +6212,10 @@ impl CoreWebView2DOMContentLoadedEventArgs {
     pub fn NavigationId(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
-            let mut result__: u64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u64>::zeroed();
             (::windows::core::Interface::vtable(this).NavigationId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u64>(result__)
         }
@@ -4639,17 +6310,74 @@ unsafe impl ::core::marker::Send for CoreWebView2DOMContentLoadedEventArgs {}
 unsafe impl ::core::marker::Sync for CoreWebView2DOMContentLoadedEventArgs {}
 #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
+#[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
+pub struct CoreWebView2DefaultDownloadDialogCornerAlignment(pub i32);
+impl CoreWebView2DefaultDownloadDialogCornerAlignment {
+    pub const TopLeft: Self = Self(0i32);
+    pub const TopRight: Self = Self(1i32);
+    pub const BottomLeft: Self = Self(2i32);
+    pub const BottomRight: Self = Self(3i32);
+}
+impl ::core::marker::Copy for CoreWebView2DefaultDownloadDialogCornerAlignment {}
+impl ::core::clone::Clone for CoreWebView2DefaultDownloadDialogCornerAlignment {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::default::Default for CoreWebView2DefaultDownloadDialogCornerAlignment {
+    fn default() -> Self {
+        Self(0)
+    }
+}
+unsafe impl ::windows::core::Abi for CoreWebView2DefaultDownloadDialogCornerAlignment {
+    type Abi = Self;
+}
+impl ::core::fmt::Debug for CoreWebView2DefaultDownloadDialogCornerAlignment {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CoreWebView2DefaultDownloadDialogCornerAlignment")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CoreWebView2DefaultDownloadDialogCornerAlignment {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"enum(Microsoft.Web.WebView2.Core.CoreWebView2DefaultDownloadDialogCornerAlignment;i4)",
+    );
+    type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
+}
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+#[repr(transparent)]
 pub struct CoreWebView2DevToolsProtocolEventReceivedEventArgs(::windows::core::IUnknown);
 impl CoreWebView2DevToolsProtocolEventReceivedEventArgs {
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn ParameterObjectAsJson(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ParameterObjectAsJson)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SessionId(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = &::windows::core::Interface::cast::<
+            ICoreWebView2DevToolsProtocolEventReceivedEventArgs2,
+        >(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).SessionId)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -4767,11 +6495,12 @@ impl CoreWebView2DevToolsProtocolEventReceiver {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DevToolsProtocolEventReceived)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -4787,7 +6516,7 @@ impl CoreWebView2DevToolsProtocolEventReceiver {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDevToolsProtocolEventReceived)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -4960,11 +6689,12 @@ impl CoreWebView2DownloadOperation {
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Uri)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -4973,11 +6703,12 @@ impl CoreWebView2DownloadOperation {
     pub fn ContentDisposition(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ContentDisposition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -4986,11 +6717,12 @@ impl CoreWebView2DownloadOperation {
     pub fn MimeType(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).MimeType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -4999,10 +6731,10 @@ impl CoreWebView2DownloadOperation {
     pub fn TotalBytesToReceive(&self) -> ::windows::core::Result<i64> {
         let this = self;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).TotalBytesToReceive)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -5011,10 +6743,10 @@ impl CoreWebView2DownloadOperation {
     pub fn BytesReceived(&self) -> ::windows::core::Result<i64> {
         let this = self;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).BytesReceived)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -5023,11 +6755,12 @@ impl CoreWebView2DownloadOperation {
     pub fn EstimatedEndTime(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).EstimatedEndTime)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -5036,11 +6769,12 @@ impl CoreWebView2DownloadOperation {
     pub fn ResultFilePath(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ResultFilePath)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -5049,10 +6783,10 @@ impl CoreWebView2DownloadOperation {
     pub fn State(&self) -> ::windows::core::Result<CoreWebView2DownloadState> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2DownloadState = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2DownloadState>::zeroed();
             (::windows::core::Interface::vtable(this).State)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2DownloadState>(result__)
         }
@@ -5061,10 +6795,11 @@ impl CoreWebView2DownloadOperation {
     pub fn InterruptReason(&self) -> ::windows::core::Result<CoreWebView2DownloadInterruptReason> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2DownloadInterruptReason = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<CoreWebView2DownloadInterruptReason>::zeroed();
             (::windows::core::Interface::vtable(this).InterruptReason)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2DownloadInterruptReason>(result__)
         }
@@ -5073,10 +6808,10 @@ impl CoreWebView2DownloadOperation {
     pub fn CanResume(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanResume)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5097,11 +6832,12 @@ impl CoreWebView2DownloadOperation {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).BytesReceivedChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -5117,7 +6853,7 @@ impl CoreWebView2DownloadOperation {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveBytesReceivedChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -5139,11 +6875,12 @@ impl CoreWebView2DownloadOperation {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).EstimatedEndTimeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -5159,7 +6896,7 @@ impl CoreWebView2DownloadOperation {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveEstimatedEndTimeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -5181,11 +6918,12 @@ impl CoreWebView2DownloadOperation {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).StateChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -5201,7 +6939,7 @@ impl CoreWebView2DownloadOperation {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveStateChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -5211,23 +6949,30 @@ impl CoreWebView2DownloadOperation {
     pub fn Cancel(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Cancel)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Cancel)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Pause(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Pause)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Pause)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn Resume(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Resume)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Resume)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
 }
@@ -5322,10 +7067,10 @@ impl CoreWebView2DownloadStartingEventArgs {
     pub fn DownloadOperation(&self) -> ::windows::core::Result<CoreWebView2DownloadOperation> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DownloadOperation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2DownloadOperation>(result__)
         }
@@ -5334,10 +7079,10 @@ impl CoreWebView2DownloadStartingEventArgs {
     pub fn Cancel(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Cancel)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5347,7 +7092,7 @@ impl CoreWebView2DownloadStartingEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCancel)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -5357,11 +7102,12 @@ impl CoreWebView2DownloadStartingEventArgs {
     pub fn ResultFilePath(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ResultFilePath)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -5377,7 +7123,7 @@ impl CoreWebView2DownloadStartingEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetResultFilePath)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5387,10 +7133,10 @@ impl CoreWebView2DownloadStartingEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5400,7 +7146,7 @@ impl CoreWebView2DownloadStartingEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -5410,10 +7156,10 @@ impl CoreWebView2DownloadStartingEventArgs {
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDeferral)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Deferral>(result__)
         }
@@ -5553,11 +7299,12 @@ impl CoreWebView2Environment {
     pub fn BrowserVersionString(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).BrowserVersionString)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -5578,11 +7325,12 @@ impl CoreWebView2Environment {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).NewBrowserVersionAvailable)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -5598,7 +7346,7 @@ impl CoreWebView2Environment {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveNewBrowserVersionAvailable)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -5615,11 +7363,11 @@ impl CoreWebView2Environment {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateCoreWebView2ControllerAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 parentwindow.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<CoreWebView2Controller>>(result__)
         }
@@ -5639,14 +7387,14 @@ impl CoreWebView2Environment {
     ) -> ::windows::core::Result<CoreWebView2WebResourceResponse> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateWebResourceResponse)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 content.into_param().abi(),
                 statuscode,
                 reasonphrase.into_param().abi(),
                 headers.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2WebResourceResponse>(result__)
         }
@@ -5667,14 +7415,14 @@ impl CoreWebView2Environment {
     ) -> ::windows::core::Result<CoreWebView2WebResourceRequest> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Environment2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateWebResourceRequest)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 uri.into_param().abi(),
                 method.into_param().abi(),
                 postdata.into_param().abi(),
                 headers.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2WebResourceRequest>(result__)
         }
@@ -5691,11 +7439,11 @@ impl CoreWebView2Environment {
     > {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Environment3>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateCoreWebView2CompositionControllerAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 parentwindow.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<CoreWebView2CompositionController>>(
                 result__,
@@ -5708,10 +7456,10 @@ impl CoreWebView2Environment {
     ) -> ::windows::core::Result<CoreWebView2PointerInfo> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Environment3>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateCoreWebView2PointerInfo)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2PointerInfo>(result__)
         }
@@ -5732,11 +7480,12 @@ impl CoreWebView2Environment {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Environment5>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).BrowserProcessExited)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -5752,7 +7501,7 @@ impl CoreWebView2Environment {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Environment5>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveBrowserProcessExited)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -5762,12 +7511,111 @@ impl CoreWebView2Environment {
     pub fn CreatePrintSettings(&self) -> ::windows::core::Result<CoreWebView2PrintSettings> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Environment6>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreatePrintSettings)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2PrintSettings>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn UserDataFolder(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Environment7>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).UserDataFolder)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn ProcessInfosChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                CoreWebView2Environment,
+                ::windows::core::IInspectable,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Environment8>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).ProcessInfosChanged)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveProcessInfosChanged<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Environment8>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveProcessInfosChanged)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn GetProcessInfos(
+        &self,
+    ) -> ::windows::core::Result<
+        ::windows::Foundation::Collections::IVectorView<CoreWebView2ProcessInfo>,
+    > {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Environment8>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).GetProcessInfos)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::Collections::IVectorView<CoreWebView2ProcessInfo>>(
+                result__,
+            )
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn CreateContextMenuItem<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+        Param1: ::windows::core::IntoParam<'a, ::windows::Storage::Streams::IRandomAccessStream>,
+    >(
+        &self,
+        label: Param0,
+        iconstream: Param1,
+        kind: CoreWebView2ContextMenuItemKind,
+    ) -> ::windows::core::Result<CoreWebView2ContextMenuItem> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Environment9>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).CreateContextMenuItem)(
+                ::windows::core::Interface::as_raw(this),
+                label.into_param().abi(),
+                iconstream.into_param().abi(),
+                kind,
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<CoreWebView2ContextMenuItem>(result__)
         }
     }
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
@@ -5775,10 +7623,10 @@ impl CoreWebView2Environment {
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncOperation<CoreWebView2Environment>>
     {
         Self::ICoreWebView2EnvironmentStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateAsync)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<CoreWebView2Environment>>(result__)
         })
@@ -5796,13 +7644,13 @@ impl CoreWebView2Environment {
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncOperation<CoreWebView2Environment>>
     {
         Self::ICoreWebView2EnvironmentStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateWithOptionsAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 browserexecutablefolder.into_param().abi(),
                 userdatafolder.into_param().abi(),
                 options.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<CoreWebView2Environment>>(result__)
         })
@@ -5810,11 +7658,12 @@ impl CoreWebView2Environment {
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetAvailableBrowserVersionString() -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::ICoreWebView2EnvironmentStatics(|this| unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetAvailableBrowserVersionString)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
@@ -5827,12 +7676,13 @@ impl CoreWebView2Environment {
         browserexecutablefolder: Param0,
     ) -> ::windows::core::Result<::windows::core::HSTRING> {
         Self::ICoreWebView2EnvironmentStatics(|this| unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetAvailableBrowserVersionString2)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 browserexecutablefolder.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         })
@@ -5847,12 +7697,12 @@ impl CoreWebView2Environment {
         browserversionstring2: Param1,
     ) -> ::windows::core::Result<i32> {
         Self::ICoreWebView2EnvironmentStatics(|this| unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).CompareBrowserVersionString)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 browserversionstring1.into_param().abi(),
                 browserversionstring2.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         })
@@ -5957,13 +7807,13 @@ impl CoreWebView2EnvironmentOptions {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             CoreWebView2EnvironmentOptions,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -5971,11 +7821,12 @@ impl CoreWebView2EnvironmentOptions {
     pub fn AdditionalBrowserArguments(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).AdditionalBrowserArguments)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -5991,7 +7842,7 @@ impl CoreWebView2EnvironmentOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAdditionalBrowserArguments)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6001,11 +7852,12 @@ impl CoreWebView2EnvironmentOptions {
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Language)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -6018,7 +7870,7 @@ impl CoreWebView2EnvironmentOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetLanguage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6030,11 +7882,12 @@ impl CoreWebView2EnvironmentOptions {
     ) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).TargetCompatibleBrowserVersion)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -6050,7 +7903,7 @@ impl CoreWebView2EnvironmentOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTargetCompatibleBrowserVersion)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6060,10 +7913,10 @@ impl CoreWebView2EnvironmentOptions {
     pub fn AllowSingleSignOnUsingOSPrimaryAccount(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AllowSingleSignOnUsingOSPrimaryAccount)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -6076,7 +7929,30 @@ impl CoreWebView2EnvironmentOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAllowSingleSignOnUsingOSPrimaryAccount)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn ExclusiveUserDataFolderAccess(&self) -> ::windows::core::Result<bool> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2EnvironmentOptions2>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).ExclusiveUserDataFolderAccess)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetExclusiveUserDataFolderAccess(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2EnvironmentOptions2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetExclusiveUserDataFolderAccess)(
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -6174,11 +8050,12 @@ impl CoreWebView2Frame {
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Name)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -6199,11 +8076,12 @@ impl CoreWebView2Frame {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).NameChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -6219,7 +8097,7 @@ impl CoreWebView2Frame {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveNameChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6241,11 +8119,12 @@ impl CoreWebView2Frame {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Destroyed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -6261,7 +8140,7 @@ impl CoreWebView2Frame {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDestroyed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6278,7 +8157,7 @@ impl CoreWebView2Frame {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveHostObjectFromScript)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
             )
             .ok()
@@ -6288,12 +8167,324 @@ impl CoreWebView2Frame {
     pub fn IsDestroyed(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).IsDestroyed)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn NavigationStarting<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                CoreWebView2Frame,
+                CoreWebView2NavigationStartingEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).NavigationStarting)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveNavigationStarting<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveNavigationStarting)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn ContentLoading<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                CoreWebView2Frame,
+                CoreWebView2ContentLoadingEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).ContentLoading)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveContentLoading<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveContentLoading)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn NavigationCompleted<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                CoreWebView2Frame,
+                CoreWebView2NavigationCompletedEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).NavigationCompleted)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveNavigationCompleted<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveNavigationCompleted)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn DOMContentLoaded<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                CoreWebView2Frame,
+                CoreWebView2DOMContentLoadedEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).DOMContentLoaded)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveDOMContentLoaded<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveDOMContentLoaded)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn WebMessageReceived<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                CoreWebView2Frame,
+                CoreWebView2WebMessageReceivedEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).WebMessageReceived)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemoveWebMessageReceived<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemoveWebMessageReceived)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn ExecuteScriptAsync<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+    >(
+        &self,
+        javascript: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::IAsyncOperation<::windows::core::HSTRING>>
+    {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).ExecuteScriptAsync)(
+                ::windows::core::Interface::as_raw(this),
+                javascript.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::IAsyncOperation<::windows::core::HSTRING>>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn PostWebMessageAsJson<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+    >(
+        &self,
+        webmessageasjson: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).PostWebMessageAsJson)(
+                ::windows::core::Interface::as_raw(this),
+                webmessageasjson.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn PostWebMessageAsString<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+    >(
+        &self,
+        webmessageasstring: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).PostWebMessageAsString)(
+                ::windows::core::Interface::as_raw(this),
+                webmessageasstring.into_param().abi(),
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn PermissionRequested<
+        'a,
+        Param0: ::windows::core::IntoParam<
+            'a,
+            ::windows::Foundation::TypedEventHandler<
+                CoreWebView2Frame,
+                CoreWebView2PermissionRequestedEventArgs,
+            >,
+        >,
+    >(
+        &self,
+        handler: Param0,
+    ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame3>(self)?;
+        unsafe {
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
+            (::windows::core::Interface::vtable(this).PermissionRequested)(
+                ::windows::core::Interface::as_raw(this),
+                handler.into_param().abi(),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn RemovePermissionRequested<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::Foundation::EventRegistrationToken>,
+    >(
+        &self,
+        token: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Frame3>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).RemovePermissionRequested)(
+                ::windows::core::Interface::as_raw(this),
+                token.into_param().abi(),
+            )
+            .ok()
         }
     }
 }
@@ -6379,10 +8570,10 @@ impl CoreWebView2FrameCreatedEventArgs {
     pub fn Frame(&self) -> ::windows::core::Result<CoreWebView2Frame> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Frame)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2Frame>(result__)
         }
@@ -6479,11 +8670,12 @@ impl CoreWebView2FrameInfo {
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Name)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -6492,11 +8684,12 @@ impl CoreWebView2FrameInfo {
     pub fn Source(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Source)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -6639,10 +8832,10 @@ impl CoreWebView2HttpHeadersCollectionIterator {
             >,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Current)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IKeyValuePair<
                 ::windows::core::HSTRING,
@@ -6661,10 +8854,10 @@ impl CoreWebView2HttpHeadersCollectionIterator {
             >,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).HasCurrent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -6680,10 +8873,10 @@ impl CoreWebView2HttpHeadersCollectionIterator {
             >,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).MoveNext)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -6707,12 +8900,12 @@ impl CoreWebView2HttpHeadersCollectionIterator {
             >,
         >(self)?;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).GetMany)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 items.len() as u32,
                 ::core::mem::transmute_copy(&items),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -6908,12 +9101,13 @@ impl CoreWebView2HttpRequestHeaders {
     ) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetHeader)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -6925,11 +9119,11 @@ impl CoreWebView2HttpRequestHeaders {
     ) -> ::windows::core::Result<CoreWebView2HttpHeadersCollectionIterator> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetHeaders)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2HttpHeadersCollectionIterator>(result__)
         }
@@ -6941,11 +9135,11 @@ impl CoreWebView2HttpRequestHeaders {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Contains)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -6963,7 +9157,7 @@ impl CoreWebView2HttpRequestHeaders {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHeader)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -6978,7 +9172,7 @@ impl CoreWebView2HttpRequestHeaders {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveHeader)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
             )
             .ok()
@@ -7004,10 +9198,10 @@ impl CoreWebView2HttpRequestHeaders {
             >,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<
                 ::windows::Foundation::Collections::IKeyValuePair<
@@ -7223,7 +9417,7 @@ impl CoreWebView2HttpResponseHeaders {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).AppendHeader)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -7237,11 +9431,11 @@ impl CoreWebView2HttpResponseHeaders {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Contains)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -7253,12 +9447,13 @@ impl CoreWebView2HttpResponseHeaders {
     ) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).GetHeader)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -7270,11 +9465,11 @@ impl CoreWebView2HttpResponseHeaders {
     ) -> ::windows::core::Result<CoreWebView2HttpHeadersCollectionIterator> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetHeaders)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2HttpHeadersCollectionIterator>(result__)
         }
@@ -7299,10 +9494,10 @@ impl CoreWebView2HttpResponseHeaders {
             >,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<
                 ::windows::Foundation::Collections::IKeyValuePair<
@@ -7712,10 +9907,10 @@ impl CoreWebView2MoveFocusRequestedEventArgs {
     pub fn Reason(&self) -> ::windows::core::Result<CoreWebView2MoveFocusReason> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2MoveFocusReason = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2MoveFocusReason>::zeroed();
             (::windows::core::Interface::vtable(this).Reason)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2MoveFocusReason>(result__)
         }
@@ -7724,10 +9919,10 @@ impl CoreWebView2MoveFocusRequestedEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -7737,7 +9932,7 @@ impl CoreWebView2MoveFocusRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -7840,10 +10035,10 @@ impl CoreWebView2NavigationCompletedEventArgs {
     pub fn IsSuccess(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsSuccess)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -7852,10 +10047,10 @@ impl CoreWebView2NavigationCompletedEventArgs {
     pub fn WebErrorStatus(&self) -> ::windows::core::Result<CoreWebView2WebErrorStatus> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2WebErrorStatus = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2WebErrorStatus>::zeroed();
             (::windows::core::Interface::vtable(this).WebErrorStatus)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2WebErrorStatus>(result__)
         }
@@ -7864,10 +10059,10 @@ impl CoreWebView2NavigationCompletedEventArgs {
     pub fn NavigationId(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
-            let mut result__: u64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u64>::zeroed();
             (::windows::core::Interface::vtable(this).NavigationId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u64>(result__)
         }
@@ -7971,11 +10166,12 @@ impl CoreWebView2NavigationStartingEventArgs {
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Uri)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -7984,10 +10180,10 @@ impl CoreWebView2NavigationStartingEventArgs {
     pub fn IsUserInitiated(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsUserInitiated)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -7996,10 +10192,10 @@ impl CoreWebView2NavigationStartingEventArgs {
     pub fn IsRedirected(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsRedirected)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -8008,10 +10204,10 @@ impl CoreWebView2NavigationStartingEventArgs {
     pub fn RequestHeaders(&self) -> ::windows::core::Result<CoreWebView2HttpRequestHeaders> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RequestHeaders)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2HttpRequestHeaders>(result__)
         }
@@ -8020,10 +10216,10 @@ impl CoreWebView2NavigationStartingEventArgs {
     pub fn Cancel(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Cancel)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -8033,7 +10229,7 @@ impl CoreWebView2NavigationStartingEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCancel)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -8043,12 +10239,47 @@ impl CoreWebView2NavigationStartingEventArgs {
     pub fn NavigationId(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
-            let mut result__: u64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u64>::zeroed();
             (::windows::core::Interface::vtable(this).NavigationId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u64>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn AdditionalAllowedFrameAncestors(
+        &self,
+    ) -> ::windows::core::Result<::windows::core::HSTRING> {
+        let this =
+            &::windows::core::Interface::cast::<ICoreWebView2NavigationStartingEventArgs2>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
+            (::windows::core::Interface::vtable(this).AdditionalAllowedFrameAncestors)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<::windows::core::HSTRING>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetAdditionalAllowedFrameAncestors<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::HSTRING>,
+    >(
+        &self,
+        value: Param0,
+    ) -> ::windows::core::Result<()> {
+        let this =
+            &::windows::core::Interface::cast::<ICoreWebView2NavigationStartingEventArgs2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetAdditionalAllowedFrameAncestors)(
+                ::windows::core::Interface::as_raw(this),
+                value.into_param().abi(),
+            )
+            .ok()
         }
     }
 }
@@ -8148,11 +10379,12 @@ impl CoreWebView2NewWindowRequestedEventArgs {
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Uri)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -8161,10 +10393,10 @@ impl CoreWebView2NewWindowRequestedEventArgs {
     pub fn NewWindow(&self) -> ::windows::core::Result<CoreWebView2> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).NewWindow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2>(result__)
         }
@@ -8177,7 +10409,7 @@ impl CoreWebView2NewWindowRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetNewWindow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8187,10 +10419,10 @@ impl CoreWebView2NewWindowRequestedEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -8200,7 +10432,7 @@ impl CoreWebView2NewWindowRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -8210,10 +10442,10 @@ impl CoreWebView2NewWindowRequestedEventArgs {
     pub fn IsUserInitiated(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsUserInitiated)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -8222,10 +10454,10 @@ impl CoreWebView2NewWindowRequestedEventArgs {
     pub fn WindowFeatures(&self) -> ::windows::core::Result<CoreWebView2WindowFeatures> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).WindowFeatures)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2WindowFeatures>(result__)
         }
@@ -8234,10 +10466,10 @@ impl CoreWebView2NewWindowRequestedEventArgs {
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDeferral)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Deferral>(result__)
         }
@@ -8247,11 +10479,12 @@ impl CoreWebView2NewWindowRequestedEventArgs {
         let this =
             &::windows::core::Interface::cast::<ICoreWebView2NewWindowRequestedEventArgs2>(self)?;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Name)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -8348,6 +10581,74 @@ unsafe impl ::core::marker::Sync for CoreWebView2NewWindowRequestedEventArgs {}
 #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
+pub struct CoreWebView2PdfToolbarItems(pub u32);
+impl CoreWebView2PdfToolbarItems {
+    pub const None: Self = Self(0u32);
+    pub const Save: Self = Self(1u32);
+    pub const Print: Self = Self(2u32);
+    pub const SaveAs: Self = Self(4u32);
+}
+impl ::core::marker::Copy for CoreWebView2PdfToolbarItems {}
+impl ::core::clone::Clone for CoreWebView2PdfToolbarItems {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::default::Default for CoreWebView2PdfToolbarItems {
+    fn default() -> Self {
+        Self(0)
+    }
+}
+unsafe impl ::windows::core::Abi for CoreWebView2PdfToolbarItems {
+    type Abi = Self;
+}
+impl ::core::fmt::Debug for CoreWebView2PdfToolbarItems {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CoreWebView2PdfToolbarItems")
+            .field(&self.0)
+            .finish()
+    }
+}
+impl ::core::ops::BitOr for CoreWebView2PdfToolbarItems {
+    type Output = Self;
+    fn bitor(self, other: Self) -> Self {
+        Self(self.0 | other.0)
+    }
+}
+impl ::core::ops::BitAnd for CoreWebView2PdfToolbarItems {
+    type Output = Self;
+    fn bitand(self, other: Self) -> Self {
+        Self(self.0 & other.0)
+    }
+}
+impl ::core::ops::BitOrAssign for CoreWebView2PdfToolbarItems {
+    fn bitor_assign(&mut self, other: Self) {
+        self.0.bitor_assign(other.0)
+    }
+}
+impl ::core::ops::BitAndAssign for CoreWebView2PdfToolbarItems {
+    fn bitand_assign(&mut self, other: Self) {
+        self.0.bitand_assign(other.0)
+    }
+}
+impl ::core::ops::Not for CoreWebView2PdfToolbarItems {
+    type Output = Self;
+    fn not(self) -> Self {
+        Self(self.0.not())
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CoreWebView2PdfToolbarItems {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"enum(Microsoft.Web.WebView2.Core.CoreWebView2PdfToolbarItems;u4)",
+    );
+    type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
+}
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+#[repr(transparent)]
+#[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2PermissionKind(pub i32);
 impl CoreWebView2PermissionKind {
     pub const UnknownPermission: Self = Self(0i32);
@@ -8396,11 +10697,12 @@ impl CoreWebView2PermissionRequestedEventArgs {
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Uri)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -8409,10 +10711,10 @@ impl CoreWebView2PermissionRequestedEventArgs {
     pub fn PermissionKind(&self) -> ::windows::core::Result<CoreWebView2PermissionKind> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2PermissionKind = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2PermissionKind>::zeroed();
             (::windows::core::Interface::vtable(this).PermissionKind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2PermissionKind>(result__)
         }
@@ -8421,10 +10723,10 @@ impl CoreWebView2PermissionRequestedEventArgs {
     pub fn IsUserInitiated(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsUserInitiated)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -8433,10 +10735,10 @@ impl CoreWebView2PermissionRequestedEventArgs {
     pub fn State(&self) -> ::windows::core::Result<CoreWebView2PermissionState> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2PermissionState = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2PermissionState>::zeroed();
             (::windows::core::Interface::vtable(this).State)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2PermissionState>(result__)
         }
@@ -8446,7 +10748,7 @@ impl CoreWebView2PermissionRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetState)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -8456,12 +10758,37 @@ impl CoreWebView2PermissionRequestedEventArgs {
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDeferral)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Deferral>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Handled(&self) -> ::windows::core::Result<bool> {
+        let this =
+            &::windows::core::Interface::cast::<ICoreWebView2PermissionRequestedEventArgs2>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).Handled)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetHandled(&self, value: bool) -> ::windows::core::Result<()> {
+        let this =
+            &::windows::core::Interface::cast::<ICoreWebView2PermissionRequestedEventArgs2>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetHandled)(
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
         }
     }
 }
@@ -8701,10 +11028,10 @@ impl CoreWebView2PointerInfo {
     pub fn PointerKind(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).PointerKind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -8714,7 +11041,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPointerKind)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -8724,10 +11051,10 @@ impl CoreWebView2PointerInfo {
     pub fn PointerId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).PointerId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -8737,7 +11064,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPointerId)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -8747,10 +11074,10 @@ impl CoreWebView2PointerInfo {
     pub fn FrameId(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).FrameId)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -8760,7 +11087,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFrameId)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -8770,10 +11097,10 @@ impl CoreWebView2PointerInfo {
     pub fn PointerFlags(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).PointerFlags)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -8783,7 +11110,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPointerFlags)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -8793,10 +11120,10 @@ impl CoreWebView2PointerInfo {
     pub fn PointerDeviceRect(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).PointerDeviceRect)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
@@ -8812,7 +11139,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPointerDeviceRect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8822,10 +11149,10 @@ impl CoreWebView2PointerInfo {
     pub fn DisplayRect(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).DisplayRect)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
@@ -8841,7 +11168,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDisplayRect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8851,10 +11178,10 @@ impl CoreWebView2PointerInfo {
     pub fn PixelLocation(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Point>::zeroed();
             (::windows::core::Interface::vtable(this).PixelLocation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Point>(result__)
         }
@@ -8870,7 +11197,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPixelLocation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8880,10 +11207,10 @@ impl CoreWebView2PointerInfo {
     pub fn HimetricLocation(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Point>::zeroed();
             (::windows::core::Interface::vtable(this).HimetricLocation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Point>(result__)
         }
@@ -8899,7 +11226,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHimetricLocation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8909,10 +11236,10 @@ impl CoreWebView2PointerInfo {
     pub fn PixelLocationRaw(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Point>::zeroed();
             (::windows::core::Interface::vtable(this).PixelLocationRaw)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Point>(result__)
         }
@@ -8928,7 +11255,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPixelLocationRaw)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8938,10 +11265,10 @@ impl CoreWebView2PointerInfo {
     pub fn HimetricLocationRaw(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Point>::zeroed();
             (::windows::core::Interface::vtable(this).HimetricLocationRaw)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Point>(result__)
         }
@@ -8957,7 +11284,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHimetricLocationRaw)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8967,10 +11294,10 @@ impl CoreWebView2PointerInfo {
     pub fn Time(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Time)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -8980,7 +11307,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTime)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -8990,10 +11317,10 @@ impl CoreWebView2PointerInfo {
     pub fn HistoryCount(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).HistoryCount)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -9003,7 +11330,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHistoryCount)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9013,10 +11340,10 @@ impl CoreWebView2PointerInfo {
     pub fn InputData(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).InputData)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -9026,7 +11353,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetInputData)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9036,10 +11363,10 @@ impl CoreWebView2PointerInfo {
     pub fn KeyStates(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).KeyStates)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -9049,7 +11376,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyStates)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9059,10 +11386,10 @@ impl CoreWebView2PointerInfo {
     pub fn PerformanceCount(&self) -> ::windows::core::Result<u64> {
         let this = self;
         unsafe {
-            let mut result__: u64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u64>::zeroed();
             (::windows::core::Interface::vtable(this).PerformanceCount)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u64>(result__)
         }
@@ -9072,7 +11399,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPerformanceCount)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9082,10 +11409,10 @@ impl CoreWebView2PointerInfo {
     pub fn ButtonChangeKind(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).ButtonChangeKind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -9095,7 +11422,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetButtonChangeKind)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9105,10 +11432,10 @@ impl CoreWebView2PointerInfo {
     pub fn PenFlags(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).PenFlags)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -9118,7 +11445,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPenFlags)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9128,10 +11455,10 @@ impl CoreWebView2PointerInfo {
     pub fn PenMask(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).PenMask)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -9141,7 +11468,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPenMask)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9151,10 +11478,10 @@ impl CoreWebView2PointerInfo {
     pub fn PenPressure(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).PenPressure)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -9164,7 +11491,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPenPressure)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9174,10 +11501,10 @@ impl CoreWebView2PointerInfo {
     pub fn PenRotation(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).PenRotation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -9187,7 +11514,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPenRotation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9197,10 +11524,10 @@ impl CoreWebView2PointerInfo {
     pub fn PenTiltX(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).PenTiltX)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -9210,7 +11537,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPenTiltX)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9220,10 +11547,10 @@ impl CoreWebView2PointerInfo {
     pub fn PenTiltY(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).PenTiltY)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -9233,7 +11560,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPenTiltY)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9243,10 +11570,10 @@ impl CoreWebView2PointerInfo {
     pub fn TouchFlags(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).TouchFlags)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -9256,7 +11583,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTouchFlags)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9266,10 +11593,10 @@ impl CoreWebView2PointerInfo {
     pub fn TouchMask(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).TouchMask)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -9279,7 +11606,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTouchMask)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9289,10 +11616,10 @@ impl CoreWebView2PointerInfo {
     pub fn TouchContact(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).TouchContact)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
@@ -9308,7 +11635,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTouchContact)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9318,10 +11645,10 @@ impl CoreWebView2PointerInfo {
     pub fn TouchContactRaw(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).TouchContactRaw)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
@@ -9337,7 +11664,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTouchContactRaw)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9347,10 +11674,10 @@ impl CoreWebView2PointerInfo {
     pub fn TouchOrientation(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).TouchOrientation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -9360,7 +11687,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTouchOrientation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9370,10 +11697,10 @@ impl CoreWebView2PointerInfo {
     pub fn TouchPressure(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).TouchPressure)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -9383,7 +11710,7 @@ impl CoreWebView2PointerInfo {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTouchPressure)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9513,10 +11840,10 @@ impl CoreWebView2PrintSettings {
     pub fn Orientation(&self) -> ::windows::core::Result<CoreWebView2PrintOrientation> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2PrintOrientation = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2PrintOrientation>::zeroed();
             (::windows::core::Interface::vtable(this).Orientation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2PrintOrientation>(result__)
         }
@@ -9529,7 +11856,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetOrientation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9539,10 +11866,10 @@ impl CoreWebView2PrintSettings {
     pub fn ScaleFactor(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).ScaleFactor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -9552,7 +11879,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetScaleFactor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9562,10 +11889,10 @@ impl CoreWebView2PrintSettings {
     pub fn PageWidth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).PageWidth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -9575,7 +11902,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPageWidth)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9585,10 +11912,10 @@ impl CoreWebView2PrintSettings {
     pub fn PageHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).PageHeight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -9598,7 +11925,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPageHeight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9608,10 +11935,10 @@ impl CoreWebView2PrintSettings {
     pub fn MarginTop(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MarginTop)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -9621,7 +11948,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMarginTop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9631,10 +11958,10 @@ impl CoreWebView2PrintSettings {
     pub fn MarginBottom(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MarginBottom)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -9644,7 +11971,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMarginBottom)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9654,10 +11981,10 @@ impl CoreWebView2PrintSettings {
     pub fn MarginLeft(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MarginLeft)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -9667,7 +11994,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMarginLeft)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9677,10 +12004,10 @@ impl CoreWebView2PrintSettings {
     pub fn MarginRight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MarginRight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -9690,7 +12017,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMarginRight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9700,10 +12027,10 @@ impl CoreWebView2PrintSettings {
     pub fn ShouldPrintBackgrounds(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ShouldPrintBackgrounds)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -9713,7 +12040,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetShouldPrintBackgrounds)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9723,10 +12050,10 @@ impl CoreWebView2PrintSettings {
     pub fn ShouldPrintSelectionOnly(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ShouldPrintSelectionOnly)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -9736,7 +12063,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetShouldPrintSelectionOnly)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9746,10 +12073,10 @@ impl CoreWebView2PrintSettings {
     pub fn ShouldPrintHeaderAndFooter(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ShouldPrintHeaderAndFooter)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -9759,7 +12086,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetShouldPrintHeaderAndFooter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9769,11 +12096,12 @@ impl CoreWebView2PrintSettings {
     pub fn HeaderTitle(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).HeaderTitle)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -9786,7 +12114,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHeaderTitle)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9796,11 +12124,12 @@ impl CoreWebView2PrintSettings {
     pub fn FooterUri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).FooterUri)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -9813,7 +12142,7 @@ impl CoreWebView2PrintSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFooterUri)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9909,10 +12238,10 @@ impl CoreWebView2ProcessFailedEventArgs {
     pub fn ProcessFailedKind(&self) -> ::windows::core::Result<CoreWebView2ProcessFailedKind> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2ProcessFailedKind = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2ProcessFailedKind>::zeroed();
             (::windows::core::Interface::vtable(this).ProcessFailedKind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2ProcessFailedKind>(result__)
         }
@@ -9921,10 +12250,11 @@ impl CoreWebView2ProcessFailedEventArgs {
     pub fn Reason(&self) -> ::windows::core::Result<CoreWebView2ProcessFailedReason> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2ProcessFailedEventArgs2>(self)?;
         unsafe {
-            let mut result__: CoreWebView2ProcessFailedReason = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<CoreWebView2ProcessFailedReason>::zeroed();
             (::windows::core::Interface::vtable(this).Reason)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2ProcessFailedReason>(result__)
         }
@@ -9933,10 +12263,10 @@ impl CoreWebView2ProcessFailedEventArgs {
     pub fn ExitCode(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2ProcessFailedEventArgs2>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).ExitCode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -9945,11 +12275,12 @@ impl CoreWebView2ProcessFailedEventArgs {
     pub fn ProcessDescription(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2ProcessFailedEventArgs2>(self)?;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ProcessDescription)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -9962,10 +12293,10 @@ impl CoreWebView2ProcessFailedEventArgs {
     > {
         let this = &::windows::core::Interface::cast::<ICoreWebView2ProcessFailedEventArgs2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FrameInfosForFailedProcess)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<CoreWebView2FrameInfo>>(
                 result__,
@@ -10146,6 +12477,155 @@ unsafe impl ::windows::core::RuntimeType for CoreWebView2ProcessFailedReason {
 }
 #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
 #[repr(transparent)]
+pub struct CoreWebView2ProcessInfo(::windows::core::IUnknown);
+impl CoreWebView2ProcessInfo {
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn ProcessId(&self) -> ::windows::core::Result<i32> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
+            (::windows::core::Interface::vtable(this).ProcessId)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<i32>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn Kind(&self) -> ::windows::core::Result<CoreWebView2ProcessKind> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2ProcessKind>::zeroed();
+            (::windows::core::Interface::vtable(this).Kind)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<CoreWebView2ProcessKind>(result__)
+        }
+    }
+}
+impl ::core::clone::Clone for CoreWebView2ProcessInfo {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for CoreWebView2ProcessInfo {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for CoreWebView2ProcessInfo {}
+impl ::core::fmt::Debug for CoreWebView2ProcessInfo {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CoreWebView2ProcessInfo")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CoreWebView2ProcessInfo {
+    const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo;{b6ec37e1-23eb-5924-b346-e837890aa9d5})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for CoreWebView2ProcessInfo {
+    type Vtable = ICoreWebView2ProcessInfo_Vtbl;
+    const IID: ::windows::core::GUID =
+        <ICoreWebView2ProcessInfo as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for CoreWebView2ProcessInfo {
+    const NAME: &'static str = "Microsoft.Web.WebView2.Core.CoreWebView2ProcessInfo";
+}
+impl ::core::convert::From<CoreWebView2ProcessInfo> for ::windows::core::IUnknown {
+    fn from(value: CoreWebView2ProcessInfo) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2ProcessInfo> for ::windows::core::IUnknown {
+    fn from(value: &CoreWebView2ProcessInfo) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for CoreWebView2ProcessInfo {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a CoreWebView2ProcessInfo {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<CoreWebView2ProcessInfo> for ::windows::core::IInspectable {
+    fn from(value: CoreWebView2ProcessInfo) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&CoreWebView2ProcessInfo> for ::windows::core::IInspectable {
+    fn from(value: &CoreWebView2ProcessInfo) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable> for CoreWebView2ProcessInfo {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a CoreWebView2ProcessInfo
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for CoreWebView2ProcessInfo {}
+unsafe impl ::core::marker::Sync for CoreWebView2ProcessInfo {}
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+#[repr(transparent)]
+#[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
+pub struct CoreWebView2ProcessKind(pub i32);
+impl CoreWebView2ProcessKind {
+    pub const Browser: Self = Self(0i32);
+    pub const Renderer: Self = Self(1i32);
+    pub const Utility: Self = Self(2i32);
+    pub const SandboxHelper: Self = Self(3i32);
+    pub const Gpu: Self = Self(4i32);
+    pub const PpapiPlugin: Self = Self(5i32);
+    pub const PpapiBroker: Self = Self(6i32);
+}
+impl ::core::marker::Copy for CoreWebView2ProcessKind {}
+impl ::core::clone::Clone for CoreWebView2ProcessKind {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::default::Default for CoreWebView2ProcessKind {
+    fn default() -> Self {
+        Self(0)
+    }
+}
+unsafe impl ::windows::core::Abi for CoreWebView2ProcessKind {
+    type Abi = Self;
+}
+impl ::core::fmt::Debug for CoreWebView2ProcessKind {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("CoreWebView2ProcessKind")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for CoreWebView2ProcessKind {
+    const SIGNATURE: ::windows::core::ConstBuffer = ::windows::core::ConstBuffer::from_slice(
+        b"enum(Microsoft.Web.WebView2.Core.CoreWebView2ProcessKind;i4)",
+    );
+    type DefaultType = Self;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        Ok(*from)
+    }
+}
+#[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+#[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct CoreWebView2ScriptDialogKind(pub i32);
 impl CoreWebView2ScriptDialogKind {
@@ -10192,11 +12672,12 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Uri)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -10205,10 +12686,10 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
     pub fn Kind(&self) -> ::windows::core::Result<CoreWebView2ScriptDialogKind> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2ScriptDialogKind = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2ScriptDialogKind>::zeroed();
             (::windows::core::Interface::vtable(this).Kind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2ScriptDialogKind>(result__)
         }
@@ -10217,11 +12698,12 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
     pub fn Message(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Message)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -10230,11 +12712,12 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
     pub fn DefaultText(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).DefaultText)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -10243,11 +12726,12 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
     pub fn ResultText(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ResultText)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -10260,7 +12744,7 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetResultText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10270,18 +12754,20 @@ impl CoreWebView2ScriptDialogOpeningEventArgs {
     pub fn Accept(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Accept)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Accept)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDeferral)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Deferral>(result__)
         }
@@ -10385,10 +12871,10 @@ impl CoreWebView2Settings {
     pub fn IsScriptEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsScriptEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10398,7 +12884,7 @@ impl CoreWebView2Settings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsScriptEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10408,10 +12894,10 @@ impl CoreWebView2Settings {
     pub fn IsWebMessageEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsWebMessageEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10421,7 +12907,7 @@ impl CoreWebView2Settings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsWebMessageEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10431,10 +12917,10 @@ impl CoreWebView2Settings {
     pub fn AreDefaultScriptDialogsEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AreDefaultScriptDialogsEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10444,7 +12930,7 @@ impl CoreWebView2Settings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAreDefaultScriptDialogsEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10454,10 +12940,10 @@ impl CoreWebView2Settings {
     pub fn IsStatusBarEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsStatusBarEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10467,7 +12953,7 @@ impl CoreWebView2Settings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsStatusBarEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10477,10 +12963,10 @@ impl CoreWebView2Settings {
     pub fn AreDevToolsEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AreDevToolsEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10490,7 +12976,7 @@ impl CoreWebView2Settings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAreDevToolsEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10500,10 +12986,10 @@ impl CoreWebView2Settings {
     pub fn AreDefaultContextMenusEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AreDefaultContextMenusEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10513,7 +12999,7 @@ impl CoreWebView2Settings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAreDefaultContextMenusEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10523,10 +13009,10 @@ impl CoreWebView2Settings {
     pub fn AreHostObjectsAllowed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AreHostObjectsAllowed)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10536,7 +13022,7 @@ impl CoreWebView2Settings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAreHostObjectsAllowed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10546,10 +13032,10 @@ impl CoreWebView2Settings {
     pub fn IsZoomControlEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsZoomControlEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10559,7 +13045,7 @@ impl CoreWebView2Settings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsZoomControlEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10569,10 +13055,10 @@ impl CoreWebView2Settings {
     pub fn IsBuiltInErrorPageEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsBuiltInErrorPageEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10582,7 +13068,7 @@ impl CoreWebView2Settings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsBuiltInErrorPageEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10592,11 +13078,12 @@ impl CoreWebView2Settings {
     pub fn UserAgent(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings2>(self)?;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).UserAgent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -10609,7 +13096,7 @@ impl CoreWebView2Settings {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings2>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetUserAgent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10619,10 +13106,10 @@ impl CoreWebView2Settings {
     pub fn AreBrowserAcceleratorKeysEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings3>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AreBrowserAcceleratorKeysEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10632,7 +13119,7 @@ impl CoreWebView2Settings {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings3>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAreBrowserAcceleratorKeysEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10642,10 +13129,10 @@ impl CoreWebView2Settings {
     pub fn IsPasswordAutosaveEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings4>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsPasswordAutosaveEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10655,7 +13142,7 @@ impl CoreWebView2Settings {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings4>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsPasswordAutosaveEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10665,10 +13152,10 @@ impl CoreWebView2Settings {
     pub fn IsGeneralAutofillEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings4>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsGeneralAutofillEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10678,7 +13165,7 @@ impl CoreWebView2Settings {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings4>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsGeneralAutofillEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10688,10 +13175,10 @@ impl CoreWebView2Settings {
     pub fn IsPinchZoomEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings5>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsPinchZoomEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10701,7 +13188,7 @@ impl CoreWebView2Settings {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings5>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsPinchZoomEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10711,10 +13198,10 @@ impl CoreWebView2Settings {
     pub fn IsSwipeNavigationEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings6>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsSwipeNavigationEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10724,7 +13211,33 @@ impl CoreWebView2Settings {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings6>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsSwipeNavigationEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn HiddenPdfToolbarItems(&self) -> ::windows::core::Result<CoreWebView2PdfToolbarItems> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Settings7>(self)?;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2PdfToolbarItems>::zeroed();
+            (::windows::core::Interface::vtable(this).HiddenPdfToolbarItems)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<CoreWebView2PdfToolbarItems>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Web_WebView2_Core\"`*"]
+    pub fn SetHiddenPdfToolbarItems(
+        &self,
+        value: CoreWebView2PdfToolbarItems,
+    ) -> ::windows::core::Result<()> {
+        let this = &::windows::core::Interface::cast::<ICoreWebView2Settings7>(self)?;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetHiddenPdfToolbarItems)(
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10736,10 +13249,10 @@ impl CoreWebView2Settings {
     ) -> ::windows::core::Result<ICoreWebView2DispatchAdapter> {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings_Manual>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).HostObjectDispatchAdapter)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ICoreWebView2DispatchAdapter>(result__)
         }
@@ -10755,7 +13268,7 @@ impl CoreWebView2Settings {
         let this = &::windows::core::Interface::cast::<ICoreWebView2Settings_Manual>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHostObjectDispatchAdapter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10846,10 +13359,10 @@ impl CoreWebView2SourceChangedEventArgs {
     pub fn IsNewDocument(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsNewDocument)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10960,6 +13473,8 @@ impl CoreWebView2WebErrorStatus {
     pub const OperationCanceled: Self = Self(14i32);
     pub const RedirectFailed: Self = Self(15i32);
     pub const UnexpectedError: Self = Self(16i32);
+    pub const ValidAuthenticationCredentialsRequired: Self = Self(17i32);
+    pub const ValidProxyAuthenticationRequired: Self = Self(18i32);
 }
 impl ::core::marker::Copy for CoreWebView2WebErrorStatus {}
 impl ::core::clone::Clone for CoreWebView2WebErrorStatus {
@@ -10999,11 +13514,12 @@ impl CoreWebView2WebMessageReceivedEventArgs {
     pub fn Source(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Source)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -11012,11 +13528,12 @@ impl CoreWebView2WebMessageReceivedEventArgs {
     pub fn WebMessageAsJson(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).WebMessageAsJson)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -11025,11 +13542,12 @@ impl CoreWebView2WebMessageReceivedEventArgs {
     pub fn TryGetWebMessageAsString(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).TryGetWebMessageAsString)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -11184,11 +13702,12 @@ impl CoreWebView2WebResourceRequest {
     pub fn Uri(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Uri)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -11201,7 +13720,7 @@ impl CoreWebView2WebResourceRequest {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetUri)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11211,11 +13730,12 @@ impl CoreWebView2WebResourceRequest {
     pub fn Method(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Method)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -11228,7 +13748,7 @@ impl CoreWebView2WebResourceRequest {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMethod)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11240,10 +13760,10 @@ impl CoreWebView2WebResourceRequest {
     ) -> ::windows::core::Result<::windows::Storage::Streams::IRandomAccessStream> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Content)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Storage::Streams::IRandomAccessStream>(result__)
         }
@@ -11259,7 +13779,7 @@ impl CoreWebView2WebResourceRequest {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11269,10 +13789,10 @@ impl CoreWebView2WebResourceRequest {
     pub fn Headers(&self) -> ::windows::core::Result<CoreWebView2HttpRequestHeaders> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Headers)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2HttpRequestHeaders>(result__)
         }
@@ -11369,10 +13889,10 @@ impl CoreWebView2WebResourceRequestedEventArgs {
     pub fn Request(&self) -> ::windows::core::Result<CoreWebView2WebResourceRequest> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Request)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2WebResourceRequest>(result__)
         }
@@ -11381,10 +13901,10 @@ impl CoreWebView2WebResourceRequestedEventArgs {
     pub fn Response(&self) -> ::windows::core::Result<CoreWebView2WebResourceResponse> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Response)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2WebResourceResponse>(result__)
         }
@@ -11400,7 +13920,7 @@ impl CoreWebView2WebResourceRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetResponse)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11410,10 +13930,10 @@ impl CoreWebView2WebResourceRequestedEventArgs {
     pub fn ResourceContext(&self) -> ::windows::core::Result<CoreWebView2WebResourceContext> {
         let this = self;
         unsafe {
-            let mut result__: CoreWebView2WebResourceContext = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CoreWebView2WebResourceContext>::zeroed();
             (::windows::core::Interface::vtable(this).ResourceContext)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2WebResourceContext>(result__)
         }
@@ -11422,10 +13942,10 @@ impl CoreWebView2WebResourceRequestedEventArgs {
     pub fn GetDeferral(&self) -> ::windows::core::Result<::windows::Foundation::Deferral> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDeferral)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Deferral>(result__)
         }
@@ -11533,10 +14053,10 @@ impl CoreWebView2WebResourceResponse {
     ) -> ::windows::core::Result<::windows::Storage::Streams::IRandomAccessStream> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Content)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Storage::Streams::IRandomAccessStream>(result__)
         }
@@ -11552,7 +14072,7 @@ impl CoreWebView2WebResourceResponse {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11562,10 +14082,10 @@ impl CoreWebView2WebResourceResponse {
     pub fn Headers(&self) -> ::windows::core::Result<CoreWebView2HttpResponseHeaders> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Headers)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2HttpResponseHeaders>(result__)
         }
@@ -11574,10 +14094,10 @@ impl CoreWebView2WebResourceResponse {
     pub fn StatusCode(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StatusCode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -11587,7 +14107,7 @@ impl CoreWebView2WebResourceResponse {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetStatusCode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -11597,11 +14117,12 @@ impl CoreWebView2WebResourceResponse {
     pub fn ReasonPhrase(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ReasonPhrase)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -11614,7 +14135,7 @@ impl CoreWebView2WebResourceResponse {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetReasonPhrase)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11712,10 +14233,10 @@ impl CoreWebView2WebResourceResponseReceivedEventArgs {
     pub fn Request(&self) -> ::windows::core::Result<CoreWebView2WebResourceRequest> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Request)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2WebResourceRequest>(result__)
         }
@@ -11724,10 +14245,10 @@ impl CoreWebView2WebResourceResponseReceivedEventArgs {
     pub fn Response(&self) -> ::windows::core::Result<CoreWebView2WebResourceResponseView> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Response)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2WebResourceResponseView>(result__)
         }
@@ -11833,10 +14354,10 @@ impl CoreWebView2WebResourceResponseView {
     pub fn Headers(&self) -> ::windows::core::Result<CoreWebView2HttpResponseHeaders> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Headers)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CoreWebView2HttpResponseHeaders>(result__)
         }
@@ -11845,10 +14366,10 @@ impl CoreWebView2WebResourceResponseView {
     pub fn StatusCode(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StatusCode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -11857,11 +14378,12 @@ impl CoreWebView2WebResourceResponseView {
     pub fn ReasonPhrase(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ReasonPhrase)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -11874,10 +14396,10 @@ impl CoreWebView2WebResourceResponseView {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetContentAsync)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<
                 ::windows::Storage::Streams::IRandomAccessStream,
@@ -11976,10 +14498,10 @@ impl CoreWebView2WindowFeatures {
     pub fn HasPosition(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).HasPosition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -11988,10 +14510,10 @@ impl CoreWebView2WindowFeatures {
     pub fn HasSize(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).HasSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12000,10 +14522,10 @@ impl CoreWebView2WindowFeatures {
     pub fn Left(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Left)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -12012,10 +14534,10 @@ impl CoreWebView2WindowFeatures {
     pub fn Top(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Top)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -12024,10 +14546,10 @@ impl CoreWebView2WindowFeatures {
     pub fn Height(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Height)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -12036,10 +14558,10 @@ impl CoreWebView2WindowFeatures {
     pub fn Width(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Width)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -12048,10 +14570,10 @@ impl CoreWebView2WindowFeatures {
     pub fn ShouldDisplayMenuBar(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ShouldDisplayMenuBar)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12060,10 +14582,10 @@ impl CoreWebView2WindowFeatures {
     pub fn ShouldDisplayStatus(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ShouldDisplayStatus)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12072,10 +14594,10 @@ impl CoreWebView2WindowFeatures {
     pub fn ShouldDisplayToolbar(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ShouldDisplayToolbar)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12084,10 +14606,10 @@ impl CoreWebView2WindowFeatures {
     pub fn ShouldDisplayScrollBars(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ShouldDisplayScrollBars)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12185,7 +14707,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Settings: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -12451,7 +14973,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2AcceleratorKeyPressedEve
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2AcceleratorKeyPressedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeyEventKind: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut CoreWebView2KeyEventKind,
@@ -12479,6 +15001,72 @@ pub struct ICoreWebView2AcceleratorKeyPressedEventArgs_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct ICoreWebView2BasicAuthenticationRequestedEventArgs(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2BasicAuthenticationRequestedEventArgs {
+    type Vtable = ICoreWebView2BasicAuthenticationRequestedEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x4b16330c_4ca5_555e_af21_164334405f63);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2BasicAuthenticationRequestedEventArgs_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub Uri: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub Challenge: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub Response: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+    pub Cancel: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetCancel: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+    pub GetDeferral: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2BasicAuthenticationResponse(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2BasicAuthenticationResponse {
+    type Vtable = ICoreWebView2BasicAuthenticationResponse_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x08df33b9_6e38_5962_9ffd_caab3c30fbc1);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2BasicAuthenticationResponse_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub UserName: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub SetUserName: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub Password: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub SetPassword: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct ICoreWebView2BrowserProcessExitedEventArgs(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for ICoreWebView2BrowserProcessExitedEventArgs {
     type Vtable = ICoreWebView2BrowserProcessExitedEventArgs_Vtbl;
@@ -12488,7 +15076,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2BrowserProcessExitedEven
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2BrowserProcessExitedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub BrowserProcessExitKind: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut CoreWebView2BrowserProcessExitKind,
@@ -12509,7 +15097,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2ClientCertificate {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2ClientCertificate_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Subject: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -12559,7 +15147,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2ClientCertificateRequest
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2ClientCertificateRequestedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Host: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -12620,7 +15208,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2CompositionController {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2CompositionController_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RootVisualTarget: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -12666,7 +15254,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2CompositionController2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2CompositionController2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -12679,7 +15267,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2CompositionControllerSta
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2CompositionControllerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -12692,7 +15280,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2ContentLoadingEventArgs 
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2ContentLoadingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsErrorPage: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -12700,6 +15288,182 @@ pub struct ICoreWebView2ContentLoadingEventArgs_Vtbl {
     pub NavigationId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut u64,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2ContextMenuItem(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2ContextMenuItem {
+    type Vtable = ICoreWebView2ContextMenuItem_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x2a65706f_941a_52cd_8651_a165586b0abf);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2ContextMenuItem_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub Name: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub Label: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub CommandId: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut i32,
+    ) -> ::windows::core::HRESULT,
+    pub ShortcutKeyDescription: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub Icon: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+    pub Kind: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut CoreWebView2ContextMenuItemKind,
+    ) -> ::windows::core::HRESULT,
+    pub IsEnabled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetIsEnabled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+    pub IsChecked: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetIsChecked: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+    pub Children: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+    pub CustomItemSelected: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveCustomItemSelected: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2ContextMenuRequestedEventArgs(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2ContextMenuRequestedEventArgs {
+    type Vtable = ICoreWebView2ContextMenuRequestedEventArgs_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xd77bdd8c_9b3e_596e_ae80_320c0df4ecbc);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2ContextMenuRequestedEventArgs_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub MenuItems: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+    pub ContextMenuTarget: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+    pub Location: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::Foundation::Point,
+    ) -> ::windows::core::HRESULT,
+    pub SelectedCommandId: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut i32,
+    ) -> ::windows::core::HRESULT,
+    pub SetSelectedCommandId: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: i32,
+    ) -> ::windows::core::HRESULT,
+    pub Handled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetHandled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+    pub GetDeferral: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2ContextMenuTarget(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2ContextMenuTarget {
+    type Vtable = ICoreWebView2ContextMenuTarget_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x41e24e6a_4612_5bd9_8e61_e9280615205e);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2ContextMenuTarget_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub Kind: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut CoreWebView2ContextMenuTargetKind,
+    ) -> ::windows::core::HRESULT,
+    pub IsEditable: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub IsRequestedForMainFrame: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub PageUri: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub FrameUri: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub HasLinkUri: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub LinkUri: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub HasLinkText: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub LinkText: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub HasSourceUri: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SourceUri: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub HasSelection: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SelectionText: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
 }
 #[doc(hidden)]
@@ -12713,7 +15477,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Controller {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Controller_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsVisible: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -12820,7 +15584,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Controller2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Controller2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DefaultBackgroundColor: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::UI::Color,
@@ -12841,7 +15605,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Controller3 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Controller3_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RasterizationScale: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -12879,6 +15643,27 @@ pub struct ICoreWebView2Controller3_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct ICoreWebView2Controller4(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2Controller4 {
+    type Vtable = ICoreWebView2Controller4_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x94e2862d_4638_54ba_92cf_e31a31499b78);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2Controller4_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub AllowExternalDrop: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetAllowExternalDrop: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct ICoreWebView2ControllerFactory(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for ICoreWebView2ControllerFactory {
     type Vtable = ICoreWebView2ControllerFactory_Vtbl;
@@ -12888,7 +15673,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2ControllerFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2ControllerFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -12901,7 +15686,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2ControllerWindowReferenc
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2ControllerWindowReference_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub WindowHandle: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut u64,
@@ -12922,7 +15707,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2ControllerWindowReferenc
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2ControllerWindowReferenceStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateFromWindowHandle: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         windowhandle: u64,
@@ -12945,7 +15730,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Cookie {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Cookie_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Name: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13014,7 +15799,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2CookieManager {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2CookieManager_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateCookie: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         name: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13052,6 +15837,24 @@ pub struct ICoreWebView2CookieManager_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct ICoreWebView2CookieManager_Manual(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2CookieManager_Manual {
+    type Vtable = ICoreWebView2CookieManager_Manual_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x9bcca0ea_7225_577a_bb23_c7c98023154e);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2CookieManager_Manual_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub GetCookiesAsync: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        uri: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct ICoreWebView2DOMContentLoadedEventArgs(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for ICoreWebView2DOMContentLoadedEventArgs {
     type Vtable = ICoreWebView2DOMContentLoadedEventArgs_Vtbl;
@@ -13061,7 +15864,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2DOMContentLoadedEventArg
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2DOMContentLoadedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub NavigationId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut u64,
@@ -13078,8 +15881,25 @@ unsafe impl ::windows::core::Interface for ICoreWebView2DevToolsProtocolEventRec
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2DevToolsProtocolEventReceivedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ParameterObjectAsJson: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2DevToolsProtocolEventReceivedEventArgs2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2DevToolsProtocolEventReceivedEventArgs2 {
+    type Vtable = ICoreWebView2DevToolsProtocolEventReceivedEventArgs2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x221728ba_635e_50d2_bd3c_fd22f4113978);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2DevToolsProtocolEventReceivedEventArgs2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub SessionId: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
     ) -> ::windows::core::HRESULT,
@@ -13095,7 +15915,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2DevToolsProtocolEventRec
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2DevToolsProtocolEventReceiver_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DevToolsProtocolEventReceived: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -13123,12 +15943,12 @@ impl ICoreWebView2DispatchAdapter {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).WrapNamedObject)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
                 adapter.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -13145,12 +15965,12 @@ impl ICoreWebView2DispatchAdapter {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).WrapObject)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unwrapped.into_param().abi(),
                 adapter.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -13165,11 +15985,11 @@ impl ICoreWebView2DispatchAdapter {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).UnwrapObject)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 wrapped.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -13178,7 +15998,10 @@ impl ICoreWebView2DispatchAdapter {
     pub fn Clean(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Clean)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Clean)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
 }
@@ -13264,7 +16087,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2DispatchAdapter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2DispatchAdapter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub WrapNamedObject: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         name: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13296,7 +16119,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2DownloadOperation {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2DownloadOperation_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Uri: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13382,7 +16205,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2DownloadStartingEventArg
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2DownloadStartingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DownloadOperation: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -13427,7 +16250,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Environment {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Environment_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub BrowserVersionString: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13468,7 +16291,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Environment2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Environment2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateWebResourceRequest: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         uri: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13489,7 +16312,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Environment3 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Environment3_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateCoreWebView2CompositionControllerAsync:
         unsafe extern "system" fn(
             this: *mut ::core::ffi::c_void,
@@ -13512,7 +16335,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Environment4 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Environment4_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -13525,7 +16348,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Environment5 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Environment5_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub BrowserProcessExited: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -13547,9 +16370,72 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Environment6 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Environment6_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreatePrintSettings: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2Environment7(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2Environment7 {
+    type Vtable = ICoreWebView2Environment7_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xe1f44fe2_fc54_5383_a383_c87e1da96b83);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2Environment7_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub UserDataFolder: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2Environment8(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2Environment8 {
+    type Vtable = ICoreWebView2Environment8_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xdb67c807_d0db_5980_a3a9_75ef8f63d6f6);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2Environment8_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub ProcessInfosChanged: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveProcessInfosChanged: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub GetProcessInfos: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2Environment9(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2Environment9 {
+    type Vtable = ICoreWebView2Environment9_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xc8213ec7_7dc9_5468_a88b_15c6b7144478);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2Environment9_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub CreateContextMenuItem: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        label: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+        iconstream: ::windows::core::RawPtr,
+        kind: CoreWebView2ContextMenuItemKind,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
@@ -13564,7 +16450,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2EnvironmentOptions {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2EnvironmentOptions_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AdditionalBrowserArguments: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13603,6 +16489,28 @@ pub struct ICoreWebView2EnvironmentOptions_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct ICoreWebView2EnvironmentOptions2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2EnvironmentOptions2 {
+    type Vtable = ICoreWebView2EnvironmentOptions2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xe77350fb_77a1_56f7_be95_eb7f8a7a3072);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2EnvironmentOptions2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub ExclusiveUserDataFolderAccess: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetExclusiveUserDataFolderAccess: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    )
+        -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct ICoreWebView2EnvironmentOptions_Manual(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for ICoreWebView2EnvironmentOptions_Manual {
     type Vtable = ICoreWebView2EnvironmentOptions_Manual_Vtbl;
@@ -13612,7 +16520,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2EnvironmentOptions_Manua
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2EnvironmentOptions_Manual_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -13625,7 +16533,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2EnvironmentStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2EnvironmentStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateAsync: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -13666,7 +16574,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Frame {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Frame_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Name: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13700,6 +16608,99 @@ pub struct ICoreWebView2Frame_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct ICoreWebView2Frame2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2Frame2 {
+    type Vtable = ICoreWebView2Frame2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x33dbc9c9_a103_56e3_b722_363814200320);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2Frame2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub NavigationStarting: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveNavigationStarting: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub ContentLoading: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveContentLoading: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub NavigationCompleted: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveNavigationCompleted: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub DOMContentLoaded: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveDOMContentLoaded: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub WebMessageReceived: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveWebMessageReceived: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub ExecuteScriptAsync: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        javascript: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+    pub PostWebMessageAsJson: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        webmessageasjson: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub PostWebMessageAsString: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        webmessageasstring: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2Frame3(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2Frame3 {
+    type Vtable = ICoreWebView2Frame3_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x6545dac4_1666_50a5_bbe8_ec04842a466f);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2Frame3_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub PermissionRequested: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemovePermissionRequested: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct ICoreWebView2FrameCreatedEventArgs(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for ICoreWebView2FrameCreatedEventArgs {
     type Vtable = ICoreWebView2FrameCreatedEventArgs_Vtbl;
@@ -13709,7 +16710,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2FrameCreatedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2FrameCreatedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Frame: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -13726,7 +16727,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2FrameInfo {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2FrameInfo_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Name: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13747,7 +16748,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2HttpHeadersCollectionIte
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2HttpHeadersCollectionIterator_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -13760,7 +16761,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2HttpRequestHeaders {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2HttpRequestHeaders_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetHeader: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         name: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13797,7 +16798,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2HttpResponseHeaders {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2HttpResponseHeaders_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AppendHeader: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         name: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13830,7 +16831,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2MoveFocusRequestedEventA
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2MoveFocusRequestedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Reason: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut CoreWebView2MoveFocusReason,
@@ -13855,7 +16856,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2NavigationCompletedEvent
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2NavigationCompletedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsSuccess: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -13880,7 +16881,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2NavigationStartingEventA
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2NavigationStartingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Uri: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13912,6 +16913,28 @@ pub struct ICoreWebView2NavigationStartingEventArgs_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct ICoreWebView2NavigationStartingEventArgs2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2NavigationStartingEventArgs2 {
+    type Vtable = ICoreWebView2NavigationStartingEventArgs2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xd7a3824e_7654_5c4b_b069_e6501634d84c);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2NavigationStartingEventArgs2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub AdditionalAllowedFrameAncestors: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub SetAdditionalAllowedFrameAncestors: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    )
+        -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct ICoreWebView2NewWindowRequestedEventArgs(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for ICoreWebView2NewWindowRequestedEventArgs {
     type Vtable = ICoreWebView2NewWindowRequestedEventArgs_Vtbl;
@@ -13921,7 +16944,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2NewWindowRequestedEventA
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2NewWindowRequestedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Uri: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13966,7 +16989,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2NewWindowRequestedEventA
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2NewWindowRequestedEventArgs2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Name: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -13983,7 +17006,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2PermissionRequestedEvent
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2PermissionRequestedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Uri: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -14011,6 +17034,27 @@ pub struct ICoreWebView2PermissionRequestedEventArgs_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct ICoreWebView2PermissionRequestedEventArgs2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2PermissionRequestedEventArgs2 {
+    type Vtable = ICoreWebView2PermissionRequestedEventArgs2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xa6652fba_ebe5_5891_addc_cb37da8f7e66);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2PermissionRequestedEventArgs2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub Handled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetHandled: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct ICoreWebView2PointerInfo(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for ICoreWebView2PointerInfo {
     type Vtable = ICoreWebView2PointerInfo_Vtbl;
@@ -14020,7 +17064,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2PointerInfo {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2PointerInfo_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PointerKind: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut u32,
@@ -14257,7 +17301,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2PrintSettings {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2PrintSettings_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Orientation: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut CoreWebView2PrintOrientation,
@@ -14374,7 +17418,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2ProcessFailedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2ProcessFailedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ProcessFailedKind: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut CoreWebView2ProcessFailedKind,
@@ -14391,7 +17435,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2ProcessFailedEventArgs2 
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2ProcessFailedEventArgs2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Reason: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut CoreWebView2ProcessFailedReason,
@@ -14411,6 +17455,27 @@ pub struct ICoreWebView2ProcessFailedEventArgs2_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct ICoreWebView2ProcessInfo(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2ProcessInfo {
+    type Vtable = ICoreWebView2ProcessInfo_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xb6ec37e1_23eb_5924_b346_e837890aa9d5);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2ProcessInfo_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub ProcessId: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut i32,
+    ) -> ::windows::core::HRESULT,
+    pub Kind: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut CoreWebView2ProcessKind,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct ICoreWebView2ScriptDialogOpeningEventArgs(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for ICoreWebView2ScriptDialogOpeningEventArgs {
     type Vtable = ICoreWebView2ScriptDialogOpeningEventArgs_Vtbl;
@@ -14420,7 +17485,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2ScriptDialogOpeningEvent
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2ScriptDialogOpeningEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Uri: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -14463,7 +17528,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Settings {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Settings_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsScriptEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -14550,7 +17615,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Settings2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Settings2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub UserAgent: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -14571,7 +17636,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Settings3 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Settings3_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AreBrowserAcceleratorKeysEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -14594,7 +17659,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Settings4 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Settings4_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsPasswordAutosaveEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -14623,7 +17688,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Settings5 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Settings5_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsPinchZoomEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -14644,7 +17709,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Settings6 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Settings6_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsSwipeNavigationEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -14652,6 +17717,27 @@ pub struct ICoreWebView2Settings6_Vtbl {
     pub SetIsSwipeNavigationEnabled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         value: bool,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2Settings7(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2Settings7 {
+    type Vtable = ICoreWebView2Settings7_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x688027cd_9f84_59e8_8d5c_91123df24b92);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2Settings7_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub HiddenPdfToolbarItems: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut CoreWebView2PdfToolbarItems,
+    ) -> ::windows::core::HRESULT,
+    pub SetHiddenPdfToolbarItems: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: CoreWebView2PdfToolbarItems,
     ) -> ::windows::core::HRESULT,
 }
 #[doc(hidden)]
@@ -14665,7 +17751,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2Settings_Manual {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2Settings_Manual_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HostObjectDispatchAdapter: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -14686,7 +17772,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2SourceChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2SourceChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsNewDocument: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -14703,7 +17789,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2WebMessageReceivedEventA
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2WebMessageReceivedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Source: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -14728,7 +17814,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2WebResourceRequest {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2WebResourceRequest_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Uri: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -14769,7 +17855,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2WebResourceRequestedEven
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2WebResourceRequestedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Request: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -14802,7 +17888,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2WebResourceResponse {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2WebResourceResponse_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Content: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -14843,7 +17929,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2WebResourceResponseRecei
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2WebResourceResponseReceivedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Request: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -14864,7 +17950,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2WebResourceResponseView 
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2WebResourceResponseView_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Headers: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -14893,7 +17979,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2WindowFeatures {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2WindowFeatures_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub HasPosition: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -14937,6 +18023,85 @@ pub struct ICoreWebView2WindowFeatures_Vtbl {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct ICoreWebView2_10(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2_10 {
+    type Vtable = ICoreWebView2_10_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xa7b20434_970f_54b1_aa63_3c42671fa9ab);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2_10_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub BasicAuthenticationRequested: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveBasicAuthenticationRequested: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    )
+        -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2_11(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2_11 {
+    type Vtable = ICoreWebView2_11_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xc00acbb1_ae32_501f_ad19_9d0ac32d6142);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2_11_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub ContextMenuRequested: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveContextMenuRequested: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub CallDevToolsProtocolMethodForSessionAsync:
+        unsafe extern "system" fn(
+            this: *mut ::core::ffi::c_void,
+            sessionid: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            methodname: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            parametersasjson: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            result__: *mut ::windows::core::RawPtr,
+        ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2_12(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2_12 {
+    type Vtable = ICoreWebView2_12_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xdbbbe9a1_18d3_5f67_b362_0f4ae937d754);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2_12_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub StatusBarText: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+    ) -> ::windows::core::HRESULT,
+    pub StatusBarTextChanged: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveStatusBarTextChanged: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct ICoreWebView2_2(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for ICoreWebView2_2 {
     type Vtable = ICoreWebView2_2_Vtbl;
@@ -14946,7 +18111,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2_2 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2_2_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CookieManager: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -14990,7 +18155,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2_3 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2_3_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsSuspended: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -15025,7 +18190,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2_4 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2_4_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FrameCreated: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -15056,7 +18221,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2_5 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2_5_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ClientCertificateRequested: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -15079,7 +18244,7 @@ unsafe impl ::windows::core::Interface for ICoreWebView2_6 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2_6_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OpenTaskManagerWindow:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -15094,13 +18259,107 @@ unsafe impl ::windows::core::Interface for ICoreWebView2_7 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICoreWebView2_7_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PrintToPdfAsync: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         resultfilepath: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
         printsettings: ::windows::core::RawPtr,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2_8(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2_8 {
+    type Vtable = ICoreWebView2_8_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xaa2503c0_8d1c_5a3d_b898_f55f7595268a);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2_8_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub IsMuted: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetIsMuted: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+    pub IsDocumentPlayingAudio: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub IsMutedChanged: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveIsMutedChanged: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub IsDocumentPlayingAudioChanged: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    ) -> ::windows::core::HRESULT,
+    pub RemoveIsDocumentPlayingAudioChanged: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        token: ::windows::Foundation::EventRegistrationToken,
+    )
+        -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct ICoreWebView2_9(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for ICoreWebView2_9 {
+    type Vtable = ICoreWebView2_9_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x64b2ec16_0b29_5216_bf86_e575c88f7031);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct ICoreWebView2_9_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub IsDefaultDownloadDialogOpen: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub DefaultDownloadDialogCornerAlignment: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut CoreWebView2DefaultDownloadDialogCornerAlignment,
+    )
+        -> ::windows::core::HRESULT,
+    pub SetDefaultDownloadDialogCornerAlignment:
+        unsafe extern "system" fn(
+            this: *mut ::core::ffi::c_void,
+            value: CoreWebView2DefaultDownloadDialogCornerAlignment,
+        ) -> ::windows::core::HRESULT,
+    pub DefaultDownloadDialogMargin: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::Foundation::Point,
+    ) -> ::windows::core::HRESULT,
+    pub SetDefaultDownloadDialogMargin: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: ::windows::Foundation::Point,
+    ) -> ::windows::core::HRESULT,
+    pub IsDefaultDownloadDialogOpenChanged: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        handler: ::windows::core::RawPtr,
+        result__: *mut ::windows::Foundation::EventRegistrationToken,
+    )
+        -> ::windows::core::HRESULT,
+    pub RemoveIsDefaultDownloadDialogOpenChanged:
+        unsafe extern "system" fn(
+            this: *mut ::core::ffi::c_void,
+            token: ::windows::Foundation::EventRegistrationToken,
+        ) -> ::windows::core::HRESULT,
+    pub OpenDefaultDownloadDialog:
+        unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
+    pub CloseDefaultDownloadDialog:
+        unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
 #[cfg(feature = "implement")]
 ::core::include!("impl.rs");

@@ -10,12 +10,12 @@ impl ::windows::core::RuntimeName for IAnimationObject {
 }
 impl IAnimationObject_Vtbl {
     pub const fn new<
-        Identity: ::windows::core::IUnknownImpl,
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
         Impl: IAnimationObject_Impl,
         const OFFSET: isize,
     >() -> IAnimationObject_Vtbl {
         unsafe extern "system" fn PopulatePropertyInfo<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IAnimationObject_Impl,
             const OFFSET: isize,
         >(
@@ -23,17 +23,16 @@ impl IAnimationObject_Vtbl {
             propertyname: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
             propertyinfo: ::windows::core::RawPtr,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            (*this)
-                .PopulatePropertyInfo(
-                    ::core::mem::transmute(&propertyname),
-                    ::core::mem::transmute(&propertyinfo),
-                )
-                .into()
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            this.PopulatePropertyInfo(
+                ::core::mem::transmute(&propertyname),
+                ::core::mem::transmute(&propertyinfo),
+            )
+            .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IAnimationObject, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IAnimationObject, OFFSET>(),
             PopulatePropertyInfo: PopulatePropertyInfo::<Identity, Impl, OFFSET>,
         }
     }
@@ -47,12 +46,12 @@ impl ::windows::core::RuntimeName for ICompositionAnimationBase {
 }
 impl ICompositionAnimationBase_Vtbl {
     pub const fn new<
-        Identity: ::windows::core::IUnknownImpl,
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
         Impl: ICompositionAnimationBase_Impl,
         const OFFSET: isize,
     >() -> ICompositionAnimationBase_Vtbl {
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 ICompositionAnimationBase,
                 OFFSET,
@@ -63,18 +62,83 @@ impl ICompositionAnimationBase_Vtbl {
         iid == &<ICompositionAnimationBase as ::windows::core::Interface>::IID
     }
 }
+pub trait ICompositionSupportsSystemBackdrop_Impl: Sized {
+    fn SystemBackdrop(
+        &self,
+    ) -> ::windows::core::Result<::windows::UI::Composition::CompositionBrush>;
+    fn SetSystemBackdrop(
+        &self,
+        value: &::core::option::Option<::windows::UI::Composition::CompositionBrush>,
+    ) -> ::windows::core::Result<()>;
+}
+impl ::windows::core::RuntimeName for ICompositionSupportsSystemBackdrop {
+    const NAME: &'static str = "Microsoft.UI.Composition.ICompositionSupportsSystemBackdrop";
+}
+impl ICompositionSupportsSystemBackdrop_Vtbl {
+    pub const fn new<
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
+        Impl: ICompositionSupportsSystemBackdrop_Impl,
+        const OFFSET: isize,
+    >() -> ICompositionSupportsSystemBackdrop_Vtbl {
+        unsafe extern "system" fn SystemBackdrop<
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
+            Impl: ICompositionSupportsSystemBackdrop_Impl,
+            const OFFSET: isize,
+        >(
+            this: *mut ::core::ffi::c_void,
+            result__: *mut ::windows::core::RawPtr,
+        ) -> ::windows::core::HRESULT {
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            match this.SystemBackdrop() {
+                ::core::result::Result::Ok(ok__) => {
+                    ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
+                    ::core::mem::forget(ok__);
+                    ::windows::core::HRESULT(0)
+                }
+                ::core::result::Result::Err(err) => err.into(),
+            }
+        }
+        unsafe extern "system" fn SetSystemBackdrop<
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
+            Impl: ICompositionSupportsSystemBackdrop_Impl,
+            const OFFSET: isize,
+        >(
+            this: *mut ::core::ffi::c_void,
+            value: ::windows::core::RawPtr,
+        ) -> ::windows::core::HRESULT {
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            this.SetSystemBackdrop(::core::mem::transmute(&value))
+                .into()
+        }
+        Self {
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                ICompositionSupportsSystemBackdrop,
+                OFFSET,
+            >(),
+            SystemBackdrop: SystemBackdrop::<Identity, Impl, OFFSET>,
+            SetSystemBackdrop: SetSystemBackdrop::<Identity, Impl, OFFSET>,
+        }
+    }
+    pub fn matches(iid: &windows::core::GUID) -> bool {
+        iid == &<ICompositionSupportsSystemBackdrop as ::windows::core::Interface>::IID
+    }
+}
 pub trait ICompositionSurface_Impl: Sized {}
 impl ::windows::core::RuntimeName for ICompositionSurface {
     const NAME: &'static str = "Microsoft.UI.Composition.ICompositionSurface";
 }
 impl ICompositionSurface_Vtbl {
     pub const fn new<
-        Identity: ::windows::core::IUnknownImpl,
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
         Impl: ICompositionSurface_Impl,
         const OFFSET: isize,
     >() -> ICompositionSurface_Vtbl {
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, ICompositionSurface, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, ICompositionSurface, OFFSET>(
+            ),
         }
     }
     pub fn matches(iid: &windows::core::GUID) -> bool {
@@ -89,23 +153,23 @@ impl ::windows::core::RuntimeName for ICompositionSurfaceFacade {
 }
 impl ICompositionSurfaceFacade_Vtbl {
     pub const fn new<
-        Identity: ::windows::core::IUnknownImpl,
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
         Impl: ICompositionSurfaceFacade_Impl,
         const OFFSET: isize,
     >() -> ICompositionSurfaceFacade_Vtbl {
         unsafe extern "system" fn GetRealSurface<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: ICompositionSurfaceFacade_Impl,
             const OFFSET: isize,
         >(
             this: *mut ::core::ffi::c_void,
             result__: *mut ::windows::core::RawPtr,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            match (*this).GetRealSurface() {
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            match this.GetRealSurface() {
                 ::core::result::Result::Ok(ok__) => {
-                    *result__ = ::core::mem::transmute_copy(&ok__);
+                    ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows::core::HRESULT(0)
                 }
@@ -113,7 +177,7 @@ impl ICompositionSurfaceFacade_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 ICompositionSurfaceFacade,
                 OFFSET,
@@ -131,12 +195,12 @@ impl ::windows::core::RuntimeName for IVisualElement {
 }
 impl IVisualElement_Vtbl {
     pub const fn new<
-        Identity: ::windows::core::IUnknownImpl,
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
         Impl: IVisualElement_Impl,
         const OFFSET: isize,
     >() -> IVisualElement_Vtbl {
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IVisualElement, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IVisualElement, OFFSET>(),
         }
     }
     pub fn matches(iid: &windows::core::GUID) -> bool {
@@ -151,23 +215,23 @@ impl ::windows::core::RuntimeName for IVisualElement2 {
 }
 impl IVisualElement2_Vtbl {
     pub const fn new<
-        Identity: ::windows::core::IUnknownImpl,
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
         Impl: IVisualElement2_Impl,
         const OFFSET: isize,
     >() -> IVisualElement2_Vtbl {
         unsafe extern "system" fn GetVisualInternal<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IVisualElement2_Impl,
             const OFFSET: isize,
         >(
             this: *mut ::core::ffi::c_void,
             result__: *mut ::windows::core::RawPtr,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            match (*this).GetVisualInternal() {
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            match this.GetVisualInternal() {
                 ::core::result::Result::Ok(ok__) => {
-                    *result__ = ::core::mem::transmute_copy(&ok__);
+                    ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows::core::HRESULT(0)
                 }
@@ -175,7 +239,7 @@ impl IVisualElement2_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IVisualElement2, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IVisualElement2, OFFSET>(),
             GetVisualInternal: GetVisualInternal::<Identity, Impl, OFFSET>,
         }
     }

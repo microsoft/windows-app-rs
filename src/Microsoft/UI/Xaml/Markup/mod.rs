@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Xaml_Markup\"`*"]
 #[repr(transparent)]
 pub struct IComponentConnector(::windows::core::IUnknown);
@@ -18,7 +11,7 @@ impl IComponentConnector {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Connect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 connectionid,
                 target.into_param().abi(),
             )
@@ -36,12 +29,12 @@ impl IComponentConnector {
     ) -> ::windows::core::Result<IComponentConnector> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetBindingConnector)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 connectionid,
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<IComponentConnector>(result__)
         }
@@ -119,7 +112,7 @@ unsafe impl ::windows::core::Interface for IComponentConnector {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IComponentConnector_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Connect: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         connectionid: i32,
@@ -140,8 +133,10 @@ impl IDataTemplateComponent {
     pub fn Recycle(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Recycle)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Recycle)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Markup\"`*"]
@@ -158,7 +153,7 @@ impl IDataTemplateComponent {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ProcessBindings)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 item.into_param().abi(),
                 itemindex,
                 phase,
@@ -244,7 +239,7 @@ unsafe impl ::windows::core::Interface for IDataTemplateComponent {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDataTemplateComponent_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Recycle:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
     pub ProcessBindings: unsafe extern "system" fn(
@@ -266,7 +261,7 @@ unsafe impl ::windows::core::Interface for IMarkupExtension {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMarkupExtension_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -279,7 +274,7 @@ unsafe impl ::windows::core::Interface for IMarkupExtensionFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMarkupExtensionFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -298,7 +293,7 @@ unsafe impl ::windows::core::Interface for IMarkupExtensionOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMarkupExtensionOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ProvideValue: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -318,10 +313,10 @@ impl IProvideValueTarget {
     pub fn TargetObject(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).TargetObject)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -330,10 +325,10 @@ impl IProvideValueTarget {
     pub fn TargetProperty(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).TargetProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -411,7 +406,7 @@ unsafe impl ::windows::core::Interface for IProvideValueTarget {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IProvideValueTarget_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetObject: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -432,7 +427,7 @@ unsafe impl ::windows::core::Interface for IProvideValueTargetProperty {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IProvideValueTargetProperty_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Name: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -454,10 +449,10 @@ impl IRootObjectProvider {
     pub fn RootObject(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).RootObject)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -535,7 +530,7 @@ unsafe impl ::windows::core::Interface for IRootObjectProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRootObjectProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RootObject: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -549,10 +544,10 @@ impl IUriContext {
     pub fn BaseUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BaseUri)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
@@ -630,7 +625,7 @@ unsafe impl ::windows::core::Interface for IUriContext {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IUriContext_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub BaseUri: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -647,7 +642,7 @@ unsafe impl ::windows::core::Interface for IXamlBinaryWriter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlBinaryWriter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -660,7 +655,7 @@ unsafe impl ::windows::core::Interface for IXamlBinaryWriterStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlBinaryWriterStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Write: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         inputstreams: ::windows::core::RawPtr,
@@ -678,7 +673,7 @@ impl IXamlBindScopeDiagnostics {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Disable)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 linenumber,
                 columnnumber,
             )
@@ -766,7 +761,7 @@ unsafe impl ::windows::core::Interface for IXamlBindScopeDiagnostics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlBindScopeDiagnostics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Disable: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         linenumber: i32,
@@ -784,7 +779,7 @@ unsafe impl ::windows::core::Interface for IXamlBindingHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlBindingHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -797,7 +792,7 @@ unsafe impl ::windows::core::Interface for IXamlBindingHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlBindingHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DataTemplateComponentProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -940,7 +935,7 @@ unsafe impl ::windows::core::Interface for IXamlMarkupHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlMarkupHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -953,7 +948,7 @@ unsafe impl ::windows::core::Interface for IXamlMarkupHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlMarkupHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub UnloadObject: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         element: ::windows::core::RawPtr,
@@ -967,10 +962,10 @@ impl IXamlMember {
     pub fn IsAttachable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsAttachable)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -979,10 +974,10 @@ impl IXamlMember {
     pub fn IsDependencyProperty(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsDependencyProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -991,10 +986,10 @@ impl IXamlMember {
     pub fn IsReadOnly(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsReadOnly)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1003,11 +998,12 @@ impl IXamlMember {
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Name)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -1016,10 +1012,10 @@ impl IXamlMember {
     pub fn TargetType(&self) -> ::windows::core::Result<IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TargetType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IXamlType>(result__)
         }
@@ -1028,10 +1024,10 @@ impl IXamlMember {
     pub fn Type(&self) -> ::windows::core::Result<IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Type)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IXamlType>(result__)
         }
@@ -1043,11 +1039,11 @@ impl IXamlMember {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 instance.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1065,7 +1061,7 @@ impl IXamlMember {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 instance.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1145,7 +1141,7 @@ unsafe impl ::windows::core::Interface for IXamlMember {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlMember_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsAttachable: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -1195,11 +1191,11 @@ impl IXamlMetadataProvider {
     ) -> ::windows::core::Result<IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetXamlType)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 r#type.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<IXamlType>(result__)
         }
@@ -1214,11 +1210,11 @@ impl IXamlMetadataProvider {
     ) -> ::windows::core::Result<IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetXamlTypeByFullName)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 fullname.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<IXamlType>(result__)
         }
@@ -1229,13 +1225,14 @@ impl IXamlMetadataProvider {
     ) -> ::windows::core::Result<::windows::core::Array<XmlnsDefinition>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::Array<XmlnsDefinition> = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::core::Array<XmlnsDefinition>>::zeroed();
             (::windows::core::Interface::vtable(this).GetXmlnsDefinitions)(
-                ::core::mem::transmute_copy(this),
-                ::windows::core::Array::<XmlnsDefinition>::set_abi_len(&mut result__),
-                &mut result__ as *mut _ as _,
+                ::windows::core::Interface::as_raw(this),
+                ::windows::core::Array::<XmlnsDefinition>::set_abi_len(result__.assume_init_mut()),
+                result__.as_mut_ptr() as *mut _ as _,
             )
-            .and_then(|| result__)
+            .and_then(|| result__.assume_init())
         }
     }
 }
@@ -1315,7 +1312,7 @@ unsafe impl ::windows::core::Interface for IXamlMetadataProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlMetadataProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetXamlType: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         r#type: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
@@ -1343,7 +1340,7 @@ unsafe impl ::windows::core::Interface for IXamlReader {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlReader_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1356,7 +1353,7 @@ unsafe impl ::windows::core::Interface for IXamlReaderStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlReaderStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Load: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         xaml: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -1377,10 +1374,10 @@ impl IXamlType {
     pub fn BaseType(&self) -> ::windows::core::Result<IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BaseType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IXamlType>(result__)
         }
@@ -1389,10 +1386,10 @@ impl IXamlType {
     pub fn ContentProperty(&self) -> ::windows::core::Result<IXamlMember> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ContentProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IXamlMember>(result__)
         }
@@ -1401,11 +1398,12 @@ impl IXamlType {
     pub fn FullName(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).FullName)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -1414,10 +1412,10 @@ impl IXamlType {
     pub fn IsArray(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsArray)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1426,10 +1424,10 @@ impl IXamlType {
     pub fn IsCollection(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsCollection)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1438,10 +1436,10 @@ impl IXamlType {
     pub fn IsConstructible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsConstructible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1450,10 +1448,10 @@ impl IXamlType {
     pub fn IsDictionary(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsDictionary)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1462,10 +1460,10 @@ impl IXamlType {
     pub fn IsMarkupExtension(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsMarkupExtension)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1474,10 +1472,10 @@ impl IXamlType {
     pub fn IsBindable(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsBindable)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1486,10 +1484,10 @@ impl IXamlType {
     pub fn ItemType(&self) -> ::windows::core::Result<IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ItemType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IXamlType>(result__)
         }
@@ -1498,10 +1496,10 @@ impl IXamlType {
     pub fn KeyType(&self) -> ::windows::core::Result<IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IXamlType>(result__)
         }
@@ -1510,10 +1508,10 @@ impl IXamlType {
     pub fn BoxedType(&self) -> ::windows::core::Result<IXamlType> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BoxedType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IXamlType>(result__)
         }
@@ -1524,11 +1522,12 @@ impl IXamlType {
     ) -> ::windows::core::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).UnderlyingType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
         }
@@ -1537,10 +1536,10 @@ impl IXamlType {
     pub fn ActivateInstance(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ActivateInstance)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1555,11 +1554,11 @@ impl IXamlType {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).CreateFromString)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1571,11 +1570,11 @@ impl IXamlType {
     ) -> ::windows::core::Result<IXamlMember> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetMember)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<IXamlMember>(result__)
         }
@@ -1593,7 +1592,7 @@ impl IXamlType {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).AddToVector)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 instance.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1615,7 +1614,7 @@ impl IXamlType {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).AddToMap)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 instance.into_param().abi(),
                 key.into_param().abi(),
                 value.into_param().abi(),
@@ -1627,9 +1626,9 @@ impl IXamlType {
     pub fn RunInitializer(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).RunInitializer)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).RunInitializer)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -1706,7 +1705,7 @@ unsafe impl ::windows::core::Interface for IXamlType {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlType_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub BaseType: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1798,12 +1797,13 @@ impl IXamlTypeResolver {
     ) -> ::windows::core::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Resolve)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 qualifiedtypename.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
         }
@@ -1881,7 +1881,7 @@ unsafe impl ::windows::core::Interface for IXamlTypeResolver {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlTypeResolver_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Resolve: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         qualifiedtypename: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -1895,12 +1895,12 @@ impl MarkupExtension {
     #[doc = "*Required features: `\"UI_Xaml_Markup\"`*"]
     pub fn new() -> ::windows::core::Result<MarkupExtension> {
         Self::IMarkupExtensionFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<MarkupExtension>(result__)
         })
@@ -1911,12 +1911,12 @@ impl MarkupExtension {
     ) -> ::windows::core::Result<MarkupExtension> {
         Self::IMarkupExtensionFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<MarkupExtension>(result__)
         })
@@ -2016,13 +2016,13 @@ impl ProvideValueTargetProperty {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             ProvideValueTargetProperty,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -2030,11 +2030,12 @@ impl ProvideValueTargetProperty {
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Name)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -2043,11 +2044,12 @@ impl ProvideValueTargetProperty {
     pub fn Type(&self) -> ::windows::core::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Type)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
         }
@@ -2056,11 +2058,12 @@ impl ProvideValueTargetProperty {
     pub fn DeclaringType(&self) -> ::windows::core::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).DeclaringType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
         }
@@ -2173,13 +2176,14 @@ impl XamlBinaryWriter {
         xamlmetadataprovider: Param2,
     ) -> ::windows::core::Result<XamlBinaryWriterErrorInformation> {
         Self::IXamlBinaryWriterStatics(|this| unsafe {
-            let mut result__: XamlBinaryWriterErrorInformation = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<XamlBinaryWriterErrorInformation>::zeroed();
             (::windows::core::Interface::vtable(this).Write)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 inputstreams.into_param().abi(),
                 outputstreams.into_param().abi(),
                 xamlmetadataprovider.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<XamlBinaryWriterErrorInformation>(result__)
         })
@@ -2330,10 +2334,10 @@ impl XamlBindingHelper {
     #[doc = "*Required features: `\"UI_Xaml_Markup\"`*"]
     pub fn DataTemplateComponentProperty() -> ::windows::core::Result<super::DependencyProperty> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DataTemplateComponentProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::DependencyProperty>(result__)
         })
@@ -2346,11 +2350,11 @@ impl XamlBindingHelper {
         element: Param0,
     ) -> ::windows::core::Result<IDataTemplateComponent> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDataTemplateComponent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<IDataTemplateComponent>(result__)
         })
@@ -2366,7 +2370,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetDataTemplateComponent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -2379,7 +2383,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SuspendRendering)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
             )
             .ok()
@@ -2391,7 +2395,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).ResumeRendering)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
             )
             .ok()
@@ -2407,12 +2411,12 @@ impl XamlBindingHelper {
         value: Param1,
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ConvertValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 r#type.into_param().abi(),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         })
@@ -2430,7 +2434,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromString)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value.into_param().abi(),
@@ -2450,7 +2454,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromBoolean)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value,
@@ -2470,7 +2474,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromChar16)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value,
@@ -2491,7 +2495,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromDateTime)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value.into_param().abi(),
@@ -2511,7 +2515,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromDouble)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value,
@@ -2531,7 +2535,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromInt32)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value,
@@ -2551,7 +2555,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromUInt32)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value,
@@ -2571,7 +2575,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromInt64)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value,
@@ -2591,7 +2595,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromUInt64)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value,
@@ -2611,7 +2615,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromSingle)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value,
@@ -2632,7 +2636,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value.into_param().abi(),
@@ -2653,7 +2657,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromRect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value.into_param().abi(),
@@ -2674,7 +2678,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromSize)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value.into_param().abi(),
@@ -2695,7 +2699,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromTimeSpan)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value.into_param().abi(),
@@ -2715,7 +2719,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromByte)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value,
@@ -2736,7 +2740,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromUri)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value.into_param().abi(),
@@ -2757,7 +2761,7 @@ impl XamlBindingHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlBindingHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetPropertyFromObject)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dependencyobject.into_param().abi(),
                 propertytoset.into_param().abi(),
                 value.into_param().abi(),
@@ -2863,7 +2867,7 @@ impl XamlMarkupHelper {
     ) -> ::windows::core::Result<()> {
         Self::IXamlMarkupHelperStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).UnloadObject)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
             )
             .ok()
@@ -2966,11 +2970,11 @@ impl XamlReader {
         xaml: Param0,
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         Self::IXamlReaderStatics(|this| unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).Load)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 xaml.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         })
@@ -2983,11 +2987,11 @@ impl XamlReader {
         xaml: Param0,
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         Self::IXamlReaderStatics(|this| unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).LoadWithInitialTemplateValidation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 xaml.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         })

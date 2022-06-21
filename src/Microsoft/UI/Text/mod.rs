@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Text\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
@@ -111,10 +104,11 @@ impl FontWeights {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Black() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontWeight>::zeroed();
             (::windows::core::Interface::vtable(this).Black)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
@@ -122,10 +116,11 @@ impl FontWeights {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Bold() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontWeight>::zeroed();
             (::windows::core::Interface::vtable(this).Bold)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
@@ -133,10 +128,11 @@ impl FontWeights {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ExtraBlack() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontWeight>::zeroed();
             (::windows::core::Interface::vtable(this).ExtraBlack)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
@@ -144,10 +140,11 @@ impl FontWeights {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ExtraBold() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontWeight>::zeroed();
             (::windows::core::Interface::vtable(this).ExtraBold)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
@@ -155,10 +152,11 @@ impl FontWeights {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn ExtraLight() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontWeight>::zeroed();
             (::windows::core::Interface::vtable(this).ExtraLight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
@@ -166,10 +164,11 @@ impl FontWeights {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Light() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontWeight>::zeroed();
             (::windows::core::Interface::vtable(this).Light)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
@@ -177,10 +176,11 @@ impl FontWeights {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Medium() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontWeight>::zeroed();
             (::windows::core::Interface::vtable(this).Medium)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
@@ -188,10 +188,11 @@ impl FontWeights {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Normal() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontWeight>::zeroed();
             (::windows::core::Interface::vtable(this).Normal)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
@@ -199,10 +200,11 @@ impl FontWeights {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SemiBold() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontWeight>::zeroed();
             (::windows::core::Interface::vtable(this).SemiBold)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
@@ -210,10 +212,11 @@ impl FontWeights {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn SemiLight() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontWeight>::zeroed();
             (::windows::core::Interface::vtable(this).SemiLight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
@@ -221,10 +224,11 @@ impl FontWeights {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Thin() -> ::windows::core::Result<::windows::UI::Text::FontWeight> {
         Self::IFontWeightsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontWeight = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontWeight>::zeroed();
             (::windows::core::Interface::vtable(this).Thin)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontWeight>(result__)
         })
@@ -399,7 +403,7 @@ unsafe impl ::windows::core::Interface for IFontWeights {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFontWeights_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -412,7 +416,7 @@ unsafe impl ::windows::core::Interface for IFontWeightsStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFontWeightsStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Black: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::UI::Text::FontWeight,
@@ -466,10 +470,10 @@ impl ITextCharacterFormat {
     pub fn AllCaps(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).AllCaps)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -479,7 +483,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAllCaps)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -489,10 +493,10 @@ impl ITextCharacterFormat {
     pub fn BackgroundColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::UI::Color>::zeroed();
             (::windows::core::Interface::vtable(this).BackgroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Color>(result__)
         }
@@ -505,7 +509,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBackgroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -515,10 +519,10 @@ impl ITextCharacterFormat {
     pub fn Bold(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).Bold)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -528,7 +532,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBold)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -538,10 +542,11 @@ impl ITextCharacterFormat {
     pub fn FontStretch(&self) -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontStretch>::zeroed();
             (::windows::core::Interface::vtable(this).FontStretch)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         }
@@ -554,7 +559,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFontStretch)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -564,10 +569,10 @@ impl ITextCharacterFormat {
     pub fn FontStyle(&self) -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::UI::Text::FontStyle>::zeroed();
             (::windows::core::Interface::vtable(this).FontStyle)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         }
@@ -580,7 +585,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFontStyle)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -590,10 +595,10 @@ impl ITextCharacterFormat {
     pub fn ForegroundColor(&self) -> ::windows::core::Result<::windows::UI::Color> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::UI::Color>::zeroed();
             (::windows::core::Interface::vtable(this).ForegroundColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Color>(result__)
         }
@@ -606,7 +611,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetForegroundColor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -616,10 +621,10 @@ impl ITextCharacterFormat {
     pub fn Hidden(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).Hidden)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -629,7 +634,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHidden)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -639,10 +644,10 @@ impl ITextCharacterFormat {
     pub fn Italic(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).Italic)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -652,7 +657,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetItalic)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -662,10 +667,10 @@ impl ITextCharacterFormat {
     pub fn Kerning(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).Kerning)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -675,7 +680,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKerning)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -685,11 +690,12 @@ impl ITextCharacterFormat {
     pub fn LanguageTag(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).LanguageTag)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -702,7 +708,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetLanguageTag)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -712,10 +718,10 @@ impl ITextCharacterFormat {
     pub fn LinkType(&self) -> ::windows::core::Result<LinkType> {
         let this = self;
         unsafe {
-            let mut result__: LinkType = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<LinkType>::zeroed();
             (::windows::core::Interface::vtable(this).LinkType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<LinkType>(result__)
         }
@@ -724,11 +730,12 @@ impl ITextCharacterFormat {
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Name)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -741,7 +748,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetName)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -751,10 +758,10 @@ impl ITextCharacterFormat {
     pub fn Outline(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).Outline)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -764,7 +771,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetOutline)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -774,10 +781,10 @@ impl ITextCharacterFormat {
     pub fn Position(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).Position)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -787,7 +794,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPosition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -797,10 +804,10 @@ impl ITextCharacterFormat {
     pub fn ProtectedText(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).ProtectedText)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -810,7 +817,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetProtectedText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -820,10 +827,10 @@ impl ITextCharacterFormat {
     pub fn Size(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -833,7 +840,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSize)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -843,10 +850,10 @@ impl ITextCharacterFormat {
     pub fn SmallCaps(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).SmallCaps)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -856,7 +863,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSmallCaps)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -866,10 +873,10 @@ impl ITextCharacterFormat {
     pub fn Spacing(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).Spacing)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -879,7 +886,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSpacing)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -889,10 +896,10 @@ impl ITextCharacterFormat {
     pub fn Strikethrough(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).Strikethrough)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -902,7 +909,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetStrikethrough)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -912,10 +919,10 @@ impl ITextCharacterFormat {
     pub fn Subscript(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).Subscript)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -925,7 +932,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSubscript)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -935,10 +942,10 @@ impl ITextCharacterFormat {
     pub fn Superscript(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).Superscript)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -948,7 +955,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSuperscript)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -958,10 +965,10 @@ impl ITextCharacterFormat {
     pub fn TextScript(&self) -> ::windows::core::Result<TextScript> {
         let this = self;
         unsafe {
-            let mut result__: TextScript = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<TextScript>::zeroed();
             (::windows::core::Interface::vtable(this).TextScript)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<TextScript>(result__)
         }
@@ -971,7 +978,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTextScript)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -981,10 +988,10 @@ impl ITextCharacterFormat {
     pub fn Underline(&self) -> ::windows::core::Result<UnderlineType> {
         let this = self;
         unsafe {
-            let mut result__: UnderlineType = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<UnderlineType>::zeroed();
             (::windows::core::Interface::vtable(this).Underline)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<UnderlineType>(result__)
         }
@@ -994,7 +1001,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetUnderline)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1004,10 +1011,10 @@ impl ITextCharacterFormat {
     pub fn Weight(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Weight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1017,7 +1024,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetWeight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1031,7 +1038,7 @@ impl ITextCharacterFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetClone)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1041,10 +1048,10 @@ impl ITextCharacterFormat {
     pub fn GetClone(&self) -> ::windows::core::Result<ITextCharacterFormat> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetClone)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextCharacterFormat>(result__)
         }
@@ -1056,11 +1063,11 @@ impl ITextCharacterFormat {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsEqual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 format.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1142,7 +1149,7 @@ unsafe impl ::windows::core::Interface for ITextCharacterFormat {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextCharacterFormat_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AllCaps: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut FormatEffect,
@@ -1356,7 +1363,7 @@ unsafe impl ::windows::core::Interface for ITextConstantsStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextConstantsStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AutoColor: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::UI::Color,
@@ -1401,7 +1408,7 @@ unsafe impl ::windows::core::Interface for ITextDocument {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextDocument_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CaretType: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut CaretType,
@@ -1538,10 +1545,10 @@ impl ITextParagraphFormat {
     pub fn Alignment(&self) -> ::windows::core::Result<ParagraphAlignment> {
         let this = self;
         unsafe {
-            let mut result__: ParagraphAlignment = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<ParagraphAlignment>::zeroed();
             (::windows::core::Interface::vtable(this).Alignment)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ParagraphAlignment>(result__)
         }
@@ -1551,7 +1558,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAlignment)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1561,10 +1568,10 @@ impl ITextParagraphFormat {
     pub fn FirstLineIndent(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).FirstLineIndent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -1573,10 +1580,10 @@ impl ITextParagraphFormat {
     pub fn KeepTogether(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).KeepTogether)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -1586,7 +1593,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeepTogether)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1596,10 +1603,10 @@ impl ITextParagraphFormat {
     pub fn KeepWithNext(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).KeepWithNext)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -1609,7 +1616,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeepWithNext)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1619,10 +1626,10 @@ impl ITextParagraphFormat {
     pub fn LeftIndent(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).LeftIndent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -1631,10 +1638,10 @@ impl ITextParagraphFormat {
     pub fn LineSpacing(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).LineSpacing)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -1643,10 +1650,10 @@ impl ITextParagraphFormat {
     pub fn LineSpacingRule(&self) -> ::windows::core::Result<LineSpacingRule> {
         let this = self;
         unsafe {
-            let mut result__: LineSpacingRule = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<LineSpacingRule>::zeroed();
             (::windows::core::Interface::vtable(this).LineSpacingRule)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<LineSpacingRule>(result__)
         }
@@ -1655,10 +1662,10 @@ impl ITextParagraphFormat {
     pub fn ListAlignment(&self) -> ::windows::core::Result<MarkerAlignment> {
         let this = self;
         unsafe {
-            let mut result__: MarkerAlignment = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<MarkerAlignment>::zeroed();
             (::windows::core::Interface::vtable(this).ListAlignment)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<MarkerAlignment>(result__)
         }
@@ -1668,7 +1675,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetListAlignment)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1678,10 +1685,10 @@ impl ITextParagraphFormat {
     pub fn ListLevelIndex(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).ListLevelIndex)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1691,7 +1698,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetListLevelIndex)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1701,10 +1708,10 @@ impl ITextParagraphFormat {
     pub fn ListStart(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).ListStart)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1714,7 +1721,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetListStart)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1724,10 +1731,10 @@ impl ITextParagraphFormat {
     pub fn ListStyle(&self) -> ::windows::core::Result<MarkerStyle> {
         let this = self;
         unsafe {
-            let mut result__: MarkerStyle = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<MarkerStyle>::zeroed();
             (::windows::core::Interface::vtable(this).ListStyle)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<MarkerStyle>(result__)
         }
@@ -1737,7 +1744,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetListStyle)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1747,10 +1754,10 @@ impl ITextParagraphFormat {
     pub fn ListTab(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).ListTab)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -1760,7 +1767,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetListTab)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1770,10 +1777,10 @@ impl ITextParagraphFormat {
     pub fn ListType(&self) -> ::windows::core::Result<MarkerType> {
         let this = self;
         unsafe {
-            let mut result__: MarkerType = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<MarkerType>::zeroed();
             (::windows::core::Interface::vtable(this).ListType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<MarkerType>(result__)
         }
@@ -1783,7 +1790,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetListType)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1793,10 +1800,10 @@ impl ITextParagraphFormat {
     pub fn NoLineNumber(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).NoLineNumber)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -1806,7 +1813,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetNoLineNumber)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1816,10 +1823,10 @@ impl ITextParagraphFormat {
     pub fn PageBreakBefore(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).PageBreakBefore)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -1829,7 +1836,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPageBreakBefore)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1839,10 +1846,10 @@ impl ITextParagraphFormat {
     pub fn RightIndent(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).RightIndent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -1852,7 +1859,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRightIndent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1862,10 +1869,10 @@ impl ITextParagraphFormat {
     pub fn RightToLeft(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).RightToLeft)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -1875,7 +1882,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRightToLeft)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1885,10 +1892,10 @@ impl ITextParagraphFormat {
     pub fn Style(&self) -> ::windows::core::Result<ParagraphStyle> {
         let this = self;
         unsafe {
-            let mut result__: ParagraphStyle = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<ParagraphStyle>::zeroed();
             (::windows::core::Interface::vtable(this).Style)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ParagraphStyle>(result__)
         }
@@ -1898,7 +1905,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetStyle)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1908,10 +1915,10 @@ impl ITextParagraphFormat {
     pub fn SpaceAfter(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).SpaceAfter)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -1921,7 +1928,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSpaceAfter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1931,10 +1938,10 @@ impl ITextParagraphFormat {
     pub fn SpaceBefore(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).SpaceBefore)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -1944,7 +1951,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSpaceBefore)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1954,10 +1961,10 @@ impl ITextParagraphFormat {
     pub fn WidowControl(&self) -> ::windows::core::Result<FormatEffect> {
         let this = self;
         unsafe {
-            let mut result__: FormatEffect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FormatEffect>::zeroed();
             (::windows::core::Interface::vtable(this).WidowControl)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FormatEffect>(result__)
         }
@@ -1967,7 +1974,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetWidowControl)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1977,10 +1984,10 @@ impl ITextParagraphFormat {
     pub fn TabCount(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).TabCount)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1995,7 +2002,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).AddTab)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 position,
                 align,
                 leader,
@@ -2007,9 +2014,9 @@ impl ITextParagraphFormat {
     pub fn ClearAllTabs(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).ClearAllTabs)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).ClearAllTabs)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -2018,7 +2025,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).DeleteTab)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 position,
             )
             .ok()
@@ -2028,10 +2035,10 @@ impl ITextParagraphFormat {
     pub fn GetClone(&self) -> ::windows::core::Result<ITextParagraphFormat> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetClone)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextParagraphFormat>(result__)
         }
@@ -2047,7 +2054,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetTab)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 position,
                 align,
@@ -2063,11 +2070,11 @@ impl ITextParagraphFormat {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsEqual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 format.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2080,7 +2087,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetClone)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 format.into_param().abi(),
             )
             .ok()
@@ -2091,7 +2098,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIndents)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 start,
                 left,
                 right,
@@ -2108,7 +2115,7 @@ impl ITextParagraphFormat {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetLineSpacing)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 rule,
                 spacing,
             )
@@ -2192,7 +2199,7 @@ unsafe impl ::windows::core::Interface for ITextParagraphFormat {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextParagraphFormat_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Alignment: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ParagraphAlignment,
@@ -2401,10 +2408,10 @@ impl ITextRange {
     pub fn Character(&self) -> ::windows::core::Result<u16> {
         let this = self;
         unsafe {
-            let mut result__: u16 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u16>::zeroed();
             (::windows::core::Interface::vtable(this).Character)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u16>(result__)
         }
@@ -2414,7 +2421,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCharacter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -2424,10 +2431,10 @@ impl ITextRange {
     pub fn CharacterFormat(&self) -> ::windows::core::Result<ITextCharacterFormat> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CharacterFormat)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextCharacterFormat>(result__)
         }
@@ -2440,7 +2447,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCharacterFormat)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2450,10 +2457,10 @@ impl ITextRange {
     pub fn FormattedText(&self) -> ::windows::core::Result<ITextRange> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FormattedText)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRange>(result__)
         }
@@ -2466,7 +2473,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFormattedText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2476,10 +2483,10 @@ impl ITextRange {
     pub fn EndPosition(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).EndPosition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2489,7 +2496,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetEndPosition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -2499,10 +2506,10 @@ impl ITextRange {
     pub fn Gravity(&self) -> ::windows::core::Result<RangeGravity> {
         let this = self;
         unsafe {
-            let mut result__: RangeGravity = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<RangeGravity>::zeroed();
             (::windows::core::Interface::vtable(this).Gravity)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RangeGravity>(result__)
         }
@@ -2512,7 +2519,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetGravity)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -2522,10 +2529,10 @@ impl ITextRange {
     pub fn Length(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Length)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2534,11 +2541,12 @@ impl ITextRange {
     pub fn Link(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Link)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -2551,7 +2559,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetLink)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2561,10 +2569,10 @@ impl ITextRange {
     pub fn ParagraphFormat(&self) -> ::windows::core::Result<ITextParagraphFormat> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ParagraphFormat)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextParagraphFormat>(result__)
         }
@@ -2577,7 +2585,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetParagraphFormat)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2587,10 +2595,10 @@ impl ITextRange {
     pub fn StartPosition(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StartPosition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2600,7 +2608,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetStartPosition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -2610,10 +2618,10 @@ impl ITextRange {
     pub fn StoryLength(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StoryLength)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2622,11 +2630,12 @@ impl ITextRange {
     pub fn Text(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Text)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -2639,7 +2648,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2649,11 +2658,11 @@ impl ITextRange {
     pub fn CanPaste(&self, format: i32) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanPaste)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 format,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2663,7 +2672,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ChangeCase)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -2674,7 +2683,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Collapse)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -2684,26 +2693,30 @@ impl ITextRange {
     pub fn Copy(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Copy)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Copy)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Cut(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Cut)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Cut)(::windows::core::Interface::as_raw(this))
+                .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Delete(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Delete)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2712,12 +2725,12 @@ impl ITextRange {
     pub fn EndOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).EndOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2726,11 +2739,11 @@ impl ITextRange {
     pub fn Expand(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Expand)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2744,13 +2757,13 @@ impl ITextRange {
     ) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).FindText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
                 scanlength,
                 options,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2760,7 +2773,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetCharacterUtf32)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
                 offset,
             )
@@ -2771,10 +2784,10 @@ impl ITextRange {
     pub fn GetClone(&self) -> ::windows::core::Result<ITextRange> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetClone)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRange>(result__)
         }
@@ -2783,11 +2796,11 @@ impl ITextRange {
     pub fn GetIndex(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).GetIndex)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2803,7 +2816,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 horizontalalign,
                 verticalalign,
                 options,
@@ -2822,7 +2835,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetRect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 rect,
                 hit,
@@ -2839,7 +2852,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value as *mut _ as _,
             )
@@ -2858,7 +2871,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetTextViaStream)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -2872,11 +2885,11 @@ impl ITextRange {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).InRange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 range.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2898,7 +2911,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).InsertImage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 width,
                 height,
                 ascent,
@@ -2916,11 +2929,11 @@ impl ITextRange {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).InStory)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 range.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2932,11 +2945,11 @@ impl ITextRange {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsEqual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 range.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -2945,12 +2958,12 @@ impl ITextRange {
     pub fn Move(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Move)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2959,12 +2972,12 @@ impl ITextRange {
     pub fn MoveEnd(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveEnd)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2973,12 +2986,12 @@ impl ITextRange {
     pub fn MoveStart(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveStart)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2988,7 +3001,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Paste)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 format,
             )
             .ok()
@@ -2999,7 +3012,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ScrollIntoView)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3009,9 +3022,9 @@ impl ITextRange {
     pub fn MatchSelection(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).MatchSelection)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).MatchSelection)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -3025,7 +3038,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIndex)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 index,
                 extend,
@@ -3043,7 +3056,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 point.into_param().abi(),
                 options,
                 extend,
@@ -3056,7 +3069,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 startposition,
                 endposition,
             )
@@ -3072,7 +3085,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetText2)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -3091,7 +3104,7 @@ impl ITextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTextViaStream)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -3102,12 +3115,12 @@ impl ITextRange {
     pub fn StartOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StartOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3185,7 +3198,7 @@ unsafe impl ::windows::core::Interface for ITextRange {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextRange_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Character: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut u16,
@@ -3436,10 +3449,10 @@ impl ITextSelection {
     pub fn Options(&self) -> ::windows::core::Result<SelectionOptions> {
         let this = self;
         unsafe {
-            let mut result__: SelectionOptions = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<SelectionOptions>::zeroed();
             (::windows::core::Interface::vtable(this).Options)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<SelectionOptions>(result__)
         }
@@ -3449,7 +3462,7 @@ impl ITextSelection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetOptions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3459,10 +3472,10 @@ impl ITextSelection {
     pub fn Type(&self) -> ::windows::core::Result<SelectionType> {
         let this = self;
         unsafe {
-            let mut result__: SelectionType = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<SelectionType>::zeroed();
             (::windows::core::Interface::vtable(this).Type)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<SelectionType>(result__)
         }
@@ -3471,12 +3484,12 @@ impl ITextSelection {
     pub fn EndKey(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).EndKey)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3485,12 +3498,12 @@ impl ITextSelection {
     pub fn HomeKey(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).HomeKey)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3504,13 +3517,13 @@ impl ITextSelection {
     ) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveDown)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3524,13 +3537,13 @@ impl ITextSelection {
     ) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveLeft)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3544,13 +3557,13 @@ impl ITextSelection {
     ) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveRight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3564,13 +3577,13 @@ impl ITextSelection {
     ) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveUp)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3583,7 +3596,7 @@ impl ITextSelection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).TypeText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3593,10 +3606,10 @@ impl ITextSelection {
     pub fn Character(&self) -> ::windows::core::Result<u16> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: u16 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u16>::zeroed();
             (::windows::core::Interface::vtable(this).Character)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u16>(result__)
         }
@@ -3606,7 +3619,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCharacter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3616,10 +3629,10 @@ impl ITextSelection {
     pub fn CharacterFormat(&self) -> ::windows::core::Result<ITextCharacterFormat> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CharacterFormat)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextCharacterFormat>(result__)
         }
@@ -3632,7 +3645,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCharacterFormat)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3642,10 +3655,10 @@ impl ITextSelection {
     pub fn FormattedText(&self) -> ::windows::core::Result<ITextRange> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FormattedText)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRange>(result__)
         }
@@ -3658,7 +3671,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFormattedText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3668,10 +3681,10 @@ impl ITextSelection {
     pub fn EndPosition(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).EndPosition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3681,7 +3694,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetEndPosition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3691,10 +3704,10 @@ impl ITextSelection {
     pub fn Gravity(&self) -> ::windows::core::Result<RangeGravity> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: RangeGravity = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<RangeGravity>::zeroed();
             (::windows::core::Interface::vtable(this).Gravity)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RangeGravity>(result__)
         }
@@ -3704,7 +3717,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetGravity)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3714,10 +3727,10 @@ impl ITextSelection {
     pub fn Length(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Length)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3726,11 +3739,12 @@ impl ITextSelection {
     pub fn Link(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Link)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -3743,7 +3757,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetLink)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3753,10 +3767,10 @@ impl ITextSelection {
     pub fn ParagraphFormat(&self) -> ::windows::core::Result<ITextParagraphFormat> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ParagraphFormat)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextParagraphFormat>(result__)
         }
@@ -3769,7 +3783,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetParagraphFormat)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3779,10 +3793,10 @@ impl ITextSelection {
     pub fn StartPosition(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StartPosition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3792,7 +3806,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetStartPosition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3802,10 +3816,10 @@ impl ITextSelection {
     pub fn StoryLength(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StoryLength)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3814,11 +3828,12 @@ impl ITextSelection {
     pub fn Text(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Text)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -3831,7 +3846,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3841,11 +3856,11 @@ impl ITextSelection {
     pub fn CanPaste(&self, format: i32) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanPaste)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 format,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3855,7 +3870,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ChangeCase)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3866,7 +3881,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Collapse)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3876,26 +3891,30 @@ impl ITextSelection {
     pub fn Copy(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Copy)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Copy)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Cut(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Cut)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Cut)(::windows::core::Interface::as_raw(this))
+                .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Delete(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Delete)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3904,12 +3923,12 @@ impl ITextSelection {
     pub fn EndOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).EndOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3918,11 +3937,11 @@ impl ITextSelection {
     pub fn Expand(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Expand)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3936,13 +3955,13 @@ impl ITextSelection {
     ) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).FindText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
                 scanlength,
                 options,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3952,7 +3971,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).GetCharacterUtf32)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
                 offset,
             )
@@ -3963,10 +3982,10 @@ impl ITextSelection {
     pub fn GetClone(&self) -> ::windows::core::Result<ITextRange> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetClone)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRange>(result__)
         }
@@ -3975,11 +3994,11 @@ impl ITextSelection {
     pub fn GetIndex(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).GetIndex)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -3995,7 +4014,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).GetPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 horizontalalign,
                 verticalalign,
                 options,
@@ -4014,7 +4033,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).GetRect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 rect,
                 hit,
@@ -4031,7 +4050,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).GetText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value as *mut _ as _,
             )
@@ -4050,7 +4069,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).GetTextViaStream)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -4064,11 +4083,11 @@ impl ITextSelection {
     ) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).InRange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 range.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4090,7 +4109,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).InsertImage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 width,
                 height,
                 ascent,
@@ -4108,11 +4127,11 @@ impl ITextSelection {
     ) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).InStory)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 range.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4124,11 +4143,11 @@ impl ITextSelection {
     ) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsEqual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 range.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4137,12 +4156,12 @@ impl ITextSelection {
     pub fn Move(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Move)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4151,12 +4170,12 @@ impl ITextSelection {
     pub fn MoveEnd(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveEnd)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4165,12 +4184,12 @@ impl ITextSelection {
     pub fn MoveStart(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveStart)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4180,7 +4199,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Paste)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 format,
             )
             .ok()
@@ -4191,7 +4210,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ScrollIntoView)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4201,9 +4220,9 @@ impl ITextSelection {
     pub fn MatchSelection(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).MatchSelection)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).MatchSelection)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -4217,7 +4236,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIndex)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 index,
                 extend,
@@ -4235,7 +4254,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 point.into_param().abi(),
                 options,
                 extend,
@@ -4248,7 +4267,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 startposition,
                 endposition,
             )
@@ -4264,7 +4283,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetText2)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -4283,7 +4302,7 @@ impl ITextSelection {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTextViaStream)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -4294,12 +4313,12 @@ impl ITextSelection {
     pub fn StartOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<ITextRange>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StartOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4401,7 +4420,7 @@ unsafe impl ::windows::core::Interface for ITextSelection {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITextSelection_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Options: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut SelectionOptions,
@@ -4945,10 +4964,10 @@ impl RichEditTextDocument {
     pub fn CaretType(&self) -> ::windows::core::Result<CaretType> {
         let this = self;
         unsafe {
-            let mut result__: CaretType = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CaretType>::zeroed();
             (::windows::core::Interface::vtable(this).CaretType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CaretType>(result__)
         }
@@ -4958,7 +4977,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCaretType)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4968,10 +4987,10 @@ impl RichEditTextDocument {
     pub fn DefaultTabStop(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).DefaultTabStop)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -4981,7 +5000,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDefaultTabStop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4991,10 +5010,10 @@ impl RichEditTextDocument {
     pub fn Selection(&self) -> ::windows::core::Result<ITextSelection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Selection)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextSelection>(result__)
         }
@@ -5003,10 +5022,10 @@ impl RichEditTextDocument {
     pub fn UndoLimit(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).UndoLimit)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -5016,7 +5035,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetUndoLimit)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -5026,10 +5045,10 @@ impl RichEditTextDocument {
     pub fn CanCopy(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanCopy)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5038,10 +5057,10 @@ impl RichEditTextDocument {
     pub fn CanPaste(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanPaste)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5050,10 +5069,10 @@ impl RichEditTextDocument {
     pub fn CanRedo(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanRedo)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5062,10 +5081,10 @@ impl RichEditTextDocument {
     pub fn CanUndo(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanUndo)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5074,10 +5093,10 @@ impl RichEditTextDocument {
     pub fn ApplyDisplayUpdates(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).ApplyDisplayUpdates)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5086,10 +5105,10 @@ impl RichEditTextDocument {
     pub fn BatchDisplayUpdates(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).BatchDisplayUpdates)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5098,9 +5117,9 @@ impl RichEditTextDocument {
     pub fn BeginUndoGroup(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).BeginUndoGroup)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).BeginUndoGroup)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -5108,9 +5127,9 @@ impl RichEditTextDocument {
     pub fn EndUndoGroup(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).EndUndoGroup)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).EndUndoGroup)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -5118,10 +5137,10 @@ impl RichEditTextDocument {
     pub fn GetDefaultCharacterFormat(&self) -> ::windows::core::Result<ITextCharacterFormat> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDefaultCharacterFormat)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextCharacterFormat>(result__)
         }
@@ -5130,10 +5149,10 @@ impl RichEditTextDocument {
     pub fn GetDefaultParagraphFormat(&self) -> ::windows::core::Result<ITextParagraphFormat> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDefaultParagraphFormat)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextParagraphFormat>(result__)
         }
@@ -5146,12 +5165,12 @@ impl RichEditTextDocument {
     ) -> ::windows::core::Result<ITextRange> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetRange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 startposition,
                 endposition,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRange>(result__)
         }
@@ -5167,12 +5186,12 @@ impl RichEditTextDocument {
     ) -> ::windows::core::Result<ITextRange> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetRangeFromPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 point.into_param().abi(),
                 options,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRange>(result__)
         }
@@ -5186,7 +5205,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value as *mut _ as _,
             )
@@ -5205,7 +5224,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).LoadFromStream)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -5216,7 +5235,10 @@ impl RichEditTextDocument {
     pub fn Redo(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Redo)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Redo)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Text\"`*"]
@@ -5231,7 +5253,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SaveToStream)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -5249,7 +5271,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDefaultCharacterFormat)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5266,7 +5288,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDefaultParagraphFormat)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5281,7 +5303,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -5292,17 +5314,20 @@ impl RichEditTextDocument {
     pub fn Undo(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Undo)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Undo)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn AlignmentIncludesTrailingWhitespace(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AlignmentIncludesTrailingWhitespace)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5315,7 +5340,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAlignmentIncludesTrailingWhitespace)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -5325,10 +5350,10 @@ impl RichEditTextDocument {
     pub fn IgnoreTrailingCharacterSpacing(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IgnoreTrailingCharacterSpacing)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5338,7 +5363,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIgnoreTrailingCharacterSpacing)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -5349,7 +5374,7 @@ impl RichEditTextDocument {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearUndoRedoHistory)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -5441,10 +5466,10 @@ impl RichEditTextRange {
     pub fn Character(&self) -> ::windows::core::Result<u16> {
         let this = self;
         unsafe {
-            let mut result__: u16 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u16>::zeroed();
             (::windows::core::Interface::vtable(this).Character)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u16>(result__)
         }
@@ -5454,7 +5479,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCharacter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -5464,10 +5489,10 @@ impl RichEditTextRange {
     pub fn CharacterFormat(&self) -> ::windows::core::Result<ITextCharacterFormat> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CharacterFormat)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextCharacterFormat>(result__)
         }
@@ -5480,7 +5505,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCharacterFormat)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5490,10 +5515,10 @@ impl RichEditTextRange {
     pub fn FormattedText(&self) -> ::windows::core::Result<ITextRange> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FormattedText)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRange>(result__)
         }
@@ -5506,7 +5531,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFormattedText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5516,10 +5541,10 @@ impl RichEditTextRange {
     pub fn EndPosition(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).EndPosition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5529,7 +5554,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetEndPosition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -5539,10 +5564,10 @@ impl RichEditTextRange {
     pub fn Gravity(&self) -> ::windows::core::Result<RangeGravity> {
         let this = self;
         unsafe {
-            let mut result__: RangeGravity = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<RangeGravity>::zeroed();
             (::windows::core::Interface::vtable(this).Gravity)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RangeGravity>(result__)
         }
@@ -5552,7 +5577,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetGravity)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -5562,10 +5587,10 @@ impl RichEditTextRange {
     pub fn Length(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Length)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5574,11 +5599,12 @@ impl RichEditTextRange {
     pub fn Link(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Link)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -5591,7 +5617,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetLink)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5601,10 +5627,10 @@ impl RichEditTextRange {
     pub fn ParagraphFormat(&self) -> ::windows::core::Result<ITextParagraphFormat> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ParagraphFormat)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextParagraphFormat>(result__)
         }
@@ -5617,7 +5643,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetParagraphFormat)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5627,10 +5653,10 @@ impl RichEditTextRange {
     pub fn StartPosition(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StartPosition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5640,7 +5666,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetStartPosition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -5650,10 +5676,10 @@ impl RichEditTextRange {
     pub fn StoryLength(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StoryLength)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5662,11 +5688,12 @@ impl RichEditTextRange {
     pub fn Text(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Text)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -5679,7 +5706,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5689,11 +5716,11 @@ impl RichEditTextRange {
     pub fn CanPaste(&self, format: i32) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanPaste)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 format,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5703,7 +5730,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ChangeCase)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -5714,7 +5741,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Collapse)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -5724,26 +5751,30 @@ impl RichEditTextRange {
     pub fn Copy(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Copy)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Copy)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Cut(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Cut)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Cut)(::windows::core::Interface::as_raw(this))
+                .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn Delete(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Delete)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5752,12 +5783,12 @@ impl RichEditTextRange {
     pub fn EndOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).EndOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5766,11 +5797,11 @@ impl RichEditTextRange {
     pub fn Expand(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Expand)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5784,13 +5815,13 @@ impl RichEditTextRange {
     ) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).FindText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
                 scanlength,
                 options,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5800,7 +5831,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetCharacterUtf32)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
                 offset,
             )
@@ -5811,10 +5842,10 @@ impl RichEditTextRange {
     pub fn GetClone(&self) -> ::windows::core::Result<ITextRange> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetClone)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ITextRange>(result__)
         }
@@ -5823,11 +5854,11 @@ impl RichEditTextRange {
     pub fn GetIndex(&self, unit: TextRangeUnit) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).GetIndex)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5843,7 +5874,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 horizontalalign,
                 verticalalign,
                 options,
@@ -5862,7 +5893,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetRect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 rect,
                 hit,
@@ -5879,7 +5910,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value as *mut _ as _,
             )
@@ -5898,7 +5929,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).GetTextViaStream)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -5912,11 +5943,11 @@ impl RichEditTextRange {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).InRange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 range.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5938,7 +5969,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).InsertImage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 width,
                 height,
                 ascent,
@@ -5956,11 +5987,11 @@ impl RichEditTextRange {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).InStory)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 range.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5972,11 +6003,11 @@ impl RichEditTextRange {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsEqual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 range.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5985,12 +6016,12 @@ impl RichEditTextRange {
     pub fn Move(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Move)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -5999,12 +6030,12 @@ impl RichEditTextRange {
     pub fn MoveEnd(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveEnd)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -6013,12 +6044,12 @@ impl RichEditTextRange {
     pub fn MoveStart(&self, unit: TextRangeUnit, count: i32) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MoveStart)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 count,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -6028,7 +6059,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Paste)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 format,
             )
             .ok()
@@ -6039,7 +6070,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ScrollIntoView)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -6049,9 +6080,9 @@ impl RichEditTextRange {
     pub fn MatchSelection(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).MatchSelection)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).MatchSelection)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -6065,7 +6096,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIndex)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 index,
                 extend,
@@ -6083,7 +6114,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 point.into_param().abi(),
                 options,
                 extend,
@@ -6096,7 +6127,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 startposition,
                 endposition,
             )
@@ -6112,7 +6143,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetText2)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -6131,7 +6162,7 @@ impl RichEditTextRange {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTextViaStream)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options,
                 value.into_param().abi(),
             )
@@ -6142,12 +6173,12 @@ impl RichEditTextRange {
     pub fn StartOf(&self, unit: TextRangeUnit, extend: bool) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).StartOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 unit,
                 extend,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -6438,10 +6469,10 @@ impl TextConstants {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn AutoColor() -> ::windows::core::Result<::windows::UI::Color> {
         Self::ITextConstantsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::UI::Color>::zeroed();
             (::windows::core::Interface::vtable(this).AutoColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Color>(result__)
         })
@@ -6449,10 +6480,10 @@ impl TextConstants {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MinUnitCount() -> ::windows::core::Result<i32> {
         Self::ITextConstantsStatics(|this| unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MinUnitCount)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         })
@@ -6460,10 +6491,10 @@ impl TextConstants {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn MaxUnitCount() -> ::windows::core::Result<i32> {
         Self::ITextConstantsStatics(|this| unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).MaxUnitCount)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         })
@@ -6471,10 +6502,10 @@ impl TextConstants {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn UndefinedColor() -> ::windows::core::Result<::windows::UI::Color> {
         Self::ITextConstantsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Color = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::UI::Color>::zeroed();
             (::windows::core::Interface::vtable(this).UndefinedColor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Color>(result__)
         })
@@ -6482,10 +6513,10 @@ impl TextConstants {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn UndefinedFloatValue() -> ::windows::core::Result<f32> {
         Self::ITextConstantsStatics(|this| unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).UndefinedFloatValue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         })
@@ -6493,10 +6524,10 @@ impl TextConstants {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn UndefinedInt32Value() -> ::windows::core::Result<i32> {
         Self::ITextConstantsStatics(|this| unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).UndefinedInt32Value)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         })
@@ -6504,10 +6535,11 @@ impl TextConstants {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn UndefinedFontStretch() -> ::windows::core::Result<::windows::UI::Text::FontStretch> {
         Self::ITextConstantsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontStretch = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::UI::Text::FontStretch>::zeroed();
             (::windows::core::Interface::vtable(this).UndefinedFontStretch)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontStretch>(result__)
         })
@@ -6515,10 +6547,10 @@ impl TextConstants {
     #[doc = "*Required features: `\"UI_Text\"`*"]
     pub fn UndefinedFontStyle() -> ::windows::core::Result<::windows::UI::Text::FontStyle> {
         Self::ITextConstantsStatics(|this| unsafe {
-            let mut result__: ::windows::UI::Text::FontStyle = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::UI::Text::FontStyle>::zeroed();
             (::windows::core::Interface::vtable(this).UndefinedFontStyle)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Text::FontStyle>(result__)
         })

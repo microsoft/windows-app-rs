@@ -1,20 +1,138 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
+#[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
+#[repr(transparent)]
+pub struct DeploymentInitializeOptions(::windows::core::IUnknown);
+impl DeploymentInitializeOptions {
+    pub fn new() -> ::windows::core::Result<Self> {
+        Self::IActivationFactory(|f| f.ActivateInstance::<Self>())
+    }
+    fn IActivationFactory<
+        R,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
+    >(
+        callback: F,
+    ) -> ::windows::core::Result<R> {
+        static mut SHARED: ::windows::core::FactoryCache<
+            DeploymentInitializeOptions,
+            ::windows::core::IGenericFactory,
+        > = ::windows::core::FactoryCache::new();
+        unsafe { SHARED.call(callback) }
+    }
+    #[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
+    pub fn ForceDeployment(&self) -> ::windows::core::Result<bool> {
+        let this = self;
+        unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
+            (::windows::core::Interface::vtable(this).ForceDeployment)(
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<bool>(result__)
+        }
+    }
+    #[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
+    pub fn SetForceDeployment(&self, value: bool) -> ::windows::core::Result<()> {
+        let this = self;
+        unsafe {
+            (::windows::core::Interface::vtable(this).SetForceDeployment)(
+                ::windows::core::Interface::as_raw(this),
+                value,
+            )
+            .ok()
+        }
+    }
+}
+impl ::core::clone::Clone for DeploymentInitializeOptions {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for DeploymentInitializeOptions {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for DeploymentInitializeOptions {}
+impl ::core::fmt::Debug for DeploymentInitializeOptions {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("DeploymentInitializeOptions")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::RuntimeType for DeploymentInitializeOptions {
+    const SIGNATURE : :: windows :: core :: ConstBuffer = :: windows :: core :: ConstBuffer :: from_slice ( b"rc(Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions;{578a5fd4-9d7f-5e01-97b8-d8ea61db4027})" ) ;
+    type DefaultType = ::core::option::Option<Self>;
+    fn from_default(from: &Self::DefaultType) -> ::windows::core::Result<Self> {
+        from.as_ref().cloned().ok_or(::windows::core::Error::OK)
+    }
+}
+unsafe impl ::windows::core::Interface for DeploymentInitializeOptions {
+    type Vtable = IDeploymentInitializeOptions_Vtbl;
+    const IID: ::windows::core::GUID =
+        <IDeploymentInitializeOptions as ::windows::core::Interface>::IID;
+}
+impl ::windows::core::RuntimeName for DeploymentInitializeOptions {
+    const NAME: &'static str =
+        "Microsoft.Windows.ApplicationModel.WindowsAppRuntime.DeploymentInitializeOptions";
+}
+impl ::core::convert::From<DeploymentInitializeOptions> for ::windows::core::IUnknown {
+    fn from(value: DeploymentInitializeOptions) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&DeploymentInitializeOptions> for ::windows::core::IUnknown {
+    fn from(value: &DeploymentInitializeOptions) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for DeploymentInitializeOptions {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for &'a DeploymentInitializeOptions
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<DeploymentInitializeOptions> for ::windows::core::IInspectable {
+    fn from(value: DeploymentInitializeOptions) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&DeploymentInitializeOptions> for ::windows::core::IInspectable {
+    fn from(value: &DeploymentInitializeOptions) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for DeploymentInitializeOptions
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IInspectable>
+    for &'a DeploymentInitializeOptions
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IInspectable> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+unsafe impl ::core::marker::Send for DeploymentInitializeOptions {}
+unsafe impl ::core::marker::Sync for DeploymentInitializeOptions {}
 #[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
 pub struct DeploymentManager {}
 impl DeploymentManager {
     #[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
     pub fn GetStatus() -> ::windows::core::Result<DeploymentResult> {
         Self::IDeploymentManagerStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetStatus)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DeploymentResult>(result__)
         })
@@ -22,10 +140,24 @@ impl DeploymentManager {
     #[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
     pub fn Initialize() -> ::windows::core::Result<DeploymentResult> {
         Self::IDeploymentManagerStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Initialize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
+            )
+            .from_abi::<DeploymentResult>(result__)
+        })
+    }
+    #[doc = "*Required features: `\"Windows_ApplicationModel_WindowsAppRuntime\"`*"]
+    pub fn Initialize2<'a, Param0: ::windows::core::IntoParam<'a, DeploymentInitializeOptions>>(
+        deploymentinitializeoptions: Param0,
+    ) -> ::windows::core::Result<DeploymentResult> {
+        Self::IDeploymentManagerStatics2(|this| unsafe {
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+            (::windows::core::Interface::vtable(this).Initialize)(
+                ::windows::core::Interface::as_raw(this),
+                deploymentinitializeoptions.into_param().abi(),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DeploymentResult>(result__)
         })
@@ -43,6 +175,19 @@ impl DeploymentManager {
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
+    #[doc(hidden)]
+    pub fn IDeploymentManagerStatics2<
+        R,
+        F: FnOnce(&IDeploymentManagerStatics2) -> ::windows::core::Result<R>,
+    >(
+        callback: F,
+    ) -> ::windows::core::Result<R> {
+        static mut SHARED: ::windows::core::FactoryCache<
+            DeploymentManager,
+            IDeploymentManagerStatics2,
+        > = ::windows::core::FactoryCache::new();
+        unsafe { SHARED.call(callback) }
+    }
 }
 impl ::windows::core::RuntimeName for DeploymentManager {
     const NAME: &'static str =
@@ -56,10 +201,10 @@ impl DeploymentResult {
     pub fn Status(&self) -> ::windows::core::Result<DeploymentStatus> {
         let this = self;
         unsafe {
-            let mut result__: DeploymentStatus = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<DeploymentStatus>::zeroed();
             (::windows::core::Interface::vtable(this).Status)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DeploymentStatus>(result__)
         }
@@ -68,10 +213,10 @@ impl DeploymentResult {
     pub fn ExtendedError(&self) -> ::windows::core::Result<::windows::core::HRESULT> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::HRESULT = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::HRESULT>::zeroed();
             (::windows::core::Interface::vtable(this).ExtendedError)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HRESULT>(result__)
         }
@@ -82,12 +227,12 @@ impl DeploymentResult {
         extendederror: ::windows::core::HRESULT,
     ) -> ::windows::core::Result<DeploymentResult> {
         Self::IDeploymentResultFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 status,
                 extendederror,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DeploymentResult>(result__)
         })
@@ -219,6 +364,27 @@ unsafe impl ::windows::core::RuntimeType for DeploymentStatus {
 }
 #[doc(hidden)]
 #[repr(transparent)]
+pub struct IDeploymentInitializeOptions(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IDeploymentInitializeOptions {
+    type Vtable = IDeploymentInitializeOptions_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0x578a5fd4_9d7f_5e01_97b8_d8ea61db4027);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IDeploymentInitializeOptions_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub ForceDeployment: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        result__: *mut bool,
+    ) -> ::windows::core::HRESULT,
+    pub SetForceDeployment: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        value: bool,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
 pub struct IDeploymentManagerStatics(::windows::core::IUnknown);
 unsafe impl ::windows::core::Interface for IDeploymentManagerStatics {
     type Vtable = IDeploymentManagerStatics_Vtbl;
@@ -228,13 +394,31 @@ unsafe impl ::windows::core::Interface for IDeploymentManagerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDeploymentManagerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetStatus: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
     pub Initialize: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
+        result__: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc(hidden)]
+#[repr(transparent)]
+pub struct IDeploymentManagerStatics2(::windows::core::IUnknown);
+unsafe impl ::windows::core::Interface for IDeploymentManagerStatics2 {
+    type Vtable = IDeploymentManagerStatics2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xf49c16ee_6ebc_5f15_bebb_2ba49f8c0b30);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IDeploymentManagerStatics2_Vtbl {
+    pub base__: ::windows::core::IInspectableVtbl,
+    pub Initialize: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        deploymentinitializeoptions: ::windows::core::RawPtr,
         result__: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
@@ -249,7 +433,7 @@ unsafe impl ::windows::core::Interface for IDeploymentResult {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDeploymentResult_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Status: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut DeploymentStatus,
@@ -270,7 +454,7 @@ unsafe impl ::windows::core::Interface for IDeploymentResultFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDeploymentResultFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         status: DeploymentStatus,

@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Xaml_Interop\"`*"]
 #[repr(transparent)]
 pub struct BindableVectorChangedEventHandler(pub ::windows::core::IUnknown);
@@ -39,7 +32,7 @@ impl BindableVectorChangedEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 vector.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -70,7 +63,7 @@ impl<
     > BindableVectorChangedEventHandlerBox<F>
 {
     const VTABLE: BindableVectorChangedEventHandler_Vtbl = BindableVectorChangedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -80,7 +73,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid
@@ -154,7 +147,7 @@ unsafe impl ::windows::core::RuntimeType for BindableVectorChangedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct BindableVectorChangedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         vector: ::windows::core::RawPtr,
@@ -169,10 +162,10 @@ impl IBindableIterable {
     pub fn First(&self) -> ::windows::core::Result<IBindableIterator> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IBindableIterator>(result__)
         }
@@ -250,7 +243,7 @@ unsafe impl ::windows::core::Interface for IBindableIterable {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBindableIterable_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub First: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -264,10 +257,10 @@ impl IBindableIterator {
     pub fn Current(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).Current)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -276,10 +269,10 @@ impl IBindableIterator {
     pub fn HasCurrent(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).HasCurrent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -288,10 +281,10 @@ impl IBindableIterator {
     pub fn MoveNext(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).MoveNext)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -369,7 +362,7 @@ unsafe impl ::windows::core::Interface for IBindableIterator {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBindableIterator_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Current: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -397,11 +390,12 @@ impl IBindableObservableVector {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).VectorChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -417,7 +411,7 @@ impl IBindableObservableVector {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveVectorChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -427,10 +421,10 @@ impl IBindableObservableVector {
     pub fn First(&self) -> ::windows::core::Result<IBindableIterator> {
         let this = &::windows::core::Interface::cast::<IBindableIterable>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IBindableIterator>(result__)
         }
@@ -439,11 +433,11 @@ impl IBindableObservableVector {
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -452,10 +446,10 @@ impl IBindableObservableVector {
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = &::windows::core::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -464,10 +458,10 @@ impl IBindableObservableVector {
     pub fn GetView(&self) -> ::windows::core::Result<IBindableVectorView> {
         let this = &::windows::core::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IBindableVectorView>(result__)
         }
@@ -480,12 +474,12 @@ impl IBindableObservableVector {
     ) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IndexOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -499,7 +493,7 @@ impl IBindableObservableVector {
         let this = &::windows::core::Interface::cast::<IBindableVector>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -515,7 +509,7 @@ impl IBindableObservableVector {
         let this = &::windows::core::Interface::cast::<IBindableVector>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).InsertAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -527,7 +521,7 @@ impl IBindableObservableVector {
         let this = &::windows::core::Interface::cast::<IBindableVector>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
             )
             .ok()
@@ -541,7 +535,7 @@ impl IBindableObservableVector {
         let this = &::windows::core::Interface::cast::<IBindableVector>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Append)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -551,9 +545,9 @@ impl IBindableObservableVector {
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).RemoveAtEnd)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).RemoveAtEnd)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -561,7 +555,10 @@ impl IBindableObservableVector {
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IBindableVector>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Clear)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
 }
@@ -693,7 +690,7 @@ unsafe impl ::windows::core::Interface for IBindableObservableVector {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBindableObservableVector_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub VectorChanged: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -712,11 +709,11 @@ impl IBindableVector {
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -725,10 +722,10 @@ impl IBindableVector {
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -737,10 +734,10 @@ impl IBindableVector {
     pub fn GetView(&self) -> ::windows::core::Result<IBindableVectorView> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IBindableVectorView>(result__)
         }
@@ -753,12 +750,12 @@ impl IBindableVector {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IndexOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -772,7 +769,7 @@ impl IBindableVector {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -788,7 +785,7 @@ impl IBindableVector {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).InsertAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -800,7 +797,7 @@ impl IBindableVector {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
             )
             .ok()
@@ -814,7 +811,7 @@ impl IBindableVector {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Append)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -824,9 +821,9 @@ impl IBindableVector {
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).RemoveAtEnd)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).RemoveAtEnd)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -834,17 +831,20 @@ impl IBindableVector {
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Clear)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Interop\"`*"]
     pub fn First(&self) -> ::windows::core::Result<IBindableIterator> {
         let this = &::windows::core::Interface::cast::<IBindableIterable>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IBindableIterator>(result__)
         }
@@ -946,7 +946,7 @@ unsafe impl ::windows::core::Interface for IBindableVector {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBindableVector_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetAt: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         index: u32,
@@ -997,11 +997,11 @@ impl IBindableVectorView {
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1010,10 +1010,10 @@ impl IBindableVectorView {
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -1026,12 +1026,12 @@ impl IBindableVectorView {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IndexOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1040,10 +1040,10 @@ impl IBindableVectorView {
     pub fn First(&self) -> ::windows::core::Result<IBindableIterator> {
         let this = &::windows::core::Interface::cast::<IBindableIterable>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IBindableIterator>(result__)
         }
@@ -1145,7 +1145,7 @@ unsafe impl ::windows::core::Interface for IBindableVectorView {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBindableVectorView_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetAt: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         index: u32,
@@ -1176,11 +1176,12 @@ impl INotifyCollectionChanged {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).CollectionChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -1196,7 +1197,7 @@ impl INotifyCollectionChanged {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveCollectionChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -1283,7 +1284,7 @@ unsafe impl ::windows::core::Interface for INotifyCollectionChanged {
 #[repr(C)]
 #[doc(hidden)]
 pub struct INotifyCollectionChanged_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CollectionChanged: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         handler: ::windows::core::RawPtr,
@@ -1305,7 +1306,7 @@ unsafe impl ::windows::core::Interface for INotifyCollectionChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct INotifyCollectionChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Action: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut NotifyCollectionChangedAction,
@@ -1338,7 +1339,7 @@ unsafe impl ::windows::core::Interface for INotifyCollectionChangedEventArgsFact
 #[repr(C)]
 #[doc(hidden)]
 pub struct INotifyCollectionChangedEventArgsFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithAllParameters: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         action: NotifyCollectionChangedAction,
@@ -1400,10 +1401,10 @@ impl NotifyCollectionChangedEventArgs {
     pub fn Action(&self) -> ::windows::core::Result<NotifyCollectionChangedAction> {
         let this = self;
         unsafe {
-            let mut result__: NotifyCollectionChangedAction = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<NotifyCollectionChangedAction>::zeroed();
             (::windows::core::Interface::vtable(this).Action)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<NotifyCollectionChangedAction>(result__)
         }
@@ -1412,10 +1413,10 @@ impl NotifyCollectionChangedEventArgs {
     pub fn NewItems(&self) -> ::windows::core::Result<IBindableVector> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).NewItems)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IBindableVector>(result__)
         }
@@ -1424,10 +1425,10 @@ impl NotifyCollectionChangedEventArgs {
     pub fn OldItems(&self) -> ::windows::core::Result<IBindableVector> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).OldItems)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<IBindableVector>(result__)
         }
@@ -1436,10 +1437,10 @@ impl NotifyCollectionChangedEventArgs {
     pub fn NewStartingIndex(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).NewStartingIndex)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1448,10 +1449,10 @@ impl NotifyCollectionChangedEventArgs {
     pub fn OldStartingIndex(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).OldStartingIndex)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1469,9 +1470,9 @@ impl NotifyCollectionChangedEventArgs {
         oldindex: i32,
     ) -> ::windows::core::Result<NotifyCollectionChangedEventArgs> {
         Self::INotifyCollectionChangedEventArgsFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithAllParameters)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 action,
                 newitems.into_param().abi(),
                 olditems.into_param().abi(),
@@ -1479,7 +1480,7 @@ impl NotifyCollectionChangedEventArgs {
                 oldindex,
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<NotifyCollectionChangedEventArgs>(result__)
         })
@@ -1500,9 +1501,9 @@ impl NotifyCollectionChangedEventArgs {
     ) -> ::windows::core::Result<NotifyCollectionChangedEventArgs> {
         Self::INotifyCollectionChangedEventArgsFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithAllParameters)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 action,
                 newitems.into_param().abi(),
                 olditems.into_param().abi(),
@@ -1510,7 +1511,7 @@ impl NotifyCollectionChangedEventArgs {
                 oldindex,
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<NotifyCollectionChangedEventArgs>(result__)
         })
@@ -1646,7 +1647,7 @@ impl NotifyCollectionChangedEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -1678,7 +1679,7 @@ impl<
 {
     const VTABLE: NotifyCollectionChangedEventHandler_Vtbl =
         NotifyCollectionChangedEventHandler_Vtbl {
-            base: ::windows::core::IUnknownVtbl {
+            base__: ::windows::core::IUnknownVtbl {
                 QueryInterface: Self::QueryInterface,
                 AddRef: Self::AddRef,
                 Release: Self::Release,
@@ -1688,7 +1689,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid
@@ -1762,7 +1763,7 @@ unsafe impl ::windows::core::RuntimeType for NotifyCollectionChangedEventHandler
 #[repr(C)]
 #[doc(hidden)]
 pub struct NotifyCollectionChangedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,

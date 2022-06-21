@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
 pub struct ElementCompositionPreview(::windows::core::IUnknown);
@@ -15,11 +8,11 @@ impl ElementCompositionPreview {
         element: Param0,
     ) -> ::windows::core::Result<super::super::Composition::Visual> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetElementVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::Composition::Visual>(result__)
         })
@@ -30,11 +23,11 @@ impl ElementCompositionPreview {
         element: Param0,
     ) -> ::windows::core::Result<super::super::Composition::Visual> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetElementChildVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::Composition::Visual>(result__)
         })
@@ -51,7 +44,7 @@ impl ElementCompositionPreview {
     ) -> ::windows::core::Result<()> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetElementChildVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
                 visual.into_param().abi(),
             )
@@ -67,11 +60,11 @@ impl ElementCompositionPreview {
         scrollviewer: Param0,
     ) -> ::windows::core::Result<super::super::Composition::CompositionPropertySet> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetScrollViewerManipulationPropertySet)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 scrollviewer.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::Composition::CompositionPropertySet>(result__)
         })
@@ -88,7 +81,7 @@ impl ElementCompositionPreview {
     ) -> ::windows::core::Result<()> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetImplicitShowAnimation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -107,7 +100,7 @@ impl ElementCompositionPreview {
     ) -> ::windows::core::Result<()> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetImplicitHideAnimation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
                 animation.into_param().abi(),
             )
@@ -121,7 +114,7 @@ impl ElementCompositionPreview {
     ) -> ::windows::core::Result<()> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetIsTranslationEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
                 value,
             )
@@ -137,11 +130,11 @@ impl ElementCompositionPreview {
         targetelement: Param0,
     ) -> ::windows::core::Result<super::super::Composition::CompositionPropertySet> {
         Self::IElementCompositionPreviewStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetPointerPositionPropertySet)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 targetelement.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::Composition::CompositionPropertySet>(result__)
         })
@@ -254,7 +247,7 @@ impl IDesktopWindowXamlSourceNative {
         parentwnd: Param0,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).AttachToWindow)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             parentwnd.into_param().abi(),
         )
         .ok()
@@ -265,7 +258,7 @@ impl IDesktopWindowXamlSourceNative {
         hwnd: *mut ::windows::Win32::Foundation::HWND,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).WindowHandle)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(hwnd),
         )
         .ok()
@@ -277,7 +270,7 @@ impl IDesktopWindowXamlSourceNative {
         result: *mut ::windows::Win32::Foundation::BOOL,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).PreTranslateMessage)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(message),
             ::core::mem::transmute(result),
         )
@@ -334,7 +327,7 @@ unsafe impl ::windows::core::Interface for IDesktopWindowXamlSourceNative {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDesktopWindowXamlSourceNative_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub AttachToWindow: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         parentwnd: ::windows::Win32::Foundation::HWND,
@@ -360,7 +353,7 @@ unsafe impl ::windows::core::Interface for IElementCompositionPreview {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElementCompositionPreview_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -373,7 +366,7 @@ unsafe impl ::windows::core::Interface for IElementCompositionPreviewStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElementCompositionPreviewStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Composition")]
     pub GetElementVisual: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -450,7 +443,7 @@ impl IFindReferenceTargetsCallback {
         target: Param0,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).FoundTrackerTarget)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             target.into_param().abi(),
         )
         .ok()
@@ -506,7 +499,7 @@ unsafe impl ::windows::core::Interface for IFindReferenceTargetsCallback {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFindReferenceTargetsCallback_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub FoundTrackerTarget: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         target: ::windows::core::RawPtr,
@@ -519,14 +512,14 @@ impl IReferenceTracker {
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ConnectFromTrackerSource(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).ConnectFromTrackerSource)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn DisconnectFromTrackerSource(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).DisconnectFromTrackerSource)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
@@ -539,7 +532,7 @@ impl IReferenceTracker {
         callback: Param0,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).FindTrackerTargets)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             callback.into_param().abi(),
         )
         .ok()
@@ -548,31 +541,31 @@ impl IReferenceTracker {
     pub unsafe fn GetReferenceTrackerManager(
         &self,
     ) -> ::windows::core::Result<IReferenceTrackerManager> {
-        let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetReferenceTrackerManager)(
-            ::core::mem::transmute_copy(self),
-            ::core::mem::transmute(&mut result__),
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<IReferenceTrackerManager>(result__)
     }
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn AddRefFromTrackerSource(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).AddRefFromTrackerSource)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ReleaseFromTrackerSource(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).ReleaseFromTrackerSource)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn PegFromTrackerSource(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).PegFromTrackerSource)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
@@ -621,7 +614,7 @@ unsafe impl ::windows::core::Interface for IReferenceTracker {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IReferenceTracker_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub ConnectFromTrackerSource:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
     pub DisconnectFromTrackerSource:
@@ -693,7 +686,7 @@ unsafe impl ::windows::core::Interface for IReferenceTrackerExtension {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IReferenceTrackerExtension_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
 }
 #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
 #[repr(transparent)]
@@ -705,7 +698,7 @@ impl IReferenceTrackerHost {
         options: __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).DisconnectUnusedReferenceSources)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(options),
         )
         .ok()
@@ -713,14 +706,14 @@ impl IReferenceTrackerHost {
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ReleaseDisconnectedReferenceSources(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).ReleaseDisconnectedReferenceSources)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn NotifyEndOfReferenceTrackingOnThread(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).NotifyEndOfReferenceTrackingOnThread)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
@@ -732,18 +725,18 @@ impl IReferenceTrackerHost {
         &self,
         unknown: Param0,
     ) -> ::windows::core::Result<IReferenceTrackerTarget> {
-        let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetTrackerTarget)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             unknown.into_param().abi(),
-            ::core::mem::transmute(&mut result__),
+            ::core::mem::transmute(result__.as_mut_ptr()),
         )
         .from_abi::<IReferenceTrackerTarget>(result__)
     }
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn AddMemoryPressure(&self, bytesallocated: u64) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).AddMemoryPressure)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(bytesallocated),
         )
         .ok()
@@ -751,7 +744,7 @@ impl IReferenceTrackerHost {
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn RemoveMemoryPressure(&self, bytesallocated: u64) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).RemoveMemoryPressure)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(bytesallocated),
         )
         .ok()
@@ -803,7 +796,7 @@ unsafe impl ::windows::core::Interface for IReferenceTrackerHost {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IReferenceTrackerHost_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub DisconnectUnusedReferenceSources: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         options: __MIDL___MIDL_itf_microsoft2Eui2Examl2Ehosting2Ereferencetracker_0000_0004_0001,
@@ -834,7 +827,7 @@ impl IReferenceTrackerManager {
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ReferenceTrackingStarted(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).ReferenceTrackingStarted)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
@@ -844,7 +837,7 @@ impl IReferenceTrackerManager {
         findfailed: u8,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).FindTrackerTargetsCompleted)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(findfailed),
         )
         .ok()
@@ -852,7 +845,7 @@ impl IReferenceTrackerManager {
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ReferenceTrackingCompleted(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).ReferenceTrackingCompleted)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
@@ -865,7 +858,7 @@ impl IReferenceTrackerManager {
         value: Param0,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).SetReferenceTrackerHost)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             value.into_param().abi(),
         )
         .ok()
@@ -919,7 +912,7 @@ unsafe impl ::windows::core::Interface for IReferenceTrackerManager {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IReferenceTrackerManager_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub ReferenceTrackingStarted:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
     pub FindTrackerTargetsCompleted: unsafe extern "system" fn(
@@ -941,23 +934,25 @@ impl IReferenceTrackerTarget {
     pub unsafe fn AddRefFromReferenceTracker(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .AddRefFromReferenceTracker)(
-            ::core::mem::transmute_copy(self)
+            ::windows::core::Interface::as_raw(self)
         ))
     }
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn ReleaseFromReferenceTracker(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .ReleaseFromReferenceTracker)(
-            ::core::mem::transmute_copy(self)
+            ::windows::core::Interface::as_raw(self)
         ))
     }
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn Peg(&self) -> ::windows::core::Result<()> {
-        (::windows::core::Interface::vtable(self).Peg)(::core::mem::transmute_copy(self)).ok()
+        (::windows::core::Interface::vtable(self).Peg)(::windows::core::Interface::as_raw(self))
+            .ok()
     }
     #[doc = "*Required features: `\"UI_Xaml_Hosting\"`*"]
     pub unsafe fn Unpeg(&self) -> ::windows::core::Result<()> {
-        (::windows::core::Interface::vtable(self).Unpeg)(::core::mem::transmute_copy(self)).ok()
+        (::windows::core::Interface::vtable(self).Unpeg)(::windows::core::Interface::as_raw(self))
+            .ok()
     }
 }
 impl ::core::convert::From<IReferenceTrackerTarget> for ::windows::core::IUnknown {
@@ -1006,7 +1001,7 @@ unsafe impl ::windows::core::Interface for IReferenceTrackerTarget {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IReferenceTrackerTarget_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub AddRefFromReferenceTracker:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> u32,
     pub ReleaseFromReferenceTracker:
@@ -1025,7 +1020,7 @@ impl ITrackerOwner {
         returnvalue: *mut *mut TrackerHandle__,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).CreateTrackerHandle)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(returnvalue),
         )
         .ok()
@@ -1036,7 +1031,7 @@ impl ITrackerOwner {
         handle: *mut TrackerHandle__,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).DeleteTrackerHandle)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(handle),
         )
         .ok()
@@ -1051,7 +1046,7 @@ impl ITrackerOwner {
         value: Param1,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).SetTrackerValue)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(handle),
             value.into_param().abi(),
         )
@@ -1065,7 +1060,7 @@ impl ITrackerOwner {
     ) -> u8 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .TryGetSafeTrackerValue)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(handle),
             ::core::mem::transmute(returnvalue),
         ))
@@ -1115,7 +1110,7 @@ unsafe impl ::windows::core::Interface for ITrackerOwner {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITrackerOwner_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub CreateTrackerHandle: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         returnvalue: *mut *mut TrackerHandle__,

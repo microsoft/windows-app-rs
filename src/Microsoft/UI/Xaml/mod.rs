@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[cfg(feature = "UI_Xaml_Automation")]
 pub mod Automation;
 #[cfg(feature = "UI_Xaml_Controls")]
@@ -43,10 +36,10 @@ impl AdaptiveTrigger {
     pub fn MinWindowWidth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MinWindowWidth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -56,7 +49,7 @@ impl AdaptiveTrigger {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMinWindowWidth)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -66,10 +59,10 @@ impl AdaptiveTrigger {
     pub fn MinWindowHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MinWindowHeight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -79,7 +72,7 @@ impl AdaptiveTrigger {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMinWindowHeight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -88,12 +81,12 @@ impl AdaptiveTrigger {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<AdaptiveTrigger> {
         Self::IAdaptiveTriggerFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<AdaptiveTrigger>(result__)
         })
@@ -104,12 +97,12 @@ impl AdaptiveTrigger {
     ) -> ::windows::core::Result<AdaptiveTrigger> {
         Self::IAdaptiveTriggerFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<AdaptiveTrigger>(result__)
         })
@@ -117,10 +110,10 @@ impl AdaptiveTrigger {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinWindowWidthProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IAdaptiveTriggerStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).MinWindowWidthProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -128,10 +121,10 @@ impl AdaptiveTrigger {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinWindowHeightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IAdaptiveTriggerStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).MinWindowHeightProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -143,11 +136,11 @@ impl AdaptiveTrigger {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -165,7 +158,7 @@ impl AdaptiveTrigger {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -180,7 +173,7 @@ impl AdaptiveTrigger {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -193,11 +186,11 @@ impl AdaptiveTrigger {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -209,11 +202,11 @@ impl AdaptiveTrigger {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -230,12 +223,12 @@ impl AdaptiveTrigger {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -252,7 +245,7 @@ impl AdaptiveTrigger {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -263,10 +256,10 @@ impl AdaptiveTrigger {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -276,10 +269,10 @@ impl AdaptiveTrigger {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -289,7 +282,7 @@ impl AdaptiveTrigger {
         let this = &::windows::core::Interface::cast::<IStateTriggerBaseProtected>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetActive)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 isactive,
             )
             .ok()
@@ -440,10 +433,10 @@ impl Application {
     pub fn Resources(&self) -> ::windows::core::Result<ResourceDictionary> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Resources)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ResourceDictionary>(result__)
         }
@@ -456,7 +449,7 @@ impl Application {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetResources)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -466,10 +459,10 @@ impl Application {
     pub fn DebugSettings(&self) -> ::windows::core::Result<DebugSettings> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DebugSettings)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DebugSettings>(result__)
         }
@@ -478,10 +471,10 @@ impl Application {
     pub fn RequestedTheme(&self) -> ::windows::core::Result<ApplicationTheme> {
         let this = self;
         unsafe {
-            let mut result__: ApplicationTheme = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<ApplicationTheme>::zeroed();
             (::windows::core::Interface::vtable(this).RequestedTheme)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ApplicationTheme>(result__)
         }
@@ -491,7 +484,7 @@ impl Application {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRequestedTheme)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -501,10 +494,10 @@ impl Application {
     pub fn FocusVisualKind(&self) -> ::windows::core::Result<FocusVisualKind> {
         let this = self;
         unsafe {
-            let mut result__: FocusVisualKind = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FocusVisualKind>::zeroed();
             (::windows::core::Interface::vtable(this).FocusVisualKind)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FocusVisualKind>(result__)
         }
@@ -514,7 +507,7 @@ impl Application {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFocusVisualKind)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -526,10 +519,11 @@ impl Application {
     ) -> ::windows::core::Result<ApplicationHighContrastAdjustment> {
         let this = self;
         unsafe {
-            let mut result__: ApplicationHighContrastAdjustment = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<ApplicationHighContrastAdjustment>::zeroed();
             (::windows::core::Interface::vtable(this).HighContrastAdjustment)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ApplicationHighContrastAdjustment>(result__)
         }
@@ -542,7 +536,7 @@ impl Application {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHighContrastAdjustment)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -558,11 +552,12 @@ impl Application {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).UnhandledException)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -578,7 +573,7 @@ impl Application {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveUnhandledException)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -588,18 +583,21 @@ impl Application {
     pub fn Exit(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Exit)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Exit)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<Application> {
         Self::IApplicationFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Application>(result__)
         })
@@ -610,12 +608,12 @@ impl Application {
     ) -> ::windows::core::Result<Application> {
         Self::IApplicationFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Application>(result__)
         })
@@ -623,10 +621,10 @@ impl Application {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Current() -> ::windows::core::Result<Application> {
         Self::IApplicationStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Current)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Application>(result__)
         })
@@ -637,7 +635,7 @@ impl Application {
     ) -> ::windows::core::Result<()> {
         Self::IApplicationStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).Start)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 callback.into_param().abi(),
             )
             .ok()
@@ -654,7 +652,7 @@ impl Application {
     ) -> ::windows::core::Result<()> {
         Self::IApplicationStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).LoadComponent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 component.into_param().abi(),
                 resourcelocator.into_param().abi(),
             )
@@ -674,7 +672,7 @@ impl Application {
     ) -> ::windows::core::Result<()> {
         Self::IApplicationStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).LoadComponentWithResourceLocation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 component.into_param().abi(),
                 resourcelocator.into_param().abi(),
                 componentresourcelocation,
@@ -870,7 +868,7 @@ impl ApplicationInitializationCallback {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 p.into_param().abi(),
             )
             .ok()
@@ -898,7 +896,7 @@ impl<
     > ApplicationInitializationCallbackBox<F>
 {
     const VTABLE: ApplicationInitializationCallback_Vtbl = ApplicationInitializationCallback_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -908,7 +906,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid
@@ -981,7 +979,7 @@ unsafe impl ::windows::core::RuntimeType for ApplicationInitializationCallback {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ApplicationInitializationCallback_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         p: ::windows::core::RawPtr,
@@ -1235,11 +1233,12 @@ impl BindingFailedEventArgs {
     pub fn Message(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Message)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -1357,7 +1356,7 @@ impl BindingFailedEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -1388,7 +1387,7 @@ impl<
     > BindingFailedEventHandlerBox<F>
 {
     const VTABLE: BindingFailedEventHandler_Vtbl = BindingFailedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -1398,7 +1397,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<BindingFailedEventHandler as ::windows::core::Interface>::IID
@@ -1471,7 +1470,7 @@ unsafe impl ::windows::core::RuntimeType for BindingFailedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct BindingFailedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -1487,13 +1486,13 @@ impl BringIntoViewOptions {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             BringIntoViewOptions,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -1501,10 +1500,10 @@ impl BringIntoViewOptions {
     pub fn AnimationDesired(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AnimationDesired)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1514,7 +1513,7 @@ impl BringIntoViewOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAnimationDesired)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1527,10 +1526,10 @@ impl BringIntoViewOptions {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TargetRect)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::Foundation::Rect>>(result__)
         }
@@ -1549,7 +1548,7 @@ impl BringIntoViewOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTargetRect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1559,10 +1558,10 @@ impl BringIntoViewOptions {
     pub fn HorizontalAlignmentRatio(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).HorizontalAlignmentRatio)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1572,7 +1571,7 @@ impl BringIntoViewOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHorizontalAlignmentRatio)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1582,10 +1581,10 @@ impl BringIntoViewOptions {
     pub fn VerticalAlignmentRatio(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).VerticalAlignmentRatio)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1595,7 +1594,7 @@ impl BringIntoViewOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetVerticalAlignmentRatio)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1605,10 +1604,10 @@ impl BringIntoViewOptions {
     pub fn HorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).HorizontalOffset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1618,7 +1617,7 @@ impl BringIntoViewOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHorizontalOffset)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1628,10 +1627,10 @@ impl BringIntoViewOptions {
     pub fn VerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).VerticalOffset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1641,7 +1640,7 @@ impl BringIntoViewOptions {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetVerticalOffset)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1734,10 +1733,10 @@ impl BringIntoViewRequestedEventArgs {
     pub fn TargetElement(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TargetElement)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<UIElement>(result__)
         }
@@ -1750,7 +1749,7 @@ impl BringIntoViewRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTargetElement)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1760,10 +1759,10 @@ impl BringIntoViewRequestedEventArgs {
     pub fn AnimationDesired(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AnimationDesired)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1773,7 +1772,7 @@ impl BringIntoViewRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAnimationDesired)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1783,10 +1782,10 @@ impl BringIntoViewRequestedEventArgs {
     pub fn TargetRect(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).TargetRect)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
@@ -1802,7 +1801,7 @@ impl BringIntoViewRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTargetRect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -1812,10 +1811,10 @@ impl BringIntoViewRequestedEventArgs {
     pub fn HorizontalAlignmentRatio(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).HorizontalAlignmentRatio)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1824,10 +1823,10 @@ impl BringIntoViewRequestedEventArgs {
     pub fn VerticalAlignmentRatio(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).VerticalAlignmentRatio)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1836,10 +1835,10 @@ impl BringIntoViewRequestedEventArgs {
     pub fn HorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).HorizontalOffset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1849,7 +1848,7 @@ impl BringIntoViewRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHorizontalOffset)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1859,10 +1858,10 @@ impl BringIntoViewRequestedEventArgs {
     pub fn VerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).VerticalOffset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1872,7 +1871,7 @@ impl BringIntoViewRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetVerticalOffset)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1882,10 +1881,10 @@ impl BringIntoViewRequestedEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -1895,7 +1894,7 @@ impl BringIntoViewRequestedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1905,10 +1904,10 @@ impl BringIntoViewRequestedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).OriginalSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -2025,10 +2024,11 @@ impl BrushTransition {
     pub fn Duration(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::TimeSpan = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::TimeSpan>::zeroed();
             (::windows::core::Interface::vtable(this).Duration)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         }
@@ -2044,7 +2044,7 @@ impl BrushTransition {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDuration)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2053,12 +2053,12 @@ impl BrushTransition {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<BrushTransition> {
         Self::IBrushTransitionFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<BrushTransition>(result__)
         })
@@ -2069,12 +2069,12 @@ impl BrushTransition {
     ) -> ::windows::core::Result<BrushTransition> {
         Self::IBrushTransitionFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<BrushTransition>(result__)
         })
@@ -2175,10 +2175,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AltHigh)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2194,7 +2194,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAltHigh)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2206,10 +2206,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AltLow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2225,7 +2225,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAltLow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2237,10 +2237,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AltMedium)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2256,7 +2256,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAltMedium)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2268,10 +2268,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AltMediumHigh)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2287,7 +2287,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAltMediumHigh)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2299,10 +2299,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AltMediumLow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2318,7 +2318,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAltMediumLow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2330,10 +2330,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BaseHigh)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2349,7 +2349,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBaseHigh)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2361,10 +2361,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BaseLow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2380,7 +2380,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBaseLow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2392,10 +2392,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BaseMedium)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2411,7 +2411,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBaseMedium)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2423,10 +2423,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BaseMediumHigh)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2442,7 +2442,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBaseMediumHigh)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2454,10 +2454,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BaseMediumLow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2473,7 +2473,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBaseMediumLow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2485,10 +2485,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeAltLow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2504,7 +2504,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeAltLow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2516,10 +2516,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeBlackHigh)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2535,7 +2535,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeBlackHigh)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2547,10 +2547,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeBlackLow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2566,7 +2566,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeBlackLow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2578,10 +2578,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeBlackMediumLow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2597,7 +2597,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeBlackMediumLow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2609,10 +2609,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeBlackMedium)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2628,7 +2628,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeBlackMedium)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2640,10 +2640,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeDisabledHigh)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2659,7 +2659,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeDisabledHigh)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2671,10 +2671,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeDisabledLow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2690,7 +2690,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeDisabledLow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2702,10 +2702,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeHigh)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2721,7 +2721,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeHigh)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2733,10 +2733,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeLow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2752,7 +2752,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeLow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2764,10 +2764,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeMedium)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2783,7 +2783,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeMedium)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2795,10 +2795,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeMediumLow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2814,7 +2814,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeMediumLow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2826,10 +2826,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeWhite)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2845,7 +2845,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeWhite)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2857,10 +2857,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ChromeGray)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2876,7 +2876,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetChromeGray)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2888,10 +2888,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ListLow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2907,7 +2907,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetListLow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2919,10 +2919,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ListMedium)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2938,7 +2938,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetListMedium)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2950,10 +2950,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ErrorText)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -2969,7 +2969,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetErrorText)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -2981,10 +2981,10 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::Foundation::IReference<::windows::UI::Color>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Accent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IReference<::windows::UI::Color>>(result__)
         }
@@ -3000,7 +3000,7 @@ impl ColorPaletteResources {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAccent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3009,12 +3009,12 @@ impl ColorPaletteResources {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<ColorPaletteResources> {
         Self::IColorPaletteResourcesFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ColorPaletteResources>(result__)
         })
@@ -3025,12 +3025,12 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<ColorPaletteResources> {
         Self::IColorPaletteResourcesFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ColorPaletteResources>(result__)
         })
@@ -3042,11 +3042,11 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -3064,7 +3064,7 @@ impl ColorPaletteResources {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -3079,7 +3079,7 @@ impl ColorPaletteResources {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -3092,11 +3092,11 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -3108,11 +3108,11 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -3129,12 +3129,12 @@ impl ColorPaletteResources {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -3151,7 +3151,7 @@ impl ColorPaletteResources {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -3162,10 +3162,10 @@ impl ColorPaletteResources {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -3175,10 +3175,10 @@ impl ColorPaletteResources {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -3203,10 +3203,10 @@ impl ColorPaletteResources {
             >,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<
                 ::windows::Foundation::Collections::IKeyValuePair<
@@ -3228,11 +3228,11 @@ impl ColorPaletteResources {
             >,
         >(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).Lookup)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 key.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -3246,10 +3246,10 @@ impl ColorPaletteResources {
             >,
         >(self)?;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -3266,11 +3266,11 @@ impl ColorPaletteResources {
             >,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).HasKey)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 key.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3291,10 +3291,10 @@ impl ColorPaletteResources {
             >,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IMapView<
                 ::windows::core::IInspectable,
@@ -3319,12 +3319,12 @@ impl ColorPaletteResources {
             >,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Insert)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 key.into_param().abi(),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -3342,7 +3342,7 @@ impl ColorPaletteResources {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Remove)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 key.into_param().abi(),
             )
             .ok()
@@ -3357,17 +3357,20 @@ impl ColorPaletteResources {
             >,
         >(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Clear)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Source(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = &::windows::core::Interface::cast::<IResourceDictionary>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Source)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
@@ -3380,7 +3383,7 @@ impl ColorPaletteResources {
         let this = &::windows::core::Interface::cast::<IResourceDictionary>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSource)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3393,10 +3396,10 @@ impl ColorPaletteResources {
     {
         let this = &::windows::core::Interface::cast::<IResourceDictionary>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).MergedDictionaries)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVector<ResourceDictionary>>(result__)
         }
@@ -3412,10 +3415,10 @@ impl ColorPaletteResources {
     > {
         let this = &::windows::core::Interface::cast::<IResourceDictionary>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ThemeDictionaries)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IMap<
                 ::windows::core::IInspectable,
@@ -3796,14 +3799,14 @@ impl CornerRadiusHelper {
         bottomleft: f64,
     ) -> ::windows::core::Result<CornerRadius> {
         Self::ICornerRadiusHelperStatics(|this| unsafe {
-            let mut result__: CornerRadius = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CornerRadius>::zeroed();
             (::windows::core::Interface::vtable(this).FromRadii)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 topleft,
                 topright,
                 bottomright,
                 bottomleft,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CornerRadius>(result__)
         })
@@ -3811,11 +3814,11 @@ impl CornerRadiusHelper {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromUniformRadius(uniformradius: f64) -> ::windows::core::Result<CornerRadius> {
         Self::ICornerRadiusHelperStatics(|this| unsafe {
-            let mut result__: CornerRadius = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<CornerRadius>::zeroed();
             (::windows::core::Interface::vtable(this).FromUniformRadius)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 uniformradius,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CornerRadius>(result__)
         })
@@ -3930,10 +3933,10 @@ impl CreateDefaultValueCallback {
     pub fn Invoke(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -3956,7 +3959,7 @@ impl<
     > CreateDefaultValueCallbackBox<F>
 {
     const VTABLE: CreateDefaultValueCallback_Vtbl = CreateDefaultValueCallback_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -3966,7 +3969,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<CreateDefaultValueCallback as ::windows::core::Interface>::IID
@@ -4003,7 +4006,7 @@ impl<
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         match ((*this).invoke)() {
             ::core::result::Result::Ok(ok__) => {
-                *result__ = ::core::mem::transmute_copy(&ok__);
+                ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                 ::core::mem::forget(ok__);
                 ::windows::core::HRESULT(0)
             }
@@ -4045,7 +4048,7 @@ unsafe impl ::windows::core::RuntimeType for CreateDefaultValueCallback {
 #[repr(C)]
 #[doc(hidden)]
 pub struct CreateDefaultValueCallback_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -4059,10 +4062,10 @@ impl DataContextChangedEventArgs {
     pub fn NewValue(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).NewValue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4071,10 +4074,10 @@ impl DataContextChangedEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4084,7 +4087,7 @@ impl DataContextChangedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4182,10 +4185,10 @@ impl DataTemplate {
     pub fn LoadContent(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).LoadContent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -4193,12 +4196,12 @@ impl DataTemplate {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<DataTemplate> {
         Self::IDataTemplateFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DataTemplate>(result__)
         })
@@ -4209,12 +4212,12 @@ impl DataTemplate {
     ) -> ::windows::core::Result<DataTemplate> {
         Self::IDataTemplateFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DataTemplate>(result__)
         })
@@ -4222,10 +4225,10 @@ impl DataTemplate {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ExtensionInstanceProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IDataTemplateStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ExtensionInstanceProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -4235,11 +4238,11 @@ impl DataTemplate {
         element: Param0,
     ) -> ::windows::core::Result<IDataTemplateExtension> {
         Self::IDataTemplateStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetExtensionInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<IDataTemplateExtension>(result__)
         })
@@ -4255,7 +4258,7 @@ impl DataTemplate {
     ) -> ::windows::core::Result<()> {
         Self::IDataTemplateStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetExtensionInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -4269,11 +4272,11 @@ impl DataTemplate {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4291,7 +4294,7 @@ impl DataTemplate {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -4306,7 +4309,7 @@ impl DataTemplate {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -4319,11 +4322,11 @@ impl DataTemplate {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4335,11 +4338,11 @@ impl DataTemplate {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4356,12 +4359,12 @@ impl DataTemplate {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -4378,7 +4381,7 @@ impl DataTemplate {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -4389,10 +4392,10 @@ impl DataTemplate {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -4402,10 +4405,10 @@ impl DataTemplate {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -4417,11 +4420,11 @@ impl DataTemplate {
     ) -> ::windows::core::Result<UIElement> {
         let this = &::windows::core::Interface::cast::<IElementFactory>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetElement)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 args.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<UIElement>(result__)
         }
@@ -4434,7 +4437,7 @@ impl DataTemplate {
         let this = &::windows::core::Interface::cast::<IElementFactory>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RecycleElement)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 args.into_param().abi(),
             )
             .ok()
@@ -4609,10 +4612,10 @@ impl DataTemplateKey {
     pub fn DataType(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).DataType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4628,7 +4631,7 @@ impl DataTemplateKey {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDataType)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -4637,12 +4640,12 @@ impl DataTemplateKey {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<DataTemplateKey> {
         Self::IDataTemplateKeyFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DataTemplateKey>(result__)
         })
@@ -4653,12 +4656,12 @@ impl DataTemplateKey {
     ) -> ::windows::core::Result<DataTemplateKey> {
         Self::IDataTemplateKeyFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DataTemplateKey>(result__)
         })
@@ -4671,13 +4674,13 @@ impl DataTemplateKey {
         datatype: Param0,
     ) -> ::windows::core::Result<DataTemplateKey> {
         Self::IDataTemplateKeyFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithType)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 datatype.into_param().abi(),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DataTemplateKey>(result__)
         })
@@ -4693,13 +4696,13 @@ impl DataTemplateKey {
     ) -> ::windows::core::Result<DataTemplateKey> {
         Self::IDataTemplateKeyFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithType)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 datatype.into_param().abi(),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DataTemplateKey>(result__)
         })
@@ -4798,10 +4801,10 @@ impl DebugSettings {
     pub fn EnableFrameRateCounter(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).EnableFrameRateCounter)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4811,7 +4814,7 @@ impl DebugSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetEnableFrameRateCounter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4821,10 +4824,10 @@ impl DebugSettings {
     pub fn IsBindingTracingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsBindingTracingEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4834,7 +4837,7 @@ impl DebugSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsBindingTracingEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4844,10 +4847,10 @@ impl DebugSettings {
     pub fn IsTextPerformanceVisualizationEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsTextPerformanceVisualizationEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4860,7 +4863,7 @@ impl DebugSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsTextPerformanceVisualizationEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4870,10 +4873,10 @@ impl DebugSettings {
     pub fn FailFastOnErrors(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).FailFastOnErrors)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -4883,7 +4886,7 @@ impl DebugSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFailFastOnErrors)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -4896,11 +4899,12 @@ impl DebugSettings {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).BindingFailed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -4916,7 +4920,7 @@ impl DebugSettings {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveBindingFailed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -5008,11 +5012,11 @@ impl DependencyObject {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -5030,7 +5034,7 @@ impl DependencyObject {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -5045,7 +5049,7 @@ impl DependencyObject {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -5058,11 +5062,11 @@ impl DependencyObject {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -5074,11 +5078,11 @@ impl DependencyObject {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -5095,12 +5099,12 @@ impl DependencyObject {
     ) -> ::windows::core::Result<i64> {
         let this = self;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -5117,7 +5121,7 @@ impl DependencyObject {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -5128,10 +5132,10 @@ impl DependencyObject {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -5141,10 +5145,10 @@ impl DependencyObject {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -5235,11 +5239,11 @@ impl DependencyObjectCollection {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -5257,7 +5261,7 @@ impl DependencyObjectCollection {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -5272,7 +5276,7 @@ impl DependencyObjectCollection {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -5285,11 +5289,11 @@ impl DependencyObjectCollection {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -5301,11 +5305,11 @@ impl DependencyObjectCollection {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -5322,12 +5326,12 @@ impl DependencyObjectCollection {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -5344,7 +5348,7 @@ impl DependencyObjectCollection {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -5355,10 +5359,10 @@ impl DependencyObjectCollection {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -5368,10 +5372,10 @@ impl DependencyObjectCollection {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -5379,12 +5383,12 @@ impl DependencyObjectCollection {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<DependencyObjectCollection> {
         Self::IDependencyObjectCollectionFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObjectCollection>(result__)
         })
@@ -5395,12 +5399,12 @@ impl DependencyObjectCollection {
     ) -> ::windows::core::Result<DependencyObjectCollection> {
         Self::IDependencyObjectCollectionFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObjectCollection>(result__)
         })
@@ -5414,10 +5418,10 @@ impl DependencyObjectCollection {
             ::windows::Foundation::Collections::IIterable<DependencyObject>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<DependencyObject>>(result__)
         }
@@ -5435,11 +5439,12 @@ impl DependencyObjectCollection {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).VectorChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 vhnd.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -5455,7 +5460,7 @@ impl DependencyObjectCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveVectorChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -5467,11 +5472,11 @@ impl DependencyObjectCollection {
             ::windows::Foundation::Collections::IVector<DependencyObject>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -5482,10 +5487,10 @@ impl DependencyObjectCollection {
             ::windows::Foundation::Collections::IVector<DependencyObject>,
         >(self)?;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -5499,10 +5504,10 @@ impl DependencyObjectCollection {
             ::windows::Foundation::Collections::IVector<DependencyObject>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<DependencyObject>>(result__)
         }
@@ -5517,12 +5522,12 @@ impl DependencyObjectCollection {
             ::windows::Foundation::Collections::IVector<DependencyObject>,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IndexOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -5538,7 +5543,7 @@ impl DependencyObjectCollection {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -5556,7 +5561,7 @@ impl DependencyObjectCollection {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).InsertAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -5570,7 +5575,7 @@ impl DependencyObjectCollection {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
             )
             .ok()
@@ -5586,7 +5591,7 @@ impl DependencyObjectCollection {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Append)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -5598,9 +5603,9 @@ impl DependencyObjectCollection {
             ::windows::Foundation::Collections::IVector<DependencyObject>,
         >(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).RemoveAtEnd)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).RemoveAtEnd)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -5610,7 +5615,10 @@ impl DependencyObjectCollection {
             ::windows::Foundation::Collections::IVector<DependencyObject>,
         >(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Clear)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
@@ -5623,13 +5631,13 @@ impl DependencyObjectCollection {
             ::windows::Foundation::Collections::IVector<DependencyObject>,
         >(self)?;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).GetMany)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 startindex,
                 items.len() as u32,
                 ::core::mem::transmute_copy(&items),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -5644,7 +5652,7 @@ impl DependencyObjectCollection {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ReplaceAll)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 items.len() as u32,
                 ::core::mem::transmute(items.as_ptr()),
             )
@@ -5923,11 +5931,11 @@ impl DependencyProperty {
     ) -> ::windows::core::Result<PropertyMetadata> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetMetadata)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 fortype.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PropertyMetadata>(result__)
         }
@@ -5935,10 +5943,10 @@ impl DependencyProperty {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UnsetValue() -> ::windows::core::Result<::windows::core::IInspectable> {
         Self::IDependencyPropertyStatics(|this| unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).UnsetValue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         })
@@ -5957,14 +5965,14 @@ impl DependencyProperty {
         typemetadata: Param3,
     ) -> ::windows::core::Result<DependencyProperty> {
         Self::IDependencyPropertyStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Register)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
                 propertytype.into_param().abi(),
                 ownertype.into_param().abi(),
                 typemetadata.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -5983,14 +5991,14 @@ impl DependencyProperty {
         defaultmetadata: Param3,
     ) -> ::windows::core::Result<DependencyProperty> {
         Self::IDependencyPropertyStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterAttached)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
                 propertytype.into_param().abi(),
                 ownertype.into_param().abi(),
                 defaultmetadata.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -6117,7 +6125,7 @@ impl DependencyPropertyChangedCallback {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 dp.into_param().abi(),
             )
@@ -6148,7 +6156,7 @@ impl<
     > DependencyPropertyChangedCallbackBox<F>
 {
     const VTABLE: DependencyPropertyChangedCallback_Vtbl = DependencyPropertyChangedCallback_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -6158,7 +6166,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid
@@ -6232,7 +6240,7 @@ unsafe impl ::windows::core::RuntimeType for DependencyPropertyChangedCallback {
 #[repr(C)]
 #[doc(hidden)]
 pub struct DependencyPropertyChangedCallback_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: ::windows::core::RawPtr,
@@ -6247,10 +6255,10 @@ impl DependencyPropertyChangedEventArgs {
     pub fn Property(&self) -> ::windows::core::Result<DependencyProperty> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Property)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         }
@@ -6259,10 +6267,10 @@ impl DependencyPropertyChangedEventArgs {
     pub fn OldValue(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).OldValue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -6271,10 +6279,10 @@ impl DependencyPropertyChangedEventArgs {
     pub fn NewValue(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).NewValue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -6397,7 +6405,7 @@ impl DependencyPropertyChangedEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -6429,7 +6437,7 @@ impl<
 {
     const VTABLE: DependencyPropertyChangedEventHandler_Vtbl =
         DependencyPropertyChangedEventHandler_Vtbl {
-            base: ::windows::core::IUnknownVtbl {
+            base__: ::windows::core::IUnknownVtbl {
                 QueryInterface: Self::QueryInterface,
                 AddRef: Self::AddRef,
                 Release: Self::Release,
@@ -6439,7 +6447,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid
@@ -6513,7 +6521,7 @@ unsafe impl ::windows::core::RuntimeType for DependencyPropertyChangedEventHandl
 #[repr(C)]
 #[doc(hidden)]
 pub struct DependencyPropertyChangedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -6528,10 +6536,11 @@ impl DispatcherTimer {
     pub fn Interval(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::TimeSpan = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::TimeSpan>::zeroed();
             (::windows::core::Interface::vtable(this).Interval)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         }
@@ -6547,7 +6556,7 @@ impl DispatcherTimer {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetInterval)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6557,10 +6566,10 @@ impl DispatcherTimer {
     pub fn IsEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -6578,11 +6587,12 @@ impl DispatcherTimer {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Tick)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -6598,7 +6608,7 @@ impl DispatcherTimer {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveTick)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -6608,25 +6618,31 @@ impl DispatcherTimer {
     pub fn Start(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Start)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Start)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Stop(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Stop)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Stop)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<DispatcherTimer> {
         Self::IDispatcherTimerFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DispatcherTimer>(result__)
         })
@@ -6637,12 +6653,12 @@ impl DispatcherTimer {
     ) -> ::windows::core::Result<DispatcherTimer> {
         Self::IDispatcherTimerFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<DispatcherTimer>(result__)
         })
@@ -6741,10 +6757,10 @@ impl DragEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -6754,7 +6770,7 @@ impl DragEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -6766,10 +6782,10 @@ impl DragEventArgs {
     ) -> ::windows::core::Result<::windows::ApplicationModel::DataTransfer::DataPackage> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Data)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackage>(result__)
         }
@@ -6785,7 +6801,7 @@ impl DragEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetData)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -6797,10 +6813,10 @@ impl DragEventArgs {
     ) -> ::windows::core::Result<::windows::ApplicationModel::DataTransfer::DataPackageView> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DataView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackageView>(result__)
         }
@@ -6809,10 +6825,10 @@ impl DragEventArgs {
     pub fn DragUIOverride(&self) -> ::windows::core::Result<DragUIOverride> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DragUIOverride)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DragUIOverride>(result__)
         }
@@ -6825,10 +6841,12 @@ impl DragEventArgs {
     > {
         let this = self;
         unsafe {
-            let mut result__ : ::windows::ApplicationModel::DataTransfer::DragDrop:: DragDropModifiers = :: core :: mem :: zeroed ( ) ;
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Modifiers)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::ApplicationModel::DataTransfer::DragDrop::DragDropModifiers>(
                 result__,
@@ -6842,11 +6860,12 @@ impl DragEventArgs {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::ApplicationModel::DataTransfer::DataPackageOperation =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::ApplicationModel::DataTransfer::DataPackageOperation,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).AcceptedOperation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackageOperation>(result__)
         }
@@ -6859,7 +6878,7 @@ impl DragEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAcceptedOperation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -6872,11 +6891,12 @@ impl DragEventArgs {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::ApplicationModel::DataTransfer::DataPackageOperation =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::ApplicationModel::DataTransfer::DataPackageOperation,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).AllowedOperations)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackageOperation>(result__)
         }
@@ -6885,10 +6905,10 @@ impl DragEventArgs {
     pub fn GetDeferral(&self) -> ::windows::core::Result<DragOperationDeferral> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDeferral)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DragOperationDeferral>(result__)
         }
@@ -6900,11 +6920,11 @@ impl DragEventArgs {
     ) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Point>::zeroed();
             (::windows::core::Interface::vtable(this).GetPosition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 relativeto.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Point>(result__)
         }
@@ -6913,10 +6933,10 @@ impl DragEventArgs {
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).OriginalSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -7050,7 +7070,7 @@ impl DragEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -7081,7 +7101,7 @@ impl<
     > DragEventHandlerBox<F>
 {
     const VTABLE: DragEventHandler_Vtbl = DragEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -7091,7 +7111,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<DragEventHandler as ::windows::core::Interface>::IID
@@ -7162,7 +7182,7 @@ unsafe impl ::windows::core::RuntimeType for DragEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct DragEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -7177,8 +7197,10 @@ impl DragOperationDeferral {
     pub fn Complete(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Complete)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Complete)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
 }
@@ -7268,10 +7290,10 @@ impl DragStartingEventArgs {
     pub fn Cancel(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Cancel)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -7281,7 +7303,7 @@ impl DragStartingEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCancel)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -7293,10 +7315,10 @@ impl DragStartingEventArgs {
     ) -> ::windows::core::Result<::windows::ApplicationModel::DataTransfer::DataPackage> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Data)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackage>(result__)
         }
@@ -7305,10 +7327,10 @@ impl DragStartingEventArgs {
     pub fn DragUI(&self) -> ::windows::core::Result<DragUI> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DragUI)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DragUI>(result__)
         }
@@ -7320,11 +7342,12 @@ impl DragStartingEventArgs {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::ApplicationModel::DataTransfer::DataPackageOperation =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::ApplicationModel::DataTransfer::DataPackageOperation,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).AllowedOperations)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackageOperation>(result__)
         }
@@ -7337,7 +7360,7 @@ impl DragStartingEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAllowedOperations)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -7347,10 +7370,10 @@ impl DragStartingEventArgs {
     pub fn GetDeferral(&self) -> ::windows::core::Result<DragOperationDeferral> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetDeferral)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DragOperationDeferral>(result__)
         }
@@ -7362,11 +7385,11 @@ impl DragStartingEventArgs {
     ) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Point>::zeroed();
             (::windows::core::Interface::vtable(this).GetPosition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 relativeto.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Point>(result__)
         }
@@ -7375,10 +7398,10 @@ impl DragStartingEventArgs {
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).OriginalSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -7498,7 +7521,7 @@ impl DragUI {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContentFromBitmapImage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 bitmapimage.into_param().abi(),
             )
             .ok()
@@ -7518,7 +7541,7 @@ impl DragUI {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContentFromBitmapImageWithAnchorPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 bitmapimage.into_param().abi(),
                 anchorpoint.into_param().abi(),
             )
@@ -7536,7 +7559,7 @@ impl DragUI {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContentFromSoftwareBitmap)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 softwarebitmap.into_param().abi(),
             )
             .ok()
@@ -7555,7 +7578,7 @@ impl DragUI {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContentFromSoftwareBitmapWithAnchorPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 softwarebitmap.into_param().abi(),
                 anchorpoint.into_param().abi(),
             )
@@ -7567,7 +7590,7 @@ impl DragUI {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContentFromDataPackage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -7655,11 +7678,12 @@ impl DragUIOverride {
     pub fn Caption(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Caption)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -7672,7 +7696,7 @@ impl DragUIOverride {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCaption)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -7682,10 +7706,10 @@ impl DragUIOverride {
     pub fn IsContentVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsContentVisible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -7695,7 +7719,7 @@ impl DragUIOverride {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsContentVisible)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -7705,10 +7729,10 @@ impl DragUIOverride {
     pub fn IsCaptionVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsCaptionVisible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -7718,7 +7742,7 @@ impl DragUIOverride {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsCaptionVisible)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -7728,10 +7752,10 @@ impl DragUIOverride {
     pub fn IsGlyphVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsGlyphVisible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -7741,7 +7765,7 @@ impl DragUIOverride {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsGlyphVisible)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -7751,7 +7775,10 @@ impl DragUIOverride {
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Clear)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`, `\"UI_Xaml_Media_Imaging\"`*"]
@@ -7766,7 +7793,7 @@ impl DragUIOverride {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContentFromBitmapImage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 bitmapimage.into_param().abi(),
             )
             .ok()
@@ -7786,7 +7813,7 @@ impl DragUIOverride {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContentFromBitmapImageWithAnchorPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 bitmapimage.into_param().abi(),
                 anchorpoint.into_param().abi(),
             )
@@ -7804,7 +7831,7 @@ impl DragUIOverride {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContentFromSoftwareBitmap)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 softwarebitmap.into_param().abi(),
             )
             .ok()
@@ -7823,7 +7850,7 @@ impl DragUIOverride {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContentFromSoftwareBitmapWithAnchorPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 softwarebitmap.into_param().abi(),
                 anchorpoint.into_param().abi(),
             )
@@ -7916,11 +7943,12 @@ impl DropCompletedEventArgs {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::ApplicationModel::DataTransfer::DataPackageOperation =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::windows::ApplicationModel::DataTransfer::DataPackageOperation,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).DropResult)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::ApplicationModel::DataTransfer::DataPackageOperation>(result__)
         }
@@ -7929,10 +7957,10 @@ impl DropCompletedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).OriginalSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -8090,10 +8118,10 @@ impl DurationHelper {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Automatic() -> ::windows::core::Result<Duration> {
         Self::IDurationHelperStatics(|this| unsafe {
-            let mut result__: Duration = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Duration>::zeroed();
             (::windows::core::Interface::vtable(this).Automatic)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Duration>(result__)
         })
@@ -8101,10 +8129,10 @@ impl DurationHelper {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Forever() -> ::windows::core::Result<Duration> {
         Self::IDurationHelperStatics(|this| unsafe {
-            let mut result__: Duration = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Duration>::zeroed();
             (::windows::core::Interface::vtable(this).Forever)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Duration>(result__)
         })
@@ -8119,12 +8147,12 @@ impl DurationHelper {
         duration2: Param1,
     ) -> ::windows::core::Result<i32> {
         Self::IDurationHelperStatics(|this| unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Compare)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 duration1.into_param().abi(),
                 duration2.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         })
@@ -8137,11 +8165,11 @@ impl DurationHelper {
         timespan: Param0,
     ) -> ::windows::core::Result<Duration> {
         Self::IDurationHelperStatics(|this| unsafe {
-            let mut result__: Duration = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Duration>::zeroed();
             (::windows::core::Interface::vtable(this).FromTimeSpan)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 timespan.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Duration>(result__)
         })
@@ -8151,11 +8179,11 @@ impl DurationHelper {
         target: Param0,
     ) -> ::windows::core::Result<bool> {
         Self::IDurationHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).GetHasTimeSpan)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -8170,12 +8198,12 @@ impl DurationHelper {
         duration: Param1,
     ) -> ::windows::core::Result<Duration> {
         Self::IDurationHelperStatics(|this| unsafe {
-            let mut result__: Duration = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Duration>::zeroed();
             (::windows::core::Interface::vtable(this).Add)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
                 duration.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Duration>(result__)
         })
@@ -8190,12 +8218,12 @@ impl DurationHelper {
         value: Param1,
     ) -> ::windows::core::Result<bool> {
         Self::IDurationHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Equals)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -8210,12 +8238,12 @@ impl DurationHelper {
         duration: Param1,
     ) -> ::windows::core::Result<Duration> {
         Self::IDurationHelperStatics(|this| unsafe {
-            let mut result__: Duration = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Duration>::zeroed();
             (::windows::core::Interface::vtable(this).Subtract)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
                 duration.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Duration>(result__)
         })
@@ -8350,10 +8378,10 @@ impl EffectiveViewportChangedEventArgs {
     pub fn EffectiveViewport(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).EffectiveViewport)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
@@ -8362,10 +8390,10 @@ impl EffectiveViewportChangedEventArgs {
     pub fn MaxViewport(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).MaxViewport)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
@@ -8374,10 +8402,10 @@ impl EffectiveViewportChangedEventArgs {
     pub fn BringIntoViewDistanceX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).BringIntoViewDistanceX)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -8386,10 +8414,10 @@ impl EffectiveViewportChangedEventArgs {
     pub fn BringIntoViewDistanceY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).BringIntoViewDistanceY)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -8486,10 +8514,10 @@ impl ElementFactoryGetArgs {
     pub fn Data(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).Data)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -8502,7 +8530,7 @@ impl ElementFactoryGetArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetData)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8512,10 +8540,10 @@ impl ElementFactoryGetArgs {
     pub fn Parent(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Parent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<UIElement>(result__)
         }
@@ -8528,7 +8556,7 @@ impl ElementFactoryGetArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetParent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8537,12 +8565,12 @@ impl ElementFactoryGetArgs {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<ElementFactoryGetArgs> {
         Self::IElementFactoryGetArgsFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ElementFactoryGetArgs>(result__)
         })
@@ -8553,12 +8581,12 @@ impl ElementFactoryGetArgs {
     ) -> ::windows::core::Result<ElementFactoryGetArgs> {
         Self::IElementFactoryGetArgsFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ElementFactoryGetArgs>(result__)
         })
@@ -8663,10 +8691,10 @@ impl ElementFactoryRecycleArgs {
     pub fn Element(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Element)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<UIElement>(result__)
         }
@@ -8679,7 +8707,7 @@ impl ElementFactoryRecycleArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetElement)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8689,10 +8717,10 @@ impl ElementFactoryRecycleArgs {
     pub fn Parent(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Parent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<UIElement>(result__)
         }
@@ -8705,7 +8733,7 @@ impl ElementFactoryRecycleArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetParent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -8714,12 +8742,12 @@ impl ElementFactoryRecycleArgs {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<ElementFactoryRecycleArgs> {
         Self::IElementFactoryRecycleArgsFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ElementFactoryRecycleArgs>(result__)
         })
@@ -8730,12 +8758,12 @@ impl ElementFactoryRecycleArgs {
     ) -> ::windows::core::Result<ElementFactoryRecycleArgs> {
         Self::IElementFactoryRecycleArgsFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ElementFactoryRecycleArgs>(result__)
         })
@@ -8987,10 +9015,10 @@ impl ElementSoundPlayer {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Volume() -> ::windows::core::Result<f64> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).Volume)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         })
@@ -8999,7 +9027,7 @@ impl ElementSoundPlayer {
     pub fn SetVolume(value: f64) -> ::windows::core::Result<()> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetVolume)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9008,10 +9036,10 @@ impl ElementSoundPlayer {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn State() -> ::windows::core::Result<ElementSoundPlayerState> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
-            let mut result__: ElementSoundPlayerState = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<ElementSoundPlayerState>::zeroed();
             (::windows::core::Interface::vtable(this).State)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ElementSoundPlayerState>(result__)
         })
@@ -9020,7 +9048,7 @@ impl ElementSoundPlayer {
     pub fn SetState(value: ElementSoundPlayerState) -> ::windows::core::Result<()> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetState)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9029,10 +9057,10 @@ impl ElementSoundPlayer {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn SpatialAudioMode() -> ::windows::core::Result<ElementSpatialAudioMode> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
-            let mut result__: ElementSpatialAudioMode = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<ElementSpatialAudioMode>::zeroed();
             (::windows::core::Interface::vtable(this).SpatialAudioMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ElementSpatialAudioMode>(result__)
         })
@@ -9041,7 +9069,7 @@ impl ElementSoundPlayer {
     pub fn SetSpatialAudioMode(value: ElementSpatialAudioMode) -> ::windows::core::Result<()> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetSpatialAudioMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -9051,7 +9079,7 @@ impl ElementSoundPlayer {
     pub fn Play(sound: ElementSoundKind) -> ::windows::core::Result<()> {
         Self::IElementSoundPlayerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).Play)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sound,
             )
             .ok()
@@ -9293,7 +9321,7 @@ impl EnteredBackgroundEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -9324,7 +9352,7 @@ impl<
     > EnteredBackgroundEventHandlerBox<F>
 {
     const VTABLE: EnteredBackgroundEventHandler_Vtbl = EnteredBackgroundEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -9334,7 +9362,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<EnteredBackgroundEventHandler as ::windows::core::Interface>::IID
@@ -9407,7 +9435,7 @@ unsafe impl ::windows::core::RuntimeType for EnteredBackgroundEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct EnteredBackgroundEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -9423,13 +9451,13 @@ impl EventTrigger {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             EventTrigger,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -9440,11 +9468,11 @@ impl EventTrigger {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -9462,7 +9490,7 @@ impl EventTrigger {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -9477,7 +9505,7 @@ impl EventTrigger {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -9490,11 +9518,11 @@ impl EventTrigger {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -9506,11 +9534,11 @@ impl EventTrigger {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -9527,12 +9555,12 @@ impl EventTrigger {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -9549,7 +9577,7 @@ impl EventTrigger {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -9560,10 +9588,10 @@ impl EventTrigger {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -9573,10 +9601,10 @@ impl EventTrigger {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -9585,10 +9613,10 @@ impl EventTrigger {
     pub fn RoutedEvent(&self) -> ::windows::core::Result<RoutedEvent> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RoutedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         }
@@ -9601,7 +9629,7 @@ impl EventTrigger {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRoutedEvent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -9611,10 +9639,10 @@ impl EventTrigger {
     pub fn Actions(&self) -> ::windows::core::Result<TriggerActionCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Actions)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<TriggerActionCollection>(result__)
         }
@@ -9742,11 +9770,12 @@ impl ExceptionRoutedEventArgs {
     pub fn ErrorMessage(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ErrorMessage)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -9755,10 +9784,10 @@ impl ExceptionRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).OriginalSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -9901,7 +9930,7 @@ impl ExceptionRoutedEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -9932,7 +9961,7 @@ impl<
     > ExceptionRoutedEventHandlerBox<F>
 {
     const VTABLE: ExceptionRoutedEventHandler_Vtbl = ExceptionRoutedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -9942,7 +9971,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<ExceptionRoutedEventHandler as ::windows::core::Interface>::IID
@@ -10015,7 +10044,7 @@ unsafe impl ::windows::core::RuntimeType for ExceptionRoutedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ExceptionRoutedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -10423,7 +10452,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<super::Composition::IAnimationObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).PopulatePropertyInfo)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -10437,11 +10466,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -10459,7 +10488,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -10474,7 +10503,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -10487,11 +10516,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -10503,11 +10532,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -10524,12 +10553,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -10546,7 +10575,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -10557,10 +10586,10 @@ impl FrameworkElement {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -10570,10 +10599,10 @@ impl FrameworkElement {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -10582,10 +10611,10 @@ impl FrameworkElement {
     pub fn Triggers(&self) -> ::windows::core::Result<TriggerCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Triggers)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<TriggerCollection>(result__)
         }
@@ -10594,10 +10623,10 @@ impl FrameworkElement {
     pub fn Resources(&self) -> ::windows::core::Result<ResourceDictionary> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Resources)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ResourceDictionary>(result__)
         }
@@ -10610,7 +10639,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetResources)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10620,10 +10649,10 @@ impl FrameworkElement {
     pub fn Tag(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).Tag)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -10636,7 +10665,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTag)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10646,11 +10675,12 @@ impl FrameworkElement {
     pub fn Language(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Language)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -10663,7 +10693,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetLanguage)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10673,10 +10703,10 @@ impl FrameworkElement {
     pub fn ActualWidth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).ActualWidth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -10685,10 +10715,10 @@ impl FrameworkElement {
     pub fn ActualHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).ActualHeight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -10697,10 +10727,10 @@ impl FrameworkElement {
     pub fn Width(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).Width)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -10710,7 +10740,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetWidth)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10720,10 +10750,10 @@ impl FrameworkElement {
     pub fn Height(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).Height)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -10733,7 +10763,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHeight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10743,10 +10773,10 @@ impl FrameworkElement {
     pub fn MinWidth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MinWidth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -10756,7 +10786,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMinWidth)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10766,10 +10796,10 @@ impl FrameworkElement {
     pub fn MaxWidth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MaxWidth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -10779,7 +10809,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMaxWidth)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10789,10 +10819,10 @@ impl FrameworkElement {
     pub fn MinHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MinHeight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -10802,7 +10832,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMinHeight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10812,10 +10842,10 @@ impl FrameworkElement {
     pub fn MaxHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).MaxHeight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -10825,7 +10855,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMaxHeight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10835,10 +10865,10 @@ impl FrameworkElement {
     pub fn HorizontalAlignment(&self) -> ::windows::core::Result<HorizontalAlignment> {
         let this = self;
         unsafe {
-            let mut result__: HorizontalAlignment = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<HorizontalAlignment>::zeroed();
             (::windows::core::Interface::vtable(this).HorizontalAlignment)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<HorizontalAlignment>(result__)
         }
@@ -10851,7 +10881,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHorizontalAlignment)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10861,10 +10891,10 @@ impl FrameworkElement {
     pub fn VerticalAlignment(&self) -> ::windows::core::Result<VerticalAlignment> {
         let this = self;
         unsafe {
-            let mut result__: VerticalAlignment = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<VerticalAlignment>::zeroed();
             (::windows::core::Interface::vtable(this).VerticalAlignment)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<VerticalAlignment>(result__)
         }
@@ -10874,7 +10904,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetVerticalAlignment)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -10884,10 +10914,10 @@ impl FrameworkElement {
     pub fn Margin(&self) -> ::windows::core::Result<Thickness> {
         let this = self;
         unsafe {
-            let mut result__: Thickness = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Thickness>::zeroed();
             (::windows::core::Interface::vtable(this).Margin)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Thickness>(result__)
         }
@@ -10900,7 +10930,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetMargin)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10910,11 +10940,12 @@ impl FrameworkElement {
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Name)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -10927,7 +10958,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetName)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10937,10 +10968,10 @@ impl FrameworkElement {
     pub fn BaseUri(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BaseUri)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
@@ -10949,10 +10980,10 @@ impl FrameworkElement {
     pub fn DataContext(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).DataContext)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -10968,7 +10999,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDataContext)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -10978,10 +11009,10 @@ impl FrameworkElement {
     pub fn AllowFocusOnInteraction(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AllowFocusOnInteraction)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -10991,7 +11022,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAllowFocusOnInteraction)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -11001,10 +11032,10 @@ impl FrameworkElement {
     pub fn FocusVisualMargin(&self) -> ::windows::core::Result<Thickness> {
         let this = self;
         unsafe {
-            let mut result__: Thickness = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Thickness>::zeroed();
             (::windows::core::Interface::vtable(this).FocusVisualMargin)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Thickness>(result__)
         }
@@ -11017,7 +11048,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFocusVisualMargin)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11027,10 +11058,10 @@ impl FrameworkElement {
     pub fn FocusVisualSecondaryThickness(&self) -> ::windows::core::Result<Thickness> {
         let this = self;
         unsafe {
-            let mut result__: Thickness = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Thickness>::zeroed();
             (::windows::core::Interface::vtable(this).FocusVisualSecondaryThickness)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Thickness>(result__)
         }
@@ -11046,7 +11077,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFocusVisualSecondaryThickness)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11056,10 +11087,10 @@ impl FrameworkElement {
     pub fn FocusVisualPrimaryThickness(&self) -> ::windows::core::Result<Thickness> {
         let this = self;
         unsafe {
-            let mut result__: Thickness = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Thickness>::zeroed();
             (::windows::core::Interface::vtable(this).FocusVisualPrimaryThickness)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Thickness>(result__)
         }
@@ -11072,7 +11103,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFocusVisualPrimaryThickness)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11083,10 +11114,10 @@ impl FrameworkElement {
     pub fn FocusVisualSecondaryBrush(&self) -> ::windows::core::Result<Media::Brush> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FocusVisualSecondaryBrush)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Brush>(result__)
         }
@@ -11103,7 +11134,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFocusVisualSecondaryBrush)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11114,10 +11145,10 @@ impl FrameworkElement {
     pub fn FocusVisualPrimaryBrush(&self) -> ::windows::core::Result<Media::Brush> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FocusVisualPrimaryBrush)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Brush>(result__)
         }
@@ -11131,7 +11162,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFocusVisualPrimaryBrush)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11141,10 +11172,10 @@ impl FrameworkElement {
     pub fn AllowFocusWhenDisabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AllowFocusWhenDisabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -11154,7 +11185,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAllowFocusWhenDisabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -11164,10 +11195,10 @@ impl FrameworkElement {
     pub fn Style(&self) -> ::windows::core::Result<Style> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Style)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Style>(result__)
         }
@@ -11180,7 +11211,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetStyle)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -11190,10 +11221,10 @@ impl FrameworkElement {
     pub fn Parent(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Parent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -11202,10 +11233,10 @@ impl FrameworkElement {
     pub fn FlowDirection(&self) -> ::windows::core::Result<FlowDirection> {
         let this = self;
         unsafe {
-            let mut result__: FlowDirection = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FlowDirection>::zeroed();
             (::windows::core::Interface::vtable(this).FlowDirection)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FlowDirection>(result__)
         }
@@ -11215,7 +11246,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFlowDirection)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -11225,10 +11256,10 @@ impl FrameworkElement {
     pub fn RequestedTheme(&self) -> ::windows::core::Result<ElementTheme> {
         let this = self;
         unsafe {
-            let mut result__: ElementTheme = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<ElementTheme>::zeroed();
             (::windows::core::Interface::vtable(this).RequestedTheme)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ElementTheme>(result__)
         }
@@ -11238,7 +11269,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRequestedTheme)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -11248,10 +11279,10 @@ impl FrameworkElement {
     pub fn IsLoaded(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsLoaded)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -11260,10 +11291,10 @@ impl FrameworkElement {
     pub fn ActualTheme(&self) -> ::windows::core::Result<ElementTheme> {
         let this = self;
         unsafe {
-            let mut result__: ElementTheme = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<ElementTheme>::zeroed();
             (::windows::core::Interface::vtable(this).ActualTheme)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ElementTheme>(result__)
         }
@@ -11275,11 +11306,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Loaded)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -11295,7 +11327,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveLoaded)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -11308,11 +11340,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Unloaded)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -11328,7 +11361,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveUnloaded)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -11347,11 +11380,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DataContextChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -11367,7 +11401,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDataContextChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -11380,11 +11414,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).SizeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -11400,7 +11435,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveSizeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -11419,11 +11454,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).LayoutUpdated)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -11439,7 +11475,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveLayoutUpdated)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -11461,11 +11497,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Loading)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -11481,7 +11518,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveLoading)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -11503,11 +11540,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ActualThemeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -11523,7 +11561,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveActualThemeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -11545,11 +11583,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).EffectiveViewportChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -11565,7 +11604,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveEffectiveViewportChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -11578,11 +11617,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).FindName)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 name.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -11601,7 +11640,7 @@ impl FrameworkElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBinding)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 binding.into_param().abi(),
             )
@@ -11616,11 +11655,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<Data::BindingExpression> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetBindingExpression)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Data::BindingExpression>(result__)
         }
@@ -11630,7 +11669,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IFrameworkElementProtected>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).InvalidateViewport)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -11638,10 +11677,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TagProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TagProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11649,10 +11688,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn LanguageProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).LanguageProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11660,10 +11699,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualWidthProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ActualWidthProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11671,10 +11710,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualHeightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ActualHeightProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11682,10 +11721,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn WidthProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).WidthProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11693,10 +11732,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HeightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).HeightProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11704,10 +11743,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinWidthProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).MinWidthProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11715,10 +11754,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MaxWidthProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).MaxWidthProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11726,10 +11765,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MinHeightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).MinHeightProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11737,10 +11776,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MaxHeightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).MaxHeightProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11748,10 +11787,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HorizontalAlignmentProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).HorizontalAlignmentProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11759,10 +11798,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn VerticalAlignmentProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).VerticalAlignmentProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11770,10 +11809,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn MarginProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).MarginProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11781,10 +11820,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn NameProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).NameProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11792,10 +11831,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DataContextProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DataContextProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11803,10 +11842,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowFocusOnInteractionProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AllowFocusOnInteractionProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11814,10 +11853,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualMarginProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FocusVisualMarginProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11825,10 +11864,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualSecondaryThicknessProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FocusVisualSecondaryThicknessProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11836,10 +11875,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualPrimaryThicknessProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FocusVisualPrimaryThicknessProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11847,10 +11886,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualSecondaryBrushProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FocusVisualSecondaryBrushProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11858,10 +11897,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusVisualPrimaryBrushProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FocusVisualPrimaryBrushProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11869,10 +11908,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowFocusWhenDisabledProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AllowFocusWhenDisabledProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11880,10 +11919,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn StyleProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).StyleProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11891,10 +11930,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FlowDirectionProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FlowDirectionProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11902,10 +11941,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RequestedThemeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RequestedThemeProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11913,10 +11952,10 @@ impl FrameworkElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ActualThemeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IFrameworkElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ActualThemeProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -11927,7 +11966,7 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<()> {
         Self::IFrameworkElementStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).DeferTree)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
             )
             .ok()
@@ -11937,10 +11976,10 @@ impl FrameworkElement {
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Size>::zeroed();
             (::windows::core::Interface::vtable(this).DesiredSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Size>(result__)
         }
@@ -11949,10 +11988,10 @@ impl FrameworkElement {
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AllowDrop)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -11962,7 +12001,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAllowDrop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -11972,10 +12011,10 @@ impl FrameworkElement {
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).Opacity)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -11985,7 +12024,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetOpacity)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -11996,10 +12035,10 @@ impl FrameworkElement {
     pub fn Clip(&self) -> ::windows::core::Result<Media::RectangleGeometry> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Clip)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::RectangleGeometry>(result__)
         }
@@ -12013,7 +12052,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetClip)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12024,10 +12063,10 @@ impl FrameworkElement {
     pub fn RenderTransform(&self) -> ::windows::core::Result<Media::Transform> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RenderTransform)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Transform>(result__)
         }
@@ -12041,7 +12080,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRenderTransform)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12052,10 +12091,10 @@ impl FrameworkElement {
     pub fn Projection(&self) -> ::windows::core::Result<Media::Projection> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Projection)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Projection>(result__)
         }
@@ -12069,7 +12108,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetProjection)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12080,10 +12119,10 @@ impl FrameworkElement {
     pub fn Transform3D(&self) -> ::windows::core::Result<Media::Media3D::Transform3D> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Transform3D)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Media3D::Transform3D>(result__)
         }
@@ -12100,7 +12139,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTransform3D)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12110,10 +12149,10 @@ impl FrameworkElement {
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Point>::zeroed();
             (::windows::core::Interface::vtable(this).RenderTransformOrigin)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Point>(result__)
         }
@@ -12129,7 +12168,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRenderTransformOrigin)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12139,10 +12178,10 @@ impl FrameworkElement {
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsHitTestVisible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12152,7 +12191,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsHitTestVisible)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12162,10 +12201,10 @@ impl FrameworkElement {
     pub fn Visibility(&self) -> ::windows::core::Result<Visibility> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: Visibility = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Visibility>::zeroed();
             (::windows::core::Interface::vtable(this).Visibility)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Visibility>(result__)
         }
@@ -12175,7 +12214,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetVisibility)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12185,10 +12224,10 @@ impl FrameworkElement {
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Size>::zeroed();
             (::windows::core::Interface::vtable(this).RenderSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Size>(result__)
         }
@@ -12197,10 +12236,10 @@ impl FrameworkElement {
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).UseLayoutRounding)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12210,7 +12249,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetUseLayoutRounding)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12221,10 +12260,10 @@ impl FrameworkElement {
     pub fn Transitions(&self) -> ::windows::core::Result<Media::Animation::TransitionCollection> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Transitions)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Animation::TransitionCollection>(result__)
         }
@@ -12241,7 +12280,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTransitions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12252,10 +12291,10 @@ impl FrameworkElement {
     pub fn CacheMode(&self) -> ::windows::core::Result<Media::CacheMode> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CacheMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::CacheMode>(result__)
         }
@@ -12269,7 +12308,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCacheMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12279,10 +12318,10 @@ impl FrameworkElement {
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsTapEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12292,7 +12331,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsTapEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12302,10 +12341,10 @@ impl FrameworkElement {
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsDoubleTapEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12315,7 +12354,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsDoubleTapEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12325,10 +12364,10 @@ impl FrameworkElement {
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanDrag)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12338,7 +12377,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCanDrag)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12348,10 +12387,10 @@ impl FrameworkElement {
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsRightTapEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12361,7 +12400,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsRightTapEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12371,10 +12410,10 @@ impl FrameworkElement {
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsHoldingEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12384,7 +12423,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsHoldingEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12395,10 +12434,10 @@ impl FrameworkElement {
     pub fn ManipulationMode(&self) -> ::windows::core::Result<Input::ManipulationModes> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: Input::ManipulationModes = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Input::ManipulationModes>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::ManipulationModes>(result__)
         }
@@ -12412,7 +12451,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetManipulationMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12426,10 +12465,10 @@ impl FrameworkElement {
     {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PointerCaptures)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<Input::Pointer>>(result__)
         }
@@ -12439,10 +12478,10 @@ impl FrameworkElement {
     pub fn ContextFlyout(&self) -> ::windows::core::Result<Controls::Primitives::FlyoutBase> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ContextFlyout)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Controls::Primitives::FlyoutBase>(result__)
         }
@@ -12459,7 +12498,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContextFlyout)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12470,10 +12509,10 @@ impl FrameworkElement {
     pub fn CompositeMode(&self) -> ::windows::core::Result<Media::ElementCompositeMode> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: Media::ElementCompositeMode = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Media::ElementCompositeMode>::zeroed();
             (::windows::core::Interface::vtable(this).CompositeMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::ElementCompositeMode>(result__)
         }
@@ -12487,7 +12526,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCompositeMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12501,10 +12540,10 @@ impl FrameworkElement {
     {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Lights)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVector<Media::XamlLight>>(result__)
         }
@@ -12513,10 +12552,10 @@ impl FrameworkElement {
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanBeScrollAnchor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12526,7 +12565,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCanBeScrollAnchor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12536,10 +12575,10 @@ impl FrameworkElement {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ExitDisplayModeOnAccessKeyInvoked)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12549,7 +12588,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetExitDisplayModeOnAccessKeyInvoked)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12559,10 +12598,10 @@ impl FrameworkElement {
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsAccessKeyScope)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -12572,7 +12611,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsAccessKeyScope)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12582,10 +12621,10 @@ impl FrameworkElement {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AccessKeyScopeOwner)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -12598,7 +12637,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAccessKeyScopeOwner)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12608,11 +12647,12 @@ impl FrameworkElement {
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).AccessKey)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -12625,7 +12665,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAccessKey)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12636,10 +12676,10 @@ impl FrameworkElement {
     pub fn KeyTipPlacementMode(&self) -> ::windows::core::Result<Input::KeyTipPlacementMode> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: Input::KeyTipPlacementMode = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Input::KeyTipPlacementMode>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipPlacementMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::KeyTipPlacementMode>(result__)
         }
@@ -12653,7 +12693,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyTipPlacementMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12663,10 +12703,10 @@ impl FrameworkElement {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipHorizontalOffset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -12676,7 +12716,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyTipHorizontalOffset)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12686,10 +12726,10 @@ impl FrameworkElement {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipVerticalOffset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -12699,7 +12739,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyTipVerticalOffset)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12709,10 +12749,10 @@ impl FrameworkElement {
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipTarget)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -12725,7 +12765,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyTipTarget)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12738,10 +12778,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<Input::XYFocusKeyboardNavigationMode> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: Input::XYFocusKeyboardNavigationMode = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::XYFocusKeyboardNavigationMode>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusKeyboardNavigation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::XYFocusKeyboardNavigationMode>(result__)
         }
@@ -12755,7 +12796,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusKeyboardNavigation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12768,10 +12809,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<Input::XYFocusNavigationStrategy> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::XYFocusNavigationStrategy>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusUpNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
@@ -12785,7 +12827,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusUpNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12798,10 +12840,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<Input::XYFocusNavigationStrategy> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::XYFocusNavigationStrategy>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusDownNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
@@ -12815,7 +12858,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusDownNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12828,10 +12871,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<Input::XYFocusNavigationStrategy> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::XYFocusNavigationStrategy>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusLeftNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
@@ -12845,7 +12889,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusLeftNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12858,10 +12902,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<Input::XYFocusNavigationStrategy> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::XYFocusNavigationStrategy>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusRightNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
@@ -12875,7 +12920,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusRightNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12890,10 +12935,10 @@ impl FrameworkElement {
     > {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyboardAccelerators)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVector<Input::KeyboardAccelerator>>(
                 result__,
@@ -12904,10 +12949,10 @@ impl FrameworkElement {
     pub fn KeyboardAcceleratorPlacementTarget(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyboardAcceleratorPlacementTarget)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -12923,7 +12968,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyboardAcceleratorPlacementTarget)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -12936,10 +12981,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<Input::KeyboardAcceleratorPlacementMode> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: Input::KeyboardAcceleratorPlacementMode = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::KeyboardAcceleratorPlacementMode>::zeroed();
             (::windows::core::Interface::vtable(this).KeyboardAcceleratorPlacementMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::KeyboardAcceleratorPlacementMode>(result__)
         }
@@ -12953,7 +12999,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyboardAcceleratorPlacementMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12963,10 +13009,10 @@ impl FrameworkElement {
     pub fn HighContrastAdjustment(&self) -> ::windows::core::Result<ElementHighContrastAdjustment> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ElementHighContrastAdjustment = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<ElementHighContrastAdjustment>::zeroed();
             (::windows::core::Interface::vtable(this).HighContrastAdjustment)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ElementHighContrastAdjustment>(result__)
         }
@@ -12979,7 +13025,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHighContrastAdjustment)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -12990,10 +13036,10 @@ impl FrameworkElement {
     pub fn TabFocusNavigation(&self) -> ::windows::core::Result<Input::KeyboardNavigationMode> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: Input::KeyboardNavigationMode = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Input::KeyboardNavigationMode>::zeroed();
             (::windows::core::Interface::vtable(this).TabFocusNavigation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::KeyboardNavigationMode>(result__)
         }
@@ -13007,7 +13053,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTabFocusNavigation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -13017,10 +13063,10 @@ impl FrameworkElement {
     pub fn OpacityTransition(&self) -> ::windows::core::Result<ScalarTransition> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).OpacityTransition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ScalarTransition>(result__)
         }
@@ -13033,7 +13079,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetOpacityTransition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13043,10 +13089,11 @@ impl FrameworkElement {
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector3>::zeroed();
             (::windows::core::Interface::vtable(this).Translation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
@@ -13062,7 +13109,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTranslation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13072,10 +13119,10 @@ impl FrameworkElement {
     pub fn TranslationTransition(&self) -> ::windows::core::Result<Vector3Transition> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TranslationTransition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Vector3Transition>(result__)
         }
@@ -13091,7 +13138,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTranslationTransition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13101,10 +13148,10 @@ impl FrameworkElement {
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).Rotation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -13114,7 +13161,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRotation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -13124,10 +13171,10 @@ impl FrameworkElement {
     pub fn RotationTransition(&self) -> ::windows::core::Result<ScalarTransition> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RotationTransition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ScalarTransition>(result__)
         }
@@ -13140,7 +13187,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRotationTransition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13150,10 +13197,11 @@ impl FrameworkElement {
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector3>::zeroed();
             (::windows::core::Interface::vtable(this).Scale)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
@@ -13169,7 +13217,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetScale)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13179,10 +13227,10 @@ impl FrameworkElement {
     pub fn ScaleTransition(&self) -> ::windows::core::Result<Vector3Transition> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ScaleTransition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Vector3Transition>(result__)
         }
@@ -13195,7 +13243,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetScaleTransition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13207,10 +13255,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Matrix4x4 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Matrix4x4>::zeroed();
             (::windows::core::Interface::vtable(this).TransformMatrix)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
@@ -13226,7 +13275,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTransformMatrix)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13236,10 +13285,11 @@ impl FrameworkElement {
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector3>::zeroed();
             (::windows::core::Interface::vtable(this).CenterPoint)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
@@ -13255,7 +13305,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCenterPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13267,10 +13317,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector3>::zeroed();
             (::windows::core::Interface::vtable(this).RotationAxis)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
@@ -13286,7 +13337,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRotationAxis)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13298,10 +13349,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector3>::zeroed();
             (::windows::core::Interface::vtable(this).ActualOffset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
@@ -13310,10 +13362,11 @@ impl FrameworkElement {
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector2 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector2>::zeroed();
             (::windows::core::Interface::vtable(this).ActualSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
@@ -13322,10 +13375,10 @@ impl FrameworkElement {
     pub fn XamlRoot(&self) -> ::windows::core::Result<XamlRoot> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XamlRoot)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<XamlRoot>(result__)
         }
@@ -13338,7 +13391,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXamlRoot)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13349,10 +13402,10 @@ impl FrameworkElement {
     pub fn Shadow(&self) -> ::windows::core::Result<Media::Shadow> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Shadow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Shadow>(result__)
         }
@@ -13366,7 +13419,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetShadow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13376,10 +13429,10 @@ impl FrameworkElement {
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).RasterizationScale)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -13389,7 +13442,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRasterizationScale)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -13399,10 +13452,10 @@ impl FrameworkElement {
     pub fn FocusState(&self) -> ::windows::core::Result<FocusState> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: FocusState = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FocusState>::zeroed();
             (::windows::core::Interface::vtable(this).FocusState)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FocusState>(result__)
         }
@@ -13411,10 +13464,10 @@ impl FrameworkElement {
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).UseSystemFocusVisuals)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -13424,7 +13477,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetUseSystemFocusVisuals)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -13434,10 +13487,10 @@ impl FrameworkElement {
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusLeft)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -13450,7 +13503,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusLeft)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13460,10 +13513,10 @@ impl FrameworkElement {
     pub fn XYFocusRight(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusRight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -13476,7 +13529,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusRight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13486,10 +13539,10 @@ impl FrameworkElement {
     pub fn XYFocusUp(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusUp)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -13502,7 +13555,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusUp)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13512,10 +13565,10 @@ impl FrameworkElement {
     pub fn XYFocusDown(&self) -> ::windows::core::Result<DependencyObject> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusDown)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -13528,7 +13581,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusDown)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -13538,10 +13591,10 @@ impl FrameworkElement {
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsTabStop)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -13551,7 +13604,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsTabStop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -13561,10 +13614,10 @@ impl FrameworkElement {
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).TabIndex)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -13574,7 +13627,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTabIndex)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -13588,11 +13641,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).KeyUp)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13608,7 +13662,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveKeyUp)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13622,11 +13676,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).KeyDown)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13642,7 +13697,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveKeyDown)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13655,11 +13710,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).GotFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13675,7 +13731,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveGotFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13688,11 +13744,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).LostFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13708,7 +13765,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveLostFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13727,11 +13784,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DragStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13747,7 +13805,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDragStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13766,11 +13824,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DropCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13786,7 +13845,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDropCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13809,11 +13868,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).CharacterReceived)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13829,7 +13889,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveCharacterReceived)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13842,11 +13902,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DragEnter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13862,7 +13923,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDragEnter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13875,11 +13936,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DragLeave)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13895,7 +13957,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDragLeave)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13908,11 +13970,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DragOver)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13928,7 +13991,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDragOver)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13941,11 +14004,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Drop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13961,7 +14025,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDrop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -13978,11 +14042,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerPressed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -13998,7 +14063,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerPressed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14012,11 +14077,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerMoved)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14032,7 +14098,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerMoved)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14049,11 +14115,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerReleased)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14069,7 +14136,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerReleased)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14086,11 +14153,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerEntered)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14106,7 +14174,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerEntered)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14120,11 +14188,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerExited)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14140,7 +14209,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerExited)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14157,11 +14226,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerCaptureLost)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14177,7 +14247,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerCaptureLost)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14194,11 +14264,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerCanceled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14214,7 +14285,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerCanceled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14231,11 +14302,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerWheelChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14251,7 +14323,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerWheelChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14265,11 +14337,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Tapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14285,7 +14358,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveTapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14302,11 +14375,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DoubleTapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14322,7 +14396,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDoubleTapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14336,11 +14410,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Holding)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14356,7 +14431,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveHolding)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14376,11 +14451,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ContextRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14396,7 +14472,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveContextRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14415,11 +14491,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ContextCanceled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14435,7 +14512,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveContextCanceled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14452,11 +14529,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).RightTapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14472,7 +14550,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveRightTapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14489,11 +14567,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14509,7 +14588,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveManipulationStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14526,11 +14605,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationInertiaStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14546,7 +14626,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveManipulationInertiaStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14563,11 +14643,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationStarted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14583,7 +14664,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveManipulationStarted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14600,11 +14681,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationDelta)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14620,7 +14702,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveManipulationDelta)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14637,11 +14719,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14657,7 +14740,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveManipulationCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14680,11 +14763,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).AccessKeyDisplayRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14700,7 +14784,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAccessKeyDisplayRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14723,11 +14807,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).AccessKeyDisplayDismissed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14743,7 +14828,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAccessKeyDisplayDismissed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14763,11 +14848,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).AccessKeyInvoked)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14783,7 +14869,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAccessKeyInvoked)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14806,11 +14892,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ProcessKeyboardAccelerators)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14826,7 +14913,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveProcessKeyboardAccelerators)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14846,11 +14933,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).GettingFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14866,7 +14954,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveGettingFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14886,11 +14974,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).LosingFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14906,7 +14995,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveLosingFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14929,11 +15018,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).NoFocusCandidateFound)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14949,7 +15039,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveNoFocusCandidateFound)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14963,11 +15053,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PreviewKeyDown)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -14983,7 +15074,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePreviewKeyDown)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -14997,11 +15088,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PreviewKeyUp)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -15017,7 +15109,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePreviewKeyUp)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -15036,11 +15128,12 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).BringIntoViewRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -15056,7 +15149,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveBringIntoViewRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -15070,7 +15163,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Measure)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 availablesize.into_param().abi(),
             )
             .ok()
@@ -15084,7 +15177,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Arrange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 finalrect.into_param().abi(),
             )
             .ok()
@@ -15098,11 +15191,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CapturePointer)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -15116,7 +15209,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ReleasePointerCapture)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15127,7 +15220,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ReleasePointerCaptures)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -15146,7 +15239,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).AddHandler)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 routedevent.into_param().abi(),
                 handler.into_param().abi(),
                 handledeventstoo,
@@ -15167,7 +15260,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveHandler)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 routedevent.into_param().abi(),
                 handler.into_param().abi(),
             )
@@ -15182,11 +15275,11 @@ impl FrameworkElement {
     ) -> ::windows::core::Result<Media::GeneralTransform> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TransformToVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 visual.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::GeneralTransform>(result__)
         }
@@ -15196,7 +15289,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).InvalidateMeasure)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -15206,7 +15299,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).InvalidateArrange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -15215,9 +15308,9 @@ impl FrameworkElement {
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).UpdateLayout)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).UpdateLayout)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -15225,10 +15318,10 @@ impl FrameworkElement {
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CancelDirectManipulations)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -15248,11 +15341,11 @@ impl FrameworkElement {
     > {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).StartDragAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pointerpoint.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<
                 ::windows::ApplicationModel::DataTransfer::DataPackageOperation,
@@ -15264,7 +15357,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).StartBringIntoView)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -15280,7 +15373,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).StartBringIntoViewWithOptions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options.into_param().abi(),
             )
             .ok()
@@ -15298,7 +15391,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).TryInvokeKeyboardAccelerator)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 args.into_param().abi(),
             )
             .ok()
@@ -15308,11 +15401,11 @@ impl FrameworkElement {
     pub fn Focus(&self, value: FocusState) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Focus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -15329,7 +15422,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).StartAnimation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 animation.into_param().abi(),
             )
             .ok()
@@ -15347,7 +15440,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElement>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).StopAnimation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 animation.into_param().abi(),
             )
             .ok()
@@ -15358,10 +15451,10 @@ impl FrameworkElement {
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<IUIElementProtected>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ProtectedCursor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Input::InputCursor>(result__)
         }
@@ -15378,7 +15471,7 @@ impl FrameworkElement {
         let this = &::windows::core::Interface::cast::<IUIElementProtected>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetProtectedCursor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -15389,10 +15482,10 @@ impl FrameworkElement {
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::Composition::Visual> {
         let this = &::windows::core::Interface::cast::<super::Composition::IVisualElement2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetVisualInternal)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Composition::Visual>(result__)
         }
@@ -15622,11 +15715,11 @@ impl FrameworkTemplate {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -15644,7 +15737,7 @@ impl FrameworkTemplate {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -15659,7 +15752,7 @@ impl FrameworkTemplate {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -15672,11 +15765,11 @@ impl FrameworkTemplate {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -15688,11 +15781,11 @@ impl FrameworkTemplate {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -15709,12 +15802,12 @@ impl FrameworkTemplate {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -15731,7 +15824,7 @@ impl FrameworkTemplate {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -15742,10 +15835,10 @@ impl FrameworkTemplate {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -15755,10 +15848,10 @@ impl FrameworkTemplate {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -15867,13 +15960,13 @@ impl FrameworkView {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             FrameworkView,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -15890,7 +15983,7 @@ impl FrameworkView {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Initialize)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 applicationview.into_param().abi(),
             )
             .ok()
@@ -15909,7 +16002,7 @@ impl FrameworkView {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetWindow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 window.into_param().abi(),
             )
             .ok()
@@ -15925,7 +16018,7 @@ impl FrameworkView {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Load)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 entrypoint.into_param().abi(),
             )
             .ok()
@@ -15937,7 +16030,8 @@ impl FrameworkView {
             ::windows::ApplicationModel::Core::IFrameworkView,
         >(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Run)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Run)(::windows::core::Interface::as_raw(this))
+                .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
@@ -15946,9 +16040,9 @@ impl FrameworkView {
             ::windows::ApplicationModel::Core::IFrameworkView,
         >(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Uninitialize)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).Uninitialize)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -16072,13 +16166,13 @@ impl FrameworkViewSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             FrameworkViewSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -16090,10 +16184,10 @@ impl FrameworkViewSource {
             ::windows::ApplicationModel::Core::IFrameworkViewSource,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::ApplicationModel::Core::IFrameworkView>(result__)
         }
@@ -16263,10 +16357,10 @@ impl GridLengthHelper {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Auto() -> ::windows::core::Result<GridLength> {
         Self::IGridLengthHelperStatics(|this| unsafe {
-            let mut result__: GridLength = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<GridLength>::zeroed();
             (::windows::core::Interface::vtable(this).Auto)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<GridLength>(result__)
         })
@@ -16274,11 +16368,11 @@ impl GridLengthHelper {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromPixels(pixels: f64) -> ::windows::core::Result<GridLength> {
         Self::IGridLengthHelperStatics(|this| unsafe {
-            let mut result__: GridLength = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<GridLength>::zeroed();
             (::windows::core::Interface::vtable(this).FromPixels)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pixels,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<GridLength>(result__)
         })
@@ -16289,12 +16383,12 @@ impl GridLengthHelper {
         r#type: GridUnitType,
     ) -> ::windows::core::Result<GridLength> {
         Self::IGridLengthHelperStatics(|this| unsafe {
-            let mut result__: GridLength = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<GridLength>::zeroed();
             (::windows::core::Interface::vtable(this).FromValueAndType)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
                 r#type,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<GridLength>(result__)
         })
@@ -16304,11 +16398,11 @@ impl GridLengthHelper {
         target: Param0,
     ) -> ::windows::core::Result<bool> {
         Self::IGridLengthHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).GetIsAbsolute)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -16318,11 +16412,11 @@ impl GridLengthHelper {
         target: Param0,
     ) -> ::windows::core::Result<bool> {
         Self::IGridLengthHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).GetIsAuto)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -16332,11 +16426,11 @@ impl GridLengthHelper {
         target: Param0,
     ) -> ::windows::core::Result<bool> {
         Self::IGridLengthHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).GetIsStar)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -16351,12 +16445,12 @@ impl GridLengthHelper {
         value: Param1,
     ) -> ::windows::core::Result<bool> {
         Self::IGridLengthHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Equals)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -16533,7 +16627,7 @@ unsafe impl ::windows::core::Interface for IAdaptiveTrigger {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAdaptiveTrigger_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub MinWindowWidth: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -16562,7 +16656,7 @@ unsafe impl ::windows::core::Interface for IAdaptiveTriggerFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAdaptiveTriggerFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -16581,7 +16675,7 @@ unsafe impl ::windows::core::Interface for IAdaptiveTriggerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IAdaptiveTriggerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub MinWindowWidthProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -16602,7 +16696,7 @@ unsafe impl ::windows::core::Interface for IApplication {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IApplication_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Resources: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -16661,7 +16755,7 @@ unsafe impl ::windows::core::Interface for IApplicationFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IApplicationFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -16680,7 +16774,7 @@ unsafe impl ::windows::core::Interface for IApplicationInitializationCallbackPar
 #[repr(C)]
 #[doc(hidden)]
 pub struct IApplicationInitializationCallbackParams_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -16693,7 +16787,7 @@ unsafe impl ::windows::core::Interface for IApplicationOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IApplicationOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OnLaunched: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         args: ::windows::core::RawPtr,
@@ -16710,7 +16804,7 @@ unsafe impl ::windows::core::Interface for IApplicationStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IApplicationStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Current: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -16746,7 +16840,7 @@ unsafe impl ::windows::core::Interface for IBindingFailedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBindingFailedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Message: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -16763,7 +16857,7 @@ unsafe impl ::windows::core::Interface for IBringIntoViewOptions {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBringIntoViewOptions_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AnimationDesired: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -16824,7 +16918,7 @@ unsafe impl ::windows::core::Interface for IBringIntoViewRequestedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBringIntoViewRequestedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TargetElement: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -16893,7 +16987,7 @@ unsafe impl ::windows::core::Interface for IBrushTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBrushTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Duration: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::TimeSpan,
@@ -16914,7 +17008,7 @@ unsafe impl ::windows::core::Interface for IBrushTransitionFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBrushTransitionFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -16933,7 +17027,7 @@ unsafe impl ::windows::core::Interface for IColorPaletteResources {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorPaletteResources_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub AltHigh: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -17162,7 +17256,7 @@ unsafe impl ::windows::core::Interface for IColorPaletteResourcesFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IColorPaletteResourcesFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -17181,7 +17275,7 @@ unsafe impl ::windows::core::Interface for ICornerRadiusHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICornerRadiusHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -17194,7 +17288,7 @@ unsafe impl ::windows::core::Interface for ICornerRadiusHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICornerRadiusHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromRadii: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         topleft: f64,
@@ -17220,7 +17314,7 @@ unsafe impl ::windows::core::Interface for IDataContextChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDataContextChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub NewValue: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -17245,7 +17339,7 @@ unsafe impl ::windows::core::Interface for IDataTemplate {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDataTemplate_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub LoadContent: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -17259,9 +17353,9 @@ impl IDataTemplateExtension {
     pub fn ResetTemplate(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).ResetTemplate)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).ResetTemplate)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -17269,11 +17363,11 @@ impl IDataTemplateExtension {
     pub fn ProcessBinding(&self, phase: u32) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ProcessBinding)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 phase,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -17289,11 +17383,11 @@ impl IDataTemplateExtension {
     ) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).ProcessBindings)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 arg.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -17375,7 +17469,7 @@ unsafe impl ::windows::core::Interface for IDataTemplateExtension {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDataTemplateExtension_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ResetTemplate:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
     pub ProcessBinding: unsafe extern "system" fn(
@@ -17403,7 +17497,7 @@ unsafe impl ::windows::core::Interface for IDataTemplateFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDataTemplateFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -17422,7 +17516,7 @@ unsafe impl ::windows::core::Interface for IDataTemplateKey {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDataTemplateKey_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DataType: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -17443,7 +17537,7 @@ unsafe impl ::windows::core::Interface for IDataTemplateKeyFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDataTemplateKeyFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -17469,7 +17563,7 @@ unsafe impl ::windows::core::Interface for IDataTemplateStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDataTemplateStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ExtensionInstanceProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -17496,7 +17590,7 @@ unsafe impl ::windows::core::Interface for IDebugSettings {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDebugSettings_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EnableFrameRateCounter: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -17552,7 +17646,7 @@ unsafe impl ::windows::core::Interface for IDependencyObject {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDependencyObject_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetValue: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         dp: ::windows::core::RawPtr,
@@ -17612,7 +17706,7 @@ unsafe impl ::windows::core::Interface for IDependencyObjectCollectionFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDependencyObjectCollectionFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -17631,7 +17725,7 @@ unsafe impl ::windows::core::Interface for IDependencyObjectFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDependencyObjectFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -17650,7 +17744,7 @@ unsafe impl ::windows::core::Interface for IDependencyProperty {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDependencyProperty_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetMetadata: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         fortype: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
@@ -17668,7 +17762,7 @@ unsafe impl ::windows::core::Interface for IDependencyPropertyChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDependencyPropertyChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Property: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -17693,7 +17787,7 @@ unsafe impl ::windows::core::Interface for IDependencyPropertyStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDependencyPropertyStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub UnsetValue: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -17726,7 +17820,7 @@ unsafe impl ::windows::core::Interface for IDispatcherTimer {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDispatcherTimer_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Interval: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::TimeSpan,
@@ -17763,7 +17857,7 @@ unsafe impl ::windows::core::Interface for IDispatcherTimerFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDispatcherTimerFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -17782,7 +17876,7 @@ unsafe impl ::windows::core::Interface for IDragEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Handled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -17844,7 +17938,7 @@ unsafe impl ::windows::core::Interface for IDragOperationDeferral {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragOperationDeferral_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Complete:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -17859,7 +17953,7 @@ unsafe impl ::windows::core::Interface for IDragStartingEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragStartingEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Cancel: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -17905,7 +17999,7 @@ unsafe impl ::windows::core::Interface for IDragUI {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragUI_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Media_Imaging")]
     pub SetContentFromBitmapImage: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -17946,7 +18040,7 @@ unsafe impl ::windows::core::Interface for IDragUIOverride {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDragUIOverride_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Caption: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -18019,7 +18113,7 @@ unsafe impl ::windows::core::Interface for IDropCompletedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDropCompletedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DropResult: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::ApplicationModel::DataTransfer::DataPackageOperation,
@@ -18036,7 +18130,7 @@ unsafe impl ::windows::core::Interface for IDurationHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDurationHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18049,7 +18143,7 @@ unsafe impl ::windows::core::Interface for IDurationHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDurationHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Automatic: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut Duration,
@@ -18104,7 +18198,7 @@ unsafe impl ::windows::core::Interface for IEffectiveViewportChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEffectiveViewportChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub EffectiveViewport: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Rect,
@@ -18133,11 +18227,11 @@ impl IElementFactory {
     ) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetElement)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 args.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<UIElement>(result__)
         }
@@ -18150,7 +18244,7 @@ impl IElementFactory {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RecycleElement)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 args.into_param().abi(),
             )
             .ok()
@@ -18229,7 +18323,7 @@ unsafe impl ::windows::core::Interface for IElementFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElementFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetElement: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         args: ::windows::core::RawPtr,
@@ -18251,7 +18345,7 @@ unsafe impl ::windows::core::Interface for IElementFactoryGetArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElementFactoryGetArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Data: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -18280,7 +18374,7 @@ unsafe impl ::windows::core::Interface for IElementFactoryGetArgsFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElementFactoryGetArgsFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -18299,7 +18393,7 @@ unsafe impl ::windows::core::Interface for IElementFactoryRecycleArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElementFactoryRecycleArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Element: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18328,7 +18422,7 @@ unsafe impl ::windows::core::Interface for IElementFactoryRecycleArgsFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElementFactoryRecycleArgsFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -18347,7 +18441,7 @@ unsafe impl ::windows::core::Interface for IElementSoundPlayer {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElementSoundPlayer_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18360,7 +18454,7 @@ unsafe impl ::windows::core::Interface for IElementSoundPlayerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IElementSoundPlayerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Volume: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -18401,7 +18495,7 @@ unsafe impl ::windows::core::Interface for IEventTrigger {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IEventTrigger_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub RoutedEvent: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18426,7 +18520,7 @@ unsafe impl ::windows::core::Interface for IExceptionRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IExceptionRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ErrorMessage: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -18443,7 +18537,7 @@ unsafe impl ::windows::core::Interface for IExceptionRoutedEventArgsFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IExceptionRoutedEventArgsFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18456,7 +18550,7 @@ unsafe impl ::windows::core::Interface for IFrameworkElement {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFrameworkElement_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Triggers: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18795,7 +18889,7 @@ unsafe impl ::windows::core::Interface for IFrameworkElementFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFrameworkElementFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -18814,7 +18908,7 @@ unsafe impl ::windows::core::Interface for IFrameworkElementOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFrameworkElementOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub MeasureOverride: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         availablesize: ::windows::Foundation::Size,
@@ -18845,7 +18939,7 @@ unsafe impl ::windows::core::Interface for IFrameworkElementProtected {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFrameworkElementProtected_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub InvalidateViewport:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
@@ -18860,7 +18954,7 @@ unsafe impl ::windows::core::Interface for IFrameworkElementStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFrameworkElementStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub TagProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -18984,7 +19078,7 @@ unsafe impl ::windows::core::Interface for IFrameworkTemplate {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFrameworkTemplate_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -18997,7 +19091,7 @@ unsafe impl ::windows::core::Interface for IFrameworkTemplateFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFrameworkTemplateFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -19016,7 +19110,7 @@ unsafe impl ::windows::core::Interface for IFrameworkView {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFrameworkView_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19029,7 +19123,7 @@ unsafe impl ::windows::core::Interface for IFrameworkViewSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IFrameworkViewSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19042,7 +19136,7 @@ unsafe impl ::windows::core::Interface for IGridLengthHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGridLengthHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19055,7 +19149,7 @@ unsafe impl ::windows::core::Interface for IGridLengthHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IGridLengthHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Auto: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut GridLength,
@@ -19104,7 +19198,7 @@ unsafe impl ::windows::core::Interface for ILaunchActivatedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ILaunchActivatedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Arguments: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -19125,7 +19219,7 @@ unsafe impl ::windows::core::Interface for IMediaFailedRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMediaFailedRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub ErrorTrace: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -19142,7 +19236,7 @@ unsafe impl ::windows::core::Interface for IPointHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19155,7 +19249,7 @@ unsafe impl ::windows::core::Interface for IPointHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPointHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromCoordinates: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         x: f32,
@@ -19174,7 +19268,7 @@ unsafe impl ::windows::core::Interface for IPropertyMetadata {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPropertyMetadata_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DefaultValue: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -19195,7 +19289,7 @@ unsafe impl ::windows::core::Interface for IPropertyMetadataFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPropertyMetadataFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithDefaultValue: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         defaultvalue: *mut ::core::ffi::c_void,
@@ -19224,7 +19318,7 @@ unsafe impl ::windows::core::Interface for IPropertyMetadataStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPropertyMetadataStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateWithDefaultValue: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         defaultvalue: *mut ::core::ffi::c_void,
@@ -19260,7 +19354,7 @@ unsafe impl ::windows::core::Interface for IPropertyPath {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPropertyPath_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Path: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -19277,7 +19371,7 @@ unsafe impl ::windows::core::Interface for IPropertyPathFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPropertyPathFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         path: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -19295,7 +19389,7 @@ unsafe impl ::windows::core::Interface for IRectHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRectHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19308,7 +19402,7 @@ unsafe impl ::windows::core::Interface for IRectHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRectHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Empty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Rect,
@@ -19400,7 +19494,7 @@ unsafe impl ::windows::core::Interface for IResourceDictionary {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IResourceDictionary_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Source: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19429,7 +19523,7 @@ unsafe impl ::windows::core::Interface for IResourceDictionaryFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IResourceDictionaryFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -19448,7 +19542,7 @@ unsafe impl ::windows::core::Interface for IRoutedEvent {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRoutedEvent_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19461,7 +19555,7 @@ unsafe impl ::windows::core::Interface for IRoutedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRoutedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OriginalSource: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut *mut ::core::ffi::c_void,
@@ -19478,7 +19572,7 @@ unsafe impl ::windows::core::Interface for IRoutedEventArgsFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRoutedEventArgsFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -19497,7 +19591,7 @@ unsafe impl ::windows::core::Interface for IScalarTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IScalarTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Duration: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::TimeSpan,
@@ -19518,7 +19612,7 @@ unsafe impl ::windows::core::Interface for IScalarTransitionFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IScalarTransitionFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -19537,7 +19631,7 @@ unsafe impl ::windows::core::Interface for ISetter {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISetter_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Property: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19574,7 +19668,7 @@ unsafe impl ::windows::core::Interface for ISetterBase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISetterBase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsSealed: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -19591,7 +19685,7 @@ unsafe impl ::windows::core::Interface for ISetterBaseCollection {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISetterBaseCollection_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsSealed: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -19608,7 +19702,7 @@ unsafe impl ::windows::core::Interface for ISetterBaseFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISetterBaseFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19621,7 +19715,7 @@ unsafe impl ::windows::core::Interface for ISetterFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISetterFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         targetproperty: ::windows::core::RawPtr,
@@ -19640,7 +19734,7 @@ unsafe impl ::windows::core::Interface for ISizeChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISizeChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PreviousSize: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Size,
@@ -19661,7 +19755,7 @@ unsafe impl ::windows::core::Interface for ISizeHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISizeHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19674,7 +19768,7 @@ unsafe impl ::windows::core::Interface for ISizeHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISizeHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Empty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Size,
@@ -19708,7 +19802,7 @@ unsafe impl ::windows::core::Interface for IStateTrigger {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStateTrigger_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsActive: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -19729,7 +19823,7 @@ unsafe impl ::windows::core::Interface for IStateTriggerBase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStateTriggerBase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19742,7 +19836,7 @@ unsafe impl ::windows::core::Interface for IStateTriggerBaseFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStateTriggerBaseFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -19761,7 +19855,7 @@ unsafe impl ::windows::core::Interface for IStateTriggerBaseProtected {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStateTriggerBaseProtected_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub SetActive: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         isactive: bool,
@@ -19778,7 +19872,7 @@ unsafe impl ::windows::core::Interface for IStateTriggerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStateTriggerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsActiveProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19795,7 +19889,7 @@ unsafe impl ::windows::core::Interface for IStyle {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStyle_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub IsSealed: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -19833,7 +19927,7 @@ unsafe impl ::windows::core::Interface for IStyleFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IStyleFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         targettype: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
@@ -19851,7 +19945,7 @@ unsafe impl ::windows::core::Interface for ITargetPropertyPath {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITargetPropertyPath_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Path: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -19880,7 +19974,7 @@ unsafe impl ::windows::core::Interface for ITargetPropertyPathFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITargetPropertyPathFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         targetproperty: ::windows::core::RawPtr,
@@ -19898,7 +19992,7 @@ unsafe impl ::windows::core::Interface for IThicknessHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IThicknessHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19911,7 +20005,7 @@ unsafe impl ::windows::core::Interface for IThicknessHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IThicknessHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromLengths: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         left: f64,
@@ -19937,7 +20031,7 @@ unsafe impl ::windows::core::Interface for ITriggerAction {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITriggerAction_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19950,7 +20044,7 @@ unsafe impl ::windows::core::Interface for ITriggerActionFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITriggerActionFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19963,7 +20057,7 @@ unsafe impl ::windows::core::Interface for ITriggerBase {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITriggerBase_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19976,7 +20070,7 @@ unsafe impl ::windows::core::Interface for ITriggerBaseFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITriggerBaseFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -19989,7 +20083,7 @@ unsafe impl ::windows::core::Interface for IUIElement {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IUIElement_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DesiredSize: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Size,
@@ -21170,7 +21264,7 @@ unsafe impl ::windows::core::Interface for IUIElementFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IUIElementFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -21183,7 +21277,7 @@ unsafe impl ::windows::core::Interface for IUIElementOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IUIElementOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Automation_Peers")]
     pub OnCreateAutomationPeer: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -21242,7 +21336,7 @@ unsafe impl ::windows::core::Interface for IUIElementProtected {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IUIElementProtected_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Input")]
     pub ProtectedCursor: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -21269,7 +21363,7 @@ unsafe impl ::windows::core::Interface for IUIElementStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IUIElementStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub KeyDownEvent: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -21623,7 +21717,7 @@ unsafe impl ::windows::core::Interface for IUIElementWeakCollectionFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IUIElementWeakCollectionFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -21642,7 +21736,7 @@ unsafe impl ::windows::core::Interface for IUnhandledExceptionEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IUnhandledExceptionEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Exception: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::HRESULT,
@@ -21671,7 +21765,7 @@ unsafe impl ::windows::core::Interface for IVector3Transition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVector3Transition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Duration: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::TimeSpan,
@@ -21700,7 +21794,7 @@ unsafe impl ::windows::core::Interface for IVector3TransitionFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVector3TransitionFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -21719,7 +21813,7 @@ unsafe impl ::windows::core::Interface for IVisualState {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualState_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Name: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -21758,7 +21852,7 @@ unsafe impl ::windows::core::Interface for IVisualStateChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualStateChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OldState: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -21801,7 +21895,7 @@ unsafe impl ::windows::core::Interface for IVisualStateGroup {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualStateGroup_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Name: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -21848,7 +21942,7 @@ unsafe impl ::windows::core::Interface for IVisualStateManager {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualStateManager_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -21861,7 +21955,7 @@ unsafe impl ::windows::core::Interface for IVisualStateManagerFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualStateManagerFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -21880,7 +21974,7 @@ unsafe impl ::windows::core::Interface for IVisualStateManagerOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualStateManagerOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Controls")]
     pub GoToStateCore: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -21906,7 +22000,7 @@ unsafe impl ::windows::core::Interface for IVisualStateManagerProtected {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualStateManagerProtected_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     #[cfg(feature = "UI_Xaml_Controls")]
     pub RaiseCurrentStateChanging: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
@@ -21939,7 +22033,7 @@ unsafe impl ::windows::core::Interface for IVisualStateManagerStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualStateManagerStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetVisualStateGroups: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         obj: ::windows::core::RawPtr,
@@ -21982,7 +22076,7 @@ unsafe impl ::windows::core::Interface for IVisualTransition {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualTransition_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GeneratedDuration: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut Duration,
@@ -22047,7 +22141,7 @@ unsafe impl ::windows::core::Interface for IVisualTransitionFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVisualTransitionFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -22066,7 +22160,7 @@ unsafe impl ::windows::core::Interface for IWindow {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWindow_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Bounds: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::Foundation::Rect,
@@ -22177,7 +22271,7 @@ unsafe impl ::windows::core::Interface for IWindowActivatedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWindowActivatedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Handled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -22202,7 +22296,7 @@ unsafe impl ::windows::core::Interface for IWindowEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWindowEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Handled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -22223,7 +22317,7 @@ unsafe impl ::windows::core::Interface for IWindowFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWindowFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -22241,7 +22335,7 @@ impl IWindowNative {
         hwnd: *mut ::windows::Win32::Foundation::HWND,
     ) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).WindowHandle)(
-            ::core::mem::transmute_copy(self),
+            ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(hwnd),
         )
         .ok()
@@ -22291,7 +22385,7 @@ unsafe impl ::windows::core::Interface for IWindowNative {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWindowNative_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub WindowHandle: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         hwnd: *mut ::windows::Win32::Foundation::HWND,
@@ -22308,7 +22402,7 @@ unsafe impl ::windows::core::Interface for IWindowSizeChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWindowSizeChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Handled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -22333,7 +22427,7 @@ unsafe impl ::windows::core::Interface for IWindowStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWindowStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Current: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -22350,7 +22444,7 @@ unsafe impl ::windows::core::Interface for IWindowVisibilityChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWindowVisibilityChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Handled: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut bool,
@@ -22375,7 +22469,7 @@ unsafe impl ::windows::core::Interface for IXamlRoot {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlRoot_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Content: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -22413,7 +22507,7 @@ unsafe impl ::windows::core::Interface for IXamlRootChangedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlRootChangedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc = "*Required features: `\"UI_Xaml\"`*"]
 #[repr(transparent)]
@@ -22429,11 +22523,11 @@ impl IXamlServiceProvider {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetService)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 r#type.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -22515,7 +22609,7 @@ unsafe impl ::windows::core::Interface for IXamlServiceProvider {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlServiceProvider_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetService: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         r#type: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
@@ -22530,11 +22624,12 @@ impl LaunchActivatedEventArgs {
     pub fn Arguments(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Arguments)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -22546,10 +22641,10 @@ impl LaunchActivatedEventArgs {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).UWPLaunchActivatedEventArgs)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::ApplicationModel::Activation::LaunchActivatedEventArgs>(result__)
         }
@@ -22672,7 +22767,7 @@ impl LeavingBackgroundEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -22703,7 +22798,7 @@ impl<
     > LeavingBackgroundEventHandlerBox<F>
 {
     const VTABLE: LeavingBackgroundEventHandler_Vtbl = LeavingBackgroundEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -22713,7 +22808,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<LeavingBackgroundEventHandler as ::windows::core::Interface>::IID
@@ -22786,7 +22881,7 @@ unsafe impl ::windows::core::RuntimeType for LeavingBackgroundEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct LeavingBackgroundEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -22840,11 +22935,12 @@ impl MediaFailedRoutedEventArgs {
     pub fn ErrorMessage(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = &::windows::core::Interface::cast::<IExceptionRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ErrorMessage)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -22853,11 +22949,12 @@ impl MediaFailedRoutedEventArgs {
     pub fn ErrorTrace(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).ErrorTrace)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -22866,10 +22963,10 @@ impl MediaFailedRoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).OriginalSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -23048,12 +23145,12 @@ impl PointHelper {
         y: f32,
     ) -> ::windows::core::Result<::windows::Foundation::Point> {
         Self::IPointHelperStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Point>::zeroed();
             (::windows::core::Interface::vtable(this).FromCoordinates)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 x,
                 y,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Point>(result__)
         })
@@ -23175,7 +23272,7 @@ impl PropertyChangedCallback {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 d.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -23206,7 +23303,7 @@ impl<
     > PropertyChangedCallbackBox<F>
 {
     const VTABLE: PropertyChangedCallback_Vtbl = PropertyChangedCallback_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -23216,7 +23313,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<PropertyChangedCallback as ::windows::core::Interface>::IID
@@ -23289,7 +23386,7 @@ unsafe impl ::windows::core::RuntimeType for PropertyChangedCallback {
 #[repr(C)]
 #[doc(hidden)]
 pub struct PropertyChangedCallback_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         d: ::windows::core::RawPtr,
@@ -23304,10 +23401,10 @@ impl PropertyMetadata {
     pub fn DefaultValue(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).DefaultValue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -23318,10 +23415,10 @@ impl PropertyMetadata {
     ) -> ::windows::core::Result<CreateDefaultValueCallback> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateDefaultValueCallback)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CreateDefaultValueCallback>(result__)
         }
@@ -23334,13 +23431,13 @@ impl PropertyMetadata {
         defaultvalue: Param0,
     ) -> ::windows::core::Result<PropertyMetadata> {
         Self::IPropertyMetadataFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithDefaultValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 defaultvalue.into_param().abi(),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PropertyMetadata>(result__)
         })
@@ -23356,13 +23453,13 @@ impl PropertyMetadata {
     ) -> ::windows::core::Result<PropertyMetadata> {
         Self::IPropertyMetadataFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithDefaultValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 defaultvalue.into_param().abi(),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PropertyMetadata>(result__)
         })
@@ -23377,14 +23474,14 @@ impl PropertyMetadata {
         propertychangedcallback: Param1,
     ) -> ::windows::core::Result<PropertyMetadata> {
         Self::IPropertyMetadataFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithDefaultValueAndCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 defaultvalue.into_param().abi(),
                 propertychangedcallback.into_param().abi(),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PropertyMetadata>(result__)
         })
@@ -23402,14 +23499,14 @@ impl PropertyMetadata {
     ) -> ::windows::core::Result<PropertyMetadata> {
         Self::IPropertyMetadataFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithDefaultValueAndCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 defaultvalue.into_param().abi(),
                 propertychangedcallback.into_param().abi(),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PropertyMetadata>(result__)
         })
@@ -23422,11 +23519,11 @@ impl PropertyMetadata {
         defaultvalue: Param0,
     ) -> ::windows::core::Result<PropertyMetadata> {
         Self::IPropertyMetadataStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateWithDefaultValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 defaultvalue.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PropertyMetadata>(result__)
         })
@@ -23441,12 +23538,12 @@ impl PropertyMetadata {
         propertychangedcallback: Param1,
     ) -> ::windows::core::Result<PropertyMetadata> {
         Self::IPropertyMetadataStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateWithDefaultValueAndCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 defaultvalue.into_param().abi(),
                 propertychangedcallback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PropertyMetadata>(result__)
         })
@@ -23459,11 +23556,11 @@ impl PropertyMetadata {
         createdefaultvaluecallback: Param0,
     ) -> ::windows::core::Result<PropertyMetadata> {
         Self::IPropertyMetadataStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateWithFactory)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 createdefaultvaluecallback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PropertyMetadata>(result__)
         })
@@ -23478,12 +23575,12 @@ impl PropertyMetadata {
         propertychangedcallback: Param1,
     ) -> ::windows::core::Result<PropertyMetadata> {
         Self::IPropertyMetadataStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateWithFactoryAndCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 createdefaultvaluecallback.into_param().abi(),
                 propertychangedcallback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PropertyMetadata>(result__)
         })
@@ -23600,11 +23697,11 @@ impl PropertyPath {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -23622,7 +23719,7 @@ impl PropertyPath {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -23637,7 +23734,7 @@ impl PropertyPath {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -23650,11 +23747,11 @@ impl PropertyPath {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -23666,11 +23763,11 @@ impl PropertyPath {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -23687,12 +23784,12 @@ impl PropertyPath {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -23709,7 +23806,7 @@ impl PropertyPath {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -23720,10 +23817,10 @@ impl PropertyPath {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -23733,10 +23830,10 @@ impl PropertyPath {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -23745,11 +23842,12 @@ impl PropertyPath {
     pub fn Path(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Path)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -23759,11 +23857,11 @@ impl PropertyPath {
         path: Param0,
     ) -> ::windows::core::Result<PropertyPath> {
         Self::IPropertyPathFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 path.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<PropertyPath>(result__)
         })
@@ -23881,10 +23979,10 @@ impl RectHelper {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Empty() -> ::windows::core::Result<::windows::Foundation::Rect> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).Empty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
@@ -23897,14 +23995,14 @@ impl RectHelper {
         height: f32,
     ) -> ::windows::core::Result<::windows::Foundation::Rect> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).FromCoordinatesAndDimensions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 x,
                 y,
                 width,
                 height,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
@@ -23919,12 +24017,12 @@ impl RectHelper {
         point2: Param1,
     ) -> ::windows::core::Result<::windows::Foundation::Rect> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).FromPoints)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 point1.into_param().abi(),
                 point2.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
@@ -23939,12 +24037,12 @@ impl RectHelper {
         size: Param1,
     ) -> ::windows::core::Result<::windows::Foundation::Rect> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).FromLocationAndSize)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 location.into_param().abi(),
                 size.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
@@ -23954,11 +24052,11 @@ impl RectHelper {
         target: Param0,
     ) -> ::windows::core::Result<bool> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).GetIsEmpty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -23968,11 +24066,11 @@ impl RectHelper {
         target: Param0,
     ) -> ::windows::core::Result<f32> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).GetBottom)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         })
@@ -23982,11 +24080,11 @@ impl RectHelper {
         target: Param0,
     ) -> ::windows::core::Result<f32> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).GetLeft)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         })
@@ -23996,11 +24094,11 @@ impl RectHelper {
         target: Param0,
     ) -> ::windows::core::Result<f32> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).GetRight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         })
@@ -24010,11 +24108,11 @@ impl RectHelper {
         target: Param0,
     ) -> ::windows::core::Result<f32> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).GetTop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         })
@@ -24029,12 +24127,12 @@ impl RectHelper {
         point: Param1,
     ) -> ::windows::core::Result<bool> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Contains)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
                 point.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -24049,12 +24147,12 @@ impl RectHelper {
         value: Param1,
     ) -> ::windows::core::Result<bool> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Equals)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -24069,12 +24167,12 @@ impl RectHelper {
         rect: Param1,
     ) -> ::windows::core::Result<::windows::Foundation::Rect> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).Intersect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
                 rect.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
@@ -24089,12 +24187,12 @@ impl RectHelper {
         point: Param1,
     ) -> ::windows::core::Result<::windows::Foundation::Rect> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).UnionWithPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
                 point.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
@@ -24109,12 +24207,12 @@ impl RectHelper {
         rect: Param1,
     ) -> ::windows::core::Result<::windows::Foundation::Rect> {
         Self::IRectHelperStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).UnionWithRect)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
                 rect.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         })
@@ -24213,11 +24311,11 @@ impl ResourceDictionary {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -24235,7 +24333,7 @@ impl ResourceDictionary {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -24250,7 +24348,7 @@ impl ResourceDictionary {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -24263,11 +24361,11 @@ impl ResourceDictionary {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -24279,11 +24377,11 @@ impl ResourceDictionary {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -24300,12 +24398,12 @@ impl ResourceDictionary {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -24322,7 +24420,7 @@ impl ResourceDictionary {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -24333,10 +24431,10 @@ impl ResourceDictionary {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -24346,10 +24444,10 @@ impl ResourceDictionary {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -24374,10 +24472,10 @@ impl ResourceDictionary {
             >,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<
                 ::windows::Foundation::Collections::IKeyValuePair<
@@ -24399,11 +24497,11 @@ impl ResourceDictionary {
             >,
         >(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).Lookup)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 key.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -24417,10 +24515,10 @@ impl ResourceDictionary {
             >,
         >(self)?;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -24437,11 +24535,11 @@ impl ResourceDictionary {
             >,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).HasKey)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 key.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -24462,10 +24560,10 @@ impl ResourceDictionary {
             >,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IMapView<
                 ::windows::core::IInspectable,
@@ -24490,12 +24588,12 @@ impl ResourceDictionary {
             >,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Insert)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 key.into_param().abi(),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -24513,7 +24611,7 @@ impl ResourceDictionary {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Remove)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 key.into_param().abi(),
             )
             .ok()
@@ -24528,17 +24626,20 @@ impl ResourceDictionary {
             >,
         >(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Clear)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Source(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Source)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
@@ -24551,7 +24652,7 @@ impl ResourceDictionary {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSource)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -24564,10 +24665,10 @@ impl ResourceDictionary {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).MergedDictionaries)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVector<ResourceDictionary>>(result__)
         }
@@ -24583,10 +24684,10 @@ impl ResourceDictionary {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ThemeDictionaries)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IMap<
                 ::windows::core::IInspectable,
@@ -24597,12 +24698,12 @@ impl ResourceDictionary {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<ResourceDictionary> {
         Self::IResourceDictionaryFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ResourceDictionary>(result__)
         })
@@ -24613,12 +24714,12 @@ impl ResourceDictionary {
     ) -> ::windows::core::Result<ResourceDictionary> {
         Self::IResourceDictionaryFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ResourceDictionary>(result__)
         })
@@ -24993,10 +25094,10 @@ impl RoutedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).OriginalSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -25004,12 +25105,12 @@ impl RoutedEventArgs {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<RoutedEventArgs> {
         Self::IRoutedEventArgsFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEventArgs>(result__)
         })
@@ -25020,12 +25121,12 @@ impl RoutedEventArgs {
     ) -> ::windows::core::Result<RoutedEventArgs> {
         Self::IRoutedEventArgsFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEventArgs>(result__)
         })
@@ -25150,7 +25251,7 @@ impl RoutedEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -25181,7 +25282,7 @@ impl<
     > RoutedEventHandlerBox<F>
 {
     const VTABLE: RoutedEventHandler_Vtbl = RoutedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -25191,7 +25292,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<RoutedEventHandler as ::windows::core::Interface>::IID
@@ -25262,7 +25363,7 @@ unsafe impl ::windows::core::RuntimeType for RoutedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct RoutedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -25277,10 +25378,11 @@ impl ScalarTransition {
     pub fn Duration(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::TimeSpan = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::TimeSpan>::zeroed();
             (::windows::core::Interface::vtable(this).Duration)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         }
@@ -25296,7 +25398,7 @@ impl ScalarTransition {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDuration)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -25305,12 +25407,12 @@ impl ScalarTransition {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<ScalarTransition> {
         Self::IScalarTransitionFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ScalarTransition>(result__)
         })
@@ -25321,12 +25423,12 @@ impl ScalarTransition {
     ) -> ::windows::core::Result<ScalarTransition> {
         Self::IScalarTransitionFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<ScalarTransition>(result__)
         })
@@ -25428,14 +25530,12 @@ impl Setter {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
-        static mut SHARED: ::windows::core::FactoryCache<
-            Setter,
-            ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        static mut SHARED: ::windows::core::FactoryCache<Setter, ::windows::core::IGenericFactory> =
+            ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
@@ -25445,11 +25545,11 @@ impl Setter {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -25467,7 +25567,7 @@ impl Setter {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -25482,7 +25582,7 @@ impl Setter {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -25495,11 +25595,11 @@ impl Setter {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -25511,11 +25611,11 @@ impl Setter {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -25532,12 +25632,12 @@ impl Setter {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -25554,7 +25654,7 @@ impl Setter {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -25565,10 +25665,10 @@ impl Setter {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -25578,10 +25678,10 @@ impl Setter {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -25590,10 +25690,10 @@ impl Setter {
     pub fn Property(&self) -> ::windows::core::Result<DependencyProperty> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Property)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         }
@@ -25606,7 +25706,7 @@ impl Setter {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetProperty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -25616,10 +25716,10 @@ impl Setter {
     pub fn Value(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).Value)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -25632,7 +25732,7 @@ impl Setter {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -25642,10 +25742,10 @@ impl Setter {
     pub fn Target(&self) -> ::windows::core::Result<TargetPropertyPath> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Target)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<TargetPropertyPath>(result__)
         }
@@ -25658,7 +25758,7 @@ impl Setter {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTarget)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -25668,10 +25768,10 @@ impl Setter {
     pub fn IsSealed(&self) -> ::windows::core::Result<bool> {
         let this = &::windows::core::Interface::cast::<ISetterBase>(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsSealed)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -25686,12 +25786,12 @@ impl Setter {
         value: Param1,
     ) -> ::windows::core::Result<Setter> {
         Self::ISetterFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 targetproperty.into_param().abi(),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Setter>(result__)
         })
@@ -25830,11 +25930,11 @@ impl SetterBase {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -25852,7 +25952,7 @@ impl SetterBase {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -25867,7 +25967,7 @@ impl SetterBase {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -25880,11 +25980,11 @@ impl SetterBase {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -25896,11 +25996,11 @@ impl SetterBase {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -25917,12 +26017,12 @@ impl SetterBase {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -25939,7 +26039,7 @@ impl SetterBase {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -25950,10 +26050,10 @@ impl SetterBase {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -25963,10 +26063,10 @@ impl SetterBase {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -25975,10 +26075,10 @@ impl SetterBase {
     pub fn IsSealed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsSealed)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -26087,13 +26187,13 @@ impl SetterBaseCollection {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             SetterBaseCollection,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -26105,10 +26205,10 @@ impl SetterBaseCollection {
             ::windows::Foundation::Collections::IIterable<SetterBase>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<SetterBase>>(result__)
         }
@@ -26117,10 +26217,10 @@ impl SetterBaseCollection {
     pub fn IsSealed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsSealed)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -26131,11 +26231,11 @@ impl SetterBaseCollection {
             ::windows::Foundation::Collections::IVector<SetterBase>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<SetterBase>(result__)
         }
@@ -26146,10 +26246,10 @@ impl SetterBaseCollection {
             ::windows::Foundation::Collections::IVector<SetterBase>,
         >(self)?;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -26162,10 +26262,10 @@ impl SetterBaseCollection {
             ::windows::Foundation::Collections::IVector<SetterBase>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<SetterBase>>(result__)
         }
@@ -26180,12 +26280,12 @@ impl SetterBaseCollection {
             ::windows::Foundation::Collections::IVector<SetterBase>,
         >(self)?;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IndexOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -26201,7 +26301,7 @@ impl SetterBaseCollection {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -26219,7 +26319,7 @@ impl SetterBaseCollection {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).InsertAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -26233,7 +26333,7 @@ impl SetterBaseCollection {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
             )
             .ok()
@@ -26249,7 +26349,7 @@ impl SetterBaseCollection {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).Append)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -26261,9 +26361,9 @@ impl SetterBaseCollection {
             ::windows::Foundation::Collections::IVector<SetterBase>,
         >(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).RemoveAtEnd)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).RemoveAtEnd)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -26273,7 +26373,10 @@ impl SetterBaseCollection {
             ::windows::Foundation::Collections::IVector<SetterBase>,
         >(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Clear)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
@@ -26286,13 +26389,13 @@ impl SetterBaseCollection {
             ::windows::Foundation::Collections::IVector<SetterBase>,
         >(self)?;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).GetMany)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 startindex,
                 items.len() as u32,
                 ::core::mem::transmute_copy(&items),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -26307,7 +26410,7 @@ impl SetterBaseCollection {
         >(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ReplaceAll)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 items.len() as u32,
                 ::core::mem::transmute(items.as_ptr()),
             )
@@ -26485,10 +26588,10 @@ impl SizeChangedEventArgs {
     pub fn OriginalSource(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IRoutedEventArgs>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).OriginalSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -26497,10 +26600,10 @@ impl SizeChangedEventArgs {
     pub fn PreviousSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Size>::zeroed();
             (::windows::core::Interface::vtable(this).PreviousSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Size>(result__)
         }
@@ -26509,10 +26612,10 @@ impl SizeChangedEventArgs {
     pub fn NewSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Size>::zeroed();
             (::windows::core::Interface::vtable(this).NewSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Size>(result__)
         }
@@ -26650,7 +26753,7 @@ impl SizeChangedEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -26681,7 +26784,7 @@ impl<
     > SizeChangedEventHandlerBox<F>
 {
     const VTABLE: SizeChangedEventHandler_Vtbl = SizeChangedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -26691,7 +26794,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<SizeChangedEventHandler as ::windows::core::Interface>::IID
@@ -26764,7 +26867,7 @@ unsafe impl ::windows::core::RuntimeType for SizeChangedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct SizeChangedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -26778,10 +26881,10 @@ impl SizeHelper {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Empty() -> ::windows::core::Result<::windows::Foundation::Size> {
         Self::ISizeHelperStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Size>::zeroed();
             (::windows::core::Interface::vtable(this).Empty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Size>(result__)
         })
@@ -26792,12 +26895,12 @@ impl SizeHelper {
         height: f32,
     ) -> ::windows::core::Result<::windows::Foundation::Size> {
         Self::ISizeHelperStatics(|this| unsafe {
-            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Size>::zeroed();
             (::windows::core::Interface::vtable(this).FromDimensions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 width,
                 height,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Size>(result__)
         })
@@ -26807,11 +26910,11 @@ impl SizeHelper {
         target: Param0,
     ) -> ::windows::core::Result<bool> {
         Self::ISizeHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).GetIsEmpty)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -26826,12 +26929,12 @@ impl SizeHelper {
         value: Param1,
     ) -> ::windows::core::Result<bool> {
         Self::ISizeHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Equals)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -26928,13 +27031,13 @@ impl StateTrigger {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             StateTrigger,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -26945,11 +27048,11 @@ impl StateTrigger {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -26967,7 +27070,7 @@ impl StateTrigger {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -26982,7 +27085,7 @@ impl StateTrigger {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -26995,11 +27098,11 @@ impl StateTrigger {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -27011,11 +27114,11 @@ impl StateTrigger {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -27032,12 +27135,12 @@ impl StateTrigger {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -27054,7 +27157,7 @@ impl StateTrigger {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -27065,10 +27168,10 @@ impl StateTrigger {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -27078,10 +27181,10 @@ impl StateTrigger {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -27090,10 +27193,10 @@ impl StateTrigger {
     pub fn IsActive(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsActive)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -27103,7 +27206,7 @@ impl StateTrigger {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsActive)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -27114,7 +27217,7 @@ impl StateTrigger {
         let this = &::windows::core::Interface::cast::<IStateTriggerBaseProtected>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetActive)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 isactive,
             )
             .ok()
@@ -27123,10 +27226,10 @@ impl StateTrigger {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsActiveProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IStateTriggerStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).IsActiveProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -27268,11 +27371,11 @@ impl StateTriggerBase {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -27290,7 +27393,7 @@ impl StateTriggerBase {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -27305,7 +27408,7 @@ impl StateTriggerBase {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -27318,11 +27421,11 @@ impl StateTriggerBase {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -27334,11 +27437,11 @@ impl StateTriggerBase {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -27355,12 +27458,12 @@ impl StateTriggerBase {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -27377,7 +27480,7 @@ impl StateTriggerBase {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -27388,10 +27491,10 @@ impl StateTriggerBase {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -27401,10 +27504,10 @@ impl StateTriggerBase {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -27414,7 +27517,7 @@ impl StateTriggerBase {
         let this = &::windows::core::Interface::cast::<IStateTriggerBaseProtected>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetActive)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 isactive,
             )
             .ok()
@@ -27524,14 +27627,12 @@ impl Style {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
-        static mut SHARED: ::windows::core::FactoryCache<
-            Style,
-            ::windows::core::IActivationFactory,
-        > = ::windows::core::FactoryCache::new();
+        static mut SHARED: ::windows::core::FactoryCache<Style, ::windows::core::IGenericFactory> =
+            ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
@@ -27541,11 +27642,11 @@ impl Style {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -27563,7 +27664,7 @@ impl Style {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -27578,7 +27679,7 @@ impl Style {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -27591,11 +27692,11 @@ impl Style {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -27607,11 +27708,11 @@ impl Style {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -27628,12 +27729,12 @@ impl Style {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -27650,7 +27751,7 @@ impl Style {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -27661,10 +27762,10 @@ impl Style {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -27674,10 +27775,10 @@ impl Style {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -27686,10 +27787,10 @@ impl Style {
     pub fn IsSealed(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsSealed)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -27698,10 +27799,10 @@ impl Style {
     pub fn Setters(&self) -> ::windows::core::Result<SetterBaseCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Setters)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<SetterBaseCollection>(result__)
         }
@@ -27710,11 +27811,12 @@ impl Style {
     pub fn TargetType(&self) -> ::windows::core::Result<::windows::UI::Xaml::Interop::TypeName> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::UI::Xaml::Interop::TypeName>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).TargetType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Xaml::Interop::TypeName>(result__)
         }
@@ -27730,7 +27832,7 @@ impl Style {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTargetType)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -27740,10 +27842,10 @@ impl Style {
     pub fn BasedOn(&self) -> ::windows::core::Result<Style> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BasedOn)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Style>(result__)
         }
@@ -27756,7 +27858,7 @@ impl Style {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetBasedOn)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -27766,7 +27868,10 @@ impl Style {
     pub fn Seal(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Seal)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Seal)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
@@ -27777,11 +27882,11 @@ impl Style {
         targettype: Param0,
     ) -> ::windows::core::Result<Style> {
         Self::IStyleFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 targettype.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Style>(result__)
         })
@@ -27923,7 +28028,7 @@ impl SuspendingEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -27954,7 +28059,7 @@ impl<
     > SuspendingEventHandlerBox<F>
 {
     const VTABLE: SuspendingEventHandler_Vtbl = SuspendingEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -27964,7 +28069,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<SuspendingEventHandler as ::windows::core::Interface>::IID
@@ -28037,7 +28142,7 @@ unsafe impl ::windows::core::RuntimeType for SuspendingEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct SuspendingEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -28053,13 +28158,13 @@ impl TargetPropertyPath {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             TargetPropertyPath,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -28067,10 +28172,10 @@ impl TargetPropertyPath {
     pub fn Path(&self) -> ::windows::core::Result<PropertyPath> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Path)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<PropertyPath>(result__)
         }
@@ -28083,7 +28188,7 @@ impl TargetPropertyPath {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetPath)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -28093,10 +28198,10 @@ impl TargetPropertyPath {
     pub fn Target(&self) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = self;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).Target)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -28109,7 +28214,7 @@ impl TargetPropertyPath {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTarget)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -28120,11 +28225,11 @@ impl TargetPropertyPath {
         targetproperty: Param0,
     ) -> ::windows::core::Result<TargetPropertyPath> {
         Self::ITargetPropertyPathFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 targetproperty.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<TargetPropertyPath>(result__)
         })
@@ -28468,14 +28573,14 @@ impl ThicknessHelper {
         bottom: f64,
     ) -> ::windows::core::Result<Thickness> {
         Self::IThicknessHelperStatics(|this| unsafe {
-            let mut result__: Thickness = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Thickness>::zeroed();
             (::windows::core::Interface::vtable(this).FromLengths)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 left,
                 top,
                 right,
                 bottom,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Thickness>(result__)
         })
@@ -28483,11 +28588,11 @@ impl ThicknessHelper {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FromUniformLength(uniformlength: f64) -> ::windows::core::Result<Thickness> {
         Self::IThicknessHelperStatics(|this| unsafe {
-            let mut result__: Thickness = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Thickness>::zeroed();
             (::windows::core::Interface::vtable(this).FromUniformLength)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 uniformlength,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Thickness>(result__)
         })
@@ -28589,11 +28694,11 @@ impl TriggerAction {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -28611,7 +28716,7 @@ impl TriggerAction {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -28626,7 +28731,7 @@ impl TriggerAction {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -28639,11 +28744,11 @@ impl TriggerAction {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -28655,11 +28760,11 @@ impl TriggerAction {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -28676,12 +28781,12 @@ impl TriggerAction {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -28698,7 +28803,7 @@ impl TriggerAction {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -28709,10 +28814,10 @@ impl TriggerAction {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -28722,10 +28827,10 @@ impl TriggerAction {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -28834,13 +28939,13 @@ impl TriggerActionCollection {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             TriggerActionCollection,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -28852,10 +28957,10 @@ impl TriggerActionCollection {
             ::windows::Foundation::Collections::IIterable<TriggerAction>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<TriggerAction>>(result__)
         }
@@ -28864,11 +28969,11 @@ impl TriggerActionCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<TriggerAction> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<TriggerAction>(result__)
         }
@@ -28877,10 +28982,10 @@ impl TriggerActionCollection {
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -28892,10 +28997,10 @@ impl TriggerActionCollection {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<TriggerAction>>(result__)
         }
@@ -28908,12 +29013,12 @@ impl TriggerActionCollection {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IndexOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -28927,7 +29032,7 @@ impl TriggerActionCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -28943,7 +29048,7 @@ impl TriggerActionCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).InsertAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -28955,7 +29060,7 @@ impl TriggerActionCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
             )
             .ok()
@@ -28969,7 +29074,7 @@ impl TriggerActionCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Append)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -28979,9 +29084,9 @@ impl TriggerActionCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).RemoveAtEnd)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).RemoveAtEnd)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -28989,7 +29094,10 @@ impl TriggerActionCollection {
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Clear)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
@@ -29000,13 +29108,13 @@ impl TriggerActionCollection {
     ) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).GetMany)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 startindex,
                 items.len() as u32,
                 ::core::mem::transmute_copy(&items),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -29019,7 +29127,7 @@ impl TriggerActionCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ReplaceAll)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 items.len() as u32,
                 ::core::mem::transmute(items.as_ptr()),
             )
@@ -29204,11 +29312,11 @@ impl TriggerBase {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -29226,7 +29334,7 @@ impl TriggerBase {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -29241,7 +29349,7 @@ impl TriggerBase {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -29254,11 +29362,11 @@ impl TriggerBase {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -29270,11 +29378,11 @@ impl TriggerBase {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -29291,12 +29399,12 @@ impl TriggerBase {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -29313,7 +29421,7 @@ impl TriggerBase {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -29324,10 +29432,10 @@ impl TriggerBase {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -29337,10 +29445,10 @@ impl TriggerBase {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -29452,10 +29560,10 @@ impl TriggerCollection {
             ::windows::Foundation::Collections::IIterable<TriggerBase>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<TriggerBase>>(result__)
         }
@@ -29464,11 +29572,11 @@ impl TriggerCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<TriggerBase> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<TriggerBase>(result__)
         }
@@ -29477,10 +29585,10 @@ impl TriggerCollection {
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -29491,10 +29599,10 @@ impl TriggerCollection {
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<TriggerBase>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<TriggerBase>>(result__)
         }
@@ -29507,12 +29615,12 @@ impl TriggerCollection {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IndexOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -29526,7 +29634,7 @@ impl TriggerCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -29542,7 +29650,7 @@ impl TriggerCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).InsertAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -29554,7 +29662,7 @@ impl TriggerCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
             )
             .ok()
@@ -29568,7 +29676,7 @@ impl TriggerCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Append)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -29578,9 +29686,9 @@ impl TriggerCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).RemoveAtEnd)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).RemoveAtEnd)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -29588,7 +29696,10 @@ impl TriggerCollection {
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Clear)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
@@ -29599,13 +29710,13 @@ impl TriggerCollection {
     ) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).GetMany)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 startindex,
                 items.len() as u32,
                 ::core::mem::transmute_copy(&items),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -29618,7 +29729,7 @@ impl TriggerCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ReplaceAll)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 items.len() as u32,
                 ::core::mem::transmute(items.as_ptr()),
             )
@@ -29802,7 +29913,7 @@ impl UIElement {
         let this = &::windows::core::Interface::cast::<super::Composition::IAnimationObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).PopulatePropertyInfo)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 propertyname.into_param().abi(),
                 propertyinfo.into_param().abi(),
             )
@@ -29816,11 +29927,11 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -29838,7 +29949,7 @@ impl UIElement {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -29853,7 +29964,7 @@ impl UIElement {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -29866,11 +29977,11 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -29882,11 +29993,11 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -29903,12 +30014,12 @@ impl UIElement {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -29925,7 +30036,7 @@ impl UIElement {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -29936,10 +30047,10 @@ impl UIElement {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -29949,10 +30060,10 @@ impl UIElement {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -29961,10 +30072,10 @@ impl UIElement {
     pub fn DesiredSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Size>::zeroed();
             (::windows::core::Interface::vtable(this).DesiredSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Size>(result__)
         }
@@ -29973,10 +30084,10 @@ impl UIElement {
     pub fn AllowDrop(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AllowDrop)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -29986,7 +30097,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAllowDrop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -29996,10 +30107,10 @@ impl UIElement {
     pub fn Opacity(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).Opacity)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -30009,7 +30120,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetOpacity)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30020,10 +30131,10 @@ impl UIElement {
     pub fn Clip(&self) -> ::windows::core::Result<Media::RectangleGeometry> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Clip)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::RectangleGeometry>(result__)
         }
@@ -30037,7 +30148,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetClip)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30048,10 +30159,10 @@ impl UIElement {
     pub fn RenderTransform(&self) -> ::windows::core::Result<Media::Transform> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RenderTransform)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Transform>(result__)
         }
@@ -30065,7 +30176,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRenderTransform)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30076,10 +30187,10 @@ impl UIElement {
     pub fn Projection(&self) -> ::windows::core::Result<Media::Projection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Projection)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Projection>(result__)
         }
@@ -30093,7 +30204,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetProjection)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30104,10 +30215,10 @@ impl UIElement {
     pub fn Transform3D(&self) -> ::windows::core::Result<Media::Media3D::Transform3D> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Transform3D)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Media3D::Transform3D>(result__)
         }
@@ -30124,7 +30235,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTransform3D)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30134,10 +30245,10 @@ impl UIElement {
     pub fn RenderTransformOrigin(&self) -> ::windows::core::Result<::windows::Foundation::Point> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Point = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Point>::zeroed();
             (::windows::core::Interface::vtable(this).RenderTransformOrigin)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Point>(result__)
         }
@@ -30153,7 +30264,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRenderTransformOrigin)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30163,10 +30274,10 @@ impl UIElement {
     pub fn IsHitTestVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsHitTestVisible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -30176,7 +30287,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsHitTestVisible)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30186,10 +30297,10 @@ impl UIElement {
     pub fn Visibility(&self) -> ::windows::core::Result<Visibility> {
         let this = self;
         unsafe {
-            let mut result__: Visibility = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Visibility>::zeroed();
             (::windows::core::Interface::vtable(this).Visibility)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Visibility>(result__)
         }
@@ -30199,7 +30310,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetVisibility)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30209,10 +30320,10 @@ impl UIElement {
     pub fn RenderSize(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Size>::zeroed();
             (::windows::core::Interface::vtable(this).RenderSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Size>(result__)
         }
@@ -30221,10 +30332,10 @@ impl UIElement {
     pub fn UseLayoutRounding(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).UseLayoutRounding)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -30234,7 +30345,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetUseLayoutRounding)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30245,10 +30356,10 @@ impl UIElement {
     pub fn Transitions(&self) -> ::windows::core::Result<Media::Animation::TransitionCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Transitions)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Animation::TransitionCollection>(result__)
         }
@@ -30265,7 +30376,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTransitions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30276,10 +30387,10 @@ impl UIElement {
     pub fn CacheMode(&self) -> ::windows::core::Result<Media::CacheMode> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CacheMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::CacheMode>(result__)
         }
@@ -30293,7 +30404,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCacheMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30303,10 +30414,10 @@ impl UIElement {
     pub fn IsTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsTapEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -30316,7 +30427,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsTapEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30326,10 +30437,10 @@ impl UIElement {
     pub fn IsDoubleTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsDoubleTapEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -30339,7 +30450,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsDoubleTapEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30349,10 +30460,10 @@ impl UIElement {
     pub fn CanDrag(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanDrag)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -30362,7 +30473,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCanDrag)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30372,10 +30483,10 @@ impl UIElement {
     pub fn IsRightTapEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsRightTapEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -30385,7 +30496,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsRightTapEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30395,10 +30506,10 @@ impl UIElement {
     pub fn IsHoldingEnabled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsHoldingEnabled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -30408,7 +30519,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsHoldingEnabled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30419,10 +30530,10 @@ impl UIElement {
     pub fn ManipulationMode(&self) -> ::windows::core::Result<Input::ManipulationModes> {
         let this = self;
         unsafe {
-            let mut result__: Input::ManipulationModes = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Input::ManipulationModes>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::ManipulationModes>(result__)
         }
@@ -30436,7 +30547,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetManipulationMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30450,10 +30561,10 @@ impl UIElement {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PointerCaptures)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<Input::Pointer>>(result__)
         }
@@ -30463,10 +30574,10 @@ impl UIElement {
     pub fn ContextFlyout(&self) -> ::windows::core::Result<Controls::Primitives::FlyoutBase> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ContextFlyout)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Controls::Primitives::FlyoutBase>(result__)
         }
@@ -30483,7 +30594,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContextFlyout)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30494,10 +30605,10 @@ impl UIElement {
     pub fn CompositeMode(&self) -> ::windows::core::Result<Media::ElementCompositeMode> {
         let this = self;
         unsafe {
-            let mut result__: Media::ElementCompositeMode = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Media::ElementCompositeMode>::zeroed();
             (::windows::core::Interface::vtable(this).CompositeMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::ElementCompositeMode>(result__)
         }
@@ -30511,7 +30622,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCompositeMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30525,10 +30636,10 @@ impl UIElement {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Lights)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVector<Media::XamlLight>>(result__)
         }
@@ -30537,10 +30648,10 @@ impl UIElement {
     pub fn CanBeScrollAnchor(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CanBeScrollAnchor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -30550,7 +30661,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCanBeScrollAnchor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30560,10 +30671,10 @@ impl UIElement {
     pub fn ExitDisplayModeOnAccessKeyInvoked(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ExitDisplayModeOnAccessKeyInvoked)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -30573,7 +30684,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetExitDisplayModeOnAccessKeyInvoked)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30583,10 +30694,10 @@ impl UIElement {
     pub fn IsAccessKeyScope(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsAccessKeyScope)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -30596,7 +30707,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsAccessKeyScope)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30606,10 +30717,10 @@ impl UIElement {
     pub fn AccessKeyScopeOwner(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AccessKeyScopeOwner)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -30622,7 +30733,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAccessKeyScopeOwner)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30632,11 +30743,12 @@ impl UIElement {
     pub fn AccessKey(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).AccessKey)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -30649,7 +30761,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAccessKey)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30660,10 +30772,10 @@ impl UIElement {
     pub fn KeyTipPlacementMode(&self) -> ::windows::core::Result<Input::KeyTipPlacementMode> {
         let this = self;
         unsafe {
-            let mut result__: Input::KeyTipPlacementMode = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Input::KeyTipPlacementMode>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipPlacementMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::KeyTipPlacementMode>(result__)
         }
@@ -30677,7 +30789,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyTipPlacementMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30687,10 +30799,10 @@ impl UIElement {
     pub fn KeyTipHorizontalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipHorizontalOffset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -30700,7 +30812,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyTipHorizontalOffset)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30710,10 +30822,10 @@ impl UIElement {
     pub fn KeyTipVerticalOffset(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipVerticalOffset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -30723,7 +30835,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyTipVerticalOffset)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30733,10 +30845,10 @@ impl UIElement {
     pub fn KeyTipTarget(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipTarget)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -30749,7 +30861,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyTipTarget)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30762,10 +30874,11 @@ impl UIElement {
     ) -> ::windows::core::Result<Input::XYFocusKeyboardNavigationMode> {
         let this = self;
         unsafe {
-            let mut result__: Input::XYFocusKeyboardNavigationMode = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::XYFocusKeyboardNavigationMode>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusKeyboardNavigation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::XYFocusKeyboardNavigationMode>(result__)
         }
@@ -30779,7 +30892,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusKeyboardNavigation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30792,10 +30905,11 @@ impl UIElement {
     ) -> ::windows::core::Result<Input::XYFocusNavigationStrategy> {
         let this = self;
         unsafe {
-            let mut result__: Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::XYFocusNavigationStrategy>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusUpNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
@@ -30809,7 +30923,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusUpNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30822,10 +30936,11 @@ impl UIElement {
     ) -> ::windows::core::Result<Input::XYFocusNavigationStrategy> {
         let this = self;
         unsafe {
-            let mut result__: Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::XYFocusNavigationStrategy>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusDownNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
@@ -30839,7 +30954,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusDownNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30852,10 +30967,11 @@ impl UIElement {
     ) -> ::windows::core::Result<Input::XYFocusNavigationStrategy> {
         let this = self;
         unsafe {
-            let mut result__: Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::XYFocusNavigationStrategy>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusLeftNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
@@ -30869,7 +30985,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusLeftNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30882,10 +30998,11 @@ impl UIElement {
     ) -> ::windows::core::Result<Input::XYFocusNavigationStrategy> {
         let this = self;
         unsafe {
-            let mut result__: Input::XYFocusNavigationStrategy = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::XYFocusNavigationStrategy>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusRightNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::XYFocusNavigationStrategy>(result__)
         }
@@ -30899,7 +31016,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusRightNavigationStrategy)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30914,10 +31031,10 @@ impl UIElement {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyboardAccelerators)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVector<Input::KeyboardAccelerator>>(
                 result__,
@@ -30928,10 +31045,10 @@ impl UIElement {
     pub fn KeyboardAcceleratorPlacementTarget(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyboardAcceleratorPlacementTarget)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -30947,7 +31064,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyboardAcceleratorPlacementTarget)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -30960,10 +31077,11 @@ impl UIElement {
     ) -> ::windows::core::Result<Input::KeyboardAcceleratorPlacementMode> {
         let this = self;
         unsafe {
-            let mut result__: Input::KeyboardAcceleratorPlacementMode = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<Input::KeyboardAcceleratorPlacementMode>::zeroed();
             (::windows::core::Interface::vtable(this).KeyboardAcceleratorPlacementMode)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::KeyboardAcceleratorPlacementMode>(result__)
         }
@@ -30977,7 +31095,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetKeyboardAcceleratorPlacementMode)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -30987,10 +31105,10 @@ impl UIElement {
     pub fn HighContrastAdjustment(&self) -> ::windows::core::Result<ElementHighContrastAdjustment> {
         let this = self;
         unsafe {
-            let mut result__: ElementHighContrastAdjustment = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<ElementHighContrastAdjustment>::zeroed();
             (::windows::core::Interface::vtable(this).HighContrastAdjustment)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ElementHighContrastAdjustment>(result__)
         }
@@ -31003,7 +31121,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHighContrastAdjustment)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -31014,10 +31132,10 @@ impl UIElement {
     pub fn TabFocusNavigation(&self) -> ::windows::core::Result<Input::KeyboardNavigationMode> {
         let this = self;
         unsafe {
-            let mut result__: Input::KeyboardNavigationMode = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Input::KeyboardNavigationMode>::zeroed();
             (::windows::core::Interface::vtable(this).TabFocusNavigation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Input::KeyboardNavigationMode>(result__)
         }
@@ -31031,7 +31149,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTabFocusNavigation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -31041,10 +31159,10 @@ impl UIElement {
     pub fn OpacityTransition(&self) -> ::windows::core::Result<ScalarTransition> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).OpacityTransition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ScalarTransition>(result__)
         }
@@ -31057,7 +31175,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetOpacityTransition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31067,10 +31185,11 @@ impl UIElement {
     pub fn Translation(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector3>::zeroed();
             (::windows::core::Interface::vtable(this).Translation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
@@ -31086,7 +31205,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTranslation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31096,10 +31215,10 @@ impl UIElement {
     pub fn TranslationTransition(&self) -> ::windows::core::Result<Vector3Transition> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TranslationTransition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Vector3Transition>(result__)
         }
@@ -31115,7 +31234,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTranslationTransition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31125,10 +31244,10 @@ impl UIElement {
     pub fn Rotation(&self) -> ::windows::core::Result<f32> {
         let this = self;
         unsafe {
-            let mut result__: f32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
             (::windows::core::Interface::vtable(this).Rotation)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f32>(result__)
         }
@@ -31138,7 +31257,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRotation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -31148,10 +31267,10 @@ impl UIElement {
     pub fn RotationTransition(&self) -> ::windows::core::Result<ScalarTransition> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RotationTransition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<ScalarTransition>(result__)
         }
@@ -31164,7 +31283,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRotationTransition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31174,10 +31293,11 @@ impl UIElement {
     pub fn Scale(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector3>::zeroed();
             (::windows::core::Interface::vtable(this).Scale)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
@@ -31193,7 +31313,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetScale)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31203,10 +31323,10 @@ impl UIElement {
     pub fn ScaleTransition(&self) -> ::windows::core::Result<Vector3Transition> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ScaleTransition)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Vector3Transition>(result__)
         }
@@ -31219,7 +31339,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetScaleTransition)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31231,10 +31351,11 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Matrix4x4> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Matrix4x4 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Matrix4x4>::zeroed();
             (::windows::core::Interface::vtable(this).TransformMatrix)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Matrix4x4>(result__)
         }
@@ -31250,7 +31371,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTransformMatrix)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31260,10 +31381,11 @@ impl UIElement {
     pub fn CenterPoint(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector3>::zeroed();
             (::windows::core::Interface::vtable(this).CenterPoint)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
@@ -31279,7 +31401,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCenterPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31291,10 +31413,11 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector3>::zeroed();
             (::windows::core::Interface::vtable(this).RotationAxis)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
@@ -31310,7 +31433,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRotationAxis)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31322,10 +31445,11 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector3> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector3 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector3>::zeroed();
             (::windows::core::Interface::vtable(this).ActualOffset)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector3>(result__)
         }
@@ -31334,10 +31458,11 @@ impl UIElement {
     pub fn ActualSize(&self) -> ::windows::core::Result<::windows::Foundation::Numerics::Vector2> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Numerics::Vector2 = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::Numerics::Vector2>::zeroed();
             (::windows::core::Interface::vtable(this).ActualSize)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Numerics::Vector2>(result__)
         }
@@ -31346,10 +31471,10 @@ impl UIElement {
     pub fn XamlRoot(&self) -> ::windows::core::Result<XamlRoot> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XamlRoot)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<XamlRoot>(result__)
         }
@@ -31362,7 +31487,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXamlRoot)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31373,10 +31498,10 @@ impl UIElement {
     pub fn Shadow(&self) -> ::windows::core::Result<Media::Shadow> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Shadow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Shadow>(result__)
         }
@@ -31390,7 +31515,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetShadow)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31400,10 +31525,10 @@ impl UIElement {
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).RasterizationScale)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -31413,7 +31538,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRasterizationScale)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -31423,10 +31548,10 @@ impl UIElement {
     pub fn FocusState(&self) -> ::windows::core::Result<FocusState> {
         let this = self;
         unsafe {
-            let mut result__: FocusState = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<FocusState>::zeroed();
             (::windows::core::Interface::vtable(this).FocusState)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<FocusState>(result__)
         }
@@ -31435,10 +31560,10 @@ impl UIElement {
     pub fn UseSystemFocusVisuals(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).UseSystemFocusVisuals)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -31448,7 +31573,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetUseSystemFocusVisuals)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -31458,10 +31583,10 @@ impl UIElement {
     pub fn XYFocusLeft(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusLeft)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -31474,7 +31599,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusLeft)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31484,10 +31609,10 @@ impl UIElement {
     pub fn XYFocusRight(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusRight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -31500,7 +31625,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusRight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31510,10 +31635,10 @@ impl UIElement {
     pub fn XYFocusUp(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusUp)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -31526,7 +31651,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusUp)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31536,10 +31661,10 @@ impl UIElement {
     pub fn XYFocusDown(&self) -> ::windows::core::Result<DependencyObject> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusDown)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyObject>(result__)
         }
@@ -31552,7 +31677,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetXYFocusDown)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -31562,10 +31687,10 @@ impl UIElement {
     pub fn IsTabStop(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsTabStop)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -31575,7 +31700,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetIsTabStop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -31585,10 +31710,10 @@ impl UIElement {
     pub fn TabIndex(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).TabIndex)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -31598,7 +31723,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTabIndex)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -31612,11 +31737,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).KeyUp)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -31632,7 +31758,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveKeyUp)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -31646,11 +31772,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).KeyDown)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -31666,7 +31793,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveKeyDown)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -31679,11 +31806,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).GotFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -31699,7 +31827,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveGotFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -31712,11 +31840,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).LostFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -31732,7 +31861,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveLostFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -31751,11 +31880,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DragStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -31771,7 +31901,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDragStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -31790,11 +31920,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DropCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -31810,7 +31941,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDropCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -31833,11 +31964,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).CharacterReceived)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -31853,7 +31985,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveCharacterReceived)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -31866,11 +31998,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DragEnter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -31886,7 +32019,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDragEnter)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -31899,11 +32032,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DragLeave)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -31919,7 +32053,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDragLeave)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -31932,11 +32066,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DragOver)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -31952,7 +32087,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDragOver)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -31965,11 +32100,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Drop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -31985,7 +32121,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDrop)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32002,11 +32138,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerPressed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32022,7 +32159,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerPressed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32036,11 +32173,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerMoved)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32056,7 +32194,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerMoved)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32073,11 +32211,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerReleased)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32093,7 +32232,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerReleased)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32110,11 +32249,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerEntered)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32130,7 +32270,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerEntered)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32144,11 +32284,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerExited)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32164,7 +32305,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerExited)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32181,11 +32322,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerCaptureLost)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32201,7 +32343,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerCaptureLost)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32218,11 +32360,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerCanceled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32238,7 +32381,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerCanceled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32255,11 +32398,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PointerWheelChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32275,7 +32419,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePointerWheelChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32289,11 +32433,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Tapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32309,7 +32454,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveTapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32326,11 +32471,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DoubleTapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32346,7 +32492,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDoubleTapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32360,11 +32506,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Holding)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32380,7 +32527,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveHolding)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32400,11 +32547,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ContextRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32420,7 +32568,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveContextRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32439,11 +32587,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ContextCanceled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32459,7 +32608,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveContextCanceled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32476,11 +32625,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).RightTapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32496,7 +32646,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveRightTapped)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32513,11 +32663,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32533,7 +32684,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveManipulationStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32550,11 +32701,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationInertiaStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32570,7 +32722,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveManipulationInertiaStarting)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32587,11 +32739,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationStarted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32607,7 +32760,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveManipulationStarted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32624,11 +32777,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationDelta)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32644,7 +32798,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveManipulationDelta)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32661,11 +32815,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32681,7 +32836,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveManipulationCompleted)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32704,11 +32859,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).AccessKeyDisplayRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32724,7 +32880,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAccessKeyDisplayRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32747,11 +32903,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).AccessKeyDisplayDismissed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32767,7 +32924,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAccessKeyDisplayDismissed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32787,11 +32944,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).AccessKeyInvoked)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32807,7 +32965,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAccessKeyInvoked)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32830,11 +32988,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ProcessKeyboardAccelerators)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32850,7 +33009,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveProcessKeyboardAccelerators)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32870,11 +33029,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).GettingFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32890,7 +33050,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveGettingFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32910,11 +33070,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).LosingFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32930,7 +33091,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveLosingFocus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32953,11 +33114,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).NoFocusCandidateFound)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -32973,7 +33135,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveNoFocusCandidateFound)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -32987,11 +33149,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PreviewKeyDown)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -33007,7 +33170,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePreviewKeyDown)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -33021,11 +33184,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).PreviewKeyUp)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -33041,7 +33205,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemovePreviewKeyUp)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -33060,11 +33224,12 @@ impl UIElement {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).BringIntoViewRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -33080,7 +33245,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveBringIntoViewRequested)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -33094,7 +33259,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Measure)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 availablesize.into_param().abi(),
             )
             .ok()
@@ -33108,7 +33273,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Arrange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 finalrect.into_param().abi(),
             )
             .ok()
@@ -33122,11 +33287,11 @@ impl UIElement {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CapturePointer)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -33140,7 +33305,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ReleasePointerCapture)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -33151,7 +33316,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ReleasePointerCaptures)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -33170,7 +33335,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).AddHandler)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 routedevent.into_param().abi(),
                 handler.into_param().abi(),
                 handledeventstoo,
@@ -33191,7 +33356,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveHandler)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 routedevent.into_param().abi(),
                 handler.into_param().abi(),
             )
@@ -33206,11 +33371,11 @@ impl UIElement {
     ) -> ::windows::core::Result<Media::GeneralTransform> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TransformToVisual)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 visual.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::GeneralTransform>(result__)
         }
@@ -33220,7 +33385,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).InvalidateMeasure)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -33230,7 +33395,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).InvalidateArrange)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -33239,9 +33404,9 @@ impl UIElement {
     pub fn UpdateLayout(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).UpdateLayout)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).UpdateLayout)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -33249,10 +33414,10 @@ impl UIElement {
     pub fn CancelDirectManipulations(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).CancelDirectManipulations)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -33272,11 +33437,11 @@ impl UIElement {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).StartDragAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pointerpoint.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<
                 ::windows::ApplicationModel::DataTransfer::DataPackageOperation,
@@ -33288,7 +33453,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).StartBringIntoView)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
             )
             .ok()
         }
@@ -33304,7 +33469,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).StartBringIntoViewWithOptions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 options.into_param().abi(),
             )
             .ok()
@@ -33322,7 +33487,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).TryInvokeKeyboardAccelerator)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 args.into_param().abi(),
             )
             .ok()
@@ -33332,11 +33497,11 @@ impl UIElement {
     pub fn Focus(&self, value: FocusState) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Focus)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -33353,7 +33518,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).StartAnimation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 animation.into_param().abi(),
             )
             .ok()
@@ -33371,7 +33536,7 @@ impl UIElement {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).StopAnimation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 animation.into_param().abi(),
             )
             .ok()
@@ -33382,10 +33547,10 @@ impl UIElement {
     pub fn ProtectedCursor(&self) -> ::windows::core::Result<super::Input::InputCursor> {
         let this = &::windows::core::Interface::cast::<IUIElementProtected>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ProtectedCursor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Input::InputCursor>(result__)
         }
@@ -33402,7 +33567,7 @@ impl UIElement {
         let this = &::windows::core::Interface::cast::<IUIElementProtected>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetProtectedCursor)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -33411,10 +33576,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyDownEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyDownEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33422,10 +33587,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyUpEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyUpEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33433,10 +33598,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerEnteredEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PointerEnteredEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33444,10 +33609,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerPressedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PointerPressedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33455,10 +33620,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerMovedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PointerMovedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33466,10 +33631,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerReleasedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PointerReleasedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33477,10 +33642,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerExitedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PointerExitedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33488,10 +33653,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerCaptureLostEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PointerCaptureLostEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33499,10 +33664,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerCanceledEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PointerCanceledEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33510,10 +33675,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerWheelChangedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PointerWheelChangedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33521,10 +33686,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TappedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TappedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33532,10 +33697,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DoubleTappedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DoubleTappedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33543,10 +33708,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HoldingEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).HoldingEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33554,10 +33719,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RightTappedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RightTappedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33565,10 +33730,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationStartingEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationStartingEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33576,10 +33741,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationInertiaStartingEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationInertiaStartingEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33587,10 +33752,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationStartedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationStartedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33598,10 +33763,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationDeltaEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationDeltaEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33609,10 +33774,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationCompletedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationCompletedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33620,10 +33785,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragEnterEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DragEnterEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33631,10 +33796,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragLeaveEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DragLeaveEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33642,10 +33807,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DragOverEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DragOverEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33653,10 +33818,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn DropEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DropEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33664,10 +33829,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn GettingFocusEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GettingFocusEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33675,10 +33840,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn LosingFocusEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).LosingFocusEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33686,10 +33851,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn NoFocusCandidateFoundEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).NoFocusCandidateFoundEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33697,10 +33862,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PreviewKeyDownEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PreviewKeyDownEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33708,10 +33873,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CharacterReceivedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CharacterReceivedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33719,10 +33884,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PreviewKeyUpEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PreviewKeyUpEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33730,10 +33895,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn BringIntoViewRequestedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).BringIntoViewRequestedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33741,10 +33906,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ContextRequestedEvent() -> ::windows::core::Result<RoutedEvent> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ContextRequestedEvent)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<RoutedEvent>(result__)
         })
@@ -33752,10 +33917,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AllowDropProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AllowDropProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33763,10 +33928,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn OpacityProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).OpacityProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33774,10 +33939,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ClipProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ClipProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33785,10 +33950,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RenderTransformProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RenderTransformProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33796,10 +33961,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ProjectionProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ProjectionProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33807,10 +33972,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Transform3DProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Transform3DProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33818,10 +33983,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn RenderTransformOriginProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RenderTransformOriginProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33829,10 +33994,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsHitTestVisibleProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).IsHitTestVisibleProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33840,10 +34005,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn VisibilityProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).VisibilityProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33851,10 +34016,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UseLayoutRoundingProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).UseLayoutRoundingProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33862,10 +34027,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TransitionsProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TransitionsProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33873,10 +34038,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CacheModeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CacheModeProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33884,10 +34049,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsTapEnabledProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).IsTapEnabledProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33895,10 +34060,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsDoubleTapEnabledProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).IsDoubleTapEnabledProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33906,10 +34071,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CanDragProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CanDragProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33917,10 +34082,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsRightTapEnabledProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).IsRightTapEnabledProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33928,10 +34093,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsHoldingEnabledProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).IsHoldingEnabledProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33939,10 +34104,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ManipulationModeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ManipulationModeProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33950,10 +34115,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn PointerCapturesProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PointerCapturesProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33961,10 +34126,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ContextFlyoutProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ContextFlyoutProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33972,10 +34137,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CompositeModeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CompositeModeProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33983,10 +34148,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn LightsProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).LightsProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -33994,10 +34159,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CanBeScrollAnchorProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CanBeScrollAnchorProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34006,10 +34171,10 @@ impl UIElement {
     pub fn ExitDisplayModeOnAccessKeyInvokedProperty() -> ::windows::core::Result<DependencyProperty>
     {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ExitDisplayModeOnAccessKeyInvokedProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34017,10 +34182,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsAccessKeyScopeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).IsAccessKeyScopeProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34028,10 +34193,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AccessKeyScopeOwnerProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AccessKeyScopeOwnerProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34039,10 +34204,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn AccessKeyProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AccessKeyProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34050,10 +34215,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipPlacementModeProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipPlacementModeProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34061,10 +34226,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipHorizontalOffsetProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipHorizontalOffsetProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34072,10 +34237,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipVerticalOffsetProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipVerticalOffsetProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34083,10 +34248,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn KeyTipTargetProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyTipTargetProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34094,10 +34259,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusKeyboardNavigationProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusKeyboardNavigationProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34105,10 +34270,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusUpNavigationStrategyProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusUpNavigationStrategyProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34116,10 +34281,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusDownNavigationStrategyProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusDownNavigationStrategyProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34127,10 +34292,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusLeftNavigationStrategyProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusLeftNavigationStrategyProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34138,10 +34303,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusRightNavigationStrategyProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusRightNavigationStrategyProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34150,10 +34315,10 @@ impl UIElement {
     pub fn KeyboardAcceleratorPlacementTargetProperty(
     ) -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyboardAcceleratorPlacementTargetProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34162,10 +34327,10 @@ impl UIElement {
     pub fn KeyboardAcceleratorPlacementModeProperty() -> ::windows::core::Result<DependencyProperty>
     {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).KeyboardAcceleratorPlacementModeProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34173,10 +34338,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn HighContrastAdjustmentProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).HighContrastAdjustmentProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34184,10 +34349,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TabFocusNavigationProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TabFocusNavigationProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34195,10 +34360,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn ShadowProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ShadowProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34206,10 +34371,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn FocusStateProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FocusStateProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34217,10 +34382,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn UseSystemFocusVisualsProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).UseSystemFocusVisualsProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34228,10 +34393,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusLeftProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusLeftProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34239,10 +34404,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusRightProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusRightProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34250,10 +34415,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusUpProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusUpProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34261,10 +34426,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn XYFocusDownProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).XYFocusDownProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34272,10 +34437,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn IsTabStopProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).IsTabStopProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34283,10 +34448,10 @@ impl UIElement {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn TabIndexProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TabIndexProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -34300,11 +34465,11 @@ impl UIElement {
         value: Param0,
     ) -> ::windows::core::Result<bool> {
         Self::IUIElementStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).TryStartDirectManipulation)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -34315,7 +34480,7 @@ impl UIElement {
     ) -> ::windows::core::Result<()> {
         Self::IUIElementStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).RegisterAsScrollPort)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
             )
             .ok()
@@ -34326,10 +34491,10 @@ impl UIElement {
     pub fn GetVisualInternal(&self) -> ::windows::core::Result<super::Composition::Visual> {
         let this = &::windows::core::Interface::cast::<super::Composition::IVisualElement2>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetVisualInternal)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Composition::Visual>(result__)
         }
@@ -34533,10 +34698,10 @@ impl UIElementWeakCollection {
             ::windows::Foundation::Collections::IIterable<UIElement>,
         >(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).First)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IIterator<UIElement>>(result__)
         }
@@ -34544,12 +34709,12 @@ impl UIElementWeakCollection {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<UIElementWeakCollection> {
         Self::IUIElementWeakCollectionFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<UIElementWeakCollection>(result__)
         })
@@ -34560,12 +34725,12 @@ impl UIElementWeakCollection {
     ) -> ::windows::core::Result<UIElementWeakCollection> {
         Self::IUIElementWeakCollectionFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<UIElementWeakCollection>(result__)
         })
@@ -34574,11 +34739,11 @@ impl UIElementWeakCollection {
     pub fn GetAt(&self, index: u32) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<UIElement>(result__)
         }
@@ -34587,10 +34752,10 @@ impl UIElementWeakCollection {
     pub fn Size(&self) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -34601,10 +34766,10 @@ impl UIElementWeakCollection {
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVectorView<UIElement>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetView)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVectorView<UIElement>>(result__)
         }
@@ -34617,12 +34782,12 @@ impl UIElementWeakCollection {
     ) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IndexOf)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
                 index,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -34636,7 +34801,7 @@ impl UIElementWeakCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -34652,7 +34817,7 @@ impl UIElementWeakCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).InsertAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
                 value.into_param().abi(),
             )
@@ -34664,7 +34829,7 @@ impl UIElementWeakCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveAt)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 index,
             )
             .ok()
@@ -34678,7 +34843,7 @@ impl UIElementWeakCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Append)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -34688,9 +34853,9 @@ impl UIElementWeakCollection {
     pub fn RemoveAtEnd(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).RemoveAtEnd)(::core::mem::transmute_copy(
-                this,
-            ))
+            (::windows::core::Interface::vtable(this).RemoveAtEnd)(
+                ::windows::core::Interface::as_raw(this),
+            )
             .ok()
         }
     }
@@ -34698,7 +34863,10 @@ impl UIElementWeakCollection {
     pub fn Clear(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Clear)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Clear)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
@@ -34709,13 +34877,13 @@ impl UIElementWeakCollection {
     ) -> ::windows::core::Result<u32> {
         let this = self;
         unsafe {
-            let mut result__: u32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
             (::windows::core::Interface::vtable(this).GetMany)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 startindex,
                 items.len() as u32,
                 ::core::mem::transmute_copy(&items),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<u32>(result__)
         }
@@ -34728,7 +34896,7 @@ impl UIElementWeakCollection {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).ReplaceAll)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 items.len() as u32,
                 ::core::mem::transmute(items.as_ptr()),
             )
@@ -34918,10 +35086,10 @@ impl UnhandledExceptionEventArgs {
     pub fn Exception(&self) -> ::windows::core::Result<::windows::core::HRESULT> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::HRESULT = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::HRESULT>::zeroed();
             (::windows::core::Interface::vtable(this).Exception)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HRESULT>(result__)
         }
@@ -34930,11 +35098,12 @@ impl UnhandledExceptionEventArgs {
     pub fn Message(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Message)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -34943,10 +35112,10 @@ impl UnhandledExceptionEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -34956,7 +35125,7 @@ impl UnhandledExceptionEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -35080,7 +35249,7 @@ impl UnhandledExceptionEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -35111,7 +35280,7 @@ impl<
     > UnhandledExceptionEventHandlerBox<F>
 {
     const VTABLE: UnhandledExceptionEventHandler_Vtbl = UnhandledExceptionEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -35121,7 +35290,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<UnhandledExceptionEventHandler as ::windows::core::Interface>::IID
@@ -35194,7 +35363,7 @@ unsafe impl ::windows::core::RuntimeType for UnhandledExceptionEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct UnhandledExceptionEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -35209,10 +35378,11 @@ impl Vector3Transition {
     pub fn Duration(&self) -> ::windows::core::Result<::windows::Foundation::TimeSpan> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::TimeSpan = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::TimeSpan>::zeroed();
             (::windows::core::Interface::vtable(this).Duration)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::TimeSpan>(result__)
         }
@@ -35228,7 +35398,7 @@ impl Vector3Transition {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDuration)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -35238,10 +35408,10 @@ impl Vector3Transition {
     pub fn Components(&self) -> ::windows::core::Result<Vector3TransitionComponents> {
         let this = self;
         unsafe {
-            let mut result__: Vector3TransitionComponents = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Vector3TransitionComponents>::zeroed();
             (::windows::core::Interface::vtable(this).Components)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Vector3TransitionComponents>(result__)
         }
@@ -35251,7 +35421,7 @@ impl Vector3Transition {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetComponents)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -35260,12 +35430,12 @@ impl Vector3Transition {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<Vector3Transition> {
         Self::IVector3TransitionFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Vector3Transition>(result__)
         })
@@ -35276,12 +35446,12 @@ impl Vector3Transition {
     ) -> ::windows::core::Result<Vector3Transition> {
         Self::IVector3TransitionFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Vector3Transition>(result__)
         })
@@ -35522,13 +35692,13 @@ impl VisualState {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             VisualState,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -35539,11 +35709,11 @@ impl VisualState {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -35561,7 +35731,7 @@ impl VisualState {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -35576,7 +35746,7 @@ impl VisualState {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -35589,11 +35759,11 @@ impl VisualState {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -35605,11 +35775,11 @@ impl VisualState {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -35626,12 +35796,12 @@ impl VisualState {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -35648,7 +35818,7 @@ impl VisualState {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -35659,10 +35829,10 @@ impl VisualState {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -35672,10 +35842,10 @@ impl VisualState {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -35684,11 +35854,12 @@ impl VisualState {
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Name)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -35698,10 +35869,10 @@ impl VisualState {
     pub fn Storyboard(&self) -> ::windows::core::Result<Media::Animation::Storyboard> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Storyboard)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Animation::Storyboard>(result__)
         }
@@ -35718,7 +35889,7 @@ impl VisualState {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetStoryboard)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -35728,10 +35899,10 @@ impl VisualState {
     pub fn Setters(&self) -> ::windows::core::Result<SetterBaseCollection> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Setters)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<SetterBaseCollection>(result__)
         }
@@ -35743,10 +35914,10 @@ impl VisualState {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).StateTriggers)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVector<StateTriggerBase>>(result__)
         }
@@ -35855,13 +36026,13 @@ impl VisualStateChangedEventArgs {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             VisualStateChangedEventArgs,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -35869,10 +36040,10 @@ impl VisualStateChangedEventArgs {
     pub fn OldState(&self) -> ::windows::core::Result<VisualState> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).OldState)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<VisualState>(result__)
         }
@@ -35885,7 +36056,7 @@ impl VisualStateChangedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetOldState)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -35895,10 +36066,10 @@ impl VisualStateChangedEventArgs {
     pub fn NewState(&self) -> ::windows::core::Result<VisualState> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).NewState)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<VisualState>(result__)
         }
@@ -35911,7 +36082,7 @@ impl VisualStateChangedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetNewState)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -35922,10 +36093,10 @@ impl VisualStateChangedEventArgs {
     pub fn Control(&self) -> ::windows::core::Result<Controls::Control> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Control)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Controls::Control>(result__)
         }
@@ -35939,7 +36110,7 @@ impl VisualStateChangedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetControl)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -36063,7 +36234,7 @@ impl VisualStateChangedEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -36094,7 +36265,7 @@ impl<
     > VisualStateChangedEventHandlerBox<F>
 {
     const VTABLE: VisualStateChangedEventHandler_Vtbl = VisualStateChangedEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -36104,7 +36275,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<VisualStateChangedEventHandler as ::windows::core::Interface>::IID
@@ -36177,7 +36348,7 @@ unsafe impl ::windows::core::RuntimeType for VisualStateChangedEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct VisualStateChangedEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -36193,13 +36364,13 @@ impl VisualStateGroup {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             VisualStateGroup,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -36210,11 +36381,11 @@ impl VisualStateGroup {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -36232,7 +36403,7 @@ impl VisualStateGroup {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -36247,7 +36418,7 @@ impl VisualStateGroup {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -36260,11 +36431,11 @@ impl VisualStateGroup {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -36276,11 +36447,11 @@ impl VisualStateGroup {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -36297,12 +36468,12 @@ impl VisualStateGroup {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -36319,7 +36490,7 @@ impl VisualStateGroup {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -36330,10 +36501,10 @@ impl VisualStateGroup {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -36343,10 +36514,10 @@ impl VisualStateGroup {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -36355,11 +36526,12 @@ impl VisualStateGroup {
     pub fn Name(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Name)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -36371,10 +36543,10 @@ impl VisualStateGroup {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Transitions)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVector<VisualTransition>>(result__)
         }
@@ -36385,10 +36557,10 @@ impl VisualStateGroup {
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<VisualState>> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).States)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVector<VisualState>>(result__)
         }
@@ -36397,10 +36569,10 @@ impl VisualStateGroup {
     pub fn CurrentState(&self) -> ::windows::core::Result<VisualState> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CurrentState)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<VisualState>(result__)
         }
@@ -36415,11 +36587,12 @@ impl VisualStateGroup {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).CurrentStateChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -36435,7 +36608,7 @@ impl VisualStateGroup {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveCurrentStateChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -36451,11 +36624,12 @@ impl VisualStateGroup {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).CurrentStateChanging)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -36471,7 +36645,7 @@ impl VisualStateGroup {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveCurrentStateChanging)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -36583,11 +36757,11 @@ impl VisualStateManager {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -36605,7 +36779,7 @@ impl VisualStateManager {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -36620,7 +36794,7 @@ impl VisualStateManager {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -36633,11 +36807,11 @@ impl VisualStateManager {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -36649,11 +36823,11 @@ impl VisualStateManager {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -36670,12 +36844,12 @@ impl VisualStateManager {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -36692,7 +36866,7 @@ impl VisualStateManager {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -36703,10 +36877,10 @@ impl VisualStateManager {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -36716,10 +36890,10 @@ impl VisualStateManager {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -36727,12 +36901,12 @@ impl VisualStateManager {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<VisualStateManager> {
         Self::IVisualStateManagerFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<VisualStateManager>(result__)
         })
@@ -36743,12 +36917,12 @@ impl VisualStateManager {
     ) -> ::windows::core::Result<VisualStateManager> {
         Self::IVisualStateManagerFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<VisualStateManager>(result__)
         })
@@ -36771,7 +36945,7 @@ impl VisualStateManager {
         let this = &::windows::core::Interface::cast::<IVisualStateManagerProtected>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RaiseCurrentStateChanging)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 stategroup.into_param().abi(),
                 oldstate.into_param().abi(),
                 newstate.into_param().abi(),
@@ -36798,7 +36972,7 @@ impl VisualStateManager {
         let this = &::windows::core::Interface::cast::<IVisualStateManagerProtected>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).RaiseCurrentStateChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 stategroup.into_param().abi(),
                 oldstate.into_param().abi(),
                 newstate.into_param().abi(),
@@ -36813,11 +36987,11 @@ impl VisualStateManager {
     ) -> ::windows::core::Result<::windows::Foundation::Collections::IVector<VisualStateGroup>>
     {
         Self::IVisualStateManagerStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetVisualStateGroups)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 obj.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Collections::IVector<VisualStateGroup>>(result__)
         })
@@ -36825,10 +36999,10 @@ impl VisualStateManager {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn CustomVisualStateManagerProperty() -> ::windows::core::Result<DependencyProperty> {
         Self::IVisualStateManagerStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CustomVisualStateManagerProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DependencyProperty>(result__)
         })
@@ -36841,11 +37015,11 @@ impl VisualStateManager {
         obj: Param0,
     ) -> ::windows::core::Result<VisualStateManager> {
         Self::IVisualStateManagerStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetCustomVisualStateManager)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 obj.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<VisualStateManager>(result__)
         })
@@ -36861,7 +37035,7 @@ impl VisualStateManager {
     ) -> ::windows::core::Result<()> {
         Self::IVisualStateManagerStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetCustomVisualStateManager)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 obj.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -36880,13 +37054,13 @@ impl VisualStateManager {
         usetransitions: bool,
     ) -> ::windows::core::Result<bool> {
         Self::IVisualStateManagerStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).GoToState)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 control.into_param().abi(),
                 statename.into_param().abi(),
                 usetransitions,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -37023,11 +37197,11 @@ impl VisualTransition {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -37045,7 +37219,7 @@ impl VisualTransition {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -37060,7 +37234,7 @@ impl VisualTransition {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -37073,11 +37247,11 @@ impl VisualTransition {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -37089,11 +37263,11 @@ impl VisualTransition {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -37110,12 +37284,12 @@ impl VisualTransition {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -37132,7 +37306,7 @@ impl VisualTransition {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -37143,10 +37317,10 @@ impl VisualTransition {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -37156,10 +37330,10 @@ impl VisualTransition {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -37168,10 +37342,10 @@ impl VisualTransition {
     pub fn GeneratedDuration(&self) -> ::windows::core::Result<Duration> {
         let this = self;
         unsafe {
-            let mut result__: Duration = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Duration>::zeroed();
             (::windows::core::Interface::vtable(this).GeneratedDuration)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Duration>(result__)
         }
@@ -37184,7 +37358,7 @@ impl VisualTransition {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetGeneratedDuration)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -37197,10 +37371,10 @@ impl VisualTransition {
     ) -> ::windows::core::Result<Media::Animation::EasingFunctionBase> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GeneratedEasingFunction)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Animation::EasingFunctionBase>(result__)
         }
@@ -37217,7 +37391,7 @@ impl VisualTransition {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetGeneratedEasingFunction)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -37227,11 +37401,12 @@ impl VisualTransition {
     pub fn To(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).To)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -37244,7 +37419,7 @@ impl VisualTransition {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTo)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -37254,11 +37429,12 @@ impl VisualTransition {
     pub fn From(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).From)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -37271,7 +37447,7 @@ impl VisualTransition {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetFrom)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -37282,10 +37458,10 @@ impl VisualTransition {
     pub fn Storyboard(&self) -> ::windows::core::Result<Media::Animation::Storyboard> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Storyboard)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Media::Animation::Storyboard>(result__)
         }
@@ -37302,7 +37478,7 @@ impl VisualTransition {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetStoryboard)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -37311,12 +37487,12 @@ impl VisualTransition {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<VisualTransition> {
         Self::IVisualTransitionFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<VisualTransition>(result__)
         })
@@ -37327,12 +37503,12 @@ impl VisualTransition {
     ) -> ::windows::core::Result<VisualTransition> {
         Self::IVisualTransitionFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<VisualTransition>(result__)
         })
@@ -37453,10 +37629,10 @@ impl Window {
     pub fn Bounds(&self) -> ::windows::core::Result<::windows::Foundation::Rect> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Rect = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Rect>::zeroed();
             (::windows::core::Interface::vtable(this).Bounds)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Rect>(result__)
         }
@@ -37465,10 +37641,10 @@ impl Window {
     pub fn Visible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Visible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -37477,10 +37653,10 @@ impl Window {
     pub fn Content(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Content)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<UIElement>(result__)
         }
@@ -37493,7 +37669,7 @@ impl Window {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetContent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -37503,10 +37679,10 @@ impl Window {
     pub fn CoreWindow(&self) -> ::windows::core::Result<::windows::UI::Core::CoreWindow> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CoreWindow)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreWindow>(result__)
         }
@@ -37516,10 +37692,10 @@ impl Window {
     pub fn Compositor(&self) -> ::windows::core::Result<super::Composition::Compositor> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Compositor)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Composition::Compositor>(result__)
         }
@@ -37528,10 +37704,10 @@ impl Window {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -37541,10 +37717,10 @@ impl Window {
     pub fn DispatcherQueue(&self) -> ::windows::core::Result<super::Dispatching::DispatcherQueue> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::Dispatching::DispatcherQueue>(result__)
         }
@@ -37553,11 +37729,12 @@ impl Window {
     pub fn Title(&self) -> ::windows::core::Result<::windows::core::HSTRING> {
         let this = self;
         unsafe {
-            let mut result__: ::core::mem::ManuallyDrop<::windows::core::HSTRING> =
-                ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<
+                ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
+            >::zeroed();
             (::windows::core::Interface::vtable(this).Title)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::HSTRING>(result__)
         }
@@ -37570,7 +37747,7 @@ impl Window {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTitle)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -37580,10 +37757,10 @@ impl Window {
     pub fn ExtendsContentIntoTitleBar(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).ExtendsContentIntoTitleBar)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -37593,7 +37770,7 @@ impl Window {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetExtendsContentIntoTitleBar)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -37615,11 +37792,12 @@ impl Window {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Activated)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -37635,7 +37813,7 @@ impl Window {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveActivated)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -37657,11 +37835,12 @@ impl Window {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Closed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -37677,7 +37856,7 @@ impl Window {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveClosed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -37699,11 +37878,12 @@ impl Window {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).SizeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -37719,7 +37899,7 @@ impl Window {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveSizeChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -37741,11 +37921,12 @@ impl Window {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).VisibilityChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -37761,7 +37942,7 @@ impl Window {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveVisibilityChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -37771,15 +37952,20 @@ impl Window {
     pub fn Activate(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Activate)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Activate)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Close)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
@@ -37790,7 +37976,7 @@ impl Window {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTitleBar)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 titlebar.into_param().abi(),
             )
             .ok()
@@ -37799,12 +37985,12 @@ impl Window {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn new() -> ::windows::core::Result<Window> {
         Self::IWindowFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Window>(result__)
         })
@@ -37813,12 +37999,12 @@ impl Window {
     pub fn compose<T: ::windows::core::Compose>(compose: T) -> ::windows::core::Result<Window> {
         Self::IWindowFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Window>(result__)
         })
@@ -37826,10 +38012,10 @@ impl Window {
     #[doc = "*Required features: `\"UI_Xaml\"`*"]
     pub fn Current() -> ::windows::core::Result<Window> {
         Self::IWindowStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Current)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Window>(result__)
         })
@@ -37933,10 +38119,10 @@ impl WindowActivatedEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -37946,7 +38132,7 @@ impl WindowActivatedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -37956,10 +38142,10 @@ impl WindowActivatedEventArgs {
     pub fn WindowActivationState(&self) -> ::windows::core::Result<WindowActivationState> {
         let this = self;
         unsafe {
-            let mut result__: WindowActivationState = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<WindowActivationState>::zeroed();
             (::windows::core::Interface::vtable(this).WindowActivationState)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<WindowActivationState>(result__)
         }
@@ -38095,10 +38281,10 @@ impl WindowEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -38108,7 +38294,7 @@ impl WindowEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -38197,10 +38383,10 @@ impl WindowSizeChangedEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -38210,7 +38396,7 @@ impl WindowSizeChangedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -38220,10 +38406,10 @@ impl WindowSizeChangedEventArgs {
     pub fn Size(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Size>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Size>(result__)
         }
@@ -38320,10 +38506,10 @@ impl WindowVisibilityChangedEventArgs {
     pub fn Handled(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Handled)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -38333,7 +38519,7 @@ impl WindowVisibilityChangedEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetHandled)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -38343,10 +38529,10 @@ impl WindowVisibilityChangedEventArgs {
     pub fn Visible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).Visible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -38443,10 +38629,10 @@ impl XamlRoot {
     pub fn Content(&self) -> ::windows::core::Result<UIElement> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Content)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<UIElement>(result__)
         }
@@ -38455,10 +38641,10 @@ impl XamlRoot {
     pub fn Size(&self) -> ::windows::core::Result<::windows::Foundation::Size> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::Size = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::Foundation::Size>::zeroed();
             (::windows::core::Interface::vtable(this).Size)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Size>(result__)
         }
@@ -38467,10 +38653,10 @@ impl XamlRoot {
     pub fn RasterizationScale(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).RasterizationScale)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -38479,10 +38665,10 @@ impl XamlRoot {
     pub fn IsHostVisible(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsHostVisible)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -38500,11 +38686,12 @@ impl XamlRoot {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Changed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -38520,7 +38707,7 @@ impl XamlRoot {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveChanged)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()

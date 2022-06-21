@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
 #[repr(transparent)]
 pub struct CompositeTransform3D(::windows::core::IUnknown);
@@ -14,13 +7,13 @@ impl CompositeTransform3D {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             CompositeTransform3D,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -28,10 +21,10 @@ impl CompositeTransform3D {
     pub fn CenterX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).CenterX)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -41,7 +34,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCenterX)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -51,10 +44,10 @@ impl CompositeTransform3D {
     pub fn CenterY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).CenterY)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -64,7 +57,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCenterY)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -74,10 +67,10 @@ impl CompositeTransform3D {
     pub fn CenterZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).CenterZ)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -87,7 +80,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCenterZ)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -97,10 +90,10 @@ impl CompositeTransform3D {
     pub fn RotationX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).RotationX)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -110,7 +103,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRotationX)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -120,10 +113,10 @@ impl CompositeTransform3D {
     pub fn RotationY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).RotationY)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -133,7 +126,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRotationY)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -143,10 +136,10 @@ impl CompositeTransform3D {
     pub fn RotationZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).RotationZ)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -156,7 +149,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRotationZ)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -166,10 +159,10 @@ impl CompositeTransform3D {
     pub fn ScaleX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).ScaleX)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -179,7 +172,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetScaleX)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -189,10 +182,10 @@ impl CompositeTransform3D {
     pub fn ScaleY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).ScaleY)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -202,7 +195,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetScaleY)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -212,10 +205,10 @@ impl CompositeTransform3D {
     pub fn ScaleZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).ScaleZ)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -225,7 +218,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetScaleZ)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -235,10 +228,10 @@ impl CompositeTransform3D {
     pub fn TranslateX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).TranslateX)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -248,7 +241,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTranslateX)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -258,10 +251,10 @@ impl CompositeTransform3D {
     pub fn TranslateY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).TranslateY)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -271,7 +264,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTranslateY)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -281,10 +274,10 @@ impl CompositeTransform3D {
     pub fn TranslateZ(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).TranslateZ)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -294,7 +287,7 @@ impl CompositeTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetTranslateZ)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -303,10 +296,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn CenterXProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CenterXProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -314,10 +307,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn CenterYProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CenterYProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -325,10 +318,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn CenterZProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CenterZProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -336,10 +329,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RotationXProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RotationXProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -347,10 +340,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RotationYProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RotationYProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -358,10 +351,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn RotationZProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RotationZProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -369,10 +362,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ScaleXProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ScaleXProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -380,10 +373,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ScaleYProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ScaleYProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -391,10 +384,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn ScaleZProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).ScaleZProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -402,10 +395,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn TranslateXProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TranslateXProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -413,10 +406,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn TranslateYProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TranslateYProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -424,10 +417,10 @@ impl CompositeTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn TranslateZProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ICompositeTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).TranslateZProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -442,11 +435,11 @@ impl CompositeTransform3D {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -464,7 +457,7 @@ impl CompositeTransform3D {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -482,7 +475,7 @@ impl CompositeTransform3D {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -498,11 +491,11 @@ impl CompositeTransform3D {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -517,11 +510,11 @@ impl CompositeTransform3D {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -538,12 +531,12 @@ impl CompositeTransform3D {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -560,7 +553,7 @@ impl CompositeTransform3D {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -571,10 +564,10 @@ impl CompositeTransform3D {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -586,10 +579,10 @@ impl CompositeTransform3D {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -737,7 +730,7 @@ unsafe impl ::windows::core::Interface for ICompositeTransform3D {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositeTransform3D_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterX: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -846,7 +839,7 @@ unsafe impl ::windows::core::Interface for ICompositeTransform3DStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICompositeTransform3DStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CenterXProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -907,7 +900,7 @@ unsafe impl ::windows::core::Interface for IMatrix3DHelper {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMatrix3DHelper_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -920,7 +913,7 @@ unsafe impl ::windows::core::Interface for IMatrix3DHelperStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IMatrix3DHelperStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Identity: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut Matrix3D,
@@ -978,7 +971,7 @@ unsafe impl ::windows::core::Interface for IPerspectiveTransform3D {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPerspectiveTransform3D_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Depth: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut f64,
@@ -1015,7 +1008,7 @@ unsafe impl ::windows::core::Interface for IPerspectiveTransform3DStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPerspectiveTransform3DStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub DepthProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1040,7 +1033,7 @@ unsafe impl ::windows::core::Interface for ITransform3D {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransform3D_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1053,7 +1046,7 @@ unsafe impl ::windows::core::Interface for ITransform3DFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ITransform3DFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -1143,10 +1136,10 @@ impl Matrix3DHelper {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn Identity() -> ::windows::core::Result<Matrix3D> {
         Self::IMatrix3DHelperStatics(|this| unsafe {
-            let mut result__: Matrix3D = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Matrix3D>::zeroed();
             (::windows::core::Interface::vtable(this).Identity)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<Matrix3D>(result__)
         })
@@ -1161,12 +1154,12 @@ impl Matrix3DHelper {
         matrix2: Param1,
     ) -> ::windows::core::Result<Matrix3D> {
         Self::IMatrix3DHelperStatics(|this| unsafe {
-            let mut result__: Matrix3D = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Matrix3D>::zeroed();
             (::windows::core::Interface::vtable(this).Multiply)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 matrix1.into_param().abi(),
                 matrix2.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Matrix3D>(result__)
         })
@@ -1191,9 +1184,9 @@ impl Matrix3DHelper {
         m44: f64,
     ) -> ::windows::core::Result<Matrix3D> {
         Self::IMatrix3DHelperStatics(|this| unsafe {
-            let mut result__: Matrix3D = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Matrix3D>::zeroed();
             (::windows::core::Interface::vtable(this).FromElements)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 m11,
                 m12,
                 m13,
@@ -1210,7 +1203,7 @@ impl Matrix3DHelper {
                 offsety,
                 offsetz,
                 m44,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Matrix3D>(result__)
         })
@@ -1220,11 +1213,11 @@ impl Matrix3DHelper {
         target: Param0,
     ) -> ::windows::core::Result<bool> {
         Self::IMatrix3DHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).GetHasInverse)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -1234,11 +1227,11 @@ impl Matrix3DHelper {
         target: Param0,
     ) -> ::windows::core::Result<bool> {
         Self::IMatrix3DHelperStatics(|this| unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).GetIsIdentity)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         })
@@ -1248,11 +1241,11 @@ impl Matrix3DHelper {
         target: Param0,
     ) -> ::windows::core::Result<Matrix3D> {
         Self::IMatrix3DHelperStatics(|this| unsafe {
-            let mut result__: Matrix3D = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<Matrix3D>::zeroed();
             (::windows::core::Interface::vtable(this).Invert)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 target.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<Matrix3D>(result__)
         })
@@ -1350,13 +1343,13 @@ impl PerspectiveTransform3D {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             PerspectiveTransform3D,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -1370,11 +1363,11 @@ impl PerspectiveTransform3D {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1392,7 +1385,7 @@ impl PerspectiveTransform3D {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1410,7 +1403,7 @@ impl PerspectiveTransform3D {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1426,11 +1419,11 @@ impl PerspectiveTransform3D {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1445,11 +1438,11 @@ impl PerspectiveTransform3D {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1466,12 +1459,12 @@ impl PerspectiveTransform3D {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -1488,7 +1481,7 @@ impl PerspectiveTransform3D {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1499,10 +1492,10 @@ impl PerspectiveTransform3D {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -1514,10 +1507,10 @@ impl PerspectiveTransform3D {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -1526,10 +1519,10 @@ impl PerspectiveTransform3D {
     pub fn Depth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).Depth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1539,7 +1532,7 @@ impl PerspectiveTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDepth)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1549,10 +1542,10 @@ impl PerspectiveTransform3D {
     pub fn OffsetX(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).OffsetX)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1562,7 +1555,7 @@ impl PerspectiveTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetOffsetX)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1572,10 +1565,10 @@ impl PerspectiveTransform3D {
     pub fn OffsetY(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).OffsetY)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -1585,7 +1578,7 @@ impl PerspectiveTransform3D {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetOffsetY)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1594,10 +1587,10 @@ impl PerspectiveTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn DepthProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IPerspectiveTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DepthProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -1605,10 +1598,10 @@ impl PerspectiveTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn OffsetXProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IPerspectiveTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).OffsetXProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -1616,10 +1609,10 @@ impl PerspectiveTransform3D {
     #[doc = "*Required features: `\"UI_Xaml_Media_Media3D\"`*"]
     pub fn OffsetYProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IPerspectiveTransform3DStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).OffsetYProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -1772,11 +1765,11 @@ impl Transform3D {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1794,7 +1787,7 @@ impl Transform3D {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -1812,7 +1805,7 @@ impl Transform3D {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1828,11 +1821,11 @@ impl Transform3D {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1847,11 +1840,11 @@ impl Transform3D {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1868,12 +1861,12 @@ impl Transform3D {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -1890,7 +1883,7 @@ impl Transform3D {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1901,10 +1894,10 @@ impl Transform3D {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -1916,10 +1909,10 @@ impl Transform3D {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }

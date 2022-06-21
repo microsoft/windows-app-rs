@@ -19,7 +19,7 @@ features = [
 ]
 
 [dependencies.windows]
-version = "0.35.0"
+version = "0.37"
 
 [dependencies.windows-app]
 git = "https://github.com/microsoft/windows-app-rs"
@@ -34,6 +34,12 @@ Add a build script (`build.rs`) to your crate to deploy the [Windows App SDK Boo
 ```rust
 fn main() {
     ::windows_app::bootstrap::deploy::to_output_dir();
+    
+    // Temporary workaround for https://github.com/microsoft/WindowsAppSDK/issues/2634
+    ::windows_app::build::embed_manifest(
+        r#"<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+           <assembly manifestVersion="1.0" xmlns="urn:schemas-microsoft-com:asm.v1" />"#,
+    )
 }
 ```
 
@@ -53,7 +59,7 @@ fn main() -> ::windows::core::Result<()> {
 
 Finally, install the [Windows App Runtime](https://docs.microsoft.com/windows/apps/windows-app-sdk/deploy-unpackaged-apps?WT.mc_id=WD-MVP-5002756) on all target machines:
 
-1. Download the [Windows App Runtime Redistributable](https://aka.ms/windowsappsdk/1.0-stable/msix-installer) package.
+1. Download the [Windows App Runtime Redistributable](https://aka.ms/windowsappsdk/1.1/1.1.1/windowsappruntimeredist-1.1.1.zip) package.
 2. Execute `WindowsAppSDK-Installer-{arch}\WindowsAppRuntimeInstall.exe`.
 
 After you install the Windows App Runtime, it will be kept up-to-date by Microsoft via Windows Update.

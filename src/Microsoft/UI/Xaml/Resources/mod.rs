@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Xaml_Resources\"`*"]
 #[repr(transparent)]
 pub struct CustomXamlResourceLoader(::windows::core::IUnknown);
@@ -12,12 +5,12 @@ impl CustomXamlResourceLoader {
     #[doc = "*Required features: `\"UI_Xaml_Resources\"`*"]
     pub fn new() -> ::windows::core::Result<CustomXamlResourceLoader> {
         Self::ICustomXamlResourceLoaderFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CustomXamlResourceLoader>(result__)
         })
@@ -28,12 +21,12 @@ impl CustomXamlResourceLoader {
     ) -> ::windows::core::Result<CustomXamlResourceLoader> {
         Self::ICustomXamlResourceLoaderFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<CustomXamlResourceLoader>(result__)
         })
@@ -41,10 +34,10 @@ impl CustomXamlResourceLoader {
     #[doc = "*Required features: `\"UI_Xaml_Resources\"`*"]
     pub fn Current() -> ::windows::core::Result<CustomXamlResourceLoader> {
         Self::ICustomXamlResourceLoaderStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Current)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<CustomXamlResourceLoader>(result__)
         })
@@ -55,7 +48,7 @@ impl CustomXamlResourceLoader {
     ) -> ::windows::core::Result<()> {
         Self::ICustomXamlResourceLoaderStatics(|this| unsafe {
             (::windows::core::Interface::vtable(this).SetCurrent)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -180,7 +173,7 @@ unsafe impl ::windows::core::Interface for ICustomXamlResourceLoader {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICustomXamlResourceLoader_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -193,7 +186,7 @@ unsafe impl ::windows::core::Interface for ICustomXamlResourceLoaderFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICustomXamlResourceLoaderFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -212,7 +205,7 @@ unsafe impl ::windows::core::Interface for ICustomXamlResourceLoaderOverrides {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICustomXamlResourceLoaderOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub GetResource: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         resourceid: ::core::mem::ManuallyDrop<::windows::core::HSTRING>,
@@ -233,7 +226,7 @@ unsafe impl ::windows::core::Interface for ICustomXamlResourceLoaderStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ICustomXamlResourceLoaderStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Current: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,

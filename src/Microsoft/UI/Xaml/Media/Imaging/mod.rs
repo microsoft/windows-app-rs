@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
@@ -78,13 +71,13 @@ impl BitmapImage {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             BitmapImage,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -92,10 +85,10 @@ impl BitmapImage {
     pub fn CreateOptions(&self) -> ::windows::core::Result<BitmapCreateOptions> {
         let this = self;
         unsafe {
-            let mut result__: BitmapCreateOptions = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<BitmapCreateOptions>::zeroed();
             (::windows::core::Interface::vtable(this).CreateOptions)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<BitmapCreateOptions>(result__)
         }
@@ -105,7 +98,7 @@ impl BitmapImage {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetCreateOptions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -115,10 +108,10 @@ impl BitmapImage {
     pub fn UriSource(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).UriSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
@@ -131,7 +124,7 @@ impl BitmapImage {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetUriSource)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -141,10 +134,10 @@ impl BitmapImage {
     pub fn DecodePixelWidth(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).DecodePixelWidth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -154,7 +147,7 @@ impl BitmapImage {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDecodePixelWidth)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -164,10 +157,10 @@ impl BitmapImage {
     pub fn DecodePixelHeight(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).DecodePixelHeight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -177,7 +170,7 @@ impl BitmapImage {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDecodePixelHeight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -187,10 +180,10 @@ impl BitmapImage {
     pub fn DecodePixelType(&self) -> ::windows::core::Result<DecodePixelType> {
         let this = self;
         unsafe {
-            let mut result__: DecodePixelType = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<DecodePixelType>::zeroed();
             (::windows::core::Interface::vtable(this).DecodePixelType)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<DecodePixelType>(result__)
         }
@@ -200,7 +193,7 @@ impl BitmapImage {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetDecodePixelType)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -210,10 +203,10 @@ impl BitmapImage {
     pub fn IsAnimatedBitmap(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsAnimatedBitmap)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -222,10 +215,10 @@ impl BitmapImage {
     pub fn IsPlaying(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).IsPlaying)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -234,10 +227,10 @@ impl BitmapImage {
     pub fn AutoPlay(&self) -> ::windows::core::Result<bool> {
         let this = self;
         unsafe {
-            let mut result__: bool = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<bool>::zeroed();
             (::windows::core::Interface::vtable(this).AutoPlay)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<bool>(result__)
         }
@@ -247,7 +240,7 @@ impl BitmapImage {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetAutoPlay)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -263,11 +256,12 @@ impl BitmapImage {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).DownloadProgress)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -283,7 +277,7 @@ impl BitmapImage {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveDownloadProgress)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -299,11 +293,12 @@ impl BitmapImage {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ImageOpened)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -319,7 +314,7 @@ impl BitmapImage {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveImageOpened)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -335,11 +330,12 @@ impl BitmapImage {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).ImageFailed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -355,7 +351,7 @@ impl BitmapImage {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveImageFailed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -365,14 +361,20 @@ impl BitmapImage {
     pub fn Play(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Play)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Play)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn Stop(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Stop)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Stop)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
@@ -383,11 +385,11 @@ impl BitmapImage {
         urisource: Param0,
     ) -> ::windows::core::Result<BitmapImage> {
         Self::IBitmapImageFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithUriSource)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 urisource.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<BitmapImage>(result__)
         })
@@ -395,10 +397,10 @@ impl BitmapImage {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn CreateOptionsProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IBitmapImageStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateOptionsProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -406,10 +408,10 @@ impl BitmapImage {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn UriSourceProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IBitmapImageStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).UriSourceProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -417,10 +419,10 @@ impl BitmapImage {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn DecodePixelWidthProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IBitmapImageStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DecodePixelWidthProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -429,10 +431,10 @@ impl BitmapImage {
     pub fn DecodePixelHeightProperty() -> ::windows::core::Result<super::super::DependencyProperty>
     {
         Self::IBitmapImageStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DecodePixelHeightProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -440,10 +442,10 @@ impl BitmapImage {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn DecodePixelTypeProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IBitmapImageStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DecodePixelTypeProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -451,10 +453,10 @@ impl BitmapImage {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn IsAnimatedBitmapProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IBitmapImageStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).IsAnimatedBitmapProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -462,10 +464,10 @@ impl BitmapImage {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn IsPlayingProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IBitmapImageStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).IsPlayingProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -473,10 +475,10 @@ impl BitmapImage {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn AutoPlayProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IBitmapImageStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).AutoPlayProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -485,10 +487,10 @@ impl BitmapImage {
     pub fn PixelWidth(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<IBitmapSource>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).PixelWidth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -497,10 +499,10 @@ impl BitmapImage {
     pub fn PixelHeight(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<IBitmapSource>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).PixelHeight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -516,7 +518,7 @@ impl BitmapImage {
         let this = &::windows::core::Interface::cast::<IBitmapSource>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSource)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 streamsource.into_param().abi(),
             )
             .ok()
@@ -532,11 +534,11 @@ impl BitmapImage {
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncAction> {
         let this = &::windows::core::Interface::cast::<IBitmapSource>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).SetSourceAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 streamsource.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
         }
@@ -551,11 +553,11 @@ impl BitmapImage {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -573,7 +575,7 @@ impl BitmapImage {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -591,7 +593,7 @@ impl BitmapImage {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -607,11 +609,11 @@ impl BitmapImage {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -626,11 +628,11 @@ impl BitmapImage {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -647,12 +649,12 @@ impl BitmapImage {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -669,7 +671,7 @@ impl BitmapImage {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -680,10 +682,10 @@ impl BitmapImage {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -695,10 +697,10 @@ impl BitmapImage {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -864,10 +866,10 @@ impl BitmapSource {
     pub fn PixelWidth(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).PixelWidth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -876,10 +878,10 @@ impl BitmapSource {
     pub fn PixelHeight(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).PixelHeight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -895,7 +897,7 @@ impl BitmapSource {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSource)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 streamsource.into_param().abi(),
             )
             .ok()
@@ -911,11 +913,11 @@ impl BitmapSource {
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncAction> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).SetSourceAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 streamsource.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
         }
@@ -923,10 +925,10 @@ impl BitmapSource {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn PixelWidthProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IBitmapSourceStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PixelWidthProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -934,10 +936,10 @@ impl BitmapSource {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn PixelHeightProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IBitmapSourceStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PixelHeightProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -952,11 +954,11 @@ impl BitmapSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -974,7 +976,7 @@ impl BitmapSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -992,7 +994,7 @@ impl BitmapSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -1008,11 +1010,11 @@ impl BitmapSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1027,11 +1029,11 @@ impl BitmapSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -1048,12 +1050,12 @@ impl BitmapSource {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -1070,7 +1072,7 @@ impl BitmapSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -1081,10 +1083,10 @@ impl BitmapSource {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -1096,10 +1098,10 @@ impl BitmapSource {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -1276,10 +1278,10 @@ impl DownloadProgressEventArgs {
     pub fn Progress(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).Progress)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -1289,7 +1291,7 @@ impl DownloadProgressEventArgs {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetProgress)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -1411,7 +1413,7 @@ impl DownloadProgressEventHandler {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).Invoke)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 sender.into_param().abi(),
                 e.into_param().abi(),
             )
@@ -1442,7 +1444,7 @@ impl<
     > DownloadProgressEventHandlerBox<F>
 {
     const VTABLE: DownloadProgressEventHandler_Vtbl = DownloadProgressEventHandler_Vtbl {
-        base: ::windows::core::IUnknownVtbl {
+        base__: ::windows::core::IUnknownVtbl {
             QueryInterface: Self::QueryInterface,
             AddRef: Self::AddRef,
             Release: Self::Release,
@@ -1452,7 +1454,7 @@ impl<
     unsafe extern "system" fn QueryInterface(
         this: ::windows::core::RawPtr,
         iid: &::windows::core::GUID,
-        interface: *mut ::windows::core::RawPtr,
+        interface: *mut *const ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT {
         let this = this as *mut ::windows::core::RawPtr as *mut Self;
         *interface = if iid == &<DownloadProgressEventHandler as ::windows::core::Interface>::IID
@@ -1525,7 +1527,7 @@ unsafe impl ::windows::core::RuntimeType for DownloadProgressEventHandler {
 #[repr(C)]
 #[doc(hidden)]
 pub struct DownloadProgressEventHandler_Vtbl {
-    pub base: ::windows::core::IUnknownVtbl,
+    pub base__: ::windows::core::IUnknownVtbl,
     pub Invoke: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         sender: *mut ::core::ffi::c_void,
@@ -1543,7 +1545,7 @@ unsafe impl ::windows::core::Interface for IBitmapImage {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapImage_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateOptions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut BitmapCreateOptions,
@@ -1641,7 +1643,7 @@ unsafe impl ::windows::core::Interface for IBitmapImageFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapImageFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithUriSource: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         urisource: ::windows::core::RawPtr,
@@ -1659,7 +1661,7 @@ unsafe impl ::windows::core::Interface for IBitmapImageStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapImageStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateOptionsProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1704,7 +1706,7 @@ unsafe impl ::windows::core::Interface for IBitmapSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PixelWidth: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1734,7 +1736,7 @@ unsafe impl ::windows::core::Interface for IBitmapSourceFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapSourceFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -1753,7 +1755,7 @@ unsafe impl ::windows::core::Interface for IBitmapSourceStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IBitmapSourceStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PixelWidthProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1774,7 +1776,7 @@ unsafe impl ::windows::core::Interface for IDownloadProgressEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDownloadProgressEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Progress: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1795,7 +1797,7 @@ unsafe impl ::windows::core::Interface for IRenderTargetBitmap {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRenderTargetBitmap_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PixelWidth: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut i32,
@@ -1832,7 +1834,7 @@ unsafe impl ::windows::core::Interface for IRenderTargetBitmapStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IRenderTargetBitmapStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PixelWidthProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1853,7 +1855,7 @@ unsafe impl ::windows::core::Interface for ISoftwareBitmapSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISoftwareBitmapSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub SetBitmapAsync: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         softwarebitmap: ::windows::core::RawPtr,
@@ -1871,7 +1873,7 @@ unsafe impl ::windows::core::Interface for ISurfaceImageSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISurfaceImageSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -1884,7 +1886,7 @@ unsafe impl ::windows::core::Interface for ISurfaceImageSourceFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISurfaceImageSourceFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithDimensions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         pixelwidth: i32,
@@ -1915,7 +1917,7 @@ unsafe impl ::windows::core::Interface for ISvgImageSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISvgImageSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub UriSource: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -1975,7 +1977,7 @@ unsafe impl ::windows::core::Interface for ISvgImageSourceFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISvgImageSourceFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -2001,7 +2003,7 @@ unsafe impl ::windows::core::Interface for ISvgImageSourceFailedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISvgImageSourceFailedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub Status: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut SvgImageSourceLoadStatus,
@@ -2018,7 +2020,7 @@ unsafe impl ::windows::core::Interface for ISvgImageSourceOpenedEventArgs {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISvgImageSourceOpenedEventArgs_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2031,7 +2033,7 @@ unsafe impl ::windows::core::Interface for ISvgImageSourceStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct ISvgImageSourceStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub UriSourceProperty: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2056,7 +2058,7 @@ unsafe impl ::windows::core::Interface for IVirtualSurfaceImageSource {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVirtualSurfaceImageSource_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2069,7 +2071,7 @@ unsafe impl ::windows::core::Interface for IVirtualSurfaceImageSourceFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IVirtualSurfaceImageSourceFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithDimensions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         pixelwidth: i32,
@@ -2096,7 +2098,7 @@ unsafe impl ::windows::core::Interface for IWriteableBitmap {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWriteableBitmap_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub PixelBuffer: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         result__: *mut ::windows::core::RawPtr,
@@ -2115,7 +2117,7 @@ unsafe impl ::windows::core::Interface for IWriteableBitmapFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IWriteableBitmapFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstanceWithDimensions: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         pixelwidth: i32,
@@ -2134,7 +2136,7 @@ unsafe impl ::windows::core::Interface for IXamlRenderingBackgroundTask {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlRenderingBackgroundTask_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
 }
 #[doc(hidden)]
 #[repr(transparent)]
@@ -2147,7 +2149,7 @@ unsafe impl ::windows::core::Interface for IXamlRenderingBackgroundTaskFactory {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlRenderingBackgroundTaskFactory_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub CreateInstance: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         baseinterface: *mut ::core::ffi::c_void,
@@ -2166,7 +2168,7 @@ unsafe impl ::windows::core::Interface for IXamlRenderingBackgroundTaskOverrides
 #[repr(C)]
 #[doc(hidden)]
 pub struct IXamlRenderingBackgroundTaskOverrides_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub OnRun: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         taskinstance: ::windows::core::RawPtr,
@@ -2181,13 +2183,13 @@ impl RenderTargetBitmap {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             RenderTargetBitmap,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -2201,11 +2203,11 @@ impl RenderTargetBitmap {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -2223,7 +2225,7 @@ impl RenderTargetBitmap {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -2241,7 +2243,7 @@ impl RenderTargetBitmap {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -2257,11 +2259,11 @@ impl RenderTargetBitmap {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -2276,11 +2278,11 @@ impl RenderTargetBitmap {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -2297,12 +2299,12 @@ impl RenderTargetBitmap {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -2319,7 +2321,7 @@ impl RenderTargetBitmap {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -2330,10 +2332,10 @@ impl RenderTargetBitmap {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -2345,10 +2347,10 @@ impl RenderTargetBitmap {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -2357,10 +2359,10 @@ impl RenderTargetBitmap {
     pub fn PixelWidth(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).PixelWidth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2369,10 +2371,10 @@ impl RenderTargetBitmap {
     pub fn PixelHeight(&self) -> ::windows::core::Result<i32> {
         let this = self;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).PixelHeight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -2384,11 +2386,11 @@ impl RenderTargetBitmap {
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncAction> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RenderAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
         }
@@ -2405,13 +2407,13 @@ impl RenderTargetBitmap {
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncAction> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RenderToSizeAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 element.into_param().abi(),
                 scaledwidth,
                 scaledheight,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
         }
@@ -2424,10 +2426,10 @@ impl RenderTargetBitmap {
     > {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).GetPixelsAsync)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<
                 ::windows::Storage::Streams::IBuffer,
@@ -2437,10 +2439,10 @@ impl RenderTargetBitmap {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn PixelWidthProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IRenderTargetBitmapStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PixelWidthProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -2448,10 +2450,10 @@ impl RenderTargetBitmap {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn PixelHeightProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::IRenderTargetBitmapStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PixelHeightProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -2593,13 +2595,13 @@ impl SoftwareBitmapSource {
     }
     fn IActivationFactory<
         R,
-        F: FnOnce(&::windows::core::IActivationFactory) -> ::windows::core::Result<R>,
+        F: FnOnce(&::windows::core::IGenericFactory) -> ::windows::core::Result<R>,
     >(
         callback: F,
     ) -> ::windows::core::Result<R> {
         static mut SHARED: ::windows::core::FactoryCache<
             SoftwareBitmapSource,
-            ::windows::core::IActivationFactory,
+            ::windows::core::IGenericFactory,
         > = ::windows::core::FactoryCache::new();
         unsafe { SHARED.call(callback) }
     }
@@ -2607,7 +2609,10 @@ impl SoftwareBitmapSource {
     pub fn Close(&self) -> ::windows::core::Result<()> {
         let this = &::windows::core::Interface::cast::<::windows::Foundation::IClosable>(self)?;
         unsafe {
-            (::windows::core::Interface::vtable(this).Close)(::core::mem::transmute_copy(this)).ok()
+            (::windows::core::Interface::vtable(this).Close)(::windows::core::Interface::as_raw(
+                this,
+            ))
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
@@ -2620,11 +2625,11 @@ impl SoftwareBitmapSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -2642,7 +2647,7 @@ impl SoftwareBitmapSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -2660,7 +2665,7 @@ impl SoftwareBitmapSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -2676,11 +2681,11 @@ impl SoftwareBitmapSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -2695,11 +2700,11 @@ impl SoftwareBitmapSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -2716,12 +2721,12 @@ impl SoftwareBitmapSource {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -2738,7 +2743,7 @@ impl SoftwareBitmapSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -2749,10 +2754,10 @@ impl SoftwareBitmapSource {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -2764,10 +2769,10 @@ impl SoftwareBitmapSource {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -2782,11 +2787,11 @@ impl SoftwareBitmapSource {
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncAction> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).SetBitmapAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 softwarebitmap.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
         }
@@ -2950,11 +2955,11 @@ impl SurfaceImageSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -2972,7 +2977,7 @@ impl SurfaceImageSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -2990,7 +2995,7 @@ impl SurfaceImageSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -3006,11 +3011,11 @@ impl SurfaceImageSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -3025,11 +3030,11 @@ impl SurfaceImageSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -3046,12 +3051,12 @@ impl SurfaceImageSource {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -3068,7 +3073,7 @@ impl SurfaceImageSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -3079,10 +3084,10 @@ impl SurfaceImageSource {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -3094,10 +3099,10 @@ impl SurfaceImageSource {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -3108,14 +3113,14 @@ impl SurfaceImageSource {
         pixelheight: i32,
     ) -> ::windows::core::Result<SurfaceImageSource> {
         Self::ISurfaceImageSourceFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithDimensions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pixelwidth,
                 pixelheight,
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<SurfaceImageSource>(result__)
         })
@@ -3128,14 +3133,14 @@ impl SurfaceImageSource {
     ) -> ::windows::core::Result<SurfaceImageSource> {
         Self::ISurfaceImageSourceFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithDimensions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pixelwidth,
                 pixelheight,
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<SurfaceImageSource>(result__)
         })
@@ -3147,15 +3152,15 @@ impl SurfaceImageSource {
         isopaque: bool,
     ) -> ::windows::core::Result<SurfaceImageSource> {
         Self::ISurfaceImageSourceFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithDimensionsAndOpacity)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pixelwidth,
                 pixelheight,
                 isopaque,
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<SurfaceImageSource>(result__)
         })
@@ -3169,15 +3174,15 @@ impl SurfaceImageSource {
     ) -> ::windows::core::Result<SurfaceImageSource> {
         Self::ISurfaceImageSourceFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithDimensionsAndOpacity)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pixelwidth,
                 pixelheight,
                 isopaque,
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<SurfaceImageSource>(result__)
         })
@@ -3324,11 +3329,11 @@ impl SvgImageSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -3346,7 +3351,7 @@ impl SvgImageSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -3364,7 +3369,7 @@ impl SvgImageSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -3380,11 +3385,11 @@ impl SvgImageSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -3399,11 +3404,11 @@ impl SvgImageSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -3420,12 +3425,12 @@ impl SvgImageSource {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -3442,7 +3447,7 @@ impl SvgImageSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -3453,10 +3458,10 @@ impl SvgImageSource {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -3468,10 +3473,10 @@ impl SvgImageSource {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -3480,10 +3485,10 @@ impl SvgImageSource {
     pub fn UriSource(&self) -> ::windows::core::Result<::windows::Foundation::Uri> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).UriSource)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::Uri>(result__)
         }
@@ -3496,7 +3501,7 @@ impl SvgImageSource {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetUriSource)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value.into_param().abi(),
             )
             .ok()
@@ -3506,10 +3511,10 @@ impl SvgImageSource {
     pub fn RasterizePixelWidth(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).RasterizePixelWidth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -3519,7 +3524,7 @@ impl SvgImageSource {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRasterizePixelWidth)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3529,10 +3534,10 @@ impl SvgImageSource {
     pub fn RasterizePixelHeight(&self) -> ::windows::core::Result<f64> {
         let this = self;
         unsafe {
-            let mut result__: f64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<f64>::zeroed();
             (::windows::core::Interface::vtable(this).RasterizePixelHeight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<f64>(result__)
         }
@@ -3542,7 +3547,7 @@ impl SvgImageSource {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).SetRasterizePixelHeight)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 value,
             )
             .ok()
@@ -3561,11 +3566,12 @@ impl SvgImageSource {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).Opened)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -3581,7 +3587,7 @@ impl SvgImageSource {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveOpened)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3600,11 +3606,12 @@ impl SvgImageSource {
     ) -> ::windows::core::Result<::windows::Foundation::EventRegistrationToken> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::Foundation::EventRegistrationToken = ::core::mem::zeroed();
+            let mut result__ =
+                ::core::mem::MaybeUninit::<::windows::Foundation::EventRegistrationToken>::zeroed();
             (::windows::core::Interface::vtable(this).OpenFailed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 handler.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::EventRegistrationToken>(result__)
         }
@@ -3620,7 +3627,7 @@ impl SvgImageSource {
         let this = self;
         unsafe {
             (::windows::core::Interface::vtable(this).RemoveOpenFailed)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 token.into_param().abi(),
             )
             .ok()
@@ -3637,11 +3644,11 @@ impl SvgImageSource {
     {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).SetSourceAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 streamsource.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncOperation<SvgImageSourceLoadStatus>>(result__)
         }
@@ -3649,12 +3656,12 @@ impl SvgImageSource {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn new() -> ::windows::core::Result<SvgImageSource> {
         Self::ISvgImageSourceFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<SvgImageSource>(result__)
         })
@@ -3665,12 +3672,12 @@ impl SvgImageSource {
     ) -> ::windows::core::Result<SvgImageSource> {
         Self::ISvgImageSourceFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstance)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<SvgImageSource>(result__)
         })
@@ -3683,13 +3690,13 @@ impl SvgImageSource {
         urisource: Param0,
     ) -> ::windows::core::Result<SvgImageSource> {
         Self::ISvgImageSourceFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithUriSource)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 urisource.into_param().abi(),
                 ::core::ptr::null_mut(),
                 &mut ::core::option::Option::<::windows::core::IInspectable>::None as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<SvgImageSource>(result__)
         })
@@ -3705,13 +3712,13 @@ impl SvgImageSource {
     ) -> ::windows::core::Result<SvgImageSource> {
         Self::ISvgImageSourceFactory(|this| unsafe {
             let (derived__, base__) = ::windows::core::Compose::compose(compose);
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithUriSource)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 urisource.into_param().abi(),
                 ::core::mem::transmute_copy(&derived__),
                 base__ as *mut _ as _,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<SvgImageSource>(result__)
         })
@@ -3719,10 +3726,10 @@ impl SvgImageSource {
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
     pub fn UriSourceProperty() -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ISvgImageSourceStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).UriSourceProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -3731,10 +3738,10 @@ impl SvgImageSource {
     pub fn RasterizePixelWidthProperty() -> ::windows::core::Result<super::super::DependencyProperty>
     {
         Self::ISvgImageSourceStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RasterizePixelWidthProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -3743,10 +3750,10 @@ impl SvgImageSource {
     pub fn RasterizePixelHeightProperty(
     ) -> ::windows::core::Result<super::super::DependencyProperty> {
         Self::ISvgImageSourceStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).RasterizePixelHeightProperty)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::DependencyProperty>(result__)
         })
@@ -3896,10 +3903,10 @@ impl SvgImageSourceFailedEventArgs {
     pub fn Status(&self) -> ::windows::core::Result<SvgImageSourceLoadStatus> {
         let this = self;
         unsafe {
-            let mut result__: SvgImageSourceLoadStatus = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<SvgImageSourceLoadStatus>::zeroed();
             (::windows::core::Interface::vtable(this).Status)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<SvgImageSourceLoadStatus>(result__)
         }
@@ -4129,11 +4136,11 @@ impl VirtualSurfaceImageSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4151,7 +4158,7 @@ impl VirtualSurfaceImageSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -4169,7 +4176,7 @@ impl VirtualSurfaceImageSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -4185,11 +4192,11 @@ impl VirtualSurfaceImageSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4204,11 +4211,11 @@ impl VirtualSurfaceImageSource {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4225,12 +4232,12 @@ impl VirtualSurfaceImageSource {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -4247,7 +4254,7 @@ impl VirtualSurfaceImageSource {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -4258,10 +4265,10 @@ impl VirtualSurfaceImageSource {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -4273,10 +4280,10 @@ impl VirtualSurfaceImageSource {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -4287,12 +4294,12 @@ impl VirtualSurfaceImageSource {
         pixelheight: i32,
     ) -> ::windows::core::Result<VirtualSurfaceImageSource> {
         Self::IVirtualSurfaceImageSourceFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithDimensions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pixelwidth,
                 pixelheight,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<VirtualSurfaceImageSource>(result__)
         })
@@ -4304,13 +4311,13 @@ impl VirtualSurfaceImageSource {
         isopaque: bool,
     ) -> ::windows::core::Result<VirtualSurfaceImageSource> {
         Self::IVirtualSurfaceImageSourceFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithDimensionsAndOpacity)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pixelwidth,
                 pixelheight,
                 isopaque,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<VirtualSurfaceImageSource>(result__)
         })
@@ -4484,10 +4491,10 @@ impl WriteableBitmap {
     pub fn PixelWidth(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<IBitmapSource>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).PixelWidth)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4496,10 +4503,10 @@ impl WriteableBitmap {
     pub fn PixelHeight(&self) -> ::windows::core::Result<i32> {
         let this = &::windows::core::Interface::cast::<IBitmapSource>(self)?;
         unsafe {
-            let mut result__: i32 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i32>::zeroed();
             (::windows::core::Interface::vtable(this).PixelHeight)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<i32>(result__)
         }
@@ -4515,7 +4522,7 @@ impl WriteableBitmap {
         let this = &::windows::core::Interface::cast::<IBitmapSource>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetSource)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 streamsource.into_param().abi(),
             )
             .ok()
@@ -4531,11 +4538,11 @@ impl WriteableBitmap {
     ) -> ::windows::core::Result<::windows::Foundation::IAsyncAction> {
         let this = &::windows::core::Interface::cast::<IBitmapSource>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).SetSourceAsync)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 streamsource.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Foundation::IAsyncAction>(result__)
         }
@@ -4550,11 +4557,11 @@ impl WriteableBitmap {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4572,7 +4579,7 @@ impl WriteableBitmap {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).SetValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 value.into_param().abi(),
             )
@@ -4590,7 +4597,7 @@ impl WriteableBitmap {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).ClearValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
             )
             .ok()
@@ -4606,11 +4613,11 @@ impl WriteableBitmap {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).ReadLocalValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4625,11 +4632,11 @@ impl WriteableBitmap {
     ) -> ::windows::core::Result<::windows::core::IInspectable> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: *mut ::core::ffi::c_void = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
             (::windows::core::Interface::vtable(this).GetAnimationBaseValue)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::core::IInspectable>(result__)
         }
@@ -4646,12 +4653,12 @@ impl WriteableBitmap {
     ) -> ::windows::core::Result<i64> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: i64 = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<i64>::zeroed();
             (::windows::core::Interface::vtable(this).RegisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 callback.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<i64>(result__)
         }
@@ -4668,7 +4675,7 @@ impl WriteableBitmap {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
             (::windows::core::Interface::vtable(this).UnregisterPropertyChangedCallback)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 dp.into_param().abi(),
                 token,
             )
@@ -4679,10 +4686,10 @@ impl WriteableBitmap {
     pub fn Dispatcher(&self) -> ::windows::core::Result<::windows::UI::Core::CoreDispatcher> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).Dispatcher)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::UI::Core::CoreDispatcher>(result__)
         }
@@ -4694,10 +4701,10 @@ impl WriteableBitmap {
     ) -> ::windows::core::Result<super::super::super::Dispatching::DispatcherQueue> {
         let this = &::windows::core::Interface::cast::<super::super::IDependencyObject>(self)?;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).DispatcherQueue)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<super::super::super::Dispatching::DispatcherQueue>(result__)
         }
@@ -4706,10 +4713,10 @@ impl WriteableBitmap {
     pub fn PixelBuffer(&self) -> ::windows::core::Result<::windows::Storage::Streams::IBuffer> {
         let this = self;
         unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).PixelBuffer)(
-                ::core::mem::transmute_copy(this),
-                &mut result__,
+                ::windows::core::Interface::as_raw(this),
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Storage::Streams::IBuffer>(result__)
         }
@@ -4718,8 +4725,10 @@ impl WriteableBitmap {
     pub fn Invalidate(&self) -> ::windows::core::Result<()> {
         let this = self;
         unsafe {
-            (::windows::core::Interface::vtable(this).Invalidate)(::core::mem::transmute_copy(this))
-                .ok()
+            (::windows::core::Interface::vtable(this).Invalidate)(
+                ::windows::core::Interface::as_raw(this),
+            )
+            .ok()
         }
     }
     #[doc = "*Required features: `\"UI_Xaml_Media_Imaging\"`*"]
@@ -4728,12 +4737,12 @@ impl WriteableBitmap {
         pixelheight: i32,
     ) -> ::windows::core::Result<WriteableBitmap> {
         Self::IWriteableBitmapFactory(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).CreateInstanceWithDimensions)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pixelwidth,
                 pixelheight,
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<WriteableBitmap>(result__)
         })

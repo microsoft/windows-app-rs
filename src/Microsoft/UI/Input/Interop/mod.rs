@@ -1,10 +1,3 @@
-#![allow(
-    non_snake_case,
-    non_camel_case_types,
-    non_upper_case_globals,
-    clashing_extern_declarations,
-    clippy::all
-)]
 #[doc(hidden)]
 #[repr(transparent)]
 pub struct IPenDeviceInteropStatics(::windows::core::IUnknown);
@@ -16,7 +9,7 @@ unsafe impl ::windows::core::Interface for IPenDeviceInteropStatics {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IPenDeviceInteropStatics_Vtbl {
-    pub base: ::windows::core::IInspectableVtbl,
+    pub base__: ::windows::core::IInspectableVtbl,
     pub FromPointerPoint: unsafe extern "system" fn(
         this: *mut ::core::ffi::c_void,
         pointerpoint: ::windows::core::RawPtr,
@@ -31,11 +24,11 @@ impl PenDeviceInterop {
         pointerpoint: Param0,
     ) -> ::windows::core::Result<::windows::Devices::Input::PenDevice> {
         Self::IPenDeviceInteropStatics(|this| unsafe {
-            let mut result__: ::windows::core::RawPtr = ::core::mem::zeroed();
+            let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
             (::windows::core::Interface::vtable(this).FromPointerPoint)(
-                ::core::mem::transmute_copy(this),
+                ::windows::core::Interface::as_raw(this),
                 pointerpoint.into_param().abi(),
-                &mut result__,
+                result__.as_mut_ptr(),
             )
             .from_abi::<::windows::Devices::Input::PenDevice>(result__)
         })

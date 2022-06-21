@@ -8,28 +8,28 @@ use windows::Win32::Storage::Packaging::Appx::{
 };
 
 #[allow(clippy::identity_op)]
-/// Locates the Windows App SDK framework package compatible with the (currently internal)
-/// versioning criteria and loads it into the current process.
+/// Locates the Windows App SDK framework package compatible with the
+/// metadata-matched versioning criteria and loads it into the current process.
 ///
 /// If multiple packages meet the criteria, the best candidate is selected.
 pub fn initialize() -> windows::core::Result<()> {
-    let mdd_version = (1 << 16) | 0_u32;
     let min_framework_version = PACKAGE_VERSION {
         Anonymous: PACKAGE_VERSION_0 {
             Anonymous: PACKAGE_VERSION_0_0 {
                 Revision: 0,
-                Build: 1654,
-                Minor: 469,
-                Major: 3,
+                Build: 1918,
+                Minor: 524,
+                Major: 1001,
             },
         },
     };
 
     unsafe {
-        MddBootstrapInitialize(
-            mdd_version,
-            windows::core::PCWSTR::default(),
+        MddBootstrapInitialize2(
+            0x00010001,
+            WINDOWSAPPSDK_RELEASE_VERSION_TAG_W,
             min_framework_version,
+            MddBootstrapInitializeOptions_OnNoMatch_ShowUI,
         )
     }
 }

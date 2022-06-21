@@ -15,23 +15,23 @@ impl ::windows::core::RuntimeName for IFlyoutBaseOverrides {
 #[cfg(feature = "UI_Xaml_Input")]
 impl IFlyoutBaseOverrides_Vtbl {
     pub const fn new<
-        Identity: ::windows::core::IUnknownImpl,
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
         Impl: IFlyoutBaseOverrides_Impl,
         const OFFSET: isize,
     >() -> IFlyoutBaseOverrides_Vtbl {
         unsafe extern "system" fn CreatePresenter<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IFlyoutBaseOverrides_Impl,
             const OFFSET: isize,
         >(
             this: *mut ::core::ffi::c_void,
             result__: *mut ::windows::core::RawPtr,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            match (*this).CreatePresenter() {
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            match this.CreatePresenter() {
                 ::core::result::Result::Ok(ok__) => {
-                    *result__ = ::core::mem::transmute_copy(&ok__);
+                    ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows::core::HRESULT(0)
                 }
@@ -39,21 +39,20 @@ impl IFlyoutBaseOverrides_Vtbl {
             }
         }
         unsafe extern "system" fn OnProcessKeyboardAccelerators<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IFlyoutBaseOverrides_Impl,
             const OFFSET: isize,
         >(
             this: *mut ::core::ffi::c_void,
             args: ::windows::core::RawPtr,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            (*this)
-                .OnProcessKeyboardAccelerators(::core::mem::transmute(&args))
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            this.OnProcessKeyboardAccelerators(::core::mem::transmute(&args))
                 .into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IFlyoutBaseOverrides, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IFlyoutBaseOverrides, OFFSET>(
             ),
             CreatePresenter: CreatePresenter::<Identity, Impl, OFFSET>,
             OnProcessKeyboardAccelerators: OnProcessKeyboardAccelerators::<Identity, Impl, OFFSET>,
@@ -74,34 +73,34 @@ impl ::windows::core::RuntimeName for IPickerFlyoutBaseOverrides {
 }
 impl IPickerFlyoutBaseOverrides_Vtbl {
     pub const fn new<
-        Identity: ::windows::core::IUnknownImpl,
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
         Impl: IPickerFlyoutBaseOverrides_Impl,
         const OFFSET: isize,
     >() -> IPickerFlyoutBaseOverrides_Vtbl {
         unsafe extern "system" fn OnConfirmed<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IPickerFlyoutBaseOverrides_Impl,
             const OFFSET: isize,
         >(
             this: *mut ::core::ffi::c_void,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            (*this).OnConfirmed().into()
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            this.OnConfirmed().into()
         }
         unsafe extern "system" fn ShouldShowConfirmationButtons<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IPickerFlyoutBaseOverrides_Impl,
             const OFFSET: isize,
         >(
             this: *mut ::core::ffi::c_void,
             result__: *mut bool,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            match (*this).ShouldShowConfirmationButtons() {
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            match this.ShouldShowConfirmationButtons() {
                 ::core::result::Result::Ok(ok__) => {
-                    *result__ = ::core::mem::transmute_copy(&ok__);
+                    ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows::core::HRESULT(0)
                 }
@@ -109,7 +108,7 @@ impl IPickerFlyoutBaseOverrides_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<
+            base__: ::windows::core::IInspectableVtbl::new::<
                 Identity,
                 IPickerFlyoutBaseOverrides,
                 OFFSET,
@@ -138,12 +137,12 @@ impl ::windows::core::RuntimeName for IRangeBaseOverrides {
 }
 impl IRangeBaseOverrides_Vtbl {
     pub const fn new<
-        Identity: ::windows::core::IUnknownImpl,
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
         Impl: IRangeBaseOverrides_Impl,
         const OFFSET: isize,
     >() -> IRangeBaseOverrides_Vtbl {
         unsafe extern "system" fn OnMinimumChanged<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IRangeBaseOverrides_Impl,
             const OFFSET: isize,
         >(
@@ -151,12 +150,12 @@ impl IRangeBaseOverrides_Vtbl {
             oldminimum: f64,
             newminimum: f64,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            (*this).OnMinimumChanged(oldminimum, newminimum).into()
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            this.OnMinimumChanged(oldminimum, newminimum).into()
         }
         unsafe extern "system" fn OnMaximumChanged<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IRangeBaseOverrides_Impl,
             const OFFSET: isize,
         >(
@@ -164,12 +163,12 @@ impl IRangeBaseOverrides_Vtbl {
             oldmaximum: f64,
             newmaximum: f64,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            (*this).OnMaximumChanged(oldmaximum, newmaximum).into()
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            this.OnMaximumChanged(oldmaximum, newmaximum).into()
         }
         unsafe extern "system" fn OnValueChanged<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IRangeBaseOverrides_Impl,
             const OFFSET: isize,
         >(
@@ -177,12 +176,13 @@ impl IRangeBaseOverrides_Vtbl {
             oldvalue: f64,
             newvalue: f64,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            (*this).OnValueChanged(oldvalue, newvalue).into()
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            this.OnValueChanged(oldvalue, newvalue).into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IRangeBaseOverrides, OFFSET>(),
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IRangeBaseOverrides, OFFSET>(
+            ),
             OnMinimumChanged: OnMinimumChanged::<Identity, Impl, OFFSET>,
             OnMaximumChanged: OnMaximumChanged::<Identity, Impl, OFFSET>,
             OnValueChanged: OnValueChanged::<Identity, Impl, OFFSET>,
@@ -232,23 +232,23 @@ impl ::windows::core::RuntimeName for IScrollSnapPointsInfo {
 }
 impl IScrollSnapPointsInfo_Vtbl {
     pub const fn new<
-        Identity: ::windows::core::IUnknownImpl,
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
         Impl: IScrollSnapPointsInfo_Impl,
         const OFFSET: isize,
     >() -> IScrollSnapPointsInfo_Vtbl {
         unsafe extern "system" fn AreHorizontalSnapPointsRegular<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IScrollSnapPointsInfo_Impl,
             const OFFSET: isize,
         >(
             this: *mut ::core::ffi::c_void,
             result__: *mut bool,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            match (*this).AreHorizontalSnapPointsRegular() {
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            match this.AreHorizontalSnapPointsRegular() {
                 ::core::result::Result::Ok(ok__) => {
-                    *result__ = ::core::mem::transmute_copy(&ok__);
+                    ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows::core::HRESULT(0)
                 }
@@ -256,18 +256,18 @@ impl IScrollSnapPointsInfo_Vtbl {
             }
         }
         unsafe extern "system" fn AreVerticalSnapPointsRegular<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IScrollSnapPointsInfo_Impl,
             const OFFSET: isize,
         >(
             this: *mut ::core::ffi::c_void,
             result__: *mut bool,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            match (*this).AreVerticalSnapPointsRegular() {
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            match this.AreVerticalSnapPointsRegular() {
                 ::core::result::Result::Ok(ok__) => {
-                    *result__ = ::core::mem::transmute_copy(&ok__);
+                    ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows::core::HRESULT(0)
                 }
@@ -275,7 +275,7 @@ impl IScrollSnapPointsInfo_Vtbl {
             }
         }
         unsafe extern "system" fn HorizontalSnapPointsChanged<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IScrollSnapPointsInfo_Impl,
             const OFFSET: isize,
         >(
@@ -283,11 +283,11 @@ impl IScrollSnapPointsInfo_Vtbl {
             handler: ::windows::core::RawPtr,
             result__: *mut ::windows::Foundation::EventRegistrationToken,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            match (*this).HorizontalSnapPointsChanged(::core::mem::transmute(&handler)) {
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            match this.HorizontalSnapPointsChanged(::core::mem::transmute(&handler)) {
                 ::core::result::Result::Ok(ok__) => {
-                    *result__ = ::core::mem::transmute_copy(&ok__);
+                    ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows::core::HRESULT(0)
                 }
@@ -295,21 +295,20 @@ impl IScrollSnapPointsInfo_Vtbl {
             }
         }
         unsafe extern "system" fn RemoveHorizontalSnapPointsChanged<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IScrollSnapPointsInfo_Impl,
             const OFFSET: isize,
         >(
             this: *mut ::core::ffi::c_void,
             token: ::windows::Foundation::EventRegistrationToken,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            (*this)
-                .RemoveHorizontalSnapPointsChanged(::core::mem::transmute(&token))
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            this.RemoveHorizontalSnapPointsChanged(::core::mem::transmute(&token))
                 .into()
         }
         unsafe extern "system" fn VerticalSnapPointsChanged<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IScrollSnapPointsInfo_Impl,
             const OFFSET: isize,
         >(
@@ -317,11 +316,11 @@ impl IScrollSnapPointsInfo_Vtbl {
             handler: ::windows::core::RawPtr,
             result__: *mut ::windows::Foundation::EventRegistrationToken,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            match (*this).VerticalSnapPointsChanged(::core::mem::transmute(&handler)) {
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            match this.VerticalSnapPointsChanged(::core::mem::transmute(&handler)) {
                 ::core::result::Result::Ok(ok__) => {
-                    *result__ = ::core::mem::transmute_copy(&ok__);
+                    ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows::core::HRESULT(0)
                 }
@@ -329,21 +328,20 @@ impl IScrollSnapPointsInfo_Vtbl {
             }
         }
         unsafe extern "system" fn RemoveVerticalSnapPointsChanged<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IScrollSnapPointsInfo_Impl,
             const OFFSET: isize,
         >(
             this: *mut ::core::ffi::c_void,
             token: ::windows::Foundation::EventRegistrationToken,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            (*this)
-                .RemoveVerticalSnapPointsChanged(::core::mem::transmute(&token))
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            this.RemoveVerticalSnapPointsChanged(::core::mem::transmute(&token))
                 .into()
         }
         unsafe extern "system" fn GetIrregularSnapPoints<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IScrollSnapPointsInfo_Impl,
             const OFFSET: isize,
         >(
@@ -352,11 +350,11 @@ impl IScrollSnapPointsInfo_Vtbl {
             alignment: SnapPointsAlignment,
             result__: *mut ::windows::core::RawPtr,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            match (*this).GetIrregularSnapPoints(orientation, alignment) {
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            match this.GetIrregularSnapPoints(orientation, alignment) {
                 ::core::result::Result::Ok(ok__) => {
-                    *result__ = ::core::mem::transmute_copy(&ok__);
+                    ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows::core::HRESULT(0)
                 }
@@ -364,7 +362,7 @@ impl IScrollSnapPointsInfo_Vtbl {
             }
         }
         unsafe extern "system" fn GetRegularSnapPoints<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IScrollSnapPointsInfo_Impl,
             const OFFSET: isize,
         >(
@@ -374,15 +372,15 @@ impl IScrollSnapPointsInfo_Vtbl {
             offset: *mut f32,
             result__: *mut f32,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            match (*this).GetRegularSnapPoints(
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            match this.GetRegularSnapPoints(
                 orientation,
                 alignment,
                 ::core::mem::transmute_copy(&offset),
             ) {
                 ::core::result::Result::Ok(ok__) => {
-                    *result__ = ::core::mem::transmute_copy(&ok__);
+                    ::core::ptr::write(result__, ::core::mem::transmute_copy(&ok__));
                     ::core::mem::forget(ok__);
                     ::windows::core::HRESULT(0)
                 }
@@ -390,7 +388,7 @@ impl IScrollSnapPointsInfo_Vtbl {
             }
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IScrollSnapPointsInfo, OFFSET>(
+            base__: ::windows::core::IInspectableVtbl::new::<Identity, IScrollSnapPointsInfo, OFFSET>(
             ),
             AreHorizontalSnapPointsRegular: AreHorizontalSnapPointsRegular::<Identity, Impl, OFFSET>,
             AreVerticalSnapPointsRegular: AreVerticalSnapPointsRegular::<Identity, Impl, OFFSET>,
@@ -424,24 +422,27 @@ impl ::windows::core::RuntimeName for IToggleButtonOverrides {
 }
 impl IToggleButtonOverrides_Vtbl {
     pub const fn new<
-        Identity: ::windows::core::IUnknownImpl,
+        Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
         Impl: IToggleButtonOverrides_Impl,
         const OFFSET: isize,
     >() -> IToggleButtonOverrides_Vtbl {
         unsafe extern "system" fn OnToggle<
-            Identity: ::windows::core::IUnknownImpl,
+            Identity: ::windows::core::IUnknownImpl<Impl = Impl>,
             Impl: IToggleButtonOverrides_Impl,
             const OFFSET: isize,
         >(
             this: *mut ::core::ffi::c_void,
         ) -> ::windows::core::HRESULT {
-            let this = (this as *mut ::windows::core::RawPtr).offset(OFFSET) as *mut Identity;
-            let this = (*this).get_impl() as *mut Impl;
-            (*this).OnToggle().into()
+            let this = (this as *const *const ()).offset(OFFSET) as *const Identity;
+            let this = (*this).get_impl();
+            this.OnToggle().into()
         }
         Self {
-            base: ::windows::core::IInspectableVtbl::new::<Identity, IToggleButtonOverrides, OFFSET>(
-            ),
+            base__: ::windows::core::IInspectableVtbl::new::<
+                Identity,
+                IToggleButtonOverrides,
+                OFFSET,
+            >(),
             OnToggle: OnToggle::<Identity, Impl, OFFSET>,
         }
     }
