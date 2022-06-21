@@ -89,14 +89,22 @@ implement = ["windows/implement"]
     write_features(&mut file, tree.namespace, tree);
 }
 
-fn write_features(file: &mut std::fs::File, root: &'static str, tree: &windows_metadata::reader::TypeTree) {
+fn write_features(
+    file: &mut std::fs::File,
+    root: &'static str,
+    tree: &windows_metadata::reader::TypeTree,
+) {
     for tree in tree.namespaces.values() {
         write_feature(file, root, tree);
         write_features(file, root, tree);
     }
 }
 
-fn write_feature(file: &mut std::fs::File, root: &'static str, tree: &windows_metadata::reader::TypeTree) {
+fn write_feature(
+    file: &mut std::fs::File,
+    root: &'static str,
+    tree: &windows_metadata::reader::TypeTree,
+) {
     let reader = TypeReader::get();
     let dependencies = tree
         .types

@@ -29,7 +29,7 @@ pub fn initialize() -> windows::core::Result<()> {
             0x00010001,
             WINDOWSAPPSDK_RELEASE_VERSION_TAG_W,
             min_framework_version,
-            MddBootstrapInitializeOptions_OnNoMatch_ShowUI
+            MddBootstrapInitializeOptions_OnNoMatch_ShowUI,
         )
     }
 }
