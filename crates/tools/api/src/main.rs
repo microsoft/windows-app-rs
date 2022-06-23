@@ -36,7 +36,7 @@ fn write_toml(output: &std::path::Path, tree: &TypeTree) {
     file.write_all(
         r#"[package]
 name = "windows-app"
-version = "0.4.0"
+version = "0.5.0"
 authors = [""]
 edition = "2018"
 license = "MIT OR Apache-2.0"
@@ -54,19 +54,19 @@ members = [
 ]
 
 [target.i686-pc-windows-msvc.dependencies]
-windows_app_i686_msvc = { path = "crates/targets/i686_msvc", version = "0.4.0" }
+windows_app_i686_msvc = { path = "crates/targets/i686_msvc", version = "0.5.0" }
 
 [target.x86_64-pc-windows-msvc.dependencies]
-windows_app_x86_64_msvc = { path = "crates/targets/x86_64_msvc", version = "0.4.0" }
+windows_app_x86_64_msvc = { path = "crates/targets/x86_64_msvc", version = "0.5.0" }
 
 [target.aarch64-pc-windows-msvc.dependencies]
-windows_app_aarch64_msvc = { path = "crates/targets/aarch64_msvc", version = "0.4.0" }
+windows_app_aarch64_msvc = { path = "crates/targets/aarch64_msvc", version = "0.5.0" }
 
 [target.i686-pc-windows-gnu.dependencies]
-windows_app_i686_gnu = { path = "crates/targets/i686_gnu", version = "0.4.0" }
+windows_app_i686_gnu = { path = "crates/targets/i686_gnu", version = "0.5.0" }
 
 [target.x86_64-pc-windows-gnu.dependencies]
-windows_app_x86_64_gnu = { path = "crates/targets/x86_64_gnu", version = "0.4.0" }
+windows_app_x86_64_gnu = { path = "crates/targets/x86_64_gnu", version = "0.5.0" }
 
 [package.metadata.docs.rs]
 default-target = "x86_64-pc-windows-msvc"
