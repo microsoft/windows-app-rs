@@ -12,8 +12,16 @@ pub fn to_output_dir() {
     path.pop();
     path.pop();
     path.push("Microsoft.WindowsAppRuntime.Bootstrap.dll");
+
+    let bytes: &[u8] = match std::env::var("CARGO_CFG_TARGET_ARCH").unwrap().as_str() {
+        "x86" => &generated::BOOTSTRAP_DLL_BYTES_X86,
+        "x86_64" => &generated::BOOTSTRAP_DLL_BYTES_X86_64,
+        "aarch64" => &generated::BOOTSTRAP_DLL_BYTES_AARCH64,
+        _ => panic!("Unsupported target architecture"),
+    };
+
     if let Ok(mut file) = OpenOptions::new().create_new(true).write(true).open(&path) {
-        file.write_all(&generated::BOOTSTRAP_DLL_BYTES).unwrap();
+        file.write_all(bytes).unwrap();
     }
     println!("cargo:rerun-if-changed={}", path.display());
 }

@@ -26,6 +26,12 @@ windows_app_x86_64_msvc = { path = "crates/targets/x86_64_msvc", version = "0.4.
 [target.aarch64-pc-windows-msvc.dependencies]
 windows_app_aarch64_msvc = { path = "crates/targets/aarch64_msvc", version = "0.4.0" }
 
+[target.i686-pc-windows-gnu.dependencies]
+windows_app_i686_gnu = { path = "crates/targets/i686_gnu", version = "0.4.0" }
+
+[target.x86_64-pc-windows-gnu.dependencies]
+windows_app_x86_64_gnu = { path = "crates/targets/x86_64_gnu", version = "0.4.0" }
+
 [package.metadata.docs.rs]
 default-target = "x86_64-pc-windows-msvc"
 targets = []

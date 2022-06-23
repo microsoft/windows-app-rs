@@ -1,5 +1,4 @@
-#[cfg(target_arch = "x86")]
-pub static BOOTSTRAP_DLL_BYTES: [u8; 174496usize] = [
+pub static BOOTSTRAP_DLL_BYTES_X86: [u8; 174496usize] = [
     77u8, 90u8, 144u8, 0u8, 3u8, 0u8, 0u8, 0u8, 4u8, 0u8, 0u8, 0u8, 255u8, 255u8, 0u8, 0u8, 184u8,
     0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 64u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
     0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
@@ -11644,8 +11643,8 @@ pub static BOOTSTRAP_DLL_BYTES: [u8; 174496usize] = [
     64u8, 196u8, 235u8, 216u8, 88u8, 244u8, 42u8, 226u8, 60u8, 199u8, 171u8, 163u8, 148u8, 54u8,
     11u8, 65u8, 206u8, 253u8, 178u8, 155u8, 227u8, 46u8, 203u8, 183u8, 0u8, 0u8, 0u8, 0u8, 0u8,
 ];
-#[cfg(target_arch = "x86_64")]
-pub static BOOTSTRAP_DLL_BYTES: [u8; 197024usize] = [
+
+pub static BOOTSTRAP_DLL_BYTES_X86_64: [u8; 197024usize] = [
     77u8, 90u8, 144u8, 0u8, 3u8, 0u8, 0u8, 0u8, 4u8, 0u8, 0u8, 0u8, 255u8, 255u8, 0u8, 0u8, 184u8,
     0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 64u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
     0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
@@ -24546,8 +24545,8 @@ pub static BOOTSTRAP_DLL_BYTES: [u8; 197024usize] = [
     67u8, 50u8, 243u8, 45u8, 164u8, 214u8, 35u8, 255u8, 205u8, 128u8, 40u8, 139u8, 252u8, 187u8,
     186u8, 21u8, 21u8, 63u8, 221u8, 12u8, 181u8, 0u8, 0u8,
 ];
-#[cfg(target_arch = "arm64")]
-pub static BOOTSTRAP_DLL_BYTES: [u8; 199592usize] = [
+
+pub static BOOTSTRAP_DLL_BYTES_AARCH64: [u8; 199592usize] = [
     77u8, 90u8, 144u8, 0u8, 3u8, 0u8, 0u8, 0u8, 4u8, 0u8, 0u8, 0u8, 255u8, 255u8, 0u8, 0u8, 184u8,
     0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 64u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
     0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8, 0u8,
