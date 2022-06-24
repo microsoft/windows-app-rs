@@ -50,7 +50,7 @@ fn main() -> windows::core::Result<()> {
             // Step 3.c: Find the localized name.
             // Get the font family name in the locale you want by using the FindLocaleName method.
 
-            let mut name_index = u32::default();
+            let mut name_index = 0;
             let mut name_exists = BOOL::default();
             family_names.FindLocaleName("en-US", &mut name_index, &mut name_exists)?;
             name_exists.expect("Failed to find en-US family name string");
@@ -63,7 +63,6 @@ fn main() -> windows::core::Result<()> {
             let name_length = family_names.GetStringLength(name_index)?;
 
             let mut name_buffer = vec![0u16; (name_length + 1) as usize];
-
             family_names.GetString(name_index, &mut name_buffer)?;
             println!("{}", String::from_utf16_lossy(&name_buffer));
         }
