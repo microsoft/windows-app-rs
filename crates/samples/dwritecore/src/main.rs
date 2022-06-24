@@ -62,8 +62,7 @@ fn main() -> windows::core::Result<()> {
 
             let name_length = family_names.GetStringLength(name_index)?;
 
-            let mut name_buffer = Vec::<u16>::new();
-            name_buffer.resize((name_length + 1) as usize, 0);
+            let mut name_buffer = vec![0u16; (name_length + 1) as usize];
 
             family_names.GetString(name_index, &mut name_buffer)?;
             println!("{}", String::from_utf16_lossy(&name_buffer));
