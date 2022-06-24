@@ -29,11 +29,13 @@ fn main() {
     let reader = TypeReader::get();
 
     let mut libraries = BTreeMap::<String, BTreeMap<&'static str, usize>>::new();
-    let root = reader
-        .types
-        .get_namespace("Microsoft.WindowsAppSdk.Foundation")
-        .unwrap();
-    load_functions(root, &mut libraries);
+    for namespace in ["Microsoft.WindowsAppSdk.Foundation", "Microsoft.DirectWriteCore"] {
+        let root = reader
+            .types
+            .get_namespace(&namespace)
+            .unwrap();
+        load_functions(root, &mut libraries);
+    }
 
     let output = std::path::PathBuf::from(format!("crates/targets/{}/lib", platform));
     let _ = std::fs::remove_dir_all(&output);
@@ -116,12 +118,12 @@ EXPORTS
     cmd.current_dir(&output);
 
     if platform.eq("i686_gnu") {
-        cmd.arg("-k");
+        cmd.arg("--kill-at");
     }
 
-    cmd.arg("-d");
+    cmd.arg("--input-def");
     cmd.arg(format!("{}.def", library));
-    cmd.arg("-l");
+    cmd.arg("--output-delaylib");
     cmd.arg(format!("lib{}.a", library));
     cmd.output().unwrap();
 

@@ -8,8 +8,14 @@ fn main() {
   );
 
   // All Windows App SDK DLLs with non-COM/WinRT exports must be delay-loaded to give
-  // bootstrap a chance to hook LoadLibrary and tie it to the Windows App Runtime
-  // framework package.
-  println!("cargo:rustc-link-arg=/DELAYLOAD:DWriteCore.dll");
-  println!("cargo:rustc-link-lib=static=delayimp");
+  // developers a chance to hook LoadLibrary with the bootstrap and get the 
+  // Windows App Runtime package into the dll search path.
+
+  // GNU targets already utilize delay-loaded import libraries and do not need the
+  // additional linker instructions.
+
+  if !std::env::var("TARGET").unwrap().contains("pc-windows-gnu") {
+    println!("cargo:rustc-link-arg=/DELAYLOAD:dwritecore.dll");
+    println!("cargo:rustc-link-lib=static=delayimp");
+  }
 }
