@@ -29,11 +29,11 @@ fn main() {
     let reader = TypeReader::get();
 
     let mut libraries = BTreeMap::<String, BTreeMap<&'static str, usize>>::new();
-    for namespace in ["Microsoft.WindowsAppSdk.Foundation", "Microsoft.DirectWriteCore"] {
-        let root = reader
-            .types
-            .get_namespace(&namespace)
-            .unwrap();
+    for namespace in [
+        "Microsoft.WindowsAppSdk.Foundation",
+        "Microsoft.DirectWriteCore",
+    ] {
+        let root = reader.types.get_namespace(&namespace).unwrap();
         load_functions(root, &mut libraries);
     }
 
