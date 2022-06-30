@@ -4,8 +4,8 @@
 
     <PropertyGroup Label="Globals">
         <OutputWinmd>../.windows/winmd/Microsoft.WindowsAppSdk.Generated.winmd</OutputWinmd>
-        <WinmdVersion>3.0.0</WinmdVersion>
-        <ExcludeFromCrossarch>Microsoft.MRM;Microsoft.UI.Xaml;Microsoft.UI.Xaml.Hosting;Microsoft.UI.Xaml.Media;Microsoft.WindowsAppSdk.Foundation;Microsoft.DirectWrite</ExcludeFromCrossarch>
+        <WinmdVersion>4.0.0</WinmdVersion>
+        <ExcludeFromCrossarch>Microsoft.MRM;Microsoft.UI.Xaml;Microsoft.UI.Xaml.Hosting;Microsoft.UI.Xaml.Media;Microsoft.WindowsAppSdk.Foundation;Microsoft.DirectWriteCore</ExcludeFromCrossarch>
     </PropertyGroup>
 
     <Target Name="CopyMetadata" AfterTargets="Build">
@@ -55,9 +55,9 @@
             <Namespace>Microsoft.MRM</Namespace>
         </Partition>
 
-        <Partition Include="microsoft.directwrite.cpp">
+        <Partition Include="microsoft.directwritecore.cpp">
             <TraverseFiles>@(DirectWriteHeaders)</TraverseFiles>
-            <Namespace>Microsoft.DirectWrite</Namespace>
+            <Namespace>Microsoft.DirectWriteCore</Namespace>
         </Partition>
 
         <Partition Include="microsoft.was.foundation.cpp">

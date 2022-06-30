@@ -1,5 +1,5 @@
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct D3DCOLORVALUE {
     pub Anonymous1: D3DCOLORVALUE_0,
     pub Anonymous2: D3DCOLORVALUE_1,
@@ -33,7 +33,7 @@ impl ::core::default::Default for D3DCOLORVALUE {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub union D3DCOLORVALUE_0 {
     pub r: f32,
     pub dvR: f32,
@@ -65,7 +65,7 @@ impl ::core::default::Default for D3DCOLORVALUE_0 {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub union D3DCOLORVALUE_1 {
     pub g: f32,
     pub dvG: f32,
@@ -97,7 +97,7 @@ impl ::core::default::Default for D3DCOLORVALUE_1 {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub union D3DCOLORVALUE_2 {
     pub b: f32,
     pub dvB: f32,
@@ -129,7 +129,7 @@ impl ::core::default::Default for D3DCOLORVALUE_2 {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub union D3DCOLORVALUE_3 {
     pub a: f32,
     pub dvA: f32,
@@ -160,16 +160,16 @@ impl ::core::default::Default for D3DCOLORVALUE_3 {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_ALPHA_MAX: u32 = 255u32;
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_AUTOMATIC_FONT_AXES(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_AUTOMATIC_FONT_AXES_NONE: DWRITE_AUTOMATIC_FONT_AXES =
     DWRITE_AUTOMATIC_FONT_AXES(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_AUTOMATIC_FONT_AXES_OPTICAL_SIZE: DWRITE_AUTOMATIC_FONT_AXES =
     DWRITE_AUTOMATIC_FONT_AXES(1i32);
 impl ::core::marker::Copy for DWRITE_AUTOMATIC_FONT_AXES {}
@@ -193,27 +193,27 @@ impl ::core::fmt::Debug for DWRITE_AUTOMATIC_FONT_AXES {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_BASELINE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BASELINE_DEFAULT: DWRITE_BASELINE = DWRITE_BASELINE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BASELINE_ROMAN: DWRITE_BASELINE = DWRITE_BASELINE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BASELINE_CENTRAL: DWRITE_BASELINE = DWRITE_BASELINE(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BASELINE_MATH: DWRITE_BASELINE = DWRITE_BASELINE(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BASELINE_HANGING: DWRITE_BASELINE = DWRITE_BASELINE(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BASELINE_IDEOGRAPHIC_BOTTOM: DWRITE_BASELINE = DWRITE_BASELINE(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BASELINE_IDEOGRAPHIC_TOP: DWRITE_BASELINE = DWRITE_BASELINE(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BASELINE_MINIMUM: DWRITE_BASELINE = DWRITE_BASELINE(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BASELINE_MAXIMUM: DWRITE_BASELINE = DWRITE_BASELINE(8i32);
 impl ::core::marker::Copy for DWRITE_BASELINE {}
 impl ::core::clone::Clone for DWRITE_BASELINE {
@@ -234,18 +234,60 @@ impl ::core::fmt::Debug for DWRITE_BASELINE {
         f.debug_tuple("DWRITE_BASELINE").field(&self.0).finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[repr(C)]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
+pub struct DWRITE_BITMAP_DATA_BGRA32 {
+    pub width: u32,
+    pub height: u32,
+    pub pixels: *mut u32,
+}
+impl ::core::marker::Copy for DWRITE_BITMAP_DATA_BGRA32 {}
+impl ::core::clone::Clone for DWRITE_BITMAP_DATA_BGRA32 {
+    fn clone(&self) -> Self {
+        *self
+    }
+}
+impl ::core::fmt::Debug for DWRITE_BITMAP_DATA_BGRA32 {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_struct("DWRITE_BITMAP_DATA_BGRA32")
+            .field("width", &self.width)
+            .field("height", &self.height)
+            .field("pixels", &self.pixels)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::Abi for DWRITE_BITMAP_DATA_BGRA32 {
+    type Abi = Self;
+}
+impl ::core::cmp::PartialEq for DWRITE_BITMAP_DATA_BGRA32 {
+    fn eq(&self, other: &Self) -> bool {
+        unsafe {
+            ::windows::core::memcmp(
+                self as *const _ as _,
+                other as *const _ as _,
+                core::mem::size_of::<DWRITE_BITMAP_DATA_BGRA32>(),
+            ) == 0
+        }
+    }
+}
+impl ::core::cmp::Eq for DWRITE_BITMAP_DATA_BGRA32 {}
+impl ::core::default::Default for DWRITE_BITMAP_DATA_BGRA32 {
+    fn default() -> Self {
+        unsafe { ::core::mem::zeroed() }
+    }
+}
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_BREAK_CONDITION(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BREAK_CONDITION_NEUTRAL: DWRITE_BREAK_CONDITION = DWRITE_BREAK_CONDITION(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BREAK_CONDITION_CAN_BREAK: DWRITE_BREAK_CONDITION = DWRITE_BREAK_CONDITION(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BREAK_CONDITION_MAY_NOT_BREAK: DWRITE_BREAK_CONDITION =
     DWRITE_BREAK_CONDITION(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_BREAK_CONDITION_MUST_BREAK: DWRITE_BREAK_CONDITION = DWRITE_BREAK_CONDITION(3i32);
 impl ::core::marker::Copy for DWRITE_BREAK_CONDITION {}
 impl ::core::clone::Clone for DWRITE_BREAK_CONDITION {
@@ -269,7 +311,7 @@ impl ::core::fmt::Debug for DWRITE_BREAK_CONDITION {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_CARET_METRICS {
     pub slopeRise: i16,
     pub slopeRun: i16,
@@ -311,7 +353,7 @@ impl ::core::default::Default for DWRITE_CARET_METRICS {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_CLUSTER_METRICS {
     pub width: f32,
     pub length: u16,
@@ -353,7 +395,7 @@ impl ::core::default::Default for DWRITE_CLUSTER_METRICS {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_COLOR_GLYPH_RUN {
     pub glyphRun: DWRITE_GLYPH_RUN,
     pub glyphRunDescription: *mut DWRITE_GLYPH_RUN_DESCRIPTION,
@@ -406,7 +448,7 @@ impl ::core::default::Default for DWRITE_COLOR_GLYPH_RUN {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_COLOR_GLYPH_RUN1 {
     pub __AnonymousBase_dwrite_3_L1812_C34: DWRITE_COLOR_GLYPH_RUN,
     pub glyphImageFormat: ::windows::Win32::Graphics::DirectWrite::DWRITE_GLYPH_IMAGE_FORMATS,
@@ -449,15 +491,15 @@ impl ::core::default::Default for DWRITE_COLOR_GLYPH_RUN1 {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_CONTAINER_TYPE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_CONTAINER_TYPE_UNKNOWN: DWRITE_CONTAINER_TYPE = DWRITE_CONTAINER_TYPE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_CONTAINER_TYPE_WOFF: DWRITE_CONTAINER_TYPE = DWRITE_CONTAINER_TYPE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_CONTAINER_TYPE_WOFF2: DWRITE_CONTAINER_TYPE = DWRITE_CONTAINER_TYPE(2i32);
 impl ::core::marker::Copy for DWRITE_CONTAINER_TYPE {}
 impl ::core::clone::Clone for DWRITE_CONTAINER_TYPE {
@@ -480,29 +522,31 @@ impl ::core::fmt::Debug for DWRITE_CONTAINER_TYPE {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_CORE: u32 = 1u32;
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_ERR_BASE: u32 = 20480u32;
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_E_DOWNLOADCANCELLED: ::windows::core::HRESULT =
     ::windows::core::HRESULT(-2003283954i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_E_DOWNLOADFAILED: ::windows::core::HRESULT =
     ::windows::core::HRESULT(-2003283953i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_E_REMOTEFONT: ::windows::core::HRESULT = ::windows::core::HRESULT(-2003283955i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_E_TOOMANYDOWNLOADS: ::windows::core::HRESULT =
     ::windows::core::HRESULT(-2003283952i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FACTORY_TYPE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FACTORY_TYPE_SHARED: DWRITE_FACTORY_TYPE = DWRITE_FACTORY_TYPE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FACTORY_TYPE_ISOLATED: DWRITE_FACTORY_TYPE = DWRITE_FACTORY_TYPE(1i32);
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
+pub const DWRITE_FACTORY_TYPE_ISOLATED2: DWRITE_FACTORY_TYPE = DWRITE_FACTORY_TYPE(2i32);
 impl ::core::marker::Copy for DWRITE_FACTORY_TYPE {}
 impl ::core::clone::Clone for DWRITE_FACTORY_TYPE {
     fn clone(&self) -> Self {
@@ -523,7 +567,7 @@ impl ::core::fmt::Debug for DWRITE_FACTORY_TYPE {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_FILE_FRAGMENT {
     pub fileOffset: u64,
     pub fragmentSize: u64,
@@ -562,17 +606,17 @@ impl ::core::default::Default for DWRITE_FILE_FRAGMENT {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FLOW_DIRECTION(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FLOW_DIRECTION_TOP_TO_BOTTOM: DWRITE_FLOW_DIRECTION = DWRITE_FLOW_DIRECTION(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FLOW_DIRECTION_BOTTOM_TO_TOP: DWRITE_FLOW_DIRECTION = DWRITE_FLOW_DIRECTION(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FLOW_DIRECTION_LEFT_TO_RIGHT: DWRITE_FLOW_DIRECTION = DWRITE_FLOW_DIRECTION(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FLOW_DIRECTION_RIGHT_TO_LEFT: DWRITE_FLOW_DIRECTION = DWRITE_FLOW_DIRECTION(3i32);
 impl ::core::marker::Copy for DWRITE_FLOW_DIRECTION {}
 impl ::core::clone::Clone for DWRITE_FLOW_DIRECTION {
@@ -595,17 +639,17 @@ impl ::core::fmt::Debug for DWRITE_FLOW_DIRECTION {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_AXIS_ATTRIBUTES(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_AXIS_ATTRIBUTES_NONE: DWRITE_FONT_AXIS_ATTRIBUTES =
     DWRITE_FONT_AXIS_ATTRIBUTES(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_AXIS_ATTRIBUTES_VARIABLE: DWRITE_FONT_AXIS_ATTRIBUTES =
     DWRITE_FONT_AXIS_ATTRIBUTES(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_AXIS_ATTRIBUTES_HIDDEN: DWRITE_FONT_AXIS_ATTRIBUTES =
     DWRITE_FONT_AXIS_ATTRIBUTES(2i32);
 impl ::core::marker::Copy for DWRITE_FONT_AXIS_ATTRIBUTES {}
@@ -630,7 +674,7 @@ impl ::core::fmt::Debug for DWRITE_FONT_AXIS_ATTRIBUTES {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_FONT_AXIS_RANGE {
     pub axisTag: DWRITE_FONT_AXIS_TAG,
     pub minValue: f32,
@@ -671,20 +715,20 @@ impl ::core::default::Default for DWRITE_FONT_AXIS_RANGE {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_AXIS_TAG(pub u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_AXIS_TAG_WEIGHT: DWRITE_FONT_AXIS_TAG = DWRITE_FONT_AXIS_TAG(1952999287u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_AXIS_TAG_WIDTH: DWRITE_FONT_AXIS_TAG = DWRITE_FONT_AXIS_TAG(1752458359u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_AXIS_TAG_SLANT: DWRITE_FONT_AXIS_TAG = DWRITE_FONT_AXIS_TAG(1953393779u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_AXIS_TAG_OPTICAL_SIZE: DWRITE_FONT_AXIS_TAG =
     DWRITE_FONT_AXIS_TAG(2054385775u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_AXIS_TAG_ITALIC: DWRITE_FONT_AXIS_TAG = DWRITE_FONT_AXIS_TAG(1818326121u32);
 impl ::core::marker::Copy for DWRITE_FONT_AXIS_TAG {}
 impl ::core::clone::Clone for DWRITE_FONT_AXIS_TAG {
@@ -708,7 +752,7 @@ impl ::core::fmt::Debug for DWRITE_FONT_AXIS_TAG {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_FONT_AXIS_VALUE {
     pub axisTag: DWRITE_FONT_AXIS_TAG,
     pub value: f32,
@@ -747,28 +791,28 @@ impl ::core::default::Default for DWRITE_FONT_AXIS_VALUE {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_FACE_TYPE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FACE_TYPE_CFF: DWRITE_FONT_FACE_TYPE = DWRITE_FONT_FACE_TYPE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FACE_TYPE_TRUETYPE: DWRITE_FONT_FACE_TYPE = DWRITE_FONT_FACE_TYPE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FACE_TYPE_OPENTYPE_COLLECTION: DWRITE_FONT_FACE_TYPE =
     DWRITE_FONT_FACE_TYPE(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FACE_TYPE_TYPE1: DWRITE_FONT_FACE_TYPE = DWRITE_FONT_FACE_TYPE(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FACE_TYPE_VECTOR: DWRITE_FONT_FACE_TYPE = DWRITE_FONT_FACE_TYPE(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FACE_TYPE_BITMAP: DWRITE_FONT_FACE_TYPE = DWRITE_FONT_FACE_TYPE(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FACE_TYPE_UNKNOWN: DWRITE_FONT_FACE_TYPE = DWRITE_FONT_FACE_TYPE(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FACE_TYPE_RAW_CFF: DWRITE_FONT_FACE_TYPE = DWRITE_FONT_FACE_TYPE(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FACE_TYPE_TRUETYPE_COLLECTION: DWRITE_FONT_FACE_TYPE =
     DWRITE_FONT_FACE_TYPE(2i32);
 impl ::core::marker::Copy for DWRITE_FONT_FACE_TYPE {}
@@ -792,14 +836,14 @@ impl ::core::fmt::Debug for DWRITE_FONT_FACE_TYPE {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_FAMILY_MODEL(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FAMILY_MODEL_TYPOGRAPHIC: DWRITE_FONT_FAMILY_MODEL =
     DWRITE_FONT_FAMILY_MODEL(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FAMILY_MODEL_WEIGHT_STRETCH_STYLE: DWRITE_FONT_FAMILY_MODEL =
     DWRITE_FONT_FAMILY_MODEL(1i32);
 impl ::core::marker::Copy for DWRITE_FONT_FAMILY_MODEL {}
@@ -824,7 +868,7 @@ impl ::core::fmt::Debug for DWRITE_FONT_FAMILY_MODEL {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_FONT_FEATURE {
     pub nameTag: DWRITE_FONT_FEATURE_TAG,
     pub parameter: u32,
@@ -863,251 +907,251 @@ impl ::core::default::Default for DWRITE_FONT_FEATURE {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_FEATURE_TAG(pub u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_ALTERNATIVE_FRACTIONS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1668441697u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_PETITE_CAPITALS_FROM_CAPITALS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1668297315u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_SMALL_CAPITALS_FROM_CAPITALS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1668493923u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_ALTERNATES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1953259875u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_CASE_SENSITIVE_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1702060387u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_GLYPH_COMPOSITION_DECOMPOSITION: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1886217059u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_LIGATURES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1734962275u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_CAPITAL_SPACING: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1886613603u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_CONTEXTUAL_SWASH: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1752658787u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_CURSIVE_POSITIONING: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1936880995u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_DEFAULT: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1953261156u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_DISCRETIONARY_LIGATURES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1734962276u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_EXPERT_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1953527909u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_FRACTIONS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1667330662u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_FULL_WIDTH: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1684633446u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_HALF_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1718378856u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_HALANT_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1852596584u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_ALTERNATE_HALF_WIDTH: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1953259880u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_HISTORICAL_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1953720680u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_HORIZONTAL_KANA_ALTERNATES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1634626408u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_HISTORICAL_LIGATURES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1734962280u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_HALF_WIDTH: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1684633448u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_HOJO_KANJI_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1869246312u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_JIS04_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(875589738u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_JIS78_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(943157354u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_JIS83_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(859336810u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_JIS90_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(809070698u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_KERNING: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1852990827u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STANDARD_LIGATURES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1634167148u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_LINING_FIGURES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1836412524u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_LOCALIZED_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1818455916u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_MARK_POSITIONING: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1802658157u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_MATHEMATICAL_GREEK: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1802659693u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_MARK_TO_MARK_POSITIONING: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1802333037u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_ALTERNATE_ANNOTATION_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1953259886u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_NLC_KANJI_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1801677934u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_OLD_STYLE_FIGURES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1836412527u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_ORDINALS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1852076655u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_ALTERNATE_WIDTH: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1953259888u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_PETITE_CAPITALS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1885430640u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_FIGURES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1836412528u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_PROPORTIONAL_WIDTHS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1684633456u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_QUARTER_WIDTHS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1684633457u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_REQUIRED_LIGATURES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1734962290u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_RUBY_NOTATION_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(2036495730u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_ALTERNATES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1953259891u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_SCIENTIFIC_INFERIORS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1718511987u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_SMALL_CAPITALS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1885564275u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_SIMPLIFIED_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1819307379u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_1: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(825258867u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_2: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(842036083u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_3: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(858813299u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_4: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(875590515u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_5: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(892367731u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_6: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(909144947u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_7: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(925922163u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_8: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(942699379u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_9: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(959476595u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_10: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(808547187u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_11: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(825324403u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_12: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(842101619u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_13: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(858878835u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_14: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(875656051u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_15: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(892433267u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_16: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(909210483u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_17: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(925987699u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_18: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(942764915u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_19: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(959542131u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_STYLISTIC_SET_20: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(808612723u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_SUBSCRIPT: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1935832435u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_SUPERSCRIPT: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1936749939u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_SWASH: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1752397683u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_TITLING: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1819568500u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_TRADITIONAL_NAME_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1835101812u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_TABULAR_FIGURES: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1836412532u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_TRADITIONAL_FORMS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1684107892u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_THIRD_WIDTHS: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1684633460u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_UNICASE: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1667853941u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_VERTICAL_WRITING: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1953654134u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_VERTICAL_ALTERNATES_AND_ROTATION: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(846492278u32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FEATURE_TAG_SLASHED_ZERO: DWRITE_FONT_FEATURE_TAG =
     DWRITE_FONT_FEATURE_TAG(1869768058u32);
 impl ::core::marker::Copy for DWRITE_FONT_FEATURE_TAG {}
@@ -1131,28 +1175,28 @@ impl ::core::fmt::Debug for DWRITE_FONT_FEATURE_TAG {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_FILE_TYPE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FILE_TYPE_UNKNOWN: DWRITE_FONT_FILE_TYPE = DWRITE_FONT_FILE_TYPE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FILE_TYPE_CFF: DWRITE_FONT_FILE_TYPE = DWRITE_FONT_FILE_TYPE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FILE_TYPE_TRUETYPE: DWRITE_FONT_FILE_TYPE = DWRITE_FONT_FILE_TYPE(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FILE_TYPE_OPENTYPE_COLLECTION: DWRITE_FONT_FILE_TYPE =
     DWRITE_FONT_FILE_TYPE(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FILE_TYPE_TYPE1_PFM: DWRITE_FONT_FILE_TYPE = DWRITE_FONT_FILE_TYPE(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FILE_TYPE_TYPE1_PFB: DWRITE_FONT_FILE_TYPE = DWRITE_FONT_FILE_TYPE(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FILE_TYPE_VECTOR: DWRITE_FONT_FILE_TYPE = DWRITE_FONT_FILE_TYPE(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FILE_TYPE_BITMAP: DWRITE_FONT_FILE_TYPE = DWRITE_FONT_FILE_TYPE(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_FILE_TYPE_TRUETYPE_COLLECTION: DWRITE_FONT_FILE_TYPE =
     DWRITE_FONT_FILE_TYPE(3i32);
 impl ::core::marker::Copy for DWRITE_FONT_FILE_TYPE {}
@@ -1176,17 +1220,17 @@ impl ::core::fmt::Debug for DWRITE_FONT_FILE_TYPE {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_LINE_GAP_USAGE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_LINE_GAP_USAGE_DEFAULT: DWRITE_FONT_LINE_GAP_USAGE =
     DWRITE_FONT_LINE_GAP_USAGE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_LINE_GAP_USAGE_DISABLED: DWRITE_FONT_LINE_GAP_USAGE =
     DWRITE_FONT_LINE_GAP_USAGE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_LINE_GAP_USAGE_ENABLED: DWRITE_FONT_LINE_GAP_USAGE =
     DWRITE_FONT_LINE_GAP_USAGE(2i32);
 impl ::core::marker::Copy for DWRITE_FONT_LINE_GAP_USAGE {}
@@ -1211,7 +1255,7 @@ impl ::core::fmt::Debug for DWRITE_FONT_LINE_GAP_USAGE {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_FONT_METRICS {
     pub designUnitsPerEm: u16,
     pub ascent: u16,
@@ -1267,7 +1311,7 @@ impl ::core::default::Default for DWRITE_FONT_METRICS {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_FONT_METRICS1 {
     pub __AnonymousBase_dwrite_1_L625_C38: DWRITE_FONT_METRICS,
     pub glyphBoxLeft: i16,
@@ -1334,7 +1378,7 @@ impl ::core::default::Default for DWRITE_FONT_METRICS1 {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_FONT_PROPERTY {
     pub propertyId: DWRITE_FONT_PROPERTY_ID,
     pub propertyValue: ::windows::core::PCWSTR,
@@ -1375,66 +1419,66 @@ impl ::core::default::Default for DWRITE_FONT_PROPERTY {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_PROPERTY_ID(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_NONE: DWRITE_FONT_PROPERTY_ID = DWRITE_FONT_PROPERTY_ID(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_WEIGHT_STRETCH_STYLE_FAMILY_NAME: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_TYPOGRAPHIC_FAMILY_NAME: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_WEIGHT_STRETCH_STYLE_FACE_NAME: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_FULL_NAME: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_WIN32_FAMILY_NAME: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_POSTSCRIPT_NAME: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_DESIGN_SCRIPT_LANGUAGE_TAG: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_SUPPORTED_SCRIPT_LANGUAGE_TAG: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_SEMANTIC_TAG: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_WEIGHT: DWRITE_FONT_PROPERTY_ID = DWRITE_FONT_PROPERTY_ID(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_STRETCH: DWRITE_FONT_PROPERTY_ID = DWRITE_FONT_PROPERTY_ID(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_STYLE: DWRITE_FONT_PROPERTY_ID = DWRITE_FONT_PROPERTY_ID(12i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_TYPOGRAPHIC_FACE_NAME: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(13i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_FONT_SOURCE_NAME: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(14i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_TOTAL: DWRITE_FONT_PROPERTY_ID = DWRITE_FONT_PROPERTY_ID(13i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_TOTAL_RS3: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(14i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_TOTAL_RS5: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(15i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_PREFERRED_FAMILY_NAME: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_FAMILY_NAME: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_PROPERTY_ID_FACE_NAME: DWRITE_FONT_PROPERTY_ID =
     DWRITE_FONT_PROPERTY_ID(3i32);
 impl ::core::marker::Copy for DWRITE_FONT_PROPERTY_ID {}
@@ -1458,15 +1502,15 @@ impl ::core::fmt::Debug for DWRITE_FONT_PROPERTY_ID {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_SIMULATIONS(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_SIMULATIONS_NONE: DWRITE_FONT_SIMULATIONS = DWRITE_FONT_SIMULATIONS(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_SIMULATIONS_BOLD: DWRITE_FONT_SIMULATIONS = DWRITE_FONT_SIMULATIONS(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_SIMULATIONS_OBLIQUE: DWRITE_FONT_SIMULATIONS = DWRITE_FONT_SIMULATIONS(2i32);
 impl ::core::marker::Copy for DWRITE_FONT_SIMULATIONS {}
 impl ::core::clone::Clone for DWRITE_FONT_SIMULATIONS {
@@ -1489,21 +1533,21 @@ impl ::core::fmt::Debug for DWRITE_FONT_SIMULATIONS {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_SOURCE_TYPE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_SOURCE_TYPE_UNKNOWN: DWRITE_FONT_SOURCE_TYPE = DWRITE_FONT_SOURCE_TYPE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_SOURCE_TYPE_PER_MACHINE: DWRITE_FONT_SOURCE_TYPE =
     DWRITE_FONT_SOURCE_TYPE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_SOURCE_TYPE_PER_USER: DWRITE_FONT_SOURCE_TYPE = DWRITE_FONT_SOURCE_TYPE(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_SOURCE_TYPE_APPX_PACKAGE: DWRITE_FONT_SOURCE_TYPE =
     DWRITE_FONT_SOURCE_TYPE(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_SOURCE_TYPE_REMOTE_FONT_PROVIDER: DWRITE_FONT_SOURCE_TYPE =
     DWRITE_FONT_SOURCE_TYPE(4i32);
 impl ::core::marker::Copy for DWRITE_FONT_SOURCE_TYPE {}
@@ -1527,31 +1571,31 @@ impl ::core::fmt::Debug for DWRITE_FONT_SOURCE_TYPE {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_STRETCH(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STRETCH_UNDEFINED: DWRITE_FONT_STRETCH = DWRITE_FONT_STRETCH(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STRETCH_ULTRA_CONDENSED: DWRITE_FONT_STRETCH = DWRITE_FONT_STRETCH(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STRETCH_EXTRA_CONDENSED: DWRITE_FONT_STRETCH = DWRITE_FONT_STRETCH(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STRETCH_CONDENSED: DWRITE_FONT_STRETCH = DWRITE_FONT_STRETCH(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STRETCH_SEMI_CONDENSED: DWRITE_FONT_STRETCH = DWRITE_FONT_STRETCH(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STRETCH_NORMAL: DWRITE_FONT_STRETCH = DWRITE_FONT_STRETCH(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STRETCH_MEDIUM: DWRITE_FONT_STRETCH = DWRITE_FONT_STRETCH(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STRETCH_SEMI_EXPANDED: DWRITE_FONT_STRETCH = DWRITE_FONT_STRETCH(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STRETCH_EXPANDED: DWRITE_FONT_STRETCH = DWRITE_FONT_STRETCH(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STRETCH_EXTRA_EXPANDED: DWRITE_FONT_STRETCH = DWRITE_FONT_STRETCH(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STRETCH_ULTRA_EXPANDED: DWRITE_FONT_STRETCH = DWRITE_FONT_STRETCH(9i32);
 impl ::core::marker::Copy for DWRITE_FONT_STRETCH {}
 impl ::core::clone::Clone for DWRITE_FONT_STRETCH {
@@ -1572,15 +1616,15 @@ impl ::core::fmt::Debug for DWRITE_FONT_STRETCH {
         f.debug_tuple("DWRITE_FONT_STRETCH").field(&self.0).finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_STYLE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STYLE_NORMAL: DWRITE_FONT_STYLE = DWRITE_FONT_STYLE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STYLE_OBLIQUE: DWRITE_FONT_STYLE = DWRITE_FONT_STYLE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_STYLE_ITALIC: DWRITE_FONT_STYLE = DWRITE_FONT_STYLE(2i32);
 impl ::core::marker::Copy for DWRITE_FONT_STYLE {}
 impl ::core::clone::Clone for DWRITE_FONT_STYLE {
@@ -1601,43 +1645,43 @@ impl ::core::fmt::Debug for DWRITE_FONT_STYLE {
         f.debug_tuple("DWRITE_FONT_STYLE").field(&self.0).finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_FONT_WEIGHT(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_THIN: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(100i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_EXTRA_LIGHT: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(200i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_ULTRA_LIGHT: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(200i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_LIGHT: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(300i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_SEMI_LIGHT: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(350i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_NORMAL: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(400i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_REGULAR: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(400i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_MEDIUM: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(500i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_DEMI_BOLD: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(600i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_SEMI_BOLD: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(600i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_BOLD: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(700i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_EXTRA_BOLD: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(800i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_ULTRA_BOLD: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(800i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_BLACK: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(900i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_HEAVY: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(900i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_EXTRA_BLACK: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(950i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_FONT_WEIGHT_ULTRA_BLACK: DWRITE_FONT_WEIGHT = DWRITE_FONT_WEIGHT(950i32);
 impl ::core::marker::Copy for DWRITE_FONT_WEIGHT {}
 impl ::core::clone::Clone for DWRITE_FONT_WEIGHT {
@@ -1659,7 +1703,7 @@ impl ::core::fmt::Debug for DWRITE_FONT_WEIGHT {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_GLYPH_IMAGE_DATA {
     pub imageData: *const ::core::ffi::c_void,
     pub imageDataSize: u32,
@@ -1713,7 +1757,7 @@ impl ::core::default::Default for DWRITE_GLYPH_IMAGE_DATA {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_GLYPH_METRICS {
     pub leftSideBearing: i32,
     pub advanceWidth: u32,
@@ -1763,7 +1807,7 @@ impl ::core::default::Default for DWRITE_GLYPH_METRICS {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_GLYPH_OFFSET {
     pub advanceOffset: f32,
     pub ascenderOffset: f32,
@@ -1802,20 +1846,20 @@ impl ::core::default::Default for DWRITE_GLYPH_OFFSET {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_GLYPH_ORIENTATION_ANGLE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_GLYPH_ORIENTATION_ANGLE_0_DEGREES: DWRITE_GLYPH_ORIENTATION_ANGLE =
     DWRITE_GLYPH_ORIENTATION_ANGLE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_GLYPH_ORIENTATION_ANGLE_90_DEGREES: DWRITE_GLYPH_ORIENTATION_ANGLE =
     DWRITE_GLYPH_ORIENTATION_ANGLE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_GLYPH_ORIENTATION_ANGLE_180_DEGREES: DWRITE_GLYPH_ORIENTATION_ANGLE =
     DWRITE_GLYPH_ORIENTATION_ANGLE(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_GLYPH_ORIENTATION_ANGLE_270_DEGREES: DWRITE_GLYPH_ORIENTATION_ANGLE =
     DWRITE_GLYPH_ORIENTATION_ANGLE(3i32);
 impl ::core::marker::Copy for DWRITE_GLYPH_ORIENTATION_ANGLE {}
@@ -1840,7 +1884,7 @@ impl ::core::fmt::Debug for DWRITE_GLYPH_ORIENTATION_ANGLE {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_GLYPH_RUN {
     pub fontFace: ::core::option::Option<IDWriteFontFace>,
     pub fontEmSize: f32,
@@ -1901,7 +1945,7 @@ impl ::core::default::Default for DWRITE_GLYPH_RUN {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_GLYPH_RUN_DESCRIPTION {
     pub localeName: ::windows::core::PCWSTR,
     pub string: ::windows::core::PCWSTR,
@@ -1946,15 +1990,15 @@ impl ::core::default::Default for DWRITE_GLYPH_RUN_DESCRIPTION {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_GRID_FIT_MODE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_GRID_FIT_MODE_DEFAULT: DWRITE_GRID_FIT_MODE = DWRITE_GRID_FIT_MODE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_GRID_FIT_MODE_DISABLED: DWRITE_GRID_FIT_MODE = DWRITE_GRID_FIT_MODE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_GRID_FIT_MODE_ENABLED: DWRITE_GRID_FIT_MODE = DWRITE_GRID_FIT_MODE(2i32);
 impl ::core::marker::Copy for DWRITE_GRID_FIT_MODE {}
 impl ::core::clone::Clone for DWRITE_GRID_FIT_MODE {
@@ -1978,7 +2022,7 @@ impl ::core::fmt::Debug for DWRITE_GRID_FIT_MODE {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_HIT_TEST_METRICS {
     pub textPosition: u32,
     pub length: u32,
@@ -2031,83 +2075,83 @@ impl ::core::default::Default for DWRITE_HIT_TEST_METRICS {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_INFORMATIONAL_STRING_ID(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_NONE: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_COPYRIGHT_NOTICE: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_VERSION_STRINGS: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_TRADEMARK: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_MANUFACTURER: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_DESIGNER: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_DESIGNER_URL: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_DESCRIPTION: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_FONT_VENDOR_URL: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_LICENSE_DESCRIPTION: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_LICENSE_INFO_URL: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_WIN32_FAMILY_NAMES: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_WIN32_SUBFAMILY_NAMES: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(12i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_TYPOGRAPHIC_FAMILY_NAMES: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(13i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_TYPOGRAPHIC_SUBFAMILY_NAMES: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(14i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_SAMPLE_TEXT: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(15i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_FULL_NAME: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(16i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_POSTSCRIPT_NAME: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(17i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_POSTSCRIPT_CID_NAME: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(18i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_WEIGHT_STRETCH_STYLE_FAMILY_NAME:
     DWRITE_INFORMATIONAL_STRING_ID = DWRITE_INFORMATIONAL_STRING_ID(19i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_DESIGN_SCRIPT_LANGUAGE_TAG: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(20i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_SUPPORTED_SCRIPT_LANGUAGE_TAG:
     DWRITE_INFORMATIONAL_STRING_ID = DWRITE_INFORMATIONAL_STRING_ID(21i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_PREFERRED_FAMILY_NAMES: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(13i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_PREFERRED_SUBFAMILY_NAMES: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(14i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_INFORMATIONAL_STRING_WWS_FAMILY_NAME: DWRITE_INFORMATIONAL_STRING_ID =
     DWRITE_INFORMATIONAL_STRING_ID(19i32);
 impl ::core::marker::Copy for DWRITE_INFORMATIONAL_STRING_ID {}
@@ -2132,7 +2176,7 @@ impl ::core::fmt::Debug for DWRITE_INFORMATIONAL_STRING_ID {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_INLINE_OBJECT_METRICS {
     pub width: f32,
     pub height: f32,
@@ -2176,7 +2220,7 @@ impl ::core::default::Default for DWRITE_INLINE_OBJECT_METRICS {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_JUSTIFICATION_OPPORTUNITY {
     pub expansionMinimum: f32,
     pub expansionMaximum: f32,
@@ -2220,7 +2264,7 @@ impl ::core::default::Default for DWRITE_JUSTIFICATION_OPPORTUNITY {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_LINE_BREAKPOINT {
     pub _bitfield: u8,
 }
@@ -2258,7 +2302,7 @@ impl ::core::default::Default for DWRITE_LINE_BREAKPOINT {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_LINE_METRICS {
     pub length: u32,
     pub trailingWhitespaceLength: u32,
@@ -2306,7 +2350,7 @@ impl ::core::default::Default for DWRITE_LINE_METRICS {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_LINE_METRICS1 {
     pub __AnonymousBase_dwrite_3_L1634_C31: DWRITE_LINE_METRICS,
     pub leadingBefore: f32,
@@ -2351,7 +2395,7 @@ impl ::core::default::Default for DWRITE_LINE_METRICS1 {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_LINE_SPACING {
     pub method: DWRITE_LINE_SPACING_METHOD,
     pub height: f32,
@@ -2396,17 +2440,17 @@ impl ::core::default::Default for DWRITE_LINE_SPACING {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_LINE_SPACING_METHOD(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_LINE_SPACING_METHOD_DEFAULT: DWRITE_LINE_SPACING_METHOD =
     DWRITE_LINE_SPACING_METHOD(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_LINE_SPACING_METHOD_UNIFORM: DWRITE_LINE_SPACING_METHOD =
     DWRITE_LINE_SPACING_METHOD(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_LINE_SPACING_METHOD_PROPORTIONAL: DWRITE_LINE_SPACING_METHOD =
     DWRITE_LINE_SPACING_METHOD(2i32);
 impl ::core::marker::Copy for DWRITE_LINE_SPACING_METHOD {}
@@ -2430,15 +2474,15 @@ impl ::core::fmt::Debug for DWRITE_LINE_SPACING_METHOD {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_LOCALITY(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_LOCALITY_REMOTE: DWRITE_LOCALITY = DWRITE_LOCALITY(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_LOCALITY_PARTIAL: DWRITE_LOCALITY = DWRITE_LOCALITY(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_LOCALITY_LOCAL: DWRITE_LOCALITY = DWRITE_LOCALITY(2i32);
 impl ::core::marker::Copy for DWRITE_LOCALITY {}
 impl ::core::clone::Clone for DWRITE_LOCALITY {
@@ -2460,7 +2504,7 @@ impl ::core::fmt::Debug for DWRITE_LOCALITY {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_MATRIX {
     pub m11: f32,
     pub m12: f32,
@@ -2507,23 +2551,23 @@ impl ::core::default::Default for DWRITE_MATRIX {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_NUMBER_SUBSTITUTION_METHOD(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_NUMBER_SUBSTITUTION_METHOD_FROM_CULTURE: DWRITE_NUMBER_SUBSTITUTION_METHOD =
     DWRITE_NUMBER_SUBSTITUTION_METHOD(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_NUMBER_SUBSTITUTION_METHOD_CONTEXTUAL: DWRITE_NUMBER_SUBSTITUTION_METHOD =
     DWRITE_NUMBER_SUBSTITUTION_METHOD(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_NUMBER_SUBSTITUTION_METHOD_NONE: DWRITE_NUMBER_SUBSTITUTION_METHOD =
     DWRITE_NUMBER_SUBSTITUTION_METHOD(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_NUMBER_SUBSTITUTION_METHOD_NATIONAL: DWRITE_NUMBER_SUBSTITUTION_METHOD =
     DWRITE_NUMBER_SUBSTITUTION_METHOD(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_NUMBER_SUBSTITUTION_METHOD_TRADITIONAL: DWRITE_NUMBER_SUBSTITUTION_METHOD =
     DWRITE_NUMBER_SUBSTITUTION_METHOD(4i32);
 impl ::core::marker::Copy for DWRITE_NUMBER_SUBSTITUTION_METHOD {}
@@ -2547,13 +2591,13 @@ impl ::core::fmt::Debug for DWRITE_NUMBER_SUBSTITUTION_METHOD {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_OPTICAL_ALIGNMENT(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_OPTICAL_ALIGNMENT_NONE: DWRITE_OPTICAL_ALIGNMENT = DWRITE_OPTICAL_ALIGNMENT(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_OPTICAL_ALIGNMENT_NO_SIDE_BEARINGS: DWRITE_OPTICAL_ALIGNMENT =
     DWRITE_OPTICAL_ALIGNMENT(1i32);
 impl ::core::marker::Copy for DWRITE_OPTICAL_ALIGNMENT {}
@@ -2577,14 +2621,14 @@ impl ::core::fmt::Debug for DWRITE_OPTICAL_ALIGNMENT {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_OUTLINE_THRESHOLD(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_OUTLINE_THRESHOLD_ANTIALIASED: DWRITE_OUTLINE_THRESHOLD =
     DWRITE_OUTLINE_THRESHOLD(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_OUTLINE_THRESHOLD_ALIASED: DWRITE_OUTLINE_THRESHOLD =
     DWRITE_OUTLINE_THRESHOLD(1i32);
 impl ::core::marker::Copy for DWRITE_OUTLINE_THRESHOLD {}
@@ -2609,7 +2653,7 @@ impl ::core::fmt::Debug for DWRITE_OUTLINE_THRESHOLD {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_OVERHANG_METRICS {
     pub left: f32,
     pub top: f32,
@@ -2653,7 +2697,7 @@ impl ::core::default::Default for DWRITE_OVERHANG_METRICS {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub union DWRITE_PANOSE {
     pub values: [u8; 10],
     pub familyKind: u8,
@@ -2689,7 +2733,7 @@ impl ::core::default::Default for DWRITE_PANOSE {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_PANOSE_0 {
     pub familyKind: u8,
     pub decorativeClass: u8,
@@ -2745,7 +2789,7 @@ impl ::core::default::Default for DWRITE_PANOSE_0 {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_PANOSE_1 {
     pub familyKind: u8,
     pub toolKind: u8,
@@ -2801,7 +2845,7 @@ impl ::core::default::Default for DWRITE_PANOSE_1 {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_PANOSE_2 {
     pub familyKind: u8,
     pub symbolKind: u8,
@@ -2857,7 +2901,7 @@ impl ::core::default::Default for DWRITE_PANOSE_2 {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_PANOSE_3 {
     pub familyKind: u8,
     pub serifStyle: u8,
@@ -2912,63 +2956,63 @@ impl ::core::default::Default for DWRITE_PANOSE_3 {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_ARM_STYLE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_ANY: DWRITE_PANOSE_ARM_STYLE = DWRITE_PANOSE_ARM_STYLE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_NO_FIT: DWRITE_PANOSE_ARM_STYLE = DWRITE_PANOSE_ARM_STYLE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_HORIZONTAL: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_WEDGE: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_VERTICAL: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_SINGLE_SERIF: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_DOUBLE_SERIF: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_HORIZONTAL: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_WEDGE: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_VERTICAL: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_SINGLE_SERIF: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_NONSTRAIGHT_ARMS_DOUBLE_SERIF: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_HORZ: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_STRAIGHT_ARMS_VERT: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_HORZ: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_WEDGE: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_VERT: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_SINGLE_SERIF: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ARM_STYLE_BENT_ARMS_DOUBLE_SERIF: DWRITE_PANOSE_ARM_STYLE =
     DWRITE_PANOSE_ARM_STYLE(11i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_ARM_STYLE {}
@@ -2992,29 +3036,29 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_ARM_STYLE {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_ASPECT(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_ANY: DWRITE_PANOSE_ASPECT = DWRITE_PANOSE_ASPECT(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_NO_FIT: DWRITE_PANOSE_ASPECT = DWRITE_PANOSE_ASPECT(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_SUPER_CONDENSED: DWRITE_PANOSE_ASPECT = DWRITE_PANOSE_ASPECT(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_VERY_CONDENSED: DWRITE_PANOSE_ASPECT = DWRITE_PANOSE_ASPECT(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_CONDENSED: DWRITE_PANOSE_ASPECT = DWRITE_PANOSE_ASPECT(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_NORMAL: DWRITE_PANOSE_ASPECT = DWRITE_PANOSE_ASPECT(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_EXTENDED: DWRITE_PANOSE_ASPECT = DWRITE_PANOSE_ASPECT(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_VERY_EXTENDED: DWRITE_PANOSE_ASPECT = DWRITE_PANOSE_ASPECT(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_SUPER_EXTENDED: DWRITE_PANOSE_ASPECT = DWRITE_PANOSE_ASPECT(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_MONOSPACED: DWRITE_PANOSE_ASPECT = DWRITE_PANOSE_ASPECT(9i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_ASPECT {}
 impl ::core::clone::Clone for DWRITE_PANOSE_ASPECT {
@@ -3037,29 +3081,29 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_ASPECT {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_ASPECT_RATIO(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_RATIO_ANY: DWRITE_PANOSE_ASPECT_RATIO =
     DWRITE_PANOSE_ASPECT_RATIO(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_RATIO_NO_FIT: DWRITE_PANOSE_ASPECT_RATIO =
     DWRITE_PANOSE_ASPECT_RATIO(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_RATIO_VERY_CONDENSED: DWRITE_PANOSE_ASPECT_RATIO =
     DWRITE_PANOSE_ASPECT_RATIO(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_RATIO_CONDENSED: DWRITE_PANOSE_ASPECT_RATIO =
     DWRITE_PANOSE_ASPECT_RATIO(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_RATIO_NORMAL: DWRITE_PANOSE_ASPECT_RATIO =
     DWRITE_PANOSE_ASPECT_RATIO(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_RATIO_EXPANDED: DWRITE_PANOSE_ASPECT_RATIO =
     DWRITE_PANOSE_ASPECT_RATIO(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_ASPECT_RATIO_VERY_EXPANDED: DWRITE_PANOSE_ASPECT_RATIO =
     DWRITE_PANOSE_ASPECT_RATIO(6i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_ASPECT_RATIO {}
@@ -3083,26 +3127,26 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_ASPECT_RATIO {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_CHARACTER_RANGES(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CHARACTER_RANGES_ANY: DWRITE_PANOSE_CHARACTER_RANGES =
     DWRITE_PANOSE_CHARACTER_RANGES(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CHARACTER_RANGES_NO_FIT: DWRITE_PANOSE_CHARACTER_RANGES =
     DWRITE_PANOSE_CHARACTER_RANGES(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CHARACTER_RANGES_EXTENDED_COLLECTION: DWRITE_PANOSE_CHARACTER_RANGES =
     DWRITE_PANOSE_CHARACTER_RANGES(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CHARACTER_RANGES_LITERALS: DWRITE_PANOSE_CHARACTER_RANGES =
     DWRITE_PANOSE_CHARACTER_RANGES(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CHARACTER_RANGES_NO_LOWER_CASE: DWRITE_PANOSE_CHARACTER_RANGES =
     DWRITE_PANOSE_CHARACTER_RANGES(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CHARACTER_RANGES_SMALL_CAPS: DWRITE_PANOSE_CHARACTER_RANGES =
     DWRITE_PANOSE_CHARACTER_RANGES(5i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_CHARACTER_RANGES {}
@@ -3126,40 +3170,40 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_CHARACTER_RANGES {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_CONTRAST(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_ANY: DWRITE_PANOSE_CONTRAST = DWRITE_PANOSE_CONTRAST(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_NO_FIT: DWRITE_PANOSE_CONTRAST = DWRITE_PANOSE_CONTRAST(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_NONE: DWRITE_PANOSE_CONTRAST = DWRITE_PANOSE_CONTRAST(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_VERY_LOW: DWRITE_PANOSE_CONTRAST = DWRITE_PANOSE_CONTRAST(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_LOW: DWRITE_PANOSE_CONTRAST = DWRITE_PANOSE_CONTRAST(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_MEDIUM_LOW: DWRITE_PANOSE_CONTRAST = DWRITE_PANOSE_CONTRAST(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_MEDIUM: DWRITE_PANOSE_CONTRAST = DWRITE_PANOSE_CONTRAST(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_MEDIUM_HIGH: DWRITE_PANOSE_CONTRAST = DWRITE_PANOSE_CONTRAST(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_HIGH: DWRITE_PANOSE_CONTRAST = DWRITE_PANOSE_CONTRAST(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_VERY_HIGH: DWRITE_PANOSE_CONTRAST = DWRITE_PANOSE_CONTRAST(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_HORIZONTAL_LOW: DWRITE_PANOSE_CONTRAST =
     DWRITE_PANOSE_CONTRAST(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_HORIZONTAL_MEDIUM: DWRITE_PANOSE_CONTRAST =
     DWRITE_PANOSE_CONTRAST(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_HORIZONTAL_HIGH: DWRITE_PANOSE_CONTRAST =
     DWRITE_PANOSE_CONTRAST(12i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_CONTRAST_BROKEN: DWRITE_PANOSE_CONTRAST = DWRITE_PANOSE_CONTRAST(13i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_CONTRAST {}
 impl ::core::clone::Clone for DWRITE_PANOSE_CONTRAST {
@@ -3182,47 +3226,47 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_CONTRAST {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_DECORATIVE_CLASS(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_ANY: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_NO_FIT: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_DERIVATIVE: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_TOPOLOGY: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_ELEMENTS: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_NONSTANDARD_ASPECT: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_INITIALS: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_CARTOON: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_PICTURE_STEMS: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_ORNAMENTED: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_TEXT_AND_BACKGROUND: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_COLLAGE: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_CLASS_MONTAGE: DWRITE_PANOSE_DECORATIVE_CLASS =
     DWRITE_PANOSE_DECORATIVE_CLASS(12i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_DECORATIVE_CLASS {}
@@ -3246,56 +3290,56 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_DECORATIVE_CLASS {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_DECORATIVE_TOPOLOGY(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_ANY: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_NO_FIT: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_STANDARD: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_SQUARE: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_MULTIPLE_SEGMENT: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_ART_DECO: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_UNEVEN_WEIGHTING: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_DIVERSE_ARMS: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_DIVERSE_FORMS: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_LOMBARDIC_FORMS: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_UPPER_CASE_IN_LOWER_CASE:
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY = DWRITE_PANOSE_DECORATIVE_TOPOLOGY(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_IMPLIED_TOPOLOGY: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_HORSESHOE_E_AND_A: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(12i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_CURSIVE: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(13i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_BLACKLETTER: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(14i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_DECORATIVE_TOPOLOGY_SWASH_VARIANCE: DWRITE_PANOSE_DECORATIVE_TOPOLOGY =
     DWRITE_PANOSE_DECORATIVE_TOPOLOGY(15i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_DECORATIVE_TOPOLOGY {}
@@ -3319,23 +3363,23 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_DECORATIVE_TOPOLOGY {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_FAMILY(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FAMILY_ANY: DWRITE_PANOSE_FAMILY = DWRITE_PANOSE_FAMILY(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FAMILY_NO_FIT: DWRITE_PANOSE_FAMILY = DWRITE_PANOSE_FAMILY(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FAMILY_TEXT_DISPLAY: DWRITE_PANOSE_FAMILY = DWRITE_PANOSE_FAMILY(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FAMILY_SCRIPT: DWRITE_PANOSE_FAMILY = DWRITE_PANOSE_FAMILY(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FAMILY_DECORATIVE: DWRITE_PANOSE_FAMILY = DWRITE_PANOSE_FAMILY(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FAMILY_SYMBOL: DWRITE_PANOSE_FAMILY = DWRITE_PANOSE_FAMILY(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FAMILY_PICTORIAL: DWRITE_PANOSE_FAMILY = DWRITE_PANOSE_FAMILY(5i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_FAMILY {}
 impl ::core::clone::Clone for DWRITE_PANOSE_FAMILY {
@@ -3358,25 +3402,25 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_FAMILY {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_FILL(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FILL_ANY: DWRITE_PANOSE_FILL = DWRITE_PANOSE_FILL(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FILL_NO_FIT: DWRITE_PANOSE_FILL = DWRITE_PANOSE_FILL(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FILL_STANDARD_SOLID_FILL: DWRITE_PANOSE_FILL = DWRITE_PANOSE_FILL(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FILL_NO_FILL: DWRITE_PANOSE_FILL = DWRITE_PANOSE_FILL(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FILL_PATTERNED_FILL: DWRITE_PANOSE_FILL = DWRITE_PANOSE_FILL(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FILL_COMPLEX_FILL: DWRITE_PANOSE_FILL = DWRITE_PANOSE_FILL(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FILL_SHAPED_FILL: DWRITE_PANOSE_FILL = DWRITE_PANOSE_FILL(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FILL_DRAWN_DISTRESSED: DWRITE_PANOSE_FILL = DWRITE_PANOSE_FILL(7i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_FILL {}
 impl ::core::clone::Clone for DWRITE_PANOSE_FILL {
@@ -3397,46 +3441,46 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_FILL {
         f.debug_tuple("DWRITE_PANOSE_FILL").field(&self.0).finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_FINIALS(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_ANY: DWRITE_PANOSE_FINIALS = DWRITE_PANOSE_FINIALS(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_NO_FIT: DWRITE_PANOSE_FINIALS = DWRITE_PANOSE_FINIALS(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_NONE_NO_LOOPS: DWRITE_PANOSE_FINIALS = DWRITE_PANOSE_FINIALS(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_NONE_CLOSED_LOOPS: DWRITE_PANOSE_FINIALS =
     DWRITE_PANOSE_FINIALS(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_NONE_OPEN_LOOPS: DWRITE_PANOSE_FINIALS =
     DWRITE_PANOSE_FINIALS(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_SHARP_NO_LOOPS: DWRITE_PANOSE_FINIALS = DWRITE_PANOSE_FINIALS(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_SHARP_CLOSED_LOOPS: DWRITE_PANOSE_FINIALS =
     DWRITE_PANOSE_FINIALS(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_SHARP_OPEN_LOOPS: DWRITE_PANOSE_FINIALS =
     DWRITE_PANOSE_FINIALS(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_TAPERED_NO_LOOPS: DWRITE_PANOSE_FINIALS =
     DWRITE_PANOSE_FINIALS(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_TAPERED_CLOSED_LOOPS: DWRITE_PANOSE_FINIALS =
     DWRITE_PANOSE_FINIALS(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_TAPERED_OPEN_LOOPS: DWRITE_PANOSE_FINIALS =
     DWRITE_PANOSE_FINIALS(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_ROUND_NO_LOOPS: DWRITE_PANOSE_FINIALS =
     DWRITE_PANOSE_FINIALS(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_ROUND_CLOSED_LOOPS: DWRITE_PANOSE_FINIALS =
     DWRITE_PANOSE_FINIALS(12i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_FINIALS_ROUND_OPEN_LOOPS: DWRITE_PANOSE_FINIALS =
     DWRITE_PANOSE_FINIALS(13i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_FINIALS {}
@@ -3460,55 +3504,55 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_FINIALS {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_LETTERFORM(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_ANY: DWRITE_PANOSE_LETTERFORM = DWRITE_PANOSE_LETTERFORM(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_NO_FIT: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_NORMAL_CONTACT: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_NORMAL_WEIGHTED: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_NORMAL_BOXED: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_NORMAL_FLATTENED: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_NORMAL_ROUNDED: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_NORMAL_OFF_CENTER: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_NORMAL_SQUARE: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_OBLIQUE_CONTACT: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_OBLIQUE_WEIGHTED: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_OBLIQUE_BOXED: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_OBLIQUE_FLATTENED: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(12i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_OBLIQUE_ROUNDED: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(13i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_OBLIQUE_OFF_CENTER: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(14i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LETTERFORM_OBLIQUE_SQUARE: DWRITE_PANOSE_LETTERFORM =
     DWRITE_PANOSE_LETTERFORM(15i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_LETTERFORM {}
@@ -3532,27 +3576,27 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_LETTERFORM {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_LINING(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LINING_ANY: DWRITE_PANOSE_LINING = DWRITE_PANOSE_LINING(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LINING_NO_FIT: DWRITE_PANOSE_LINING = DWRITE_PANOSE_LINING(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LINING_NONE: DWRITE_PANOSE_LINING = DWRITE_PANOSE_LINING(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LINING_INLINE: DWRITE_PANOSE_LINING = DWRITE_PANOSE_LINING(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LINING_OUTLINE: DWRITE_PANOSE_LINING = DWRITE_PANOSE_LINING(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LINING_ENGRAVED: DWRITE_PANOSE_LINING = DWRITE_PANOSE_LINING(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LINING_SHADOW: DWRITE_PANOSE_LINING = DWRITE_PANOSE_LINING(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LINING_RELIEF: DWRITE_PANOSE_LINING = DWRITE_PANOSE_LINING(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_LINING_BACKDROP: DWRITE_PANOSE_LINING = DWRITE_PANOSE_LINING(8i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_LINING {}
 impl ::core::clone::Clone for DWRITE_PANOSE_LINING {
@@ -3575,43 +3619,43 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_LINING {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_MIDLINE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_ANY: DWRITE_PANOSE_MIDLINE = DWRITE_PANOSE_MIDLINE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_NO_FIT: DWRITE_PANOSE_MIDLINE = DWRITE_PANOSE_MIDLINE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_STANDARD_TRIMMED: DWRITE_PANOSE_MIDLINE =
     DWRITE_PANOSE_MIDLINE(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_STANDARD_POINTED: DWRITE_PANOSE_MIDLINE =
     DWRITE_PANOSE_MIDLINE(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_STANDARD_SERIFED: DWRITE_PANOSE_MIDLINE =
     DWRITE_PANOSE_MIDLINE(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_HIGH_TRIMMED: DWRITE_PANOSE_MIDLINE = DWRITE_PANOSE_MIDLINE(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_HIGH_POINTED: DWRITE_PANOSE_MIDLINE = DWRITE_PANOSE_MIDLINE(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_HIGH_SERIFED: DWRITE_PANOSE_MIDLINE = DWRITE_PANOSE_MIDLINE(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_CONSTANT_TRIMMED: DWRITE_PANOSE_MIDLINE =
     DWRITE_PANOSE_MIDLINE(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_CONSTANT_POINTED: DWRITE_PANOSE_MIDLINE =
     DWRITE_PANOSE_MIDLINE(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_CONSTANT_SERIFED: DWRITE_PANOSE_MIDLINE =
     DWRITE_PANOSE_MIDLINE(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_LOW_TRIMMED: DWRITE_PANOSE_MIDLINE = DWRITE_PANOSE_MIDLINE(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_LOW_POINTED: DWRITE_PANOSE_MIDLINE = DWRITE_PANOSE_MIDLINE(12i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_MIDLINE_LOW_SERIFED: DWRITE_PANOSE_MIDLINE = DWRITE_PANOSE_MIDLINE(13i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_MIDLINE {}
 impl ::core::clone::Clone for DWRITE_PANOSE_MIDLINE {
@@ -3634,37 +3678,37 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_MIDLINE {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_PROPORTION(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_PROPORTION_ANY: DWRITE_PANOSE_PROPORTION = DWRITE_PANOSE_PROPORTION(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_PROPORTION_NO_FIT: DWRITE_PANOSE_PROPORTION =
     DWRITE_PANOSE_PROPORTION(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_PROPORTION_OLD_STYLE: DWRITE_PANOSE_PROPORTION =
     DWRITE_PANOSE_PROPORTION(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_PROPORTION_MODERN: DWRITE_PANOSE_PROPORTION =
     DWRITE_PANOSE_PROPORTION(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_PROPORTION_EVEN_WIDTH: DWRITE_PANOSE_PROPORTION =
     DWRITE_PANOSE_PROPORTION(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_PROPORTION_EXPANDED: DWRITE_PANOSE_PROPORTION =
     DWRITE_PANOSE_PROPORTION(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_PROPORTION_CONDENSED: DWRITE_PANOSE_PROPORTION =
     DWRITE_PANOSE_PROPORTION(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_PROPORTION_VERY_EXPANDED: DWRITE_PANOSE_PROPORTION =
     DWRITE_PANOSE_PROPORTION(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_PROPORTION_VERY_CONDENSED: DWRITE_PANOSE_PROPORTION =
     DWRITE_PANOSE_PROPORTION(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_PROPORTION_MONOSPACED: DWRITE_PANOSE_PROPORTION =
     DWRITE_PANOSE_PROPORTION(9i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_PROPORTION {}
@@ -3688,50 +3732,50 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_PROPORTION {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_SCRIPT_FORM(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_ANY: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_NO_FIT: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_NO_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_SOME_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_MORE_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_UPRIGHT_EXTREME_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_NO_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_SOME_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_MORE_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_OBLIQUE_EXTREME_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_NO_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_SOME_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_MORE_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(12i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_FORM_EXAGGERATED_EXTREME_WRAPPING: DWRITE_PANOSE_SCRIPT_FORM =
     DWRITE_PANOSE_SCRIPT_FORM(13i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_SCRIPT_FORM {}
@@ -3755,41 +3799,41 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_SCRIPT_FORM {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_SCRIPT_TOPOLOGY(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_TOPOLOGY_ANY: DWRITE_PANOSE_SCRIPT_TOPOLOGY =
     DWRITE_PANOSE_SCRIPT_TOPOLOGY(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_TOPOLOGY_NO_FIT: DWRITE_PANOSE_SCRIPT_TOPOLOGY =
     DWRITE_PANOSE_SCRIPT_TOPOLOGY(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_DISCONNECTED: DWRITE_PANOSE_SCRIPT_TOPOLOGY =
     DWRITE_PANOSE_SCRIPT_TOPOLOGY(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_TRAILING: DWRITE_PANOSE_SCRIPT_TOPOLOGY =
     DWRITE_PANOSE_SCRIPT_TOPOLOGY(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_TOPOLOGY_ROMAN_CONNECTED: DWRITE_PANOSE_SCRIPT_TOPOLOGY =
     DWRITE_PANOSE_SCRIPT_TOPOLOGY(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_DISCONNECTED: DWRITE_PANOSE_SCRIPT_TOPOLOGY =
     DWRITE_PANOSE_SCRIPT_TOPOLOGY(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_TRAILING: DWRITE_PANOSE_SCRIPT_TOPOLOGY =
     DWRITE_PANOSE_SCRIPT_TOPOLOGY(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_TOPOLOGY_CURSIVE_CONNECTED: DWRITE_PANOSE_SCRIPT_TOPOLOGY =
     DWRITE_PANOSE_SCRIPT_TOPOLOGY(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_DISCONNECTED: DWRITE_PANOSE_SCRIPT_TOPOLOGY =
     DWRITE_PANOSE_SCRIPT_TOPOLOGY(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_TRAILING: DWRITE_PANOSE_SCRIPT_TOPOLOGY =
     DWRITE_PANOSE_SCRIPT_TOPOLOGY(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SCRIPT_TOPOLOGY_BLACKLETTER_CONNECTED: DWRITE_PANOSE_SCRIPT_TOPOLOGY =
     DWRITE_PANOSE_SCRIPT_TOPOLOGY(10i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_SCRIPT_TOPOLOGY {}
@@ -3813,65 +3857,65 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_SCRIPT_TOPOLOGY {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_SERIF_STYLE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_ANY: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_NO_FIT: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_COVE: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_OBTUSE_COVE: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_SQUARE_COVE: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_OBTUSE_SQUARE_COVE: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_SQUARE: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_THIN: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_OVAL: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_EXAGGERATED: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_TRIANGLE: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_NORMAL_SANS: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_OBTUSE_SANS: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(12i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_PERPENDICULAR_SANS: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(13i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_FLARED: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(14i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_ROUNDED: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(15i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_SCRIPT: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(16i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_PERP_SANS: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(13i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SERIF_STYLE_BONE: DWRITE_PANOSE_SERIF_STYLE =
     DWRITE_PANOSE_SERIF_STYLE(8i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_SERIF_STYLE {}
@@ -3895,18 +3939,18 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_SERIF_STYLE {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_SPACING(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SPACING_ANY: DWRITE_PANOSE_SPACING = DWRITE_PANOSE_SPACING(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SPACING_NO_FIT: DWRITE_PANOSE_SPACING = DWRITE_PANOSE_SPACING(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SPACING_PROPORTIONAL_SPACED: DWRITE_PANOSE_SPACING =
     DWRITE_PANOSE_SPACING(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SPACING_MONOSPACED: DWRITE_PANOSE_SPACING = DWRITE_PANOSE_SPACING(3i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_SPACING {}
 impl ::core::clone::Clone for DWRITE_PANOSE_SPACING {
@@ -3929,41 +3973,41 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_SPACING {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_STROKE_VARIATION(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_STROKE_VARIATION_ANY: DWRITE_PANOSE_STROKE_VARIATION =
     DWRITE_PANOSE_STROKE_VARIATION(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_STROKE_VARIATION_NO_FIT: DWRITE_PANOSE_STROKE_VARIATION =
     DWRITE_PANOSE_STROKE_VARIATION(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_STROKE_VARIATION_NO_VARIATION: DWRITE_PANOSE_STROKE_VARIATION =
     DWRITE_PANOSE_STROKE_VARIATION(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_DIAGONAL: DWRITE_PANOSE_STROKE_VARIATION =
     DWRITE_PANOSE_STROKE_VARIATION(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_TRANSITIONAL: DWRITE_PANOSE_STROKE_VARIATION =
     DWRITE_PANOSE_STROKE_VARIATION(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_VERTICAL: DWRITE_PANOSE_STROKE_VARIATION =
     DWRITE_PANOSE_STROKE_VARIATION(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_STROKE_VARIATION_GRADUAL_HORIZONTAL: DWRITE_PANOSE_STROKE_VARIATION =
     DWRITE_PANOSE_STROKE_VARIATION(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_STROKE_VARIATION_RAPID_VERTICAL: DWRITE_PANOSE_STROKE_VARIATION =
     DWRITE_PANOSE_STROKE_VARIATION(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_STROKE_VARIATION_RAPID_HORIZONTAL: DWRITE_PANOSE_STROKE_VARIATION =
     DWRITE_PANOSE_STROKE_VARIATION(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_STROKE_VARIATION_INSTANT_VERTICAL: DWRITE_PANOSE_STROKE_VARIATION =
     DWRITE_PANOSE_STROKE_VARIATION(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_STROKE_VARIATION_INSTANT_HORIZONTAL: DWRITE_PANOSE_STROKE_VARIATION =
     DWRITE_PANOSE_STROKE_VARIATION(10i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_STROKE_VARIATION {}
@@ -3987,38 +4031,38 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_STROKE_VARIATION {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_SYMBOL_ASPECT_RATIO(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_ANY: DWRITE_PANOSE_SYMBOL_ASPECT_RATIO =
     DWRITE_PANOSE_SYMBOL_ASPECT_RATIO(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_FIT: DWRITE_PANOSE_SYMBOL_ASPECT_RATIO =
     DWRITE_PANOSE_SYMBOL_ASPECT_RATIO(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NO_WIDTH: DWRITE_PANOSE_SYMBOL_ASPECT_RATIO =
     DWRITE_PANOSE_SYMBOL_ASPECT_RATIO(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_EXCEPTIONALLY_WIDE: DWRITE_PANOSE_SYMBOL_ASPECT_RATIO =
     DWRITE_PANOSE_SYMBOL_ASPECT_RATIO(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_SUPER_WIDE: DWRITE_PANOSE_SYMBOL_ASPECT_RATIO =
     DWRITE_PANOSE_SYMBOL_ASPECT_RATIO(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_WIDE: DWRITE_PANOSE_SYMBOL_ASPECT_RATIO =
     DWRITE_PANOSE_SYMBOL_ASPECT_RATIO(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_WIDE: DWRITE_PANOSE_SYMBOL_ASPECT_RATIO =
     DWRITE_PANOSE_SYMBOL_ASPECT_RATIO(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NORMAL: DWRITE_PANOSE_SYMBOL_ASPECT_RATIO =
     DWRITE_PANOSE_SYMBOL_ASPECT_RATIO(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_NARROW: DWRITE_PANOSE_SYMBOL_ASPECT_RATIO =
     DWRITE_PANOSE_SYMBOL_ASPECT_RATIO(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_ASPECT_RATIO_VERY_NARROW: DWRITE_PANOSE_SYMBOL_ASPECT_RATIO =
     DWRITE_PANOSE_SYMBOL_ASPECT_RATIO(9i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_SYMBOL_ASPECT_RATIO {}
@@ -4042,47 +4086,47 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_SYMBOL_ASPECT_RATIO {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_SYMBOL_KIND(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_ANY: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_NO_FIT: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_MONTAGES: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_PICTURES: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_SHAPES: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_SCIENTIFIC: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_MUSIC: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_EXPERT: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_PATTERNS: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_BOARDERS: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_ICONS: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_LOGOS: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_SYMBOL_KIND_INDUSTRY_SPECIFIC: DWRITE_PANOSE_SYMBOL_KIND =
     DWRITE_PANOSE_SYMBOL_KIND(12i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_SYMBOL_KIND {}
@@ -4106,31 +4150,31 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_SYMBOL_KIND {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_TOOL_KIND(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_TOOL_KIND_ANY: DWRITE_PANOSE_TOOL_KIND = DWRITE_PANOSE_TOOL_KIND(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_TOOL_KIND_NO_FIT: DWRITE_PANOSE_TOOL_KIND = DWRITE_PANOSE_TOOL_KIND(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_TOOL_KIND_FLAT_NIB: DWRITE_PANOSE_TOOL_KIND = DWRITE_PANOSE_TOOL_KIND(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_TOOL_KIND_PRESSURE_POINT: DWRITE_PANOSE_TOOL_KIND =
     DWRITE_PANOSE_TOOL_KIND(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_TOOL_KIND_ENGRAVED: DWRITE_PANOSE_TOOL_KIND = DWRITE_PANOSE_TOOL_KIND(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_TOOL_KIND_BALL: DWRITE_PANOSE_TOOL_KIND = DWRITE_PANOSE_TOOL_KIND(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_TOOL_KIND_BRUSH: DWRITE_PANOSE_TOOL_KIND = DWRITE_PANOSE_TOOL_KIND(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_TOOL_KIND_ROUGH: DWRITE_PANOSE_TOOL_KIND = DWRITE_PANOSE_TOOL_KIND(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_TOOL_KIND_FELT_PEN_BRUSH_TIP: DWRITE_PANOSE_TOOL_KIND =
     DWRITE_PANOSE_TOOL_KIND(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_TOOL_KIND_WILD_BRUSH: DWRITE_PANOSE_TOOL_KIND =
     DWRITE_PANOSE_TOOL_KIND(9i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_TOOL_KIND {}
@@ -4154,35 +4198,35 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_TOOL_KIND {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_WEIGHT(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_ANY: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_NO_FIT: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_VERY_LIGHT: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_LIGHT: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_THIN: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_BOOK: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_MEDIUM: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_DEMI: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_BOLD: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(8i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_HEAVY: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(9i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_BLACK: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(10i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_EXTRA_BLACK: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(11i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_WEIGHT_NORD: DWRITE_PANOSE_WEIGHT = DWRITE_PANOSE_WEIGHT(11i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_WEIGHT {}
 impl ::core::clone::Clone for DWRITE_PANOSE_WEIGHT {
@@ -4205,23 +4249,23 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_WEIGHT {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_XASCENT(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XASCENT_ANY: DWRITE_PANOSE_XASCENT = DWRITE_PANOSE_XASCENT(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XASCENT_NO_FIT: DWRITE_PANOSE_XASCENT = DWRITE_PANOSE_XASCENT(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XASCENT_VERY_LOW: DWRITE_PANOSE_XASCENT = DWRITE_PANOSE_XASCENT(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XASCENT_LOW: DWRITE_PANOSE_XASCENT = DWRITE_PANOSE_XASCENT(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XASCENT_MEDIUM: DWRITE_PANOSE_XASCENT = DWRITE_PANOSE_XASCENT(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XASCENT_HIGH: DWRITE_PANOSE_XASCENT = DWRITE_PANOSE_XASCENT(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XASCENT_VERY_HIGH: DWRITE_PANOSE_XASCENT = DWRITE_PANOSE_XASCENT(6i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_XASCENT {}
 impl ::core::clone::Clone for DWRITE_PANOSE_XASCENT {
@@ -4244,31 +4288,31 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_XASCENT {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PANOSE_XHEIGHT(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XHEIGHT_ANY: DWRITE_PANOSE_XHEIGHT = DWRITE_PANOSE_XHEIGHT(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XHEIGHT_NO_FIT: DWRITE_PANOSE_XHEIGHT = DWRITE_PANOSE_XHEIGHT(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XHEIGHT_CONSTANT_SMALL: DWRITE_PANOSE_XHEIGHT = DWRITE_PANOSE_XHEIGHT(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XHEIGHT_CONSTANT_STANDARD: DWRITE_PANOSE_XHEIGHT =
     DWRITE_PANOSE_XHEIGHT(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XHEIGHT_CONSTANT_LARGE: DWRITE_PANOSE_XHEIGHT = DWRITE_PANOSE_XHEIGHT(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XHEIGHT_DUCKING_SMALL: DWRITE_PANOSE_XHEIGHT = DWRITE_PANOSE_XHEIGHT(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XHEIGHT_DUCKING_STANDARD: DWRITE_PANOSE_XHEIGHT =
     DWRITE_PANOSE_XHEIGHT(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XHEIGHT_DUCKING_LARGE: DWRITE_PANOSE_XHEIGHT = DWRITE_PANOSE_XHEIGHT(7i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XHEIGHT_CONSTANT_STD: DWRITE_PANOSE_XHEIGHT = DWRITE_PANOSE_XHEIGHT(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PANOSE_XHEIGHT_DUCKING_STD: DWRITE_PANOSE_XHEIGHT = DWRITE_PANOSE_XHEIGHT(6i32);
 impl ::core::marker::Copy for DWRITE_PANOSE_XHEIGHT {}
 impl ::core::clone::Clone for DWRITE_PANOSE_XHEIGHT {
@@ -4291,17 +4335,17 @@ impl ::core::fmt::Debug for DWRITE_PANOSE_XHEIGHT {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PARAGRAPH_ALIGNMENT(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PARAGRAPH_ALIGNMENT_NEAR: DWRITE_PARAGRAPH_ALIGNMENT =
     DWRITE_PARAGRAPH_ALIGNMENT(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PARAGRAPH_ALIGNMENT_FAR: DWRITE_PARAGRAPH_ALIGNMENT =
     DWRITE_PARAGRAPH_ALIGNMENT(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PARAGRAPH_ALIGNMENT_CENTER: DWRITE_PARAGRAPH_ALIGNMENT =
     DWRITE_PARAGRAPH_ALIGNMENT(2i32);
 impl ::core::marker::Copy for DWRITE_PARAGRAPH_ALIGNMENT {}
@@ -4325,15 +4369,15 @@ impl ::core::fmt::Debug for DWRITE_PARAGRAPH_ALIGNMENT {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_PIXEL_GEOMETRY(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PIXEL_GEOMETRY_FLAT: DWRITE_PIXEL_GEOMETRY = DWRITE_PIXEL_GEOMETRY(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PIXEL_GEOMETRY_RGB: DWRITE_PIXEL_GEOMETRY = DWRITE_PIXEL_GEOMETRY(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_PIXEL_GEOMETRY_BGR: DWRITE_PIXEL_GEOMETRY = DWRITE_PIXEL_GEOMETRY(2i32);
 impl ::core::marker::Copy for DWRITE_PIXEL_GEOMETRY {}
 impl ::core::clone::Clone for DWRITE_PIXEL_GEOMETRY {
@@ -4356,20 +4400,20 @@ impl ::core::fmt::Debug for DWRITE_PIXEL_GEOMETRY {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_READING_DIRECTION(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_READING_DIRECTION_LEFT_TO_RIGHT: DWRITE_READING_DIRECTION =
     DWRITE_READING_DIRECTION(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_READING_DIRECTION_RIGHT_TO_LEFT: DWRITE_READING_DIRECTION =
     DWRITE_READING_DIRECTION(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_READING_DIRECTION_TOP_TO_BOTTOM: DWRITE_READING_DIRECTION =
     DWRITE_READING_DIRECTION(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_READING_DIRECTION_BOTTOM_TO_TOP: DWRITE_READING_DIRECTION =
     DWRITE_READING_DIRECTION(3i32);
 impl ::core::marker::Copy for DWRITE_READING_DIRECTION {}
@@ -4393,35 +4437,35 @@ impl ::core::fmt::Debug for DWRITE_READING_DIRECTION {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_RENDERING_MODE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE_DEFAULT: DWRITE_RENDERING_MODE = DWRITE_RENDERING_MODE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE_ALIASED: DWRITE_RENDERING_MODE = DWRITE_RENDERING_MODE(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE_GDI_CLASSIC: DWRITE_RENDERING_MODE = DWRITE_RENDERING_MODE(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE_GDI_NATURAL: DWRITE_RENDERING_MODE = DWRITE_RENDERING_MODE(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE_NATURAL: DWRITE_RENDERING_MODE = DWRITE_RENDERING_MODE(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE_NATURAL_SYMMETRIC: DWRITE_RENDERING_MODE =
     DWRITE_RENDERING_MODE(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE_OUTLINE: DWRITE_RENDERING_MODE = DWRITE_RENDERING_MODE(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE_CLEARTYPE_GDI_CLASSIC: DWRITE_RENDERING_MODE =
     DWRITE_RENDERING_MODE(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE_CLEARTYPE_GDI_NATURAL: DWRITE_RENDERING_MODE =
     DWRITE_RENDERING_MODE(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE_CLEARTYPE_NATURAL: DWRITE_RENDERING_MODE =
     DWRITE_RENDERING_MODE(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE_CLEARTYPE_NATURAL_SYMMETRIC: DWRITE_RENDERING_MODE =
     DWRITE_RENDERING_MODE(5i32);
 impl ::core::marker::Copy for DWRITE_RENDERING_MODE {}
@@ -4445,26 +4489,26 @@ impl ::core::fmt::Debug for DWRITE_RENDERING_MODE {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_RENDERING_MODE1(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE1_DEFAULT: DWRITE_RENDERING_MODE1 = DWRITE_RENDERING_MODE1(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE1_ALIASED: DWRITE_RENDERING_MODE1 = DWRITE_RENDERING_MODE1(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE1_GDI_CLASSIC: DWRITE_RENDERING_MODE1 = DWRITE_RENDERING_MODE1(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE1_GDI_NATURAL: DWRITE_RENDERING_MODE1 = DWRITE_RENDERING_MODE1(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE1_NATURAL: DWRITE_RENDERING_MODE1 = DWRITE_RENDERING_MODE1(4i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE1_NATURAL_SYMMETRIC: DWRITE_RENDERING_MODE1 =
     DWRITE_RENDERING_MODE1(5i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE1_OUTLINE: DWRITE_RENDERING_MODE1 = DWRITE_RENDERING_MODE1(6i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_RENDERING_MODE1_NATURAL_SYMMETRIC_DOWNSAMPLED: DWRITE_RENDERING_MODE1 =
     DWRITE_RENDERING_MODE1(7i32);
 impl ::core::marker::Copy for DWRITE_RENDERING_MODE1 {}
@@ -4489,7 +4533,7 @@ impl ::core::fmt::Debug for DWRITE_RENDERING_MODE1 {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_SCRIPT_ANALYSIS {
     pub script: u16,
     pub shapes: DWRITE_SCRIPT_SHAPES,
@@ -4529,7 +4573,7 @@ impl ::core::default::Default for DWRITE_SCRIPT_ANALYSIS {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_SCRIPT_PROPERTIES {
     pub isoScriptCode: u32,
     pub isoScriptNumber: u32,
@@ -4574,13 +4618,13 @@ impl ::core::default::Default for DWRITE_SCRIPT_PROPERTIES {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_SCRIPT_SHAPES(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_SCRIPT_SHAPES_DEFAULT: DWRITE_SCRIPT_SHAPES = DWRITE_SCRIPT_SHAPES(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_SCRIPT_SHAPES_NO_VISUAL: DWRITE_SCRIPT_SHAPES = DWRITE_SCRIPT_SHAPES(1i32);
 impl ::core::marker::Copy for DWRITE_SCRIPT_SHAPES {}
 impl ::core::clone::Clone for DWRITE_SCRIPT_SHAPES {
@@ -4604,7 +4648,7 @@ impl ::core::fmt::Debug for DWRITE_SCRIPT_SHAPES {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_SHAPING_GLYPH_PROPERTIES {
     pub _bitfield: u16,
 }
@@ -4642,7 +4686,7 @@ impl ::core::default::Default for DWRITE_SHAPING_GLYPH_PROPERTIES {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_SHAPING_TEXT_PROPERTIES {
     pub _bitfield: u16,
 }
@@ -4679,10 +4723,10 @@ impl ::core::default::Default for DWRITE_SHAPING_TEXT_PROPERTIES {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_STANDARD_FONT_AXIS_COUNT: u32 = 5u32;
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_STRIKETHROUGH {
     pub width: f32,
     pub thickness: f32,
@@ -4731,13 +4775,13 @@ impl ::core::default::Default for DWRITE_STRIKETHROUGH {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_TEXTURE_TYPE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_TEXTURE_ALIASED_1x1: DWRITE_TEXTURE_TYPE = DWRITE_TEXTURE_TYPE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_TEXTURE_CLEARTYPE_3x1: DWRITE_TEXTURE_TYPE = DWRITE_TEXTURE_TYPE(1i32);
 impl ::core::marker::Copy for DWRITE_TEXTURE_TYPE {}
 impl ::core::clone::Clone for DWRITE_TEXTURE_TYPE {
@@ -4758,17 +4802,17 @@ impl ::core::fmt::Debug for DWRITE_TEXTURE_TYPE {
         f.debug_tuple("DWRITE_TEXTURE_TYPE").field(&self.0).finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_TEXT_ALIGNMENT(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_TEXT_ALIGNMENT_LEADING: DWRITE_TEXT_ALIGNMENT = DWRITE_TEXT_ALIGNMENT(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_TEXT_ALIGNMENT_TRAILING: DWRITE_TEXT_ALIGNMENT = DWRITE_TEXT_ALIGNMENT(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_TEXT_ALIGNMENT_CENTER: DWRITE_TEXT_ALIGNMENT = DWRITE_TEXT_ALIGNMENT(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_TEXT_ALIGNMENT_JUSTIFIED: DWRITE_TEXT_ALIGNMENT = DWRITE_TEXT_ALIGNMENT(3i32);
 impl ::core::marker::Copy for DWRITE_TEXT_ALIGNMENT {}
 impl ::core::clone::Clone for DWRITE_TEXT_ALIGNMENT {
@@ -4791,14 +4835,14 @@ impl ::core::fmt::Debug for DWRITE_TEXT_ALIGNMENT {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_TEXT_ANTIALIAS_MODE(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_TEXT_ANTIALIAS_MODE_CLEARTYPE: DWRITE_TEXT_ANTIALIAS_MODE =
     DWRITE_TEXT_ANTIALIAS_MODE(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_TEXT_ANTIALIAS_MODE_GRAYSCALE: DWRITE_TEXT_ANTIALIAS_MODE =
     DWRITE_TEXT_ANTIALIAS_MODE(1i32);
 impl ::core::marker::Copy for DWRITE_TEXT_ANTIALIAS_MODE {}
@@ -4823,7 +4867,7 @@ impl ::core::fmt::Debug for DWRITE_TEXT_ANTIALIAS_MODE {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_TEXT_METRICS {
     pub left: f32,
     pub top: f32,
@@ -4880,7 +4924,7 @@ impl ::core::default::Default for DWRITE_TEXT_METRICS {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_TEXT_METRICS1 {
     pub Base: DWRITE_TEXT_METRICS,
     pub heightIncludingTrailingWhitespace: f32,
@@ -4923,7 +4967,7 @@ impl ::core::default::Default for DWRITE_TEXT_METRICS1 {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_TEXT_RANGE {
     pub startPosition: u32,
     pub length: u32,
@@ -4963,7 +5007,7 @@ impl ::core::default::Default for DWRITE_TEXT_RANGE {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_TRIMMING {
     pub granularity: DWRITE_TRIMMING_GRANULARITY,
     pub delimiter: u32,
@@ -5004,17 +5048,17 @@ impl ::core::default::Default for DWRITE_TRIMMING {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_TRIMMING_GRANULARITY(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_TRIMMING_GRANULARITY_NONE: DWRITE_TRIMMING_GRANULARITY =
     DWRITE_TRIMMING_GRANULARITY(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_TRIMMING_GRANULARITY_CHARACTER: DWRITE_TRIMMING_GRANULARITY =
     DWRITE_TRIMMING_GRANULARITY(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_TRIMMING_GRANULARITY_WORD: DWRITE_TRIMMING_GRANULARITY =
     DWRITE_TRIMMING_GRANULARITY(2i32);
 impl ::core::marker::Copy for DWRITE_TRIMMING_GRANULARITY {}
@@ -5039,7 +5083,7 @@ impl ::core::fmt::Debug for DWRITE_TRIMMING_GRANULARITY {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_TYPOGRAPHIC_FEATURES {
     pub features: *mut DWRITE_FONT_FEATURE,
     pub featureCount: u32,
@@ -5079,7 +5123,7 @@ impl ::core::default::Default for DWRITE_TYPOGRAPHIC_FEATURES {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_UNDERLINE {
     pub width: f32,
     pub thickness: f32,
@@ -5131,7 +5175,7 @@ impl ::core::default::Default for DWRITE_UNDERLINE {
     }
 }
 #[repr(C)]
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub struct DWRITE_UNICODE_RANGE {
     pub first: u32,
     pub last: u32,
@@ -5170,14 +5214,14 @@ impl ::core::default::Default for DWRITE_UNICODE_RANGE {
         unsafe { ::core::mem::zeroed() }
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_VERTICAL_GLYPH_ORIENTATION(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_VERTICAL_GLYPH_ORIENTATION_DEFAULT: DWRITE_VERTICAL_GLYPH_ORIENTATION =
     DWRITE_VERTICAL_GLYPH_ORIENTATION(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_VERTICAL_GLYPH_ORIENTATION_STACKED: DWRITE_VERTICAL_GLYPH_ORIENTATION =
     DWRITE_VERTICAL_GLYPH_ORIENTATION(1i32);
 impl ::core::marker::Copy for DWRITE_VERTICAL_GLYPH_ORIENTATION {}
@@ -5201,19 +5245,19 @@ impl ::core::fmt::Debug for DWRITE_VERTICAL_GLYPH_ORIENTATION {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 #[derive(:: core :: cmp :: PartialEq, :: core :: cmp :: Eq)]
 pub struct DWRITE_WORD_WRAPPING(pub i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_WORD_WRAPPING_WRAP: DWRITE_WORD_WRAPPING = DWRITE_WORD_WRAPPING(0i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_WORD_WRAPPING_NO_WRAP: DWRITE_WORD_WRAPPING = DWRITE_WORD_WRAPPING(1i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_WORD_WRAPPING_EMERGENCY_BREAK: DWRITE_WORD_WRAPPING = DWRITE_WORD_WRAPPING(2i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_WORD_WRAPPING_WHOLE_WORD: DWRITE_WORD_WRAPPING = DWRITE_WORD_WRAPPING(3i32);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const DWRITE_WORD_WRAPPING_CHARACTER: DWRITE_WORD_WRAPPING = DWRITE_WORD_WRAPPING(4i32);
 impl ::core::marker::Copy for DWRITE_WORD_WRAPPING {}
 impl ::core::clone::Clone for DWRITE_WORD_WRAPPING {
@@ -5236,21 +5280,48 @@ impl ::core::fmt::Debug for DWRITE_WORD_WRAPPING {
             .finish()
     }
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
+#[inline]
+pub unsafe fn DWriteCoreCreateFactory(
+    factorytype: DWRITE_FACTORY_TYPE,
+    iid: *const ::windows::core::GUID,
+) -> ::windows::core::Result<::windows::core::IUnknown> {
+    #[cfg(windows)]
+    {
+        #[link(name = "dwritecore")]
+        extern "system" {
+            fn DWriteCoreCreateFactory(
+                factorytype: DWRITE_FACTORY_TYPE,
+                iid: *const ::windows::core::GUID,
+                factory: *mut *mut ::core::ffi::c_void,
+            ) -> ::windows::core::HRESULT;
+        }
+        let mut result__ = ::core::mem::MaybeUninit::<*mut ::core::ffi::c_void>::zeroed();
+        DWriteCoreCreateFactory(
+            ::core::mem::transmute(factorytype),
+            ::core::mem::transmute(iid),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<::windows::core::IUnknown>(result__)
+    }
+    #[cfg(not(windows))]
+    unimplemented!("Unsupported target OS");
+}
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 pub const FACILITY_DWRITE: u32 = 2200u32;
 #[repr(C)]
 pub struct ID2D1SimplifiedGeometrySink(pub u8);
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteAsyncResult(::windows::core::IUnknown);
 impl IDWriteAsyncResult {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWaitHandle(&self) -> ::windows::Win32::Foundation::HANDLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetWaitHandle)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetResult(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).GetResult)(::windows::core::Interface::as_raw(
             self,
@@ -5309,11 +5380,11 @@ pub struct IDWriteAsyncResult_Vtbl {
     pub GetResult:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteBitmapRenderTarget(::windows::core::IUnknown);
 impl IDWriteBitmapRenderTarget {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawGlyphRun<
         'a,
         Param4: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
@@ -5339,19 +5410,19 @@ impl IDWriteBitmapRenderTarget {
         )
         .from_abi::<::windows::Win32::Foundation::RECT>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMemoryDC(&self) -> ::windows::Win32::Graphics::Gdi::HDC {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetMemoryDC)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPixelsPerDip(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetPixelsPerDip)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetPixelsPerDip(&self, pixelsperdip: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).SetPixelsPerDip)(
             ::windows::core::Interface::as_raw(self),
@@ -5359,7 +5430,7 @@ impl IDWriteBitmapRenderTarget {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCurrentTransform(&self) -> ::windows::core::Result<DWRITE_MATRIX> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_MATRIX>::zeroed();
         (::windows::core::Interface::vtable(self).GetCurrentTransform)(
@@ -5368,7 +5439,7 @@ impl IDWriteBitmapRenderTarget {
         )
         .from_abi::<DWRITE_MATRIX>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetCurrentTransform(
         &self,
         transform: *const DWRITE_MATRIX,
@@ -5379,7 +5450,7 @@ impl IDWriteBitmapRenderTarget {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSize(&self) -> ::windows::core::Result<::windows::Win32::Foundation::SIZE> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::Win32::Foundation::SIZE>::zeroed();
         (::windows::core::Interface::vtable(self).GetSize)(
@@ -5388,7 +5459,7 @@ impl IDWriteBitmapRenderTarget {
         )
         .from_abi::<::windows::Win32::Foundation::SIZE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Resize(&self, width: u32, height: u32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).Resize)(
             ::windows::core::Interface::as_raw(self),
@@ -5483,11 +5554,11 @@ pub struct IDWriteBitmapRenderTarget_Vtbl {
         height: u32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteBitmapRenderTarget1(::windows::core::IUnknown);
 impl IDWriteBitmapRenderTarget1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawGlyphRun<
         'a,
         Param4: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
@@ -5513,7 +5584,7 @@ impl IDWriteBitmapRenderTarget1 {
         )
         .from_abi::<::windows::Win32::Foundation::RECT>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMemoryDC(&self) -> ::windows::Win32::Graphics::Gdi::HDC {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -5521,7 +5592,7 @@ impl IDWriteBitmapRenderTarget1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPixelsPerDip(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -5529,7 +5600,7 @@ impl IDWriteBitmapRenderTarget1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetPixelsPerDip(&self, pixelsperdip: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -5539,7 +5610,7 @@ impl IDWriteBitmapRenderTarget1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCurrentTransform(&self) -> ::windows::core::Result<DWRITE_MATRIX> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_MATRIX>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -5550,7 +5621,7 @@ impl IDWriteBitmapRenderTarget1 {
         )
         .from_abi::<DWRITE_MATRIX>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetCurrentTransform(
         &self,
         transform: *const DWRITE_MATRIX,
@@ -5563,7 +5634,7 @@ impl IDWriteBitmapRenderTarget1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSize(&self) -> ::windows::core::Result<::windows::Win32::Foundation::SIZE> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::Win32::Foundation::SIZE>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetSize)(
@@ -5572,7 +5643,7 @@ impl IDWriteBitmapRenderTarget1 {
         )
         .from_abi::<::windows::Win32::Foundation::SIZE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Resize(&self, width: u32, height: u32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).base__.Resize)(
             ::windows::core::Interface::as_raw(self),
@@ -5581,14 +5652,14 @@ impl IDWriteBitmapRenderTarget1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAntialiasMode(&self) -> DWRITE_TEXT_ANTIALIAS_MODE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetTextAntialiasMode)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTextAntialiasMode(
         &self,
         antialiasmode: DWRITE_TEXT_ANTIALIAS_MODE,
@@ -5678,11 +5749,252 @@ pub struct IDWriteBitmapRenderTarget1_Vtbl {
         antialiasmode: DWRITE_TEXT_ANTIALIAS_MODE,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
+#[repr(transparent)]
+pub struct IDWriteBitmapRenderTarget2(::windows::core::IUnknown);
+impl IDWriteBitmapRenderTarget2 {
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn DrawGlyphRun<
+        'a,
+        Param4: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
+    >(
+        &self,
+        baselineoriginx: f32,
+        baselineoriginy: f32,
+        measuringmode: ::windows::Win32::Graphics::DirectWrite::DWRITE_MEASURING_MODE,
+        glyphrun: *const DWRITE_GLYPH_RUN,
+        renderingparams: Param4,
+        textcolor: u32,
+    ) -> ::windows::core::Result<::windows::Win32::Foundation::RECT> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::Win32::Foundation::RECT>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .DrawGlyphRun)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(baselineoriginx),
+            ::core::mem::transmute(baselineoriginy),
+            ::core::mem::transmute(measuringmode),
+            ::core::mem::transmute(glyphrun),
+            renderingparams.into_param().abi(),
+            ::core::mem::transmute(textcolor),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<::windows::Win32::Foundation::RECT>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetMemoryDC(&self) -> ::windows::Win32::Graphics::Gdi::HDC {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .GetMemoryDC)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetPixelsPerDip(&self) -> f32 {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .GetPixelsPerDip)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn SetPixelsPerDip(&self, pixelsperdip: f32) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .SetPixelsPerDip)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(pixelsperdip),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetCurrentTransform(&self) -> ::windows::core::Result<DWRITE_MATRIX> {
+        let mut result__ = ::core::mem::MaybeUninit::<DWRITE_MATRIX>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .GetCurrentTransform)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<DWRITE_MATRIX>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn SetCurrentTransform(
+        &self,
+        transform: *const DWRITE_MATRIX,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .SetCurrentTransform)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(transform),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetSize(&self) -> ::windows::core::Result<::windows::Win32::Foundation::SIZE> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::Win32::Foundation::SIZE>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .GetSize)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<::windows::Win32::Foundation::SIZE>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn Resize(&self, width: u32, height: u32) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .Resize)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(width),
+            ::core::mem::transmute(height),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetTextAntialiasMode(&self) -> DWRITE_TEXT_ANTIALIAS_MODE {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .GetTextAntialiasMode)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn SetTextAntialiasMode(
+        &self,
+        antialiasmode: DWRITE_TEXT_ANTIALIAS_MODE,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .SetTextAntialiasMode)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(antialiasmode),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetBitmapData(&self) -> ::windows::core::Result<DWRITE_BITMAP_DATA_BGRA32> {
+        let mut result__ = ::core::mem::MaybeUninit::<DWRITE_BITMAP_DATA_BGRA32>::zeroed();
+        (::windows::core::Interface::vtable(self).GetBitmapData)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<DWRITE_BITMAP_DATA_BGRA32>(result__)
+    }
+}
+impl ::core::convert::From<IDWriteBitmapRenderTarget2> for ::windows::core::IUnknown {
+    fn from(value: IDWriteBitmapRenderTarget2) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteBitmapRenderTarget2> for ::windows::core::IUnknown {
+    fn from(value: &IDWriteBitmapRenderTarget2) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for IDWriteBitmapRenderTarget2 {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown>
+    for &'a IDWriteBitmapRenderTarget2
+{
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteBitmapRenderTarget2> for IDWriteBitmapRenderTarget {
+    fn from(value: IDWriteBitmapRenderTarget2) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteBitmapRenderTarget2> for IDWriteBitmapRenderTarget {
+    fn from(value: &IDWriteBitmapRenderTarget2) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteBitmapRenderTarget> for IDWriteBitmapRenderTarget2 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteBitmapRenderTarget> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteBitmapRenderTarget>
+    for &'a IDWriteBitmapRenderTarget2
+{
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteBitmapRenderTarget> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteBitmapRenderTarget2> for IDWriteBitmapRenderTarget1 {
+    fn from(value: IDWriteBitmapRenderTarget2) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteBitmapRenderTarget2> for IDWriteBitmapRenderTarget1 {
+    fn from(value: &IDWriteBitmapRenderTarget2) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteBitmapRenderTarget1> for IDWriteBitmapRenderTarget2 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteBitmapRenderTarget1> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteBitmapRenderTarget1>
+    for &'a IDWriteBitmapRenderTarget2
+{
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteBitmapRenderTarget1> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::clone::Clone for IDWriteBitmapRenderTarget2 {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for IDWriteBitmapRenderTarget2 {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for IDWriteBitmapRenderTarget2 {}
+impl ::core::fmt::Debug for IDWriteBitmapRenderTarget2 {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("IDWriteBitmapRenderTarget2")
+            .field(&self.0)
+            .finish()
+    }
+}
+unsafe impl ::windows::core::Interface for IDWriteBitmapRenderTarget2 {
+    type Vtable = IDWriteBitmapRenderTarget2_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xc553a742_fc01_44da_a66e_b8b9ed6c3995);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IDWriteBitmapRenderTarget2_Vtbl {
+    pub base__: IDWriteBitmapRenderTarget1_Vtbl,
+    pub GetBitmapData: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        bitmapdata: *mut DWRITE_BITMAP_DATA_BGRA32,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteColorGlyphRunEnumerator(::windows::core::IUnknown);
 impl IDWriteColorGlyphRunEnumerator {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn MoveNext(&self) -> ::windows::core::Result<::windows::Win32::Foundation::BOOL> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::Win32::Foundation::BOOL>::zeroed();
         (::windows::core::Interface::vtable(self).MoveNext)(
@@ -5691,7 +6003,7 @@ impl IDWriteColorGlyphRunEnumerator {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCurrentRun(&self) -> ::windows::core::Result<*mut DWRITE_COLOR_GLYPH_RUN> {
         let mut result__ = ::core::mem::MaybeUninit::<*mut DWRITE_COLOR_GLYPH_RUN>::zeroed();
         (::windows::core::Interface::vtable(self).GetCurrentRun)(
@@ -5761,11 +6073,11 @@ pub struct IDWriteColorGlyphRunEnumerator_Vtbl {
         colorglyphrun: *mut *mut DWRITE_COLOR_GLYPH_RUN,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteColorGlyphRunEnumerator1(::windows::core::IUnknown);
 impl IDWriteColorGlyphRunEnumerator1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn MoveNext(&self) -> ::windows::core::Result<::windows::Win32::Foundation::BOOL> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::Win32::Foundation::BOOL>::zeroed();
         (::windows::core::Interface::vtable(self).base__.MoveNext)(
@@ -5774,7 +6086,7 @@ impl IDWriteColorGlyphRunEnumerator1 {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCurrentRun(&self) -> ::windows::core::Result<*mut DWRITE_COLOR_GLYPH_RUN> {
         let mut result__ = ::core::mem::MaybeUninit::<*mut DWRITE_COLOR_GLYPH_RUN>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -5785,7 +6097,7 @@ impl IDWriteColorGlyphRunEnumerator1 {
         )
         .from_abi::<*mut DWRITE_COLOR_GLYPH_RUN>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCurrentRun2(&self) -> ::windows::core::Result<*mut DWRITE_COLOR_GLYPH_RUN1> {
         let mut result__ = ::core::mem::MaybeUninit::<*mut DWRITE_COLOR_GLYPH_RUN1>::zeroed();
         (::windows::core::Interface::vtable(self).GetCurrentRun2)(
@@ -5875,11 +6187,11 @@ pub struct IDWriteColorGlyphRunEnumerator1_Vtbl {
         colorglyphrun: *mut *mut DWRITE_COLOR_GLYPH_RUN1,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFactory(::windows::core::IUnknown);
 impl IDWriteFactory {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -5895,7 +6207,7 @@ impl IDWriteFactory {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -5915,7 +6227,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -5929,7 +6241,7 @@ impl IDWriteFactory {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -5943,7 +6255,7 @@ impl IDWriteFactory {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFileReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -5961,7 +6273,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontFileReference<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -5981,7 +6293,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         fontfacetype: DWRITE_FONT_FACE_TYPE,
@@ -6001,7 +6313,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateRenderingParams(&self) -> ::windows::core::Result<IDWriteRenderingParams> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateRenderingParams)(
@@ -6010,7 +6322,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateMonitorRenderingParams<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HMONITOR>,
@@ -6026,7 +6338,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams(
         &self,
         gamma: f32,
@@ -6047,7 +6359,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -6061,7 +6373,7 @@ impl IDWriteFactory {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -6075,7 +6387,7 @@ impl IDWriteFactory {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextFormat<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -6105,7 +6417,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteTextFormat>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTypography(&self) -> ::windows::core::Result<IDWriteTypography> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateTypography)(
@@ -6114,7 +6426,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteTypography>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiInterop(&self) -> ::windows::core::Result<IDWriteGdiInterop> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetGdiInterop)(
@@ -6123,7 +6435,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteGdiInterop>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -6146,7 +6458,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGdiCompatibleTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -6176,7 +6488,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateEllipsisTrimmingSign<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -6192,7 +6504,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteInlineObject>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextAnalyzer(&self) -> ::windows::core::Result<IDWriteTextAnalyzer> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateTextAnalyzer)(
@@ -6201,7 +6513,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteTextAnalyzer>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateNumberSubstitution<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -6222,7 +6534,7 @@ impl IDWriteFactory {
         )
         .from_abi::<IDWriteNumberSubstitution>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -6429,11 +6741,11 @@ pub struct IDWriteFactory_Vtbl {
         glyphrunanalysis: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFactory1(::windows::core::IUnknown);
 impl IDWriteFactory1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -6451,7 +6763,7 @@ impl IDWriteFactory1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -6473,7 +6785,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -6489,7 +6801,7 @@ impl IDWriteFactory1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -6505,7 +6817,7 @@ impl IDWriteFactory1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFileReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -6525,7 +6837,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontFileReference<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -6547,7 +6859,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         fontfacetype: DWRITE_FONT_FACE_TYPE,
@@ -6569,7 +6881,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateRenderingParams(&self) -> ::windows::core::Result<IDWriteRenderingParams> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -6580,7 +6892,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateMonitorRenderingParams<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HMONITOR>,
@@ -6598,7 +6910,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams(
         &self,
         gamma: f32,
@@ -6621,7 +6933,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -6637,7 +6949,7 @@ impl IDWriteFactory1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -6653,7 +6965,7 @@ impl IDWriteFactory1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextFormat<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -6685,7 +6997,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteTextFormat>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTypography(&self) -> ::windows::core::Result<IDWriteTypography> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -6696,7 +7008,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteTypography>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiInterop(&self) -> ::windows::core::Result<IDWriteGdiInterop> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -6707,7 +7019,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteGdiInterop>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -6732,7 +7044,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGdiCompatibleTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -6764,7 +7076,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateEllipsisTrimmingSign<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -6782,7 +7094,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteInlineObject>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextAnalyzer(&self) -> ::windows::core::Result<IDWriteTextAnalyzer> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -6793,7 +7105,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteTextAnalyzer>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateNumberSubstitution<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -6816,7 +7128,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteNumberSubstitution>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -6843,7 +7155,7 @@ impl IDWriteFactory1 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetEudcFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -6859,7 +7171,7 @@ impl IDWriteFactory1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams2(
         &self,
         gamma: f32,
@@ -6964,11 +7276,11 @@ pub struct IDWriteFactory1_Vtbl {
         renderingparams: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFactory2(::windows::core::IUnknown);
 impl IDWriteFactory2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -6987,7 +7299,7 @@ impl IDWriteFactory2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -7010,7 +7322,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -7027,7 +7339,7 @@ impl IDWriteFactory2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -7044,7 +7356,7 @@ impl IDWriteFactory2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFileReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -7065,7 +7377,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontFileReference<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -7088,7 +7400,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         fontfacetype: DWRITE_FONT_FACE_TYPE,
@@ -7111,7 +7423,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateRenderingParams(&self) -> ::windows::core::Result<IDWriteRenderingParams> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -7123,7 +7435,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateMonitorRenderingParams<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HMONITOR>,
@@ -7142,7 +7454,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams(
         &self,
         gamma: f32,
@@ -7166,7 +7478,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -7183,7 +7495,7 @@ impl IDWriteFactory2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -7200,7 +7512,7 @@ impl IDWriteFactory2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextFormat<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -7233,7 +7545,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteTextFormat>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTypography(&self) -> ::windows::core::Result<IDWriteTypography> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -7245,7 +7557,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteTypography>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiInterop(&self) -> ::windows::core::Result<IDWriteGdiInterop> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -7257,7 +7569,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteGdiInterop>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -7283,7 +7595,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGdiCompatibleTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -7316,7 +7628,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateEllipsisTrimmingSign<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -7335,7 +7647,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteInlineObject>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextAnalyzer(&self) -> ::windows::core::Result<IDWriteTextAnalyzer> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -7347,7 +7659,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteTextAnalyzer>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateNumberSubstitution<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -7371,7 +7683,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteNumberSubstitution>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -7399,7 +7711,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetEudcFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -7417,7 +7729,7 @@ impl IDWriteFactory2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams2(
         &self,
         gamma: f32,
@@ -7442,7 +7754,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteRenderingParams1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetSystemFontFallback)(
@@ -7451,7 +7763,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteFontFallback>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFallbackBuilder(
         &self,
     ) -> ::windows::core::Result<IDWriteFontFallbackBuilder> {
@@ -7462,7 +7774,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteFontFallbackBuilder>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TranslateColorGlyphRun(
         &self,
         baselineoriginx: f32,
@@ -7487,7 +7799,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteColorGlyphRunEnumerator>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams3(
         &self,
         gamma: f32,
@@ -7512,7 +7824,7 @@ impl IDWriteFactory2 {
         )
         .from_abi::<IDWriteRenderingParams2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis2(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -7668,11 +7980,11 @@ pub struct IDWriteFactory2_Vtbl {
         glyphrunanalysis: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFactory3(::windows::core::IUnknown);
 impl IDWriteFactory3 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -7692,7 +8004,7 @@ impl IDWriteFactory3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -7716,7 +8028,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -7734,7 +8046,7 @@ impl IDWriteFactory3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -7752,7 +8064,7 @@ impl IDWriteFactory3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFileReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -7774,7 +8086,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontFileReference<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -7798,7 +8110,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         fontfacetype: DWRITE_FONT_FACE_TYPE,
@@ -7822,7 +8134,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateRenderingParams(&self) -> ::windows::core::Result<IDWriteRenderingParams> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -7835,7 +8147,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateMonitorRenderingParams<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HMONITOR>,
@@ -7855,7 +8167,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams(
         &self,
         gamma: f32,
@@ -7880,7 +8192,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -7898,7 +8210,7 @@ impl IDWriteFactory3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -7916,7 +8228,7 @@ impl IDWriteFactory3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextFormat<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -7950,7 +8262,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteTextFormat>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTypography(&self) -> ::windows::core::Result<IDWriteTypography> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -7963,7 +8275,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteTypography>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiInterop(&self) -> ::windows::core::Result<IDWriteGdiInterop> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -7976,7 +8288,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteGdiInterop>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -8003,7 +8315,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGdiCompatibleTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -8037,7 +8349,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateEllipsisTrimmingSign<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -8057,7 +8369,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteInlineObject>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextAnalyzer(&self) -> ::windows::core::Result<IDWriteTextAnalyzer> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -8070,7 +8382,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteTextAnalyzer>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateNumberSubstitution<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -8095,7 +8407,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteNumberSubstitution>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -8124,7 +8436,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetEudcFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -8143,7 +8455,7 @@ impl IDWriteFactory3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams2(
         &self,
         gamma: f32,
@@ -8169,7 +8481,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteRenderingParams1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -8180,7 +8492,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteFontFallback>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFallbackBuilder(
         &self,
     ) -> ::windows::core::Result<IDWriteFontFallbackBuilder> {
@@ -8193,7 +8505,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteFontFallbackBuilder>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TranslateColorGlyphRun(
         &self,
         baselineoriginx: f32,
@@ -8220,7 +8532,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteColorGlyphRunEnumerator>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams3(
         &self,
         gamma: f32,
@@ -8247,7 +8559,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteRenderingParams2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis2(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -8276,7 +8588,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis3(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -8303,7 +8615,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams4(
         &self,
         gamma: f32,
@@ -8328,7 +8640,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteRenderingParams3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>,
@@ -8348,7 +8660,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -8370,7 +8682,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontSet(&self) -> ::windows::core::Result<IDWriteFontSet> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetSystemFontSet)(
@@ -8379,7 +8691,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSetBuilder(&self) -> ::windows::core::Result<IDWriteFontSetBuilder> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateFontSetBuilder)(
@@ -8388,7 +8700,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteFontSetBuilder>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontCollectionFromFontSet<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontSet>,
@@ -8404,7 +8716,7 @@ impl IDWriteFactory3 {
         )
         .from_abi::<IDWriteFontCollection1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -8423,7 +8735,7 @@ impl IDWriteFactory3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontDownloadQueue(&self) -> ::windows::core::Result<IDWriteFontDownloadQueue> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontDownloadQueue)(
@@ -8600,11 +8912,11 @@ pub struct IDWriteFactory3_Vtbl {
         fontdownloadqueue: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFactory4(::windows::core::IUnknown);
 impl IDWriteFactory4 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -8625,7 +8937,7 @@ impl IDWriteFactory4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -8650,7 +8962,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -8669,7 +8981,7 @@ impl IDWriteFactory4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -8688,7 +9000,7 @@ impl IDWriteFactory4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFileReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -8711,7 +9023,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontFileReference<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -8736,7 +9048,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         fontfacetype: DWRITE_FONT_FACE_TYPE,
@@ -8761,7 +9073,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateRenderingParams(&self) -> ::windows::core::Result<IDWriteRenderingParams> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -8775,7 +9087,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateMonitorRenderingParams<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HMONITOR>,
@@ -8796,7 +9108,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams(
         &self,
         gamma: f32,
@@ -8822,7 +9134,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -8841,7 +9153,7 @@ impl IDWriteFactory4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -8860,7 +9172,7 @@ impl IDWriteFactory4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextFormat<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -8895,7 +9207,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteTextFormat>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTypography(&self) -> ::windows::core::Result<IDWriteTypography> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -8909,7 +9221,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteTypography>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiInterop(&self) -> ::windows::core::Result<IDWriteGdiInterop> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -8923,7 +9235,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteGdiInterop>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -8951,7 +9263,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGdiCompatibleTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -8986,7 +9298,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateEllipsisTrimmingSign<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -9007,7 +9319,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteInlineObject>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextAnalyzer(&self) -> ::windows::core::Result<IDWriteTextAnalyzer> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -9021,7 +9333,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteTextAnalyzer>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateNumberSubstitution<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -9047,7 +9359,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteNumberSubstitution>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -9077,7 +9389,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetEudcFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -9097,7 +9409,7 @@ impl IDWriteFactory4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams2(
         &self,
         gamma: f32,
@@ -9124,7 +9436,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteRenderingParams1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -9136,7 +9448,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontFallback>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFallbackBuilder(
         &self,
     ) -> ::windows::core::Result<IDWriteFontFallbackBuilder> {
@@ -9150,7 +9462,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontFallbackBuilder>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TranslateColorGlyphRun(
         &self,
         baselineoriginx: f32,
@@ -9178,7 +9490,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteColorGlyphRunEnumerator>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams3(
         &self,
         gamma: f32,
@@ -9206,7 +9518,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteRenderingParams2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis2(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -9236,7 +9548,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis3(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -9265,7 +9577,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams4(
         &self,
         gamma: f32,
@@ -9292,7 +9604,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteRenderingParams3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>,
@@ -9314,7 +9626,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -9338,7 +9650,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontSet(&self) -> ::windows::core::Result<IDWriteFontSet> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -9349,7 +9661,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSetBuilder(&self) -> ::windows::core::Result<IDWriteFontSetBuilder> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -9360,7 +9672,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontSetBuilder>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontCollectionFromFontSet<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontSet>,
@@ -9378,7 +9690,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontCollection1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -9399,7 +9711,7 @@ impl IDWriteFactory4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontDownloadQueue(&self) -> ::windows::core::Result<IDWriteFontDownloadQueue> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -9410,7 +9722,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteFontDownloadQueue>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TranslateColorGlyphRun2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -9438,7 +9750,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<IDWriteColorGlyphRunEnumerator1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ComputeGlyphOrigins<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -9458,7 +9770,7 @@ impl IDWriteFactory4 {
         )
         .from_abi::<::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ComputeGlyphOrigins2<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -9607,11 +9919,11 @@ unsafe impl ::windows::core::Interface for IDWriteFactory4 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDWriteFactory4_Vtbl where { pub base__ : IDWriteFactory3_Vtbl , pub TranslateColorGlyphRun2 : unsafe extern "system" fn ( this : * mut :: core :: ffi :: c_void , baselineorigin : ::windows::Win32::Graphics::Direct2D::Common:: D2D_POINT_2F , glyphrun : *const DWRITE_GLYPH_RUN , glyphrundescription : *const DWRITE_GLYPH_RUN_DESCRIPTION , desiredglyphimageformats : ::windows::Win32::Graphics::DirectWrite:: DWRITE_GLYPH_IMAGE_FORMATS , measuringmode : ::windows::Win32::Graphics::DirectWrite:: DWRITE_MEASURING_MODE , worldanddpitransform : *const DWRITE_MATRIX , colorpaletteindex : u32 , colorlayers : *mut :: windows :: core :: RawPtr , ) -> :: windows :: core :: HRESULT , pub ComputeGlyphOrigins : unsafe extern "system" fn ( this : * mut :: core :: ffi :: c_void , glyphrun : *const DWRITE_GLYPH_RUN , baselineorigin : ::windows::Win32::Graphics::Direct2D::Common:: D2D_POINT_2F , glyphorigins : *mut ::windows::Win32::Graphics::Direct2D::Common:: D2D_POINT_2F , ) -> :: windows :: core :: HRESULT , pub ComputeGlyphOrigins2 : unsafe extern "system" fn ( this : * mut :: core :: ffi :: c_void , glyphrun : *const DWRITE_GLYPH_RUN , measuringmode : ::windows::Win32::Graphics::DirectWrite:: DWRITE_MEASURING_MODE , baselineorigin : ::windows::Win32::Graphics::Direct2D::Common:: D2D_POINT_2F , worldanddpitransform : *const DWRITE_MATRIX , glyphorigins : *mut ::windows::Win32::Graphics::Direct2D::Common:: D2D_POINT_2F , ) -> :: windows :: core :: HRESULT , }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFactory5(::windows::core::IUnknown);
 impl IDWriteFactory5 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -9633,7 +9945,7 @@ impl IDWriteFactory5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -9659,7 +9971,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -9679,7 +9991,7 @@ impl IDWriteFactory5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -9699,7 +10011,7 @@ impl IDWriteFactory5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFileReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -9723,7 +10035,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontFileReference<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -9749,7 +10061,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         fontfacetype: DWRITE_FONT_FACE_TYPE,
@@ -9775,7 +10087,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateRenderingParams(&self) -> ::windows::core::Result<IDWriteRenderingParams> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -9790,7 +10102,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateMonitorRenderingParams<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HMONITOR>,
@@ -9812,7 +10124,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams(
         &self,
         gamma: f32,
@@ -9839,7 +10151,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -9859,7 +10171,7 @@ impl IDWriteFactory5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -9879,7 +10191,7 @@ impl IDWriteFactory5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextFormat<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -9915,7 +10227,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteTextFormat>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTypography(&self) -> ::windows::core::Result<IDWriteTypography> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -9930,7 +10242,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteTypography>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiInterop(&self) -> ::windows::core::Result<IDWriteGdiInterop> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -9945,7 +10257,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteGdiInterop>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -9974,7 +10286,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGdiCompatibleTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -10010,7 +10322,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateEllipsisTrimmingSign<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -10032,7 +10344,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteInlineObject>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextAnalyzer(&self) -> ::windows::core::Result<IDWriteTextAnalyzer> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -10047,7 +10359,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteTextAnalyzer>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateNumberSubstitution<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -10074,7 +10386,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteNumberSubstitution>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -10105,7 +10417,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetEudcFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -10126,7 +10438,7 @@ impl IDWriteFactory5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams2(
         &self,
         gamma: f32,
@@ -10154,7 +10466,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteRenderingParams1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -10167,7 +10479,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontFallback>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFallbackBuilder(
         &self,
     ) -> ::windows::core::Result<IDWriteFontFallbackBuilder> {
@@ -10182,7 +10494,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontFallbackBuilder>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TranslateColorGlyphRun(
         &self,
         baselineoriginx: f32,
@@ -10211,7 +10523,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteColorGlyphRunEnumerator>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams3(
         &self,
         gamma: f32,
@@ -10240,7 +10552,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteRenderingParams2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis2(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -10271,7 +10583,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis3(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -10301,7 +10613,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams4(
         &self,
         gamma: f32,
@@ -10329,7 +10641,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteRenderingParams3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>,
@@ -10352,7 +10664,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -10377,7 +10689,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontSet(&self) -> ::windows::core::Result<IDWriteFontSet> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -10389,7 +10701,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSetBuilder(&self) -> ::windows::core::Result<IDWriteFontSetBuilder> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -10401,7 +10713,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontSetBuilder>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontCollectionFromFontSet<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontSet>,
@@ -10420,7 +10732,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontCollection1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -10442,7 +10754,7 @@ impl IDWriteFactory5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontDownloadQueue(&self) -> ::windows::core::Result<IDWriteFontDownloadQueue> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -10454,7 +10766,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontDownloadQueue>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TranslateColorGlyphRun2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -10484,7 +10796,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteColorGlyphRunEnumerator1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ComputeGlyphOrigins<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -10506,7 +10818,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ComputeGlyphOrigins2<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -10532,7 +10844,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSetBuilder2(&self) -> ::windows::core::Result<IDWriteFontSetBuilder1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateFontSetBuilder2)(
@@ -10541,7 +10853,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteFontSetBuilder1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateInMemoryFontFileLoader(
         &self,
     ) -> ::windows::core::Result<IDWriteInMemoryFontFileLoader> {
@@ -10552,7 +10864,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteInMemoryFontFileLoader>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateHttpFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -10571,7 +10883,7 @@ impl IDWriteFactory5 {
         )
         .from_abi::<IDWriteRemoteFontFileLoader>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeContainerType(
         &self,
         filedata: *const ::core::ffi::c_void,
@@ -10584,7 +10896,7 @@ impl IDWriteFactory5 {
             ::core::mem::transmute(filedatasize),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnpackFontFile(
         &self,
         containertype: DWRITE_CONTAINER_TYPE,
@@ -10774,11 +11086,11 @@ pub struct IDWriteFactory5_Vtbl {
         unpackedfontstream: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFactory6(::windows::core::IUnknown);
 impl IDWriteFactory6 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -10801,7 +11113,7 @@ impl IDWriteFactory6 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -10828,7 +11140,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -10849,7 +11161,7 @@ impl IDWriteFactory6 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -10870,7 +11182,7 @@ impl IDWriteFactory6 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFileReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -10895,7 +11207,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontFileReference<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -10922,7 +11234,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         fontfacetype: DWRITE_FONT_FACE_TYPE,
@@ -10949,7 +11261,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateRenderingParams(&self) -> ::windows::core::Result<IDWriteRenderingParams> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -10965,7 +11277,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateMonitorRenderingParams<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HMONITOR>,
@@ -10988,7 +11300,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams(
         &self,
         gamma: f32,
@@ -11016,7 +11328,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -11037,7 +11349,7 @@ impl IDWriteFactory6 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -11058,7 +11370,7 @@ impl IDWriteFactory6 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextFormat<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -11095,7 +11407,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteTextFormat>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTypography(&self) -> ::windows::core::Result<IDWriteTypography> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -11111,7 +11423,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteTypography>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiInterop(&self) -> ::windows::core::Result<IDWriteGdiInterop> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -11127,7 +11439,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteGdiInterop>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -11157,7 +11469,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGdiCompatibleTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -11194,7 +11506,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateEllipsisTrimmingSign<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -11217,7 +11529,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteInlineObject>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextAnalyzer(&self) -> ::windows::core::Result<IDWriteTextAnalyzer> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -11233,7 +11545,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteTextAnalyzer>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateNumberSubstitution<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -11261,7 +11573,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteNumberSubstitution>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -11293,7 +11605,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetEudcFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -11315,7 +11627,7 @@ impl IDWriteFactory6 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams2(
         &self,
         gamma: f32,
@@ -11344,7 +11656,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteRenderingParams1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -11358,7 +11670,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontFallback>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFallbackBuilder(
         &self,
     ) -> ::windows::core::Result<IDWriteFontFallbackBuilder> {
@@ -11374,7 +11686,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontFallbackBuilder>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TranslateColorGlyphRun(
         &self,
         baselineoriginx: f32,
@@ -11404,7 +11716,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteColorGlyphRunEnumerator>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams3(
         &self,
         gamma: f32,
@@ -11434,7 +11746,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteRenderingParams2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis2(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -11466,7 +11778,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis3(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -11497,7 +11809,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams4(
         &self,
         gamma: f32,
@@ -11526,7 +11838,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteRenderingParams3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>,
@@ -11550,7 +11862,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -11576,7 +11888,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontSet(&self) -> ::windows::core::Result<IDWriteFontSet> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -11589,7 +11901,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSetBuilder(&self) -> ::windows::core::Result<IDWriteFontSetBuilder> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -11602,7 +11914,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontSetBuilder>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontCollectionFromFontSet<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontSet>,
@@ -11622,7 +11934,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontCollection1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -11645,7 +11957,7 @@ impl IDWriteFactory6 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontDownloadQueue(&self) -> ::windows::core::Result<IDWriteFontDownloadQueue> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -11658,7 +11970,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontDownloadQueue>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TranslateColorGlyphRun2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -11689,7 +12001,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteColorGlyphRunEnumerator1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ComputeGlyphOrigins<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -11712,7 +12024,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ComputeGlyphOrigins2<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -11739,7 +12051,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSetBuilder2(&self) -> ::windows::core::Result<IDWriteFontSetBuilder1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -11750,7 +12062,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontSetBuilder1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateInMemoryFontFileLoader(
         &self,
     ) -> ::windows::core::Result<IDWriteInMemoryFontFileLoader> {
@@ -11763,7 +12075,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteInMemoryFontFileLoader>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateHttpFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -11784,7 +12096,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteRemoteFontFileLoader>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeContainerType(
         &self,
         filedata: *const ::core::ffi::c_void,
@@ -11798,7 +12110,7 @@ impl IDWriteFactory6 {
             ::core::mem::transmute(filedatasize),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnpackFontFile(
         &self,
         containertype: DWRITE_CONTAINER_TYPE,
@@ -11817,7 +12129,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontFileStream>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference3<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>,
@@ -11840,7 +12152,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontFaceReference1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontResource<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>,
@@ -11858,7 +12170,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontResource>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontSet2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -11874,7 +12186,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection3<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -11892,7 +12204,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontCollection2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontCollectionFromFontSet2<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontSet>,
@@ -11910,7 +12222,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontCollection2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSetBuilder3(&self) -> ::windows::core::Result<IDWriteFontSetBuilder2> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateFontSetBuilder3)(
@@ -11919,7 +12231,7 @@ impl IDWriteFactory6 {
         )
         .from_abi::<IDWriteFontSetBuilder2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextFormat2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -12160,11 +12472,11 @@ pub struct IDWriteFactory6_Vtbl {
         textformat: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFactory7(::windows::core::IUnknown);
 impl IDWriteFactory7 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -12188,7 +12500,7 @@ impl IDWriteFactory7 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -12216,7 +12528,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -12238,7 +12550,7 @@ impl IDWriteFactory7 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontCollectionLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollectionLoader>,
@@ -12260,7 +12572,7 @@ impl IDWriteFactory7 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFileReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -12286,7 +12598,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomFontFileReference<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -12314,7 +12626,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         fontfacetype: DWRITE_FONT_FACE_TYPE,
@@ -12342,7 +12654,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateRenderingParams(&self) -> ::windows::core::Result<IDWriteRenderingParams> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -12359,7 +12671,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateMonitorRenderingParams<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HMONITOR>,
@@ -12383,7 +12695,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams(
         &self,
         gamma: f32,
@@ -12412,7 +12724,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteRenderingParams>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RegisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -12434,7 +12746,7 @@ impl IDWriteFactory7 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnregisterFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFileLoader>,
@@ -12456,7 +12768,7 @@ impl IDWriteFactory7 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextFormat<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -12494,7 +12806,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteTextFormat>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTypography(&self) -> ::windows::core::Result<IDWriteTypography> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -12511,7 +12823,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteTypography>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiInterop(&self) -> ::windows::core::Result<IDWriteGdiInterop> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -12528,7 +12840,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteGdiInterop>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -12559,7 +12871,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGdiCompatibleTextLayout<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -12597,7 +12909,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteTextLayout>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateEllipsisTrimmingSign<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextFormat>,
@@ -12621,7 +12933,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteInlineObject>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextAnalyzer(&self) -> ::windows::core::Result<IDWriteTextAnalyzer> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -12638,7 +12950,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteTextAnalyzer>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateNumberSubstitution<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -12667,7 +12979,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteNumberSubstitution>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -12700,7 +13012,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetEudcFontCollection<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -12723,7 +13035,7 @@ impl IDWriteFactory7 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams2(
         &self,
         gamma: f32,
@@ -12753,7 +13065,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteRenderingParams1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -12768,7 +13080,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontFallback>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFallbackBuilder(
         &self,
     ) -> ::windows::core::Result<IDWriteFontFallbackBuilder> {
@@ -12785,7 +13097,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontFallbackBuilder>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TranslateColorGlyphRun(
         &self,
         baselineoriginx: f32,
@@ -12816,7 +13128,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteColorGlyphRunEnumerator>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams3(
         &self,
         gamma: f32,
@@ -12847,7 +13159,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteRenderingParams2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis2(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -12880,7 +13192,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateGlyphRunAnalysis3(
         &self,
         glyphrun: *const DWRITE_GLYPH_RUN,
@@ -12912,7 +13224,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteGlyphRunAnalysis>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateCustomRenderingParams4(
         &self,
         gamma: f32,
@@ -12942,7 +13254,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteRenderingParams3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>,
@@ -12967,7 +13279,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -12994,7 +13306,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontSet(&self) -> ::windows::core::Result<IDWriteFontSet> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -13008,7 +13320,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSetBuilder(&self) -> ::windows::core::Result<IDWriteFontSetBuilder> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -13022,7 +13334,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontSetBuilder>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontCollectionFromFontSet<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontSet>,
@@ -13043,7 +13355,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontCollection1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -13067,7 +13379,7 @@ impl IDWriteFactory7 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontDownloadQueue(&self) -> ::windows::core::Result<IDWriteFontDownloadQueue> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -13081,7 +13393,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontDownloadQueue>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TranslateColorGlyphRun2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -13113,7 +13425,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteColorGlyphRunEnumerator1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ComputeGlyphOrigins<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -13137,7 +13449,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ComputeGlyphOrigins2<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>,
@@ -13165,7 +13477,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<::windows::Win32::Graphics::Direct2D::Common::D2D_POINT_2F>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSetBuilder2(&self) -> ::windows::core::Result<IDWriteFontSetBuilder1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -13177,7 +13489,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontSetBuilder1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateInMemoryFontFileLoader(
         &self,
     ) -> ::windows::core::Result<IDWriteInMemoryFontFileLoader> {
@@ -13191,7 +13503,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteInMemoryFontFileLoader>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateHttpFontFileLoader<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -13213,7 +13525,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteRemoteFontFileLoader>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeContainerType(
         &self,
         filedata: *const ::core::ffi::c_void,
@@ -13228,7 +13540,7 @@ impl IDWriteFactory7 {
             ::core::mem::transmute(filedatasize),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn UnpackFontFile(
         &self,
         containertype: DWRITE_CONTAINER_TYPE,
@@ -13248,7 +13560,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontFileStream>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference3<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>,
@@ -13273,7 +13585,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontFaceReference1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontResource<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>,
@@ -13293,7 +13605,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontResource>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontSet2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -13311,7 +13623,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection3<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -13331,7 +13643,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontCollection2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontCollectionFromFontSet2<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontSet>,
@@ -13351,7 +13663,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontCollection2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSetBuilder3(&self) -> ::windows::core::Result<IDWriteFontSetBuilder2> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -13362,7 +13674,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontSetBuilder2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateTextFormat2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -13391,7 +13703,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteTextFormat3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontSet3<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -13407,7 +13719,7 @@ impl IDWriteFactory7 {
         )
         .from_abi::<IDWriteFontSet2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSystemFontCollection4<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -13623,11 +13935,11 @@ pub struct IDWriteFactory7_Vtbl {
         fontcollection: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFont(::windows::core::IUnknown);
 impl IDWriteFont {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily(&self) -> ::windows::core::Result<IDWriteFontFamily> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontFamily)(
@@ -13636,31 +13948,31 @@ impl IDWriteFont {
         )
         .from_abi::<IDWriteFontFamily>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetWeight)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetStretch)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetStyle)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsSymbolFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).IsSymbolFont)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFaceNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFaceNames)(
@@ -13669,7 +13981,7 @@ impl IDWriteFont {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInformationalStrings(
         &self,
         informationalstringid: DWRITE_INFORMATIONAL_STRING_ID,
@@ -13684,20 +13996,20 @@ impl IDWriteFont {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetSimulations)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self, fontmetrics: *mut DWRITE_FONT_METRICS) {
         (::windows::core::Interface::vtable(self).GetMetrics)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasCharacter(
         &self,
         unicodevalue: u32,
@@ -13710,7 +14022,7 @@ impl IDWriteFont {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(&self) -> ::windows::core::Result<IDWriteFontFace> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateFontFace)(
@@ -13802,11 +14114,11 @@ pub struct IDWriteFont_Vtbl {
         fontface: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFont1(::windows::core::IUnknown);
 impl IDWriteFont1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily(&self) -> ::windows::core::Result<IDWriteFontFamily> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -13817,13 +14129,13 @@ impl IDWriteFont1 {
         )
         .from_abi::<IDWriteFontFamily>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).base__.GetWeight)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute(
             (::windows::core::Interface::vtable(self).base__.GetStretch)(
@@ -13831,13 +14143,13 @@ impl IDWriteFont1 {
             ),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).base__.GetStyle)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsSymbolFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -13845,7 +14157,7 @@ impl IDWriteFont1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFaceNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetFaceNames)(
@@ -13854,7 +14166,7 @@ impl IDWriteFont1 {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInformationalStrings(
         &self,
         informationalstringid: DWRITE_INFORMATIONAL_STRING_ID,
@@ -13871,7 +14183,7 @@ impl IDWriteFont1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -13879,14 +14191,14 @@ impl IDWriteFont1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self, fontmetrics: *mut DWRITE_FONT_METRICS) {
         (::windows::core::Interface::vtable(self).base__.GetMetrics)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasCharacter(
         &self,
         unicodevalue: u32,
@@ -13899,7 +14211,7 @@ impl IDWriteFont1 {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(&self) -> ::windows::core::Result<IDWriteFontFace> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -13910,21 +14222,21 @@ impl IDWriteFont1 {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics2(&self, fontmetrics: *mut DWRITE_FONT_METRICS1) {
         (::windows::core::Interface::vtable(self).GetMetrics2)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPanose(&self, panose: *mut DWRITE_PANOSE) {
         (::windows::core::Interface::vtable(self).GetPanose)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(panose),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnicodeRanges(
         &self,
         unicoderanges: &mut [DWRITE_UNICODE_RANGE],
@@ -13938,7 +14250,7 @@ impl IDWriteFont1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsMonospacedFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).IsMonospacedFont)(
             ::windows::core::Interface::as_raw(self),
@@ -14026,11 +14338,11 @@ pub struct IDWriteFont1_Vtbl {
         this: *mut ::core::ffi::c_void,
     ) -> ::windows::Win32::Foundation::BOOL,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFont2(::windows::core::IUnknown);
 impl IDWriteFont2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily(&self) -> ::windows::core::Result<IDWriteFontFamily> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -14042,7 +14354,7 @@ impl IDWriteFont2 {
         )
         .from_abi::<IDWriteFontFamily>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14051,7 +14363,7 @@ impl IDWriteFont2 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14060,7 +14372,7 @@ impl IDWriteFont2 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14069,7 +14381,7 @@ impl IDWriteFont2 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsSymbolFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14078,7 +14390,7 @@ impl IDWriteFont2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFaceNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -14090,7 +14402,7 @@ impl IDWriteFont2 {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInformationalStrings(
         &self,
         informationalstringid: DWRITE_INFORMATIONAL_STRING_ID,
@@ -14108,7 +14420,7 @@ impl IDWriteFont2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14117,7 +14429,7 @@ impl IDWriteFont2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self, fontmetrics: *mut DWRITE_FONT_METRICS) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -14127,7 +14439,7 @@ impl IDWriteFont2 {
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasCharacter(
         &self,
         unicodevalue: u32,
@@ -14143,7 +14455,7 @@ impl IDWriteFont2 {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(&self) -> ::windows::core::Result<IDWriteFontFace> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -14155,21 +14467,21 @@ impl IDWriteFont2 {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics2(&self, fontmetrics: *mut DWRITE_FONT_METRICS1) {
         (::windows::core::Interface::vtable(self).base__.GetMetrics2)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPanose(&self, panose: *mut DWRITE_PANOSE) {
         (::windows::core::Interface::vtable(self).base__.GetPanose)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(panose),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnicodeRanges(
         &self,
         unicoderanges: &mut [DWRITE_UNICODE_RANGE],
@@ -14185,7 +14497,7 @@ impl IDWriteFont2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsMonospacedFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14193,7 +14505,7 @@ impl IDWriteFont2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsColorFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).IsColorFont)(
             ::windows::core::Interface::as_raw(self),
@@ -14289,11 +14601,11 @@ pub struct IDWriteFont2_Vtbl {
         this: *mut ::core::ffi::c_void,
     ) -> ::windows::Win32::Foundation::BOOL,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFont3(::windows::core::IUnknown);
 impl IDWriteFont3 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily(&self) -> ::windows::core::Result<IDWriteFontFamily> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -14306,7 +14618,7 @@ impl IDWriteFont3 {
         )
         .from_abi::<IDWriteFontFamily>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14316,7 +14628,7 @@ impl IDWriteFont3 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14326,7 +14638,7 @@ impl IDWriteFont3 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14336,7 +14648,7 @@ impl IDWriteFont3 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsSymbolFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14346,7 +14658,7 @@ impl IDWriteFont3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFaceNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -14359,7 +14671,7 @@ impl IDWriteFont3 {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInformationalStrings(
         &self,
         informationalstringid: DWRITE_INFORMATIONAL_STRING_ID,
@@ -14378,7 +14690,7 @@ impl IDWriteFont3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14388,7 +14700,7 @@ impl IDWriteFont3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self, fontmetrics: *mut DWRITE_FONT_METRICS) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -14399,7 +14711,7 @@ impl IDWriteFont3 {
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasCharacter(
         &self,
         unicodevalue: u32,
@@ -14416,7 +14728,7 @@ impl IDWriteFont3 {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(&self) -> ::windows::core::Result<IDWriteFontFace> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -14429,7 +14741,7 @@ impl IDWriteFont3 {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics2(&self, fontmetrics: *mut DWRITE_FONT_METRICS1) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -14439,7 +14751,7 @@ impl IDWriteFont3 {
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPanose(&self, panose: *mut DWRITE_PANOSE) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -14449,7 +14761,7 @@ impl IDWriteFont3 {
             ::core::mem::transmute(panose),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnicodeRanges(
         &self,
         unicoderanges: &mut [DWRITE_UNICODE_RANGE],
@@ -14466,7 +14778,7 @@ impl IDWriteFont3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsMonospacedFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14475,7 +14787,7 @@ impl IDWriteFont3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsColorFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14483,7 +14795,7 @@ impl IDWriteFont3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace2(&self) -> ::windows::core::Result<IDWriteFontFace3> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateFontFace2)(
@@ -14492,7 +14804,7 @@ impl IDWriteFont3 {
         )
         .from_abi::<IDWriteFontFace3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Equals<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFont>>(
         &self,
         font: Param0,
@@ -14502,7 +14814,7 @@ impl IDWriteFont3 {
             font.into_param().abi(),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(&self) -> ::windows::core::Result<IDWriteFontFaceReference> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontFaceReference)(
@@ -14511,14 +14823,14 @@ impl IDWriteFont3 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasCharacter2(&self, unicodevalue: u32) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).HasCharacter2)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(unicodevalue),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocality(&self) -> DWRITE_LOCALITY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetLocality)(
             ::windows::core::Interface::as_raw(self),
@@ -14648,18 +14960,18 @@ pub struct IDWriteFont3_Vtbl {
     ) -> ::windows::Win32::Foundation::BOOL,
     pub GetLocality: unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> DWRITE_LOCALITY,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontCollection(::windows::core::IUnknown);
 impl IDWriteFontCollection {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetFontFamilyCount)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily(&self, index: u32) -> ::windows::core::Result<IDWriteFontFamily> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontFamily)(
@@ -14669,7 +14981,7 @@ impl IDWriteFontCollection {
         )
         .from_abi::<IDWriteFontFamily>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFamilyName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -14687,7 +14999,7 @@ impl IDWriteFontCollection {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFromFontFace<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -14769,11 +15081,11 @@ pub struct IDWriteFontCollection_Vtbl {
         font: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontCollection1(::windows::core::IUnknown);
 impl IDWriteFontCollection1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14781,7 +15093,7 @@ impl IDWriteFontCollection1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily(&self, index: u32) -> ::windows::core::Result<IDWriteFontFamily> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -14793,7 +15105,7 @@ impl IDWriteFontCollection1 {
         )
         .from_abi::<IDWriteFontFamily>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFamilyName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -14813,7 +15125,7 @@ impl IDWriteFontCollection1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFromFontFace<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -14831,7 +15143,7 @@ impl IDWriteFontCollection1 {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSet(&self) -> ::windows::core::Result<IDWriteFontSet> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontSet)(
@@ -14840,7 +15152,7 @@ impl IDWriteFontCollection1 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily2(&self, index: u32) -> ::windows::core::Result<IDWriteFontFamily1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontFamily2)(
@@ -14928,11 +15240,11 @@ pub struct IDWriteFontCollection1_Vtbl {
         fontfamily: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontCollection2(::windows::core::IUnknown);
 impl IDWriteFontCollection2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -14941,7 +15253,7 @@ impl IDWriteFontCollection2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily(&self, index: u32) -> ::windows::core::Result<IDWriteFontFamily> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -14954,7 +15266,7 @@ impl IDWriteFontCollection2 {
         )
         .from_abi::<IDWriteFontFamily>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFamilyName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -14975,7 +15287,7 @@ impl IDWriteFontCollection2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFromFontFace<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -14994,7 +15306,7 @@ impl IDWriteFontCollection2 {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSet(&self) -> ::windows::core::Result<IDWriteFontSet> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetFontSet)(
@@ -15003,7 +15315,7 @@ impl IDWriteFontCollection2 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily2(&self, index: u32) -> ::windows::core::Result<IDWriteFontFamily1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -15015,7 +15327,7 @@ impl IDWriteFontCollection2 {
         )
         .from_abi::<IDWriteFontFamily1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily3(&self, index: u32) -> ::windows::core::Result<IDWriteFontFamily2> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontFamily3)(
@@ -15025,7 +15337,7 @@ impl IDWriteFontCollection2 {
         )
         .from_abi::<IDWriteFontFamily2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -15044,14 +15356,14 @@ impl IDWriteFontCollection2 {
         )
         .from_abi::<IDWriteFontList2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyModel(&self) -> DWRITE_FONT_FAMILY_MODEL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetFontFamilyModel)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSet2(&self) -> ::windows::core::Result<IDWriteFontSet1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontSet2)(
@@ -15167,11 +15479,11 @@ pub struct IDWriteFontCollection2_Vtbl {
         fontset: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontCollection3(::windows::core::IUnknown);
 impl IDWriteFontCollection3 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -15181,7 +15493,7 @@ impl IDWriteFontCollection3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily(&self, index: u32) -> ::windows::core::Result<IDWriteFontFamily> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -15195,7 +15507,7 @@ impl IDWriteFontCollection3 {
         )
         .from_abi::<IDWriteFontFamily>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFamilyName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -15217,7 +15529,7 @@ impl IDWriteFontCollection3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFromFontFace<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -15237,7 +15549,7 @@ impl IDWriteFontCollection3 {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSet(&self) -> ::windows::core::Result<IDWriteFontSet> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -15249,7 +15561,7 @@ impl IDWriteFontCollection3 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily2(&self, index: u32) -> ::windows::core::Result<IDWriteFontFamily1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -15262,7 +15574,7 @@ impl IDWriteFontCollection3 {
         )
         .from_abi::<IDWriteFontFamily1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamily3(&self, index: u32) -> ::windows::core::Result<IDWriteFontFamily2> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -15274,7 +15586,7 @@ impl IDWriteFontCollection3 {
         )
         .from_abi::<IDWriteFontFamily2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -15295,7 +15607,7 @@ impl IDWriteFontCollection3 {
         )
         .from_abi::<IDWriteFontList2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyModel(&self) -> DWRITE_FONT_FAMILY_MODEL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -15303,7 +15615,7 @@ impl IDWriteFontCollection3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSet2(&self) -> ::windows::core::Result<IDWriteFontSet1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetFontSet2)(
@@ -15312,7 +15624,7 @@ impl IDWriteFontCollection3 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetExpirationEvent(&self) -> ::windows::Win32::Foundation::HANDLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetExpirationEvent)(
@@ -15431,11 +15743,11 @@ pub struct IDWriteFontCollection3_Vtbl {
         this: *mut ::core::ffi::c_void,
     ) -> ::windows::Win32::Foundation::HANDLE,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontCollectionLoader(::windows::core::IUnknown);
 impl IDWriteFontCollectionLoader {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateEnumeratorFromKey<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFactory>,
@@ -15513,11 +15825,11 @@ pub struct IDWriteFontCollectionLoader_Vtbl {
         fontfileenumerator: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontDownloadListener(::windows::core::IUnknown);
 impl IDWriteFontDownloadListener {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DownloadCompleted<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontDownloadQueue>,
@@ -15592,11 +15904,11 @@ pub struct IDWriteFontDownloadListener_Vtbl {
         downloadresult: ::windows::core::HRESULT,
     ),
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontDownloadQueue(::windows::core::IUnknown);
 impl IDWriteFontDownloadQueue {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddListener<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontDownloadListener>,
@@ -15612,7 +15924,7 @@ impl IDWriteFontDownloadQueue {
         )
         .from_abi::<u32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn RemoveListener(&self, token: u32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).RemoveListener)(
             ::windows::core::Interface::as_raw(self),
@@ -15620,13 +15932,13 @@ impl IDWriteFontDownloadQueue {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsEmpty(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).IsEmpty)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn BeginDownload<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -15640,14 +15952,14 @@ impl IDWriteFontDownloadQueue {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CancelDownload(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).CancelDownload)(
             ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGenerationCount(&self) -> u64 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetGenerationCount)(
@@ -15724,17 +16036,17 @@ pub struct IDWriteFontDownloadQueue_Vtbl {
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> ::windows::core::HRESULT,
     pub GetGenerationCount: unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> u64,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFace(::windows::core::IUnknown);
 impl IDWriteFontFace {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetType(&self) -> DWRITE_FONT_FACE_TYPE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetType)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFiles(
         &self,
         numberoffiles: *mut u32,
@@ -15747,38 +16059,38 @@ impl IDWriteFontFace {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIndex(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetIndex)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetSimulations)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsSymbolFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).IsSymbolFont)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self, fontfacemetrics: *mut DWRITE_FONT_METRICS) {
         (::windows::core::Interface::vtable(self).GetMetrics)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(fontfacemetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphCount(&self) -> u16 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetGlyphCount)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDesignGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -15798,7 +16110,7 @@ impl IDWriteFontFace {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphIndicesA(
         &self,
         codepoints: *const u32,
@@ -15813,7 +16125,7 @@ impl IDWriteFontFace {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TryGetFontTable(
         &self,
         opentypetabletag: u32,
@@ -15832,14 +16144,14 @@ impl IDWriteFontFace {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReleaseFontTable(&self, tablecontext: *const ::core::ffi::c_void) {
         (::windows::core::Interface::vtable(self).ReleaseFontTable)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(tablecontext),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphRunOutline<
         'a,
         Param5: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -15868,7 +16180,7 @@ impl IDWriteFontFace {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode<
         'a,
         Param3: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
@@ -15890,7 +16202,7 @@ impl IDWriteFontFace {
         )
         .from_abi::<DWRITE_RENDERING_MODE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleMetrics(
         &self,
         emsize: f32,
@@ -15907,7 +16219,7 @@ impl IDWriteFontFace {
         )
         .from_abi::<DWRITE_FONT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16062,17 +16374,17 @@ pub struct IDWriteFontFace_Vtbl {
         issideways: ::windows::Win32::Foundation::BOOL,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFace1(::windows::core::IUnknown);
 impl IDWriteFontFace1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetType(&self) -> DWRITE_FONT_FACE_TYPE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).base__.GetType)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFiles(
         &self,
         numberoffiles: *mut u32,
@@ -16085,13 +16397,13 @@ impl IDWriteFontFace1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIndex(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).base__.GetIndex)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -16099,7 +16411,7 @@ impl IDWriteFontFace1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsSymbolFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -16107,14 +16419,14 @@ impl IDWriteFontFace1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self, fontfacemetrics: *mut DWRITE_FONT_METRICS) {
         (::windows::core::Interface::vtable(self).base__.GetMetrics)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(fontfacemetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphCount(&self) -> u16 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -16122,7 +16434,7 @@ impl IDWriteFontFace1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDesignGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16144,7 +16456,7 @@ impl IDWriteFontFace1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphIndicesA(
         &self,
         codepoints: *const u32,
@@ -16161,7 +16473,7 @@ impl IDWriteFontFace1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TryGetFontTable(
         &self,
         opentypetabletag: u32,
@@ -16182,7 +16494,7 @@ impl IDWriteFontFace1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReleaseFontTable(&self, tablecontext: *const ::core::ffi::c_void) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -16191,7 +16503,7 @@ impl IDWriteFontFace1 {
             ::core::mem::transmute(tablecontext),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphRunOutline<
         'a,
         Param5: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16222,7 +16534,7 @@ impl IDWriteFontFace1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode<
         'a,
         Param3: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
@@ -16246,7 +16558,7 @@ impl IDWriteFontFace1 {
         )
         .from_abi::<DWRITE_RENDERING_MODE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleMetrics(
         &self,
         emsize: f32,
@@ -16265,7 +16577,7 @@ impl IDWriteFontFace1 {
         )
         .from_abi::<DWRITE_FONT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16296,14 +16608,14 @@ impl IDWriteFontFace1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics2(&self, fontmetrics: *mut DWRITE_FONT_METRICS1) {
         (::windows::core::Interface::vtable(self).GetMetrics2)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleMetrics2(
         &self,
         emsize: f32,
@@ -16320,14 +16632,14 @@ impl IDWriteFontFace1 {
         )
         .from_abi::<DWRITE_FONT_METRICS1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCaretMetrics(&self, caretmetrics: *mut DWRITE_CARET_METRICS) {
         (::windows::core::Interface::vtable(self).GetCaretMetrics)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(caretmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnicodeRanges(
         &self,
         unicoderanges: &mut [DWRITE_UNICODE_RANGE],
@@ -16341,13 +16653,13 @@ impl IDWriteFontFace1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsMonospacedFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).IsMonospacedFont)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDesignGlyphAdvances<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16367,7 +16679,7 @@ impl IDWriteFontFace1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphAdvances<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16396,7 +16708,7 @@ impl IDWriteFontFace1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetKerningPairAdjustments(
         &self,
         glyphcount: u32,
@@ -16411,13 +16723,13 @@ impl IDWriteFontFace1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasKerningPairs(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).HasKerningPairs)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode2<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16445,7 +16757,7 @@ impl IDWriteFontFace1 {
         )
         .from_abi::<DWRITE_RENDERING_MODE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphVariants(
         &self,
         glyphcount: u32,
@@ -16460,7 +16772,7 @@ impl IDWriteFontFace1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasVerticalGlyphVariants(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .HasVerticalGlyphVariants)(
@@ -16606,11 +16918,11 @@ pub struct IDWriteFontFace1_Vtbl {
     )
         -> ::windows::Win32::Foundation::BOOL,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFace2(::windows::core::IUnknown);
 impl IDWriteFontFace2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetType(&self) -> DWRITE_FONT_FACE_TYPE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -16619,7 +16931,7 @@ impl IDWriteFontFace2 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFiles(
         &self,
         numberoffiles: *mut u32,
@@ -16635,7 +16947,7 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIndex(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -16644,7 +16956,7 @@ impl IDWriteFontFace2 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -16653,7 +16965,7 @@ impl IDWriteFontFace2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsSymbolFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -16662,7 +16974,7 @@ impl IDWriteFontFace2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self, fontfacemetrics: *mut DWRITE_FONT_METRICS) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -16672,7 +16984,7 @@ impl IDWriteFontFace2 {
             ::core::mem::transmute(fontfacemetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphCount(&self) -> u16 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -16681,7 +16993,7 @@ impl IDWriteFontFace2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDesignGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16704,7 +17016,7 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphIndicesA(
         &self,
         codepoints: *const u32,
@@ -16722,7 +17034,7 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TryGetFontTable(
         &self,
         opentypetabletag: u32,
@@ -16744,7 +17056,7 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReleaseFontTable(&self, tablecontext: *const ::core::ffi::c_void) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -16754,7 +17066,7 @@ impl IDWriteFontFace2 {
             ::core::mem::transmute(tablecontext),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphRunOutline<
         'a,
         Param5: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16786,7 +17098,7 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode<
         'a,
         Param3: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
@@ -16811,7 +17123,7 @@ impl IDWriteFontFace2 {
         )
         .from_abi::<DWRITE_RENDERING_MODE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleMetrics(
         &self,
         emsize: f32,
@@ -16831,7 +17143,7 @@ impl IDWriteFontFace2 {
         )
         .from_abi::<DWRITE_FONT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16863,14 +17175,14 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics2(&self, fontmetrics: *mut DWRITE_FONT_METRICS1) {
         (::windows::core::Interface::vtable(self).base__.GetMetrics2)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleMetrics2(
         &self,
         emsize: f32,
@@ -16889,7 +17201,7 @@ impl IDWriteFontFace2 {
         )
         .from_abi::<DWRITE_FONT_METRICS1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCaretMetrics(&self, caretmetrics: *mut DWRITE_CARET_METRICS) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -16898,7 +17210,7 @@ impl IDWriteFontFace2 {
             ::core::mem::transmute(caretmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnicodeRanges(
         &self,
         unicoderanges: &mut [DWRITE_UNICODE_RANGE],
@@ -16914,7 +17226,7 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsMonospacedFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -16922,7 +17234,7 @@ impl IDWriteFontFace2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDesignGlyphAdvances<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16944,7 +17256,7 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphAdvances<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -16975,7 +17287,7 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetKerningPairAdjustments(
         &self,
         glyphcount: u32,
@@ -16992,7 +17304,7 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasKerningPairs(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17000,7 +17312,7 @@ impl IDWriteFontFace2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode2<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -17030,7 +17342,7 @@ impl IDWriteFontFace2 {
         )
         .from_abi::<DWRITE_RENDERING_MODE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphVariants(
         &self,
         glyphcount: u32,
@@ -17047,7 +17359,7 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasVerticalGlyphVariants(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17055,27 +17367,27 @@ impl IDWriteFontFace2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsColorFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).IsColorFont)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetColorPaletteCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetColorPaletteCount)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPaletteEntryCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetPaletteEntryCount)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPaletteEntries(
         &self,
         colorpaletteindex: u32,
@@ -17091,7 +17403,7 @@ impl IDWriteFontFace2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode3<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -17236,11 +17548,11 @@ pub struct IDWriteFontFace2_Vtbl {
         gridfitmode: *mut DWRITE_GRID_FIT_MODE,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFace3(::windows::core::IUnknown);
 impl IDWriteFontFace3 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetType(&self) -> DWRITE_FONT_FACE_TYPE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17250,7 +17562,7 @@ impl IDWriteFontFace3 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFiles(
         &self,
         numberoffiles: *mut u32,
@@ -17267,7 +17579,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIndex(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17277,7 +17589,7 @@ impl IDWriteFontFace3 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17287,7 +17599,7 @@ impl IDWriteFontFace3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsSymbolFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17297,7 +17609,7 @@ impl IDWriteFontFace3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self, fontfacemetrics: *mut DWRITE_FONT_METRICS) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -17308,7 +17620,7 @@ impl IDWriteFontFace3 {
             ::core::mem::transmute(fontfacemetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphCount(&self) -> u16 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17318,7 +17630,7 @@ impl IDWriteFontFace3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDesignGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -17342,7 +17654,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphIndicesA(
         &self,
         codepoints: *const u32,
@@ -17361,7 +17673,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TryGetFontTable(
         &self,
         opentypetabletag: u32,
@@ -17384,7 +17696,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReleaseFontTable(&self, tablecontext: *const ::core::ffi::c_void) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -17395,7 +17707,7 @@ impl IDWriteFontFace3 {
             ::core::mem::transmute(tablecontext),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphRunOutline<
         'a,
         Param5: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -17428,7 +17740,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode<
         'a,
         Param3: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
@@ -17454,7 +17766,7 @@ impl IDWriteFontFace3 {
         )
         .from_abi::<DWRITE_RENDERING_MODE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleMetrics(
         &self,
         emsize: f32,
@@ -17475,7 +17787,7 @@ impl IDWriteFontFace3 {
         )
         .from_abi::<DWRITE_FONT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -17508,7 +17820,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics2(&self, fontmetrics: *mut DWRITE_FONT_METRICS1) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -17518,7 +17830,7 @@ impl IDWriteFontFace3 {
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleMetrics2(
         &self,
         emsize: f32,
@@ -17538,7 +17850,7 @@ impl IDWriteFontFace3 {
         )
         .from_abi::<DWRITE_FONT_METRICS1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCaretMetrics(&self, caretmetrics: *mut DWRITE_CARET_METRICS) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -17548,7 +17860,7 @@ impl IDWriteFontFace3 {
             ::core::mem::transmute(caretmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnicodeRanges(
         &self,
         unicoderanges: &mut [DWRITE_UNICODE_RANGE],
@@ -17565,7 +17877,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsMonospacedFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17574,7 +17886,7 @@ impl IDWriteFontFace3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDesignGlyphAdvances<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -17597,7 +17909,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphAdvances<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -17629,7 +17941,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetKerningPairAdjustments(
         &self,
         glyphcount: u32,
@@ -17647,7 +17959,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasKerningPairs(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17656,7 +17968,7 @@ impl IDWriteFontFace3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode2<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -17687,7 +17999,7 @@ impl IDWriteFontFace3 {
         )
         .from_abi::<DWRITE_RENDERING_MODE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphVariants(
         &self,
         glyphcount: u32,
@@ -17705,7 +18017,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasVerticalGlyphVariants(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17714,7 +18026,7 @@ impl IDWriteFontFace3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsColorFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17722,7 +18034,7 @@ impl IDWriteFontFace3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetColorPaletteCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17730,7 +18042,7 @@ impl IDWriteFontFace3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPaletteEntryCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -17738,7 +18050,7 @@ impl IDWriteFontFace3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPaletteEntries(
         &self,
         colorpaletteindex: u32,
@@ -17756,7 +18068,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode3<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -17791,7 +18103,7 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(&self) -> ::windows::core::Result<IDWriteFontFaceReference> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontFaceReference)(
@@ -17800,32 +18112,32 @@ impl IDWriteFontFace3 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPanose(&self, panose: *mut DWRITE_PANOSE) {
         (::windows::core::Interface::vtable(self).GetPanose)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(panose),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetWeight)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetStretch)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetStyle)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFamilyNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFamilyNames)(
@@ -17834,7 +18146,7 @@ impl IDWriteFontFace3 {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFaceNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFaceNames)(
@@ -17843,7 +18155,7 @@ impl IDWriteFontFace3 {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInformationalStrings(
         &self,
         informationalstringid: DWRITE_INFORMATIONAL_STRING_ID,
@@ -17858,14 +18170,14 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasCharacter(&self, unicodevalue: u32) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).HasCharacter)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(unicodevalue),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode4<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -17898,21 +18210,21 @@ impl IDWriteFontFace3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsCharacterLocal(&self, unicodevalue: u32) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).IsCharacterLocal)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(unicodevalue),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsGlyphLocal(&self, glyphid: u16) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).IsGlyphLocal)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(glyphid),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AreCharactersLocal<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -17931,7 +18243,7 @@ impl IDWriteFontFace3 {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AreGlyphsLocal<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -18120,11 +18432,11 @@ pub struct IDWriteFontFace3_Vtbl {
         islocal: *mut ::windows::Win32::Foundation::BOOL,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFace4(::windows::core::IUnknown);
 impl IDWriteFontFace4 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetType(&self) -> DWRITE_FONT_FACE_TYPE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18135,7 +18447,7 @@ impl IDWriteFontFace4 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFiles(
         &self,
         numberoffiles: *mut u32,
@@ -18153,7 +18465,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIndex(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18164,7 +18476,7 @@ impl IDWriteFontFace4 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18175,7 +18487,7 @@ impl IDWriteFontFace4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsSymbolFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18186,7 +18498,7 @@ impl IDWriteFontFace4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self, fontfacemetrics: *mut DWRITE_FONT_METRICS) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -18198,7 +18510,7 @@ impl IDWriteFontFace4 {
             ::core::mem::transmute(fontfacemetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphCount(&self) -> u16 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18209,7 +18521,7 @@ impl IDWriteFontFace4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDesignGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -18234,7 +18546,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphIndicesA(
         &self,
         codepoints: *const u32,
@@ -18254,7 +18566,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TryGetFontTable(
         &self,
         opentypetabletag: u32,
@@ -18278,7 +18590,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReleaseFontTable(&self, tablecontext: *const ::core::ffi::c_void) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -18290,7 +18602,7 @@ impl IDWriteFontFace4 {
             ::core::mem::transmute(tablecontext),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphRunOutline<
         'a,
         Param5: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -18324,7 +18636,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode<
         'a,
         Param3: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
@@ -18351,7 +18663,7 @@ impl IDWriteFontFace4 {
         )
         .from_abi::<DWRITE_RENDERING_MODE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleMetrics(
         &self,
         emsize: f32,
@@ -18373,7 +18685,7 @@ impl IDWriteFontFace4 {
         )
         .from_abi::<DWRITE_FONT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -18407,7 +18719,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics2(&self, fontmetrics: *mut DWRITE_FONT_METRICS1) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -18418,7 +18730,7 @@ impl IDWriteFontFace4 {
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleMetrics2(
         &self,
         emsize: f32,
@@ -18439,7 +18751,7 @@ impl IDWriteFontFace4 {
         )
         .from_abi::<DWRITE_FONT_METRICS1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCaretMetrics(&self, caretmetrics: *mut DWRITE_CARET_METRICS) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -18450,7 +18762,7 @@ impl IDWriteFontFace4 {
             ::core::mem::transmute(caretmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnicodeRanges(
         &self,
         unicoderanges: &mut [DWRITE_UNICODE_RANGE],
@@ -18468,7 +18780,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsMonospacedFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18478,7 +18790,7 @@ impl IDWriteFontFace4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDesignGlyphAdvances<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -18502,7 +18814,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphAdvances<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -18535,7 +18847,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetKerningPairAdjustments(
         &self,
         glyphcount: u32,
@@ -18554,7 +18866,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasKerningPairs(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18564,7 +18876,7 @@ impl IDWriteFontFace4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode2<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -18596,7 +18908,7 @@ impl IDWriteFontFace4 {
         )
         .from_abi::<DWRITE_RENDERING_MODE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphVariants(
         &self,
         glyphcount: u32,
@@ -18615,7 +18927,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasVerticalGlyphVariants(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18625,7 +18937,7 @@ impl IDWriteFontFace4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsColorFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18634,7 +18946,7 @@ impl IDWriteFontFace4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetColorPaletteCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18643,7 +18955,7 @@ impl IDWriteFontFace4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPaletteEntryCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18652,7 +18964,7 @@ impl IDWriteFontFace4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPaletteEntries(
         &self,
         colorpaletteindex: u32,
@@ -18671,7 +18983,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode3<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -18707,7 +19019,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(&self) -> ::windows::core::Result<IDWriteFontFaceReference> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -18718,20 +19030,20 @@ impl IDWriteFontFace4 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPanose(&self, panose: *mut DWRITE_PANOSE) {
         (::windows::core::Interface::vtable(self).base__.GetPanose)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(panose),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).base__.GetWeight)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute(
             (::windows::core::Interface::vtable(self).base__.GetStretch)(
@@ -18739,13 +19051,13 @@ impl IDWriteFontFace4 {
             ),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).base__.GetStyle)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFamilyNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -18756,7 +19068,7 @@ impl IDWriteFontFace4 {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFaceNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetFaceNames)(
@@ -18765,7 +19077,7 @@ impl IDWriteFontFace4 {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInformationalStrings(
         &self,
         informationalstringid: DWRITE_INFORMATIONAL_STRING_ID,
@@ -18782,7 +19094,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasCharacter(&self, unicodevalue: u32) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18791,7 +19103,7 @@ impl IDWriteFontFace4 {
             ::core::mem::transmute(unicodevalue),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode4<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -18826,7 +19138,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsCharacterLocal(&self, unicodevalue: u32) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18835,7 +19147,7 @@ impl IDWriteFontFace4 {
             ::core::mem::transmute(unicodevalue),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsGlyphLocal(&self, glyphid: u16) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -18844,7 +19156,7 @@ impl IDWriteFontFace4 {
             ::core::mem::transmute(glyphid),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AreCharactersLocal<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -18865,7 +19177,7 @@ impl IDWriteFontFace4 {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AreGlyphsLocal<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -18886,7 +19198,7 @@ impl IDWriteFontFace4 {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphImageFormats(
         &self,
         glyphid: u16,
@@ -18906,7 +19218,7 @@ impl IDWriteFontFace4 {
         )
         .from_abi::<::windows::Win32::Graphics::DirectWrite::DWRITE_GLYPH_IMAGE_FORMATS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphImageFormats2(
         &self,
     ) -> ::windows::Win32::Graphics::DirectWrite::DWRITE_GLYPH_IMAGE_FORMATS {
@@ -18915,7 +19227,7 @@ impl IDWriteFontFace4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphImageData(
         &self,
         glyphid: u16,
@@ -18934,7 +19246,7 @@ impl IDWriteFontFace4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReleaseGlyphImageData(&self, glyphdatacontext: *mut ::core::ffi::c_void) {
         (::windows::core::Interface::vtable(self).ReleaseGlyphImageData)(
             ::windows::core::Interface::as_raw(self),
@@ -19066,11 +19378,11 @@ unsafe impl ::windows::core::Interface for IDWriteFontFace4 {
 #[repr(C)]
 #[doc(hidden)]
 pub struct IDWriteFontFace4_Vtbl where { pub base__ : IDWriteFontFace3_Vtbl , pub GetGlyphImageFormats : unsafe extern "system" fn ( this : * mut :: core :: ffi :: c_void , glyphid : u16 , pixelsperemfirst : u32 , pixelsperemlast : u32 , glyphimageformats : *mut ::windows::Win32::Graphics::DirectWrite:: DWRITE_GLYPH_IMAGE_FORMATS , ) -> :: windows :: core :: HRESULT , pub GetGlyphImageFormats2 : unsafe extern "system" fn ( this : * mut :: core :: ffi :: c_void , ) -> ::windows::Win32::Graphics::DirectWrite:: DWRITE_GLYPH_IMAGE_FORMATS , pub GetGlyphImageData : unsafe extern "system" fn ( this : * mut :: core :: ffi :: c_void , glyphid : u16 , pixelsperem : u32 , glyphimageformat : ::windows::Win32::Graphics::DirectWrite:: DWRITE_GLYPH_IMAGE_FORMATS , glyphdata : *mut DWRITE_GLYPH_IMAGE_DATA , glyphdatacontext : *mut *mut :: core :: ffi :: c_void , ) -> :: windows :: core :: HRESULT , pub ReleaseGlyphImageData : unsafe extern "system" fn ( this : * mut :: core :: ffi :: c_void , glyphdatacontext : *mut :: core :: ffi :: c_void , ) , }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFace5(::windows::core::IUnknown);
 impl IDWriteFontFace5 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetType(&self) -> DWRITE_FONT_FACE_TYPE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19082,7 +19394,7 @@ impl IDWriteFontFace5 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFiles(
         &self,
         numberoffiles: *mut u32,
@@ -19101,7 +19413,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIndex(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19113,7 +19425,7 @@ impl IDWriteFontFace5 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19125,7 +19437,7 @@ impl IDWriteFontFace5 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsSymbolFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19137,7 +19449,7 @@ impl IDWriteFontFace5 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self, fontfacemetrics: *mut DWRITE_FONT_METRICS) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -19150,7 +19462,7 @@ impl IDWriteFontFace5 {
             ::core::mem::transmute(fontfacemetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphCount(&self) -> u16 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19162,7 +19474,7 @@ impl IDWriteFontFace5 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDesignGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -19188,7 +19500,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphIndicesA(
         &self,
         codepoints: *const u32,
@@ -19209,7 +19521,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn TryGetFontTable(
         &self,
         opentypetabletag: u32,
@@ -19234,7 +19546,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReleaseFontTable(&self, tablecontext: *const ::core::ffi::c_void) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -19247,7 +19559,7 @@ impl IDWriteFontFace5 {
             ::core::mem::transmute(tablecontext),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphRunOutline<
         'a,
         Param5: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -19282,7 +19594,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode<
         'a,
         Param3: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
@@ -19310,7 +19622,7 @@ impl IDWriteFontFace5 {
         )
         .from_abi::<DWRITE_RENDERING_MODE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleMetrics(
         &self,
         emsize: f32,
@@ -19333,7 +19645,7 @@ impl IDWriteFontFace5 {
         )
         .from_abi::<DWRITE_FONT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphMetrics<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -19368,7 +19680,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics2(&self, fontmetrics: *mut DWRITE_FONT_METRICS1) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -19380,7 +19692,7 @@ impl IDWriteFontFace5 {
             ::core::mem::transmute(fontmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleMetrics2(
         &self,
         emsize: f32,
@@ -19402,7 +19714,7 @@ impl IDWriteFontFace5 {
         )
         .from_abi::<DWRITE_FONT_METRICS1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCaretMetrics(&self, caretmetrics: *mut DWRITE_CARET_METRICS) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -19414,7 +19726,7 @@ impl IDWriteFontFace5 {
             ::core::mem::transmute(caretmetrics),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnicodeRanges(
         &self,
         unicoderanges: &mut [DWRITE_UNICODE_RANGE],
@@ -19433,7 +19745,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsMonospacedFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19444,7 +19756,7 @@ impl IDWriteFontFace5 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDesignGlyphAdvances<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -19469,7 +19781,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphAdvances<
         'a,
         Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -19503,7 +19815,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetKerningPairAdjustments(
         &self,
         glyphcount: u32,
@@ -19523,7 +19835,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasKerningPairs(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19534,7 +19846,7 @@ impl IDWriteFontFace5 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode2<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -19567,7 +19879,7 @@ impl IDWriteFontFace5 {
         )
         .from_abi::<DWRITE_RENDERING_MODE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphVariants(
         &self,
         glyphcount: u32,
@@ -19587,7 +19899,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasVerticalGlyphVariants(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19598,7 +19910,7 @@ impl IDWriteFontFace5 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsColorFont(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19608,7 +19920,7 @@ impl IDWriteFontFace5 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetColorPaletteCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19618,7 +19930,7 @@ impl IDWriteFontFace5 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPaletteEntryCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19628,7 +19940,7 @@ impl IDWriteFontFace5 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPaletteEntries(
         &self,
         colorpaletteindex: u32,
@@ -19648,7 +19960,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode3<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -19685,7 +19997,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(&self) -> ::windows::core::Result<IDWriteFontFaceReference> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -19697,7 +20009,7 @@ impl IDWriteFontFace5 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPanose(&self, panose: *mut DWRITE_PANOSE) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -19707,7 +20019,7 @@ impl IDWriteFontFace5 {
             ::core::mem::transmute(panose),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19716,7 +20028,7 @@ impl IDWriteFontFace5 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19725,7 +20037,7 @@ impl IDWriteFontFace5 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19734,7 +20046,7 @@ impl IDWriteFontFace5 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFamilyNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -19746,7 +20058,7 @@ impl IDWriteFontFace5 {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFaceNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -19758,7 +20070,7 @@ impl IDWriteFontFace5 {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInformationalStrings(
         &self,
         informationalstringid: DWRITE_INFORMATIONAL_STRING_ID,
@@ -19776,7 +20088,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasCharacter(&self, unicodevalue: u32) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19786,7 +20098,7 @@ impl IDWriteFontFace5 {
             ::core::mem::transmute(unicodevalue),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRecommendedRenderingMode4<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -19822,7 +20134,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsCharacterLocal(&self, unicodevalue: u32) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19832,7 +20144,7 @@ impl IDWriteFontFace5 {
             ::core::mem::transmute(unicodevalue),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsGlyphLocal(&self, glyphid: u16) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -19842,7 +20154,7 @@ impl IDWriteFontFace5 {
             ::core::mem::transmute(glyphid),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AreCharactersLocal<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -19864,7 +20176,7 @@ impl IDWriteFontFace5 {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AreGlyphsLocal<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -19886,7 +20198,7 @@ impl IDWriteFontFace5 {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphImageFormats(
         &self,
         glyphid: u16,
@@ -19908,7 +20220,7 @@ impl IDWriteFontFace5 {
         )
         .from_abi::<::windows::Win32::Graphics::DirectWrite::DWRITE_GLYPH_IMAGE_FORMATS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphImageFormats2(
         &self,
     ) -> ::windows::Win32::Graphics::DirectWrite::DWRITE_GLYPH_IMAGE_FORMATS {
@@ -19918,7 +20230,7 @@ impl IDWriteFontFace5 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphImageData(
         &self,
         glyphid: u16,
@@ -19939,7 +20251,7 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReleaseGlyphImageData(&self, glyphdatacontext: *mut ::core::ffi::c_void) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -19948,14 +20260,14 @@ impl IDWriteFontFace5 {
             ::core::mem::transmute(glyphdatacontext),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisValueCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetFontAxisValueCount)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisValues(
         &self,
         fontaxisvalues: &mut [DWRITE_FONT_AXIS_VALUE],
@@ -19967,13 +20279,13 @@ impl IDWriteFontFace5 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasVariations(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).HasVariations)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontResource(&self) -> ::windows::core::Result<IDWriteFontResource> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontResource)(
@@ -19982,7 +20294,7 @@ impl IDWriteFontFace5 {
         )
         .from_abi::<IDWriteFontResource>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Equals<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>>(
         &self,
         fontface: Param0,
@@ -20156,11 +20468,1197 @@ pub struct IDWriteFontFace5_Vtbl {
         fontface: ::windows::core::RawPtr,
     ) -> ::windows::Win32::Foundation::BOOL,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
+#[repr(transparent)]
+pub struct IDWriteFontFace6(::windows::core::IUnknown);
+impl IDWriteFontFace6 {
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetType(&self) -> DWRITE_FONT_FACE_TYPE {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetType)(::windows::core::Interface::as_raw(
+            self,
+        )))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFiles(
+        &self,
+        numberoffiles: *mut u32,
+        fontfiles: *mut ::core::option::Option<IDWriteFontFile>,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetFiles)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(numberoffiles),
+            ::core::mem::transmute(fontfiles),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetIndex(&self) -> u32 {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetIndex)(::windows::core::Interface::as_raw(
+            self,
+        )))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetSimulations)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn IsSymbolFont(&self) -> ::windows::Win32::Foundation::BOOL {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .IsSymbolFont)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetMetrics(&self, fontfacemetrics: *mut DWRITE_FONT_METRICS) {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetMetrics)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(fontfacemetrics),
+        )
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetGlyphCount(&self) -> u16 {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetGlyphCount)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetDesignGlyphMetrics<
+        'a,
+        Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        glyphindices: *const u16,
+        glyphcount: u32,
+        glyphmetrics: *mut DWRITE_GLYPH_METRICS,
+        issideways: Param3,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetDesignGlyphMetrics)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(glyphindices),
+            ::core::mem::transmute(glyphcount),
+            ::core::mem::transmute(glyphmetrics),
+            issideways.into_param().abi(),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetGlyphIndicesA(
+        &self,
+        codepoints: *const u32,
+        codepointcount: u32,
+        glyphindices: *mut u16,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetGlyphIndicesA)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(codepoints),
+            ::core::mem::transmute(codepointcount),
+            ::core::mem::transmute(glyphindices),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn TryGetFontTable(
+        &self,
+        opentypetabletag: u32,
+        tabledata: *mut *mut ::core::ffi::c_void,
+        tablesize: *mut u32,
+        tablecontext: *mut *mut ::core::ffi::c_void,
+        exists: *mut ::windows::Win32::Foundation::BOOL,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .TryGetFontTable)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(opentypetabletag),
+            ::core::mem::transmute(tabledata),
+            ::core::mem::transmute(tablesize),
+            ::core::mem::transmute(tablecontext),
+            ::core::mem::transmute(exists),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn ReleaseFontTable(&self, tablecontext: *const ::core::ffi::c_void) {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .ReleaseFontTable)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(tablecontext),
+        )
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetGlyphRunOutline<
+        'a,
+        Param5: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+        Param6: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        emsize: f32,
+        glyphindices: *const u16,
+        glyphadvances: *const f32,
+        glyphoffsets: *const DWRITE_GLYPH_OFFSET,
+        glyphcount: u32,
+        issideways: Param5,
+        isrighttoleft: Param6,
+        geometrysink: *const ID2D1SimplifiedGeometrySink,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetGlyphRunOutline)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(emsize),
+            ::core::mem::transmute(glyphindices),
+            ::core::mem::transmute(glyphadvances),
+            ::core::mem::transmute(glyphoffsets),
+            ::core::mem::transmute(glyphcount),
+            issideways.into_param().abi(),
+            isrighttoleft.into_param().abi(),
+            ::core::mem::transmute(geometrysink),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetRecommendedRenderingMode<
+        'a,
+        Param3: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
+    >(
+        &self,
+        emsize: f32,
+        pixelsperdip: f32,
+        measuringmode: ::windows::Win32::Graphics::DirectWrite::DWRITE_MEASURING_MODE,
+        renderingparams: Param3,
+    ) -> ::windows::core::Result<DWRITE_RENDERING_MODE> {
+        let mut result__ = ::core::mem::MaybeUninit::<DWRITE_RENDERING_MODE>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetRecommendedRenderingMode)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(emsize),
+            ::core::mem::transmute(pixelsperdip),
+            ::core::mem::transmute(measuringmode),
+            renderingparams.into_param().abi(),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<DWRITE_RENDERING_MODE>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetGdiCompatibleMetrics(
+        &self,
+        emsize: f32,
+        pixelsperdip: f32,
+        transform: *const DWRITE_MATRIX,
+    ) -> ::windows::core::Result<DWRITE_FONT_METRICS> {
+        let mut result__ = ::core::mem::MaybeUninit::<DWRITE_FONT_METRICS>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetGdiCompatibleMetrics)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(emsize),
+            ::core::mem::transmute(pixelsperdip),
+            ::core::mem::transmute(transform),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<DWRITE_FONT_METRICS>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetGdiCompatibleGlyphMetrics<
+        'a,
+        Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+        Param7: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        emsize: f32,
+        pixelsperdip: f32,
+        transform: *const DWRITE_MATRIX,
+        usegdinatural: Param3,
+        glyphindices: *const u16,
+        glyphcount: u32,
+        glyphmetrics: *mut DWRITE_GLYPH_METRICS,
+        issideways: Param7,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetGdiCompatibleGlyphMetrics)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(emsize),
+            ::core::mem::transmute(pixelsperdip),
+            ::core::mem::transmute(transform),
+            usegdinatural.into_param().abi(),
+            ::core::mem::transmute(glyphindices),
+            ::core::mem::transmute(glyphcount),
+            ::core::mem::transmute(glyphmetrics),
+            issideways.into_param().abi(),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetMetrics2(&self, fontmetrics: *mut DWRITE_FONT_METRICS1) {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetMetrics2)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(fontmetrics),
+        )
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetGdiCompatibleMetrics2(
+        &self,
+        emsize: f32,
+        pixelsperdip: f32,
+        transform: *const DWRITE_MATRIX,
+    ) -> ::windows::core::Result<DWRITE_FONT_METRICS1> {
+        let mut result__ = ::core::mem::MaybeUninit::<DWRITE_FONT_METRICS1>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetGdiCompatibleMetrics2)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(emsize),
+            ::core::mem::transmute(pixelsperdip),
+            ::core::mem::transmute(transform),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<DWRITE_FONT_METRICS1>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetCaretMetrics(&self, caretmetrics: *mut DWRITE_CARET_METRICS) {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetCaretMetrics)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(caretmetrics),
+        )
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetUnicodeRanges(
+        &self,
+        unicoderanges: &mut [DWRITE_UNICODE_RANGE],
+        actualrangecount: *mut u32,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetUnicodeRanges)(
+            ::windows::core::Interface::as_raw(self),
+            unicoderanges.len() as _,
+            ::core::mem::transmute(::windows::core::as_mut_ptr_or_null(unicoderanges)),
+            ::core::mem::transmute(actualrangecount),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn IsMonospacedFont(&self) -> ::windows::Win32::Foundation::BOOL {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .IsMonospacedFont)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetDesignGlyphAdvances<
+        'a,
+        Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        glyphcount: u32,
+        glyphindices: *const u16,
+        glyphadvances: *mut i32,
+        issideways: Param3,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetDesignGlyphAdvances)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(glyphcount),
+            ::core::mem::transmute(glyphindices),
+            ::core::mem::transmute(glyphadvances),
+            issideways.into_param().abi(),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetGdiCompatibleGlyphAdvances<
+        'a,
+        Param3: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+        Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        emsize: f32,
+        pixelsperdip: f32,
+        transform: *const DWRITE_MATRIX,
+        usegdinatural: Param3,
+        issideways: Param4,
+        glyphcount: u32,
+        glyphindices: *const u16,
+        glyphadvances: *mut i32,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetGdiCompatibleGlyphAdvances)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(emsize),
+            ::core::mem::transmute(pixelsperdip),
+            ::core::mem::transmute(transform),
+            usegdinatural.into_param().abi(),
+            issideways.into_param().abi(),
+            ::core::mem::transmute(glyphcount),
+            ::core::mem::transmute(glyphindices),
+            ::core::mem::transmute(glyphadvances),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetKerningPairAdjustments(
+        &self,
+        glyphcount: u32,
+        glyphindices: *const u16,
+        glyphadvanceadjustments: *mut i32,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetKerningPairAdjustments)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(glyphcount),
+            ::core::mem::transmute(glyphindices),
+            ::core::mem::transmute(glyphadvanceadjustments),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn HasKerningPairs(&self) -> ::windows::Win32::Foundation::BOOL {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .HasKerningPairs)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetRecommendedRenderingMode2<
+        'a,
+        Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        fontemsize: f32,
+        dpix: f32,
+        dpiy: f32,
+        transform: *const DWRITE_MATRIX,
+        issideways: Param4,
+        outlinethreshold: DWRITE_OUTLINE_THRESHOLD,
+        measuringmode: ::windows::Win32::Graphics::DirectWrite::DWRITE_MEASURING_MODE,
+    ) -> ::windows::core::Result<DWRITE_RENDERING_MODE> {
+        let mut result__ = ::core::mem::MaybeUninit::<DWRITE_RENDERING_MODE>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetRecommendedRenderingMode2)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(fontemsize),
+            ::core::mem::transmute(dpix),
+            ::core::mem::transmute(dpiy),
+            ::core::mem::transmute(transform),
+            issideways.into_param().abi(),
+            ::core::mem::transmute(outlinethreshold),
+            ::core::mem::transmute(measuringmode),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<DWRITE_RENDERING_MODE>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetVerticalGlyphVariants(
+        &self,
+        glyphcount: u32,
+        nominalglyphindices: *const u16,
+        verticalglyphindices: *mut u16,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetVerticalGlyphVariants)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(glyphcount),
+            ::core::mem::transmute(nominalglyphindices),
+            ::core::mem::transmute(verticalglyphindices),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn HasVerticalGlyphVariants(&self) -> ::windows::Win32::Foundation::BOOL {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .base__
+            .HasVerticalGlyphVariants)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn IsColorFont(&self) -> ::windows::Win32::Foundation::BOOL {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .IsColorFont)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetColorPaletteCount(&self) -> u32 {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetColorPaletteCount)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetPaletteEntryCount(&self) -> u32 {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetPaletteEntryCount)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetPaletteEntries(
+        &self,
+        colorpaletteindex: u32,
+        firstentryindex: u32,
+        paletteentries: &mut [::windows::Win32::Graphics::DirectWrite::DWRITE_COLOR_F],
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetPaletteEntries)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(colorpaletteindex),
+            ::core::mem::transmute(firstentryindex),
+            paletteentries.len() as _,
+            ::core::mem::transmute(::windows::core::as_mut_ptr_or_null(paletteentries)),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetRecommendedRenderingMode3<
+        'a,
+        Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+        Param7: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
+    >(
+        &self,
+        fontemsize: f32,
+        dpix: f32,
+        dpiy: f32,
+        transform: *const DWRITE_MATRIX,
+        issideways: Param4,
+        outlinethreshold: DWRITE_OUTLINE_THRESHOLD,
+        measuringmode: ::windows::Win32::Graphics::DirectWrite::DWRITE_MEASURING_MODE,
+        renderingparams: Param7,
+        renderingmode: *mut DWRITE_RENDERING_MODE,
+        gridfitmode: *mut DWRITE_GRID_FIT_MODE,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetRecommendedRenderingMode3)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(fontemsize),
+            ::core::mem::transmute(dpix),
+            ::core::mem::transmute(dpiy),
+            ::core::mem::transmute(transform),
+            issideways.into_param().abi(),
+            ::core::mem::transmute(outlinethreshold),
+            ::core::mem::transmute(measuringmode),
+            renderingparams.into_param().abi(),
+            ::core::mem::transmute(renderingmode),
+            ::core::mem::transmute(gridfitmode),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontFaceReference(&self) -> ::windows::core::Result<IDWriteFontFaceReference> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFontFaceReference)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontFaceReference>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetPanose(&self, panose: *mut DWRITE_PANOSE) {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetPanose)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(panose),
+        )
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetWeight(&self) -> DWRITE_FONT_WEIGHT {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetWeight)(::windows::core::Interface::as_raw(
+            self,
+        )))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetStretch(&self) -> DWRITE_FONT_STRETCH {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetStretch)(::windows::core::Interface::as_raw(
+            self,
+        )))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetStyle(&self) -> DWRITE_FONT_STYLE {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetStyle)(::windows::core::Interface::as_raw(
+            self,
+        )))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFamilyNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFamilyNames)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteLocalizedStrings>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFaceNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFaceNames)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteLocalizedStrings>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetInformationalStrings(
+        &self,
+        informationalstringid: DWRITE_INFORMATIONAL_STRING_ID,
+        informationalstrings: *mut ::core::option::Option<IDWriteLocalizedStrings>,
+        exists: *mut ::windows::Win32::Foundation::BOOL,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetInformationalStrings)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(informationalstringid),
+            ::core::mem::transmute(informationalstrings),
+            ::core::mem::transmute(exists),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn HasCharacter(&self, unicodevalue: u32) -> ::windows::Win32::Foundation::BOOL {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .HasCharacter)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(unicodevalue),
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetRecommendedRenderingMode4<
+        'a,
+        Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+        Param7: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
+    >(
+        &self,
+        fontemsize: f32,
+        dpix: f32,
+        dpiy: f32,
+        transform: *const DWRITE_MATRIX,
+        issideways: Param4,
+        outlinethreshold: DWRITE_OUTLINE_THRESHOLD,
+        measuringmode: ::windows::Win32::Graphics::DirectWrite::DWRITE_MEASURING_MODE,
+        renderingparams: Param7,
+        renderingmode: *mut DWRITE_RENDERING_MODE1,
+        gridfitmode: *mut DWRITE_GRID_FIT_MODE,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetRecommendedRenderingMode4)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(fontemsize),
+            ::core::mem::transmute(dpix),
+            ::core::mem::transmute(dpiy),
+            ::core::mem::transmute(transform),
+            issideways.into_param().abi(),
+            ::core::mem::transmute(outlinethreshold),
+            ::core::mem::transmute(measuringmode),
+            renderingparams.into_param().abi(),
+            ::core::mem::transmute(renderingmode),
+            ::core::mem::transmute(gridfitmode),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn IsCharacterLocal(&self, unicodevalue: u32) -> ::windows::Win32::Foundation::BOOL {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .IsCharacterLocal)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(unicodevalue),
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn IsGlyphLocal(&self, glyphid: u16) -> ::windows::Win32::Foundation::BOOL {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .IsGlyphLocal)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(glyphid),
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn AreCharactersLocal<
+        'a,
+        Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        characters: &[u16],
+        enqueueifnotlocal: Param2,
+    ) -> ::windows::core::Result<::windows::Win32::Foundation::BOOL> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::Win32::Foundation::BOOL>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .AreCharactersLocal)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(characters)),
+            characters.len() as _,
+            enqueueifnotlocal.into_param().abi(),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn AreGlyphsLocal<
+        'a,
+        Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        glyphindices: &[u16],
+        enqueueifnotlocal: Param2,
+    ) -> ::windows::core::Result<::windows::Win32::Foundation::BOOL> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::Win32::Foundation::BOOL>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .AreGlyphsLocal)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(glyphindices)),
+            glyphindices.len() as _,
+            enqueueifnotlocal.into_param().abi(),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetGlyphImageFormats(
+        &self,
+        glyphid: u16,
+        pixelsperemfirst: u32,
+        pixelsperemlast: u32,
+    ) -> ::windows::core::Result<::windows::Win32::Graphics::DirectWrite::DWRITE_GLYPH_IMAGE_FORMATS>
+    {
+        let mut result__ = ::core::mem::MaybeUninit::<
+            ::windows::Win32::Graphics::DirectWrite::DWRITE_GLYPH_IMAGE_FORMATS,
+        >::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .GetGlyphImageFormats)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(glyphid),
+            ::core::mem::transmute(pixelsperemfirst),
+            ::core::mem::transmute(pixelsperemlast),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<::windows::Win32::Graphics::DirectWrite::DWRITE_GLYPH_IMAGE_FORMATS>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetGlyphImageFormats2(
+        &self,
+    ) -> ::windows::Win32::Graphics::DirectWrite::DWRITE_GLYPH_IMAGE_FORMATS {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .GetGlyphImageFormats2)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetGlyphImageData(
+        &self,
+        glyphid: u16,
+        pixelsperem: u32,
+        glyphimageformat: ::windows::Win32::Graphics::DirectWrite::DWRITE_GLYPH_IMAGE_FORMATS,
+        glyphdata: *mut DWRITE_GLYPH_IMAGE_DATA,
+        glyphdatacontext: *mut *mut ::core::ffi::c_void,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .GetGlyphImageData)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(glyphid),
+            ::core::mem::transmute(pixelsperem),
+            ::core::mem::transmute(glyphimageformat),
+            ::core::mem::transmute(glyphdata),
+            ::core::mem::transmute(glyphdatacontext),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn ReleaseGlyphImageData(&self, glyphdatacontext: *mut ::core::ffi::c_void) {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .ReleaseGlyphImageData)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(glyphdatacontext),
+        )
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontAxisValueCount(&self) -> u32 {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .GetFontAxisValueCount)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontAxisValues(
+        &self,
+        fontaxisvalues: &mut [DWRITE_FONT_AXIS_VALUE],
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .GetFontAxisValues)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(::windows::core::as_mut_ptr_or_null(fontaxisvalues)),
+            fontaxisvalues.len() as _,
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn HasVariations(&self) -> ::windows::Win32::Foundation::BOOL {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .HasVariations)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontResource(&self) -> ::windows::core::Result<IDWriteFontResource> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .GetFontResource)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontResource>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn Equals<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>>(
+        &self,
+        fontface: Param0,
+    ) -> ::windows::Win32::Foundation::BOOL {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self).base__.Equals)(
+            ::windows::core::Interface::as_raw(self),
+            fontface.into_param().abi(),
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFamilyNames2(
+        &self,
+        fontfamilymodel: DWRITE_FONT_FAMILY_MODEL,
+    ) -> ::windows::core::Result<IDWriteLocalizedStrings> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self).GetFamilyNames2)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(fontfamilymodel),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteLocalizedStrings>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFaceNames2(
+        &self,
+        fontfamilymodel: DWRITE_FONT_FAMILY_MODEL,
+    ) -> ::windows::core::Result<IDWriteLocalizedStrings> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self).GetFaceNames2)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(fontfamilymodel),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteLocalizedStrings>(result__)
+    }
+}
+impl ::core::convert::From<IDWriteFontFace6> for ::windows::core::IUnknown {
+    fn from(value: IDWriteFontFace6) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontFace6> for ::windows::core::IUnknown {
+    fn from(value: &IDWriteFontFace6) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteFontFace6> for IDWriteFontFace {
+    fn from(value: IDWriteFontFace6) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontFace6> for IDWriteFontFace {
+    fn from(value: &IDWriteFontFace6) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace> for IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace> for &'a IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteFontFace6> for IDWriteFontFace1 {
+    fn from(value: IDWriteFontFace6) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontFace6> for IDWriteFontFace1 {
+    fn from(value: &IDWriteFontFace6) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace1> for IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace1> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace1> for &'a IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace1> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteFontFace6> for IDWriteFontFace2 {
+    fn from(value: IDWriteFontFace6) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontFace6> for IDWriteFontFace2 {
+    fn from(value: &IDWriteFontFace6) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace2> for IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace2> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace2> for &'a IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace2> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteFontFace6> for IDWriteFontFace3 {
+    fn from(value: IDWriteFontFace6) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontFace6> for IDWriteFontFace3 {
+    fn from(value: &IDWriteFontFace6) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace3> for IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace3> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace3> for &'a IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace3> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteFontFace6> for IDWriteFontFace4 {
+    fn from(value: IDWriteFontFace6) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontFace6> for IDWriteFontFace4 {
+    fn from(value: &IDWriteFontFace6) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace4> for IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace4> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace4> for &'a IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace4> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteFontFace6> for IDWriteFontFace5 {
+    fn from(value: IDWriteFontFace6) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontFace6> for IDWriteFontFace5 {
+    fn from(value: &IDWriteFontFace6) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace5> for IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace5> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontFace5> for &'a IDWriteFontFace6 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontFace5> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::clone::Clone for IDWriteFontFace6 {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for IDWriteFontFace6 {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for IDWriteFontFace6 {}
+impl ::core::fmt::Debug for IDWriteFontFace6 {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("IDWriteFontFace6").field(&self.0).finish()
+    }
+}
+unsafe impl ::windows::core::Interface for IDWriteFontFace6 {
+    type Vtable = IDWriteFontFace6_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xc4b1fe1b_6e84_47d5_b54c_a597981b06ad);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IDWriteFontFace6_Vtbl {
+    pub base__: IDWriteFontFace5_Vtbl,
+    pub GetFamilyNames2: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        fontfamilymodel: DWRITE_FONT_FAMILY_MODEL,
+        names: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+    pub GetFaceNames2: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        fontfamilymodel: DWRITE_FONT_FAMILY_MODEL,
+        names: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFaceReference(::windows::core::IUnknown);
 impl IDWriteFontFaceReference {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(&self) -> ::windows::core::Result<IDWriteFontFace3> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateFontFace)(
@@ -20169,7 +21667,7 @@ impl IDWriteFontFaceReference {
         )
         .from_abi::<IDWriteFontFace3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceWithSimulations(
         &self,
         fontfacesimulationflags: DWRITE_FONT_SIMULATIONS,
@@ -20182,7 +21680,7 @@ impl IDWriteFontFaceReference {
         )
         .from_abi::<IDWriteFontFace3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Equals<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>>(
         &self,
         fontfacereference: Param0,
@@ -20192,19 +21690,19 @@ impl IDWriteFontFaceReference {
             fontfacereference.into_param().abi(),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceIndex(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontFaceIndex)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetSimulations)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFile(&self) -> ::windows::core::Result<IDWriteFontFile> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontFile)(
@@ -20213,19 +21711,19 @@ impl IDWriteFontFaceReference {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocalFileSize(&self) -> u64 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetLocalFileSize)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFileSize(&self) -> u64 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFileSize)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFileTime(
         &self,
     ) -> ::windows::core::Result<::windows::Win32::Foundation::FILETIME> {
@@ -20237,20 +21735,20 @@ impl IDWriteFontFaceReference {
         )
         .from_abi::<::windows::Win32::Foundation::FILETIME>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocality(&self) -> DWRITE_LOCALITY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetLocality)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn EnqueueFontDownloadRequest(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).EnqueueFontDownloadRequest)(
             ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn EnqueueCharacterDownloadRequest(
         &self,
         characters: &[u16],
@@ -20262,7 +21760,7 @@ impl IDWriteFontFaceReference {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn EnqueueGlyphDownloadRequest(
         &self,
         glyphindices: &[u16],
@@ -20274,7 +21772,7 @@ impl IDWriteFontFaceReference {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn EnqueueFileFragmentDownloadRequest(
         &self,
         fileoffset: u64,
@@ -20383,11 +21881,11 @@ pub struct IDWriteFontFaceReference_Vtbl {
     )
         -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFaceReference1(::windows::core::IUnknown);
 impl IDWriteFontFaceReference1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(&self) -> ::windows::core::Result<IDWriteFontFace3> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -20398,7 +21896,7 @@ impl IDWriteFontFaceReference1 {
         )
         .from_abi::<IDWriteFontFace3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceWithSimulations(
         &self,
         fontfacesimulationflags: DWRITE_FONT_SIMULATIONS,
@@ -20413,7 +21911,7 @@ impl IDWriteFontFaceReference1 {
         )
         .from_abi::<IDWriteFontFace3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Equals<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>>(
         &self,
         fontfacereference: Param0,
@@ -20423,7 +21921,7 @@ impl IDWriteFontFaceReference1 {
             fontfacereference.into_param().abi(),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceIndex(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -20431,7 +21929,7 @@ impl IDWriteFontFaceReference1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetSimulations(&self) -> DWRITE_FONT_SIMULATIONS {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -20439,7 +21937,7 @@ impl IDWriteFontFaceReference1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFile(&self) -> ::windows::core::Result<IDWriteFontFile> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetFontFile)(
@@ -20448,7 +21946,7 @@ impl IDWriteFontFaceReference1 {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocalFileSize(&self) -> u64 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -20456,7 +21954,7 @@ impl IDWriteFontFaceReference1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFileSize(&self) -> u64 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -20464,7 +21962,7 @@ impl IDWriteFontFaceReference1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFileTime(
         &self,
     ) -> ::windows::core::Result<::windows::Win32::Foundation::FILETIME> {
@@ -20476,7 +21974,7 @@ impl IDWriteFontFaceReference1 {
         )
         .from_abi::<::windows::Win32::Foundation::FILETIME>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocality(&self) -> DWRITE_LOCALITY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -20484,14 +21982,14 @@ impl IDWriteFontFaceReference1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn EnqueueFontDownloadRequest(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
             .EnqueueFontDownloadRequest)(::windows::core::Interface::as_raw(self))
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn EnqueueCharacterDownloadRequest(
         &self,
         characters: &[u16],
@@ -20505,7 +22003,7 @@ impl IDWriteFontFaceReference1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn EnqueueGlyphDownloadRequest(
         &self,
         glyphindices: &[u16],
@@ -20519,7 +22017,7 @@ impl IDWriteFontFaceReference1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn EnqueueFileFragmentDownloadRequest(
         &self,
         fileoffset: u64,
@@ -20534,7 +22032,7 @@ impl IDWriteFontFaceReference1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace2(&self) -> ::windows::core::Result<IDWriteFontFace5> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateFontFace2)(
@@ -20543,14 +22041,14 @@ impl IDWriteFontFaceReference1 {
         )
         .from_abi::<IDWriteFontFace5>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisValueCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetFontAxisValueCount)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisValues(
         &self,
         fontaxisvalues: &mut [DWRITE_FONT_AXIS_VALUE],
@@ -20645,11 +22143,11 @@ pub struct IDWriteFontFaceReference1_Vtbl {
         fontaxisvaluecount: u32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFallback(::windows::core::IUnknown);
 impl IDWriteFontFallback {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn MapCharacters<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -20746,11 +22244,11 @@ pub struct IDWriteFontFallback_Vtbl {
         scale: *mut f32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFallback1(::windows::core::IUnknown);
 impl IDWriteFontFallback1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn MapCharacters<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -20788,7 +22286,7 @@ impl IDWriteFontFallback1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn MapCharacters2<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -20903,11 +22401,11 @@ pub struct IDWriteFontFallback1_Vtbl {
         mappedfontface: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFallbackBuilder(::windows::core::IUnknown);
 impl IDWriteFontFallbackBuilder {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddMapping<
         'a,
         Param4: ::windows::core::IntoParam<'a, IDWriteFontCollection>,
@@ -20935,7 +22433,7 @@ impl IDWriteFontFallbackBuilder {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddMappings<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFallback>>(
         &self,
         fontfallback: Param0,
@@ -20946,7 +22444,7 @@ impl IDWriteFontFallbackBuilder {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateFontFallback)(
@@ -21025,11 +22523,11 @@ pub struct IDWriteFontFallbackBuilder_Vtbl {
         fontfallback: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFamily(::windows::core::IUnknown);
 impl IDWriteFontFamily {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -21040,7 +22538,7 @@ impl IDWriteFontFamily {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -21048,7 +22546,7 @@ impl IDWriteFontFamily {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFont(&self, index: u32) -> ::windows::core::Result<IDWriteFont> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetFont)(
@@ -21058,7 +22556,7 @@ impl IDWriteFontFamily {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFamilyNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFamilyNames)(
@@ -21067,7 +22565,7 @@ impl IDWriteFontFamily {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFirstMatchingFont(
         &self,
         weight: DWRITE_FONT_WEIGHT,
@@ -21084,7 +22582,7 @@ impl IDWriteFontFamily {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts(
         &self,
         weight: DWRITE_FONT_WEIGHT,
@@ -21186,11 +22684,11 @@ pub struct IDWriteFontFamily_Vtbl {
         matchingfonts: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFamily1(::windows::core::IUnknown);
 impl IDWriteFontFamily1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -21202,7 +22700,7 @@ impl IDWriteFontFamily1 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -21211,7 +22709,7 @@ impl IDWriteFontFamily1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFont(&self, index: u32) -> ::windows::core::Result<IDWriteFont> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -21224,7 +22722,7 @@ impl IDWriteFontFamily1 {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFamilyNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -21235,7 +22733,7 @@ impl IDWriteFontFamily1 {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFirstMatchingFont(
         &self,
         weight: DWRITE_FONT_WEIGHT,
@@ -21254,7 +22752,7 @@ impl IDWriteFontFamily1 {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts(
         &self,
         weight: DWRITE_FONT_WEIGHT,
@@ -21273,14 +22771,14 @@ impl IDWriteFontFamily1 {
         )
         .from_abi::<IDWriteFontList>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontLocality(&self, listindex: u32) -> DWRITE_LOCALITY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontLocality)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(listindex),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFont2(&self, listindex: u32) -> ::windows::core::Result<IDWriteFont3> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFont2)(
@@ -21290,7 +22788,7 @@ impl IDWriteFontFamily1 {
         )
         .from_abi::<IDWriteFont3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(
         &self,
         listindex: u32,
@@ -21404,11 +22902,11 @@ pub struct IDWriteFontFamily1_Vtbl {
         fontfacereference: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFamily2(::windows::core::IUnknown);
 impl IDWriteFontFamily2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -21421,7 +22919,7 @@ impl IDWriteFontFamily2 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -21431,7 +22929,7 @@ impl IDWriteFontFamily2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFont(&self, index: u32) -> ::windows::core::Result<IDWriteFont> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -21445,7 +22943,7 @@ impl IDWriteFontFamily2 {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFamilyNames(&self) -> ::windows::core::Result<IDWriteLocalizedStrings> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -21457,7 +22955,7 @@ impl IDWriteFontFamily2 {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFirstMatchingFont(
         &self,
         weight: DWRITE_FONT_WEIGHT,
@@ -21477,7 +22975,7 @@ impl IDWriteFontFamily2 {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts(
         &self,
         weight: DWRITE_FONT_WEIGHT,
@@ -21497,7 +22995,7 @@ impl IDWriteFontFamily2 {
         )
         .from_abi::<IDWriteFontList>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontLocality(&self, listindex: u32) -> DWRITE_LOCALITY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -21506,7 +23004,7 @@ impl IDWriteFontFamily2 {
             ::core::mem::transmute(listindex),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFont2(&self, listindex: u32) -> ::windows::core::Result<IDWriteFont3> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetFont2)(
@@ -21516,7 +23014,7 @@ impl IDWriteFontFamily2 {
         )
         .from_abi::<IDWriteFont3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(
         &self,
         listindex: u32,
@@ -21531,7 +23029,7 @@ impl IDWriteFontFamily2 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts2(
         &self,
         fontaxisvalues: &[DWRITE_FONT_AXIS_VALUE],
@@ -21545,7 +23043,7 @@ impl IDWriteFontFamily2 {
         )
         .from_abi::<IDWriteFontList2>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSet(&self) -> ::windows::core::Result<IDWriteFontSet1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontSet)(
@@ -21671,11 +23169,11 @@ pub struct IDWriteFontFamily2_Vtbl {
         fontset: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFile(::windows::core::IUnknown);
 impl IDWriteFontFile {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetReferenceKey(
         &self,
         fontfilereferencekey: *mut *mut ::core::ffi::c_void,
@@ -21688,7 +23186,7 @@ impl IDWriteFontFile {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLoader(&self) -> ::windows::core::Result<IDWriteFontFileLoader> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetLoader)(
@@ -21697,7 +23195,7 @@ impl IDWriteFontFile {
         )
         .from_abi::<IDWriteFontFileLoader>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Analyze(
         &self,
         issupportedfonttype: *mut ::windows::Win32::Foundation::BOOL,
@@ -21777,11 +23275,11 @@ pub struct IDWriteFontFile_Vtbl {
         numberoffaces: *mut u32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFileEnumerator(::windows::core::IUnknown);
 impl IDWriteFontFileEnumerator {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn MoveNext(&self) -> ::windows::core::Result<::windows::Win32::Foundation::BOOL> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::Win32::Foundation::BOOL>::zeroed();
         (::windows::core::Interface::vtable(self).MoveNext)(
@@ -21790,7 +23288,7 @@ impl IDWriteFontFileEnumerator {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCurrentFontFile(&self) -> ::windows::core::Result<IDWriteFontFile> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetCurrentFontFile)(
@@ -21858,11 +23356,11 @@ pub struct IDWriteFontFileEnumerator_Vtbl {
         fontfile: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFileLoader(::windows::core::IUnknown);
 impl IDWriteFontFileLoader {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateStreamFromKey(
         &self,
         fontfilereferencekey: *const ::core::ffi::c_void,
@@ -21932,11 +23430,11 @@ pub struct IDWriteFontFileLoader_Vtbl {
         fontfilestream: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontFileStream(::windows::core::IUnknown);
 impl IDWriteFontFileStream {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReadFileFragment(
         &self,
         fragmentstart: *mut *mut ::core::ffi::c_void,
@@ -21953,14 +23451,14 @@ impl IDWriteFontFileStream {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReleaseFileFragment(&self, fragmentcontext: *mut ::core::ffi::c_void) {
         (::windows::core::Interface::vtable(self).ReleaseFileFragment)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(fragmentcontext),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFileSize(&self) -> ::windows::core::Result<u64> {
         let mut result__ = ::core::mem::MaybeUninit::<u64>::zeroed();
         (::windows::core::Interface::vtable(self).GetFileSize)(
@@ -21969,7 +23467,7 @@ impl IDWriteFontFileStream {
         )
         .from_abi::<u64>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLastWriteTime(&self) -> ::windows::core::Result<u64> {
         let mut result__ = ::core::mem::MaybeUninit::<u64>::zeroed();
         (::windows::core::Interface::vtable(self).GetLastWriteTime)(
@@ -22046,11 +23544,11 @@ pub struct IDWriteFontFileStream_Vtbl {
         lastwritetime: *mut u64,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontList(::windows::core::IUnknown);
 impl IDWriteFontList {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontCollection)(
@@ -22059,13 +23557,13 @@ impl IDWriteFontList {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontCount)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFont(&self, index: u32) -> ::windows::core::Result<IDWriteFont> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFont)(
@@ -22132,11 +23630,11 @@ pub struct IDWriteFontList_Vtbl {
         font: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontList1(::windows::core::IUnknown);
 impl IDWriteFontList1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -22147,7 +23645,7 @@ impl IDWriteFontList1 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -22155,7 +23653,7 @@ impl IDWriteFontList1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFont(&self, index: u32) -> ::windows::core::Result<IDWriteFont> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetFont)(
@@ -22165,14 +23663,14 @@ impl IDWriteFontList1 {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontLocality(&self, listindex: u32) -> DWRITE_LOCALITY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontLocality)(
             ::windows::core::Interface::as_raw(self),
             ::core::mem::transmute(listindex),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFont2(&self, listindex: u32) -> ::windows::core::Result<IDWriteFont3> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFont2)(
@@ -22182,7 +23680,7 @@ impl IDWriteFontList1 {
         )
         .from_abi::<IDWriteFont3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(
         &self,
         listindex: u32,
@@ -22276,11 +23774,11 @@ pub struct IDWriteFontList1_Vtbl {
         fontfacereference: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontList2(::windows::core::IUnknown);
 impl IDWriteFontList2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -22292,7 +23790,7 @@ impl IDWriteFontList2 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -22301,7 +23799,7 @@ impl IDWriteFontList2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFont(&self, index: u32) -> ::windows::core::Result<IDWriteFont> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -22314,7 +23812,7 @@ impl IDWriteFontList2 {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontLocality(&self, listindex: u32) -> DWRITE_LOCALITY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -22323,7 +23821,7 @@ impl IDWriteFontList2 {
             ::core::mem::transmute(listindex),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFont2(&self, listindex: u32) -> ::windows::core::Result<IDWriteFont3> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetFont2)(
@@ -22333,7 +23831,7 @@ impl IDWriteFontList2 {
         )
         .from_abi::<IDWriteFont3>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(
         &self,
         listindex: u32,
@@ -22348,7 +23846,7 @@ impl IDWriteFontList2 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSet(&self) -> ::windows::core::Result<IDWriteFontSet1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontSet)(
@@ -22448,11 +23946,11 @@ pub struct IDWriteFontList2_Vtbl {
         fontset: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontResource(::windows::core::IUnknown);
 impl IDWriteFontResource {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFile(&self) -> ::windows::core::Result<IDWriteFontFile> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontFile)(
@@ -22461,19 +23959,19 @@ impl IDWriteFontResource {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceIndex(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontFaceIndex)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontAxisCount)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDefaultFontAxisValues(
         &self,
         fontaxisvalues: &mut [DWRITE_FONT_AXIS_VALUE],
@@ -22485,7 +23983,7 @@ impl IDWriteFontResource {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisRanges(
         &self,
         fontaxisranges: &mut [DWRITE_FONT_AXIS_RANGE],
@@ -22497,7 +23995,7 @@ impl IDWriteFontResource {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisAttributes(&self, axisindex: u32) -> DWRITE_FONT_AXIS_ATTRIBUTES {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetFontAxisAttributes)(
@@ -22505,7 +24003,7 @@ impl IDWriteFontResource {
             ::core::mem::transmute(axisindex),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetAxisNames(
         &self,
         axisindex: u32,
@@ -22518,7 +24016,7 @@ impl IDWriteFontResource {
         )
         .from_abi::<IDWriteLocalizedStrings>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetAxisValueNameCount(&self, axisindex: u32) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetAxisValueNameCount)(
@@ -22526,7 +24024,7 @@ impl IDWriteFontResource {
             ::core::mem::transmute(axisindex),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetAxisValueNames(
         &self,
         axisindex: u32,
@@ -22543,13 +24041,13 @@ impl IDWriteFontResource {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HasVariations(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).HasVariations)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         fontsimulations: DWRITE_FONT_SIMULATIONS,
@@ -22565,7 +24063,7 @@ impl IDWriteFontResource {
         )
         .from_abi::<IDWriteFontFace5>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceReference(
         &self,
         fontsimulations: DWRITE_FONT_SIMULATIONS,
@@ -22679,17 +24177,17 @@ pub struct IDWriteFontResource_Vtbl {
         fontfacereference: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontSet(::windows::core::IUnknown);
 impl IDWriteFontSet {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontCount)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(
         &self,
         listindex: u32,
@@ -22702,7 +24200,7 @@ impl IDWriteFontSet {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>,
@@ -22720,7 +24218,7 @@ impl IDWriteFontSet {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFontFace<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>>(
         &self,
         fontface: Param0,
@@ -22735,7 +24233,7 @@ impl IDWriteFontSet {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues(
         &self,
         propertyid: DWRITE_FONT_PROPERTY_ID,
@@ -22748,7 +24246,7 @@ impl IDWriteFontSet {
         )
         .from_abi::<IDWriteStringList>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues2<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -22766,7 +24264,7 @@ impl IDWriteFontSet {
         )
         .from_abi::<IDWriteStringList>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues3(
         &self,
         listindex: u32,
@@ -22783,7 +24281,7 @@ impl IDWriteFontSet {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyOccurrenceCount(
         &self,
         property: *const DWRITE_FONT_PROPERTY,
@@ -22796,7 +24294,7 @@ impl IDWriteFontSet {
         )
         .from_abi::<u32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -22818,7 +24316,7 @@ impl IDWriteFontSet {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts2(
         &self,
         properties: &[DWRITE_FONT_PROPERTY],
@@ -22934,11 +24432,11 @@ pub struct IDWriteFontSet_Vtbl {
         filteredset: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontSet1(::windows::core::IUnknown);
 impl IDWriteFontSet1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -22946,7 +24444,7 @@ impl IDWriteFontSet1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(
         &self,
         listindex: u32,
@@ -22961,7 +24459,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>,
@@ -22981,7 +24479,7 @@ impl IDWriteFontSet1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFontFace<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>>(
         &self,
         fontface: Param0,
@@ -22996,7 +24494,7 @@ impl IDWriteFontSet1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues(
         &self,
         propertyid: DWRITE_FONT_PROPERTY_ID,
@@ -23011,7 +24509,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteStringList>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues2<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -23031,7 +24529,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteStringList>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues3(
         &self,
         listindex: u32,
@@ -23050,7 +24548,7 @@ impl IDWriteFontSet1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyOccurrenceCount(
         &self,
         property: *const DWRITE_FONT_PROPERTY,
@@ -23065,7 +24563,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<u32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -23089,7 +24587,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts2(
         &self,
         properties: &[DWRITE_FONT_PROPERTY],
@@ -23105,7 +24603,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts3(
         &self,
         fontproperty: *const DWRITE_FONT_PROPERTY,
@@ -23121,7 +24619,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFirstFontResources(&self) -> ::windows::core::Result<IDWriteFontSet1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFirstFontResources)(
@@ -23130,7 +24628,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFonts(
         &self,
         indices: &[u32],
@@ -23144,7 +24642,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFonts2<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -23163,7 +24661,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFonts3<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -23182,7 +24680,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFontIndices<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -23204,7 +24702,7 @@ impl IDWriteFontSet1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFontIndices2<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -23226,7 +24724,7 @@ impl IDWriteFontSet1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisRanges(
         &self,
         listindex: u32,
@@ -23242,7 +24740,7 @@ impl IDWriteFontSet1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisRanges2(
         &self,
         fontaxisranges: &mut [DWRITE_FONT_AXIS_RANGE],
@@ -23256,7 +24754,7 @@ impl IDWriteFontSet1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference2(
         &self,
         listindex: u32,
@@ -23269,7 +24767,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteFontFaceReference1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontResource(
         &self,
         listindex: u32,
@@ -23282,7 +24780,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteFontResource>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         listindex: u32,
@@ -23295,7 +24793,7 @@ impl IDWriteFontSet1 {
         )
         .from_abi::<IDWriteFontFace5>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontLocality(&self, listindex: u32) -> DWRITE_LOCALITY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontLocality)(
             ::windows::core::Interface::as_raw(self),
@@ -23450,11 +24948,11 @@ pub struct IDWriteFontSet1_Vtbl {
         listindex: u32,
     ) -> DWRITE_LOCALITY,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontSet2(::windows::core::IUnknown);
 impl IDWriteFontSet2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -23463,7 +24961,7 @@ impl IDWriteFontSet2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(
         &self,
         listindex: u32,
@@ -23479,7 +24977,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>,
@@ -23500,7 +24998,7 @@ impl IDWriteFontSet2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFontFace<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>>(
         &self,
         fontface: Param0,
@@ -23518,7 +25016,7 @@ impl IDWriteFontSet2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues(
         &self,
         propertyid: DWRITE_FONT_PROPERTY_ID,
@@ -23534,7 +25032,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteStringList>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues2<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -23555,7 +25053,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteStringList>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues3(
         &self,
         listindex: u32,
@@ -23575,7 +25073,7 @@ impl IDWriteFontSet2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyOccurrenceCount(
         &self,
         property: *const DWRITE_FONT_PROPERTY,
@@ -23591,7 +25089,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<u32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -23616,7 +25114,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts2(
         &self,
         properties: &[DWRITE_FONT_PROPERTY],
@@ -23633,7 +25131,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts3(
         &self,
         fontproperty: *const DWRITE_FONT_PROPERTY,
@@ -23651,7 +25149,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFirstFontResources(&self) -> ::windows::core::Result<IDWriteFontSet1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -23662,7 +25160,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFonts(
         &self,
         indices: &[u32],
@@ -23678,7 +25176,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFonts2<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -23699,7 +25197,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFonts3<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -23720,7 +25218,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFontIndices<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -23744,7 +25242,7 @@ impl IDWriteFontSet2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFontIndices2<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -23768,7 +25266,7 @@ impl IDWriteFontSet2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisRanges(
         &self,
         listindex: u32,
@@ -23786,7 +25284,7 @@ impl IDWriteFontSet2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisRanges2(
         &self,
         fontaxisranges: &mut [DWRITE_FONT_AXIS_RANGE],
@@ -23802,7 +25300,7 @@ impl IDWriteFontSet2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference2(
         &self,
         listindex: u32,
@@ -23817,7 +25315,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteFontFaceReference1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontResource(
         &self,
         listindex: u32,
@@ -23832,7 +25330,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteFontResource>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         listindex: u32,
@@ -23847,7 +25345,7 @@ impl IDWriteFontSet2 {
         )
         .from_abi::<IDWriteFontFace5>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontLocality(&self, listindex: u32) -> DWRITE_LOCALITY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -23856,7 +25354,7 @@ impl IDWriteFontSet2 {
             ::core::mem::transmute(listindex),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetExpirationEvent(&self) -> ::windows::Win32::Foundation::HANDLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetExpirationEvent)(
@@ -23953,11 +25451,11 @@ pub struct IDWriteFontSet2_Vtbl {
         this: *mut ::core::ffi::c_void,
     ) -> ::windows::Win32::Foundation::HANDLE,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontSet3(::windows::core::IUnknown);
 impl IDWriteFontSet3 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -23967,7 +25465,7 @@ impl IDWriteFontSet3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference(
         &self,
         listindex: u32,
@@ -23984,7 +25482,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteFontFaceReference>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>,
@@ -24006,7 +25504,7 @@ impl IDWriteFontSet3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindFontFace<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>>(
         &self,
         fontface: Param0,
@@ -24025,7 +25523,7 @@ impl IDWriteFontSet3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues(
         &self,
         propertyid: DWRITE_FONT_PROPERTY_ID,
@@ -24042,7 +25540,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteStringList>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues2<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -24064,7 +25562,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteStringList>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyValues3(
         &self,
         listindex: u32,
@@ -24085,7 +25583,7 @@ impl IDWriteFontSet3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPropertyOccurrenceCount(
         &self,
         property: *const DWRITE_FONT_PROPERTY,
@@ -24102,7 +25600,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<u32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -24128,7 +25626,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts2(
         &self,
         properties: &[DWRITE_FONT_PROPERTY],
@@ -24146,7 +25644,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFonts3(
         &self,
         fontproperty: *const DWRITE_FONT_PROPERTY,
@@ -24165,7 +25663,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFirstFontResources(&self) -> ::windows::core::Result<IDWriteFontSet1> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -24177,7 +25675,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFonts(
         &self,
         indices: &[u32],
@@ -24194,7 +25692,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFonts2<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -24216,7 +25714,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFonts3<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -24238,7 +25736,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteFontSet1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFontIndices<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -24263,7 +25761,7 @@ impl IDWriteFontSet3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilteredFontIndices2<
         'a,
         Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -24288,7 +25786,7 @@ impl IDWriteFontSet3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisRanges(
         &self,
         listindex: u32,
@@ -24307,7 +25805,7 @@ impl IDWriteFontSet3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisRanges2(
         &self,
         fontaxisranges: &mut [DWRITE_FONT_AXIS_RANGE],
@@ -24324,7 +25822,7 @@ impl IDWriteFontSet3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFaceReference2(
         &self,
         listindex: u32,
@@ -24340,7 +25838,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteFontFaceReference1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontResource(
         &self,
         listindex: u32,
@@ -24356,7 +25854,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteFontResource>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFace(
         &self,
         listindex: u32,
@@ -24372,7 +25870,7 @@ impl IDWriteFontSet3 {
         )
         .from_abi::<IDWriteFontFace5>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontLocality(&self, listindex: u32) -> DWRITE_LOCALITY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -24382,7 +25880,7 @@ impl IDWriteFontSet3 {
             ::core::mem::transmute(listindex),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetExpirationEvent(&self) -> ::windows::Win32::Foundation::HANDLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -24390,7 +25888,7 @@ impl IDWriteFontSet3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSourceType(&self, fontindex: u32) -> DWRITE_FONT_SOURCE_TYPE {
         ::core::mem::transmute(
             (::windows::core::Interface::vtable(self).GetFontSourceType)(
@@ -24399,7 +25897,7 @@ impl IDWriteFontSet3 {
             ),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSourceNameLength(&self, listindex: u32) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetFontSourceNameLength)(
@@ -24407,7 +25905,7 @@ impl IDWriteFontSet3 {
             ::core::mem::transmute(listindex),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSourceName(
         &self,
         listindex: u32,
@@ -24540,11 +26038,694 @@ pub struct IDWriteFontSet3_Vtbl {
         stringbuffersize: u32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
+#[repr(transparent)]
+pub struct IDWriteFontSet4(::windows::core::IUnknown);
+impl IDWriteFontSet4 {
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontCount(&self) -> u32 {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetFontCount)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontFaceReference(
+        &self,
+        listindex: u32,
+    ) -> ::windows::core::Result<IDWriteFontFaceReference> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetFontFaceReference)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(listindex),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontFaceReference>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn FindFontFaceReference<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>,
+    >(
+        &self,
+        fontfacereference: Param0,
+        listindex: *mut u32,
+        exists: *mut ::windows::Win32::Foundation::BOOL,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .FindFontFaceReference)(
+            ::windows::core::Interface::as_raw(self),
+            fontfacereference.into_param().abi(),
+            ::core::mem::transmute(listindex),
+            ::core::mem::transmute(exists),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn FindFontFace<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>>(
+        &self,
+        fontface: Param0,
+        listindex: *mut u32,
+        exists: *mut ::windows::Win32::Foundation::BOOL,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .FindFontFace)(
+            ::windows::core::Interface::as_raw(self),
+            fontface.into_param().abi(),
+            ::core::mem::transmute(listindex),
+            ::core::mem::transmute(exists),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetPropertyValues(
+        &self,
+        propertyid: DWRITE_FONT_PROPERTY_ID,
+    ) -> ::windows::core::Result<IDWriteStringList> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetPropertyValues)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(propertyid),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteStringList>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetPropertyValues2<
+        'a,
+        Param1: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
+    >(
+        &self,
+        propertyid: DWRITE_FONT_PROPERTY_ID,
+        preferredlocalenames: Param1,
+    ) -> ::windows::core::Result<IDWriteStringList> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetPropertyValues2)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(propertyid),
+            preferredlocalenames.into_param().abi(),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteStringList>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetPropertyValues3(
+        &self,
+        listindex: u32,
+        propertyid: DWRITE_FONT_PROPERTY_ID,
+        exists: *mut ::windows::Win32::Foundation::BOOL,
+        values: *mut ::core::option::Option<IDWriteLocalizedStrings>,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetPropertyValues3)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(listindex),
+            ::core::mem::transmute(propertyid),
+            ::core::mem::transmute(exists),
+            ::core::mem::transmute(values),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetPropertyOccurrenceCount(
+        &self,
+        property: *const DWRITE_FONT_PROPERTY,
+    ) -> ::windows::core::Result<u32> {
+        let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetPropertyOccurrenceCount)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(property),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<u32>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetMatchingFonts<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
+    >(
+        &self,
+        familyname: Param0,
+        fontweight: DWRITE_FONT_WEIGHT,
+        fontstretch: DWRITE_FONT_STRETCH,
+        fontstyle: DWRITE_FONT_STYLE,
+    ) -> ::windows::core::Result<IDWriteFontSet> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetMatchingFonts)(
+            ::windows::core::Interface::as_raw(self),
+            familyname.into_param().abi(),
+            ::core::mem::transmute(fontweight),
+            ::core::mem::transmute(fontstretch),
+            ::core::mem::transmute(fontstyle),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontSet>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetMatchingFonts2(
+        &self,
+        properties: &[DWRITE_FONT_PROPERTY],
+    ) -> ::windows::core::Result<IDWriteFontSet> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .base__
+            .GetMatchingFonts2)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(properties)),
+            properties.len() as _,
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontSet>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetMatchingFonts3(
+        &self,
+        fontproperty: *const DWRITE_FONT_PROPERTY,
+        fontaxisvalues: &[DWRITE_FONT_AXIS_VALUE],
+    ) -> ::windows::core::Result<IDWriteFontSet1> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetMatchingFonts3)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(fontproperty),
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(fontaxisvalues)),
+            fontaxisvalues.len() as _,
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontSet1>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFirstFontResources(&self) -> ::windows::core::Result<IDWriteFontSet1> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFirstFontResources)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontSet1>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFilteredFonts(
+        &self,
+        indices: &[u32],
+    ) -> ::windows::core::Result<IDWriteFontSet1> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFilteredFonts)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(indices)),
+            indices.len() as _,
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontSet1>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFilteredFonts2<
+        'a,
+        Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        fontaxisranges: &[DWRITE_FONT_AXIS_RANGE],
+        selectanyrange: Param2,
+    ) -> ::windows::core::Result<IDWriteFontSet1> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFilteredFonts2)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(fontaxisranges)),
+            fontaxisranges.len() as _,
+            selectanyrange.into_param().abi(),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontSet1>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFilteredFonts3<
+        'a,
+        Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        properties: &[DWRITE_FONT_PROPERTY],
+        selectanyproperty: Param2,
+    ) -> ::windows::core::Result<IDWriteFontSet1> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFilteredFonts3)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(properties)),
+            properties.len() as _,
+            selectanyproperty.into_param().abi(),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontSet1>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFilteredFontIndices<
+        'a,
+        Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        fontaxisranges: &[DWRITE_FONT_AXIS_RANGE],
+        selectanyrange: Param2,
+        indices: &mut [u32],
+        actualindexcount: *mut u32,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFilteredFontIndices)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(fontaxisranges)),
+            fontaxisranges.len() as _,
+            selectanyrange.into_param().abi(),
+            ::core::mem::transmute(::windows::core::as_mut_ptr_or_null(indices)),
+            indices.len() as _,
+            ::core::mem::transmute(actualindexcount),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFilteredFontIndices2<
+        'a,
+        Param2: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
+    >(
+        &self,
+        properties: &[DWRITE_FONT_PROPERTY],
+        selectanyproperty: Param2,
+        indices: &mut [u32],
+        actualindexcount: *mut u32,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFilteredFontIndices2)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(properties)),
+            properties.len() as _,
+            selectanyproperty.into_param().abi(),
+            ::core::mem::transmute(::windows::core::as_mut_ptr_or_null(indices)),
+            indices.len() as _,
+            ::core::mem::transmute(actualindexcount),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontAxisRanges(
+        &self,
+        listindex: u32,
+        fontaxisranges: &mut [DWRITE_FONT_AXIS_RANGE],
+        actualfontaxisrangecount: *mut u32,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFontAxisRanges)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(listindex),
+            ::core::mem::transmute(::windows::core::as_mut_ptr_or_null(fontaxisranges)),
+            fontaxisranges.len() as _,
+            ::core::mem::transmute(actualfontaxisrangecount),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontAxisRanges2(
+        &self,
+        fontaxisranges: &mut [DWRITE_FONT_AXIS_RANGE],
+        actualfontaxisrangecount: *mut u32,
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFontAxisRanges2)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(::windows::core::as_mut_ptr_or_null(fontaxisranges)),
+            fontaxisranges.len() as _,
+            ::core::mem::transmute(actualfontaxisrangecount),
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontFaceReference2(
+        &self,
+        listindex: u32,
+    ) -> ::windows::core::Result<IDWriteFontFaceReference1> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFontFaceReference2)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(listindex),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontFaceReference1>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn CreateFontResource(
+        &self,
+        listindex: u32,
+    ) -> ::windows::core::Result<IDWriteFontResource> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .CreateFontResource)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(listindex),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontResource>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn CreateFontFace(
+        &self,
+        listindex: u32,
+    ) -> ::windows::core::Result<IDWriteFontFace5> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .CreateFontFace)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(listindex),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontFace5>(result__)
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontLocality(&self, listindex: u32) -> DWRITE_LOCALITY {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .base__
+            .GetFontLocality)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(listindex),
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetExpirationEvent(&self) -> ::windows::Win32::Foundation::HANDLE {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .base__
+            .GetExpirationEvent)(
+            ::windows::core::Interface::as_raw(self)
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontSourceType(&self, fontindex: u32) -> DWRITE_FONT_SOURCE_TYPE {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .GetFontSourceType)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(fontindex),
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontSourceNameLength(&self, listindex: u32) -> u32 {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .base__
+            .GetFontSourceNameLength)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(listindex),
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetFontSourceName(
+        &self,
+        listindex: u32,
+        stringbuffer: &mut [u16],
+    ) -> ::windows::core::Result<()> {
+        (::windows::core::Interface::vtable(self)
+            .base__
+            .GetFontSourceName)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(listindex),
+            ::core::mem::transmute(::windows::core::as_mut_ptr_or_null(stringbuffer)),
+            stringbuffer.len() as _,
+        )
+        .ok()
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn ConvertWeightStretchStyleToFontAxisValues(
+        &self,
+        inputaxisvalues: &[DWRITE_FONT_AXIS_VALUE],
+        fontweight: DWRITE_FONT_WEIGHT,
+        fontstretch: DWRITE_FONT_STRETCH,
+        fontstyle: DWRITE_FONT_STYLE,
+        fontsize: f32,
+        outputaxisvalues: &mut [DWRITE_FONT_AXIS_VALUE; 5],
+    ) -> u32 {
+        ::core::mem::transmute((::windows::core::Interface::vtable(self)
+            .ConvertWeightStretchStyleToFontAxisValues)(
+            ::windows::core::Interface::as_raw(self),
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(inputaxisvalues)),
+            inputaxisvalues.len() as _,
+            ::core::mem::transmute(fontweight),
+            ::core::mem::transmute(fontstretch),
+            ::core::mem::transmute(fontstyle),
+            ::core::mem::transmute(fontsize),
+            ::core::mem::transmute(::windows::core::as_mut_ptr_or_null(outputaxisvalues)),
+        ))
+    }
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
+    pub unsafe fn GetMatchingFonts4<
+        'a,
+        Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
+    >(
+        &self,
+        familyname: Param0,
+        fontaxisvalues: &[DWRITE_FONT_AXIS_VALUE],
+        allowedsimulations: DWRITE_FONT_SIMULATIONS,
+    ) -> ::windows::core::Result<IDWriteFontSet4> {
+        let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
+        (::windows::core::Interface::vtable(self).GetMatchingFonts4)(
+            ::windows::core::Interface::as_raw(self),
+            familyname.into_param().abi(),
+            ::core::mem::transmute(::windows::core::as_ptr_or_null(fontaxisvalues)),
+            fontaxisvalues.len() as _,
+            ::core::mem::transmute(allowedsimulations),
+            ::core::mem::transmute(result__.as_mut_ptr()),
+        )
+        .from_abi::<IDWriteFontSet4>(result__)
+    }
+}
+impl ::core::convert::From<IDWriteFontSet4> for ::windows::core::IUnknown {
+    fn from(value: IDWriteFontSet4) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontSet4> for ::windows::core::IUnknown {
+    fn from(value: &IDWriteFontSet4) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for IDWriteFontSet4 {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, ::windows::core::IUnknown> for &'a IDWriteFontSet4 {
+    fn into_param(self) -> ::windows::core::Param<'a, ::windows::core::IUnknown> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteFontSet4> for IDWriteFontSet {
+    fn from(value: IDWriteFontSet4) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontSet4> for IDWriteFontSet {
+    fn from(value: &IDWriteFontSet4) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontSet> for IDWriteFontSet4 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontSet> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontSet> for &'a IDWriteFontSet4 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontSet> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteFontSet4> for IDWriteFontSet1 {
+    fn from(value: IDWriteFontSet4) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontSet4> for IDWriteFontSet1 {
+    fn from(value: &IDWriteFontSet4) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontSet1> for IDWriteFontSet4 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontSet1> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontSet1> for &'a IDWriteFontSet4 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontSet1> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteFontSet4> for IDWriteFontSet2 {
+    fn from(value: IDWriteFontSet4) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontSet4> for IDWriteFontSet2 {
+    fn from(value: &IDWriteFontSet4) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontSet2> for IDWriteFontSet4 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontSet2> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontSet2> for &'a IDWriteFontSet4 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontSet2> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::convert::From<IDWriteFontSet4> for IDWriteFontSet3 {
+    fn from(value: IDWriteFontSet4) -> Self {
+        unsafe { ::core::mem::transmute(value) }
+    }
+}
+impl ::core::convert::From<&IDWriteFontSet4> for IDWriteFontSet3 {
+    fn from(value: &IDWriteFontSet4) -> Self {
+        ::core::convert::From::from(::core::clone::Clone::clone(value))
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontSet3> for IDWriteFontSet4 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontSet3> {
+        ::windows::core::Param::Owned(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl<'a> ::windows::core::IntoParam<'a, IDWriteFontSet3> for &'a IDWriteFontSet4 {
+    fn into_param(self) -> ::windows::core::Param<'a, IDWriteFontSet3> {
+        ::windows::core::Param::Borrowed(unsafe { ::core::mem::transmute(self) })
+    }
+}
+impl ::core::clone::Clone for IDWriteFontSet4 {
+    fn clone(&self) -> Self {
+        Self(self.0.clone())
+    }
+}
+impl ::core::cmp::PartialEq for IDWriteFontSet4 {
+    fn eq(&self, other: &Self) -> bool {
+        self.0 == other.0
+    }
+}
+impl ::core::cmp::Eq for IDWriteFontSet4 {}
+impl ::core::fmt::Debug for IDWriteFontSet4 {
+    fn fmt(&self, f: &mut ::core::fmt::Formatter<'_>) -> ::core::fmt::Result {
+        f.debug_tuple("IDWriteFontSet4").field(&self.0).finish()
+    }
+}
+unsafe impl ::windows::core::Interface for IDWriteFontSet4 {
+    type Vtable = IDWriteFontSet4_Vtbl;
+    const IID: ::windows::core::GUID =
+        ::windows::core::GUID::from_u128(0xeec175fc_bea9_4c86_8b53_ccbdd7df0c82);
+}
+#[repr(C)]
+#[doc(hidden)]
+pub struct IDWriteFontSet4_Vtbl {
+    pub base__: IDWriteFontSet3_Vtbl,
+    pub ConvertWeightStretchStyleToFontAxisValues: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        inputaxisvalues: *const DWRITE_FONT_AXIS_VALUE,
+        inputaxiscount: u32,
+        fontweight: DWRITE_FONT_WEIGHT,
+        fontstretch: DWRITE_FONT_STRETCH,
+        fontstyle: DWRITE_FONT_STYLE,
+        fontsize: f32,
+        outputaxisvalues: *mut DWRITE_FONT_AXIS_VALUE,
+    ) -> u32,
+    pub GetMatchingFonts4: unsafe extern "system" fn(
+        this: *mut ::core::ffi::c_void,
+        familyname: ::windows::core::PCWSTR,
+        fontaxisvalues: *const DWRITE_FONT_AXIS_VALUE,
+        fontaxisvaluecount: u32,
+        allowedsimulations: DWRITE_FONT_SIMULATIONS,
+        matchingfonts: *mut ::windows::core::RawPtr,
+    ) -> ::windows::core::HRESULT,
+}
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontSetBuilder(::windows::core::IUnknown);
 impl IDWriteFontSetBuilder {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>,
@@ -24561,7 +26742,7 @@ impl IDWriteFontSetBuilder {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontFaceReference2<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>,
@@ -24575,7 +26756,7 @@ impl IDWriteFontSetBuilder {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontSet<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontSet>>(
         &self,
         fontset: Param0,
@@ -24586,7 +26767,7 @@ impl IDWriteFontSetBuilder {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSet(&self) -> ::windows::core::Result<IDWriteFontSet> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).CreateFontSet)(
@@ -24662,11 +26843,11 @@ pub struct IDWriteFontSetBuilder_Vtbl {
         fontset: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontSetBuilder1(::windows::core::IUnknown);
 impl IDWriteFontSetBuilder1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>,
@@ -24685,7 +26866,7 @@ impl IDWriteFontSetBuilder1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontFaceReference2<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>,
@@ -24701,7 +26882,7 @@ impl IDWriteFontSetBuilder1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontSet<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontSet>>(
         &self,
         fontset: Param0,
@@ -24712,7 +26893,7 @@ impl IDWriteFontSetBuilder1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSet(&self) -> ::windows::core::Result<IDWriteFontSet> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -24723,7 +26904,7 @@ impl IDWriteFontSetBuilder1 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontFile<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>>(
         &self,
         fontfile: Param0,
@@ -24807,11 +26988,11 @@ pub struct IDWriteFontSetBuilder1_Vtbl {
         fontfile: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteFontSetBuilder2(::windows::core::IUnknown);
 impl IDWriteFontSetBuilder2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontFaceReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>,
@@ -24831,7 +27012,7 @@ impl IDWriteFontSetBuilder2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontFaceReference2<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFaceReference>,
@@ -24848,7 +27029,7 @@ impl IDWriteFontSetBuilder2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontSet<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontSet>>(
         &self,
         fontset: Param0,
@@ -24862,7 +27043,7 @@ impl IDWriteFontSetBuilder2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontSet(&self) -> ::windows::core::Result<IDWriteFontSet> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -24874,7 +27055,7 @@ impl IDWriteFontSetBuilder2 {
         )
         .from_abi::<IDWriteFontSet>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontFile<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>>(
         &self,
         fontfile: Param0,
@@ -24885,7 +27066,7 @@ impl IDWriteFontSetBuilder2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFont<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFile>>(
         &self,
         fontfile: Param0,
@@ -24909,7 +27090,7 @@ impl IDWriteFontSetBuilder2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontFile2<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -25028,11 +27209,11 @@ pub struct IDWriteFontSetBuilder2_Vtbl {
         filepath: ::windows::core::PCWSTR,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteGdiInterop(::windows::core::IUnknown);
 impl IDWriteGdiInterop {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFromLOGFONT(
         &self,
         logfont: *const ::windows::Win32::Graphics::Gdi::LOGFONTW,
@@ -25045,7 +27226,7 @@ impl IDWriteGdiInterop {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ConvertFontToLOGFONT<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFont>>(
         &self,
         font: Param0,
@@ -25060,7 +27241,7 @@ impl IDWriteGdiInterop {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ConvertFontFaceToLOGFONT<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -25077,7 +27258,7 @@ impl IDWriteGdiInterop {
         )
         .from_abi::<::windows::Win32::Graphics::Gdi::LOGFONTW>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceFromHdc<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HDC>,
@@ -25093,7 +27274,7 @@ impl IDWriteGdiInterop {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateBitmapRenderTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HDC>,
@@ -25188,11 +27369,11 @@ pub struct IDWriteGdiInterop_Vtbl {
         rendertarget: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteGdiInterop1(::windows::core::IUnknown);
 impl IDWriteGdiInterop1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFromLOGFONT(
         &self,
         logfont: *const ::windows::Win32::Graphics::Gdi::LOGFONTW,
@@ -25207,7 +27388,7 @@ impl IDWriteGdiInterop1 {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ConvertFontToLOGFONT<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFont>>(
         &self,
         font: Param0,
@@ -25224,7 +27405,7 @@ impl IDWriteGdiInterop1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ConvertFontFaceToLOGFONT<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -25243,7 +27424,7 @@ impl IDWriteGdiInterop1 {
         )
         .from_abi::<::windows::Win32::Graphics::Gdi::LOGFONTW>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFaceFromHdc<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HDC>,
@@ -25261,7 +27442,7 @@ impl IDWriteGdiInterop1 {
         )
         .from_abi::<IDWriteFontFace>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateBitmapRenderTarget<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Graphics::Gdi::HDC>,
@@ -25283,7 +27464,7 @@ impl IDWriteGdiInterop1 {
         )
         .from_abi::<IDWriteBitmapRenderTarget>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFromLOGFONT2<
         'a,
         Param1: ::windows::core::IntoParam<'a, IDWriteFontCollection>,
@@ -25301,7 +27482,7 @@ impl IDWriteGdiInterop1 {
         )
         .from_abi::<IDWriteFont>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSignature<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>>(
         &self,
         fontface: Param0,
@@ -25315,7 +27496,7 @@ impl IDWriteGdiInterop1 {
         )
         .from_abi::<::windows::Win32::Globalization::FONTSIGNATURE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSignature2<'a, Param0: ::windows::core::IntoParam<'a, IDWriteFont>>(
         &self,
         font: Param0,
@@ -25329,7 +27510,7 @@ impl IDWriteGdiInterop1 {
         )
         .from_abi::<::windows::Win32::Globalization::FONTSIGNATURE>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMatchingFontsByLOGFONT<
         'a,
         Param1: ::windows::core::IntoParam<'a, IDWriteFontSet>,
@@ -25436,11 +27617,11 @@ pub struct IDWriteGdiInterop1_Vtbl {
         filteredset: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteGlyphRunAnalysis(::windows::core::IUnknown);
 impl IDWriteGlyphRunAnalysis {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetAlphaTextureBounds(
         &self,
         texturetype: DWRITE_TEXTURE_TYPE,
@@ -25453,7 +27634,7 @@ impl IDWriteGlyphRunAnalysis {
         )
         .from_abi::<::windows::Win32::Foundation::RECT>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateAlphaTexture(
         &self,
         texturetype: DWRITE_TEXTURE_TYPE,
@@ -25470,7 +27651,7 @@ impl IDWriteGlyphRunAnalysis {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetAlphaBlendParams<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteRenderingParams>,
@@ -25558,11 +27739,11 @@ pub struct IDWriteGlyphRunAnalysis_Vtbl {
         blendcleartypelevel: *mut f32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteInMemoryFontFileLoader(::windows::core::IUnknown);
 impl IDWriteInMemoryFontFileLoader {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateStreamFromKey(
         &self,
         fontfilereferencekey: *const ::core::ffi::c_void,
@@ -25579,7 +27760,7 @@ impl IDWriteInMemoryFontFileLoader {
         )
         .from_abi::<IDWriteFontFileStream>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateInMemoryFontFileReference<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFactory>,
@@ -25602,7 +27783,7 @@ impl IDWriteInMemoryFontFileLoader {
         )
         .from_abi::<IDWriteFontFile>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFileCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFileCount)(
             ::windows::core::Interface::as_raw(self),
@@ -25692,11 +27873,11 @@ pub struct IDWriteInMemoryFontFileLoader_Vtbl {
     ) -> ::windows::core::HRESULT,
     pub GetFileCount: unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> u32,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteInlineObject(::windows::core::IUnknown);
 impl IDWriteInlineObject {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Draw<
         'a,
         Param1: ::windows::core::IntoParam<'a, IDWriteTextRenderer>,
@@ -25725,7 +27906,7 @@ impl IDWriteInlineObject {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self) -> ::windows::core::Result<DWRITE_INLINE_OBJECT_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_INLINE_OBJECT_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self).GetMetrics)(
@@ -25734,7 +27915,7 @@ impl IDWriteInlineObject {
         )
         .from_abi::<DWRITE_INLINE_OBJECT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOverhangMetrics(&self) -> ::windows::core::Result<DWRITE_OVERHANG_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_OVERHANG_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self).GetOverhangMetrics)(
@@ -25743,7 +27924,7 @@ impl IDWriteInlineObject {
         )
         .from_abi::<DWRITE_OVERHANG_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetBreakConditions(
         &self,
         breakconditionbefore: *mut DWRITE_BREAK_CONDITION,
@@ -25826,11 +28007,11 @@ pub struct IDWriteInlineObject_Vtbl {
         breakconditionafter: *mut DWRITE_BREAK_CONDITION,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteLocalFontFileLoader(::windows::core::IUnknown);
 impl IDWriteLocalFontFileLoader {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateStreamFromKey(
         &self,
         fontfilereferencekey: *const ::core::ffi::c_void,
@@ -25847,7 +28028,7 @@ impl IDWriteLocalFontFileLoader {
         )
         .from_abi::<IDWriteFontFileStream>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilePathLengthFromKey(
         &self,
         fontfilereferencekey: *const ::core::ffi::c_void,
@@ -25862,7 +28043,7 @@ impl IDWriteLocalFontFileLoader {
         )
         .from_abi::<u32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFilePathFromKey(
         &self,
         fontfilereferencekey: *const ::core::ffi::c_void,
@@ -25878,7 +28059,7 @@ impl IDWriteLocalFontFileLoader {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLastWriteTimeFromKey(
         &self,
         fontfilereferencekey: *const ::core::ffi::c_void,
@@ -25984,17 +28165,17 @@ pub struct IDWriteLocalFontFileLoader_Vtbl {
         lastwritetime: *mut ::windows::Win32::Foundation::FILETIME,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteLocalizedStrings(::windows::core::IUnknown);
 impl IDWriteLocalizedStrings {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetCount)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn FindLocaleName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -26012,7 +28193,7 @@ impl IDWriteLocalizedStrings {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength(&self, index: u32) -> ::windows::core::Result<u32> {
         let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
         (::windows::core::Interface::vtable(self).GetLocaleNameLength)(
@@ -26022,7 +28203,7 @@ impl IDWriteLocalizedStrings {
         )
         .from_abi::<u32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(
         &self,
         index: u32,
@@ -26036,7 +28217,7 @@ impl IDWriteLocalizedStrings {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStringLength(&self, index: u32) -> ::windows::core::Result<u32> {
         let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
         (::windows::core::Interface::vtable(self).GetStringLength)(
@@ -26046,7 +28227,7 @@ impl IDWriteLocalizedStrings {
         )
         .from_abi::<u32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetString(
         &self,
         index: u32,
@@ -26138,7 +28319,7 @@ pub struct IDWriteLocalizedStrings_Vtbl {
         size: u32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteNumberSubstitution(::windows::core::IUnknown);
 impl IDWriteNumberSubstitution {}
@@ -26192,11 +28373,11 @@ unsafe impl ::windows::core::Interface for IDWriteNumberSubstitution {
 pub struct IDWriteNumberSubstitution_Vtbl {
     pub base__: ::windows::core::IUnknownVtbl,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWritePixelSnapping(::windows::core::IUnknown);
 impl IDWritePixelSnapping {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsPixelSnappingDisabled(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -26209,7 +28390,7 @@ impl IDWritePixelSnapping {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCurrentTransform(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -26222,7 +28403,7 @@ impl IDWritePixelSnapping {
         )
         .from_abi::<DWRITE_MATRIX>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPixelsPerDip(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -26299,11 +28480,11 @@ pub struct IDWritePixelSnapping_Vtbl {
         pixelsperdip: *mut f32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteRemoteFontFileLoader(::windows::core::IUnknown);
 impl IDWriteRemoteFontFileLoader {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateStreamFromKey(
         &self,
         fontfilereferencekey: *const ::core::ffi::c_void,
@@ -26320,7 +28501,7 @@ impl IDWriteRemoteFontFileLoader {
         )
         .from_abi::<IDWriteFontFileStream>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateRemoteStreamFromKey(
         &self,
         fontfilereferencekey: *const ::core::ffi::c_void,
@@ -26335,7 +28516,7 @@ impl IDWriteRemoteFontFileLoader {
         )
         .from_abi::<IDWriteRemoteFontFileStream>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocalityFromKey(
         &self,
         fontfilereferencekey: *const ::core::ffi::c_void,
@@ -26350,7 +28531,7 @@ impl IDWriteRemoteFontFileLoader {
         )
         .from_abi::<DWRITE_LOCALITY>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CreateFontFileReferenceFromUrl<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFactory>,
@@ -26462,11 +28643,11 @@ pub struct IDWriteRemoteFontFileLoader_Vtbl {
         fontfile: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteRemoteFontFileStream(::windows::core::IUnknown);
 impl IDWriteRemoteFontFileStream {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReadFileFragment(
         &self,
         fragmentstart: *mut *mut ::core::ffi::c_void,
@@ -26485,7 +28666,7 @@ impl IDWriteRemoteFontFileStream {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ReleaseFileFragment(&self, fragmentcontext: *mut ::core::ffi::c_void) {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -26494,7 +28675,7 @@ impl IDWriteRemoteFontFileStream {
             ::core::mem::transmute(fragmentcontext),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFileSize(&self) -> ::windows::core::Result<u64> {
         let mut result__ = ::core::mem::MaybeUninit::<u64>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetFileSize)(
@@ -26503,7 +28684,7 @@ impl IDWriteRemoteFontFileStream {
         )
         .from_abi::<u64>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLastWriteTime(&self) -> ::windows::core::Result<u64> {
         let mut result__ = ::core::mem::MaybeUninit::<u64>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -26514,7 +28695,7 @@ impl IDWriteRemoteFontFileStream {
         )
         .from_abi::<u64>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocalFileSize(&self) -> ::windows::core::Result<u64> {
         let mut result__ = ::core::mem::MaybeUninit::<u64>::zeroed();
         (::windows::core::Interface::vtable(self).GetLocalFileSize)(
@@ -26523,7 +28704,7 @@ impl IDWriteRemoteFontFileStream {
         )
         .from_abi::<u64>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFileFragmentLocality(
         &self,
         fileoffset: u64,
@@ -26540,13 +28721,13 @@ impl IDWriteRemoteFontFileStream {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocality(&self) -> DWRITE_LOCALITY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetLocality)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn BeginDownload(
         &self,
         downloadoperationid: *const ::windows::core::GUID,
@@ -26652,24 +28833,24 @@ pub struct IDWriteRemoteFontFileStream_Vtbl {
         asyncresult: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteRenderingParams(::windows::core::IUnknown);
 impl IDWriteRenderingParams {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGamma(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetGamma)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetEnhancedContrast(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetEnhancedContrast)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetClearTypeLevel(&self) -> f32 {
         ::core::mem::transmute(
             (::windows::core::Interface::vtable(self).GetClearTypeLevel)(
@@ -26677,13 +28858,13 @@ impl IDWriteRenderingParams {
             ),
         )
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPixelGeometry(&self) -> DWRITE_PIXEL_GEOMETRY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetPixelGeometry)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRenderingMode(&self) -> DWRITE_RENDERING_MODE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetRenderingMode)(
             ::windows::core::Interface::as_raw(self),
@@ -26745,17 +28926,17 @@ pub struct IDWriteRenderingParams_Vtbl {
     pub GetRenderingMode:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> DWRITE_RENDERING_MODE,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteRenderingParams1(::windows::core::IUnknown);
 impl IDWriteRenderingParams1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGamma(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).base__.GetGamma)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetEnhancedContrast(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -26763,7 +28944,7 @@ impl IDWriteRenderingParams1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetClearTypeLevel(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -26771,7 +28952,7 @@ impl IDWriteRenderingParams1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPixelGeometry(&self) -> DWRITE_PIXEL_GEOMETRY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -26779,7 +28960,7 @@ impl IDWriteRenderingParams1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRenderingMode(&self) -> DWRITE_RENDERING_MODE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -26787,7 +28968,7 @@ impl IDWriteRenderingParams1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGrayscaleEnhancedContrast(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetGrayscaleEnhancedContrast)(
@@ -26865,11 +29046,11 @@ pub struct IDWriteRenderingParams1_Vtbl {
     pub GetGrayscaleEnhancedContrast:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> f32,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteRenderingParams2(::windows::core::IUnknown);
 impl IDWriteRenderingParams2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGamma(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -26878,7 +29059,7 @@ impl IDWriteRenderingParams2 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetEnhancedContrast(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -26887,7 +29068,7 @@ impl IDWriteRenderingParams2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetClearTypeLevel(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -26896,7 +29077,7 @@ impl IDWriteRenderingParams2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPixelGeometry(&self) -> DWRITE_PIXEL_GEOMETRY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -26905,7 +29086,7 @@ impl IDWriteRenderingParams2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRenderingMode(&self) -> DWRITE_RENDERING_MODE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -26914,7 +29095,7 @@ impl IDWriteRenderingParams2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGrayscaleEnhancedContrast(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -26922,7 +29103,7 @@ impl IDWriteRenderingParams2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGridFitMode(&self) -> DWRITE_GRID_FIT_MODE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetGridFitMode)(
             ::windows::core::Interface::as_raw(self),
@@ -27019,11 +29200,11 @@ pub struct IDWriteRenderingParams2_Vtbl {
     pub GetGridFitMode:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> DWRITE_GRID_FIT_MODE,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteRenderingParams3(::windows::core::IUnknown);
 impl IDWriteRenderingParams3 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGamma(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -27033,7 +29214,7 @@ impl IDWriteRenderingParams3 {
             self,
         )))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetEnhancedContrast(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -27043,7 +29224,7 @@ impl IDWriteRenderingParams3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetClearTypeLevel(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -27053,7 +29234,7 @@ impl IDWriteRenderingParams3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPixelGeometry(&self) -> DWRITE_PIXEL_GEOMETRY {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -27063,7 +29244,7 @@ impl IDWriteRenderingParams3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRenderingMode(&self) -> DWRITE_RENDERING_MODE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -27073,7 +29254,7 @@ impl IDWriteRenderingParams3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGrayscaleEnhancedContrast(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -27082,7 +29263,7 @@ impl IDWriteRenderingParams3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGridFitMode(&self) -> DWRITE_GRID_FIT_MODE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -27090,7 +29271,7 @@ impl IDWriteRenderingParams3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetRenderingMode1(&self) -> DWRITE_RENDERING_MODE1 {
         ::core::mem::transmute(
             (::windows::core::Interface::vtable(self).GetRenderingMode1)(
@@ -27209,17 +29390,17 @@ pub struct IDWriteRenderingParams3_Vtbl {
     pub GetRenderingMode1:
         unsafe extern "system" fn(this: *mut ::core::ffi::c_void) -> DWRITE_RENDERING_MODE1,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteStringList(::windows::core::IUnknown);
 impl IDWriteStringList {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetCount)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength(&self, listindex: u32) -> ::windows::core::Result<u32> {
         let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
         (::windows::core::Interface::vtable(self).GetLocaleNameLength)(
@@ -27229,7 +29410,7 @@ impl IDWriteStringList {
         )
         .from_abi::<u32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(
         &self,
         listindex: u32,
@@ -27243,7 +29424,7 @@ impl IDWriteStringList {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStringLength(&self, listindex: u32) -> ::windows::core::Result<u32> {
         let mut result__ = ::core::mem::MaybeUninit::<u32>::zeroed();
         (::windows::core::Interface::vtable(self).GetStringLength)(
@@ -27253,7 +29434,7 @@ impl IDWriteStringList {
         )
         .from_abi::<u32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetString(
         &self,
         listindex: u32,
@@ -27337,11 +29518,11 @@ pub struct IDWriteStringList_Vtbl {
         stringbuffersize: u32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextAnalysisSink(::windows::core::IUnknown);
 impl IDWriteTextAnalysisSink {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetScriptAnalysis(
         &self,
         textposition: u32,
@@ -27356,7 +29537,7 @@ impl IDWriteTextAnalysisSink {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineBreakpoints(
         &self,
         textposition: u32,
@@ -27370,7 +29551,7 @@ impl IDWriteTextAnalysisSink {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetBidiLevel(
         &self,
         textposition: u32,
@@ -27387,7 +29568,7 @@ impl IDWriteTextAnalysisSink {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetNumberSubstitution<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteNumberSubstitution>,
@@ -27479,11 +29660,11 @@ pub struct IDWriteTextAnalysisSink_Vtbl {
         numbersubstitution: ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextAnalysisSink1(::windows::core::IUnknown);
 impl IDWriteTextAnalysisSink1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetScriptAnalysis(
         &self,
         textposition: u32,
@@ -27500,7 +29681,7 @@ impl IDWriteTextAnalysisSink1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineBreakpoints(
         &self,
         textposition: u32,
@@ -27516,7 +29697,7 @@ impl IDWriteTextAnalysisSink1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetBidiLevel(
         &self,
         textposition: u32,
@@ -27533,7 +29714,7 @@ impl IDWriteTextAnalysisSink1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetNumberSubstitution<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteNumberSubstitution>,
@@ -27553,7 +29734,7 @@ impl IDWriteTextAnalysisSink1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetGlyphOrientation<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -27658,11 +29839,11 @@ pub struct IDWriteTextAnalysisSink1_Vtbl {
         isrighttoleft: ::windows::Win32::Foundation::BOOL,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextAnalysisSource(::windows::core::IUnknown);
 impl IDWriteTextAnalysisSource {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAtPosition(
         &self,
         textposition: u32,
@@ -27677,7 +29858,7 @@ impl IDWriteTextAnalysisSource {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextBeforePosition(
         &self,
         textposition: u32,
@@ -27692,14 +29873,14 @@ impl IDWriteTextAnalysisSource {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetParagraphReadingDirection(&self) -> DWRITE_READING_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetParagraphReadingDirection)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(
         &self,
         textposition: u32,
@@ -27714,7 +29895,7 @@ impl IDWriteTextAnalysisSource {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetNumberSubstitution(
         &self,
         textposition: u32,
@@ -27806,11 +29987,11 @@ pub struct IDWriteTextAnalysisSource_Vtbl {
         numbersubstitution: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextAnalysisSource1(::windows::core::IUnknown);
 impl IDWriteTextAnalysisSource1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAtPosition(
         &self,
         textposition: u32,
@@ -27827,7 +30008,7 @@ impl IDWriteTextAnalysisSource1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextBeforePosition(
         &self,
         textposition: u32,
@@ -27844,7 +30025,7 @@ impl IDWriteTextAnalysisSource1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetParagraphReadingDirection(&self) -> DWRITE_READING_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -27852,7 +30033,7 @@ impl IDWriteTextAnalysisSource1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(
         &self,
         textposition: u32,
@@ -27869,7 +30050,7 @@ impl IDWriteTextAnalysisSource1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetNumberSubstitution(
         &self,
         textposition: u32,
@@ -27886,7 +30067,7 @@ impl IDWriteTextAnalysisSource1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphOrientation(
         &self,
         textposition: u32,
@@ -27983,11 +30164,11 @@ pub struct IDWriteTextAnalysisSource1_Vtbl {
         bidilevel: *mut u8,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextAnalyzer(::windows::core::IUnknown);
 impl IDWriteTextAnalyzer {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeScript<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -28008,7 +30189,7 @@ impl IDWriteTextAnalyzer {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeBidi<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -28029,7 +30210,7 @@ impl IDWriteTextAnalyzer {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeNumberSubstitution<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -28050,7 +30231,7 @@ impl IDWriteTextAnalyzer {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeLineBreakpoints<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -28071,7 +30252,7 @@ impl IDWriteTextAnalyzer {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphs<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -28121,7 +30302,7 @@ impl IDWriteTextAnalyzer {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphPlacements<
         'a,
         Param7: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -28172,7 +30353,7 @@ impl IDWriteTextAnalyzer {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphPlacements<
         'a,
         Param7: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -28370,11 +30551,11 @@ pub struct IDWriteTextAnalyzer_Vtbl {
         glyphoffsets: *mut DWRITE_GLYPH_OFFSET,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextAnalyzer1(::windows::core::IUnknown);
 impl IDWriteTextAnalyzer1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeScript<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -28397,7 +30578,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeBidi<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -28418,7 +30599,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeNumberSubstitution<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -28441,7 +30622,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeLineBreakpoints<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -28464,7 +30645,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphs<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -28514,7 +30695,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphPlacements<
         'a,
         Param7: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -28567,7 +30748,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphPlacements<
         'a,
         Param7: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -28627,7 +30808,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ApplyCharacterSpacing(
         &self,
         leadingspacing: f32,
@@ -28657,7 +30838,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetBaseline<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -28689,7 +30870,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeVerticalGlyphOrientation<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource1>,
@@ -28710,7 +30891,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphOrientationTransform<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -28728,7 +30909,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .from_abi::<DWRITE_MATRIX>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetScriptProperties<
         'a,
         Param0: ::windows::core::IntoParam<'a, DWRITE_SCRIPT_ANALYSIS>,
@@ -28744,7 +30925,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .from_abi::<DWRITE_SCRIPT_PROPERTIES>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextComplexity<'a, Param2: ::windows::core::IntoParam<'a, IDWriteFontFace>>(
         &self,
         textstring: ::windows::core::PCWSTR,
@@ -28765,7 +30946,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetJustificationOpportunities<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -28796,7 +30977,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn JustifyGlyphAdvances(
         &self,
         linewidth: f32,
@@ -28819,7 +31000,7 @@ impl IDWriteTextAnalyzer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetJustifiedGlyphs<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -29029,11 +31210,11 @@ pub struct IDWriteTextAnalyzer1_Vtbl {
         modifiedglyphoffsets: *mut DWRITE_GLYPH_OFFSET,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextAnalyzer2(::windows::core::IUnknown);
 impl IDWriteTextAnalyzer2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeScript<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -29057,7 +31238,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeBidi<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -29081,7 +31262,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeNumberSubstitution<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -29105,7 +31286,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeLineBreakpoints<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource>,
@@ -29129,7 +31310,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphs<
         'a,
         Param2: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -29182,7 +31363,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphPlacements<
         'a,
         Param7: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -29236,7 +31417,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGdiCompatibleGlyphPlacements<
         'a,
         Param7: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -29297,7 +31478,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn ApplyCharacterSpacing(
         &self,
         leadingspacing: f32,
@@ -29329,7 +31510,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetBaseline<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -29361,7 +31542,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AnalyzeVerticalGlyphOrientation<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTextAnalysisSource1>,
@@ -29384,7 +31565,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphOrientationTransform<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -29404,7 +31585,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .from_abi::<DWRITE_MATRIX>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetScriptProperties<
         'a,
         Param0: ::windows::core::IntoParam<'a, DWRITE_SCRIPT_ANALYSIS>,
@@ -29422,7 +31603,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .from_abi::<DWRITE_SCRIPT_PROPERTIES>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextComplexity<'a, Param2: ::windows::core::IntoParam<'a, IDWriteFontFace>>(
         &self,
         textstring: ::windows::core::PCWSTR,
@@ -29445,7 +31626,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetJustificationOpportunities<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -29478,7 +31659,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn JustifyGlyphAdvances(
         &self,
         linewidth: f32,
@@ -29503,7 +31684,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetJustifiedGlyphs<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -29552,7 +31733,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetGlyphOrientationTransform2<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -29574,7 +31755,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .from_abi::<DWRITE_MATRIX>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTypographicFeatures<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -29599,7 +31780,7 @@ impl IDWriteTextAnalyzer2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn CheckTypographicFeature<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFace>,
@@ -29743,11 +31924,11 @@ pub struct IDWriteTextAnalyzer2_Vtbl {
         featureapplies: *mut u8,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextFormat(::windows::core::IUnknown);
 impl IDWriteTextFormat {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTextAlignment(
         &self,
         textalignment: DWRITE_TEXT_ALIGNMENT,
@@ -29758,7 +31939,7 @@ impl IDWriteTextFormat {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetParagraphAlignment(
         &self,
         paragraphalignment: DWRITE_PARAGRAPH_ALIGNMENT,
@@ -29769,7 +31950,7 @@ impl IDWriteTextFormat {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetWordWrapping(
         &self,
         wordwrapping: DWRITE_WORD_WRAPPING,
@@ -29780,7 +31961,7 @@ impl IDWriteTextFormat {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetReadingDirection(
         &self,
         readingdirection: DWRITE_READING_DIRECTION,
@@ -29791,7 +31972,7 @@ impl IDWriteTextFormat {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFlowDirection(
         &self,
         flowdirection: DWRITE_FLOW_DIRECTION,
@@ -29802,7 +31983,7 @@ impl IDWriteTextFormat {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetIncrementalTabStop(
         &self,
         incrementaltabstop: f32,
@@ -29813,7 +31994,7 @@ impl IDWriteTextFormat {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTrimming<'a, Param1: ::windows::core::IntoParam<'a, IDWriteInlineObject>>(
         &self,
         trimmingoptions: *const DWRITE_TRIMMING,
@@ -29826,7 +32007,7 @@ impl IDWriteTextFormat {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing(
         &self,
         linespacingmethod: DWRITE_LINE_SPACING_METHOD,
@@ -29841,46 +32022,46 @@ impl IDWriteTextFormat {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAlignment(&self) -> DWRITE_TEXT_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetTextAlignment)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetParagraphAlignment(&self) -> DWRITE_PARAGRAPH_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetParagraphAlignment)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWordWrapping(&self) -> DWRITE_WORD_WRAPPING {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetWordWrapping)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetReadingDirection(&self) -> DWRITE_READING_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetReadingDirection)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFlowDirection(&self) -> DWRITE_FLOW_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFlowDirection)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIncrementalTabStop(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetIncrementalTabStop)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTrimming(
         &self,
         trimmingoptions: *mut DWRITE_TRIMMING,
@@ -29893,7 +32074,7 @@ impl IDWriteTextFormat {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing(
         &self,
         linespacingmethod: *mut DWRITE_LINE_SPACING_METHOD,
@@ -29908,7 +32089,7 @@ impl IDWriteTextFormat {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontCollection)(
@@ -29917,14 +32098,14 @@ impl IDWriteTextFormat {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetFontFamilyNameLength)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName(
         &self,
         fontfamilyname: &mut [u16],
@@ -29936,38 +32117,38 @@ impl IDWriteTextFormat {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontWeight)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontStyle)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontStretch)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetFontSize)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetLocaleNameLength)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(&self, localename: &mut [u16]) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).GetLocaleName)(
             ::windows::core::Interface::as_raw(self),
@@ -30103,11 +32284,11 @@ pub struct IDWriteTextFormat_Vtbl {
         namesize: u32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextFormat1(::windows::core::IUnknown);
 impl IDWriteTextFormat1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTextAlignment(
         &self,
         textalignment: DWRITE_TEXT_ALIGNMENT,
@@ -30120,7 +32301,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetParagraphAlignment(
         &self,
         paragraphalignment: DWRITE_PARAGRAPH_ALIGNMENT,
@@ -30133,7 +32314,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetWordWrapping(
         &self,
         wordwrapping: DWRITE_WORD_WRAPPING,
@@ -30146,7 +32327,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetReadingDirection(
         &self,
         readingdirection: DWRITE_READING_DIRECTION,
@@ -30159,7 +32340,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFlowDirection(
         &self,
         flowdirection: DWRITE_FLOW_DIRECTION,
@@ -30172,7 +32353,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetIncrementalTabStop(
         &self,
         incrementaltabstop: f32,
@@ -30185,7 +32366,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTrimming<'a, Param1: ::windows::core::IntoParam<'a, IDWriteInlineObject>>(
         &self,
         trimmingoptions: *const DWRITE_TRIMMING,
@@ -30198,7 +32379,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing(
         &self,
         linespacingmethod: DWRITE_LINE_SPACING_METHOD,
@@ -30215,7 +32396,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAlignment(&self) -> DWRITE_TEXT_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30223,7 +32404,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetParagraphAlignment(&self) -> DWRITE_PARAGRAPH_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30231,7 +32412,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWordWrapping(&self) -> DWRITE_WORD_WRAPPING {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30239,7 +32420,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetReadingDirection(&self) -> DWRITE_READING_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30247,7 +32428,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFlowDirection(&self) -> DWRITE_FLOW_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30255,7 +32436,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIncrementalTabStop(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30263,7 +32444,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTrimming(
         &self,
         trimmingoptions: *mut DWRITE_TRIMMING,
@@ -30276,7 +32457,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing(
         &self,
         linespacingmethod: *mut DWRITE_LINE_SPACING_METHOD,
@@ -30293,7 +32474,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -30304,7 +32485,7 @@ impl IDWriteTextFormat1 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30312,7 +32493,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName(
         &self,
         fontfamilyname: &mut [u16],
@@ -30326,7 +32507,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30334,7 +32515,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30342,7 +32523,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30350,7 +32531,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30358,7 +32539,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30366,7 +32547,7 @@ impl IDWriteTextFormat1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(&self, localename: &mut [u16]) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -30377,7 +32558,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetVerticalGlyphOrientation(
         &self,
         glyphorientation: DWRITE_VERTICAL_GLYPH_ORIENTATION,
@@ -30388,14 +32569,14 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphOrientation(&self) -> DWRITE_VERTICAL_GLYPH_ORIENTATION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetVerticalGlyphOrientation)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLastLineWrapping<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -30409,14 +32590,14 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLastLineWrapping(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetLastLineWrapping)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetOpticalAlignment(
         &self,
         opticalalignment: DWRITE_OPTICAL_ALIGNMENT,
@@ -30427,14 +32608,14 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOpticalAlignment(&self) -> DWRITE_OPTICAL_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetOpticalAlignment)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontFallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFallback>,
@@ -30448,7 +32629,7 @@ impl IDWriteTextFormat1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontFallback)(
@@ -30553,11 +32734,11 @@ pub struct IDWriteTextFormat1_Vtbl {
         fontfallback: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextFormat2(::windows::core::IUnknown);
 impl IDWriteTextFormat2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTextAlignment(
         &self,
         textalignment: DWRITE_TEXT_ALIGNMENT,
@@ -30571,7 +32752,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetParagraphAlignment(
         &self,
         paragraphalignment: DWRITE_PARAGRAPH_ALIGNMENT,
@@ -30585,7 +32766,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetWordWrapping(
         &self,
         wordwrapping: DWRITE_WORD_WRAPPING,
@@ -30599,7 +32780,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetReadingDirection(
         &self,
         readingdirection: DWRITE_READING_DIRECTION,
@@ -30613,7 +32794,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFlowDirection(
         &self,
         flowdirection: DWRITE_FLOW_DIRECTION,
@@ -30627,7 +32808,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetIncrementalTabStop(
         &self,
         incrementaltabstop: f32,
@@ -30641,7 +32822,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTrimming<'a, Param1: ::windows::core::IntoParam<'a, IDWriteInlineObject>>(
         &self,
         trimmingoptions: *const DWRITE_TRIMMING,
@@ -30657,7 +32838,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing(
         &self,
         linespacingmethod: DWRITE_LINE_SPACING_METHOD,
@@ -30675,7 +32856,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAlignment(&self) -> DWRITE_TEXT_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30684,7 +32865,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetParagraphAlignment(&self) -> DWRITE_PARAGRAPH_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30693,7 +32874,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWordWrapping(&self) -> DWRITE_WORD_WRAPPING {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30702,7 +32883,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetReadingDirection(&self) -> DWRITE_READING_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30711,7 +32892,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFlowDirection(&self) -> DWRITE_FLOW_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30720,7 +32901,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIncrementalTabStop(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30729,7 +32910,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTrimming(
         &self,
         trimmingoptions: *mut DWRITE_TRIMMING,
@@ -30745,7 +32926,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing(
         &self,
         linespacingmethod: *mut DWRITE_LINE_SPACING_METHOD,
@@ -30763,7 +32944,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -30775,7 +32956,7 @@ impl IDWriteTextFormat2 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30784,7 +32965,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName(
         &self,
         fontfamilyname: &mut [u16],
@@ -30799,7 +32980,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30808,7 +32989,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30817,7 +32998,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30826,7 +33007,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30835,7 +33016,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30844,7 +33025,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(&self, localename: &mut [u16]) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -30856,7 +33037,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetVerticalGlyphOrientation(
         &self,
         glyphorientation: DWRITE_VERTICAL_GLYPH_ORIENTATION,
@@ -30869,7 +33050,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphOrientation(&self) -> DWRITE_VERTICAL_GLYPH_ORIENTATION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30877,7 +33058,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLastLineWrapping<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -30893,7 +33074,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLastLineWrapping(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30901,7 +33082,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetOpticalAlignment(
         &self,
         opticalalignment: DWRITE_OPTICAL_ALIGNMENT,
@@ -30914,7 +33095,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOpticalAlignment(&self) -> DWRITE_OPTICAL_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -30922,7 +33103,7 @@ impl IDWriteTextFormat2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontFallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFallback>,
@@ -30938,7 +33119,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -30949,7 +33130,7 @@ impl IDWriteTextFormat2 {
         )
         .from_abi::<IDWriteFontFallback>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing2(
         &self,
         linespacingoptions: *const DWRITE_LINE_SPACING,
@@ -30960,7 +33141,7 @@ impl IDWriteTextFormat2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing2(&self) -> ::windows::core::Result<DWRITE_LINE_SPACING> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_LINE_SPACING>::zeroed();
         (::windows::core::Interface::vtable(self).GetLineSpacing2)(
@@ -31064,11 +33245,11 @@ pub struct IDWriteTextFormat2_Vtbl {
         linespacingoptions: *mut DWRITE_LINE_SPACING,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextFormat3(::windows::core::IUnknown);
 impl IDWriteTextFormat3 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTextAlignment(
         &self,
         textalignment: DWRITE_TEXT_ALIGNMENT,
@@ -31083,7 +33264,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetParagraphAlignment(
         &self,
         paragraphalignment: DWRITE_PARAGRAPH_ALIGNMENT,
@@ -31098,7 +33279,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetWordWrapping(
         &self,
         wordwrapping: DWRITE_WORD_WRAPPING,
@@ -31113,7 +33294,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetReadingDirection(
         &self,
         readingdirection: DWRITE_READING_DIRECTION,
@@ -31128,7 +33309,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFlowDirection(
         &self,
         flowdirection: DWRITE_FLOW_DIRECTION,
@@ -31143,7 +33324,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetIncrementalTabStop(
         &self,
         incrementaltabstop: f32,
@@ -31158,7 +33339,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTrimming<'a, Param1: ::windows::core::IntoParam<'a, IDWriteInlineObject>>(
         &self,
         trimmingoptions: *const DWRITE_TRIMMING,
@@ -31175,7 +33356,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing(
         &self,
         linespacingmethod: DWRITE_LINE_SPACING_METHOD,
@@ -31194,7 +33375,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAlignment(&self) -> DWRITE_TEXT_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31204,7 +33385,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetParagraphAlignment(&self) -> DWRITE_PARAGRAPH_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31214,7 +33395,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWordWrapping(&self) -> DWRITE_WORD_WRAPPING {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31224,7 +33405,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetReadingDirection(&self) -> DWRITE_READING_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31234,7 +33415,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFlowDirection(&self) -> DWRITE_FLOW_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31244,7 +33425,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIncrementalTabStop(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31254,7 +33435,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTrimming(
         &self,
         trimmingoptions: *mut DWRITE_TRIMMING,
@@ -31271,7 +33452,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing(
         &self,
         linespacingmethod: *mut DWRITE_LINE_SPACING_METHOD,
@@ -31290,7 +33471,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -31303,7 +33484,7 @@ impl IDWriteTextFormat3 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31313,7 +33494,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName(
         &self,
         fontfamilyname: &mut [u16],
@@ -31329,7 +33510,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31339,7 +33520,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31349,7 +33530,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31359,7 +33540,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31369,7 +33550,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31379,7 +33560,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(&self, localename: &mut [u16]) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -31392,7 +33573,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetVerticalGlyphOrientation(
         &self,
         glyphorientation: DWRITE_VERTICAL_GLYPH_ORIENTATION,
@@ -31406,7 +33587,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphOrientation(&self) -> DWRITE_VERTICAL_GLYPH_ORIENTATION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31415,7 +33596,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLastLineWrapping<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -31432,7 +33613,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLastLineWrapping(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31441,7 +33622,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetOpticalAlignment(
         &self,
         opticalalignment: DWRITE_OPTICAL_ALIGNMENT,
@@ -31455,7 +33636,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOpticalAlignment(&self) -> DWRITE_OPTICAL_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31464,7 +33645,7 @@ impl IDWriteTextFormat3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontFallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFallback>,
@@ -31481,7 +33662,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -31493,7 +33674,7 @@ impl IDWriteTextFormat3 {
         )
         .from_abi::<IDWriteFontFallback>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing2(
         &self,
         linespacingoptions: *const DWRITE_LINE_SPACING,
@@ -31506,7 +33687,7 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing2(&self) -> ::windows::core::Result<DWRITE_LINE_SPACING> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_LINE_SPACING>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -31517,7 +33698,7 @@ impl IDWriteTextFormat3 {
         )
         .from_abi::<DWRITE_LINE_SPACING>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontAxisValues(
         &self,
         fontaxisvalues: &[DWRITE_FONT_AXIS_VALUE],
@@ -31529,14 +33710,14 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisValueCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetFontAxisValueCount)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisValues(
         &self,
         fontaxisvalues: &mut [DWRITE_FONT_AXIS_VALUE],
@@ -31548,14 +33729,14 @@ impl IDWriteTextFormat3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetAutomaticFontAxes(&self) -> DWRITE_AUTOMATIC_FONT_AXES {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetAutomaticFontAxes)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetAutomaticFontAxes(
         &self,
         automaticfontaxes: DWRITE_AUTOMATIC_FONT_AXES,
@@ -31690,11 +33871,11 @@ pub struct IDWriteTextFormat3_Vtbl {
         automaticfontaxes: DWRITE_AUTOMATIC_FONT_AXES,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextLayout(::windows::core::IUnknown);
 impl IDWriteTextLayout {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTextAlignment(
         &self,
         textalignment: DWRITE_TEXT_ALIGNMENT,
@@ -31707,7 +33888,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetParagraphAlignment(
         &self,
         paragraphalignment: DWRITE_PARAGRAPH_ALIGNMENT,
@@ -31720,7 +33901,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetWordWrapping(
         &self,
         wordwrapping: DWRITE_WORD_WRAPPING,
@@ -31733,7 +33914,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetReadingDirection(
         &self,
         readingdirection: DWRITE_READING_DIRECTION,
@@ -31746,7 +33927,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFlowDirection(
         &self,
         flowdirection: DWRITE_FLOW_DIRECTION,
@@ -31759,7 +33940,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetIncrementalTabStop(
         &self,
         incrementaltabstop: f32,
@@ -31772,7 +33953,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTrimming<'a, Param1: ::windows::core::IntoParam<'a, IDWriteInlineObject>>(
         &self,
         trimmingoptions: *const DWRITE_TRIMMING,
@@ -31785,7 +33966,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing(
         &self,
         linespacingmethod: DWRITE_LINE_SPACING_METHOD,
@@ -31802,7 +33983,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAlignment(&self) -> DWRITE_TEXT_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31810,7 +33991,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetParagraphAlignment(&self) -> DWRITE_PARAGRAPH_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31818,7 +33999,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWordWrapping(&self) -> DWRITE_WORD_WRAPPING {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31826,7 +34007,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetReadingDirection(&self) -> DWRITE_READING_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31834,7 +34015,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFlowDirection(&self) -> DWRITE_FLOW_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31842,7 +34023,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIncrementalTabStop(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31850,7 +34031,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTrimming(
         &self,
         trimmingoptions: *mut DWRITE_TRIMMING,
@@ -31863,7 +34044,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing(
         &self,
         linespacingmethod: *mut DWRITE_LINE_SPACING_METHOD,
@@ -31880,7 +34061,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -31891,7 +34072,7 @@ impl IDWriteTextLayout {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31899,7 +34080,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName(
         &self,
         fontfamilyname: &mut [u16],
@@ -31913,7 +34094,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31921,7 +34102,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31929,7 +34110,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31937,7 +34118,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31945,7 +34126,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -31953,7 +34134,7 @@ impl IDWriteTextLayout {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(&self, localename: &mut [u16]) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -31964,7 +34145,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetMaxWidth(&self, maxwidth: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).SetMaxWidth)(
             ::windows::core::Interface::as_raw(self),
@@ -31972,7 +34153,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetMaxHeight(&self, maxheight: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).SetMaxHeight)(
             ::windows::core::Interface::as_raw(self),
@@ -31980,7 +34161,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollection>,
@@ -31997,7 +34178,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontFamilyName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -32014,7 +34195,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontWeight<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontweight: DWRITE_FONT_WEIGHT,
@@ -32027,7 +34208,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontStyle<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontstyle: DWRITE_FONT_STYLE,
@@ -32040,7 +34221,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontStretch<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontstretch: DWRITE_FONT_STRETCH,
@@ -32053,7 +34234,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontSize<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontsize: f32,
@@ -32066,7 +34247,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetUnderline<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -32083,7 +34264,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetStrikethrough<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -32100,7 +34281,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetDrawingEffect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -32117,7 +34298,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetInlineObject<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteInlineObject>,
@@ -32134,7 +34315,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTypography<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTypography>,
@@ -32151,7 +34332,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLocaleName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -32168,19 +34349,19 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMaxWidth(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetMaxWidth)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMaxHeight(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self).GetMaxHeight)(
             ::windows::core::Interface::as_raw(self),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection2(
         &self,
         currentposition: u32,
@@ -32195,7 +34376,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength2(
         &self,
         currentposition: u32,
@@ -32210,7 +34391,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName2(
         &self,
         currentposition: u32,
@@ -32226,7 +34407,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight2(
         &self,
         currentposition: u32,
@@ -32241,7 +34422,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle2(
         &self,
         currentposition: u32,
@@ -32256,7 +34437,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch2(
         &self,
         currentposition: u32,
@@ -32271,7 +34452,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize2(
         &self,
         currentposition: u32,
@@ -32286,7 +34467,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnderline(
         &self,
         currentposition: u32,
@@ -32301,7 +34482,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStrikethrough(
         &self,
         currentposition: u32,
@@ -32316,7 +34497,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDrawingEffect(
         &self,
         currentposition: u32,
@@ -32331,7 +34512,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInlineObject(
         &self,
         currentposition: u32,
@@ -32346,7 +34527,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTypography(
         &self,
         currentposition: u32,
@@ -32361,7 +34542,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength2(
         &self,
         currentposition: u32,
@@ -32376,7 +34557,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName2(
         &self,
         currentposition: u32,
@@ -32392,7 +34573,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Draw<'a, Param1: ::windows::core::IntoParam<'a, IDWriteTextRenderer>>(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -32409,7 +34590,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineMetrics(
         &self,
         linemetrics: &mut [DWRITE_LINE_METRICS],
@@ -32423,7 +34604,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self) -> ::windows::core::Result<DWRITE_TEXT_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_TEXT_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self).GetMetrics)(
@@ -32432,7 +34613,7 @@ impl IDWriteTextLayout {
         )
         .from_abi::<DWRITE_TEXT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOverhangMetrics(&self) -> ::windows::core::Result<DWRITE_OVERHANG_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_OVERHANG_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self).GetOverhangMetrics)(
@@ -32441,7 +34622,7 @@ impl IDWriteTextLayout {
         )
         .from_abi::<DWRITE_OVERHANG_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetClusterMetrics(
         &self,
         clustermetrics: &mut [DWRITE_CLUSTER_METRICS],
@@ -32455,7 +34636,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DetermineMinWidth(&self) -> ::windows::core::Result<f32> {
         let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
         (::windows::core::Interface::vtable(self).DetermineMinWidth)(
@@ -32464,7 +34645,7 @@ impl IDWriteTextLayout {
         )
         .from_abi::<f32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestPoint(
         &self,
         pointx: f32,
@@ -32483,7 +34664,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestTextPosition<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -32505,7 +34686,7 @@ impl IDWriteTextLayout {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestTextRange(
         &self,
         textposition: u32,
@@ -32807,11 +34988,11 @@ pub struct IDWriteTextLayout_Vtbl {
         actualhittestmetricscount: *mut u32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextLayout1(::windows::core::IUnknown);
 impl IDWriteTextLayout1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTextAlignment(
         &self,
         textalignment: DWRITE_TEXT_ALIGNMENT,
@@ -32825,7 +35006,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetParagraphAlignment(
         &self,
         paragraphalignment: DWRITE_PARAGRAPH_ALIGNMENT,
@@ -32839,7 +35020,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetWordWrapping(
         &self,
         wordwrapping: DWRITE_WORD_WRAPPING,
@@ -32853,7 +35034,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetReadingDirection(
         &self,
         readingdirection: DWRITE_READING_DIRECTION,
@@ -32867,7 +35048,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFlowDirection(
         &self,
         flowdirection: DWRITE_FLOW_DIRECTION,
@@ -32881,7 +35062,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetIncrementalTabStop(
         &self,
         incrementaltabstop: f32,
@@ -32895,7 +35076,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTrimming<'a, Param1: ::windows::core::IntoParam<'a, IDWriteInlineObject>>(
         &self,
         trimmingoptions: *const DWRITE_TRIMMING,
@@ -32911,7 +35092,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing(
         &self,
         linespacingmethod: DWRITE_LINE_SPACING_METHOD,
@@ -32929,7 +35110,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAlignment(&self) -> DWRITE_TEXT_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -32938,7 +35119,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetParagraphAlignment(&self) -> DWRITE_PARAGRAPH_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -32947,7 +35128,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWordWrapping(&self) -> DWRITE_WORD_WRAPPING {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -32956,7 +35137,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetReadingDirection(&self) -> DWRITE_READING_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -32965,7 +35146,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFlowDirection(&self) -> DWRITE_FLOW_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -32974,7 +35155,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIncrementalTabStop(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -32983,7 +35164,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTrimming(
         &self,
         trimmingoptions: *mut DWRITE_TRIMMING,
@@ -32999,7 +35180,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing(
         &self,
         linespacingmethod: *mut DWRITE_LINE_SPACING_METHOD,
@@ -33017,7 +35198,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -33029,7 +35210,7 @@ impl IDWriteTextLayout1 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -33038,7 +35219,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName(
         &self,
         fontfamilyname: &mut [u16],
@@ -33053,7 +35234,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -33062,7 +35243,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -33071,7 +35252,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -33080,7 +35261,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -33089,7 +35270,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -33098,7 +35279,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(&self, localename: &mut [u16]) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -33110,7 +35291,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetMaxWidth(&self, maxwidth: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).base__.SetMaxWidth)(
             ::windows::core::Interface::as_raw(self),
@@ -33118,7 +35299,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetMaxHeight(&self, maxheight: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).base__.SetMaxHeight)(
             ::windows::core::Interface::as_raw(self),
@@ -33126,7 +35307,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollection>,
@@ -33145,7 +35326,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontFamilyName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -33164,7 +35345,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontWeight<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontweight: DWRITE_FONT_WEIGHT,
@@ -33179,7 +35360,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontStyle<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontstyle: DWRITE_FONT_STYLE,
@@ -33192,7 +35373,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontStretch<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontstretch: DWRITE_FONT_STRETCH,
@@ -33207,7 +35388,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontSize<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontsize: f32,
@@ -33220,7 +35401,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetUnderline<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -33237,7 +35418,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetStrikethrough<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -33256,7 +35437,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetDrawingEffect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -33275,7 +35456,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetInlineObject<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteInlineObject>,
@@ -33294,7 +35475,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTypography<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTypography>,
@@ -33313,7 +35494,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLocaleName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -33332,7 +35513,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMaxWidth(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -33340,7 +35521,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMaxHeight(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -33348,7 +35529,7 @@ impl IDWriteTextLayout1 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection2(
         &self,
         currentposition: u32,
@@ -33365,7 +35546,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength2(
         &self,
         currentposition: u32,
@@ -33382,7 +35563,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName2(
         &self,
         currentposition: u32,
@@ -33400,7 +35581,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight2(
         &self,
         currentposition: u32,
@@ -33417,7 +35598,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle2(
         &self,
         currentposition: u32,
@@ -33434,7 +35615,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch2(
         &self,
         currentposition: u32,
@@ -33451,7 +35632,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize2(
         &self,
         currentposition: u32,
@@ -33466,7 +35647,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnderline(
         &self,
         currentposition: u32,
@@ -33481,7 +35662,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStrikethrough(
         &self,
         currentposition: u32,
@@ -33498,7 +35679,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDrawingEffect(
         &self,
         currentposition: u32,
@@ -33515,7 +35696,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInlineObject(
         &self,
         currentposition: u32,
@@ -33532,7 +35713,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTypography(
         &self,
         currentposition: u32,
@@ -33549,7 +35730,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength2(
         &self,
         currentposition: u32,
@@ -33566,7 +35747,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName2(
         &self,
         currentposition: u32,
@@ -33584,7 +35765,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Draw<'a, Param1: ::windows::core::IntoParam<'a, IDWriteTextRenderer>>(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -33601,7 +35782,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineMetrics(
         &self,
         linemetrics: &mut [DWRITE_LINE_METRICS],
@@ -33617,7 +35798,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self) -> ::windows::core::Result<DWRITE_TEXT_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_TEXT_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetMetrics)(
@@ -33626,7 +35807,7 @@ impl IDWriteTextLayout1 {
         )
         .from_abi::<DWRITE_TEXT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOverhangMetrics(&self) -> ::windows::core::Result<DWRITE_OVERHANG_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_OVERHANG_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -33637,7 +35818,7 @@ impl IDWriteTextLayout1 {
         )
         .from_abi::<DWRITE_OVERHANG_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetClusterMetrics(
         &self,
         clustermetrics: &mut [DWRITE_CLUSTER_METRICS],
@@ -33653,7 +35834,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DetermineMinWidth(&self) -> ::windows::core::Result<f32> {
         let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -33664,7 +35845,7 @@ impl IDWriteTextLayout1 {
         )
         .from_abi::<f32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestPoint(
         &self,
         pointx: f32,
@@ -33683,7 +35864,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestTextPosition<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -33707,7 +35888,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestTextRange(
         &self,
         textposition: u32,
@@ -33731,7 +35912,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetPairKerning<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -33748,7 +35929,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPairKerning(
         &self,
         currentposition: u32,
@@ -33763,7 +35944,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetCharacterSpacing<
         'a,
         Param3: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>,
@@ -33783,7 +35964,7 @@ impl IDWriteTextLayout1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCharacterSpacing(
         &self,
         currentposition: u32,
@@ -33915,11 +36096,11 @@ pub struct IDWriteTextLayout1_Vtbl {
         textrange: *mut DWRITE_TEXT_RANGE,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextLayout2(::windows::core::IUnknown);
 impl IDWriteTextLayout2 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTextAlignment(
         &self,
         textalignment: DWRITE_TEXT_ALIGNMENT,
@@ -33934,7 +36115,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetParagraphAlignment(
         &self,
         paragraphalignment: DWRITE_PARAGRAPH_ALIGNMENT,
@@ -33949,7 +36130,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetWordWrapping(
         &self,
         wordwrapping: DWRITE_WORD_WRAPPING,
@@ -33964,7 +36145,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetReadingDirection(
         &self,
         readingdirection: DWRITE_READING_DIRECTION,
@@ -33979,7 +36160,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFlowDirection(
         &self,
         flowdirection: DWRITE_FLOW_DIRECTION,
@@ -33994,7 +36175,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetIncrementalTabStop(
         &self,
         incrementaltabstop: f32,
@@ -34009,7 +36190,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTrimming<'a, Param1: ::windows::core::IntoParam<'a, IDWriteInlineObject>>(
         &self,
         trimmingoptions: *const DWRITE_TRIMMING,
@@ -34026,7 +36207,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing(
         &self,
         linespacingmethod: DWRITE_LINE_SPACING_METHOD,
@@ -34045,7 +36226,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAlignment(&self) -> DWRITE_TEXT_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34055,7 +36236,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetParagraphAlignment(&self) -> DWRITE_PARAGRAPH_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34065,7 +36246,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWordWrapping(&self) -> DWRITE_WORD_WRAPPING {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34075,7 +36256,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetReadingDirection(&self) -> DWRITE_READING_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34085,7 +36266,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFlowDirection(&self) -> DWRITE_FLOW_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34095,7 +36276,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIncrementalTabStop(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34105,7 +36286,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTrimming(
         &self,
         trimmingoptions: *mut DWRITE_TRIMMING,
@@ -34122,7 +36303,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing(
         &self,
         linespacingmethod: *mut DWRITE_LINE_SPACING_METHOD,
@@ -34141,7 +36322,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -34154,7 +36335,7 @@ impl IDWriteTextLayout2 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34164,7 +36345,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName(
         &self,
         fontfamilyname: &mut [u16],
@@ -34180,7 +36361,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34190,7 +36371,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34200,7 +36381,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34210,7 +36391,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34220,7 +36401,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34230,7 +36411,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(&self, localename: &mut [u16]) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -34243,7 +36424,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetMaxWidth(&self, maxwidth: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -34254,7 +36435,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetMaxHeight(&self, maxheight: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -34265,7 +36446,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollection>,
@@ -34285,7 +36466,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontFamilyName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -34305,7 +36486,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontWeight<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontweight: DWRITE_FONT_WEIGHT,
@@ -34321,7 +36502,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontStyle<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontstyle: DWRITE_FONT_STYLE,
@@ -34337,7 +36518,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontStretch<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontstretch: DWRITE_FONT_STRETCH,
@@ -34353,7 +36534,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontSize<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontsize: f32,
@@ -34369,7 +36550,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetUnderline<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -34389,7 +36570,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetStrikethrough<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -34409,7 +36590,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetDrawingEffect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -34429,7 +36610,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetInlineObject<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteInlineObject>,
@@ -34449,7 +36630,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTypography<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTypography>,
@@ -34469,7 +36650,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLocaleName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -34489,7 +36670,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMaxWidth(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34498,7 +36679,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMaxHeight(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -34507,7 +36688,7 @@ impl IDWriteTextLayout2 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection2(
         &self,
         currentposition: u32,
@@ -34525,7 +36706,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength2(
         &self,
         currentposition: u32,
@@ -34543,7 +36724,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName2(
         &self,
         currentposition: u32,
@@ -34562,7 +36743,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight2(
         &self,
         currentposition: u32,
@@ -34580,7 +36761,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle2(
         &self,
         currentposition: u32,
@@ -34598,7 +36779,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch2(
         &self,
         currentposition: u32,
@@ -34616,7 +36797,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize2(
         &self,
         currentposition: u32,
@@ -34634,7 +36815,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnderline(
         &self,
         currentposition: u32,
@@ -34652,7 +36833,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStrikethrough(
         &self,
         currentposition: u32,
@@ -34670,7 +36851,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDrawingEffect(
         &self,
         currentposition: u32,
@@ -34688,7 +36869,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInlineObject(
         &self,
         currentposition: u32,
@@ -34706,7 +36887,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTypography(
         &self,
         currentposition: u32,
@@ -34724,7 +36905,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength2(
         &self,
         currentposition: u32,
@@ -34742,7 +36923,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName2(
         &self,
         currentposition: u32,
@@ -34761,7 +36942,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Draw<'a, Param1: ::windows::core::IntoParam<'a, IDWriteTextRenderer>>(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -34778,7 +36959,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineMetrics(
         &self,
         linemetrics: &mut [DWRITE_LINE_METRICS],
@@ -34795,7 +36976,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self) -> ::windows::core::Result<DWRITE_TEXT_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_TEXT_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -34807,7 +36988,7 @@ impl IDWriteTextLayout2 {
         )
         .from_abi::<DWRITE_TEXT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOverhangMetrics(&self) -> ::windows::core::Result<DWRITE_OVERHANG_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_OVERHANG_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -34819,7 +37000,7 @@ impl IDWriteTextLayout2 {
         )
         .from_abi::<DWRITE_OVERHANG_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetClusterMetrics(
         &self,
         clustermetrics: &mut [DWRITE_CLUSTER_METRICS],
@@ -34836,7 +37017,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DetermineMinWidth(&self) -> ::windows::core::Result<f32> {
         let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -34848,7 +37029,7 @@ impl IDWriteTextLayout2 {
         )
         .from_abi::<f32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestPoint(
         &self,
         pointx: f32,
@@ -34870,7 +37051,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestTextPosition<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -34895,7 +37076,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestTextRange(
         &self,
         textposition: u32,
@@ -34920,7 +37101,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetPairKerning<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -34939,7 +37120,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPairKerning(
         &self,
         currentposition: u32,
@@ -34956,7 +37137,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetCharacterSpacing<
         'a,
         Param3: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>,
@@ -34978,7 +37159,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCharacterSpacing(
         &self,
         currentposition: u32,
@@ -34999,7 +37180,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics2(&self) -> ::windows::core::Result<DWRITE_TEXT_METRICS1> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_TEXT_METRICS1>::zeroed();
         (::windows::core::Interface::vtable(self).GetMetrics2)(
@@ -35008,7 +37189,7 @@ impl IDWriteTextLayout2 {
         )
         .from_abi::<DWRITE_TEXT_METRICS1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetVerticalGlyphOrientation(
         &self,
         glyphorientation: DWRITE_VERTICAL_GLYPH_ORIENTATION,
@@ -35019,14 +37200,14 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphOrientation(&self) -> DWRITE_VERTICAL_GLYPH_ORIENTATION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetVerticalGlyphOrientation)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLastLineWrapping<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -35040,14 +37221,14 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLastLineWrapping(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetLastLineWrapping)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetOpticalAlignment(
         &self,
         opticalalignment: DWRITE_OPTICAL_ALIGNMENT,
@@ -35058,14 +37239,14 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOpticalAlignment(&self) -> DWRITE_OPTICAL_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetOpticalAlignment)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontFallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFallback>,
@@ -35079,7 +37260,7 @@ impl IDWriteTextLayout2 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self).GetFontFallback)(
@@ -35228,11 +37409,11 @@ pub struct IDWriteTextLayout2_Vtbl {
         fontfallback: *mut ::windows::core::RawPtr,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextLayout3(::windows::core::IUnknown);
 impl IDWriteTextLayout3 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTextAlignment(
         &self,
         textalignment: DWRITE_TEXT_ALIGNMENT,
@@ -35248,7 +37429,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetParagraphAlignment(
         &self,
         paragraphalignment: DWRITE_PARAGRAPH_ALIGNMENT,
@@ -35264,7 +37445,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetWordWrapping(
         &self,
         wordwrapping: DWRITE_WORD_WRAPPING,
@@ -35280,7 +37461,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetReadingDirection(
         &self,
         readingdirection: DWRITE_READING_DIRECTION,
@@ -35296,7 +37477,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFlowDirection(
         &self,
         flowdirection: DWRITE_FLOW_DIRECTION,
@@ -35312,7 +37493,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetIncrementalTabStop(
         &self,
         incrementaltabstop: f32,
@@ -35328,7 +37509,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTrimming<'a, Param1: ::windows::core::IntoParam<'a, IDWriteInlineObject>>(
         &self,
         trimmingoptions: *const DWRITE_TRIMMING,
@@ -35346,7 +37527,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing(
         &self,
         linespacingmethod: DWRITE_LINE_SPACING_METHOD,
@@ -35366,7 +37547,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAlignment(&self) -> DWRITE_TEXT_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35377,7 +37558,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetParagraphAlignment(&self) -> DWRITE_PARAGRAPH_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35388,7 +37569,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWordWrapping(&self) -> DWRITE_WORD_WRAPPING {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35399,7 +37580,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetReadingDirection(&self) -> DWRITE_READING_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35410,7 +37591,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFlowDirection(&self) -> DWRITE_FLOW_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35421,7 +37602,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIncrementalTabStop(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35432,7 +37613,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTrimming(
         &self,
         trimmingoptions: *mut DWRITE_TRIMMING,
@@ -35450,7 +37631,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing(
         &self,
         linespacingmethod: *mut DWRITE_LINE_SPACING_METHOD,
@@ -35470,7 +37651,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -35484,7 +37665,7 @@ impl IDWriteTextLayout3 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35495,7 +37676,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName(
         &self,
         fontfamilyname: &mut [u16],
@@ -35512,7 +37693,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35523,7 +37704,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35534,7 +37715,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35545,7 +37726,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35556,7 +37737,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35567,7 +37748,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(&self, localename: &mut [u16]) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -35581,7 +37762,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetMaxWidth(&self, maxwidth: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -35593,7 +37774,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetMaxHeight(&self, maxheight: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -35605,7 +37786,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollection>,
@@ -35626,7 +37807,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontFamilyName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -35647,7 +37828,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontWeight<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontweight: DWRITE_FONT_WEIGHT,
@@ -35664,7 +37845,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontStyle<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontstyle: DWRITE_FONT_STYLE,
@@ -35681,7 +37862,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontStretch<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontstretch: DWRITE_FONT_STRETCH,
@@ -35698,7 +37879,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontSize<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontsize: f32,
@@ -35715,7 +37896,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetUnderline<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -35736,7 +37917,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetStrikethrough<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -35757,7 +37938,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetDrawingEffect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -35778,7 +37959,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetInlineObject<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteInlineObject>,
@@ -35799,7 +37980,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTypography<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTypography>,
@@ -35820,7 +38001,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLocaleName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -35841,7 +38022,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMaxWidth(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35851,7 +38032,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMaxHeight(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -35861,7 +38042,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection2(
         &self,
         currentposition: u32,
@@ -35880,7 +38061,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength2(
         &self,
         currentposition: u32,
@@ -35899,7 +38080,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName2(
         &self,
         currentposition: u32,
@@ -35919,7 +38100,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight2(
         &self,
         currentposition: u32,
@@ -35938,7 +38119,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle2(
         &self,
         currentposition: u32,
@@ -35957,7 +38138,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch2(
         &self,
         currentposition: u32,
@@ -35976,7 +38157,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize2(
         &self,
         currentposition: u32,
@@ -35995,7 +38176,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnderline(
         &self,
         currentposition: u32,
@@ -36014,7 +38195,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStrikethrough(
         &self,
         currentposition: u32,
@@ -36033,7 +38214,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDrawingEffect(
         &self,
         currentposition: u32,
@@ -36052,7 +38233,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInlineObject(
         &self,
         currentposition: u32,
@@ -36071,7 +38252,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTypography(
         &self,
         currentposition: u32,
@@ -36090,7 +38271,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength2(
         &self,
         currentposition: u32,
@@ -36109,7 +38290,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName2(
         &self,
         currentposition: u32,
@@ -36129,7 +38310,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Draw<'a, Param1: ::windows::core::IntoParam<'a, IDWriteTextRenderer>>(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -36150,7 +38331,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineMetrics(
         &self,
         linemetrics: &mut [DWRITE_LINE_METRICS],
@@ -36168,7 +38349,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self) -> ::windows::core::Result<DWRITE_TEXT_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_TEXT_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -36181,7 +38362,7 @@ impl IDWriteTextLayout3 {
         )
         .from_abi::<DWRITE_TEXT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOverhangMetrics(&self) -> ::windows::core::Result<DWRITE_OVERHANG_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_OVERHANG_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -36194,7 +38375,7 @@ impl IDWriteTextLayout3 {
         )
         .from_abi::<DWRITE_OVERHANG_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetClusterMetrics(
         &self,
         clustermetrics: &mut [DWRITE_CLUSTER_METRICS],
@@ -36212,7 +38393,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DetermineMinWidth(&self) -> ::windows::core::Result<f32> {
         let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -36225,7 +38406,7 @@ impl IDWriteTextLayout3 {
         )
         .from_abi::<f32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestPoint(
         &self,
         pointx: f32,
@@ -36248,7 +38429,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestTextPosition<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -36274,7 +38455,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestTextRange(
         &self,
         textposition: u32,
@@ -36300,7 +38481,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetPairKerning<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -36320,7 +38501,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPairKerning(
         &self,
         currentposition: u32,
@@ -36338,7 +38519,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetCharacterSpacing<
         'a,
         Param3: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>,
@@ -36361,7 +38542,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCharacterSpacing(
         &self,
         currentposition: u32,
@@ -36383,7 +38564,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics2(&self) -> ::windows::core::Result<DWRITE_TEXT_METRICS1> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_TEXT_METRICS1>::zeroed();
         (::windows::core::Interface::vtable(self).base__.GetMetrics2)(
@@ -36392,7 +38573,7 @@ impl IDWriteTextLayout3 {
         )
         .from_abi::<DWRITE_TEXT_METRICS1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetVerticalGlyphOrientation(
         &self,
         glyphorientation: DWRITE_VERTICAL_GLYPH_ORIENTATION,
@@ -36405,7 +38586,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphOrientation(&self) -> DWRITE_VERTICAL_GLYPH_ORIENTATION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36413,7 +38594,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLastLineWrapping<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -36429,7 +38610,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLastLineWrapping(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36437,7 +38618,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetOpticalAlignment(
         &self,
         opticalalignment: DWRITE_OPTICAL_ALIGNMENT,
@@ -36450,7 +38631,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOpticalAlignment(&self) -> DWRITE_OPTICAL_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36458,7 +38639,7 @@ impl IDWriteTextLayout3 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontFallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFallback>,
@@ -36474,7 +38655,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -36485,14 +38666,14 @@ impl IDWriteTextLayout3 {
         )
         .from_abi::<IDWriteFontFallback>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn InvalidateLayout(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self).InvalidateLayout)(
             ::windows::core::Interface::as_raw(self),
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing2(
         &self,
         linespacingoptions: *const DWRITE_LINE_SPACING,
@@ -36503,7 +38684,7 @@ impl IDWriteTextLayout3 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing2(&self) -> ::windows::core::Result<DWRITE_LINE_SPACING> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_LINE_SPACING>::zeroed();
         (::windows::core::Interface::vtable(self).GetLineSpacing2)(
@@ -36512,7 +38693,7 @@ impl IDWriteTextLayout3 {
         )
         .from_abi::<DWRITE_LINE_SPACING>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineMetrics2(
         &self,
         linemetrics: &mut [DWRITE_LINE_METRICS1],
@@ -36669,11 +38850,11 @@ pub struct IDWriteTextLayout3_Vtbl {
         actuallinecount: *mut u32,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextLayout4(::windows::core::IUnknown);
 impl IDWriteTextLayout4 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTextAlignment(
         &self,
         textalignment: DWRITE_TEXT_ALIGNMENT,
@@ -36690,7 +38871,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetParagraphAlignment(
         &self,
         paragraphalignment: DWRITE_PARAGRAPH_ALIGNMENT,
@@ -36707,7 +38888,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetWordWrapping(
         &self,
         wordwrapping: DWRITE_WORD_WRAPPING,
@@ -36724,7 +38905,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetReadingDirection(
         &self,
         readingdirection: DWRITE_READING_DIRECTION,
@@ -36741,7 +38922,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFlowDirection(
         &self,
         flowdirection: DWRITE_FLOW_DIRECTION,
@@ -36758,7 +38939,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetIncrementalTabStop(
         &self,
         incrementaltabstop: f32,
@@ -36775,7 +38956,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTrimming<'a, Param1: ::windows::core::IntoParam<'a, IDWriteInlineObject>>(
         &self,
         trimmingoptions: *const DWRITE_TRIMMING,
@@ -36794,7 +38975,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing(
         &self,
         linespacingmethod: DWRITE_LINE_SPACING_METHOD,
@@ -36815,7 +38996,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTextAlignment(&self) -> DWRITE_TEXT_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36827,7 +39008,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetParagraphAlignment(&self) -> DWRITE_PARAGRAPH_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36839,7 +39020,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetWordWrapping(&self) -> DWRITE_WORD_WRAPPING {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36851,7 +39032,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetReadingDirection(&self) -> DWRITE_READING_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36863,7 +39044,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFlowDirection(&self) -> DWRITE_FLOW_DIRECTION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36875,7 +39056,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetIncrementalTabStop(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36887,7 +39068,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTrimming(
         &self,
         trimmingoptions: *mut DWRITE_TRIMMING,
@@ -36906,7 +39087,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing(
         &self,
         linespacingmethod: *mut DWRITE_LINE_SPACING_METHOD,
@@ -36927,7 +39108,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection(&self) -> ::windows::core::Result<IDWriteFontCollection> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -36942,7 +39123,7 @@ impl IDWriteTextLayout4 {
         )
         .from_abi::<IDWriteFontCollection>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36954,7 +39135,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName(
         &self,
         fontfamilyname: &mut [u16],
@@ -36972,7 +39153,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight(&self) -> DWRITE_FONT_WEIGHT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36984,7 +39165,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle(&self) -> DWRITE_FONT_STYLE {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -36996,7 +39177,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch(&self) -> DWRITE_FONT_STRETCH {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -37008,7 +39189,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -37020,7 +39201,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -37032,7 +39213,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName(&self, localename: &mut [u16]) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -37047,7 +39228,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetMaxWidth(&self, maxwidth: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -37060,7 +39241,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetMaxHeight(&self, maxheight: f32) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
@@ -37073,7 +39254,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontCollection<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontCollection>,
@@ -37095,7 +39276,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontFamilyName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -37117,7 +39298,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontWeight<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontweight: DWRITE_FONT_WEIGHT,
@@ -37135,7 +39316,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontStyle<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontstyle: DWRITE_FONT_STYLE,
@@ -37153,7 +39334,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontStretch<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontstretch: DWRITE_FONT_STRETCH,
@@ -37171,7 +39352,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontSize<'a, Param1: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>>(
         &self,
         fontsize: f32,
@@ -37189,7 +39370,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetUnderline<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -37211,7 +39392,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetStrikethrough<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -37233,7 +39414,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetDrawingEffect<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -37255,7 +39436,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetInlineObject<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteInlineObject>,
@@ -37277,7 +39458,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetTypography<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteTypography>,
@@ -37299,7 +39480,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLocaleName<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::core::PCWSTR>,
@@ -37321,7 +39502,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMaxWidth(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -37332,7 +39513,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMaxHeight(&self) -> f32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -37343,7 +39524,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontCollection2(
         &self,
         currentposition: u32,
@@ -37363,7 +39544,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyNameLength2(
         &self,
         currentposition: u32,
@@ -37383,7 +39564,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFamilyName2(
         &self,
         currentposition: u32,
@@ -37404,7 +39585,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontWeight2(
         &self,
         currentposition: u32,
@@ -37424,7 +39605,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStyle2(
         &self,
         currentposition: u32,
@@ -37444,7 +39625,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontStretch2(
         &self,
         currentposition: u32,
@@ -37464,7 +39645,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontSize2(
         &self,
         currentposition: u32,
@@ -37484,7 +39665,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetUnderline(
         &self,
         currentposition: u32,
@@ -37504,7 +39685,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetStrikethrough(
         &self,
         currentposition: u32,
@@ -37524,7 +39705,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetDrawingEffect(
         &self,
         currentposition: u32,
@@ -37544,7 +39725,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetInlineObject(
         &self,
         currentposition: u32,
@@ -37564,7 +39745,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetTypography(
         &self,
         currentposition: u32,
@@ -37584,7 +39765,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleNameLength2(
         &self,
         currentposition: u32,
@@ -37604,7 +39785,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLocaleName2(
         &self,
         currentposition: u32,
@@ -37625,7 +39806,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn Draw<'a, Param1: ::windows::core::IntoParam<'a, IDWriteTextRenderer>>(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -37647,7 +39828,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineMetrics(
         &self,
         linemetrics: &mut [DWRITE_LINE_METRICS],
@@ -37666,7 +39847,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics(&self) -> ::windows::core::Result<DWRITE_TEXT_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_TEXT_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -37680,7 +39861,7 @@ impl IDWriteTextLayout4 {
         )
         .from_abi::<DWRITE_TEXT_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOverhangMetrics(&self) -> ::windows::core::Result<DWRITE_OVERHANG_METRICS> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_OVERHANG_METRICS>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -37694,7 +39875,7 @@ impl IDWriteTextLayout4 {
         )
         .from_abi::<DWRITE_OVERHANG_METRICS>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetClusterMetrics(
         &self,
         clustermetrics: &mut [DWRITE_CLUSTER_METRICS],
@@ -37713,7 +39894,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DetermineMinWidth(&self) -> ::windows::core::Result<f32> {
         let mut result__ = ::core::mem::MaybeUninit::<f32>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -37727,7 +39908,7 @@ impl IDWriteTextLayout4 {
         )
         .from_abi::<f32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestPoint(
         &self,
         pointx: f32,
@@ -37751,7 +39932,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestTextPosition<
         'a,
         Param1: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -37778,7 +39959,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn HitTestTextRange(
         &self,
         textposition: u32,
@@ -37805,7 +39986,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetPairKerning<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -37826,7 +40007,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPairKerning(
         &self,
         currentposition: u32,
@@ -37845,7 +40026,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetCharacterSpacing<
         'a,
         Param3: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>,
@@ -37869,7 +40050,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCharacterSpacing(
         &self,
         currentposition: u32,
@@ -37892,7 +40073,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetMetrics2(&self) -> ::windows::core::Result<DWRITE_TEXT_METRICS1> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_TEXT_METRICS1>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -37904,7 +40085,7 @@ impl IDWriteTextLayout4 {
         )
         .from_abi::<DWRITE_TEXT_METRICS1>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetVerticalGlyphOrientation(
         &self,
         glyphorientation: DWRITE_VERTICAL_GLYPH_ORIENTATION,
@@ -37918,7 +40099,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetVerticalGlyphOrientation(&self) -> DWRITE_VERTICAL_GLYPH_ORIENTATION {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -37927,7 +40108,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLastLineWrapping<
         'a,
         Param0: ::windows::core::IntoParam<'a, ::windows::Win32::Foundation::BOOL>,
@@ -37944,7 +40125,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLastLineWrapping(&self) -> ::windows::Win32::Foundation::BOOL {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -37953,7 +40134,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetOpticalAlignment(
         &self,
         opticalalignment: DWRITE_OPTICAL_ALIGNMENT,
@@ -37967,7 +40148,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetOpticalAlignment(&self) -> DWRITE_OPTICAL_ALIGNMENT {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .base__
@@ -37976,7 +40157,7 @@ impl IDWriteTextLayout4 {
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontFallback<
         'a,
         Param0: ::windows::core::IntoParam<'a, IDWriteFontFallback>,
@@ -37993,7 +40174,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFallback(&self) -> ::windows::core::Result<IDWriteFontFallback> {
         let mut result__ = ::core::mem::MaybeUninit::<::windows::core::RawPtr>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -38005,14 +40186,14 @@ impl IDWriteTextLayout4 {
         )
         .from_abi::<IDWriteFontFallback>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn InvalidateLayout(&self) -> ::windows::core::Result<()> {
         (::windows::core::Interface::vtable(self)
             .base__
             .InvalidateLayout)(::windows::core::Interface::as_raw(self))
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetLineSpacing2(
         &self,
         linespacingoptions: *const DWRITE_LINE_SPACING,
@@ -38025,7 +40206,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineSpacing2(&self) -> ::windows::core::Result<DWRITE_LINE_SPACING> {
         let mut result__ = ::core::mem::MaybeUninit::<DWRITE_LINE_SPACING>::zeroed();
         (::windows::core::Interface::vtable(self)
@@ -38036,7 +40217,7 @@ impl IDWriteTextLayout4 {
         )
         .from_abi::<DWRITE_LINE_SPACING>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetLineMetrics2(
         &self,
         linemetrics: &mut [DWRITE_LINE_METRICS1],
@@ -38052,7 +40233,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetFontAxisValues<
         'a,
         Param2: ::windows::core::IntoParam<'a, DWRITE_TEXT_RANGE>,
@@ -38069,7 +40250,7 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisValueCount(&self, currentposition: u32) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetFontAxisValueCount)(
@@ -38077,7 +40258,7 @@ impl IDWriteTextLayout4 {
             ::core::mem::transmute(currentposition),
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontAxisValues(
         &self,
         currentposition: u32,
@@ -38093,14 +40274,14 @@ impl IDWriteTextLayout4 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetAutomaticFontAxes(&self) -> DWRITE_AUTOMATIC_FONT_AXES {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetAutomaticFontAxes)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn SetAutomaticFontAxes(
         &self,
         automaticfontaxes: DWRITE_AUTOMATIC_FONT_AXES,
@@ -38279,11 +40460,11 @@ pub struct IDWriteTextLayout4_Vtbl {
         automaticfontaxes: DWRITE_AUTOMATIC_FONT_AXES,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextRenderer(::windows::core::IUnknown);
 impl IDWriteTextRenderer {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsPixelSnappingDisabled(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -38298,7 +40479,7 @@ impl IDWriteTextRenderer {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCurrentTransform(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -38313,7 +40494,7 @@ impl IDWriteTextRenderer {
         )
         .from_abi::<DWRITE_MATRIX>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPixelsPerDip(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -38328,7 +40509,7 @@ impl IDWriteTextRenderer {
         )
         .from_abi::<f32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawGlyphRun<
         'a,
         Param6: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -38354,7 +40535,7 @@ impl IDWriteTextRenderer {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawUnderline<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -38376,7 +40557,7 @@ impl IDWriteTextRenderer {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawStrikethrough<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -38398,7 +40579,7 @@ impl IDWriteTextRenderer {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawInlineObject<
         'a,
         Param3: ::windows::core::IntoParam<'a, IDWriteInlineObject>,
@@ -38530,11 +40711,11 @@ pub struct IDWriteTextRenderer_Vtbl {
         clientdrawingeffect: *mut ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTextRenderer1(::windows::core::IUnknown);
 impl IDWriteTextRenderer1 {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn IsPixelSnappingDisabled(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -38550,7 +40731,7 @@ impl IDWriteTextRenderer1 {
         )
         .from_abi::<::windows::Win32::Foundation::BOOL>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetCurrentTransform(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -38566,7 +40747,7 @@ impl IDWriteTextRenderer1 {
         )
         .from_abi::<DWRITE_MATRIX>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetPixelsPerDip(
         &self,
         clientdrawingcontext: *const ::core::ffi::c_void,
@@ -38582,7 +40763,7 @@ impl IDWriteTextRenderer1 {
         )
         .from_abi::<f32>(result__)
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawGlyphRun<
         'a,
         Param6: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -38608,7 +40789,7 @@ impl IDWriteTextRenderer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawUnderline<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -38632,7 +40813,7 @@ impl IDWriteTextRenderer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawStrikethrough<
         'a,
         Param4: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -38656,7 +40837,7 @@ impl IDWriteTextRenderer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawInlineObject<
         'a,
         Param3: ::windows::core::IntoParam<'a, IDWriteInlineObject>,
@@ -38687,7 +40868,7 @@ impl IDWriteTextRenderer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawGlyphRun2<
         'a,
         Param7: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -38715,7 +40896,7 @@ impl IDWriteTextRenderer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawUnderline2<
         'a,
         Param5: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -38739,7 +40920,7 @@ impl IDWriteTextRenderer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawStrikethrough2<
         'a,
         Param5: ::windows::core::IntoParam<'a, ::windows::core::IUnknown>,
@@ -38763,7 +40944,7 @@ impl IDWriteTextRenderer1 {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn DrawInlineObject2<
         'a,
         Param4: ::windows::core::IntoParam<'a, IDWriteInlineObject>,
@@ -38923,11 +41104,11 @@ pub struct IDWriteTextRenderer1_Vtbl {
         clientdrawingeffect: *mut ::core::ffi::c_void,
     ) -> ::windows::core::HRESULT,
 }
-#[doc = "*Required features: `\"DirectWrite\"`*"]
+#[doc = "*Required features: `\"DirectWriteCore\"`*"]
 #[repr(transparent)]
 pub struct IDWriteTypography(::windows::core::IUnknown);
 impl IDWriteTypography {
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn AddFontFeature<
         'a,
         Param0: ::windows::core::IntoParam<'a, DWRITE_FONT_FEATURE>,
@@ -38941,14 +41122,14 @@ impl IDWriteTypography {
         )
         .ok()
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFeatureCount(&self) -> u32 {
         ::core::mem::transmute((::windows::core::Interface::vtable(self)
             .GetFontFeatureCount)(
             ::windows::core::Interface::as_raw(self)
         ))
     }
-    #[doc = "*Required features: `\"DirectWrite\"`*"]
+    #[doc = "*Required features: `\"DirectWriteCore\"`*"]
     pub unsafe fn GetFontFeature(
         &self,
         fontfeatureindex: u32,
