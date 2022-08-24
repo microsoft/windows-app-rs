@@ -1,6 +1,10 @@
-[![Build and Test](https://github.com/microsoft/windows-app-rs/workflows/Build%20and%20Test/badge.svg?event=push)](https://github.com/microsoft/windows-app-rs/actions)
+## This repository has been archived
 
-# Rust for the Windows App SDK
+The `windows-app` project was an experimental crate letting you call APIs from the Windows App SDK based on the technology from the `windows` crate. The Windows App SDK is however largely a vehicle for delivering out-of-band releases of Xaml, which is itself designed squarely for C# developers. While every effort has been made to support Rust, the Windows App SDK in its current form is too heavily tied to .NET and Visual Studio to be practically usable with other languages and toolchains. We hope this will change in future but for now this project has been archived. 
+
+Many thanks to [@riverar](https://github.com/riverar) who almost singlehandedly drove the research and development for the `windows-app` project. 
+
+## Rust for the Windows App SDK
 The `windows-app` crate lets you call any [Windows App SDK](https://github.com/microsoft/WindowsAppSDK) (formerly known as Project Reunion) API using code generated from the metadata describing the API. It is powered by the [windows](https://github.com/microsoft/windows-rs) crate.
 
 Note: This is an experimental 🧪 crate and is not ready for production use.
